@@ -4,22 +4,22 @@
 	for code updates
 	see http://www.un.org/en/members/index.shtml for a list of
 	country names.
-        
+
         Short versions of country from http://klassifikators.ru/oksm
         ("Общероссийский классификатор стран мира") were used.
 	-->
 
-  <!-- eea is European Economic Area plus a few manual additions where we want to send to -->
+  <!-- promo is European Economic Area plus a few manual additions where we want to send to -->
 
 <countryset>
   <version>1</version>
 
 
 <country id="AU">Австралия</country>
-<country id="AT" eea="yes" yh4f="yes">Австрия</country>
+<country id="AT" promo="yes" yh4f="yes">Австрия</country>
 <country id="AZ">Азербайджан</country>
 <!--<country id="">Akrotiri and Dhekelia</country> The Sovereign Base Areas of Akrotiri and Dhekelia, Cyprus, Greece-->
-<country id="AL" eea="yes" yh4f="yes">Албания</country>
+<country id="AL" promo="yes" yh4f="yes">Албания</country>
 <country id="DZ">Алжир</country>
 <country id="AS">Американское Самоа</country>
 <country id="AI">Ангилья</country>
@@ -39,10 +39,10 @@
 <!--<country id="">Bassas da India</country>-->
 <country id="BY">Беларусь</country>
 <country id="BZ">Белиз</country>
-<country id="BE" eea="yes" yh4f="yes">Бельгия</country>
+<country id="BE" promo="yes" yh4f="yes">Бельгия</country>
 <country id="BJ">Бенин</country>
 <country id="BM">Бермуды</country>
-<country id="BG" eea="yes" yh4f="yes">Болгария</country>
+<country id="BG" promo="yes" yh4f="yes">Болгария</country>
 <country id="BO">Боливия</country>
 <country id="BA" yh4f="yes">Босния и Герцеговина</country>
 <country id="BW">Ботсвана</country>
@@ -55,7 +55,7 @@
 <country id="BT">Бутан</country>
 <country id="VU">Вануату</country>
 <country id="VA">Ватикан</country>
-<country id="HU" eea="yes" yh4f="yes">Венгрия</country>
+<country id="HU" promo="yes" yh4f="yes">Венгрия</country>
 <country id="VE">Венесуэла</country>
 <country id="VN">Вьетнам</country>
 <country id="VG">Виргинские острова</country>
@@ -69,7 +69,7 @@
 <country id="GT">Гватемала</country>
 <country id="GN">Гвинея</country>
 <country id="GW">Гвинея-Бисау</country>
-<country id="DE" eea="yes" yh4f="yes">Германия</country>
+<country id="DE" promo="yes" yh4f="yes">Германия</country>
 <country id="GG">Гернси</country>
 <country id="GI">Гибралтар</country>
 <!--<country id="">Glorioso Islands</country>-->
@@ -77,10 +77,10 @@
 <country id="HK">Гонконг</country>
 <country id="GD">Гренада</country>
 <country id="GL">Гренландия</country>
-<country id="GR" eea="yes" yh4f="yes">Греция</country>
+<country id="GR" promo="yes" yh4f="yes">Греция</country>
 <country id="GE">Грузия</country>
 <country id="GU">Гуам</country>
-<country id="DK" eea="yes" yh4f="yes">Дания</country>
+<country id="DK" promo="yes" yh4f="yes">Дания</country>
 <country id="CD">Демократическая Республика Конго</country>
 <country id="JE">Джерси</country>
 <country id="DJ">Джибути</country>
@@ -96,11 +96,11 @@
 <country id="ID">Индонезия</country>
 <country id="IQ">Ирак</country>
 <country id="IR">Иран</country>
-<country id="IE" eea="yes" yh4f="yes">Ирландия</country>
+<country id="IE" promo="yes" yh4f="yes">Ирландия</country>
 <country id="JO">Иордания</country>
-<country id="IS" eea="yes" yh4f="yes">Исландия</country>
-<country id="ES" eea="yes" yh4f="yes">Испания</country>
-<country id="IT" eea="yes" yh4f="yes">Италия</country>
+<country id="IS" promo="yes" yh4f="yes">Исландия</country>
+<country id="ES" promo="yes" yh4f="yes">Испания</country>
+<country id="IT" promo="yes" yh4f="yes">Италия</country>
 <country id="CV">Кабо-Верде</country>
 <country id="KZ">Казахстан</country>
 <country id="KH">Камбоджа</country>
@@ -108,7 +108,7 @@
 <country id="CA">Канада</country>
 <country id="QA">Катар</country>
 <country id="KE">Кения</country>
-<country id="CY" eea="yes" yh4f="yes">Кипр</country>
+<country id="CY" promo="yes" yh4f="yes">Кипр</country>
 <country id="KG">Киргизия</country>
 <country id="KI">Кирибати</country>
 <country id="CN">Китай</country>
@@ -128,14 +128,14 @@
 <!--<country id="">Europa Island</country>-->
 <!--<country id="">Juan de Nova Island</country>-->
 <country id="LA">Лаосская Народно-Демократическая Республика</country>
-<country id="LV" eea="yes" yh4f="yes">Латвия</country>
+<country id="LV" promo="yes" yh4f="yes">Латвия</country>
 <country id="LS">Лесото</country>
 <country id="LR">Либерия</country>
 <country id="LB">Ливан</country>
 <country id="LY">Ливийская Арабская Джамахирия</country>
-<country id="LT" eea="yes" yh4f="yes">Литва</country>
-<country id="LI" eea="yes" yh4f="yes">Лихтенштейн</country>
-<country id="LU" eea="yes" yh4f="yes">Люксембург</country>
+<country id="LT" promo="yes" yh4f="yes">Литва</country>
+<country id="LI" promo="yes" yh4f="yes">Лихтенштейн</country>
+<country id="LU" promo="yes" yh4f="yes">Люксембург</country>
 <country id="MU">Маврикий</country>
 <country id="MR">Мавритания</country>
 <country id="MG">Мадагаскар</country>
@@ -145,7 +145,7 @@
 <country id="MY">Малайзия</country>
 <country id="ML">Мали</country>
 <country id="MV">Мальдивы</country>
-<country id="MT" eea="yes" yh4f="yes">Мальта</country>
+<country id="MT" promo="yes" yh4f="yes">Мальта</country>
 <country id="MQ">Мартиника</country>
 <country id="MH">Маршалловы Острова</country>
 <country id="MX">Мексика</country>
@@ -161,14 +161,14 @@
 <country id="NR">Науру</country>
 <!--<country id="">Navassa Island</country>-->
 <country id="NP">Непал</country>
-<country id="NL" eea="yes" yh4f="yes">Нидерланды</country>
+<country id="NL" promo="yes" yh4f="yes">Нидерланды</country>
 <country id="NE">Нигер</country>
 <country id="NG">Нигерия</country>
 <country id="NI">Никарагуа</country>
 <country id="NU">Ниуэ</country>
 <country id="NZ">Новая Зеландия</country>
 <country id="NC">Новая Каледония</country>
-<country id="NO" eea="yes" yh4f="yes">Норвегия</country>
+<country id="NO" promo="yes" yh4f="yes">Норвегия</country>
 <country id="TZ">Объединенная Республика Танзания</country>
 <country id="AE">Объединенные Арабские Эмираты</country>
 <country id="OM">Оман</country>
@@ -189,13 +189,13 @@
 <country id="PY">Парагвай</country>
 <country id="PE">Перу</country>
 <country id="PN">Питкерн</country>
-<country id="PL" eea="yes" yh4f="yes">Польша</country>
-<country id="PT" eea="yes" yh4f="yes">Португалия</country>
+<country id="PL" promo="yes" yh4f="yes">Польша</country>
+<country id="PT" promo="yes" yh4f="yes">Португалия</country>
 <country id="PR">Пуэрто-Рико</country>
 <country id="MK">Республика Македония</country>
 <country id="RE">Реюньон</country>
 <country id="RU" yh4f="yes">Россия</country>
-<country id="RO" eea="yes" yh4f="yes">Румыния</country>
+<country id="RO" promo="yes" yh4f="yes">Румыния</country>
 <country id="RW">Руанда</country>
 <country id="WS">Самоа</country>
 <country id="SM">Сан-Марино</country>
@@ -214,9 +214,9 @@
 <country id="SG">Сингапур</country>
 <country id="SX">Синт-Мартен</country>
 <country id="SY">Сирийская Арабская Республика</country>
-<country id="SK" eea="yes" yh4f="yes">Словакия</country>
-<country id="SI" eea="yes" yh4f="yes">Словения</country>
-<country id="GB" eea="yes" yh4f="yes">Соединенное Королевство</country>
+<country id="SK" promo="yes" yh4f="yes">Словакия</country>
+<country id="SI" promo="yes" yh4f="yes">Словения</country>
+<country id="GB" promo="yes" yh4f="yes">Соединенное Королевство</country>
 <country id="US">Соединенные Штаты</country>
 <country id="SB">Соломоновы Острова</country>
 <country id="SO">Сомали</country>
@@ -236,7 +236,7 @@
 <country id="TV">Тувалу</country>
 <country id="TN">Тунис</country>
 <country id="TM">Туркмения</country>
-<country id="TR" eea="yes" yh4f="yes">Турция</country>
+<country id="TR" promo="yes" yh4f="yes">Турция</country>
 <country id="UG">Уганда</country>
 <country id="UA" yh4f="yes">Украина</country>
 <country id="WF">Уоллис и Футуна</country>
@@ -245,22 +245,22 @@
 <country id="FO">Фарерские острова</country>
 <country id="FJ">Фиджи</country>
 <country id="PH">Филиппины</country>
-<country id="FI" eea="yes" yh4f="yes">Финляндия</country>
+<country id="FI" promo="yes" yh4f="yes">Финляндия</country>
 <country id="FK">Фолклендские (Мальвинские) острова</country>
-<country id="FR" eea="yes" yh4f="yes">Франция</country>
+<country id="FR" promo="yes" yh4f="yes">Франция</country>
 <country id="GF">Французская Гвиана</country>
 <country id="PF">Французская Полинезия</country>
 <country id="TF">Французские Южные территории</country>
-<country id="HR" eea="yes" yh4f="yes">Хорватия</country>
+<country id="HR" promo="yes" yh4f="yes">Хорватия</country>
 <country id="CF">Центрально-Африканская Республика</country>
 <country id="TD">Чад</country>
 <country id="ME" yh4f="yes">Черногория</country>
-<country id="CZ" eea="yes" yh4f="yes">Чешская Республика</country>
+<country id="CZ" promo="yes" yh4f="yes">Чешская Республика</country>
 <country id="CL">Чили</country>
 <!--<country id="">Wake Island</country>-->
 <!--<country id="">West Bank</country> see Palestinian territories-->
-<country id="CH" eea="yes" yh4f="yes">Швейцария</country>
-<country id="SE" eea="yes" yh4f="yes">Швеция</country>
+<country id="CH" promo="yes" yh4f="yes">Швейцария</country>
+<country id="SE" promo="yes" yh4f="yes">Швеция</country>
 <country id="SJ">Шпицберген и Ян Майен</country>
 <country id="LK">Шри-Ланка</country>
 <country id="EC">Эквадор</country>
@@ -268,7 +268,7 @@
 <country id="AX">Эландские острова</country>
 <country id="SV">Эль-Сальвадор</country>
 <country id="ER">Эритрея</country>
-<country id="EE" eea="yes" yh4f="yes">Эстония</country>
+<country id="EE" promo="yes" yh4f="yes">Эстония</country>
 <country id="ET">Эфиопия</country>
 <country id="ZA">Южная Африка</country>
 <country id="GS">Южная Джорджия и Южные Сандвичевы острова</country>

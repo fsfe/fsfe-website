@@ -7,7 +7,7 @@ clone:
 
 steps:
   - name: checks
-    image: nixery.dev/shell/git/libxml2/gnused/gnugrep/findutils/perl/file:latest
+    image: nixery.dev/shell/git/libxml2/gnused/gnugrep/findutils/perl/file/mediainfo/curl:latest
     commands:
     # Check whether non-EN news item would appear on front-page
     - bash tools/check-non-en-frontpage.sh news

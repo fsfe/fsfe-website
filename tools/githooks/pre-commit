@@ -5,7 +5,7 @@
 # =============================================================================
 
 deperrors=''
-for depend in git xmllint sed file grep bash perl; do
+for depend in git xmllint sed file grep bash perl mediainfo curl mktemp; do
   if ! command -v "$depend" >/dev/null 2>&1; then
     deperrors="$depend $deperrors"
   fi
@@ -54,6 +54,7 @@ RETURN_ABS_LINK=0
 RETURN_FIX_LANG=0
 RETURN_CSS_ELEMENT=0
 RETURN_CSS_ATTR=0
+RETURN_IMGRATIO=0
 
 # displayed files
 FILES_SYNTAX=""
@@ -69,6 +70,7 @@ FILES_ABS_LINK=""
 FILES_FIX_LANG=""
 FILES_CSS_ELEMENT=""
 FILES_CSS_ATTR=""
+FILES_IMGRATIO=""
 
 
 # =============================================================================
@@ -253,6 +255,55 @@ for f in $files_all; do
     if xmllint --xpath "//@style" "${f}" &>/dev/null; then
       RETURN_CSS_ATTR=$((RETURN_CSS_ATTR + 1))
       FILES_CSS_ATTR="${FILES_CSS_ATTR}|${f}"
+    fi
+  fi
+
+  # ---------------------------------------------------------------------------
+  # Check for ratio of preview image
+  # ---------------------------------------------------------------------------
+  # Note: we also check events, could carry images in the future
+  fileregex="^(news/|events/).*(\.xhtml$|\.xml$)"
+  if [[ ( $f =~ $fileregex ) && ( -e "$f" ) ]]; then
+    imgratio_status=""
+    imageurl=$(xmllint --xpath "string(//image/@url)" "${f}")
+    if [[ -n "${imageurl}" ]]; then
+      # Remote images need to be downloaded
+      if grep -Eq "^http(s)?://" <<< "${imageurl}"; then
+        image=$(mktemp --suffix fsfe-imgratio)
+        # Download file, and handle failed download
+        if ! curl -s -f "${imageurl}" > "${image}"; then
+          imgratio_status="failed"
+        else
+          imgratio_status="remote"
+        fi
+
+      # Local files need absolute path
+      else
+        imgratio_status="local"
+        image="$(git rev-parse --show-toplevel)${imageurl}"
+      fi
+
+      if [[ "${imgratio_status}" == "failed" ]]; then
+        RETURN_IMGRATIO=$((RETURN_IMGRATIO + 1))
+        FILES_IMGRATIO="${FILES_IMGRATIO}|${f} (Image could not be downloaded from ${imageurl})"
+      else
+        # Run ratio checks
+        height=$(mediainfo --Output='Image;%Height%' "${image}")
+        width=$(mediainfo --Output='Image;%Width%' "${image}")
+        # The ideal ratio is 1,777. We multiply by 1000 because bash cannot float
+        ratio=$(( 1000 * width / height ))
+
+        # We allow a buffer of ± 2px per height/width in 800 x 450px
+        if [[ ${ratio} -lt 1769 || ${ratio} -gt 1785 ]]; then
+          RETURN_IMGRATIO=$((RETURN_IMGRATIO + 1))
+          FILES_IMGRATIO="${FILES_IMGRATIO}|${f} ($imageurl)"
+        fi
+      fi
+
+      # delete temporary file unless local graphic
+      if [[ ${imgratio_status} != "local" ]]; then
+        rm "${image}"
+      fi
     fi
   fi
 
@@ -510,9 +561,24 @@ if [ $RETURN_CSS_ATTR -gt 0 ]; then
 EOF
 fi
 
+if [ $RETURN_IMGRATIO -gt 0 ]; then
+  cat <<EOF >&2
+  ========================================
+  || [CRIT] Invalid preview image ratio ||
+  ========================================
+  The following files' preview image ratio is not 16:9. This is mandatory for
+  news items:
+  $(echo "${FILES_IMGRATIO}" | sed -E -e "s/\|/\n  - /g")
+
+  More information on preview images:
+  https://wiki.fsfe.org/TechDocs/Mainpage/Editing#Preview_Image
+
+EOF
+fi
+
 EXIT_CRIT=$((RETURN_SYNTAX + RETURN_TAGS_MISMATCH + RETURN_ENC + RETURN_NAME + \
           RETURN_NEWSDATE + RETURN_VERSION_PRES + RETURN_VERSION_INT + \
-          RETURN_ABS_LINK + RETURN_FIX_LANG))
+          RETURN_ABS_LINK + RETURN_FIX_LANG + RETURN_IMGRATIO))
 
 EXIT_WARN=$(($RETURN_TAGS_NEW + $RETURN_CSS_ELEMENT + $RETURN_CSS_ATTR))
 

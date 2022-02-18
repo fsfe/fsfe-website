@@ -90,8 +90,7 @@ for f in $files_all; do
   # ---------------------------------------------------------------------------
   fileregex="(\.xhtml$|\.xml$|\.xsl$)"
   if [[ ( $f =~ $fileregex ) && ( -e "$f" ) ]]; then
-    xmllint --noout --nonet "${f}"
-    if [[ $? != 0 ]]; then
+    if ! xmllint --noout --nonet "${f}"; then
       RETURN_SYNTAX=$((RETURN_SYNTAX + 1))
       FILES_SYNTAX="${FILES_SYNTAX}|${f}"
     fi

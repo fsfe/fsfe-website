@@ -55,6 +55,7 @@ RETURN_FIX_LANG=0
 RETURN_CSS_ELEMENT=0
 RETURN_CSS_ATTR=0
 RETURN_IMGRATIO=0
+RETURN_IMGALT=0
 
 # displayed files
 FILES_SYNTAX=""
@@ -71,6 +72,7 @@ FILES_FIX_LANG=""
 FILES_CSS_ELEMENT=""
 FILES_CSS_ATTR=""
 FILES_IMGRATIO=""
+FILES_IMGALT=""
 
 
 # =============================================================================
@@ -304,6 +306,18 @@ for f in $files_all; do
       if [[ ${imgratio_status} != "local" ]]; then
         rm "${image}"
       fi
+    fi
+  fi
+
+  # ---------------------------------------------------------------------------
+  # alt attribute presence for images
+  # ---------------------------------------------------------------------------
+  fileregex="(\.xhtml$|\.xml$)"
+  if [[ ( $f =~ $fileregex ) && ( -e "$f" ) ]]; then
+    # check <img> without @alt attribute
+    if xmllint --xpath "//img[not(@alt) or string-length(normalize-space(@alt))=0]" "${f}" &>/dev/null; then
+      RETURN_IMGALT=$((RETURN_IMGALT + 1))
+      FILES_IMGALT="${FILES_IMGALT}|${f}"
     fi
   fi
 
@@ -576,11 +590,31 @@ if [ $RETURN_IMGRATIO -gt 0 ]; then
 EOF
 fi
 
+if [ $RETURN_IMGALT -gt 0 ]; then
+  cat <<EOF >&2
+  ==========================================
+  || [WARN] No alternative text for image ||
+  ==========================================
+  The following files contain images (<img>) that do not contain an "alt"
+  attribute for alternative text:
+  $(echo "${FILES_IMGALT}" | sed -E -e "s/\|/\n  - /g")
+
+  This attribute is important if the image cannot be displayed, and for visually
+  impaired people. You should describe the image so that it makes sense even if
+  you cannot see it.
+
+  More information on alternative text for images:
+  https://wiki.fsfe.org/TechDocs/Mainpage/Editing/BestPractices#Alternative_text_for_images
+
+EOF
+fi
+
 EXIT_CRIT=$((RETURN_SYNTAX + RETURN_TAGS_MISMATCH + RETURN_ENC + RETURN_NAME + \
           RETURN_NEWSDATE + RETURN_VERSION_PRES + RETURN_VERSION_INT + \
           RETURN_ABS_LINK + RETURN_FIX_LANG + RETURN_IMGRATIO))
 
-EXIT_WARN=$(($RETURN_TAGS_NEW + $RETURN_CSS_ELEMENT + $RETURN_CSS_ATTR))
+EXIT_WARN=$((RETURN_TAGS_NEW + RETURN_CSS_ELEMENT + RETURN_CSS_ATTR + \
+          RETURN_IMGALT))
 
 if [ $EXIT_CRIT -gt 0 ]; then
   cat <<EOF >&2

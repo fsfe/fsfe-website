@@ -78,9 +78,34 @@ FILES_IMGALT=""
 # =============================================================================
 # Functions for common operations
 # =============================================================================
-function filelisting {
-  # convert a string like "|first|second" to a readable list starting from line 1
+
+# Convert a string like "|first|second" to a readable list starting from line 1
+filelisting() {
   echo "${1}" | sed -E -e "s/\|/\n  - /g" | sed '1d'
+}
+
+# Check whether file exists, matches a defined regex, and not potential excludes
+matchfile() {
+  local file=$1
+  local regex=$2
+  local exclude=$3
+
+  if [[ -n ${exclude} ]]; then
+    if [[ ( $file =~ $regex ) && ( ! $file =~ $exclude ) && ( -e "$file" ) ]]; then
+      true
+    else
+      false
+    fi
+  elif [[ -n ${regex} ]]; then
+    if [[ ( $file =~ $regex ) && ( -e "$file" ) ]]; then
+      true
+    else
+      false
+    fi
+  else
+    echo "[ERROR] matchregex() has too few arguments!"
+    false
+  fi
 }
 
 
@@ -98,7 +123,7 @@ for f in $files_all; do
   # XML syntax
   # ---------------------------------------------------------------------------
   fileregex="(\.xhtml$|\.xml$|\.xsl$)"
-  if [[ ( $f =~ $fileregex ) && ( -e "$f" ) ]]; then
+  if matchfile "${f}" "${fileregex}"; then
     if ! xmllint --noout --nonet "${f}"; then
       RETURN_SYNTAX=$((RETURN_SYNTAX + 1))
       FILES_SYNTAX="${FILES_SYNTAX}|${f}"
@@ -109,7 +134,7 @@ for f in $files_all; do
   # HTML files
   # ---------------------------------------------------------------------------
   fileregex="(\.html$)"
-  if [[ ( $f =~ $fileregex ) && ( -e "$f" ) ]]; then
+  if matchfile "${f}" "${fileregex}"; then
     RETURN_HTML=$((RETURN_HTML + 1))
     FILES_HTML="${FILES_HTML}|${f}"
   fi
@@ -118,7 +143,7 @@ for f in $files_all; do
   # New tags
   # ---------------------------------------------------------------------------
   fileregex="^(news/|events/).*(\.xhtml$|\.xml$|\.xsl$)"
-  if [[ ( $f =~ $fileregex ) && ( -e "$f" ) ]]; then
+  if matchfile "${f}" "${fileregex}"; then
     hit=0
     tags=""
     # go through all tags in this file
@@ -146,7 +171,7 @@ for f in $files_all; do
   # Tags mismatch between EN and translations
   # ---------------------------------------------------------------------------
   fileregex="^(news/|events/).*(\.xhtml$|\.xml$|\.xsl$)"
-  if [[ ( $f =~ $fileregex ) && ( -e "$f" ) ]]; then
+  if matchfile "${f}" "${fileregex}"; then
     # Only check non-english files
     if [[ ! $f =~ \.en\. ]]; then
       # Get file extension
@@ -175,7 +200,7 @@ for f in $files_all; do
   # Encoding
   # ---------------------------------------------------------------------------
   fileregex="(\.xhtml$|\.xml$|\.xsl$)"
-  if [[ ( $f =~ $fileregex ) && ( -e "$f" ) ]]; then
+  if matchfile "${f}" "${fileregex}"; then
     regex="(utf-8|us-ascii)"
     if ! [[ $(file -b --mime-encoding "${f}") =~ $regex ]]; then
       RETURN_ENC=$((RETURN_ENC + 1))
@@ -187,7 +212,7 @@ for f in $files_all; do
   # Naming and newsdate attribute mistakes in news/events
   # ---------------------------------------------------------------------------
   fileregex="^(news/20[0-9]{2}/|news/nl/|news/podcast/|events/20[0-9]{2}/).*(\.xhtml$|\.xml$)"
-  if [[ ( $f =~ $fileregex ) && ( -e "$f" ) ]]; then
+  if matchfile "${f}" "${fileregex}"; then
   filename="$(basename "${f}")"
     # file naming scheme
     regex="^((nl-20[0-9]{4})|episode-(special-)?[0-9]{1,3}"
@@ -213,7 +238,7 @@ for f in $files_all; do
   # Version tag presence + integer check
   # ---------------------------------------------------------------------------
   fileregex="(\.xhtml$|\.xml$)"
-  if [[ ( $f =~ $fileregex ) && ( -e "$f" ) ]]; then
+  if matchfile "${f}" "${fileregex}"; then
     # check whether version tag is present
     if ! xmllint --xpath "/*/version" "${f}" &>/dev/null; then
       RETURN_VERSION_PRES=$((RETURN_VERSION_PRES + 1))
@@ -232,7 +257,7 @@ for f in $files_all; do
   # ---------------------------------------------------------------------------
   fileregex="(\.xhtml$|\.xml$)"
   exclude="^(drm.info|pdfreaders|global|cgi-bin|build|scripts)"
-  if [[ ( $f =~ $fileregex ) && ( ! $f =~ $exclude ) && ( -e "$f" ) ]]; then
+  if matchfile "${f}" "${fileregex}" "${exclude}"; then
     if xmllint --xpath "//a/@href" "${f}" 2>/dev/null \
       | sed -E 's/([^\r\n]) (href=)/\1\n \2/g' \
       | grep -qE "https?://fsfe(urope)?.org"; then
@@ -246,7 +271,7 @@ for f in $files_all; do
   # ---------------------------------------------------------------------------
   fileregex="(\.xhtml$|\.xml$)"
   exclude="^(cgi-bin|build)"
-  if [[ ( $f =~ $fileregex ) && ( ! $f =~ $exclude ) && ( -e "$f" ) ]]; then
+  if matchfile "${f}" "${fileregex}" "${exclude}"; then
     if xmllint --xpath "//a/@href" "${f}" 2>/dev/null \
       | sed -E 's/([^\r\n]) (href=)/\1\n \2/g' \
       | grep -qE "\"(https?://fsfe(urope)?.org)?/.+?\.[a-z]{2}(\.html)?(#.+?)?\""; then
@@ -259,7 +284,7 @@ for f in $files_all; do
   # Check for <style> elements
   # ---------------------------------------------------------------------------
   fileregex="(\.xhtml$|\.xml$)"
-  if [[ ( $f =~ $fileregex ) && ( -e "$f" ) ]]; then
+  if matchfile "${f}" "${fileregex}"; then
     if xmllint --xpath "//style" "${f}" &>/dev/null; then
       RETURN_CSS_ELEMENT=$((RETURN_CSS_ELEMENT + 1))
       FILES_CSS_ELEMENT="${FILES_CSS_ELEMENT}|${f}"
@@ -270,7 +295,7 @@ for f in $files_all; do
   # Check for style attributes
   # ---------------------------------------------------------------------------
   fileregex="(\.xhtml$|\.xml$)"
-  if [[ ( $f =~ $fileregex ) && ( -e "$f" ) ]]; then
+  if matchfile "${f}" "${fileregex}"; then
     if xmllint --xpath "//@style" "${f}" &>/dev/null; then
       RETURN_CSS_ATTR=$((RETURN_CSS_ATTR + 1))
       FILES_CSS_ATTR="${FILES_CSS_ATTR}|${f}"
@@ -282,7 +307,7 @@ for f in $files_all; do
   # ---------------------------------------------------------------------------
   # Note: we also check events, could carry images in the future
   fileregex="^(news/|events/).*(\.xhtml$|\.xml$)"
-  if [[ ( $f =~ $fileregex ) && ( -e "$f" ) ]]; then
+  if matchfile "${f}" "${fileregex}"; then
     imgratio_status=""
     imageurl=$(xmllint --xpath "string(//image/@url)" "${f}")
     if [[ -n "${imageurl}" ]]; then
@@ -330,7 +355,7 @@ for f in $files_all; do
   # alt attribute presence for images
   # ---------------------------------------------------------------------------
   fileregex="(\.xhtml$|\.xml$)"
-  if [[ ( $f =~ $fileregex ) && ( -e "$f" ) ]]; then
+  if matchfile "${f}" "${fileregex}"; then
     # check <img> without @alt attribute
     if xmllint --xpath "//img[not(@alt) or string-length(normalize-space(@alt))=0]" "${f}" \
       &>/dev/null; then

@@ -76,6 +76,15 @@ FILES_IMGALT=""
 
 
 # =============================================================================
+# Functions for common operations
+# =============================================================================
+function filelisting {
+  # convert a string like "|first|second" to a readable list starting from line 1
+  echo "${1}" | sed -E -e "s/\|/\n  - /g" | sed '1d'
+}
+
+
+# =============================================================================
 # Check all files for different things
 # =============================================================================
 
@@ -345,7 +354,8 @@ if [ $RETURN_SYNTAX -gt 0 ]; then
   || [CRIT] SYNTAX ERROR ||
   =========================
   ${RETURN_SYNTAX} files failed the XML syntax check!
-  $(echo "${FILES_SYNTAX}" | sed -E -e "s/\|/\n  - /g")
+
+  $(filelisting "${FILES_SYNTAX}")
 
   The error log above will help you to identify the error. Read it from
   the top. The numbers behind the file name point to the line number in
@@ -366,7 +376,8 @@ if [ $RETURN_HTML -gt 0 ]; then
   ${RETURN_HTML} files in your commit have a wrong file extension.
 
   The following files have ".html" as file extensions:
-  $(echo "${FILES_HTML}" | sed -E -e "s/\|/\n  - /g")
+
+  $(filelisting "${FILES_HTML}")
 
   This creates problems with our build system. It is supposed to create
   the final HTML files from the .xhtml source files. So please make
@@ -383,7 +394,8 @@ if [ $RETURN_TAGS_NEW -gt 0 ]; then
   ====================================
   Your commit introduced $RETURN_TAGS_NEW tag(s) which did not exist before in
   our news or event items!
-  $(echo "${FILES_TAGS_NEW}" | sed -E -e "s/\|/\n  - /g")
+
+  $(filelisting "${FILES_TAGS_NEW}")
 
   Please make sure that you use already used tags, and only introduce a
   new tag e.g. if it's about a new campaign that will be more often
@@ -406,7 +418,8 @@ if [ $RETURN_TAGS_MISMATCH -gt 0 ]; then
   ====================================
   Your commit introduced $RETURN_TAGS_MISMATCH files whose tags do not match its
   English original!
-  $(echo "${FILES_TAGS_MISMATCH}" | sed -E -e "s/\|/\n  - /g")
+
+  $(filelisting "${FILES_TAGS_MISMATCH}")
 
   Please make sure that the tags of the original English files match the tags of
   its translations. You can check this link to learn how tags are being used:
@@ -426,7 +439,8 @@ if [ $RETURN_ENC -gt 0 ]; then
   ${RETURN_ENC} files in your commit have a wrong encoding.
 
   The following files are not UTF-8 encoded:
-  $(echo "${FILES_ENC}" | sed -E -e "s/\|/\n  - /g")
+
+  $(filelisting "${FILES_ENC}")
 
   For the FSFE website, we strongly prefer UTF-8 encoded files.
   Everything else creates problems. Please change the file encoding in
@@ -442,7 +456,8 @@ if [ $RETURN_NAME -gt 0 ]; then
   ==============================
   The following files do not follow the naming scheme for news and
   events:
-  $(echo "${FILES_NAME}" | sed -E -e "s/\|/\n  - /g")
+
+  $(filelisting "${FILES_NAME}")
 
   The scheme is:
     * "news-20YYMMDD-01.en.xhtml" for news
@@ -463,7 +478,8 @@ if [ $RETURN_NEWSDATE -gt 0 ]; then
   || [CRIT] NEWSDATE ATTRIBUTE ERROR ||
   =====================================
   The following files do not follow the scheme for the newsdate attribute:
-  $(echo "${FILES_NEWSDATE}" | sed -E -e "s/\|/\n  - /g")
+
+  $(filelisting "${FILES_NEWSDATE}")
 
   The scheme is "20YY-MM-DD", so the respective line should look
   something like this: <html newsdate="2020-01-01">
@@ -478,7 +494,8 @@ if [ $RETURN_VERSION_PRES -gt 0 ]; then
   ================================
   The following files do not contain the mandatory <version> tag, or it is at
   the wrong level:
-  $(echo "${FILES_VERSION_PRES}" | sed -E -e "s/\|/\n  - /g")
+
+  $(filelisting "${FILES_VERSION_PRES}")
 
   Please read more about outdated translations and the version tag here:
   https://wiki.fsfe.org/TechDocs/Mainpage/Translations/
@@ -492,7 +509,8 @@ if [ $RETURN_VERSION_INT -gt 0 ]; then
   || [CRIT] WRONG VERSION TAG ||
   ==============================
   The following files contain a malformed <version> tag:
-  $(echo "${FILES_VERSION_INT}" | sed -E -e "s/\|/\n  - /g")
+
+  $(filelisting "${FILES_VERSION_INT}")
 
   The version tag may only be a positive integer (so a number, no decimals or
   alphabetic characters)!
@@ -509,7 +527,8 @@ if [ $RETURN_ABS_LINK -gt 0 ]; then
   || [CRIT] ABSOLUTE LINK TO fsfe.org ||
   ======================================
   The following files contain a absolute links to fsfe.org:
-  $(echo "${FILES_ABS_LINK}" | sed -E -e "s/\|/\n  - /g")
+
+  $(filelisting "${FILES_ABS_LINK}")
 
   Please do not use links containing "https://fsfe.org". So instead of
 
@@ -531,7 +550,8 @@ if [ $RETURN_FIX_LANG -gt 0 ]; then
   || [CRIT] FIXED LANGUAGE LINK ||
   ================================
   The following files contain links with fixed language:
-  $(echo "${FILES_FIX_LANG}" | sed -E -e "s/\|/\n  - /g")
+
+  $(filelisting "${FILES_FIX_LANG}")
 
   Please do not preset a language in your links to resources on fsfe.org.
   So instead of:
@@ -554,7 +574,8 @@ if [ $RETURN_CSS_ELEMENT -gt 0 ]; then
   || [WARN] INLINE CSS (<style>) ||
   =================================
   The following files contain inline CSS as <style> elements:
-  $(echo "${FILES_CSS_ELEMENT}" | sed -E -e "s/\|/\n  - /g")
+
+  $(filelisting "${FILES_CSS_ELEMENT}")
 
   Please do not use <style> elements to define CSS rules for a file.
 
@@ -570,7 +591,8 @@ if [ $RETURN_CSS_ATTR -gt 0 ]; then
   || [WARN] INLINE CSS (style="") ||
   ==================================
   The following files contain inline CSS as style attributes:
-  $(echo "${FILES_CSS_ATTR}" | sed -E -e "s/\|/\n  - /g")
+
+  $(filelisting "${FILES_CSS_ATTR}")
 
   Please do not use style attributes to design an element. So instead of:
 
@@ -591,7 +613,8 @@ if [ $RETURN_IMGRATIO -gt 0 ]; then
   ========================================
   The following files' preview image ratio is not 16:9. This is mandatory for
   news items:
-  $(echo "${FILES_IMGRATIO}" | sed -E -e "s/\|/\n  - /g")
+
+  $(filelisting "${FILES_IMGRATIO}")
 
   More information on preview images:
   https://wiki.fsfe.org/TechDocs/Mainpage/Editing#Preview_Image
@@ -606,7 +629,8 @@ if [ $RETURN_IMGALT -gt 0 ]; then
   ==========================================
   The following files contain images (<img>) that do not contain an "alt"
   attribute for alternative text:
-  $(echo "${FILES_IMGALT}" | sed -E -e "s/\|/\n  - /g")
+
+  $(filelisting "${FILES_IMGALT}")
 
   This attribute is important if the image cannot be displayed, and for visually
   impaired people. You should describe the image so that it makes sense even if

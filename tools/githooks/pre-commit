@@ -353,7 +353,8 @@ if [ $RETURN_SYNTAX -gt 0 ]; then
   =========================
   || [CRIT] SYNTAX ERROR ||
   =========================
-  ${RETURN_SYNTAX} files failed the XML syntax check!
+  The following ${RETURN_SYNTAX} file(s) in your commit failed the XML syntax
+  check:
 
   $(filelisting "${FILES_SYNTAX}")
 
@@ -365,6 +366,10 @@ if [ $RETURN_SYNTAX -gt 0 ]; then
   been closed correctly, errors with special characters like "&", or
   other syntactical mistakes.
 
+  With a broken syntax, other checks may also be triggered, e.g. a missing
+  version tag. Fix the syntax first and then check again to avoid
+  false-positives.
+
 EOF
 fi
 
@@ -373,9 +378,8 @@ if [ $RETURN_HTML -gt 0 ]; then
   =================================
   || [CRIT] FILE EXTENSION ERROR ||
   =================================
-  ${RETURN_HTML} files in your commit have a wrong file extension.
-
-  The following files have ".html" as file extensions:
+  The following ${RETURN_HTML} file(s) in your commit have ".html" as file
+  extension:
 
   $(filelisting "${FILES_HTML}")
 
@@ -392,8 +396,8 @@ if [ $RETURN_TAGS_NEW -gt 0 ]; then
   ====================================
   || [WARN] NEW / DUPLICATED TAG(S) ||
   ====================================
-  Your commit introduced $RETURN_TAGS_NEW tag(s) which did not exist before in
-  our news or event items!
+  The following ${RETURN_TAGS_NEW} files' tag(s) in your commit did not exist
+  before in our news or event items:
 
   $(filelisting "${FILES_TAGS_NEW}")
 
@@ -416,8 +420,8 @@ if [ $RETURN_TAGS_MISMATCH -gt 0 ]; then
   ====================================
   || [CRIT] MISMATCHED TAG(S) ||
   ====================================
-  Your commit introduced $RETURN_TAGS_MISMATCH files whose tags do not match its
-  English original!
+  The following ${RETURN_TAGS_MISMATCH} files' tags in your commit do not match
+  its English original:
 
   $(filelisting "${FILES_TAGS_MISMATCH}")
 
@@ -436,9 +440,8 @@ if [ $RETURN_ENC -gt 0 ]; then
   ================================
   || [CRIT] FILE ENCODING ERROR ||
   ================================
-  ${RETURN_ENC} files in your commit have a wrong encoding.
-
-  The following files are not UTF-8 encoded:
+  The following ${RETURN_ENC} file(s) in your commit have a wrong encoding. They
+  are not UTF-8 encoded:
 
   $(filelisting "${FILES_ENC}")
 
@@ -454,8 +457,8 @@ if [ $RETURN_NAME -gt 0 ]; then
   ==============================
   || [CRIT] FILE NAMING ERROR ||
   ==============================
-  The following files do not follow the naming scheme for news and
-  events:
+  The following ${RETURN_NAME} file(s) in your commit do not follow the naming
+  scheme for news and events:
 
   $(filelisting "${FILES_NAME}")
 
@@ -477,7 +480,8 @@ if [ $RETURN_NEWSDATE -gt 0 ]; then
   =====================================
   || [CRIT] NEWSDATE ATTRIBUTE ERROR ||
   =====================================
-  The following files do not follow the scheme for the newsdate attribute:
+  The following ${RETURN_NEWSDATE} file(s) in your commit do not follow the
+  scheme for the newsdate attribute:
 
   $(filelisting "${FILES_NEWSDATE}")
 
@@ -492,8 +496,8 @@ if [ $RETURN_VERSION_PRES -gt 0 ]; then
   ================================
   || [CRIT] MISSING VERSION TAG ||
   ================================
-  The following files do not contain the mandatory <version> tag, or it is at
-  the wrong level:
+  The following ${RETURN_VERSION_PRES} file(s) in your commit do not contain the
+  mandatory <version> tag, or it is at the wrong level:
 
   $(filelisting "${FILES_VERSION_PRES}")
 
@@ -508,7 +512,8 @@ if [ $RETURN_VERSION_INT -gt 0 ]; then
   ==============================
   || [CRIT] WRONG VERSION TAG ||
   ==============================
-  The following files contain a malformed <version> tag:
+  The following ${RETURN_VERSION_INT} file(s) in your commit contain a malformed
+  <version> tag:
 
   $(filelisting "${FILES_VERSION_INT}")
 
@@ -526,7 +531,8 @@ if [ $RETURN_ABS_LINK -gt 0 ]; then
   ======================================
   || [CRIT] ABSOLUTE LINK TO fsfe.org ||
   ======================================
-  The following files contain a absolute links to fsfe.org:
+  The following ${RETURN_ABS_LINK} file(s) in your commit contain an absolute
+  links to fsfe.org:
 
   $(filelisting "${FILES_ABS_LINK}")
 
@@ -549,7 +555,8 @@ if [ $RETURN_FIX_LANG -gt 0 ]; then
   ================================
   || [CRIT] FIXED LANGUAGE LINK ||
   ================================
-  The following files contain links with fixed language:
+  The following ${RETURN_FIX_LANG} file(s) in your commit contain links with
+  fixed language:
 
   $(filelisting "${FILES_FIX_LANG}")
 
@@ -573,7 +580,8 @@ if [ $RETURN_CSS_ELEMENT -gt 0 ]; then
   =================================
   || [WARN] INLINE CSS (<style>) ||
   =================================
-  The following files contain inline CSS as <style> elements:
+  The following ${RETURN_CSS_ELEMENT} file(s) in your commit contain inline CSS
+  as <style> elements:
 
   $(filelisting "${FILES_CSS_ELEMENT}")
 
@@ -590,7 +598,8 @@ if [ $RETURN_CSS_ATTR -gt 0 ]; then
   ==================================
   || [WARN] INLINE CSS (style="") ||
   ==================================
-  The following files contain inline CSS as style attributes:
+  The following ${RETURN_CSS_ATTR} file(s) in your commit contain inline CSS as
+  style attributes:
 
   $(filelisting "${FILES_CSS_ATTR}")
 
@@ -611,10 +620,12 @@ if [ $RETURN_IMGRATIO -gt 0 ]; then
   ========================================
   || [CRIT] Invalid preview image ratio ||
   ========================================
-  The following files' preview image ratio is not 16:9. This is mandatory for
-  news items:
+  The following ${RETURN_IMGRATIO} file(s) in your commit have a preview image
+  whose ratio is not 16:9:
 
   $(filelisting "${FILES_IMGRATIO}")
+
+  16:9 ratio for preview is mandatory for news items.
 
   More information on preview images:
   https://wiki.fsfe.org/TechDocs/Mainpage/Editing#Preview_Image
@@ -627,8 +638,8 @@ if [ $RETURN_IMGALT -gt 0 ]; then
   ==========================================
   || [WARN] No alternative text for image ||
   ==========================================
-  The following files contain images (<img>) that do not contain an "alt"
-  attribute for alternative text:
+  The following ${RETURN_IMGALT} file(s) in your commit contain images (<img>)
+  that do not contain an "alt" attribute for alternative text:
 
   $(filelisting "${FILES_IMGALT}")
 

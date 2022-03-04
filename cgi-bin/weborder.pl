@@ -2,7 +2,7 @@
 # -----------------------------------------------------------------------------
 # Process merchandise order
 # -----------------------------------------------------------------------------
-# Copyright (C) 2008-2019 Free Software Foundation Europe <contact@fsfe.org>
+# Copyright (C) 2008-2022 Free Software Foundation Europe <contact@fsfe.org>
 #
 # This program is free software: you can redistribute it and/or modify it under
 # the terms of the GNU Affero General Public License as published by the Free
@@ -39,6 +39,8 @@ if ($query->param("url")) {
 
 my $name = decode("utf-8", $query->param("name"));
 my $address = decode("utf-8", $query->param("address"));
+my $zip = decode("utf-8", $query->param("zip"));
+my $city = decode("utf-8", $query->param("city"));
 my $country = decode("utf-8", $query->param("country"));
 my ($country_code, $country_name) = split /\|/, $country;
 my $email = decode("utf-8", $query->param("email"));
@@ -55,7 +57,7 @@ if ($country_code eq 'DE') {
 }
 
 # Remove all parameters except for items and prices.
-$query->delete("url", "name", "address", "country", "email", "phone", "language");
+$query->delete("url", "name", "address", "zip", "city", "country", "email", "phone", "language");
 
 my $lang = substr $language, 0, 2;
 
@@ -66,6 +68,12 @@ my $lang = substr $language, 0, 2;
 if (!$name) {
   print "Content-type: text/html\n\n";
   print "<p>Please enter your name!</p>\n";
+  exit;
+}
+
+if (!$address or !$zip or !$city or !$country) {
+  print "Content-type: text/html\n\n";
+  print "<p>Please enter your complete address!</p>\n";
   exit;
 }
 
@@ -119,7 +127,7 @@ my $reference = "MP" . $date . (substr $time, -4) . (sprintf "%03u", $amount);
 # Compile email text
 # -----------------------------------------------------------------------------
 
-my $body = "$name\n$address\n$country_name\nPhone: $phone\n\n";
+my $body = "$name\n$address\n$zip $city\n$country_name\nPhone: $phone\n\n";
 
 foreach $item ($query->param) {
   $value = $query->param($item);
@@ -153,6 +161,7 @@ push @odtfill, "/tmp/invoice.odt";
 push @odtfill, "repeat=" . $count;
 push @odtfill, "Name=" . $name;
 push @odtfill, "Address=" . $address =~ s/\n/\\n/gr;
+push @odtfill, "ZipCity=" . $zip . " " . $city;
 push @odtfill, "Country=" . $country_name;
 foreach $item ($query->param) {
   $value = $query->param($item);

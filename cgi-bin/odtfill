@@ -26,6 +26,7 @@ shift
 
 tmpdir=/tmp/odtfill.$$
 
+rm --force --recursive "${tmpdir}"
 mkdir "${tmpdir}"
 cd "${tmpdir}"
 

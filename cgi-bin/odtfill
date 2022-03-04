@@ -82,6 +82,7 @@ done
 # Build final ODT file and clean up
 # ------------------------------------------------------------------------------
 
+rm --force "${outfile}"
 zip -q "${outfile}" -r *
 
 cd ${OLDPWD}

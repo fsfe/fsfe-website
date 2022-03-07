@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<activityset>
+  <version>1</version>
+
+  <activity id="elections" date="2009-09-01" status="active">
+    <title>Atividades eleitorais</title>
+    <description>
+Qual a melhor época há para perguntar a políticos(as) sobre suas posições quanto ao Software Livre e Padrões Abertos do que no tempo pré-eleitoral? Acreditamos que podemos e devemos fazer esses tópicos um assuto em todas as eleições, quer seja em nível europeu, nacional, regional ou local. Dependendo do sistema eleitoral e da cultura local, há estratégias diferentes e ferramentas que usamos: Perguntar a seu/sua candidato(a) uma lista de perguntas, a ferramenta online "Digital-O-Mat" e a plataforma também online Freedomvote, além da "Let's Promise"(Prometamos) para anotação de compromissos.
+    </description>
+    <link href="/activities/elections/index.html" />
+    <image url="/graphics/logos/elections.png" />
+    <order priority="3" highlight="yes" />
+    <tags>
+      <tag key="awareness" />
+      <tag key="policy" />
+    </tags>
+  </activity>
+</activityset>

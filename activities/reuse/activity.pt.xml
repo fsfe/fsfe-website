@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<activityset>
+  <version>1</version>
+
+  <activity id="reuse" date="2017-06-01" status="active">
+    <title>REUSE Software</title>
+    <description>
+A FSFE está rodando um projeto para facilitar o licenciamento para humanos(as) e máquinas de modo parecido. Ele resolve um aspecto fundamental que o licenciamento de Software Livre tem muito em sua fonte: que licença é um arquivo sob licença, e quem detém o direito de cópia? REUSE porê recomendações fáceis em três passos que audam usuários(as), desenvolvedores(as) e profissionais da área legal.
+    </description>
+    <link href="https://reuse.software" />
+    <image url="/graphics/logos/reuse.png" />
+    <order priority="5" highlight="yes" />
+    <tags>
+      <tag key="legal" />
+    </tags>
+  </activity>
+</activityset>

@@ -362,6 +362,11 @@ for f in $files_all; do
       RETURN_IMGALT=$((RETURN_IMGALT + 1))
       FILES_IMGALT="${FILES_IMGALT}|${f}"
     fi
+    if xmllint --xpath "//image[not(@alt) or string-length(normalize-space(@alt))=0]" "${f}" \
+      &>/dev/null; then
+      RETURN_IMGALT=$((RETURN_IMGALT + 1))
+      FILES_IMGALT="${FILES_IMGALT}|${f}"
+    fi
   fi
 
 done
@@ -663,8 +668,9 @@ if [ $RETURN_IMGALT -gt 0 ]; then
   ==========================================
   || [WARN] No alternative text for image ||
   ==========================================
-  The following ${RETURN_IMGALT} file(s) in your commit contain images (<img>)
-  that do not contain an "alt" attribute for alternative text:
+  The following ${RETURN_IMGALT} file(s) in your commit contain images
+  (<img> and/or <image>) that do not contain an "alt" attribute for alternative
+  text:
 
   $(filelisting "${FILES_IMGALT}")
 

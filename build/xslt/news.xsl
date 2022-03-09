@@ -26,6 +26,9 @@
             <xsl:attribute name="alt">
               <xsl:value-of select="image/@alt"/>
             </xsl:attribute>
+            <xsl:attribute name="title">
+              <xsl:value-of select="image/@alt"/>
+            </xsl:attribute>
           </xsl:element><!-- img -->
         </xsl:element><!-- a -->
       </xsl:when>
@@ -35,6 +38,9 @@
             <xsl:value-of select="image/@url"/>
           </xsl:attribute>
           <xsl:attribute name="alt">
+            <xsl:value-of select="image/@alt"/>
+          </xsl:attribute>
+          <xsl:attribute name="title">
             <xsl:value-of select="image/@alt"/>
           </xsl:attribute>
         </xsl:element><!-- img -->

@@ -40,7 +40,12 @@
         </xsl:element>
 
         <xsl:element name="image">
-          <xsl:value-of select="/html/image/@url"/>
+          <xsl:attribute name="url">
+            <xsl:value-of select="/html/image/@url"/>
+          </xsl:attribute>
+          <xsl:attribute name="alt">
+            <xsl:value-of select="/html/image/@alt"/>
+          </xsl:attribute>
         </xsl:element>
 
         <xsl:element name="link">

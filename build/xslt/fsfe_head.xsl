@@ -218,6 +218,14 @@
         </xsl:choose>
       </xsl:attribute>
     </xsl:element>
+    <xsl:if test="image/@alt"> <!-- add alt text if existent -->
+      <xsl:element name="meta">
+        <xsl:attribute name="name">twitter:image:alt</xsl:attribute>
+        <xsl:attribute name="content">
+          <xsl:value-of select="image/@alt" />
+        </xsl:attribute>
+      </xsl:element>
+    </xsl:if>
     <xsl:element name="meta">
       <xsl:attribute name="name">twitter:title</xsl:attribute>
       <xsl:attribute name="content">
@@ -231,7 +239,7 @@
         <xsl:value-of select="$extract" />
       </xsl:attribute>
     </xsl:element>
-    <!-- Facebook sharing cards -->
+    <!-- OpenGraph sharing cards -->
     <meta property="og:type" content="article" />
     <meta property="og:site_name" content="FSFE - Free Software Foundation Europe" />
     <xsl:element name="meta">
@@ -246,6 +254,14 @@
         </xsl:choose>
       </xsl:attribute>
     </xsl:element>
+    <xsl:if test="image/@alt"> <!-- add alt text if existent -->
+    <xsl:element name="meta">
+      <xsl:attribute name="property">og:image:alt</xsl:attribute>
+      <xsl:attribute name="content">
+        <xsl:value-of select="image/@alt" />
+      </xsl:attribute>
+    </xsl:element>
+  </xsl:if>
     <xsl:element name="meta">
       <xsl:attribute name="property">og:locale</xsl:attribute>
       <xsl:attribute name="content"><xsl:value-of select="/buildinfo/@language"/></xsl:attribute>

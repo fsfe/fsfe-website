@@ -21,18 +21,28 @@
           </xsl:attribute>
           <xsl:element name="img">
             <xsl:attribute name="src">
-              <xsl:value-of select="image"/>
+              <xsl:value-of select="image/@url"/>
             </xsl:attribute>
-            <xsl:attribute name="alt"/>
+            <xsl:attribute name="alt">
+              <xsl:value-of select="image/@alt"/>
+            </xsl:attribute>
+            <xsl:attribute name="title">
+              <xsl:value-of select="image/@alt"/>
+            </xsl:attribute>
           </xsl:element><!-- img -->
         </xsl:element><!-- a -->
       </xsl:when>
       <xsl:otherwise>
         <xsl:element name="img">
           <xsl:attribute name="src">
-            <xsl:value-of select="image"/>
+            <xsl:value-of select="image/@url"/>
           </xsl:attribute>
-          <xsl:attribute name="alt"/>
+          <xsl:attribute name="alt">
+            <xsl:value-of select="image/@alt"/>
+          </xsl:attribute>
+          <xsl:attribute name="title">
+            <xsl:value-of select="image/@alt"/>
+          </xsl:attribute>
         </xsl:element><!-- img -->
       </xsl:otherwise>
     </xsl:choose>

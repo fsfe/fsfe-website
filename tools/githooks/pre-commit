@@ -378,6 +378,9 @@ echo -ne "\n"
 # Report based on failed checks
 # =============================================================================
 
+# --------
+# CRITICAL
+# --------
 if [ $RETURN_SYNTAX -gt 0 ]; then
   cat <<EOF >&2
   =========================
@@ -417,30 +420,6 @@ if [ $RETURN_HTML -gt 0 ]; then
   the final HTML files from the .xhtml source files. So please make
   sure you follow the format for the XHTML files, and to name them
   accordingly.
-
-EOF
-fi
-
-if [ $RETURN_TAGS_NEW -gt 0 ]; then
-  cat <<EOF >&2
-  ====================================
-  || [WARN] NEW / DUPLICATED TAG(S) ||
-  ====================================
-  The following ${RETURN_TAGS_NEW} files' tag(s) in your commit did not exist
-  before in our news or event items:
-
-  $(filelisting "${FILES_TAGS_NEW}")
-
-  Please make sure that you use already used tags, and only introduce a
-  new tag e.g. if it's about a new campaign that will be more often
-  mentioned in news or events. If you feel unsure, please ask
-  <web@lists.fsfe.org>.
-
-  Here you will find the currently used tags:
-  https://fsfe.org/tags/tags.html
-
-  Please make another commit to replace a new tag with an already
-  existing one unless you are really sure. Thank you.
 
 EOF
 fi
@@ -605,6 +584,51 @@ if [ $RETURN_FIX_LANG -gt 0 ]; then
 EOF
 fi
 
+if [ $RETURN_IMGRATIO -gt 0 ]; then
+  cat <<EOF >&2
+  ========================================
+  || [CRIT] Invalid preview image ratio ||
+  ========================================
+  The following ${RETURN_IMGRATIO} file(s) in your commit have a preview image
+  whose ratio is not 16:9:
+
+  $(filelisting "${FILES_IMGRATIO}")
+
+  16:9 ratio for preview is mandatory for news items.
+
+  More information on preview images:
+  https://wiki.fsfe.org/TechDocs/Mainpage/Editing#Preview_Image
+
+EOF
+fi
+
+# --------
+# WARNINGS
+# --------
+if [ $RETURN_TAGS_NEW -gt 0 ]; then
+  cat <<EOF >&2
+  ====================================
+  || [WARN] NEW / DUPLICATED TAG(S) ||
+  ====================================
+  The following ${RETURN_TAGS_NEW} files' tag(s) in your commit did not exist
+  before in our news or event items:
+
+  $(filelisting "${FILES_TAGS_NEW}")
+
+  Please make sure that you use already used tags, and only introduce a
+  new tag e.g. if it's about a new campaign that will be more often
+  mentioned in news or events. If you feel unsure, please ask
+  <web@lists.fsfe.org>.
+
+  Here you will find the currently used tags:
+  https://fsfe.org/tags/tags.html
+
+  Please make another commit to replace a new tag with an already
+  existing one unless you are really sure. Thank you.
+
+EOF
+fi
+
 if [ $RETURN_CSS_ELEMENT -gt 0 ]; then
   cat <<EOF >&2
   =================================
@@ -641,24 +665,6 @@ if [ $RETURN_CSS_ATTR -gt 0 ]; then
 
   More information why this is bad style, and what to do instead:
   https://wiki.fsfe.org/TechDocs/Mainpage/Editing/BestPractices#No_in-line_CSS
-
-EOF
-fi
-
-if [ $RETURN_IMGRATIO -gt 0 ]; then
-  cat <<EOF >&2
-  ========================================
-  || [CRIT] Invalid preview image ratio ||
-  ========================================
-  The following ${RETURN_IMGRATIO} file(s) in your commit have a preview image
-  whose ratio is not 16:9:
-
-  $(filelisting "${FILES_IMGRATIO}")
-
-  16:9 ratio for preview is mandatory for news items.
-
-  More information on preview images:
-  https://wiki.fsfe.org/TechDocs/Mainpage/Editing#Preview_Image
 
 EOF
 fi

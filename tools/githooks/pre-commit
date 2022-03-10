@@ -80,8 +80,9 @@ FILES_IMGALT=""
 # =============================================================================
 
 # Convert a string like "|first|second" to a readable list starting from line 1
+# and removing two spaces in the first line
 filelisting() {
-  echo "${1}" | sed -E -e "s/\|/\n  - /g" | sed '1d'
+  echo "${1}" | sed -E -e "s/\|/\n  - /g" | sed '1d' | sed '1 s/^  //'
 }
 
 # Check whether file exists, matches a defined regex, and not potential excludes

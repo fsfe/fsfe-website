@@ -35,7 +35,7 @@
   <!-- Footer -->
   <text id="translator1a">Ευχαριστούμε </text>
   <text id="translator1b"> για αυτή τη μετάφραση. </text>
-  <text id="translator2">Αυτή είναι μια ανεπίσημη μετάφραση. </text>
+  <text id="translator2">Ανεπίσημη μετάφραση. </text>
   <text id="translator3a">Παρακαλούμε δείτε επίσης στο </text>
   <text id="translator3b">πρωτότυπο κείμενο</text>
   <text id="translator3c"> αυτής της σελίδας.</text>
@@ -48,35 +48,35 @@
 
   <!-- Warning info boxes -->
   <text id="outdated-1">
-    Αυτή η μετάφραση μπορεί να είναι ξεπερασμένη με 
+    Η μετάφραση μπορεί να είναι ξεπερασμένη με 
   </text><!-- followed by "translator3b" -->
   <text id="outdated-2">
-     <a href="/contribute/translators/translators.html">Παρακαλώ βοηθήστε μας να μεταφράσουμε</a> αυτή και άλλες σελίδες
+     <a href="/contribute/translators/translators.html">Βοήθησέ μας να μεταφράσουμε</a> αυτή και άλλες σελίδες
      στο fsfe.org, ώστε οι άνθρωποι να μπορούν να διαβάσουν το μήνυμα μας στην μητρική τους γλώσσα.
   </text>
   <text id="notranslation">
-  Αυτή η σελίδα δεν έχει μεταφραστεί ακόμη. <a href="/contribute/translators/translators.html">Παρακαλώ βοηθήστε μας να μεταφράσουμε</a> 
+  Η σελίδα δεν έχει μεταφραστεί ακόμη. <a href="/contribute/translators/translators.html">Βοήθησέ μας να μεταφράσουμε</a> 
   αυτή και άλλες σελίδες στο fsfe.org, ώστε οι άνθρωποι να μπορούν να διαβάσουν το μήνυμά μας στην μητρική τους γλώσσα.
   </text>
     <text id="under-construction">
-    <strong>Προειδοποίηση: </strong>Αυτή η σελίδα είναι υπό κατασκευή. Παρακαλώ <strong>μην την διαδίδετε</strong> ή προσπαθείτε να την
+    <strong>Προειδοποίηση: </strong>Η σελίδα είναι υπό κατασκευή. Παρακαλούμε <strong>μην την διαδίδετε</strong> ή προσπαθείτε να την
     μεταφράσετε, καθώς τα περιεχόμενα της πρόκειται να αλλάξουν.
   </text>
-    <text id="project-complete">Αυτό το έρχο έχει ολοκληρωθεί με επιτυχία. Αυτές οι σελίδες διατηρήθηκαν εδώ για σκοπούς αρχειοθέτησης.  </text>
+    <text id="project-complete">Το έρχο έχει ολοκληρωθεί με επιτυχία. Οι σελίδες διατηρήθηκαν για σκοπούς αρχειοθέτησης.  </text>
 
 
   <!-- Menu, Navigation, Buttons -->
-  <text id="fsfe/about">Περί</text>
+  <text id="fsfe/about">Οργανισμός</text>
 
 
-  <text id="fsfe/activities">Δραστηριότητες</text>
-  <text id="fsfe/help">Συνεισφορά</text>
+  <text id="fsfe/activities">Δράσεις</text>
+  <text id="fsfe/help">Πάρε μέρος</text>
   <text id="fsfe/press">Τύπος</text>
 
-  <text id="support/become">Γίνε υποστηρικτής</text>
+  <text id="support/become">Υποστήριξέ μας</text>
   <text id="fellowship/login">Σύνδεση</text>
-  <text id="news/news">Τελευταία νέα</text>
-  <text id="news/events">Επερχόμενες εκδηλώσεις</text>
+  <text id="news/news">Νέα</text>
+  <text id="news/events">Εκδηλώσεις</text>
   <text id="news/press">Αίθουσα τύπου</text>
   <text id="news/nl">Ενημερωτικά δελτία</text>
   <text id="news/planet">Ιστολόγια του Πλανήτη</text>
@@ -97,8 +97,8 @@
   <text id="news">Νέα</text>
   <text id="breadcrumb-news">Νέα</text>
   <text id="pages">Σελίδες</text>
-  <text id="receive-newsletter">Γραφτείτε συνδρομητής στο μηνιαίο ενημερωτικό δελτίο του FSFE</text>
-  <text id="subscribe-newsletter">Συνδρομή στο ενημερωτικό δελτίο</text>
+  <text id="receive-newsletter">Διάβαζε κάθε μήνα τις ενημερώσεις του FSFE στα εισερχόμενά σου</text>
+  <text id="subscribe-newsletter">Εγγράψου στο μηνιαίο ενημερωτικό δελτίο</text>
 
 
 
@@ -152,7 +152,7 @@
   <text id="our-work-intro">
     <p>Ως μια μη κερδοσκοπική, μη κυβερνητική οργάνωση, το Ευρωπαϊκό Ίδρυμα Ελεύθερου Λογισμικού 
     δουλεύει για να δημιουργήσει γενική κατανόηση και υποστήριξη για το Ελεύθερο Λογισμικό και
-    τα Ανοιχτά Πρότυπα, στην πολιτική, στις επιχειρήσεις, στον νόμο και στην κοινωνία γενικότερα.</p>
+    τα Ανοιχτά Πρότυπα, στην πολιτική, στις επιχειρήσεις, στον νόμο και στην κοινωνία.</p>
   </text>
   <text id="about-fsfe">Σχετικά με το FSFE</text>
   <text id="about-fsfe-intro">
@@ -175,11 +175,11 @@
 
 
 
-  <text id="support">Υποστηρίξτε το FSFE</text>
-  <text id="show-support">Δείξτε την υποστήριξη σας!</text>
-  <text id="show-support-paragraph">Το FSFE χρειάζεται την υποστήριξη σας, για να ακουστει η φωνή του! Κάθε hit μετράει!</text>
+  <text id="support">Υποστήριξε το FSFE</text>
+  <text id="show-support">Δείξε ότι μας υποστηρίζεις!</text>
+  <text id="show-support-paragraph">Το FSFE χρειάζεται την υποστήριξη σου, για να ακουστεί η φωνή του! Κάθε hit μετράει!</text>
   <text id="support-fsfe">Υποστηρίζω το FSFE!</text>
-  <text id="support-paragraph">Με το να γίνεις υποστηρικτής του FSFE ενδυναμώνεις την δουλειά μας και βοηθάς στην διασφάλιση της
+  <text id="support-paragraph">Με το να γίνεις υποστηρίκτρια/-τής του FSFE ενδυναμώνεις την δουλειά μας και βοηθάς στην διασφάλιση της
   οικονομικής μας ανεξαρτησίας.</text>
 
   <text id="donate">Δωρεά</text>
@@ -193,10 +193,10 @@
   </text>
 
   <!-- pdfreaders.org -->
-  <text id="pdfreaders-head-readers">Οι αναγνώστες</text>
+  <text id="pdfreaders-head-readers">Αναγνώστες</text>
   <text id="pdfreaders-head-standards">Ανοιχτά πρότυπα</text>
   <text id="pdfreaders-head-graphics">Γραφικά</text>
-  <text id="pdfreaders-head-about">Περί</text>
+  <text id="pdfreaders-head-about">Σχετικά</text>
   <text id="pdfreaders-body-platforms">Πλατφόρμες:</text>
 
   <!-- Share and support buttons -->
@@ -225,3 +225,4 @@
   <text id="search/notfound">Δεν βρέθηκαν αποτελέσματα αναζήτησης. Παρακαλώ επαναδιατυπώστε το ερώτημα σας.</text>
   <text id="search/empty">Το ερώτημα αναζήτησης είναι κενό.</text>
 </data>
+

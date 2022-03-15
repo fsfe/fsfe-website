@@ -1,23 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <html>
-  <version>3</version>
+  <version>4</version>
 
   <head>
     <title>News</title>
   </head>
 
-  <body class="toplevel article">
+  <body class="toplevel news-index">
     <h1>News</h1>
 
-    <p class="inline-buttons news-follow-us">Follow us:
-      <span class="share-buttons">
-        <a class="button share-mail" href="/news/newsletter.html">Newsletter</a>
-        <a class="button share-rss" href="/news/news.rss">RSS Feed</a>
-        <a target="_blank" class="button share-mastodon" href="https://mastodon.social/@fsfe">Mastodon</a>
-        <a target="_blank" class="button share-twitter" href="https://twitter.com/fsfe">Twitter</a>
-      </span>
-    </p>
+    <div id="introduction">
+      <p>
+        The FSFE empowers users to control technology by its <a
+        href="/activities/">diverse activities</a> and concrete engagement for
+        <a href="/freesoftware/">software freedom</a>. Make sure to receive
+        regular updates and deeper insights our various channels.
+      </p>
+    </div>
+
+    <div class="news-module-wrapper">
+      <module id="follow-news" />
+      <module id="social-media" />
+      <module id="banner-subscribe" />
+    </div>
 
     <include-news/>
 
@@ -28,13 +34,4 @@
       <a class="learn-more" href="2020/index.html"/>
     </p>
   </body>
-
-  <sidebar promo="none">
-    <div class="news-sidebar">
-      <module id="follow-news"/>
-      <module id="social-media"/>
-      <hr/>
-      <module id="video-supporter"/>
-    </div>
-  </sidebar>
 </html>

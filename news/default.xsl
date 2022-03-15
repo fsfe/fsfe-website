@@ -58,7 +58,9 @@
       </xsl:attribute>
 
       <!-- Image -->
-      <xsl:call-template name="news-image"/>
+      <xsl:call-template name="news-image">
+        <xsl:with-param name="shrink" select="'yes'" />
+      </xsl:call-template>
 
       <xsl:element name="div">
         <xsl:attribute name="class">news-inner</xsl:attribute>

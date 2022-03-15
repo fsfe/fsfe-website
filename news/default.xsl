@@ -52,31 +52,37 @@
 
     <!-- Wrap the news item into an <article> -->
     <xsl:element name="article">
-      <xsl:attribute name="class">news</xsl:attribute>
+      <xsl:attribute name="class">news with-image-left</xsl:attribute>
       <xsl:attribute name="id">
         <xsl:value-of select="@filename"/>
       </xsl:attribute>
 
-      <!-- Title with or without link -->
-      <xsl:element name="h3">
-        <xsl:call-template name="news-title"/>
-      </xsl:element>
+      <!-- Image -->
+      <xsl:call-template name="news-image"/>
 
-      <!-- Date and author -->
-      <xsl:element name="p">
-        <xsl:attribute name="class">meta</xsl:attribute>
-        <xsl:call-template name="news-date"/>
-        <xsl:if test="author">
-          <xsl:text> – </xsl:text>
-          <xsl:apply-templates select="author"/>
-        </xsl:if>
-      </xsl:element>
+      <xsl:element name="div">
+        <xsl:attribute name="class">news-inner</xsl:attribute>
+        <!-- Title with or without link -->
+        <xsl:element name="h3">
+          <xsl:call-template name="news-title"/>
+        </xsl:element>
 
-      <!-- Text and "read-more" link -->
-      <xsl:call-template name="news-teaser"/>
+        <!-- Date and author -->
+        <xsl:element name="p">
+          <xsl:attribute name="class">meta</xsl:attribute>
+          <xsl:call-template name="news-date"/>
+          <xsl:if test="author">
+            <xsl:text> – </xsl:text>
+            <xsl:apply-templates select="author"/>
+          </xsl:if>
+        </xsl:element>
 
-      <!-- Tags -->
-      <xsl:apply-templates select="tags"/>
+        <!-- Text and "read-more" link -->
+        <xsl:call-template name="news-teaser"/>
+
+        <!-- Tags -->
+        <xsl:apply-templates select="tags"/>
+      </xsl:element> <!-- /div -->
 
     </xsl:element>
 

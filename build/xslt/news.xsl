@@ -14,6 +14,7 @@
 
   <xsl:template name="news-image">
     <xsl:choose>
+      <!-- XML file provides a link (default for news items) -->
       <xsl:when test="link != ''">
         <xsl:element name="a">
           <xsl:attribute name="href">
@@ -32,6 +33,7 @@
           </xsl:element><!-- img -->
         </xsl:element><!-- a -->
       </xsl:when>
+      <!-- No link given for the item -->
       <xsl:otherwise>
         <xsl:element name="img">
           <xsl:attribute name="src">

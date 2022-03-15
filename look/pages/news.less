@@ -36,6 +36,14 @@ article.news, article.event {
     border-bottom: 1px solid @gray-lighter;
     margin-bottom: 10px;
 
+    > img:first-child,
+    > a:first-child img {
+        // same margin for image as for headline
+        margin-top: 20px;
+        // make image as wide as possible
+        padding: 0;
+    }
+
     p.meta {
         .text-muted;
         .small;

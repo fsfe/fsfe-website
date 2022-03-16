@@ -32,24 +32,6 @@
           </xsl:element>
           <xsl:call-template name="subscribe-nl" />
         </xsl:when>
-        <!-- support: link to /support -->
-        <xsl:when test="/buildinfo/document/followup = 'support'">
-          <xsl:attribute name="class">support</xsl:attribute>
-          <xsl:element name="h2">
-            <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'show-support'" /></xsl:call-template>
-          </xsl:element>
-          <xsl:element name="p">
-            <xsl:call-template name="fsfe-gettext">
-              <xsl:with-param name="id" select="'show-support-paragraph'" />
-            </xsl:call-template>
-            <br />
-            <xsl:element name="a">
-              <xsl:attribute name="href">/support/?followupbox</xsl:attribute>
-              <xsl:attribute name="class">btn</xsl:attribute>
-              <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'support-fsfe'" /></xsl:call-template>
-            </xsl:element>
-          </xsl:element>
-        </xsl:when>
         <!-- donate: link to /donate -->
         <xsl:when test="/buildinfo/document/followup = 'donate'">
           <xsl:attribute name="class">donate</xsl:attribute>

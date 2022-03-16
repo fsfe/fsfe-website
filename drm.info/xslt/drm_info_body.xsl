@@ -8,7 +8,6 @@
   <xsl:include href="../../build/xslt/notifications.xsl" />
   <xsl:include href="../../build/xslt/translation_list.xsl" />
   <xsl:include href="../../build/xslt/gettext.xsl" />
-  <xsl:include href="../../build/xslt/static-elements.xsl" />
 
   <xsl:template name="page-body">
     <xsl:element name="body">
@@ -151,7 +150,7 @@
                </xsl:element>
              </xsl:element>
            </xsl:element>
-	</xsl:element>	
+	</xsl:element>
 </xsl:element>
       </xsl:element>
 </xsl:element>

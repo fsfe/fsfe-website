@@ -32,6 +32,14 @@
           </xsl:element>
           <xsl:call-template name="subscribe-nl" />
         </xsl:when>
+        <!-- subscribe-emails: form with which people can sign up for emails via fsfe-cd -->
+        <xsl:when test="/buildinfo/document/followup = 'subscribe-emails'">
+          <xsl:attribute name="class">subscribe-emails</xsl:attribute>
+          <xsl:element name="h2">
+            <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'subscribe-emails'" /></xsl:call-template>
+          </xsl:element>
+          <xsl:call-template name="subscribe-emails" />
+        </xsl:when>
         <!-- donate: link to /donate -->
         <xsl:when test="/buildinfo/document/followup = 'donate'">
           <xsl:attribute name="class">donate</xsl:attribute>
@@ -148,4 +156,38 @@
       <input id="submit" type="submit" value="{$submit}"/>
     </form>
   </xsl:template>
+
+  <xsl:template name="subscribe-emails">
+    <!-- the language the visitor is on -->
+    <xsl:variable name="lang">
+      <xsl:value-of select="/buildinfo/document/@language"/>
+    </xsl:variable>
+    <!-- translation for "Your name" -->
+    <xsl:variable name="your-name">
+      <xsl:call-template name="gettext"><xsl:with-param name="id" select="'your-name'" /></xsl:call-template>
+    </xsl:variable>
+    <!-- translation for "Your email address" -->
+    <xsl:variable name="your-email">
+      <xsl:call-template name="gettext"><xsl:with-param name="id" select="'your-email'" /></xsl:call-template>
+    </xsl:variable>
+    <!-- translation for "Subscribe" -->
+    <xsl:variable name="subscribe">
+      <xsl:call-template name="gettext"><xsl:with-param name="id" select="'subscribe'" /></xsl:call-template>
+    </xsl:variable>
+
+    <!-- actual subscribe form -->
+    <form class="form-inline" method="post" action="https://my.fsfe.org/subscribe">
+      <input type="hidden" name="language" value="{$lang}"/>
+      <div class="form-group">
+        <input type="text" class="form-control" name="name" placeholder="{$your-name}" required="required"/>
+      </div>
+      <div class="form-group">
+        <input type="email" class="form-control" name="email1" placeholder="{$your-email}" required="required"/>
+      </div>
+      <fsfe-cd-referrer-input/>
+      <input type="hidden" name="wants_info" value="yes"/>
+      <button class="btn btn-default" type="submit"><xsl:value-of select="$subscribe" /></button>
+    </form>
+  </xsl:template>
+
 </xsl:stylesheet>

@@ -17,34 +17,57 @@
   <!-- Define the URL of the image -->
   <xsl:template name="news-image">
     <xsl:param name="shrink" />
-    <xsl:variable name="img-src">
-      <xsl:choose>
-        <xsl:when test="$shrink = 'yes'">
-          <xsl:call-template name="str:subst">
-            <xsl:with-param name="text">
-              <xsl:call-template name="str:subst">
-                <xsl:with-param name="text" select="image/@url" />
-                <xsl:with-param name="replace" select="'/big/'" />
-                <xsl:with-param name="with" select="'/small/'" />
-              </xsl:call-template>
-            </xsl:with-param>
-            <xsl:with-param name="replace" select="'/medium/'" />
-            <xsl:with-param name="with" select="'/small/'" />
-          </xsl:call-template>
-        </xsl:when>
-        <xsl:otherwise>
-          <xsl:value-of select="image/@url"/>
-        </xsl:otherwise>
-      </xsl:choose>
-    </xsl:variable>
 
-    <xsl:choose>
-      <!-- XML file provides a link (default for news items) -->
-      <xsl:when test="link != ''">
-        <xsl:element name="a">
-          <xsl:attribute name="href">
-            <xsl:value-of select="link"/>
-          </xsl:attribute>
+    <xsl:if test="image/@url != ''">
+      <!-- the URL of the image -->
+      <xsl:variable name="img-src">
+        <xsl:choose>
+          <!-- use a "small" version of the image, e.g.:
+                https://pics.fsfe.org/uploads/medium/abc123.png
+              => https://pics.fsfe.org/uploads/small/abc123.png -->
+          <xsl:when test="$shrink = 'yes'">
+            <xsl:call-template name="str:subst">
+              <xsl:with-param name="text">
+                <xsl:call-template name="str:subst">
+                  <xsl:with-param name="text" select="image/@url" />
+                  <xsl:with-param name="replace" select="'/big/'" />
+                  <xsl:with-param name="with" select="'/small/'" />
+                </xsl:call-template>
+              </xsl:with-param>
+              <xsl:with-param name="replace" select="'/medium/'" />
+              <xsl:with-param name="with" select="'/small/'" />
+            </xsl:call-template>
+          </xsl:when>
+          <!-- else, take the given URL -->
+          <xsl:otherwise>
+            <xsl:value-of select="image/@url"/>
+          </xsl:otherwise>
+        </xsl:choose>
+      </xsl:variable>
+
+      <!-- create an <img> element, optionally wrapped in an a element -->
+      <xsl:choose>
+        <!-- XML file provides a link (default for news items) -->
+        <xsl:when test="link != ''">
+          <xsl:element name="a">
+            <xsl:attribute name="href">
+              <xsl:value-of select="link"/>
+            </xsl:attribute>
+            <xsl:element name="img">
+              <xsl:attribute name="src">
+                <xsl:value-of select="$img-src"/>
+              </xsl:attribute>
+              <xsl:attribute name="alt">
+                <xsl:value-of select="image/@alt"/>
+              </xsl:attribute>
+              <xsl:attribute name="title">
+                <xsl:value-of select="image/@alt"/>
+              </xsl:attribute>
+            </xsl:element><!-- img -->
+          </xsl:element><!-- a -->
+        </xsl:when>
+        <!-- No link given for the item -->
+        <xsl:otherwise>
           <xsl:element name="img">
             <xsl:attribute name="src">
               <xsl:value-of select="$img-src"/>
@@ -56,23 +79,9 @@
               <xsl:value-of select="image/@alt"/>
             </xsl:attribute>
           </xsl:element><!-- img -->
-        </xsl:element><!-- a -->
-      </xsl:when>
-      <!-- No link given for the item -->
-      <xsl:otherwise>
-        <xsl:element name="img">
-          <xsl:attribute name="src">
-            <xsl:value-of select="$img-src"/>
-          </xsl:attribute>
-          <xsl:attribute name="alt">
-            <xsl:value-of select="image/@alt"/>
-          </xsl:attribute>
-          <xsl:attribute name="title">
-            <xsl:value-of select="image/@alt"/>
-          </xsl:attribute>
-        </xsl:element><!-- img -->
-      </xsl:otherwise>
-    </xsl:choose>
+        </xsl:otherwise>
+      </xsl:choose>
+    </xsl:if>
   </xsl:template>
 
 

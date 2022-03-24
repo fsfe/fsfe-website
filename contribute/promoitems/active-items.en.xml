@@ -21,7 +21,7 @@ Such an item doesn't need an image!
   <version>1</version>
 
 
-  <!-- FSFE and Fellowship -->
+  <!-- FSFE -->
 
   <item type="fsfe" id="fsfe-logo-sticker" year="2017" order="1">
     <image imgsmall="/contribute/promopics/fsfe-sticker-thumb.png" />
@@ -41,6 +41,7 @@ Such an item doesn't need an image!
   <item type="fsfe" id="multilanguage-free-software-purple" year="2019" order="4">
     <image imgsmall="/contribute/promopics/free-software-multilanguage-purple.png" />
   </item>
+
 
   <!-- Hacking 100 freedom -->
 
@@ -72,7 +73,7 @@ Such an item doesn't need an image!
   </item>
 
 
-  <!--100 freedoms -->
+  <!-- 100 freedoms -->
 
   <item type="freedom" id="100-freedoms-sticker-black" year="2017" order="1">
     <image imgsmall="/contribute/promopics/100-freedoms-sticker-black.png" />
@@ -106,18 +107,6 @@ Such an item doesn't need an image!
   </item>
 
 
-  <!-- Document Freedom Day -->
-
-  <item introduction="yes" type="dfd" id="dfd-introduction" order="1" /> <!-- introduction item with just text, doesn't need a picture -->
-
-  <item type="dfd" id="dfd-chance-poster" year="2014" order="4">
-    <image imgsmall="/contribute/promopics/a2.mu_thumb.png" />
-  </item>
-
-  <item type="dfd" id="dfd-poster-open-format" year="2014" order="6">
-    <image imgsmall="/contribute/promopics/open_formats_poster_ENthumb.png" />
-  </item>
-
   <!-- Upcycling Android -->
 
   <item type="upcyclingandroid" id="ua-sticker-square" year="2021" order="1">
@@ -130,6 +119,7 @@ Such an item doesn't need an image!
 
 
   <!-- F-droid -->
+
   <item type="f-droid" id="f-droid-leaflet" year="2014" order="1">
     <image imgsmall="/contribute/promopics/fdroid-flyer_thumb.png" />
   </item>
@@ -138,7 +128,9 @@ Such an item doesn't need an image!
     <image imgsmall="/contribute/promopics/fya-sticker-2012-3cm.png" />
   </item>
 
+
   <!-- I love Free Software -->
+
   <item type="ilovefs" id="ilovefs-postcard" year="2014" order="3">
     <image imgsmall="/contribute/promopics/ilovefs-postcard-front-thumb.png" />
   </item>
@@ -163,6 +155,7 @@ Such an item doesn't need an image!
     <image imgsmall="/contribute/promopics/ilovefs-balloon-combined-thumb.png" />
   </item>
 
+
   <!-- No cloud -->
 
   <item type="nocloud" id="nocloud-sticker" year="2015" order="1">
@@ -180,6 +173,7 @@ Such an item doesn't need an image!
   <item type="nocloud" id="nocloud-poster-2sided" year="2015" order="4">
     <image imgsmall="/contribute/promopics/thereisnocloud-poster-thumb.png" />
   </item>
+
 
   <!-- Children's Book Ada+Zangemann -->
 

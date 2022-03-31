@@ -103,6 +103,20 @@
       ]">
       <xsl:sort select="@date" order="descending"/>
 
+      <!-- Before every 5 news, show a banner, depending on even or odd number of position in loop -->
+      <xsl:if test="position() mod 5 = 0">
+        <xsl:choose>
+          <!-- even number -->
+          <xsl:when test="position() mod 2 = 0">
+            <xsl:apply-templates select="/buildinfo/document/banner1/node()" />
+          </xsl:when>
+          <!-- odd number -->
+          <xsl:otherwise>
+            <xsl:apply-templates select="/buildinfo/document/banner2/node()" />
+          </xsl:otherwise>
+        </xsl:choose>
+      </xsl:if>
+
       <!-- Display the news items -->
       <xsl:apply-templates select="."/>
 

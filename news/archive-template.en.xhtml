@@ -1,44 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <html>
-  <version>3</version>
+  <version>4</version>
 
   <head>
     <title>News Archive for :YYYY:</title>
   </head>
 
-  <body class="article">
+  <body class="news-index">
     <p id="category"><a href="/news/news.html">News</a></p>
 
     <localmenu dir="news" set="year" id=":YYYY:">:YYYY:</localmenu>
 
     <h1>News Archive for :YYYY:</h1>
 
-    <div class="news-follow-us">
-      <div class="share-top-buttons-label">Follow us:</div>
-      <div class="share-buttons-top">
-        <a target="_blank" href="/news/newsletter.html">
-          <button class="share-button-top share-mail">Newsletter</button>
-        </a>
-        <a target="_blank" href="/news/news.rss">
-          <button class="share-button-top share-rss">RSS Feed</button>
-        </a>
-        <a target="_blank" href="https://mastodon.social/@fsfe">
-          <button class="share-button-top share-mastodon">Mastodon</button>
-        </a>
-        <a target="_blank" href="https://twitter.com/fsfe">
-          <button class="share-button-top share-twitter">Twitter</button>
-        </a>
-      </div>
+    <div id="introduction">
+      <p>
+        The FSFE empowers users to control technology with its <a
+        href="/activities/">diverse activities</a> and concrete engagement for
+        <a href="/freesoftware/">software freedom</a>. Follow us and make sure
+        to receive regular updates and deeper insights on our various channels.
+      </p>
+    </div>
+
+    <div class="module-wrapper news">
+      <module id="follow-news" />
+      <module id="social-media" />
+      <module id="banner-subscribe" />
     </div>
 
     <include-news/>
   </body>
 
-  <sidebar promo="none">
-    <div class="news-sidebar">
-      <module id="follow-news"/>
-      <module id="social-media"/>
-    </div>
-  </sidebar>
+  <banner1><module id="banner-subscribe" /></banner1>
+  <banner2><module id="banner-become-supporter" /></banner2>
 </html>

@@ -34,7 +34,7 @@ ul.news-list, ul.event-list {
 
 body.news-index {
     // A wrapper around the 3 modules that modifies their behaviour
-    .news-module-wrapper {
+    .module-wrapper {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
@@ -44,9 +44,8 @@ body.news-index {
             // hide headlines and paragraphs
             h2 { display: none; }
             p { display: none; }
+
             .share-buttons {
-                // hide button to /news as this is the page we're on
-                .share-news { display: none; }
                 // no margin, important for mobile view
                 margin: 0;
             }
@@ -60,6 +59,14 @@ body.news-index {
 
             // on small screen, show full-width
             flex-grow: 2;
+        }
+
+        // special rules for the wrapper on /news and the news archives
+        &.news {
+            .share-buttons {
+                // hide button to /news as this is the page we're on
+                .share-news { display: none; }
+            }
         }
     }
 }

@@ -24,12 +24,15 @@
       </xsl:call-template>
     </xsl:variable>
 
-    <!-- Replace the most common characters with their respective HTML entity -->
+    <!-- Replace the most common characters (with 4 exceptions) with their respective HTML entity or Hex -->
     <xsl:variable name="email-encoded">
       <xsl:for-each select="exsl:node-set($email-tokens)/token">
         <xsl:choose>
-          <!-- make sure only defined characters are replaced -->
-          <xsl:when test="translate(text(), 'abcdefghijklmnopqrstuvwxyz0123456789.+-@','xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx') = 'x'">
+          <!--
+            make sure only defined characters are replaced.
+            To increase confusion, we do not replace e, m, r, and .
+          -->
+          <xsl:when test="translate(text(), 'abcdfghijklnopqstuvwxyz0123456789+-@','xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx') = 'x'">
             <xsl:text>&amp;#</xsl:text>
             <xsl:choose>
               <!-- lowercase characters -->
@@ -37,7 +40,6 @@
               <xsl:when test="text()='b'">98</xsl:when>
               <xsl:when test="text()='c'">x0063</xsl:when>
               <xsl:when test="text()='d'">100</xsl:when>
-              <xsl:when test="text()='e'">x0065</xsl:when>
               <xsl:when test="text()='f'">102</xsl:when>
               <xsl:when test="text()='g'">x0067</xsl:when>
               <xsl:when test="text()='h'">104</xsl:when>
@@ -45,12 +47,10 @@
               <xsl:when test="text()='j'">106</xsl:when>
               <xsl:when test="text()='k'">x006b</xsl:when>
               <xsl:when test="text()='l'">108</xsl:when>
-              <xsl:when test="text()='m'">x006d</xsl:when>
               <xsl:when test="text()='n'">110</xsl:when>
               <xsl:when test="text()='o'">x006f</xsl:when>
               <xsl:when test="text()='p'">112</xsl:when>
               <xsl:when test="text()='q'">x0071</xsl:when>
-              <xsl:when test="text()='r'">114</xsl:when>
               <xsl:when test="text()='s'">x0073</xsl:when>
               <xsl:when test="text()='t'">116</xsl:when>
               <xsl:when test="text()='u'">x0075</xsl:when>
@@ -71,7 +71,6 @@
               <xsl:when test="text()='8'">x0038</xsl:when>
               <xsl:when test="text()='9'">57</xsl:when>
               <!-- special chars relevant for emails -->
-              <xsl:when test="text()='.'">x002e</xsl:when>
               <xsl:when test="text()='+'">43</xsl:when>
               <xsl:when test="text()='-'">x002d</xsl:when>
               <xsl:when test="text()='@'">64</xsl:when>

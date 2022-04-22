@@ -11,15 +11,14 @@
   <xsl:import href="../../tools/xsltsl/tokenize.xsl"/>
 
   <!-- plain email is the input -->
-  <xsl:template match="email">
-    <xsl:variable name="email-plain">
-      <xsl:value-of select="."></xsl:value-of>
-    </xsl:variable>
+  <xsl:template name="email" match="email">
+    <xsl:param name="email" select="." />
+    <xsl:param name="mailto" select="@mailto" />
 
     <!-- Split email on each character, creating a <token>character</token> element each -->
     <xsl:variable name="email-tokens">
       <xsl:call-template name="tokenize">
-        <xsl:with-param name="string" select="$email-plain" />
+        <xsl:with-param name="string" select="$email" />
         <xsl:with-param name="delimiters" select="''" />
       </xsl:call-template>
     </xsl:variable>
@@ -87,7 +86,7 @@
     <!-- Output email address in desired form -->
     <xsl:choose>
       <!-- Should be a clickable mailto: link -->
-      <xsl:when test="@mailto = 'yes'">
+      <xsl:when test="$mailto = 'yes'">
         <!--
           Note: Super-ugly hack to avoid that HTML entities are escaped in the href
           attribute. Therefore, the a element is created "manually"

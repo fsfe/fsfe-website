@@ -32,45 +32,48 @@
           <xsl:when test="translate(text(), 'abcdefghijklmnopqrstuvwxyz0123456789.+-@','xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx') = 'x'">
             <xsl:text>&amp;#</xsl:text>
             <xsl:choose>
-              <xsl:when test="text()='a'">97</xsl:when>
+              <!-- lowercase characters -->
+              <xsl:when test="text()='a'">x0061</xsl:when>
               <xsl:when test="text()='b'">98</xsl:when>
-              <xsl:when test="text()='c'">99</xsl:when>
+              <xsl:when test="text()='c'">x0063</xsl:when>
               <xsl:when test="text()='d'">100</xsl:when>
-              <xsl:when test="text()='e'">101</xsl:when>
+              <xsl:when test="text()='e'">x0065</xsl:when>
               <xsl:when test="text()='f'">102</xsl:when>
-              <xsl:when test="text()='g'">103</xsl:when>
+              <xsl:when test="text()='g'">x0067</xsl:when>
               <xsl:when test="text()='h'">104</xsl:when>
-              <xsl:when test="text()='i'">105</xsl:when>
+              <xsl:when test="text()='i'">x0069</xsl:when>
               <xsl:when test="text()='j'">106</xsl:when>
-              <xsl:when test="text()='k'">107</xsl:when>
+              <xsl:when test="text()='k'">x006b</xsl:when>
               <xsl:when test="text()='l'">108</xsl:when>
-              <xsl:when test="text()='m'">109</xsl:when>
+              <xsl:when test="text()='m'">x006d</xsl:when>
               <xsl:when test="text()='n'">110</xsl:when>
-              <xsl:when test="text()='o'">111</xsl:when>
+              <xsl:when test="text()='o'">x006f</xsl:when>
               <xsl:when test="text()='p'">112</xsl:when>
-              <xsl:when test="text()='q'">113</xsl:when>
+              <xsl:when test="text()='q'">x0071</xsl:when>
               <xsl:when test="text()='r'">114</xsl:when>
-              <xsl:when test="text()='s'">115</xsl:when>
+              <xsl:when test="text()='s'">x0073</xsl:when>
               <xsl:when test="text()='t'">116</xsl:when>
-              <xsl:when test="text()='u'">117</xsl:when>
+              <xsl:when test="text()='u'">x0075</xsl:when>
               <xsl:when test="text()='v'">118</xsl:when>
-              <xsl:when test="text()='w'">119</xsl:when>
+              <xsl:when test="text()='w'">x0077</xsl:when>
               <xsl:when test="text()='x'">120</xsl:when>
-              <xsl:when test="text()='y'">121</xsl:when>
+              <xsl:when test="text()='y'">x0079</xsl:when>
               <xsl:when test="text()='z'">122</xsl:when>
-              <xsl:when test="text()='0'">48</xsl:when>
+              <!-- numbers -->
+              <xsl:when test="text()='0'">x0030</xsl:when>
               <xsl:when test="text()='1'">49</xsl:when>
-              <xsl:when test="text()='2'">50</xsl:when>
+              <xsl:when test="text()='2'">x0032</xsl:when>
               <xsl:when test="text()='3'">51</xsl:when>
-              <xsl:when test="text()='4'">52</xsl:when>
+              <xsl:when test="text()='4'">x0034</xsl:when>
               <xsl:when test="text()='5'">53</xsl:when>
-              <xsl:when test="text()='6'">54</xsl:when>
+              <xsl:when test="text()='6'">x0036</xsl:when>
               <xsl:when test="text()='7'">55</xsl:when>
-              <xsl:when test="text()='8'">56</xsl:when>
+              <xsl:when test="text()='8'">x0038</xsl:when>
               <xsl:when test="text()='9'">57</xsl:when>
-              <xsl:when test="text()='.'">46</xsl:when>
+              <!-- special chars relevant for emails -->
+              <xsl:when test="text()='.'">x002e</xsl:when>
               <xsl:when test="text()='+'">43</xsl:when>
-              <xsl:when test="text()='-'">45</xsl:when>
+              <xsl:when test="text()='-'">x002d</xsl:when>
               <xsl:when test="text()='@'">64</xsl:when>
             </xsl:choose>
             <xsl:text>;</xsl:text>

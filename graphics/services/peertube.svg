@@ -1,19 +1,22 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg
-   xmlns:dc="http://purl.org/dc/elements/1.1/"
-   xmlns:cc="http://creativecommons.org/ns#"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-   xmlns:svg="http://www.w3.org/2000/svg"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   inkscape:version="1.0 (4035a4fb49, 2020-05-01)"
-   height="22"
-   width="22"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04, custom)"
+   height="50"
+   width="50"
    sodipodi:docname="peertube.svg"
    id="svg18"
    version="1.1"
-   viewBox="2799 -911 22 22">
+   viewBox="2799 -911 49.999999 49.999999"
+   inkscape:export-filename="/home/max/Repositories/fsfe/fsfe-website/graphics/services/peertube.png"
+   inkscape:export-xdpi="61.439999"
+   inkscape:export-ydpi="61.439999"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
   <metadata
      id="metadata22">
     <rdf:RDF>
@@ -22,21 +25,20 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
   <sodipodi:namedview
-     inkscape:current-layer="svg18"
+     inkscape:current-layer="g8"
      inkscape:window-maximized="1"
-     inkscape:window-y="23"
+     inkscape:window-y="26"
      inkscape:window-x="0"
-     inkscape:cy="11"
-     inkscape:cx="8"
-     inkscape:zoom="37.661008"
+     inkscape:cy="36.642673"
+     inkscape:cx="-25.809187"
+     inkscape:zoom="4.707626"
      showgrid="false"
      id="namedview20"
-     inkscape:window-height="1010"
+     inkscape:window-height="1001"
      inkscape:window-width="1920"
      inkscape:pageshadow="2"
      inkscape:pageopacity="0"
@@ -45,38 +47,55 @@
      objecttolerance="10"
      borderopacity="1"
      bordercolor="#666666"
-     pagecolor="#ffffff" />
+     pagecolor="#ffffff"
+     inkscape:pagecheckerboard="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:snap-page="true" />
   <defs
      id="defs2" />
   <g
      id="g16"
-     data-name="Artboard – 1">
+     data-name="Artboard – 1"
+     transform="translate(2.0717506,3.0246448)">
     <g
        id="g14"
        data-name="Symbol 3 – 1">
       <g
          id="g12"
          data-name="Group 44">
-        <path
-           id="path4"
-           data-name="Path 4"
-           d="m 2799,-911 v 11 l 8,-5"
-           fill="#211f20" />
-        <path
-           id="path6"
-           data-name="Path 5"
-           d="m 2799,-900 v 11 l 8,-6"
-           fill="#737373" />
-        <path
-           id="path8"
-           data-name="Path 6"
-           d="m 2807,-905 v 10 l 8,-5"
-           fill="#f1680d" />
-        <path
-           id="path10"
-           data-name="Path 7"
-           d="m 2807,-895 v -10 l -8,5 z"
-           fill="transparent" />
+        <g
+           stroke-width="723.605"
+           id="g8"
+           transform="matrix(0.04422301,0,0,0.04422301,2646.919,-869.94299)">
+          <g
+             id="g1352"
+             transform="matrix(1.6561491,0,0,1.6561491,-1079.3384,511.94826)"
+             style="stroke-width:436.92">
+            <path
+               d="m 2799,-911 v 341.344 l 256,-170.656"
+               fill="#211f20"
+               id="path2"
+               style="stroke-width:4779.26" />
+            <path
+               d="m 2799,-569.656 v 341.344 l 256,-170.656"
+               fill="#737373"
+               id="path4-3"
+               style="stroke-width:4779.26" />
+            <path
+               d="M 3055,-740.344 V -399 l 256,-170.656"
+               fill="#f1680d"
+               id="path6-6"
+               style="stroke-width:4779.26" />
+            <path
+               d="m 3055,-399 v -341.344 l -256,170.656"
+               fill="#f1680d"
+               id="path6-6-7"
+               style="fill:#ffffff;fill-opacity:1;stroke-width:4779.26" />
+          </g>
+        </g>
       </g>
     </g>
   </g>

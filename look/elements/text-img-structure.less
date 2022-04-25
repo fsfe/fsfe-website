@@ -14,7 +14,8 @@
   // takes 1/4 of the total width. On XS sized screens, it will go above the
   // text.
   > img:first-child,
-  > a:first-child img {
+  > a:first-child img,
+  > div.img-container {
       display: block;
       margin-top: 5px;
       margin-bottom: 10px;
@@ -33,11 +34,31 @@
   }
 
   // Optionally smaller image (2/10 ratio)
-  &.small-img > img:first-child {
+  &.small-img > img:first-child,
+  &.small-img > div.img-container {
       .make-sm-column(2);
+
+      &.img-square {
+        padding-bottom: calc(100% / 6); // width of 2 cols
+      }
   }
   &.small-img > :nth-child(n+2) {
       .make-sm-column(10);
+  }
+
+  // Square images, even if they are rectangular
+  > div.img-container {
+        &.img-square {
+            padding-bottom: calc(100% / 4); // width of 3 cols
+
+            > img {
+                position: absolute;
+                object-fit: cover;
+                object-position: center;
+                height: calc(100% - 30px); // bring down to correct size
+                width: calc(100% - 30px); // bring down to correct size
+            }
+        }
   }
 }
 
@@ -57,7 +78,7 @@
   .with-image();
 
   // The image is pushed to the right side...
-  > img:first-child {
+  > img:first-child, > div.img-container {
       .make-sm-column-push(9);
   }
 
@@ -72,7 +93,8 @@
   }
 
   // Optionally smaller image (2/10 ratio)
-  &.small-img > img:first-child {
+  &.small-img > img:first-child,
+  &.small-img > div.img-container {
       .make-sm-column-push(10);
   }
   &.small-img > :nth-child(2) {

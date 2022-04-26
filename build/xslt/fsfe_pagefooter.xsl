@@ -174,6 +174,59 @@
             </xsl:element>
           </xsl:element>
 
+          <!-- Social Media links -->
+          <xsl:element name="p">
+            <xsl:attribute name="class">share-buttons footer</xsl:attribute>
+            <xsl:element name="a"> <!-- Mastodon -->
+              <xsl:attribute name="href">
+                <xsl:text>https://mastodon.social/@fsfe</xsl:text>
+              </xsl:attribute>
+              <xsl:element name="img">
+                <xsl:attribute name="src">
+                  <xsl:text>/graphics/services/mastodon.png</xsl:text>
+                </xsl:attribute>
+                <xsl:attribute name="alt">Mastodon</xsl:attribute>
+                <xsl:attribute name="title">Mastodon</xsl:attribute>
+              </xsl:element>
+            </xsl:element>
+            <xsl:element name="a"> <!-- Twitter -->
+              <xsl:attribute name="href">
+                <xsl:text>https://twitter.com/fsfe</xsl:text>
+              </xsl:attribute>
+              <xsl:element name="img">
+                <xsl:attribute name="src">
+                  <xsl:text>/graphics/services/twitter.png</xsl:text>
+                </xsl:attribute>
+                <xsl:attribute name="alt">Twitter</xsl:attribute>
+                <xsl:attribute name="title">Twitter</xsl:attribute>
+              </xsl:element>
+            </xsl:element>
+            <xsl:element name="a"> <!-- Peertube -->
+              <xsl:attribute name="href">
+                <xsl:text>https://media.fsfe.org/a/fsfe/videos</xsl:text>
+              </xsl:attribute>
+              <xsl:element name="img">
+                <xsl:attribute name="src">
+                  <xsl:text>/graphics/services/peertube.png</xsl:text>
+                </xsl:attribute>
+                <xsl:attribute name="alt">Peertube</xsl:attribute>
+                <xsl:attribute name="title">Peertube</xsl:attribute>
+              </xsl:element>
+            </xsl:element>
+            <xsl:element name="a"> <!-- Youtube -->
+              <xsl:attribute name="href">
+                <xsl:text>https://www.youtube.com/c/FreeSoftwareFoundationEurope</xsl:text>
+              </xsl:attribute>
+              <xsl:element name="img">
+                <xsl:attribute name="src">
+                  <xsl:text>/graphics/services/youtube.png</xsl:text>
+                </xsl:attribute>
+                <xsl:attribute name="alt">Youtube</xsl:attribute>
+                <xsl:attribute name="title">Youtube</xsl:attribute>
+              </xsl:element>
+            </xsl:element>
+          </xsl:element>
+
           <!-- Appropriate translation notice -->
           <xsl:element name="p">
             <xsl:if test="/buildinfo/document/@language!=/buildinfo/@original">

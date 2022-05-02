@@ -479,6 +479,16 @@
     <avatar>kekalainen.jpg</avatar>
   </person>
 
+  <person id="kenan">
+    <name>Elif Kenan</name>
+    <country>TR</country>
+    <function>intern/f</function>
+    <email>elif@fsfe.org</email>
+    <team>core</team>
+    <employee>full/f</employee>
+    <avatar>kenan.jpg</avatar>
+  </person>
+
   <person id="kesper">
     <name>Michael Kesper</name>
     <country>DE</country>
@@ -490,7 +500,6 @@
   <person id="kietreiber">
     <name>Marlene Kietreiber</name>
     <country>AT</country>
-    <function>intern/f</function>
     <email>marlene@fsfe.org</email>
     <avatar>kietreiber.jpg</avatar>
   </person>
@@ -930,6 +939,8 @@
     <team>core</team>
     <team>de</team>
     <team>franconia</team>
+    <employee>part/m</employee>
+    <function>technical-advisor/m</function>
     <function country="DE">deputy/m</function>
     <function group="franconia">coordinator/m</function>
     <email>floriansnow@fsfe.org</email>

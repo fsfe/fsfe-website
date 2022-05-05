@@ -4,18 +4,18 @@
   <version>1</version>
 
   <module>
-    <h2>Réseaux Sociaux</h2>
-
-    <p>
-      Pour des nouvelles brèves, vous pouvez nous suivre sur différents réseaux
-      sociaux.
-    </p>
-
-    <div class="share-buttons center">
-      <a class="button share-mastodon" href="https://mastodon.social/@fsfe" target="_blank">Mastodon</a>
-      <a class="button share-twitter" href="https://twitter.com/fsfe" target="_blank">Twitter</a>
-      <a class="button share-peertube" href="https://media.fsfe.org/a/fsfe/videos" target="_blank">Peertube</a>
-      <a class="button share-youtube" href="https://www.youtube.com/c/FreeSoftwareFoundationEurope" target="_blank">Youtube</a>
+    <div class="module-social-media">
+      <h2>Réseaux Sociaux</h2>
+      <p>
+        Pour des nouvelles brèves, vous pouvez nous suivre sur différents réseaux
+        sociaux.
+      </p>
+      <div class="share-buttons center">
+        <a class="button share-mastodon" href="https://mastodon.social/@fsfe" target="_blank">Mastodon</a>
+        <a class="button share-twitter" href="https://twitter.com/fsfe" target="_blank">Twitter</a>
+        <a class="button share-peertube" href="https://media.fsfe.org/a/fsfe/videos" target="_blank">Peertube</a>
+        <a class="button share-youtube" href="https://www.youtube.com/c/FreeSoftwareFoundationEurope" target="_blank">Youtube</a>
+      </div>
     </div>
   </module>
 </data>

@@ -56,6 +56,7 @@ RETURN_CSS_ELEMENT=0
 RETURN_CSS_ATTR=0
 RETURN_IMGRATIO=0
 RETURN_IMGALT=0
+RETURN_EMAIL=0
 
 # displayed files
 FILES_SYNTAX=""
@@ -73,6 +74,7 @@ FILES_CSS_ELEMENT=""
 FILES_CSS_ATTR=""
 FILES_IMGRATIO=""
 FILES_IMGALT=""
+FILES_EMAIL=""
 
 
 # =============================================================================
@@ -367,6 +369,18 @@ for f in $files_all; do
       &>/dev/null; then
       RETURN_IMGALT=$((RETURN_IMGALT + 1))
       FILES_IMGALT="${FILES_IMGALT}|${f}"
+    fi
+  fi
+
+  # ---------------------------------------------------------------------------
+  # check for non-obfuscated email addresses
+  # ---------------------------------------------------------------------------
+  fileregex="(\.xhtml$|\.xml$)"
+  if matchfile "${f}" "${fileregex}"; then
+    # Find an @fsfe.org email not followed by </email>
+    if grep -qPi "[A-Za-z-+]*@fsfe.org(?!<\/email)" "${f}"; then
+      RETURN_EMAIL=$((RETURN_EMAIL + 1))
+      FILES_EMAIL="${FILES_EMAIL}|${f}"
     fi
   fi
 
@@ -691,12 +705,30 @@ if [ $RETURN_IMGALT -gt 0 ]; then
 EOF
 fi
 
+if [ $RETURN_EMAIL -gt 0 ]; then
+  cat <<EOF >&2
+  ==========================================
+  || [WARN] Clear-text email address      ||
+  ==========================================
+  The following ${RETURN_EMAIL} file(s) in your commit contain email addresses
+  that are clear-text and therefore trivial to crawl for by bots:
+
+  $(filelisting "${FILES_EMAIL}")
+
+  There is a simple solution: wrap the email address(es) in <email>...</email>.
+
+  More information on obfuscated email addresses:
+  https://fsfe.org/contribute/web/features.html#emails
+
+EOF
+fi
+
 EXIT_CRIT=$((RETURN_SYNTAX + RETURN_TAGS_MISMATCH + RETURN_ENC + RETURN_NAME + \
           RETURN_NEWSDATE + RETURN_VERSION_PRES + RETURN_VERSION_INT + \
           RETURN_ABS_LINK + RETURN_FIX_LANG + RETURN_IMGRATIO))
 
 EXIT_WARN=$((RETURN_TAGS_NEW + RETURN_CSS_ELEMENT + RETURN_CSS_ATTR + \
-          RETURN_IMGALT))
+          RETURN_IMGALT + RETURN_EMAIL))
 
 if [ $EXIT_CRIT -gt 0 ]; then
   cat <<EOF >&2

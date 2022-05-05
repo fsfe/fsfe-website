@@ -295,7 +295,7 @@ fclose($csvfile);
 
 // --- PRINT OUTPUT IN TEMPLATE FILE ---
 
-$template = file_get_contents($_SERVER['REQUEST_SCHEME'] ."://". $_SERVER['HTTP_HOST'] . '/internal/pd-result.en.html', true);
+$template = file_get_contents('../internal/pd-result.en.html', true);
 
 echo replace_page($template, $html);
 

@@ -2,6 +2,8 @@
 
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
+  <xsl:include href="email-obfuscate.xsl"/>
+
   <!-- displays list of people for a given country (or a given team, i.e. "main") -->
   <xsl:template name="country-people-list">
       <!-- parameter 'team' can be
@@ -138,7 +140,10 @@
                     <xsl:element name="span">
                         <xsl:attribute name="class">email</xsl:attribute>
                         <xsl:if test="email != ''">
-                            <xsl:value-of select="email" />
+                            <xsl:call-template name="email">
+                                <xsl:with-param name="email" select="email" />
+                                <xsl:with-param name="mailto" select="'no'" />
+                            </xsl:call-template>
                         </xsl:if>
                         <xsl:if test="fingerprint != ''">
                             <xsl:element name="a">

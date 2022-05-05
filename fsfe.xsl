@@ -18,6 +18,7 @@
   <xsl:include href="build/xslt/fsfe-cd.xsl" />
   <xsl:include href="build/xslt/module.xsl" />
   <xsl:include href="build/xslt/related.xsl" />
+  <xsl:include href="build/xslt/email-obfuscate.xsl" />
 
   <!-- HTML 5 compatibility doctype, since our XSLT parser doesn't support disabling output escaping -->
   <xsl:output method="html" encoding="utf-8" indent="yes" doctype-system="about:legacy-compat" />

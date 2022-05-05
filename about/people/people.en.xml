@@ -41,7 +41,7 @@
       intern: The person is intern (dont forget to add <employee>part</employee>
       care: Code of Conduct Active Response Ensurers
 
-    <email> Email address of the person. Please use (at) and (dot) for spam protection reasons
+    <email> Email address of the person.
     <fingerprint> OpenPGP fingerprint of the person. 40 hex digits. No spaces.
     <keyhref> Link to the person's OpenPGP key. MUST be served over HTTPS. If the link is to a
       public keyserver, it MUST identify the key by the fingerprint or another identifier
@@ -76,7 +76,7 @@
     <name>Paul Adams</name>
     <country>GB</country>
     <team>gb</team>
-    <email>padams (at) fsfe (dot) org</email>
+    <email>padams@fsfe.org</email>
     <link>https://blogs.fsfe.org/padams/</link>
     <avatar>adams.jpg</avatar>
   </person>
@@ -90,7 +90,7 @@
     <team>core</team>
     <team>dk</team>
     <!-- <team>aarhus</team> -->
-    <email>agger (at) fsfe (dot) org</email>
+    <email>agger@fsfe.org</email>
     <link>https://blogs.fsfe.org/agger/</link>
   </person>
 
@@ -101,7 +101,7 @@
     <team>ga</team>
     <team>core</team>
     <team>de</team>
-    <email>eal (at) fsfe (dot) org</email>
+    <email>eal@fsfe.org</email>
     <link>/about/people/albers/albers.html</link>
     <avatar>albers.jpg</avatar>
     <employee>full/m</employee>
@@ -115,7 +115,7 @@
     <function group="rheinmain">coordinator/m</function>
     <team>de</team>
     <team>rheinmain</team>
-    <email>guido (at) fsfe (dot) org</email>
+    <email>guido@fsfe.org</email>
     <link>https://blogs.fsfe.org/guido/</link>
     <avatar>arnold.jpg</avatar>
   </person>
@@ -125,7 +125,7 @@
     <country>NL</country>
     <function activity="reuse">deputy/f</function>
     <team>core</team>
-    <email>carmenbianca (at) fsfe (dot) org</email>
+    <email>carmenbianca@fsfe.org</email>
   </person>
 
   <person id="boehm">
@@ -133,7 +133,7 @@
     <country>DE</country>
     <team>de</team>
     <avatar>mirko.jpg</avatar>
-    <email>mirko (at) fsfe (dot) org</email>
+    <email>mirko@fsfe.org</email>
   </person>
 
   <person id="bonanno">
@@ -141,14 +141,14 @@
     <country>IT</country>
     <team>sicilia</team>
     <function group="sicilia">coordinator/m</function>
-    <email>mibofra (at) fsfe (dot) org</email>
+    <email>mibofra@fsfe.org</email>
   </person>
 
   <person id="borchardt">
     <name>Jan-Christoph Borchardt</name>
     <country>DE</country>
     <team>care</team>
-    <email>jancborchardt (at) fsfe (dot) org</email>
+    <email>jancborchardt@fsfe.org</email>
     <link>http://jancborchardt.net</link>
     <avatar>borchardt.jpg</avatar>
     <fingerprint>ECD0C4A3A2FC72B354E4FC78CBD846FC845CBE17</fingerprint>
@@ -158,7 +158,7 @@
   <person id="brooke-smith">
     <name>George Brooke-Smith</name>
     <country>GB</country>
-    <email>georgebs (at) fsfe (dot) org</email>
+    <email>georgebs@fsfe.org</email>
     <avatar>brooke-smith.jpg</avatar>
   </person>
 
@@ -166,20 +166,20 @@
     <name>Peter Bubestinger</name>
     <country>AT</country>
     <team>at</team>
-    <email>pb (at) fsfe (dot) org</email>
+    <email>pb@fsfe.org</email>
   </person>
 
   <person id="busch">
     <name>Alexandra Busch</name>
     <country>DE</country>
-    <email>alex.busch (at) fsfe (dot) org</email>
+    <email>alex.busch@fsfe.org</email>
     <avatar>busch.jpg</avatar>
   </person>
 
   <person id="busse">
    <name>Christian Busse</name>
    <country>DE</country>
-   <email>purine_bitter (at) fsfe (dot) org</email>
+   <email>purine_bitter@fsfe.org</email>
    <team>core</team>
    <!-- function group="openscience">coordinator/m</function>
    <team>openscience</team> -->
@@ -193,6 +193,16 @@
     <function country="IT"></function>
   </person>
 
+  <person id="chen">
+    <name>Jackie Chen</name>
+    <function>office/f</function>
+    <country>DE</country>
+    <team>core</team>
+    <email>jackie (at) fsfe (dot) org</email>
+    <avatar>chen.jpg</avatar>
+    <employee>part/f</employee>
+  </person>
+
   <person id="cryptie">
       <name>Amandine “Cryptie”</name>
       <function volunteers="translators-fr">deputy/f</function>
@@ -201,13 +211,13 @@
       <team>core</team>
       <team>fr</team>
       <team>translation-coordinators</team>
-      <email>cryptie (at) fsfe (dot) org</email>
+      <email>cryptie@fsfe.org</email>
       <avatar>cryptie.jpg</avatar>
   </person>
 
   <person id="coughlan">
     <name>Shane M. Coughlan</name>
-    <email>shane (at) fsfe (dot) org</email>
+    <email>shane@fsfe.org</email>
     <avatar>coughlan.jpg</avatar>
   </person>
 
@@ -217,7 +227,7 @@
     <function country="FR">deputy/m</function>
     <team>core</team>
     <team>fr</team>
-    <email>erik.ds (at) fsfe (dot) org</email>
+    <email>erik.ds@fsfe.org</email>
   </person>
 
   <person id="daffre">
@@ -229,7 +239,7 @@
     <team>core</team>
     <team>ch</team>
     <team>zurich</team>
-    <email>giammi (at) fsfe (dot) org</email>
+    <email>giammi@fsfe.org</email>
     <avatar>daffre.jpg</avatar>
   </person>
 
@@ -242,7 +252,7 @@
   <person id="dengg">
    <name>Albert Dengg</name>
    <country>AT</country>
-   <email>albert (at) fsfe (dot) org</email>
+   <email>albert@fsfe.org</email>
    <function>sysadmin/m</function>
    <team>ga</team>
    <team>core</team>
@@ -255,14 +265,14 @@
     <name>Nicolas Dietrich</name>
     <country>DE</country>
     <team>de</team>
-    <email>nidi (at) fsfe (dot) org</email>
+    <email>nidi@fsfe.org</email>
   </person>
 
   <person id="diz">
     <name>Andrés Diz</name>
     <country>ES</country>
     <team>translation-coordinators</team>
-    <email>pd (at) fsfe (dot) org</email>
+    <email>pd@fsfe.org</email>
     <function volunteers="translators-es">deputy/m</function>
   </person>
 
@@ -271,7 +281,7 @@
     <country>DE</country>
     <function group="rheinmain">deputy/m</function>
     <team>rheinmain</team>
-    <email>doczkal (at) fsfe (dot) org</email>
+    <email>doczkal@fsfe.org</email>
   </person>
 
   <person id="eiswirt">
@@ -282,13 +292,13 @@
     <name>Nicola Feltrin</name>
     <country>IT</country>
     <team>ftf</team>
-    <email>nicola (dot) feltrin (at) fsfe (dot) org</email>
+    <email>nicola.feltrin@fsfe.org</email>
   </person>
 
   <person id="falgueyrac">
     <name>Lucile Falgueyrac</name>
     <team>care</team>
-    <email>lucile.falg (at) fsfe (dot) org</email>
+    <email>lucile.falg@fsfe.org</email>
     <avatar>falgueyrac.jpg</avatar>
   </person>
 
@@ -298,7 +308,7 @@
     <team>ga</team>
     <team>core</team>
     <team>de</team>
-    <email>gerloff (at) fsfe (dot) org</email>
+    <email>gerloff@fsfe.org</email>
     <fingerprint>503BEF73BFA17F7BF5B0DF99C566CCC5A859EAC8</fingerprint>
     <keyhref>/about/people/gerloff/gerloff-public.asc</keyhref>
     <link>/about/people/gerloff/gerloff.html</link>
@@ -308,7 +318,7 @@
   <person id="gkotsopoulou">
     <name>Olga Gkotsopoulou</name>
     <country>EL</country>
-    <email>olga_gk (at) fsfe (dot) org</email>
+    <email>olga_gk@fsfe.org</email>
   </person>
 
   <person id="gonzalez">
@@ -323,7 +333,7 @@
     <country>DE</country>
     <function group="cologne">coordinator/m</function>
     <team>cologne</team>
-    <email>maltegraebner (at) fsfe (dot) org</email>
+    <email>maltegraebner@fsfe.org</email>
   </person>
 
   <person id="greve">
@@ -333,7 +343,7 @@
     <team>ga</team>
     <team>core</team>
     <team>de</team>
-    <email>greve (at) fsfe (dot) org</email>
+    <email>greve@fsfe.org</email>
     <keyhref>/about/people/greve/greve-public.asc</keyhref>
     <link>/about/people/greve/greve.html</link>
     <avatar>greve.jpg</avatar>
@@ -344,7 +354,7 @@
     <country>DE</country>
     <team>ga</team>
     <team>de</team>
-    <email>Torsten.Grote (at) fsfe (dot) org</email>
+    <email>Torsten.Grote@fsfe.org</email>
     <link>https://blog.grobox.de</link>
     <avatar>grote.jpg</avatar>
   </person>
@@ -353,7 +363,7 @@
     <name>Erik Grun</name>
     <country>DE</country>
     <team>berlin</team>
-    <email>egnun (at) fsfe (dot) org</email>
+    <email>egnun@fsfe.org</email>
     <function group="berlin">deputy/m</function>
   </person>
 
@@ -361,7 +371,7 @@
   <person id="hansch">
     <name>Paul Hänsch</name>
     <country>DE</country>
-    <email>paul (at) fsfe (dot) org</email>
+    <email>paul@fsfe.org</email>
   </person>
 
   <person id="hersel">
@@ -372,7 +382,7 @@
     <team>core</team>
     <team>ch</team>
     <team>zurich</team>
-    <email>ralfhersel (at) fsfe (dot) org</email>
+    <email>ralfhersel@fsfe.org</email>
     <avatar>hersel.jpg</avatar>
   </person>
 
@@ -381,7 +391,7 @@
     <country>DE</country>
     <function group="hamburg">deputy/m</function>
     <team>hamburg</team>
-    <email>dmaphy (at) fsfe (dot) org</email>
+    <email>dmaphy@fsfe.org</email>
   </person>
 
   <person id="hornbachner">
@@ -389,7 +399,7 @@
     <country>AT</country>
     <team>at</team>
     <team>linz</team>
-    <email>simonh (at) fsfe (dot) org</email>
+    <email>simonh@fsfe.org</email>
     <link>https://wiki.fsfe.org/Fellows/lfodh</link>
   </person>
 
@@ -398,7 +408,7 @@
     <country>DE</country>
     <function>office/f</function>
     <team>core</team>
-    <email>fi (at) fsfe (dot) org</email>
+    <email>fi@fsfe.org</email>
     <employee>part/f</employee>
     <avatar>indorato.jpg</avatar>
   </person>
@@ -407,7 +417,7 @@
     <name>Nicolas Jean</name>
     <country>FR</country>
     <team>fr</team>
-    <email>nicoulas (at) fsfe (dot) org</email>
+    <email>nicoulas@fsfe.org</email>
     <avatar>jean.jpg</avatar>
   </person>
 
@@ -415,7 +425,7 @@
   <person id="jensch">
     <name>Thomas Jensch</name>
     <country>DE</country>
-    <email>riepernet (at) fsfe (dot) org</email>
+    <email>riepernet@fsfe.org</email>
     <link>https://blogs.fsfe.org/riepernet/</link>
     <avatar>jensch.jpg</avatar>
   </person>
@@ -424,13 +434,13 @@
       <name>Thomas Jost</name>
       <country>FR</country>
       <team>fr</team>
-      <email>schnouki (at) fsfe (dot) org</email>
+      <email>schnouki@fsfe.org</email>
   </person>
 
   <person id="jyrinki">
     <name>Timo Jyrinki</name>
     <country>FI</country>
-    <email>mirv (at) fsfe (dot) org</email>
+    <email>mirv@fsfe.org</email>
     <link>http://iki.fi/tjyrinki/</link>
     <avatar>jyrinki.jpg</avatar>
   </person>
@@ -441,7 +451,7 @@
     <function group="kiel">coordinator/m</function>
     <team>de</team>
     <team>kiel</team>
-    <email>softmetz (at) fsfe (dot) org</email>
+    <email>softmetz@fsfe.org</email>
     <link>http://www.softmetz.de/</link>
   </person>
 
@@ -450,7 +460,7 @@
     <country>DE</country>
     <team>core</team>
     <team>de</team>
-    <email>ntj (at) fsfe (dot) org</email>
+    <email>ntj@fsfe.org</email>
     <avatar>kazimiers.png</avatar>
   </person>
 
@@ -458,15 +468,25 @@
     <name>Kevin Keijzer</name>
     <country>NL</country>
     <team>nl</team>
-    <email>the_unconventional (at) fsfe (dot) org</email>
+    <email>the_unconventional@fsfe.org</email>
     <link>https://wiki.fsfe.org/Fellows/the_unconventional</link>
   </person>
 
   <person id="kekalainen">
     <name>Otto Kekäläinen</name>
     <country>FI</country>
-    <email>otto (at) fsfe (dot) org</email>
+    <email>otto@fsfe.org</email>
     <avatar>kekalainen.jpg</avatar>
+  </person>
+
+  <person id="kenan">
+    <name>Elif Kenan</name>
+    <country>TR</country>
+    <function>intern/f</function>
+    <email>elif@fsfe.org</email>
+    <team>core</team>
+    <employee>full/f</employee>
+    <avatar>kenan.jpg</avatar>
   </person>
 
   <person id="kesper">
@@ -474,14 +494,13 @@
     <country>DE</country>
     <function group="bonn">coordinator/m</function>
     <team>bonn</team>
-    <email>mkesper (at) fsfe (dot) org</email>
+    <email>mkesper@fsfe.org</email>
   </person>
 
   <person id="kietreiber">
     <name>Marlene Kietreiber</name>
     <country>AT</country>
-    <function>intern/f</function>
-    <email>marlene (at) fsfe (dot) org</email>
+    <email>marlene@fsfe.org</email>
     <avatar>kietreiber.jpg</avatar>
   </person>
 
@@ -493,7 +512,7 @@
     <team>ga</team>
     <team>core</team>
     <team>de</team>
-    <email>mk (at) fsfe (dot) org</email>
+    <email>mk@fsfe.org</email>
     <fingerprint>C922F488F932F95D6F7C10F7A0616A85CE41AD88</fingerprint>
     <keyhref>/about/people/kirschner/kirschner-public.asc</keyhref>
     <link>/about/people/kirschner/kirschner.html</link>
@@ -504,7 +523,7 @@
   <person id="kneissl">
     <name>Jürgen Kneissl</name>
     <country>AT</country>
-    <email>herrka (at) fsfe (dot) org</email>
+    <email>herrka@fsfe.org</email>
     <avatar>kneissl.jpg</avatar>
   </person>
 
@@ -514,7 +533,7 @@
     <function>project-manager/m</function>
     <team>core</team>
     <team>care</team>
-    <email>gabriel.ku (at) fsfe (dot) org</email>
+    <email>gabriel.ku@fsfe.org</email>
     <link>/about/people/ku/ku.html</link>
     <avatar>ku.jpg</avatar>
     <employee>full/m</employee>
@@ -527,7 +546,7 @@
     <country>BR</country>
     <function>project-manager/m</function>
     <team>core</team>
-    <email>lucas.lasota (at) fsfe (dot) org</email>
+    <email>lucas.lasota@fsfe.org</email>
     <link>/about/people/lasota/lasota.html</link>
     <avatar>lasota.jpg</avatar>
     <employee>part/m</employee>
@@ -539,7 +558,7 @@
     <team>core</team>
     <team>care</team>
     <team>translation-coordinators</team>
-    <email>bonnie (at) fsfe (dot) org</email>
+    <email>bonnie@fsfe.org</email>
     <fingerprint>88A975E887CDD2BF863810490D10346737F041D9</fingerprint>
     <keyhref>/about/people/mehring/mehring-public.asc</keyhref>
     <avatar>mehring.jpg</avatar>
@@ -552,7 +571,7 @@
     <function country="FR">deputy/m</function>
     <team>ga</team>
     <team>core</team>
-    <email>vincent (at) fsfe (dot) org</email>
+    <email>vincent@fsfe.org</email>
     <fingerprint>4D2EC1126255DCF40D1068CF6CD601F050AC5A49</fingerprint>
     <keyhref>https://vl8r.eu/pubkey.asc</keyhref>
     <avatar>lequertier.jpg</avatar>
@@ -562,7 +581,7 @@
     <name>Timo Juhani Lindfors</name>
     <country>FI</country>
     <team>fi</team>
-    <email>timo.lindfors (at) iki (dot) fi</email>
+    <email>timo.lindfors@iki.fi</email>
   </person>
 
   <person id="lohmus">
@@ -572,7 +591,7 @@
     <team>ga</team>
     <team>core</team>
     <team>care</team>
-    <email>repentinus (at) fsfe (dot) org</email>
+    <email>repentinus@fsfe.org</email>
     <fingerprint>E7E37766DD0B7F49B48FE1A2D5A96DC291349DD8</fingerprint>
     <keyhref>https://public.repentinus.eu/repentinus.fsfe.org.key.asc.txt</keyhref>
     <link>/about/people/repentinus/repentinus.html</link>
@@ -584,13 +603,13 @@
     <country>IT</country>
     <team>bari</team>
     <function group="bari">coordinator/m</function>
-    <email>frankie (at) fsfe (dot) org</email>
+    <email>frankie@fsfe.org</email>
   </person>
 
   <person id="machon">
     <name>Pablo Machón</name>
     <country>ES</country>
-    <email>pablo (at) fsfe (dot) org</email>
+    <email>pablo@fsfe.org</email>
   </person>
 
   <person id="malaja">
@@ -600,7 +619,7 @@
     <team>core</team>
     <team>ftf</team>
     <team>care</team>
-    <email>polina (at) fsfe (dot) org</email>
+    <email>polina@fsfe.org</email>
     <avatar>malaja.jpg</avatar>
     <fingerprint>588051B29B14CA08D7B46E4F238E5945BC17039E</fingerprint>
     <keyhref>http://keys.gnupg.net/pks/lookup?search=0x588051B29B14CA08D7B46E4F238E5945BC17039E&amp;op=get</keyhref>
@@ -610,7 +629,7 @@
     <name>Michele Marrali</name>
     <country>IT</country>
     <team>it</team>
-    <email>puster (at) fsfe (dot) org</email>
+    <email>puster@fsfe.org</email>
     <avatar>marrali.jpg</avatar>
   </person>
 
@@ -619,7 +638,7 @@
     <country>ES</country>
     <function group="barcelona">coordinator/m</function>
     <team>barcelona</team>
-    <email>mvdan (at) fsfe (dot) org</email>
+    <email>mvdan@fsfe.org</email>
   </person>
 
   <person id="mehl">
@@ -629,7 +648,7 @@
     <team>ga</team>
     <team>core</team>
     <team>de</team>
-    <email>max.mehl (at) fsfe (dot) org</email>
+    <email>max.mehl@fsfe.org</email>
     <keyhref>https://up.mehl.mx/mehl-current.pub.asc</keyhref>
     <fingerprint>A942CD00386B3CB26BA9BB652704E4AB371E2E92</fingerprint>
     <link>/about/people/mehl/mehl.html</link>
@@ -646,7 +665,7 @@
     <country>CH</country>
     <team>ch</team>
     <team>zurich</team>
-    <email>mmoeller (at) fsfe (dot) org</email>
+    <email>mmoeller@fsfe.org</email>
     <avatar>moeller.jpg</avatar>
   </person>
 
@@ -656,7 +675,7 @@
     <team>ga</team>
     <team>core</team>
     <team>at</team>
-    <email>reinhard (at) fsfe (dot) org</email>
+    <email>reinhard@fsfe.org</email>
     <link>https://wiki.fsfe.org/Fellows/reinhard</link>
     <avatar>mueller.jpg</avatar>
   </person>
@@ -664,7 +683,7 @@
   <person id="murphy">
     <name>Luke Murphy</name>
     <country>IRL</country>
-    <email>lukewm (at) fsfe (dot) org</email>
+    <email>lukewm@fsfe.org</email>
   </person>
 
   <person id="nascimento">
@@ -672,13 +691,13 @@
     <country>BE</country>
     <team>be</team>
     <function country="BE">coordinator/m</function>
-    <email>aurion (at) fsfe (dot) org</email>
+    <email>aurion@fsfe.org</email>
   </person>
 
   <person id="oberg">
     <name>Jonas Öberg</name>
     <country>SE</country>
-    <email>jonas (at) fsfe (dot) org</email>
+    <email>jonas@fsfe.org</email>
     <avatar>oberg.jpg</avatar>
   </person>
 
@@ -690,7 +709,7 @@
     <team>ga</team>
     <team>core</team>
     <team>translation-coordinators</team>
-    <email>ao (at) fsfe (dot) org</email>
+    <email>ao@fsfe.org</email>
     <avatar>ockers.jpg</avatar>
   </person>
 
@@ -703,7 +722,7 @@
     <team>ga</team>
     <team>core</team>
     <team>it</team>
-    <email>patrick (at) fsfe (dot) org</email>
+    <email>patrick@fsfe.org</email>
     <avatar>ohnewein.jpg</avatar>
   </person>
 
@@ -721,13 +740,13 @@
   <person id="kristiprogri">
     <name>Kristi Progri</name>
     <country>AL</country>
-    <email>kristiprogri (at) fsfe (dot) org</email>
+    <email>kristiprogri@fsfe.org</email>
   </person>
 
   <person id="partsafyllidou">
     <name>Fani Partsafyllidou</name>
     <country>GR</country>
-    <email>fani (at) fsfe (dot) org</email>
+    <email>fani@fsfe.org</email>
     <team>core</team>
     <function>project-manager/f</function>
     <employee>full/f</employee>
@@ -738,7 +757,7 @@
     <name>Giacomo Poderi</name>
     <country>IT</country>
     <team>ga</team>
-    <email>poderi (at) fsfe (dot) org</email>
+    <email>poderi@fsfe.org</email>
     <avatar>poderi.jpg</avatar>
   </person>
 
@@ -747,14 +766,14 @@
     <country>DE</country>
     <function group="hamburg">coordinator/m</function>
     <team>hamburg</team>
-    <email>erack (at) fsfe (dot) org</email>
+    <email>erack@fsfe.org</email>
   </person>
 
   <person id="ravestein">
     <name>Rijk Ravestein</name>
     <country>NL</country>
     <team>nl</team>
-    <email>rijkr (at) fsfe (dot) org</email>
+    <email>rijkr@fsfe.org</email>
     <avatar>ravestein.jpg</avatar>
   </person>
 
@@ -764,7 +783,7 @@
     <team>ga</team>
     <team>core</team>
     <team>de</team>
-    <email>bernhard (at) fsfe (dot) org</email>
+    <email>bernhard@fsfe.org</email>
     <fingerprint>BDD957F9C4FE0FDC583DCD6D2B7BA3BF9BC3A554</fingerprint>
     <keyhref>https://intevation.de/~bernhard/bernhard_gpgkey.asc</keyhref>
     <link>http://intevation.de/~bernhard/index.en.html</link>
@@ -773,7 +792,7 @@
 
   <person id="rigamonti">
     <name>Cristian Rigamonti</name>
-    <email>cri (at) fsfe (dot) org</email>
+    <email>cri@fsfe.org</email>
     <avatar>rigamonti.jpg</avatar>
   </person>
 
@@ -784,7 +803,7 @@
     <team>ga</team>
     <team>core</team>
     <team>nl</team>
-    <email>nico.rikken (at) fsfe (dot) org</email>
+    <email>nico.rikken@fsfe.org</email>
     <avatar>rikken.jpg</avatar>
   </person>
 
@@ -797,7 +816,7 @@
     <team>athens</team>
     <function country="GR">coordinator/m</function>
     <function group="athens">coordinator/m</function>
-    <email>comzeradd (at) fsfe (dot) org</email>
+    <email>comzeradd@fsfe.org</email>
     <link>https://wiki.fsfe.org/Fellows/comzeradd</link>
     <avatar>roussos.jpg</avatar>
   </person>
@@ -811,7 +830,7 @@
     <team>ftf</team>
     <function country="FR">coordinator/m</function>
     <function group="paris">coordinator/m</function>
-    <email>hugo (at) fsfe (dot) org</email>
+    <email>hugo@fsfe.org</email>
     <link>/about/people/roy/roy.html</link>
     <avatar>roy.jpg</avatar>
   </person>
@@ -820,14 +839,14 @@
       <name>Michel Roche</name>
       <country>FR</country>
       <team>fr</team>
-      <email>pichel (at) fsfe (dot) org</email>
+      <email>pichel@fsfe.org</email>
   </person>
 
   <person id="rubini">
     <name>Alessandro Rubini</name>
     <country>IT</country>
     <team>it</team>
-    <email>rubini (at) fsfe (dot) org</email>
+    <email>rubini@fsfe.org</email>
     <avatar>rubini.jpg</avatar>
   </person>
 
@@ -836,7 +855,7 @@
     <country>ES</country>
     <function>policy-consultant/m</function>
     <team>core</team>
-    <email>alex.sander (at) fsfe (dot) org</email>
+    <email>alex.sander@fsfe.org</email>
     <link>/about/people/sander/sander.html</link>
     <avatar>sander.jpg</avatar>
     <employee>contractor/m</employee>
@@ -847,14 +866,14 @@
     <country>SE</country>
     <team>ga</team>
     <team>core</team>
-    <email>hesa (at) fsfe (dot) org</email>
+    <email>hesa@fsfe.org</email>
     <avatar>sandklef.jpg</avatar>
   </person>
 
   <person id="sanjurjo">
     <name>Fernando Sanjurjo</name>
     <country>ES</country>
-    <email>fersp (at) fsfe (dot) org</email>
+    <email>fersp@fsfe.org</email>
   </person>
 
   <person id="schiessle">
@@ -864,7 +883,7 @@
     <team>ga</team>
     <team>core</team>
     <team>de</team>
-    <email>schiessle (at) fsfe (dot) org</email>
+    <email>schiessle@fsfe.org</email>
     <fingerprint>244FCEB0CB099524B21FB8962378A753E2BF04F6</fingerprint>
     <keyhref>https://www.schiessle.org/data/gpg-key.txt</keyhref>
     <link>http://www.schiessle.org</link>
@@ -882,14 +901,14 @@
     <name>Florian Schweikert</name>
     <country>AT</country>
     <team>at</team>
-    <email>kelvan (at) fsfe (dot) org</email>
+    <email>kelvan@fsfe.org</email>
     <link>https://wiki.fsfe.org/Fellows/kelvan</link>
   </person>
 
   <person id="sehn">
     <name>Linus Sehn</name>
     <country>DE</country>
-    <email>linus (at) fsfe (dot) org</email>
+    <email>linus@fsfe.org</email>
     <team>core</team>
     <avatar>sehn.png</avatar>
     <employee>part/m</employee>
@@ -900,7 +919,7 @@
     <name>Niharika Singhal</name>
     <country>IN</country>
     <function>intern/f</function>
-    <email>niharika (at) fsfe (dot) org</email>
+    <email>niharika@fsfe.org</email>
     <team>core</team>
     <employee>contractor/f</employee>
     <avatar>singhal.jpg</avatar>
@@ -909,7 +928,7 @@
   <person id="sliwinski">
     <name>Ulrike Sliwinski</name>
     <country>DE</country>
-    <email>usli (at) fsfe (dot) org</email>
+    <email>usli@fsfe.org</email>
     <avatar>sliwinski.png</avatar>
   </person>
 
@@ -920,9 +939,11 @@
     <team>core</team>
     <team>de</team>
     <team>franconia</team>
+    <employee>part/m</employee>
+    <function>technical-advisor/m</function>
     <function country="DE">deputy/m</function>
     <function group="franconia">coordinator/m</function>
-    <email>floriansnow (at) fsfe (dot) org</email>
+    <email>floriansnow@fsfe.org</email>
     <link>https://wiki.fsfe.org/Fellows/floriansnow</link>
     <avatar>snow.jpg</avatar>
   </person>
@@ -931,7 +952,7 @@
     <name>Felix Stegerman</name>
     <country>NL</country>
     <team>nl</team>
-    <email>flx (at) fsfe (dot) org</email>
+    <email>flx@fsfe.org</email>
     <link>https://wiki.fsfe.org/Fellows/flx</link>
     <avatar>stegerman.png</avatar>
   </person>
@@ -947,7 +968,7 @@
   <person id="suhr">
     <name>Jonke Suhr</name>
     <country>DE</country>
-    <email>suhrj (at) fsfe (dot) org</email>
+    <email>suhrj@fsfe.org</email>
     <avatar>suhr.png</avatar>
   </person>
 
@@ -956,7 +977,7 @@
     <country>SI</country>
     <function country="SI">coordinator/m</function>
     <team>si</team>
-    <email>hook (at) fsfe (dot) org</email>
+    <email>hook@fsfe.org</email>
     <fingerprint>556A19C25686A785499D1D4B8C192103C651D7B0</fingerprint>
     <keyhref>https://matija.suklje.name/documents/publickey.asc</keyhref>
     <link>http://matija.suklje.name</link>
@@ -967,7 +988,7 @@
     <name>Tomás</name>
     <country>DE</country>
     <team>berlin</team>
-    <email>tomasz (at) fsfe (dot) org</email>
+    <email>tomasz@fsfe.org</email>
     <function group="berlin">coordinator/m</function>
   </person>
 
@@ -975,7 +996,7 @@
     <name>Maurice Verheesen</name>
     <country>NL</country>
     <team>nl</team>
-    <email>mho (at) fsfe (dot) org</email>
+    <email>mho@fsfe.org</email>
     <link>http://mauriceverheesen.nl/</link>
     <avatar>verheesen.jpg</avatar>
   </person>
@@ -985,14 +1006,14 @@
     <country>IT</country>
     <team>it</team>
     <team>milanoi</team>
-    <email>blues-man (at) fsfe (dot) org</email>
+    <email>blues-man@fsfe.org</email>
     <function group="milano">coordinator/m</function>
   </person>
 
   <person id="waechter">
     <name>Simon Wächter</name>
     <country>CH</country>
-    <email>swaechter (at) fsfe (dot) org</email>
+    <email>swaechter@fsfe.org</email>
     <link>https://wiki.fsfe.org/Fellows/swaechter</link>
   </person>
 
@@ -1002,7 +1023,7 @@
     <employee>full/f</employee>
     <team>core</team>
     <country>CO</country>
-    <email>lina.ceballos (at) fsfe (dot) org</email>
+    <email>lina.ceballos@fsfe.org</email>
     <avatar>ceballos.jpg</avatar>
   </person>
 
@@ -1012,7 +1033,7 @@
     <employee>part/f</employee>
     <team>core</team>
     <country>DE</country>
-    <email>linda (at) fsfe (dot) org</email>
+    <email>linda@fsfe.org</email>
     <avatar>wagener.jpg</avatar>
   </person>
 
@@ -1021,7 +1042,7 @@
     <country>UK</country>
     <team>ga</team>
     <team>core</team>
-    <email>nanda (at) fsfe (dot) org</email>
+    <email>nanda@fsfe.org</email>
     <avatar>weiden.jpg</avatar>
   </person>
 
@@ -1036,7 +1057,7 @@
   <person id="weymeirsch">
     <name>Jan Weymeirsch</name>
     <country>DE</country>
-    <email>janwey (at) fsfe (dot) org</email>
+    <email>janwey@fsfe.org</email>
   </person>
 
   <person id="widerstroem">
@@ -1045,7 +1066,7 @@
     <function country="AT">coordinator/m</function>
     <team>core</team>
     <team>at</team>
-    <email>cw (at) fsfe (dot) org</email>
+    <email>cw@fsfe.org</email>
   </person>
 
   <person id="wg">
@@ -1053,20 +1074,20 @@
     <country>AT</country>
     <function group="vienna">coordinator/m</function>
     <team>vienna</team>
-    <email>wg (at) fsfe (dot) org</email>
+    <email>wg@fsfe.org</email>
   </person>
 
   <person id="willebrand">
     <name>Martin von Willebrand</name>
     <country>FI</country>
     <team>fi</team>
-    <email>willebra (at) fsfe (dot) org</email>
+    <email>willebra@fsfe.org</email>
   </person>
 
   <person id="wurmus">
     <name>Ricardo Wurmus</name>
     <team>berlin</team>
-    <email>rekado (at) fsfe (dot) org</email>
+    <email>rekado@fsfe.org</email>
   </person>
 
   <person id="zanga">
@@ -1079,7 +1100,7 @@
     <name>Johannes Zarl-Zierl</name>
     <country>AT</country>
     <team>linz</team>
-    <email>jzarl (at) fsfe (dot) org</email>
+    <email>jzarl@fsfe.org</email>
   </person>
 
 </personset>

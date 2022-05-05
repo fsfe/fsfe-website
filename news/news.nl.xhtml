@@ -1,42 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <html>
-  <version>3</version>
-
+  <version>4</version>
   <head>
     <title>Nieuws</title>
   </head>
-
-  <body class="toplevel article">
+  <body class="toplevel news-index">
     <h1>Nieuws</h1>
+    <div id="introduction">
 
-    <p class="inline-buttons news-follow-us">Volg ons:
-      <span class="share-buttons">
-        <a class="button share-mail" href="/news/newsletter.html">Nieuwsbrief</a>
-        <a class="button share-rss" href="/news/news.rss">RSS-feed</a>
-        <a target="_blank" class="button share-mastodon" href="https://mastodon.social/@fsfe">Mastodon</a>
-        <a target="_blank" class="button share-twitter" href="https://twitter.com/fsfe">Twitter</a>
-      </span>
-    </p>
-
+      <p>
+       De FSFE stelt gebruikers in staat om met <a
+        href="/activities/">diverse activiteiten</a> gebruikers in staat te stellen technologie te controleren en biedt concreet engagement voor
+        <a href="/freesoftware/">softwarevrijheid</a>. Volg ons en verzeker u ervan reguliere updates en diepere inzichten op onze verscheidene kanalen te ontvangen.
+      </p>
+    </div>
+    <div class="module-wrapper news">
+      <module id="follow-news" />
+      <module id="social-media" />
+      <module id="banner-subscribe" />
+    </div>
     <include-news/>
-
-    <h2><a href="2020/index.html">Nieuwsarchief</a></h2>
-
+    <h2><a href="2020/index.html">Nieuwsarchieven</a></h2>
     <p>
-      Bekijkt u voor oudere nieuwsartikelen alstublieft ons nieuwsarchief.
+      Bekijk voor ouder nieuws alstublieft onze nieuwsarchieven.
       <a class="learn-more" href="2020/index.html"/>
     </p>
   </body>
-
-  <sidebar promo="none">
-    <div class="news-sidebar">
-      <module id="follow-news"/>
-      <module id="social-media"/>
-      <hr/>
-      <module id="video-supporter"/>
-    </div>
-  </sidebar>
-
-  <translator>André Ockers</translator>
+  <banner1><module id="banner-subscribe" /></banner1>
+  <banner2><module id="banner-become-supporter" /></banner2>
+<translator>André Ockers</translator>
 </html>
+
+

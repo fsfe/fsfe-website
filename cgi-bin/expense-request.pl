@@ -31,6 +31,7 @@ my %names = (
   "eal" => "Erik Albers",
   "fani" => "Fani Partsafyllidou",
   "fi" => "Francesca Indorato",
+  "floriansnow" => "Florian Snow",
   "gabriel.ku" => "Gabriel Ku Wei Bin",
   "jackie" => "Jackie Chen",
   "lina.ceballos" => "Lina Ceballos",
@@ -116,6 +117,7 @@ my %account = (
   "PERSONELL-SEHN" => "81071",
   "PERSONELL-PARTSAFYLLIDOU" => "81072",
   "PERSONELL-CHEN" => "81073",
+  "PERSONELL-SNOW" => "81076",
   "OFFICE-BERLIN" => "82001",
 );
 

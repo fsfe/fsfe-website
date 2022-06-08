@@ -1,93 +1,74 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-    <html>
-  <version>1</version>
-
-      <head>
-        <title>Informatie voor webmasters</title>
-      </head>
-      <body class="article" microformats="h-entry">
-
-        <p id="category"><a href="/contribute/">Doe mee</a></p>
-        <h1 class="p-name">Webmasteren</h1>
-
-        <div class="e-content">
-
-            <p id="introduction" class="p-summary">
-
-Het <em>Web team </em> beheert en ontwikkelt FSFE's websites:
+<html>
+  <version>2</version>
+  <head>
+    <title>Informatie voor webmasters</title>
+  </head>
+  <body class="article" microformats="h-entry">
+    <p id="category"><a href="/contribute/">Draag bij</a></p>
+    <h1 class="p-name">Webmasteren</h1>
+    <div class="e-content">
+        <p id="introduction" class="p-summary">
+          Het <em>Web team</em> beheert en ontwikkelt FSFE's websites:
 van <a href="/">fsfe.org</a> tot project- en campagnesites.
 Webmasters zijn vrijwilligers die het gezicht van de organisatie naar de wereld toe
-en de technische oplossingen van onze webinspanningen verbeteren.</p>
-
-
-
-            <h2>Ons en de website leren kennen</h2>
-
-            <p>
-
-Als u een idee wilt krijgen over het werk aan de FSFE-website
-is de beste manier een chat met ons. Sommige webmasters
+en de technische oplossingen van onze webinspanningen verbeteren.
+        </p>
+        <h2>Ons en de website leren kennen</h2>
+        <p>
+        Als u een idee wilt krijgen over het werk aan de FSFE-website
+dan is een praatje met ons maken de beste manier daarvoor. Sommige webmasters
 zijn regelmatig te vinden op #fsfe op Libera Chat, waar we u graag ontmoeten
 en uw vragen beantwoorden! Om te kijken wie er aan het website en met FSFE als geheel werkt bezoekt u <a href="/about/team.html">
-        onze teampagina</a> en de specifieke <a href="https://wiki.fsfe.org/Teams/Web">Web team pagina</a>.
-            </p>
-
-            <h2>Introductie</h2>
-
-            <p>
-De technologieën en programma's die gebruikt worden om een FSFE-webpagina te
+        FSFE's teampagina</a> en de specifieke <a href="https://wiki.fsfe.org/Teams/Web">Web team pagina</a>.
+        </p>
+        <h2>Introductie</h2>
+        <p>
+        De technologieën en programma's die gebruikt worden om een FSFE-webpagina te
 beheren zouden al bekend moeten zijn bij veel ontwikkelaars en auteurs en zouden
-interessant kunnen zijn voor hen de ze nog niet hebben ontdekt.
-            </p>
-
-            <p>
-              Vertalers en gelegenheidsvrijwilligers zullen waarschijnlijk alleen in contact komen met:
-            </p>
-
-            <ul>
-              <li>
-                <a href="http://en.wikipedia.org/wiki/XHTML">XHTML</a>: van waaruit de webpagina's worden
+interessant kunnen zijn voor hen die ze nog niet hebben ontdekt.
+        </p>
+        <p>
+                      Vertalers en gelegenheidsvrijwilligers zullen waarschijnlijk alleen in contact komen met:
+        </p>
+        <ul>
+          <li>
+                          <a href="http://en.wikipedia.org/wiki/XHTML">XHTML</a>: van waaruit de webpagina's worden
 gegenereerd
-              </li>
-              <li>
-                <a href="http://git-scm.com/">Git</a>: voor versiecontrole van webpaginabronnen
-              </li>
-            </ul>
-
-            <p>
-              Vrijwilligers die interesse hebben om meer te weten over het beheer zouden ook kennis moeten hebben
+          </li>
+          <li>
+                          <a href="http://git-scm.com/">Git</a>: voor versiecontrole van webpaginabronnen
+          </li>
+        </ul>
+        <p>
+                      Vrijwilligers die interesse hebben om meer te weten over het beheer zouden ook kennis moeten hebben
 van:
-            </p>
-
-            <ul>
-              <li>
-                <a href="https://www.gnu.org/software/bash/">Bash</a>: voor het beheer en scripts die pagina's creëren
-              </li>
-              <li>
-                <a href="http://www.apache.org/">Apache</a>: de webserver
-              </li>
-            </ul>
-
-
-            <h2 id="Understanding">Begrijpen hoe de webpagina's worden opgebouwd</h2>
-
-            <p>De webpagina's van <var>fsfe.org</var> worden beheerd als een verzameling XML-bestanden.
+        </p>
+        <ul>
+          <li>
+                          <a href="https://www.gnu.org/software/bash/">Bash</a>: voor het beheer en scripts die pagina's creëren
+          </li>
+          <li>
+                          <a href="http://www.apache.org/">Apache</a>: de webserver
+                          </li>
+        </ul>
+        <h2 id="Understanding">Begrijpen hoe de webpagina's worden opgebouwd</h2>
+        <p>
+        De webpagina's van <var>fsfe.org</var> worden beheerd als een verzameling XML-bestanden.
 De webserver genereert de HTML-pagina's automatisch iedere tien minuten uit deze XML-bestanden.
 Daarom vinden alle bewerkingen van de pagina's plaats in de XML-bestanden en wordt de HTML nooit
 direct bewerkt.
-            </p>
-
-            <p>
-Iedere pagina op fsfe.org heeft als naam
+        </p>
+        <p>
+        Iedere pagina op fsfe.org heeft als naam
           <var><em>paginanaam</em>.<em>taal</em>.html</var>
           (<em>taal</em> is de tweeletterige <a href="http://en.wikipedia.org/wiki/List_of_ISO_639-1_codes">ISO-639
           code</a> van de taal, zoals "en" voor Engels of "de" voor Duits).
           De bronbestanden hebben als naam
           <var><em>paginanaam</em>.<em>taal</em>.xhtml</var>.
-            </p>
-
-            <p>
-Sommige pagina's hebben een dynamisch deel: buiten de vaste teksten uit
+        </p>
+        <p>
+        Sommige pagina's hebben een dynamisch deel: buiten de vaste teksten uit
 het XHTML-bestand bevatten zij informatie uit een of verschillende XML-bestanden.
 Als zo'n pagina wordt opgebouwd neemt het systeem het vertaalde XML-bestand als het
 beschikbaar is en valt het terug op de Engelse versie van die XML-bestanden die nog
@@ -95,39 +76,33 @@ niet zijn vertaald. Op deze manier kunnen zulke pagina's zijn opgebouwd uit dele
 de tekst is vertaald en andere delen die nog steeds in het Engels zijn. Voorbeelden van
 zulke pagina's zijn de <a href="/">startpagina</a>, de
           <a href="/news/">nieuwspagina</a> en de <a href="/events/">evenementenpagina</a>.
-            </p>
-
-            <h2 id="Getting">Als bewerker werken met de website</h2>
-
-            <p>Bezoek alstublieft onze <a href="https://wiki.fsfe.org/TechDocs/Mainpage/Editing">website bewerken wiki pagina</a> voor meer informatie over:</p>
-
-            <ul>
-              <li>hoe de broncode van de websites te kopiëren naar uw computer</li>
+        </p>
+        <h2 id="Getting">Als redacteur werken met de website</h2>
+        <p>Bezoek alstublieft onze <a href="https://wiki.fsfe.org/TechDocs/Mainpage/Editing">website bewerken wiki pagina</a> voor meer informatie over:
+        </p>
+        <ul>
+            <li>hoe de broncode van de website te kopiëren naar uw computer</li>
               <li>hoe bestanden te bewerken en naar te website te schuiven</li>
-              <li>hoe te coördineren met andere website-bewerkers</li>
+              <li>hoe te coördineren met andere website-redacteuren</li>
               <li>verantwoord omgaan met schrijftoegang</li>
-              <li>geavanceerde webmaster technieken</li>
+              <li>geavanceerde webmastertechnieken</li>
               <li>juiste licenties van broncode en media</li>
-            </ul>
-
-        </div>
-        <!--/e-content-->
-
-      </body>
-    <sidebar promo="about-fsfe">
-        <div id="related-content">
-            <h3>Stap voor stap uitleg:</h3>
-            <ul>
-                <li>
-                <a href="/contribute/web/features.html">Een sjabloonartikel om te gebruiken met het nieuwe webdesign</a>
-                </li>
-            </ul>
-        </div>
-    </sidebar>
+        </ul>
+    </div>
+    <!--/e-content-->
+  </body>
+<sidebar promo="about-fsfe">
+    <div id="related-content">
+        <h3>Stap voor stap uitleg:</h3>
+        <ul>
+            <li>
+              <a href="https://wiki.fsfe.org/TechDocs/Mainpage/">Technische documentatie van de FSFE-website</a>
+            </li>
+            <li>
+            <a href="/contribute/web/features.html">Een sjabloonartikel om te gebruiken met het nieuwe webdesign</a>
+            </li>
+        </ul>
+    </div>
+</sidebar>
 <translator>André Ockers</translator>
-    </html>
-    <!--
-    Local Variables: ***
-    mode: xml ***
-    End: ***
-    -->
+</html>

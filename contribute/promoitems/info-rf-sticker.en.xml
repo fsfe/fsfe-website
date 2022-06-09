@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<infoset>
+  <version>1</version>
+
+  <info id="rf-sticker">
+    <!-- Leave a tag like <printready> blank or erase it if you don't 
+    want to appear it -->
+    <!-- Translations for "Type", "Size" etc. can be found in 
+    /tools/texts-**.xml -->
+    <name>Router Freedom sticker</name>
+    <description>
+      Decorate your liberated router, modem, or any other internet access device you are proud of with our 'Router Freedom' sticker.
+    </description>
+    <type>Sticker</type>
+    <size>40mm x 40mm</size>
+    <context><a href="/activities/routers/routers.html">Router Freedom</a></context>
+    <languages>
+    </languages>
+    <printed>
+      English
+    </printed>
+    <license><a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a></license>
+    <author>Markus Meier</author>
+    <source><a href="https://download.fsfe.org/advocacy/promomaterial/router/rf-sticker/">Router Freedom sticker in download.fsfe.org</a></source> 
+    <printready></printready>
+  </info>
+
+</infoset>

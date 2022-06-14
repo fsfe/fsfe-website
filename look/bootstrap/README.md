@@ -1,3 +1,9 @@
+/*
+ * SPDX-FileCopyrightText: 2011-2019 Twitter Inc.
+ *
+ * SPDX-License-Identifier: MIT
+ */
+
 # [Bootstrap](https://getbootstrap.com/)
 
 [![Slack](https://bootstrap-slack.herokuapp.com/badge.svg)](https://bootstrap-slack.herokuapp.com/)

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<readers>
+  <version>1</version>
+
+   <reader priority="50">
+  <name>sioyek</name>
+  <logo>sioyek.png</logo>
+  <homepage>https://github.com/ahrm/sioyek</homepage>
+  <license>GPLv3</license>
+  <platform><name>GNU/Linux</name></platform>
+  <platform><name>Mac OS X</name></platform>
+  <language>en</language>
+
+  <description>A PDF viewer designed for reading research papers and technical books.</description>
+</reader> </readers>

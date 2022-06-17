@@ -3,7 +3,7 @@
 <activityset>
   <version>1</version>
 
-  <activity id="20years" date="2021-02-01" status="active">
+  <activity id="20years" date="2021-02-01" status="finished">
     <title>20 anni di FSFE</title>
     <description>
 	  Nel 2021, la Free Software Foundation Europe compie 20 anni. In questo 
@@ -15,7 +15,7 @@
     </description>
     <link href="/activities/20years/20years.html" />
     <image url="/graphics/logos/fsfe20.png" />
-    <order priority="4" highlight="yes" />
+    <order priority="4" />
     <tags>
       <tag key="awareness" />
     </tags>

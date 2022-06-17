@@ -5,13 +5,12 @@
    <reader priority="30">
   <name>Xpdf</name>
   <logo>xpdf.png</logo>
-  <homepage>http://www.foolabs.com/xpdf/</homepage>
+  <homepage>http://www.xpdfreader.com/opensource.html</homepage>
   <license>GPLv2</license>
-  <platform><name>GNU/Linux</name><installer>http://www.foolabs.com/xpdf/download.html</installer></platform>
-  <platform><name>Windows</name><installer>http://www.foolabs.com/xpdf/download.html</installer></platform>
+  <platform><name>GNU/Linux</name></platform>
   <language>en</language>
   <language>fr</language>
   <language>de</language>
   
-  <description>A lightweight, straightforward pdf viewer using a plain motif interface.</description>
+  <description>A lightweight, straightforward pdf viewer using a plain motif interface. The XpdfReader builds are non-free, we advise against them.</description>
 </reader> </readers>

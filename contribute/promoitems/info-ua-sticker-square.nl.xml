@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<infoset>
+  <version>1</version>
+  <info id="ua-sticker-square">
+    <!-- Leave a tag like <printready> blank or erase it if you don't 
+    want to appear it -->
+    <!-- Translations for "Type", "Size" etc. can be found in 
+    /tools/texts-**.xml -->
+    <name>Android Opwaarderen</name>
+    <description>
+      De sticker van onze Android Opwaarderen-campagne met de leus, het logo en het internetadres. De sticker is vierkant met ronde hoeken.
+    </description>
+    <type>Sticker</type>
+    <size>74mm x 74mm</size>
+    <context><a href="/activities/upcyclingandroid/">Android Opwaarderen</a></context>
+    <languages>
+      <a href="https://download.fsfe.org/advocacy/promomaterial/UpcyclingAndroid/U_A_STICKER_74x74_mm.pdf">Engels</a>
+    </languages>
+    <printed>
+      Engels
+    </printed>
+    <license><a href="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA 4.0</a></license>
+    <author>Markus Meier</author>
+    <source><a href="https://download.fsfe.org/advocacy/promomaterial/UpcyclingAndroid/">Upcycling Android sticker* in download.fsfe.org</a></source> 
+    <printready></printready>
+  </info>
+</infoset>
+
+

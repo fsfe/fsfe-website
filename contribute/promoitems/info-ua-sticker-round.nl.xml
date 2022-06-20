@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<infoset>
+  <version>1</version>
+  <info id="ua-sticker-round">
+    <!-- Leave a tag like <printready> blank or erase it if you don't 
+    want to appear it -->
+    <!-- Translations for "Type", "Size" etc. can be found in 
+    /tools/texts-**.xml -->
+    <name>Save Your Droid</name>
+    <description>
+      Onze Android Opwaarderen-sticker met de leus "Save Your Droid", het logo en het internetadres. De sticker is rond en is 50 mm groot.
+    </description>
+    <type>Sticker</type>
+    <size>50mm x 50mm</size>
+    <context><a href="/activities/upcyclingandroid/">Android Opwaarderen</a></context>
+    <languages>
+      <a href="https://download.fsfe.org/advocacy/promomaterial/UpcyclingAndroid/U_A_STICKER_round_50x50_mm.pdf">Engels</a>
+    </languages>
+    <printed>
+      Engels
+    </printed>
+    <license><a href="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA 4.0</a></license>
+    <author>Markus Meier</author>
+    <source><a href="https://download.fsfe.org/advocacy/promomaterial/UpcyclingAndroid/">Upcycling Android sticker* in download.fsfe.org</a></source> 
+    <printready></printready>
+  </info>
+</infoset>
+
+

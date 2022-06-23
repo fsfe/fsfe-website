@@ -128,21 +128,6 @@
                     <xsl:value-of select="@size"/>
                   </xsl:attribute>
                 </xsl:element>
-
-                <!-- Hidden input to pass price into CGI script -->
-                <xsl:element name="input">
-                  <xsl:attribute name="type">hidden</xsl:attribute>
-                  <xsl:attribute name="name">
-                    <xsl:text>_</xsl:text>
-                    <xsl:value-of select="$id"/>
-                    <xsl:text>_</xsl:text>
-                    <xsl:value-of select="@size"/>
-                  </xsl:attribute>
-                  <xsl:attribute name="value">
-                    <xsl:value-of select="$price"/>
-                  </xsl:attribute>
-                </xsl:element>
-
               </xsl:element>
             </xsl:for-each>
           </xsl:element>

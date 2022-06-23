@@ -25,6 +25,7 @@ use POSIX qw(strftime);
 use Digest::SHA qw(sha1_hex);
 use MIME::Lite;
 use MIME::Base64;
+use XML::LibXML;
 use utf8;
 use LWP::UserAgent;
 use HTTP::Request::Common qw(POST);
@@ -90,13 +91,16 @@ if ( !$email ) {
     exit;
 }
 
+my $catalogue_file = $ENV{"DOCUMENT_ROOT"} . "/order/catalogue.xml";
+my $catalogue = XML::LibXML->load_xml(location => $catalogue_file);
+
 my $count  = 0;
 my $amount = 0;
 
 foreach $item ( $query->param ) {
     $value = $query->param($item);
     if ( not $item =~ /^_/ and $value ) {
-        my $price = $query->param("_$item");
+        my $price = $catalogue->findvalue("/catalogue/item[\@id=\"$item\"]/\@price");
         $count  += 1;
         $amount += $value * $price;
     }
@@ -200,7 +204,7 @@ HTML
 foreach $item ( $query->param ) {
     $value = $query->param($item);
     if ( not $item =~ /^_/ and $value ) {
-        my $price    = $query->param("_$item");
+        my $price = $catalogue->findvalue("/catalogue/item[\@id=\"$item\"]/\@price");
         my $subtotal = $value * $price;
         $body .= <<"HTML";
 $value x $item: € $subtotal
@@ -243,7 +247,7 @@ push @odtfill, "Country=" . $country_name;
 foreach $item ( $query->param ) {
     $value = $query->param($item);
     if ( not $item =~ /^_/ and $value ) {
-        my $price = $query->param("_$item");
+        my $price = $catalogue->findvalue("/catalogue/item[\@id=\"$item\"]/\@price");
         push @odtfill, "Count=" . $value;
         push @odtfill, "Item=" . $item;
         push @odtfill, "Amount=" . sprintf "%.2f", $value * $price;

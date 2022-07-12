@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
 <html>
-<version>2</version>
+<version>3</version>
 
 <head>
   <title>Announce your FSFE community event</title>
@@ -88,16 +88,15 @@
       <p class="help-block">
         Please indicate the language of the text you will insert in the title
         and description. If you register your event in another language than
-        English, <strong>please consider also uploading an English
-        version</strong> to make sure everyone understands it -- including us. Also be aware that a
+        English, <strong>please consider uploading an English
+        version first</strong> to make sure everyone understands it -- including us. Also be aware that a
         non-English event is only visible on the non-English page of fsfe.org. So
         for example an Italian event would just be visible on
         fsfe.org/index.it.html.
       </p>
     </div>
 
-    <label for="title" class="required">Event title<span class="star">*</span></label>
-    <input name="title" value="" required="required" type="text" />
+
     <table>
       <tr>
         <td>
@@ -111,24 +110,61 @@
       </tr>
     </table>
     
-        <p class="help-block">Please include the following points:</p>
-    <ol class="help-block">
-      <li>What is your event about, and what can people expect?</li>
-      <li>Location, date and time of the event? Add this into the description of the event.</li>
-      <li>Do people need to register, and does it cost money?</li>
-      <li>Who is giving the talk or hosting the meeting?</li>
-      <li>The language of your talk or meeting.</li>
-      <li>For local group meetings: Whether it is open to the public.</li>
-      <li>Please be aware that single line breaks will not be visible after the publication of the event. Please use fully separated paragraphs for this.</li>
-      <li>Please use only 2 paragraphs maximum!</li>
-      <li>Please do not just copy generic information from your group's wiki page.</li>
-    </ol>
+        <label for="title" class="required">Event title<span class="star">*</span></label>
+    <input name="title" value="" required="required" type="text" />
+    
+<div class="help-block">
+  <p>
+    <strong>For talks</strong>: &quot;Full talk title&quot; talk, e.g. &quot;Device Neutrality: Leveraging the Benefits of Free Software in Hardware&quot; talk
+  </p>
+  <p>
+    <strong>For Group meetings</strong>: FSFE &quot;name&quot; local group/country team meeting, e.g. FSFE Zurich local group meeting
+  </p>
+</div>
     
     <label for="description" class="required">Description (just text, no HTML)<span class="star">*</span></label>
     <textarea name="description" required="required"></textarea>
 
+<div class="help-block">
+  <p>Paragraph 1:  Give <strong>context</strong>.</p>
+  <p>
+    <strong>For talks</strong>: Catchy intro to the topic, e.g. 
+    "Developing, using, and re-using Free Software is fun, but dealing 
+    with licensing and copyright information is not. REUSE changes 
+    that. With three simple steps, it makes adding and reading 
+    licensing and copyright information easy for both humans and 
+    machines".
+  </p>
+  <p>
+    <strong>For Group meetings</strong>: Introduce the group, what do 
+    you usually do in your meetings, e.g. "FSFE Women is a group for 
+    women who are interested in Free Software. We get together about 
+    once a month online to meet, give talks about topics we find 
+    interesting in the area of Free Software and discuss recent 
+    developments".
+  </p>
+  
+  <p>Paragraph 2: Give <strong>practical info</strong>.</p>
+  <p>
+    <strong>For talks</strong>: Presenter name, job title, talk 
+    content. Conference, time, address, language, cost, (lack of) 
+    registration requirements. E.g. "Erik Albers, Program manager for 
+    Digital Sustainability, will give a keynote on the topic "Free 
+    software saves lives - of hardware" at the University of Applied 
+    Sciences in Berlin. The lecture takes place as part of the IT Day, 
+    at 14:00, in German. The event is free of charge, no registration 
+    is needed".
+  </p>
 
-    <p class="help-block">Thank you for registering your event!</p>
+  <p><strong>For Group meetings</strong>: Agenda, time, address, language, is it open to everyone. E.g. "In the next meeting the group will discuss the Public Communication initiative. We meet at Bitwäscherei, Neue Hard 12, second floor, from 18:00 to 21:00. The meeting is in German. You are welcome to join!"</p>
+
+<p>Tips:</p>
+<ul>
+<li>Hit &#39;Enter&#39; twice to create a paragraph</li>
+<li>For online events add the time in CET</li>
+<li>City-country/&#39;online&#39; and date are already added automatically.</li>
+</ul>
+</div>
 
     <label for="tags">Choose one or more tags below</label>*
 
@@ -166,6 +202,8 @@
 
   </form>
 
+  <p>Thank you for registering your event!</p>
+  
   <p>
     After you have filled out the form and confirmed your entry with the "add event"
     button, an xml-file will be generated and sent to us. If approved, your event
@@ -182,6 +220,6 @@
     participants to be excellent to each other. Please do not announce your
     event as an FSFE event if you do not plan to implement our Code of Conduct.
   </p>
-
+  
 </body>
 </html>

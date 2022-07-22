@@ -43,7 +43,6 @@
 
   <item type="tshirt" id="tshirt-multilingual-green" oldprice="20.00" price="15.00" date="2019-12-07">
     <available size="S"    a="46" b="66"/>
-    <available size="L"    a="51" b="71"/>
     <available size="XXL"  a="57" b="77"/>
     <image
       small="2019/tshirt-multilingual-green-front-small.jpg"
@@ -56,7 +55,7 @@
   <item type="girlie" id="girlie-multilingual-black" price="20.00" date="2019-12-07">
     <!-- available size="S"    a="44"   b="62"/ -->
     <available size="M"    a="47.5" b="62"/>
-    <!-- available size="L"    a="48"   b="65"/ -->
+    <available size="L"    a="48"   b="65"/>
     <available size="XL"   a="53.5" b="66"/>
     <available size="XXL"  a="55"   b="68"/>
     <image

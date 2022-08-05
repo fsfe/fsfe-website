@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html>
+  <version>1</version>
+<head>
+  <title>Zoek</title>
+  <script type="text/javascript" src="/scripts/lunr-2.3.9.min.js"></script>
+  <script src="index.js"></script>
+</head>
+<body class="toplevel">
+  <h1>Zoek</h1>
+  <div id="introduction">
+    <p>
+          Vind nieuwsartikelen en -pagina's over onderwerpen waarin u geïnteresseerd bent.
+      U kunt één of meerdere trefwoorden gebruiken.
+    </p>
+  </div>
+  <p>
+      De zoekactie doorzoekt alle titels, teasers en tags van de site, maar
+    niet de volledige tekst van het artikel. U krijgt maximaal 15 resultaten te zien, gesorteerd
+    in nieuws en pagina's. Het gebruik van hoofd- of kleine letters doet er niet toe. Als u niet
+    niet vindt wat u zoekt, probeer dan een variatie van de
+    trefwoorden of andere woorden en gebruik de <a href="#tips">geavanceerde
+    zoekfuncties</a>.
+  </p>
+  <noscript>
+    <p>
+          JavaScript moet geactiveerd zijn om de zoekfunctie te
+      werken. Gewoonlijk doen wij ons best om te vermijden dat wij hiervan afhankelijk zijn. Als u
+      JavaScript niet wilt activeren kunt u een externe zoekmachine die dat niet nodig heeft (bijvoorbeeld <a
+      href="https://html.duckduckgo.com/html/">DuckDuckGo</a>) gebruiken, en daarbij "site:fsfe.org" toevoegen aan de zoekopdracht.
+    </p>
+  </noscript>
+  <form class="form-inline" method="GET" action="">
+    <div class="form-group">
+      <input type="text" class="form-control" id="search" name="q" aria-label="Search term" />
+    </div>
+    <button type="submit" class="btn btn-primary">Zoek</button>
+  </form>
+  <h2>Zoekresultaten</h2>
+  <div id="search_results"></div>
+  <h2 id="tips">Tips voor geavanceerde zoekopdrachten</h2>
+  <p>
+      U kunt uw zoekopdrachten aanpassen om de resultaten te beperken. Hier
+    zijn een paar voorbeelden (meer vindt u in de <a
+    href="https://lunrjs.com/guides/searching.html">documentatie van
+    de bibliotheek</a> die wij gebruiken).
+  </p>
+  <ul>
+    <li>
+      Jokertekens: <code>communi*</code> zal resultaten weergeven voor bijv.
+      <em>community</em> en <em>communication</em>.
+    </li>
+    <li>
+          Aanwezigheid: met <code>+router -patenten raadplegen</code>
+      bepalen dat <em>router</em> in de resultaten gevonden moet worden. Alle
+      resultaten die <em>patenten</em> bevatten worden uitgesloten. De
+      aanwezigheid van <em>raadplegen</em> is optioneel.
+    </li>
+    <li>
+            Velden: u kunt uw zoekopdracht beperken tot de titels van de site met
+      <code>title:router</code>. Andere velden zijn <code>teaser</code>,
+      <code>type</code> en <code>tags</code>.
+    </li>
+    <li>
+          Alleen nieuws/pagina's: <code>+standaard +type:page</code> toont alleen
+      pagina's met het woord <em>standaard</em>. Het tegenovergestelde is het
+      <em>news</em> type. Let op de + tekens om af te dwingen dat beide termen
+      aanwezig te zijn.
+    </li>
+    <li>
+          Boosts: u kunt het gewicht van bepaalde termen verhogen. Met
+      <code>router^10 vrijheid</code> is het gewicht van de eerste term
+      10x hoger.
+    </li>
+    <li>
+    Wazige overeenkomsten: Met <code>router~1</code>, vindt u
+      resultaten met <em>router</em> en <em>routes</em>. Eén
+      teken in de bevindingen kan verschillen van uw zoekterm.
+    </li>
+  </ul>
+  <script>
+    /*
+    @licstart  The following is the entire license notice for the
+    JavaScript code in this page.
+    Copyright (C) 2020 Free Software Foundation Europe
+    The JavaScript code in this page is free software: you can
+    redistribute it and/or modify it under the terms of the GNU
+    General Public License (GNU GPL) as published by the Free Software
+    Foundation, either version 3 of the License.
+    The code is distributed WITHOUT ANY WARRANTY;
+    without even the implied warranty of MERCHANTABILITY or FITNESS
+    FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+    As additional permission under GNU GPL version 3 section 7, you
+    may distribute non-source (e.g., minimized or compacted) forms of
+    that code without the copy of the GNU GPL normally required by
+    section 4, provided you include this license notice and a URL
+    through which recipients can access the Corresponding Source.
+    @licend  The above is the entire license notice
+    for the JavaScript code in this page.
+    */
+  </script>
+  <script>
+  const searchString = new URLSearchParams(window.location.search).get('q');
+  const locals = [document.documentElement.getAttribute("lang")];
+  if (!locals.includes('en')) {
+      locals.push('en');
+  }
+  const $target = document.querySelector('#search_results');
+  if (searchString) {
+  // Populate the field with any existing search string
+  document.querySelector('#search').value = searchString;
+  // Our index uses title as a key of the hashmap
+  const pagesByURL = pages.reduce((acc, curr) => {
+    acc[curr.url] = curr;
+    return acc;
+  }, {});
+  index = lunr(function() {
+                      this.pipeline.remove(lunr.stopWordFilter);
+                      this.pipeline.remove(lunr.trimmer);
+                      this.field("title", { boost: 10 });
+                      this.field("tags", { boost: 5 });
+                      this.field("teaser");
+                      this.field("type");
+                      this.ref("url");
+                      pages.forEach(function (page) {
+                          this.add(page)
+                      }, this)
+                  });
+    // Do the search and filter out results not from the current local or English
+    let matches = index.search(searchString).filter(p => locals.some(local => p.ref.includes(local + ".html")));
+    function display_result(matches) {
+        // workaround xsl XML tag parsing madness
+        return '&lt;ul&gt;' + matches.map(p => {
+          title = pagesByURL[p.ref].title;
+          date = pagesByURL[p.ref].date;
+            if (date) {
+              return '<li>' + '<a href='&apos;+p.ref+&apos;'>'+title+'</a>'+' (' + date + ')</li>';
+            } else {
+              return '<li><a href='&apos;+p.ref+&apos;'>' + title + ' </a></li>';
+            }
+        }).join('') + '&lt;/ul&gt;';
+    }
+    if (matches.length > 0) {
+      matches = matches.slice(0, 15);
+      let [news, pages] = matches.reduce(([true_arr, false_arr], m)=> {
+        if (m.ref.includes('news') === false)
+          // return true_arr and append m to false_arr
+          return [true_arr, [...false_arr, m]]
+        else
+          return [[...true_arr,m], false_arr]
+      }, [[],[]]);
+      if (news.length > 0) {
+        news = news.sort((a, b) => pagesByURL[a.ref].date &lt; pagesByURL[b.ref].date);
+        $target.innerHTML = '<h3><translation id="news" /></h3>' + display_result(news);
+      }
+      if (pages.length > 0) {
+        $target.innerHTML += '<h3><translation id="pages" /></h3>' + display_result(pages);
+      }
+    } else {
+      $target.innerHTML = '<p><translation id="search/notfound" /></p>';
+    }
+  } else {
+      $target.innerHTML = '<p><translation id="search/empty" /></p>';
+  }
+  </script>
+</body>
+<translator>André Ockers</translator>
+</html>
+

@@ -1,24 +1,59 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
+<?xml version="1.0"?>
 <functionset>
-  <version>0</version>
-
+  <version>1</version>
   <function id="president/f">Voorzitter</function>
   <function id="president/m">Voorzitter</function>
   <function id="vice-president/f">Vice-voorzitter</function>
   <function id="vice-president/m">Vice-voorzitter</function>
-  <function id="financial-officer/f">penningmeester</function>
-  <function id="financial-officer/m">penningmeester</function>
-  <function id="executive-director/f">Executive Director</function>
-  <function id="executive-director/m">Executive Director</function>
-  <function id="intern/f">Stagiair</function>
+  <function id="financial-officer/f">Penningmeester</function>
+  <function id="financial-officer/m">Penningmeester</function>
+  <function id="executive-director/f">Verenigingsleidster</function>
+  <function id="executive-director/m">Verenigingsleider</function>
+  <function id="executive-assistant/f">Assistente Verenigingsleid(st)er</function>
+  <function id="executive-assistant/m">Assistent Verenigingsleid(st)er</function>
+  <function id="intern/f">Stagiaire</function>
   <function id="intern/m">Stagiair</function>
   <function id="office/f">Kantoor</function>
   <function id="office/m">Kantoor</function>
   <function id="sysadmin/f">Systeembeheerder</function>
   <function id="sysadmin/m">Systeembeheerder</function>
-  <function id="coordinator/f">Coördinator</function>
+  <function id="office-assistant/f">Assistente kantoor</function>
+  <function id="office-assistant/m">Assistent kantoor</function>
+  <function id="office-coordinator/f">Coördinatrice kantoor</function>
+  <function id="office-coordinator/m">Coördinator kantoor</function>
+  <function id="office-manager/f">Manager kantoor</function>
+  <function id="office-manager/m">Manager kantoor</function>
+  <function id="sysadmin/f">Systeembeheerder</function>
+  <function id="sysadmin/m">Systeembeheerder</function>
+  <function id="technical-advisor/f">Technisch adviseur</function>
+  <function id="technical-advisor/m">Technisch adviseur</function>
+  <function id="coordinator/f">Coördinatrice</function>
   <function id="coordinator/m">Coördinator</function>
-  <function id="deputy/f">Vice-coördinator</function>
-  <function id="deputy/m">Vice-coördinator</function>
+  <function id="policy-analyst/f">Beleidsanaliste</function>
+  <function id="policy-analyst/m">Beleidsanalist</function>
+  <function id="policy-manager/f">Beleidsmanager</function>
+  <function id="policy-manager/m">Beleidsmanager</function>
+  <function id="policy-consultant/f">Beleidsconsulente</function>
+  <function id="policy-consultant/m">Beleidsconsulent</function>
+  <function id="senior-policy-consultant/f">Senior Beleidsconsulente</function>
+  <function id="senior-policy-consultant/m">Senior Beleidsconsulent</function>
+  <function id="campaign-manager/m">Campagne-manager</function>
+  <function id="campaign-manager/f">Campagne-manager</function>
+  <function id="program-manager/f">Programma-manager</function>
+  <function id="program-manager/m">Programma-manager</function>
+  <function id="senior-program-manager/f">Senior Programma-manager</function>
+  <function id="senior-program-manager/m">Senior Programma-manager</function>
+  <function id="project-manager/f">Projectmanager</function>
+  <function id="project-manager/m">Projectmanager</function>
+  <function id="senior-project-manager/f">Senior Projectmanager</function>
+  <function id="senior-project-manager/m">Senior Projectmanager</function>
+  <function id="deputy/f">Vice-Coördinatrice</function>
+  <function id="deputy/m">Vice-Coördinator</function>
+  <function id="seniorcounsel/f">Senior Adviseur</function>
+  <function id="seniorcounsel/m">Senior Adviseur</function>
+  <function id="member-assembly/f">Lid van de Algemene Vergadering</function>
+  <function id="member-assembly/m">Lid van de Algemene Vergadering</function>
+  <function id="merchandise/f">Fan-artikelen</function>
+  <function id="merchandise/m">Fan-artikelen</function>
 </functionset>
+

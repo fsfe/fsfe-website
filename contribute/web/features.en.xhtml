@@ -31,6 +31,7 @@
         <li><a href="#links">Links</a></li>
         <li><a href="#emails">Emails</a></li>
         <li><a href="#graphics">Graphics</a></li>
+        <li><a href="#videos">Videos</a></li>
         <li><a href="#quotes">Quotes</a></li>
         <li><a href="#interviews">Interviews</a></li>
         <li><a href="#toc">Tables of content</a></li>
@@ -277,6 +278,52 @@
       fsfe.org. Therefore, try to be consistent with other, similar pages, and
       don't make your page a playground for wild styling experiments.
     </p>
+
+
+    <h2 id="videos">Videos</h2>
+
+    <p>
+      Videos work similarly to <a href="#graphics">graphics</a>, but are a bit
+      more complex. As graphics, they should be wrapped inside a
+      <code>&lt;figure&gt;</code> element and can use the same classes for
+      sizing, shadows, or alignment. However, a video has to come in two
+      different formats (Webm and MP4) for best software freedom support and
+      compatibility, and in different resolutions for bandwidth saving.
+    </p>
+
+    <p>
+      Our primary video platform is our <a
+      href="https://media.fsfe.org">Peertube instance</a>. You should
+      upload/import the video there first, or ask the responsible person for
+      this. This video is then available via a link, e.g.
+      <code>https://media.fsfe.org/w/kGvs3JNADvvQfkC1dR9FGr</code>.
+    </p>
+
+    <!-- TODO: check regularly whether this has improved -->
+    <p>
+      Unfortunately, we currently cannot directly embed the video from Peertube
+      directly. Therefore, we provide the <a
+      href="https://git.fsfe.org/fsfe-system-hackers/peertube-embedder">Peertube
+      Embedder</a>, a script on our download server that automates the necessary
+      processes of download and conversion. Please follow the tool's
+      documentation to learn how to use it and how it works. There you will also
+      find a list of drawbacks of this temporary solution.
+    </p>
+
+    <p>
+      If this is finished, you will receive a tag like the following:
+      <code>&lt;peertube url="https://media.fsfe.org/w/kGvs3JNADvvQfkC1dR9FGr"
+      /&gt;</code> that is internally translated into the video. Wrap this in a
+      figure, and optionally extend it with a caption and a link to the original
+      video:
+    </p>
+
+    <figure>
+      <peertube url="https://media.fsfe.org/w/kGvs3JNADvvQfkC1dR9FGr" />
+      <figcaption>
+        Video about Upcycling Android. <a href="https://media.fsfe.org/w/kGvs3JNADvvQfkC1dR9FGr">All subtitles and more videos...</a>
+      </figcaption>
+    </figure>
 
     <h2 id="quotes">Quotes</h2>
 

@@ -42,6 +42,22 @@ stopwords = {'facessimo', 'eûtes', 'starai', 'wasn', 'l', 'avuta', 'below', 'de
 articles = []
 
 
+def find_teaser(document: BeautifulSoup) -> str:
+    """
+    Find a suitable teaser for indexation
+
+    Get all the paragraphs in <body> and return the first which contains more
+    than 10 words
+
+    :document: The parsed BeautifulSoup document
+    :returns: The text of the teaser or an empty string
+    """
+    for p in document.body.find_all("p"):
+        if len(p.text.strip().split(" ")) > 10:
+            return p.text
+    return ""
+
+
 def process_file(filename: str):
     logger.debug("Processing file {}".format(filename))
     with open(filename, "r", encoding=("utf-8")) as file_fh:
@@ -58,11 +74,9 @@ def process_file(filename: str):
                 "title": file_parsed.title.text,
                 "teaser": " ".join(
                     w
-                    for w in file_parsed.body.find("p").text.strip().split(" ")
+                    for w in find_teaser(file_parsed).strip().split(" ")
                     if w.lower() not in stopwords
-                )
-                if file_parsed.body.find("p")
-                else "",
+                ),
                 "type": "news" if filename.startswith("news/") else "page",
                 # Get the date of the file if it's a news item
                 "date": file_parsed.html.get("newsdate")

@@ -15,6 +15,7 @@ $diasporauser = $config['diasporauser'];
 $twitteruser = $config['twitteruser'];
 $flattruser = $config['flattruser'];
 $supporturl = $config['supporturl'];
+$sharepic = $config['sharepic'];
 
 $service = isset($_GET['service']) ? $_GET['service'] : false;
 $url = isset($_GET['url']) ? $_GET['url'] : false;
@@ -35,6 +36,7 @@ if(empty($service) || empty($url)) {
     $via_fed = "";
     $via_tw = "";
     $via_dia = "";
+    $sharepic = "https://sharepic.fsfe.org/pmpc";
     $supporturl = "https://my.fsfe.org/donate?referrer=pmpc";
   } else {
     $via_fed = " via " . $fediverseuser;
@@ -75,6 +77,9 @@ if(empty($service) || empty($url)) {
     die();
   } elseif($service === "gplus") {
     header("Location: https://plus.google.com/share?url=" . $url);
+    die();
+  } elseif($service === "sharepic") {
+    header("Location: " . $sharepic);
     die();
   } elseif($service === "support") {
     header("Location: " . $supporturl);

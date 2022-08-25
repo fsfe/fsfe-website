@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<infoset>
+  <version>1</version>
+
+  <info id="jtsfm-postcard">
+    <!-- Leave a tag like <printready> blank or erase it if you don't 
+    want to appear it -->
+    <!-- Translations for "Type", "Size" etc. can be found in 
+    /tools/texts-**.xml -->
+    <name>Join the Software Freedom Movement Postcard</name>
+    <description>
+      Join the FSFE! Contribute to software freedom!
+    </description>
+    <type>Postcard</type>
+    <size>148mm x 105mm</size>
+    
+    <context><a href="/contribute/contribute.html">Join the movement!</a></context>
+    <languages>
+          <a href="https://download.fsfe.org/advocacy/promomaterial/FSFE/JoinTheMovement/FSFE_ADA_ZANGEMANN_postcard.pdf">English</a>
+    </languages>
+    <printed>
+      English
+    </printed>
+    <license><a href="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA 4.0</a></license>
+    <author>Markus Meier</author>
+    <source><a href="https://download.fsfe.org/advocacy/promomaterial/FSFE/JoinTheMovement/FSFE_ADA_ZANGEMANN_postcard.pdf">Join the Software Freedom Movement Postcard in download.fsfe.org</a></source> 
+    <printready></printready>
+  </info>
+
+</infoset>

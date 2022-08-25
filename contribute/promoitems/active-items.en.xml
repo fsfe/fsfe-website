@@ -23,37 +23,49 @@ Such an item doesn't need an image!
 
   <!-- FSFE -->
 
-  <item type="fsfe" id="fsfe-logo-sticker" year="2017" order="1">
+  <item type="fsfe" id="fsfe-logo-sticker" year="2017" order="01">
     <image imgsmall="/contribute/promopics/fsfe-sticker-thumb.png" />
   </item>
 
-  <item type="fsfe" id="fsfe-since-2001-sticker" year="2021" order="2">
+  <item type="fsfe" id="fsfe-since-2001-sticker" year="2021" order="02">
     <image imgsmall="/contribute/promopics/fsfe-since-2001-sticker-thumb.png" />
+  </item>
+  
+   <item type="fsfe" id="jtsfm-poster" year="2022" order="03">
+    <image imgsmall="/contribute/promopics/jtfsm-poster-thumb.png" />
+  </item>
+  
+   <item type="fsfe" id="jtsfm-postcard" year="2022" order="04">
+    <image imgsmall="/contribute/promopics/jtfsm-postcard-thumb.png" />
+  </item>
+  
+   <item type="fsfe" id="fsfe-women-sticker" year="2022" order="10">
+    <image imgsmall="/contribute/promopics/fsfe-women-sticker-thumb.png" />
   </item>
 
 
   <!-- Free Software multilanguage -->
 
-  <item type="fsfe" id="multilanguage-free-software-logocolours" year="2019" order="3">
+  <item type="fsfe" id="multilanguage-free-software-logocolours" year="2019" order="08">
     <image imgsmall="/contribute/promopics/free-software-multilanguage-logocolours.png" />
   </item>
 
-  <item type="fsfe" id="multilanguage-free-software-purple" year="2019" order="4">
+  <item type="fsfe" id="multilanguage-free-software-purple" year="2019" order="09">
     <image imgsmall="/contribute/promopics/free-software-multilanguage-purple.png" />
   </item>
 
 
   <!-- Hacking 100 freedom -->
 
-  <item type="fsfe" id="hacking-100-freedom-sticker-blue" year="2019" order="5">
+  <item type="fsfe" id="hacking-100-freedom-sticker-blue" year="2019" order="05">
     <image imgsmall="/contribute/promopics/hacking-100-freedom-sticker-blue.png" />
   </item>
 
-  <item type="fsfe" id="hacking-100-freedom-sticker-darkblue" year="2019" order="6">
+  <item type="fsfe" id="hacking-100-freedom-sticker-darkblue" year="2019" order="06">
     <image imgsmall="/contribute/promopics/hacking-100-freedom-sticker-darkblue.png" />
   </item>
 
-  <item type="fsfe" id="hacking-100-freedom-sticker-green" year="2019" order="7">
+  <item type="fsfe" id="hacking-100-freedom-sticker-green" year="2019" order="07">
     <image imgsmall="/contribute/promopics/hacking-100-freedom-sticker-green.png" />
   </item>
 

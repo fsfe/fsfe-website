@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<activityset>
+  <version>1</version>
+
+  <activity id="devices" date="2021-11-01" status="active">
+    <title>Device Neutrality</title>
+    <description>
+      Although digital devices are ubiquotous today, the number of devices on which users
+      cannot run Free Software is exponentially increasing. The consequence is an increased
+      loss of control over users’ technology. Device Neutrality aims to
+      enable end-users to bypass gatekeepers to have a non-discriminatory use of
+      Free Software on their devices.
+    </description>
+    <link href="/activities/deviceneutrality/devices.html" />
+    <image url="/graphics/logos/dn-logo.png" />
+    <order priority="5" highlight="yes" />
+    <tags>
+      <tag key="policy" />
+      <tag key="awareness" />
+    </tags>
+  </activity>
+</activityset>

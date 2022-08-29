@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<activityset>
+  <version>1</version>
+
+  <activity id="devices" date="2021-11-01" status="active">
+    <title>Digital Markets Act</title>
+    <description>
+      Device Neutrality is the policy concept to regulate monopoly over
+      devices and re-establish end-user control over their digital equipment.
+      The Digital Markets Act (DMA) regulates the economic activity of large
+      digital platforms and introduces Device Neutrality in the EU
+      legislation, fostering access to Free Sofware in Devices.
+    </description>
+    <link href="/activities/dma/dma.html" />
+    <image url="/graphics/logos/dma-logo.png" />
+    <order priority="4" highlight="yes" />
+    <tags>
+      <tag key="policy" />
+    </tags>
+  </activity>
+</activityset>

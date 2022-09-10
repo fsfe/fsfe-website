@@ -192,6 +192,18 @@
     <team>it</team>
     <function country="IT"></function>
   </person>
+  
+    <person id="ceballos">
+    <name>Lina Ceballos</name>
+    <function>project-manager/f</function>
+    <employee>full/f</employee>
+    <team>core</team>
+    <country>CO</country>
+    <email>lina.ceballos@fsfe.org</email>
+    <fingerprint>15C2C0899BB872A9D54FDFA56983FECBF4E90987</fingerprint>
+    <link>/about/people/ceballos/ceballos.html</link>
+    <avatar>ceballos.jpg</avatar>
+  </person>
 
   <person id="chen">
     <name>Jackie Chen</name>
@@ -541,6 +553,17 @@
     <keyhref>/about/people/ku/ku-public.asc</keyhref>
   </person>
 
+  <person id="kwarteng">
+    <name>Evelyn Kwarteng</name>
+    <country>TR</country>
+    <function>intern/f</function>
+    <email>evelyn.kwarteng@fsfe.org</email>
+    <team>core</team>
+    <employee>full/f</employee>
+    <avatar>kwarteng.jpg</avatar>
+  </person>
+
+
   <person id="lasota">
     <name>Lucas Lasota</name>
     <country>BR</country>
@@ -644,7 +667,7 @@
   <person id="mehl">
     <name>Max Mehl</name>
     <country>DE</country>
-    <function>program-manager/m</function>
+    <function>sysadmin/m</function>
     <team>ga</team>
     <team>core</team>
     <team>de</team>
@@ -653,7 +676,6 @@
     <fingerprint>A942CD00386B3CB26BA9BB652704E4AB371E2E92</fingerprint>
     <link>/about/people/mehl/mehl.html</link>
     <avatar>mehl.jpg</avatar>
-    <employee>full/m</employee>
   </person>
 
   <person id="mancheva">
@@ -1023,16 +1045,6 @@
     <country>CH</country>
     <email>swaechter@fsfe.org</email>
     <link>https://wiki.fsfe.org/Fellows/swaechter</link>
-  </person>
-
-  <person id="ceballos">
-    <name>Lina Ceballos</name>
-    <function>project-manager/f</function>
-    <employee>full/f</employee>
-    <team>core</team>
-    <country>CO</country>
-    <email>lina.ceballos@fsfe.org</email>
-    <avatar>ceballos.jpg</avatar>
   </person>
 
   <person id="wagener">

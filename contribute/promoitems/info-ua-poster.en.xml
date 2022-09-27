@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<infoset>
+  <version>1</version>
+
+  <info id="ua-poster">
+    <!-- Leave a tag like <printready> blank or erase it if you don't 
+    want to appear it -->
+    <!-- Translations for "Type", "Size" etc. can be found in 
+    /tools/texts-**.xml -->
+    <name>Save Your Droid</name>
+    <description>
+      Our Upcycling Android poster is A2 size, take control and upcycle your phone! 
+    </description>
+    <type>Poster</type>
+    <size>A2</size>
+    <context><a href="/activities/upcyclingandroid/">Upcycling Android</a></context>
+    <languages>
+      <a href="https://download.fsfe.org/advocacy/promomaterial/UpcyclingAndroid/ua-poster.pdf">English</a>
+    </languages>
+    <printed>
+      English
+    </printed>
+    <license><a href="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA 4.0</a></license>
+    <author>Markus Meier</author>
+    <source><a href="https://download.fsfe.org/advocacy/promomaterial/UpcyclingAndroid/">Upcycling Android Poster* in download.fsfe.org</a></source> 
+    <printready></printready>
+  </info>
+
+</infoset>

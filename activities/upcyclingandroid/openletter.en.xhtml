@@ -176,6 +176,66 @@
   </p>
       </div>
   </div>
+
+  <h2>Open Letter</h2>
+
+<form method="POST" action="https://forms.fsfe.org/email">
+	<input type="hidden" name="appid" value="upa-sign"/>
+	<div class="form-group row">
+		<div class="col-sm-4">
+			<label for="name" class="control-label">Your full name</label>
+			<input type="text" class="form-control" id="name" name="name" required="required" />
+		</div>
+		<div class="col-sm-4">
+			<label for="email" class="control-label">Your email address</label>
+			<input type="email" class="form-control" id="confirm" name="confirm" required="required" />
+		</div>
+		<div class="col-sm-4">
+			<label for="email" class="control-label">Country</label>
+			<input type="text" class="form-control" id="country" country="country" required="required" />
+		</div>
+	</div>
+	<div class="form-group row">
+		<div class="checkbox col-sm-6 col-xs-offset-3">
+			<label>
+				<input type="checkbox" name="permissionPriv" id="permissionPriv" value="yes" required="required" />
+				I have understood and accepted the <a href="/activities/upcyclingandroid/privacy/">privacy policy</a>.
+			</label>
+		</div>
+	</div>
+	<div class="form-group row">
+		<div class="checkbox col-sm-6 col-xs-offset-3">
+			<label>
+				<input type="checkbox" name="permissionPub" id="permissionPub" value="yes" required="required" />
+				I want my signature to appear in the list of signatures (~24 hours delay)
+			</label>
+		</div>
+	</div>
+	<div class="row">
+		<div class="checkbox col-sm-6 col-xs-offset-3">
+			<label>
+				<input type="checkbox" name="permissionNews" id="permissionNews" value="yes" required="required" />
+				I want to stay informed about the future of this campaign.
+			</label>
+		</div>
+	</div>
+	<div class="row">
+		<div class="checkbox col-sm-6 col-xs-offset-3">
+			<label>
+				<input type="checkbox" name="permissionNewsFSFE" id="permissionNewsFSFE" value="yes" required="required" />
+				I want to receive general email updates by the FSFE's experts
+				about current news, events, activities, and how you can
+				contribute.
+			</label>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-sm-6 col-xs-offset-3 center">
+			<button type="submit" class="btn btn-primary">Sign!</button>
+		</div>
+	</div>
+</form>
+
   <h2 id="signatures">Signatures</h2>
 
   <sigtable/>

@@ -245,16 +245,15 @@ hr.cleaner {
 }
 #body {
     margin-top: 10px;
-    text-align: left;
+    text-align: start;
     width: 75%;
-    margin-left:18%;
+    margin-inline-start:18%;
     
 }
-.inner-content
-{
-width:60%;
-float:left;
-font-size:13px;
+.inner-content {
+    width:44%;
+    font-size:13px;
+    position: absolute;
 }
 #blocks TABLE {
 }
@@ -277,8 +276,8 @@ font-size:13px;
     margin-right:auto;
 }
 .col3 {
-       width: 10%;
-    margin-left:65%;
+    width: 10%;
+    margin-inline-start: 65%;
 }
 .contenido {
     background-color: #FFFFFF;

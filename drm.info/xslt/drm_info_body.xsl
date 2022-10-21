@@ -14,6 +14,7 @@
     <xsl:element name="body">
       <xsl:element name="header">
         <xsl:attribute name="id">top</xsl:attribute>
+        <xsl:attribute name="dir">ltr</xsl:attribute>
 
         <xsl:element name="div">
           <xsl:attribute name="class">logo</xsl:attribute>

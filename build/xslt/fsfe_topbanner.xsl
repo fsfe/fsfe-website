@@ -10,6 +10,12 @@
         <xsl:element name="div">
           <xsl:attribute name="id">topbanner-inner</xsl:attribute>
           <xsl:apply-templates select="/buildinfo/topbanner/node()" />
+          <xsl:element name="div">
+            <xsl:attribute name="class">progressbar</xsl:attribute>
+            <xsl:element name="span">
+              <xsl:attribute name="id">progress</xsl:attribute>
+            </xsl:element>
+          </xsl:element>
         </xsl:element>
       </xsl:element>
     </xsl:element>

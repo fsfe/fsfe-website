@@ -13,7 +13,12 @@ div.topbanner {
 
   #topbanner-border {
     position: relative;
-    background: linear-gradient(160deg, rgba(208,244,0,1) 0%, rgba(74,210,240,1) 50%, rgba(32,45,121,1) 100%);
+    background: linear-gradient(
+      160deg,
+      rgba(208, 244, 0, 1) 0%,
+      rgba(74, 210, 240, 1) 50%,
+      rgba(32, 45, 121, 1) 100%
+    );
     padding: 5px;
 
     #topbanner-inner {
@@ -28,7 +33,7 @@ div.topbanner {
           display: flex;
           flex-wrap: wrap;
 
-          & > [class*='col-'] {
+          & > [class*="col-"] {
             display: flex;
             flex-direction: column;
           }
@@ -46,7 +51,31 @@ div.topbanner {
           }
         }
       } // /.text-button-box
-
     }
+  }
+}
+
+// ============================================================================
+// Style for topbanner
+// ============================================================================
+
+.progressbar {
+  margin-top: 1em;
+  height: 24px;
+  position: relative;
+  border: 1px solid #55555540;
+
+  #progress {
+    // Amend the width value to change percentage of goal reached
+    width: 80%;
+    display: block;
+    height: 22px;
+    background-image: linear-gradient(
+      to right,
+      rgb(43,194,83) 37%,
+      rgb(84,240,84) 69%
+    );
+    position: relative;
+    overflow: hidden;
   }
 }

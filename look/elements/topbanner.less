@@ -65,17 +65,85 @@ div.topbanner {
   position: relative;
   border: 1px solid #55555540;
 
-  #progress {
-    // Amend the width value to change percentage of goal reached
-    width: 80%;
+  .progress {
+    font-weight: 700;
+    padding-left: 3px;
+    white-space: nowrap;
+    overflow: visible !important;
+    border-radius: 0px;
     display: block;
     height: 22px;
     background-image: linear-gradient(
-      to right,
-      rgb(43,194,83) 37%,
-      rgb(84,240,84) 69%
+      90deg,
+      rgba(208, 243, 0, 1) 0%,
+      rgba(74, 210, 240, 1) 50%
+      // If the progressbar isn't yet filled, the darker colors obscure the
+      // text, so only enable them once the bar fill. Then, you could also tweak
+      // the percentage values for a better look
+      // rgba(51, 148, 206, 1) 67%,
+      // rgba(32, 45, 121, 1) 100%
     );
     position: relative;
     overflow: hidden;
+  }
+  #progress-percentage-5 {
+    width: 5%;
+  }
+  #progress-percentage-10 {
+    width: 10%;
+  }
+  #progress-percentage-15 {
+    width: 15%;
+  }
+  #progress-percentage-20 {
+    width: 20%;
+  }
+  #progress-percentage-25 {
+    width: 25%;
+  }
+  #progress-percentage-30 {
+    width: 30%;
+  }
+  #progress-percentage-35 {
+    width: 35%;
+  }
+  #progress-percentage-40 {
+    width: 40%;
+  }
+  #progress-percentage-45 {
+    width: 45%;
+  }
+  #progress-percentage-50 {
+    width: 50%;
+  }
+  #progress-percentage-55 {
+    width: 55%;
+  }
+  #progress-percentage-60 {
+    width: 60%;
+  }
+  #progress-percentage-65 {
+    width: 65%;
+  }
+  #progress-percentage-70 {
+    width: 70%;
+  }
+  #progress-percentage-75 {
+    width: 75%;
+  }
+  #progress-percentage-80 {
+    width: 80%;
+  }
+  #progress-percentage-85 {
+    width: 85%;
+  }
+  #progress-percentage-90 {
+    width: 90%;
+  }
+  #progress-percentage-95 {
+    width: 95%;
+  }
+  #progress-percentage-100 {
+    width: 100%;
   }
 }

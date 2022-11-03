@@ -315,6 +315,16 @@
     <avatar>falgueyrac.jpg</avatar>
   </person>
 
+  <person id="galan">
+    <name>Ana Galan</name>
+    <country>ES</country>
+    <team>core</team>
+    <email>anaghz@fsfe.org</email>
+    <employee>part/f</employee>
+    <function>senior-project-manager/f</function>
+    <avatar>galan.jpg</avatar>
+  </person>
+
   <person id="gerloff">
     <name>Karsten Gerloff</name>
     <country>DE</country>
@@ -669,7 +679,6 @@
     <name>Max Schlüter</name>
     <country>DE</country>
     <team>core</team>
-    <team>de</team>
     <email>maxsc@fsfe.org</email>
     <employee>part/m</employee>
     <function>technical-advisor/m</function>
@@ -731,6 +740,16 @@
     <name>Luke Murphy</name>
     <country>IRL</country>
     <email>lukewm@fsfe.org</email>
+  </person>
+
+  <person id="naeder">
+    <name>Johannes Näder</name>
+    <country>DE</country>
+    <team>core</team>
+    <team>de</team>
+    <email>jn@fsfe.org</email>
+    <employee>part/m</employee>
+    <function>senior-project-manager/m</function>
   </person>
 
   <person id="nascimento">

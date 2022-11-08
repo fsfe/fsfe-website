@@ -9,7 +9,6 @@
         <xsl:attribute name="id">topbanner-border</xsl:attribute>
         <xsl:element name="div">
           <xsl:attribute name="id">topbanner-inner</xsl:attribute>
-          <xsl:apply-templates select="/buildinfo/topbanner/node()" />
           <xsl:element name="div">
             <xsl:attribute name="class">progressbar</xsl:attribute>
             <xsl:element name="span">
@@ -24,6 +23,7 @@
               512,512€ <!-- our donation goal -->
             </xsl:element>
           </xsl:element>
+          <xsl:apply-templates select="/buildinfo/topbanner/node()" />
         </xsl:element>
       </xsl:element>
     </xsl:element>

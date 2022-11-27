@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <html>
-  <version>3</version>
+  <version>4</version>
 
   <head>
     <title>Software Freedom Podcast</title>
-
-
-
   </head>
 
-  <body class="article">
-
+  <body class="news-index">
     <!-- Breadcumb -->
     <p id="category"><a href="news.html">Nieuws</a></p>
     <!-- / Breadcumb -->
 
     <h1>Software Freedom Podcast</h1>
 
-    <p class="introduction">In aanvulling op onze <a href="news.html">reguliere nieuwsartikelen</a> en <a href="newsletter.html">maandelijkse nieuwsbrief</a> publiceert de FSFE regelmatig de Software Freedom Podcast.</p>
+    <div id="introduction">
+
+    <p>In aanvulling op onze <a href="news.html">reguliere nieuwsartikelen</a> en <a href="newsletter.html">maandelijkse nieuwsbrief</a> publiceert de FSFE regelmatig de Software Freedom Podcast.
+    </p>
+    </div>
 
     <p class="inline-buttons">Abonneer uzelf met uw podcastspeler:
       <span class="share-buttons">
@@ -27,19 +27,24 @@
       </span>
     </p>
 
-    <include-news/>
+    <p>
+      U kunt ook regelmatig updates en diepere inzichten ontvangen op onze andere
+      kanalen:
+    </p>
 
+    <div class="module-wrapper podcast">
+      <module id="follow-news" />
+      <module id="social-media" />
+      <module id="banner-subscribe" />
+    </div>
+
+    <include-news/>
   </body>
+
   <description>Reguliere podcast over vooruitgang en het voorvechten van Vrije Software, van de Free Software Foundation Europe</description>
 
-  <sidebar promo="none">
-    <div class="news-sidebar">
-      <module id="follow-news"/>
-      <module id="social-media"/>
-      <hr/>
-      <module id="video-supporter"/>
-    </div>
-  </sidebar>
-
+  <banner1><module id="banner-subscribe" /></banner1>
+  <banner2><module id="banner-become-supporter" /></banner2>
   <translator>André Ockers</translator>
 </html>
+

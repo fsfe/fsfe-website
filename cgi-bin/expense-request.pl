@@ -27,21 +27,25 @@ use POSIX qw(strftime);
 
 my %names = (
   "alex.sander" => "Alexander Sander",
+  "anaghz" => "Ana Galán",
   "bonnie" => "Bonnie Mehring",
   "eal" => "Erik Albers",
+  "evelyn.kwarteng" => "Evelyn Kwarteng",
   "fani" => "Fani Partsafyllidou",
   "fi" => "Francesca Indorato",
   "floriansnow" => "Florian Snow",
   "gabriel.ku" => "Gabriel Ku Wei Bin",
   "jackie" => "Jackie Chen",
+  "jn" => "Johannes Näder",
   "lina.ceballos" => "Lina Ceballos",
   "linda" => "Linda Wagener",
   "linus" => "Linus Sehn",
   "lucas.lasota" => "Lucas Lasota",
-  "max.mehl" => "Max Mehl",
+  "maxsc" => "Max Schlüter",
   "mk" => "Matthias Kirschner",
   "reinhard" => "Reinhard Müller",
-  "repentinus" => "Heiki Lohmus",
+  "sergio" => "Sérgio Montandon",
+  "tobiasd" => "Tobias Diekershoff",
 );
 
 # -----------------------------------------------------------------------------
@@ -81,6 +85,13 @@ my %responsible = (
   "PERSONELL-SEHN" => "council",
   "PERSONELL-PARTSAFYLLIDOU" => "council",
   "PERSONELL-CHEN" => "council",
+  "PERSONELL-SNOW" => "council",
+  "PERSONELL-KWARTENG" => "council",
+  "PERSONELL-MONTANDON" => "council",
+  "PERSONELL-GALAN" => "council",
+  "PERSONELL-SCHLUETER" => "council",
+  "PERSONELL-NAEDER" => "council",
+  "PERSONELL-DIEKERSHOFF" => "council",
   "OFFICE-BERLIN" => "council",
 );
 
@@ -118,6 +129,12 @@ my %account = (
   "PERSONELL-PARTSAFYLLIDOU" => "81072",
   "PERSONELL-CHEN" => "81073",
   "PERSONELL-SNOW" => "81076",
+  "PERSONELL-KWARTENG" => "81077",
+  "PERSONELL-MONTANDON" => "81078",
+  "PERSONELL-GALAN" => "81079",
+  "PERSONELL-SCHLUETER" => "81080",
+  "PERSONELL-NAEDER" => "81081",
+  "PERSONELL-DIEKERSHOFF" => "81082",
   "OFFICE-BERLIN" => "82001",
 );
 

@@ -265,10 +265,15 @@ nav#menu {
             }
 
             li#menu-donate {
-                a, a:hover {
+                a {
                     .btn-success;
                     background-color: @brand-donation;
                     border-color: @brand-donation-border;
+                }
+                a:hover, a:active, a:focus {
+                    .btn-success;
+                    background-color: darken(@brand-donation, 5%)!important;
+                    border-color: @brand-donation-border!important;
                 }
             }
         }

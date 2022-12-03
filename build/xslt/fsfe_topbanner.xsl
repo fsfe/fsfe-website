@@ -17,7 +17,7 @@
               <xsl:attribute name="id">progress-percentage-10</xsl:attribute>
               <!-- If you want to adjust the gradient go to -->
               <!-- /look/elements/topbanner.less  -->
-              22871€ <!-- how much we collected -->
+              26529€ <!-- how much we collected -->
               <!-- A translation of `of` -->
               <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'progressbar-of'" /></xsl:call-template>
               212000€ <!-- our donation goal -->

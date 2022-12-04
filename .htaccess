@@ -103,6 +103,7 @@ RewriteRule ^freesoftware/enterprise/chargeofitsbrand(.*)$ /news/2009/news-20090
 
 # Old/moved people/staff profiles
 RewriteRule ^about/(bako|polvani|tuke|maffulli|jakobs|oriordan|oberg|coughlan|weiden|nanda)(/.*)?$ /about/team [R=301,L]
+RewriteRule ^about/ojasild(/.*)?$ /about/people/repentinus [R=301,L]
 RewriteRule ^about/(albers|gerloff|greve|kirschner|ku|lasota|mehl|repentinus|roy|sander)(/.*)?$ /about/people/$1$2 [R=301,L]
 RewriteRule ^people/greve(/.*)?$ /about/people/greve [R=301,L]
 RewriteRule ^about/people/?(people.*)?$ /about/team.html [R=301,L]

@@ -88,7 +88,7 @@
             <xsl:element name="link">
               <xsl:attribute name="rel">stylesheet</xsl:attribute>
               <xsl:attribute name="media">all</xsl:attribute>
-              <xsl:attribute name="href"><xsl:value-of select="$urlprefix"/>/look/fsfe.min.css?20221205</xsl:attribute>
+              <xsl:attribute name="href"><xsl:value-of select="$urlprefix"/>/look/fsfe.min.css?20221206</xsl:attribute>
               <xsl:attribute name="type">text/css</xsl:attribute>
             </xsl:element>
           </xsl:otherwise>

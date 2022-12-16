@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<activityset>
+  <version>1</version>
+
+  <activity id="childrensbook" date="2021-12-01" status="active">
+    <title>Libro "Ada &amp; Zangemann"</title>
+    <description>
+Il libro illustrato "Ada &amp; Zangemann - una fiaba che parla di software, 
+skateboards e gelato al lampone" della FSFE, racconta la storia del famoso 
+inventore Zangemann e della ragazza Ada, una curiosa smanettona. Ada iniza 
+a sperimentare con hardware e software e, nel mentre, realizza quando sia 
+fondamentale controllare la tecnologia, per lei e per gli altri.
+    </description>
+    <link href="/activities/childrensbook/" />
+    <image url="/graphics/logos/childrensbook.png" />
+    <order priority="4" highlight="yes" />
+    <tags>
+        <tag key="awareness"/>
+    </tags>
+  </activity>
+</activityset>

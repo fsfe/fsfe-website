@@ -14,10 +14,10 @@
             <xsl:element name="span">
               <xsl:attribute name="class">progress</xsl:attribute>
               <!-- Use the ID selector to set the perecentage (in steps of five) -->
-              <xsl:attribute name="id">progress-percentage-45</xsl:attribute>
+              <xsl:attribute name="id">progress-percentage-50</xsl:attribute>
               <!-- If you want to adjust the gradient go to -->
               <!-- /look/elements/topbanner.less  -->
-              100.656,71€ <!-- how much we collected -->
+              101.851,71€ <!-- how much we collected -->
               <!-- A translation of `of` -->
               <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'progressbar-of'" /></xsl:call-template>
               212.000€ <!-- our donation goal -->

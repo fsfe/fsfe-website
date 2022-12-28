@@ -169,7 +169,7 @@ RewriteRule ^(.*)\.no.rss /$1.nb.rss [R=301,L]
 
 # Other pages
 RewriteRule ^about/(history|reports)/?(.*)$ /about/ [R=301,L]
-RewriteRule ^about/members(/.*)?$ /about/team$1 [R=301,L]
+RewriteRule ^about/members(/.*)?$ /about/people$1 [R=301,L]
 RewriteRule ^about/community(/.*)?$ /contact/community.html [R=301,L]
 RewriteRule ^about/self-conception(/.*)?$ /about/principles$1 [R=301,L]
 RewriteRule ^contact/press(.*) /press/press$1 [R=301,L]

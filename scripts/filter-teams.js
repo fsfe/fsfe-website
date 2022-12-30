@@ -11,7 +11,7 @@
   It can only be used in conjunction with the "filter" class applied to the
   whole people div.
 
-  It is being used on /about/team currently
+  It is being used on /about/people/index currently
 */
 
 function selectTeam(team) {

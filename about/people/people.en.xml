@@ -58,9 +58,9 @@
     Technical information:
         The teampage derives its information from many files and XSL scripts.
         - /about/people/people.en.xml (this file): All FSFE-teammembers, even those not belonging to team@ (i.e. country teams)
-        - /about/team.**.xhtml: The frame of the team page: Information texts, Headlines etc
-        - /about/team.xsl: In this file, tags like <council-members /> are defined.
-        - /about/team.sources: Where to look for people-files, translations of functions/activities/countries and so on
+        - /about/people/index.**.xhtml: The frame of the team page: Information texts, Headlines etc
+        - /about/people/index.xsl: In this file, tags like <council-members /> are defined.
+        - /about/people/index.sources: Where to look for people-files, translations of functions/activities/countries and so on
         - /about/people/avatars/: Place for all avatar pictures
         - /build/xslt/people.xsl: The building of the team lists itself: Links, Background colors, inclusion of avatars etc
   -->

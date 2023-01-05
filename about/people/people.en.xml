@@ -97,14 +97,13 @@
   <person id="albers">
     <name>Erik Albers</name>
     <country>DE</country>
-    <function>program-manager/m</function>
     <team>ga</team>
     <team>core</team>
     <team>de</team>
+    <function volunteers="sustainability">coordinator/m</function>
     <email>eal@fsfe.org</email>
     <link>/about/people/albers/albers.html</link>
     <avatar>albers.jpg</avatar>
-    <employee>full/m</employee>
     <fingerprint>A407EF309876ACD3B9AC26E21868FC2E8639DC81</fingerprint>
     <keyhref>/about/people/albers/albers-public.asc</keyhref>
   </person>
@@ -284,6 +283,18 @@
    <team>at</team>
    <link>https://wiki.fsfe.org/Fellows/albert</link>
    <avatar>dengg.jpg</avatar>
+  </person>
+
+  <person id="diekershoff">
+    <name>Tobias Diekershoff</name>
+    <country>DE</country>
+    <email>tobiasd@fsfe.org</email>
+    <team>core</team>
+    <employee>full/m</employee>
+    <keyhref>https://keys.openpgp.org/vks/v1/by-fingerprint/23EEF484FDF8291CBA09A40625FE376FF17694A1</keyhref>
+    <fingerprint>23EEF484FDF8291CBA09A40625FE376FF17694A1</fingerprint>
+    <function>sysadmin/m</function>
+    <function volunteers="web">coordinator/m</function>
   </person>
 
   <person id="dietrich">

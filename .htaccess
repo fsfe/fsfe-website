@@ -31,7 +31,10 @@ RewriteRule ^promo(/.*)?  /contribute/spreadtheword$1 [R=301,L]
 RewriteRule   ^(cyf|convince)/?$ https://wiki.fsfe.org/ConvinceYourFriends [R=301,L]
 
 # Summit 2016
-RewriteRule ^summit16(/.*)?$  /community/events/2016/summit/frontpage$1 [R=301,L]
+RewriteRule ^summit16(/.*)?$  /events/2016/summit/event-20160616-01$1 [R=301,L]
+RewriteRule ^community/events/2016/summit/frontpage(/.*)?$  /events/2016/summit/event-20160616-01$1 [R=301,L]
+RewriteRule ^community/events/2016/summit/attendance(/.*)?$  /events/2016/summit/event-20161106-01$1 [R=301,L]
+RewriteRule ^community/events/2016/summit/backsight(/.*)?$  /events/2016/summit/event-20161106-02$1 [R=301,L]
 
 # 15 years of FSFE
 RewriteRule ^15(/.*)?$    /activities/15years$1 [R=301,L]

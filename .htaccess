@@ -192,6 +192,7 @@ RewriteRule ^contribute/booth(.*) https://wiki.fsfe.org/KnowHow/Groups/OrganizeA
 RewriteRule ^work(\...)?(\.html)?$ /about/ourwork$1.html [R=301,L]
 RewriteRule ^community/tools(/.*)?$ /events/tools$1 [R=301,L]
 RewriteRule ^community/projects-call(/.*)?$ /contact/projects-call$1 [R=301,L]
+RewriteRule ^community/groups(/.*)?$ /contact/groups$1 [R=301,L]
 
 # =============================================================================
 # FELLOWSHIP AND DONATIONS

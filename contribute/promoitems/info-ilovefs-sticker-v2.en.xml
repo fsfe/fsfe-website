@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<infoset>
+  <version>1</version>
+
+  <info id="ilovefs-sticker-v2">
+    <!-- Leave a tag like <printready> blank or erase it if you don't
+    want to appear it -->
+    <!-- Translations for "Type", "Size" etc. can be found in
+    /tools/texts-**.xml -->
+    <name>Thank You - Sticker</name>
+    <description>
+      A sticker with the slogan "Thank You for your contribution to software freedom!"
+    </description>
+    <type>Sticker</type>
+    <size>85 x 55 mm</size>
+    <context><a href="/activities/ilovefs">I love Free Software campaign</a></context>
+    <languages>
+      <a href="https://download.fsfe.org/advocacy/ilovefs/graphics/ILoveFS_sticker_v2/FSFE_ILFS_sticker_2022_55_x_85_mm.pdf">English</a>
+    </languages>
+    <printed>
+      English
+    </printed>
+    <license><a href="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA 4.0</a></license>
+    <author>Markus Meier</author>
+    <source><a href="https://download.fsfe.org/advocacy/ilovefs/graphics/ILoveFS_sticker_v2/">thankyou-sticker* in download.fsfe.org</a></source>
+    <printready></printready>
+  </info>
+</infoset>

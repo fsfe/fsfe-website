@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<infoset>
+  <version>1</version>
+
+  <info id="ilovefs-postcard-v2">
+    <!-- Leave a tag like <printready> blank or erase it if you don't 
+    want to appear it -->
+    <!-- Translations for "Type", "Size" etc. can be found in 
+    /tools/texts-**.xml -->
+    <name>Thanks You - Postcard</name>
+    <description>
+        A postcard to be used by you with the slogan "Thank You for your contribution to software freedom!"
+    </description>
+    <type>Postcard</type>
+    <size>154 x 111 mm</size>
+    <context><a href="/activities/ilovefs">I love Free Software campaign</a></context>
+    <languages>
+      <a href="https://download.fsfe.org/advocacy/ilovefs/graphics/ILoveFS_postcard_v2/FSFE_ILFS_postcard_2022_DIN_A6_quer.pdf">English</a>
+    </languages>
+    <printed>
+      English.
+    </printed>
+    <license><a href="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA 4.0</a></license>
+    <author>Markus Meier</author>
+    <source><a href="https://download.fsfe.org/advocacy/ilovefs/graphics/ILoveFS_postcard_v2/">thankyou-postcard* in download.fsfe.org</a></source> 
+    <printready></printready>
+  </info>
+
+</infoset>

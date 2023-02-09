@@ -177,7 +177,7 @@ RewriteRule ^(.*)\.no.rss /$1.nb.rss [R=301,L]
 RewriteRule ^about/(history|reports)/?(.*)$ /about/ [R=301,L]
 RewriteRule ^about/members(/.*)?$ /about/people$1 [R=301,L]
 RewriteRule ^about/team(.*)?$ /about/people/index$1 [R=301,L]
-RewriteRule ^about/community(/.*)?$ /contact/community.html [R=301,L]
+RewriteRule ^about/community(/.*)?$ /about/contact.html [R=301,L]
 RewriteRule ^about/self-conception(/.*)?$ /about/principles$1 [R=301,L]
 RewriteRule ^contact/press(.*) /press/press$1 [R=301,L]
 RewriteRule ^contribute/internship(.*) /about/jobs/internship$1 [R=301,L]
@@ -213,7 +213,7 @@ RewriteRule ^order/payonline.(.*)/(.*) /cgi-bin/order-payonline.pl?language=$1&r
 
 # Old /fellowship pages
 RewriteRule ^fellowship/card(/.*)?$ https://wiki.fsfe.org/TechDocs/CardHowtos [R=301,L]
-RewriteRule ^fellowship/communicate(/.*)?$ /contact/community.html [R=301,L]
+RewriteRule ^fellowship/communicate(/.*)?$ /about/contact.html [R=301,L]
 RewriteRule ^fellowship/contact(/.*)?$ /about/contact.html [R=301,L]
 RewriteRule ^fellowship/events(.*) /events$1 [R=301,L]
 RewriteRule ^fellowship/faq(/.*)?$ https://wiki.fsfe.org/KnowHow/FSFELife/FAQ [R=301,L]

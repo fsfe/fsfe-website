@@ -66,7 +66,7 @@
             <xsl:element name="a">
               <xsl:attribute name="href">
                 <xsl:value-of select="$urlprefix"/>
-                <xsl:text>/contact/contact.html</xsl:text>
+                <xsl:text>/about/contact.html</xsl:text>
               </xsl:attribute>
               <xsl:call-template name="fsfe-gettext">
                 <xsl:with-param name="id" select="'contact-us'"/>

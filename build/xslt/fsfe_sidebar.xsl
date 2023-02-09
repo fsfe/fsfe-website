@@ -26,7 +26,7 @@
             <xsl:call-template name="fsfe-gettext">
               <xsl:with-param name="id" select="'news/planet'" />
             </xsl:call-template></a></li>
-          <li><a href="/contact/community.html">
+          <li><a href="/about/contact.html#community">
             <xsl:call-template name="fsfe-gettext">
               <xsl:with-param name="id" select="'community/discuss'" />
             </xsl:call-template></a></li>

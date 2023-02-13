@@ -5,13 +5,6 @@
 <itemset>
   <version>1</version>
 
-  <!-- item type="other" id="gymsac-nocloud-black" oldprice="7.00" price="4.00" date="2019-08-19">
-    <available size="#"/>
-    <image
-      small="2019/gymsac-nocloud-black-small.jpg"
-      large="2019/gymsac-nocloud-black-large.jpg"/>
-  </item -->
-
   <item type="other" id="pin-fsfe-white" price="5.00" date="2019-11-22">
     <available size="#"/>
     <image
@@ -31,8 +24,6 @@
     <available size="M"    a="50" b="70"/>
     <available size="L"    a="51" b="71"/>
     <available size="XL"   a="55" b="75"/>
-    <!-- available size="XXL"  a="57" b="77"/ -->
-    <!-- available size="XXXL" a="63" b="79"/ -->
     <image
       small="2019/tshirt-multilingual-black-front-small.jpg"
       large="2019/tshirt-multilingual-black-front-large.jpg"/>
@@ -41,18 +32,7 @@
       large="2019/tshirt-multilingual-black-back-large.jpg"/>
   </item>
 
-  <item type="tshirt" id="tshirt-multilingual-green" oldprice="20.00" price="15.00" date="2019-12-07">
-    <!-- available size="S"    a="46" b="66"/ -->
-    <image
-      small="2019/tshirt-multilingual-green-front-small.jpg"
-      large="2019/tshirt-multilingual-green-front-large.jpg"/>
-    <image
-      small="2019/tshirt-multilingual-green-back-small.jpg"
-      large="2019/tshirt-multilingual-green-back-large.jpg"/>
-  </item>
-
   <item type="girlie" id="girlie-multilingual-black" price="20.00" date="2019-12-07">
-    <!-- available size="S"    a="44"   b="62"/ -->
     <available size="M"    a="47.5" b="62"/>
     <available size="L"    a="48"   b="65"/>
     <available size="XL"   a="53.5" b="66"/>
@@ -66,7 +46,6 @@
   </item>
 
   <item type="girlie" id="girlie-multilingual-blue" oldprice="20.00" price="15.00" date="2019-12-07">
-    <!-- available size="M"    a="47.5" b="62"/ -->
     <available size="L"    a="48"   b="65"/>
     <available size="XL"   a="53.5" b="66"/>
     <available size="XXL"  a="55"   b="68"/>

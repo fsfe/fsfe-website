@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<infoset>
+  <version>1</version>
+
+  <info id="fsfe-free-software-facts-2sided">
+    <!-- Leave a tag like <printready> blank or erase it if you don't 
+    want to appear it -->
+    <!-- Translations for "Type", "Size" etc. can be found in 
+    /tools/texts-**.xml -->
+    <name>Free Software Facts - Poster</name>
+    <description>
+      On this poster you will find nine facts about Free Software.
+      The poster is two-sided. On the other side is our <a href="#fsfe-modernise-your-it-2sided">Modernize your IT poster</a>.
+    </description>
+    <type>Poster (folded for delivery)</type>
+    <size>600 × 216 mm</size>
+    <context><a href="/freesoftware/freesoftware">What is Free Software?</a></context>
+    <languages>
+      <a href="https://download.fsfe.org/advocacy/promomaterial/FSFE/facts-about-freesoftware/FSFE_Infographic_ALL_poster.pdf">English</a>
+    </languages>
+    <printed>
+      English
+    </printed>
+    <license><a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a></license>
+    <author>Ura Design and Markus Meier</author>
+    <source><a href="https://download.fsfe.org/advocacy/promomaterial/FSFE/facts-about-freesoftware/REINZEICHNUNG/">facts about Free Software-poster* in download.fsfe.org</a></source> 
+    <printready></printready>
+  </info>
+
+</infoset>

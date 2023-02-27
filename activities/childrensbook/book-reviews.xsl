@@ -96,14 +96,11 @@
   <!-- ==================================================================== -->
 
   <xsl:template match="/buildinfo/document/set/quote">
-    <xsl:element name="li">
-      <xsl:attribute name="id">
-        <xsl:value-of select="@id"/>
-      </xsl:attribute>
-
-      <xsl:element name="div">
 
         <xsl:element name="blockquote">
+          <xsl:attribute name="id">
+            <xsl:value-of select="@id"/>
+          </xsl:attribute>
           <xsl:element name="p">
             <xsl:apply-templates select="text/node()"/>
           </xsl:element>
@@ -112,9 +109,7 @@
               <xsl:apply-templates select="name/node()"/>
             </xsl:element>
           </xsl:element>
+        </xsl:element>
 
-        </xsl:element><!-- div -->
-      </xsl:element><!-- div -->
-    </xsl:element><!-- li -->
   </xsl:template>
 </xsl:stylesheet>

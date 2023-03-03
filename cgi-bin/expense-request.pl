@@ -87,12 +87,12 @@ my %responsible = (
   "PERSONELL-PARTSAFYLLIDOU" => "council",
   "PERSONELL-CHEN" => "council",
   "PERSONELL-SNOW" => "council",
-  "PERSONELL-KWARTENG" => "council",
   "PERSONELL-MONTANDON" => "council",
   "PERSONELL-GALAN" => "council",
   "PERSONELL-SCHLUETER" => "council",
   "PERSONELL-NAEDER" => "council",
   "PERSONELL-DIEKERSHOFF" => "council",
+  "PERSONELL-PRESUTTI" => "council",
   "OFFICE-BERLIN" => "council",
 );
 
@@ -130,7 +130,6 @@ my %account = (
   "PERSONELL-SEHN" => "81073",
   "PERSONELL-CHEN" => "81074",
   "PERSONELL-SNOW" => "81076",
-  "PERSONELL-KWARTENG" => "81077",
   "PERSONELL-MONTANDON" => "81078",
   "PERSONELL-GALAN" => "81079",
   "PERSONELL-SCHLUETER" => "81080",

@@ -29,6 +29,7 @@ my %names = (
   "alex.sander" => "Alexander Sander",
   "anaghz" => "Ana Galán",
   "bonnie" => "Bonnie Mehring",
+  "dario" => "Dario Presutti",
   "eal" => "Erik Albers",
   "evelyn.kwarteng" => "Evelyn Kwarteng",
   "fani" => "Fani Partsafyllidou",
@@ -135,6 +136,7 @@ my %account = (
   "PERSONELL-SCHLUETER" => "81080",
   "PERSONELL-NAEDER" => "81081",
   "PERSONELL-DIEKERSHOFF" => "81082",
+  "PERSONELL-PRESUTTI" => "81083",
   "OFFICE-BERLIN" => "82001",
 );
 

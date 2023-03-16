@@ -36,6 +36,7 @@ my %names = (
   "fi" => "Francesca Indorato",
   "floriansnow" => "Florian Snow",
   "gabriel.ku" => "Gabriel Ku Wei Bin",
+  "irakli" => "Irakli Maisuradze",
   "jackie" => "Jackie Chen",
   "jn" => "Johannes Näder",
   "lina.ceballos" => "Lina Ceballos",
@@ -93,6 +94,7 @@ my %responsible = (
   "PERSONELL-NAEDER" => "council",
   "PERSONELL-DIEKERSHOFF" => "council",
   "PERSONELL-PRESUTTI" => "council",
+  "PERSONELL-MAISURADZE" => "council",
   "OFFICE-BERLIN" => "council",
 );
 
@@ -136,6 +138,7 @@ my %account = (
   "PERSONELL-NAEDER" => "81081",
   "PERSONELL-DIEKERSHOFF" => "81082",
   "PERSONELL-PRESUTTI" => "81083",
+  "PERSONELL-MAISURADZE" => "81084",
   "OFFICE-BERLIN" => "82001",
 );
 

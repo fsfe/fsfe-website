@@ -48,14 +48,11 @@ RewriteRule ^fs-policies/?$ https://wiki.fsfe.org/Activities/EU_Policies_overvie
 # Share buttons
 RewriteRule ^share/?$ /cgi-bin/share.php [NC,L]
 
-# Link to PMPC event, can be changed afterwards
-RewriteRule ^publiccode/?$ https://registration.fsfe.org/Digitale-Verwaltung-2020 [R=301,L]
-
-# Link to the thessaloniki23 event
-RewriteRule ^thessaloniki23/?$ https://share.fsfe.org/apps/forms/s/p6zSYnZyYKbwZBFe67YS2DP9 [R=301,L]
-
 # Subscription page for mail updates
 RewriteRule ^subscribe/?$ /contact/email-updates.html [R=301,L]
+
+# Team Women
+RewriteRule ^women(/.*)?$ https://wiki.fsfe.org/Teams/Women [R=301,L]
 
 # Others
 RewriteRule ^standards(.*) /freesoftware/standards$1 [R=301,L]

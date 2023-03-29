@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<activityset>
+  <version>1</version>
+
+  <activity id="childrensbook" date="2021-12-01" status="active">
+    <title>Boek "Ada &amp; Zangemann"</title>
+    <description>
+    Het geïllustreerde boek "Ada &amp; Zangemann - een verhaal over software, skateboards en frambozenijs" van de FSFE vertelt het verhaal van de beroemde uitvinder Zangemann en het meisje Ada, een nieuwsgierige knutselaar. Ada begint te experimenteren met hardware en software en tijdens dat proces beseft ze hoe cruciaal het voor haar en anderen is om technologie te controleren.
+    </description>
+    <link href="/activities/childrensbook/" />
+    <image url="/graphics/logos/childrensbook.png" />
+    <order priority="4" highlight="yes" />
+    <tags>
+            <tag key="awareness">Bewustzijn</tag>
+    </tags>
+  </activity>
+</activityset>
+

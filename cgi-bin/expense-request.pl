@@ -43,10 +43,9 @@ my %names = (
   "linda" => "Linda Wagener",
   "linus" => "Linus Sehn",
   "lucas.lasota" => "Lucas Lasota",
-  "maxsc" => "Max Schlüter",
   "mk" => "Matthias Kirschner",
+  "jithendra" => "Jithendra Palepu",
   "reinhard" => "Reinhard Müller",
-  "sergio" => "Sérgio Montandon",
   "tobiasd" => "Tobias Diekershoff",
 );
 
@@ -88,13 +87,12 @@ my %responsible = (
   "PERSONELL-PARTSAFYLLIDOU" => "council",
   "PERSONELL-CHEN" => "council",
   "PERSONELL-SNOW" => "council",
-  "PERSONELL-MONTANDON" => "council",
   "PERSONELL-GALAN" => "council",
-  "PERSONELL-SCHLUETER" => "council",
   "PERSONELL-NAEDER" => "council",
   "PERSONELL-DIEKERSHOFF" => "council",
   "PERSONELL-PRESUTTI" => "council",
   "PERSONELL-MAISURADZE" => "council",
+  "PERSONELL-PALEPU" => "council",
   "OFFICE-BERLIN" => "council",
 );
 
@@ -132,13 +130,12 @@ my %account = (
   "PERSONELL-SEHN" => "81073",
   "PERSONELL-CHEN" => "81074",
   "PERSONELL-SNOW" => "81076",
-  "PERSONELL-MONTANDON" => "81078",
   "PERSONELL-GALAN" => "81079",
-  "PERSONELL-SCHLUETER" => "81080",
   "PERSONELL-NAEDER" => "81081",
   "PERSONELL-DIEKERSHOFF" => "81082",
   "PERSONELL-PRESUTTI" => "81083",
   "PERSONELL-MAISURADZE" => "81084",
+  "PERSONELL-PALEPU" => "81086",
   "OFFICE-BERLIN" => "82001",
 );
 

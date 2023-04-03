@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<infoset>
+  <version>1</version>
+
+  <info id="fedigov-sticker">
+    <!-- Leave a tag like <printready> blank or erase it if you don't 
+    want to appear it -->
+    <!-- Translations for "Type", "Size" etc. can be found in 
+    /tools/texts-**.xml -->
+    <name>Fedigov - Sticker</name>
+    <description>
+      A sticker with a mastodon in front of a govermental building.
+    </description>
+    <type>Sticker</type>
+    <size>8 x 8 cm</size>
+    <context></context>
+    <languages>
+    </languages>
+    <printed>
+      English
+    </printed>
+    <license><a href="https://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA 3.0</a></license>
+    <author>Ralf Hersel, Lioh Moeller, Markus Meier</author>
+    <source><a href="https://download.fsfe.org/advocacy/stickers/fedigov/">sticker in download.fsfe.org</a></source> 
+    <printready></printready>
+  </info>
+
+</infoset>

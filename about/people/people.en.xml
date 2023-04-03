@@ -476,7 +476,6 @@
     <avatar>jean.jpg</avatar>
   </person>
 
-
   <person id="jensch">
     <name>Thomas Jensch</name>
     <country>DE</country>
@@ -594,17 +593,6 @@
     <keyhref>/about/people/ku/ku-public.asc</keyhref>
   </person>
 
-  <person id="kwarteng">
-    <name>Evelyn Kwarteng</name>
-    <country>TR</country>
-    <function>intern/f</function>
-    <email>evelyn.kwarteng@fsfe.org</email>
-    <team>core</team>
-    <employee>full/f</employee>
-    <avatar>kwarteng.jpg</avatar>
-  </person>
-
-
   <person id="lasota">
     <name>Lucas Lasota</name>
     <country>BR</country>
@@ -710,7 +698,6 @@
     <country>DE</country>
     <team>core</team>
     <email>maxsc@fsfe.org</email>
-    <employee>part/m</employee>
     <function>technical-advisor/m</function>
     <keyhref>https://keys.openpgp.org/vks/v1/by-fingerprint/C42B873AE7CEDB88ED722FB7D5F5A895731F1077</keyhref>
     <fingerprint>C42B873AE7CEDB88ED722FB7D5F5A895731F1077</fingerprint>
@@ -735,6 +722,15 @@
     <name>admin</name>
   </person>
 
+  <person id="maisuradze">
+    <name>Irakli Maisuradze</name>
+    <country>GE</country>
+    <team>core</team>
+    <email>irakli@fsfe.org</email>
+    <employee>part/m</employee>
+    <function>sysadmin/m</function>
+  </person>
+
   <person id="moeller">
     <name>Marcus Maria Möller</name>
     <country>CH</country>
@@ -742,16 +738,6 @@
     <team>zurich</team>
     <email>mmoeller@fsfe.org</email>
     <avatar>moeller.jpg</avatar>
-  </person>
-  
-  <person id="montandon">
-    <name>Sergio Montandon</name>
-    <country>BR</country>
-    <function>intern/m</function>
-    <email>sergio@fsfe.org</email>
-    <team>core</team>
-    <employee>full/m</employee>
-    <avatar>montandon.jpg</avatar>
   </person>
 
   <person id="mueller">
@@ -824,6 +810,14 @@
     <avatar>ohnewein.jpg</avatar>
   </person>
 
+  <person id="palepu">
+    <name>Jithendra Palepu</name>
+    <country>IN</country>
+    <function>intern/m</function>
+    <team>core</team>
+    <email>jithendra@fsfe.org</email>
+  </person>
+
   <person id="piana">
     <name>Carlo Piana</name>
     <country>IT</country>
@@ -833,6 +827,15 @@
     <email></email>
     <link>http://piana.eu/</link>
     <avatar>piana.jpg</avatar>
+  </person>
+
+  <person id="presutti">
+    <name>Dario Presutti</name>
+    <country>IT</country>
+    <function>intern/m</function>
+    <email>dario@fsfe.org</email>
+    <team>core</team>
+    <employee>full/m</employee>
   </person>
 
   <person id="dipohl">

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
- 
+  	  <version>1</version>
+
 <eventset>
   <event start="2023-05-03" end="2023-05-03">
 	  <title>FSFE-Treffen Rhein/Main in  (Deutschland)</title>
@@ -8,8 +9,8 @@
     </body> 
       <link>https://wiki.fsfe.org/LocalGroups/RheinMain</link>
     <tags>
-      <tag>Local group</tag>
-      <tag>Germany</tag>
+ 	    <tag key=localgroup>Local group</tag>
+	    <tag key=de>Germany</tag>
     </tags>
   </event>
 </eventset>

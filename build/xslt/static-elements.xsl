@@ -10,31 +10,9 @@
                 exclude-result-prefixes="dt weekdays months nl str">
   <xsl:import href="../../tools/xsltsl/string.xsl" />
 
-  <nl:langs>
-    <nl:lang value="en">English</nl:lang>
-    <nl:lang value="el">Ελληνικά</nl:lang>
-    <nl:lang value="es">Español</nl:lang>
-    <nl:lang value="de">Deutsch</nl:lang>
-    <nl:lang value="fr">Français</nl:lang>
-    <nl:lang value="it">Italiano</nl:lang>
-    <nl:lang value="nl">Nederlands</nl:lang>
-    <nl:lang value="pt">Português</nl:lang>
-    <nl:lang value="ro">Română</nl:lang>
-    <nl:lang value="ru">Русский</nl:lang>
-    <nl:lang value="sv">Svenska</nl:lang>
-    <nl:lang value="sq">Shqip</nl:lang>
-  </nl:langs>
-
   <xsl:template name="subscribe-nl">
     <xsl:variable name="lang">
       <xsl:value-of select="/buildinfo/document/@language"/>
-    </xsl:variable>
-    <xsl:variable name="nl-lang">
-      <xsl:choose><xsl:when test="boolean(document('')/xsl:stylesheet/nl:langs/nl:lang[@value = $lang])">
-        <xsl:value-of select="$lang" />
-      </xsl:when><xsl:otherwise>
-	      <xsl:text>en</xsl:text>
-      </xsl:otherwise></xsl:choose>
     </xsl:variable>
 
     <xsl:variable name="yourname">
@@ -48,7 +26,7 @@
     </xsl:variable>
 
     <form class="form-inline" id="formnl" name="formnl" method="POST" action="https://my.fsfe.org/subscribe">
-      <input type="hidden" name="language" value="{$nl-lang}"/>
+      <input type="hidden" name="language" value="{$lang}"/>
 
       <input id="yourname" name="name" type="text" required="required" placeholder="{$yourname}"/>
       <input id="email" name="email1" type="email" required="required" placeholder="{$email}"/>

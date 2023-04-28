@@ -59,7 +59,8 @@ if ($list == 'community' or $list == 'newsletter' ) {
   );
   if ($list == 'community') {
     $signupdata['wants_info'] = '1';
-  } else {
+  }
+  if ($list == 'newsletter')
     $signupdata['wants_newsletter_info'] = '1';
   }
   mail_signup('https://my.fsfe.org/subscribe-api', $signupdata);

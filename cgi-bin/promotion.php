@@ -232,6 +232,7 @@ if ($subcd == "y") {
     'address' => $_POST['street'],
     'zip' => $_POST['zip'],
     'city' => $_POST['city'],
+    'lang' => $_POST['language'],
     'country' => $countrycode
   );
   mail_signup($signupdata);
@@ -241,7 +242,11 @@ if ($subnl == "y") {
     'list' => 'newsletter',
     'name' => $_POST['firstname'] . " " . $_POST['lastname'],
     'mail' => $_POST['mail'],
-    'lang' => $_POST['language']
+    'address' => $_POST['street'],
+    'zip' => $_POST['zip'],
+    'city' => $_POST['city'],
+    'lang' => $_POST['language'],
+    'country' => $countrycode
   );
   mail_signup($signupdata);
 }

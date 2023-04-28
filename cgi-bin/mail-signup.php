@@ -35,21 +35,6 @@ function mail_signup($url, $data) {
   file_get_contents($url, FALSE, $context);
 }
 
-# Function to scrape the subscribe token from newsletter signup forms
-function get_token($url) {
-  $file = file_get_contents($url);
-  $html = new DOMDocument();
-  libxml_use_internal_errors(true);
-  $html->loadHTML($file);
-  libxml_clear_errors();
-  $xpath = new DOMXPath($html);
-
-  $results = $xpath->query("//form/input[@name='sub_form_token']/@value");
-  foreach ($results as $result) {
-    return $result->nodeValue;
-  }
-}
-
 # Check required variables
 if (empty($list)  ||
     empty($mail)  ) {
@@ -57,15 +42,7 @@ if (empty($list)  ||
   exit(1);
 }
 
-# Check whether language is available as newsletter
-$nllangs = array("be", "de", "el", "en", "es", "fi", "fr", "it", "nl", "pt", "ro", "ru", "sq", "sv");
-if (in_array($lang, $nllangs)) {
-  $nllang = $lang;
-} else {
-  $nllang = "en";
-}
-
-if ($list == 'community' ) {  // COMMUNITY
+if ($list == 'community' or $list == 'newsletter' ) {
   # "name" is also required for Community Database
   if (empty($name)) {
     echo "Missing parameters. Required: name";
@@ -78,21 +55,14 @@ if ($list == 'community' ) {  // COMMUNITY
     'zip' => $zip,
     'city' => $city,
     'country' => $country,
-    'wants_info' => '1'
+    'language' => $lang,
   );
+  if ($list == 'community') {
+    $signupdata['wants_info'] = '1';
+  } else {
+    $signupdata['wants_newsletter_info'] = '1';
+  }
   mail_signup('https://my.fsfe.org/subscribe-api', $signupdata);
-} elseif ($list == 'newsletter') {  // NEWSLETTER
-  $token = get_token('https://lists.fsfe.org/mailman/listinfo/newsletter-' . $nllang);
-  // Wait a few seconds because mailman requests it in SUBSCRIBE_FORM_MIN_TIME
-  sleep(10);
-  $signupdata = array(
-    'sub_form_token' => $token,
-    'fullname' => $name,
-    'email' => $mail,
-    'digest' => 0,
-    'email-button' => 'Subscribe'
-  );
-  mail_signup('https://lists.fsfe.org/mailman/subscribe/newsletter-' . $nllang, $signupdata);
 } else {
   echo "List to sign up email to is unknown. Exiting.";
   exit(1);

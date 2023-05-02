@@ -235,10 +235,10 @@ if ($subcd == "y" or $subnl == "y") {
     'country' => $countrycode
   );
   if ($subcd == "y") {
-    $signupdata['list'] = 'community';
+    $signupdata['wants_info'] = '1';
   }
   if ($subnl == "y") {
-    $signupdata['list'] = 'newsletter';
+    $signupdata['wants_newsletter_info'] = '1';
   }
   mail_signup($signupdata);
 }

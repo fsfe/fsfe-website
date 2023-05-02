@@ -17,6 +17,8 @@ $address = $data['address'] ?? false;
 $zip = $data['zip'] ?? false;
 $city = $data['city'] ?? false;
 $country = $data['country'] ?? false;
+$wants_info = $data['wants_info'] ?? false;
+$wants_newsletter_info = ['wants_newsletter_info'] ?? false;
 
 # Generic function to make POST request
 function mail_signup($url, $data) {
@@ -42,7 +44,7 @@ if (empty($list)  ||
   exit(1);
 }
 
-if ($list == 'community' or $list == 'newsletter' ) {
+if ($wans_info or $wants_newsletter_info) {
   # "name" is also required for Community Database
   if (empty($name)) {
     echo "Missing parameters. Required: name";
@@ -56,13 +58,9 @@ if ($list == 'community' or $list == 'newsletter' ) {
     'city' => $city,
     'country' => $country,
     'language' => $lang,
+    'wants_info' => $wants_info,
+    'wants_newsletter_info' => $wants_newsletter_info,
   );
-  if ($list == 'community') {
-    $signupdata['wants_info'] = '1';
-  }
-  if ($list == 'newsletter')
-    $signupdata['wants_newsletter_info'] = '1';
-  }
   mail_signup('https://my.fsfe.org/subscribe-api', $signupdata);
 } else {
   echo "List to sign up email to is unknown. Exiting.";

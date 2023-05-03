@@ -227,11 +227,11 @@ $subnl = isset($_POST['subnl']) ? $_POST['subnl'] : false;
 if ($subcd == "y" or $subnl == "y") {
   $signupdata = array(
     'name' => $_POST['firstname'] . " " . $_POST['lastname'],
-    'mail' => $_POST['mail'],
+    'email1' => $_POST['mail'],
     'address' => $_POST['street'],
     'zip' => $_POST['zip'],
     'city' => $_POST['city'],
-    'lang' => $_POST['language'],
+    'langugage' => $_POST['language'],
     'country' => $countrycode
   );
   if ($subcd == "y") {

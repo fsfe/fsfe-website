@@ -688,7 +688,7 @@ div#content {
     blockquote, .blockQuote, .blockHighlight,pre {
         .standout-text;
     }
-    .captioned, {
+    .captioned {
         .standout;
     }
     .captioned.center-block, .captioned.center {
@@ -831,8 +831,9 @@ aside#followup {
         display: inline-block;
     }
 
+    input#yourname,
     input#email {
-        margin:0 1em;
+        margin: 0 1em;
         max-width: 18em;
     }
 
@@ -854,6 +855,11 @@ aside#followup.subscribe-nl {
     form {
         .make-md-column(6);
         .make-lg-column(7);
+    }
+    input#yourname,
+    input#email {
+        margin: 0 1em;
+        max-width: 18em;
     }
 }
 
@@ -938,6 +944,7 @@ ul.nav + p {
 
 /* trivia */
 
+form input#yourname,
 form input#email {
     .form-control;
     max-width: 25em;

@@ -224,25 +224,22 @@ shell_exec($cmd);
 # Make subscriptions to newsletter/community mails
 $subcd = isset($_POST['subcd']) ? $_POST['subcd'] : false;
 $subnl = isset($_POST['subnl']) ? $_POST['subnl'] : false;
-if ($subcd == "y") {
+if ($subcd == "y" or $subnl == "y") {
   $signupdata = array(
-    'list' => 'community',
     'name' => $_POST['firstname'] . " " . $_POST['lastname'],
-    'mail' => $_POST['mail'],
+    'email1' => $_POST['mail'],
     'address' => $_POST['street'],
     'zip' => $_POST['zip'],
     'city' => $_POST['city'],
+    'langugage' => $_POST['language'],
     'country' => $countrycode
   );
-  mail_signup($signupdata);
-}
-if ($subnl == "y") {
-  $signupdata = array(
-    'list' => 'newsletter',
-    'name' => $_POST['firstname'] . " " . $_POST['lastname'],
-    'mail' => $_POST['mail'],
-    'lang' => $_POST['language']
-  );
+  if ($subcd == "y") {
+    $signupdata['wants_info'] = '1';
+  }
+  if ($subnl == "y") {
+    $signupdata['wants_newsletter_info'] = '1';
+  }
   mail_signup($signupdata);
 }
 

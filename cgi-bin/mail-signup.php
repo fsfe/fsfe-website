@@ -1,6 +1,6 @@
 <?php
 // This script signs up an email address with other (partly optional) data
-// to the community database (occasional emails) and the newsletter
+// to the community database (occasional emails and the newsletter)
 
 // parse data from POST or cli arg
 if (php_sapi_name() === 'cli') {
@@ -8,16 +8,6 @@ if (php_sapi_name() === 'cli') {
 } else {
   $data = $_POST;
 }
-
-$mail = $data['mail'] ?? false;
-$name = $data['name'] ?? false;
-$lang = $data['lang'] ?? false;
-$address = $data['address'] ?? false;
-$zip = $data['zip'] ?? false;
-$city = $data['city'] ?? false;
-$country = $data['country'] ?? false;
-$wants_info = $data['wants_info'] ?? false;
-$wants_newsletter_info = ['wants_newsletter_info'] ?? false;
 
 # Generic function to make POST request
 function mail_signup($url, $data) {
@@ -36,29 +26,17 @@ function mail_signup($url, $data) {
   file_get_contents($url, FALSE, $context);
 }
 
-# Check required variables
-if (empty($mail)) {
-  echo "Missing parameters. Required: list, mail";
+# Check expected/required variables are set
+if (empty($data['email1']) ||
+    empty($data['name']) ||
+    empty($data['address']) ||
+    empty($data['zip']) ||
+    empty($data['city'])) {
+  echo "Missing parameters. Some required parameters are missing (name, address, mail)";
   exit(1);
 }
 
-if ($wants_info or $wants_newsletter_info) {
-  # "name" is also required for Community Database
-  if (empty($name)) {
-    echo "Missing parameters. Required: name";
-    exit(1);
-  }
-  $signupdata = array(
-    'name' => $name,
-    'email1' => $mail,
-    'address' => $address,
-    'zip' => $zip,
-    'city' => $city,
-    'country' => $country,
-    'language' => $lang,
-    'wants_info' => $wants_info,
-    'wants_newsletter_info' => $wants_newsletter_info,
-  );
+if ($data['wants_info'] or $data['wants_newsletter_info']) {
   mail_signup('https://my.fsfe.org/subscribe-api', $signupdata);
 } else {
   echo "List to sign up email to is unknown. Exiting.";

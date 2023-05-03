@@ -9,7 +9,6 @@ if (php_sapi_name() === 'cli') {
   $data = $_POST;
 }
 
-$list = $data['list'] ?? false;
 $mail = $data['mail'] ?? false;
 $name = $data['name'] ?? false;
 $lang = $data['lang'] ?? false;
@@ -38,13 +37,12 @@ function mail_signup($url, $data) {
 }
 
 # Check required variables
-if (empty($list)  ||
-    empty($mail)  ) {
+if (empty($mail)) {
   echo "Missing parameters. Required: list, mail";
   exit(1);
 }
 
-if ($wans_info or $wants_newsletter_info) {
+if ($wants_info or $wants_newsletter_info) {
   # "name" is also required for Community Database
   if (empty($name)) {
     echo "Missing parameters. Required: name";

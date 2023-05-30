@@ -126,6 +126,7 @@ RewriteRule ^en/content/download/15872/77909/file/gnupg-ccid https://wiki.fsfe.o
 
 # Tags
 RewriteRule ^tags/tagged(\...)(\.html)?$ /tags/tags$1.html [R=301,L]
+RewriteRule ^tags/tagged-childrensbook(.*)$ /tags/tagged-ada-zangemann$1 [R=301,L]
 
 # Documents
 RewriteRule ^documents/freesoftware(.*) /freesoftware/freesoftware.html [R=301,L]

@@ -223,12 +223,11 @@ my $json_data = {
             "customer" => {
                 "email" => "$email",
             },
-            "attachments"
-            : [
+            "attachments" => [
                 {
-                    "fileName" : "invoice.odt",
-                    "mimeType" : "application/vnd.oasis.opendocument.text",
-                    "data"     : "$base64_encoded_invoice"
+                    "fileName" => "invoice.odt",
+                    "mimeType" => "application/vnd.oasis.opendocument.text",
+                    "data"     => "$base64_encoded_invoice"
                 }
             ]
         }

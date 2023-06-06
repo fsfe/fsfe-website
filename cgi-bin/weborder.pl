@@ -46,7 +46,7 @@ my $address = decode( "utf-8", $query->param("address") );
 my $zip     = decode( "utf-8", $query->param("zip") );
 my $city    = decode( "utf-8", $query->param("city") );
 my $country = decode( "utf-8", $query->param("country") );
-my ( $country_code, $country_name ) = split /\|/, $country;
+my ( $country_code, $country_name ) = split( /\|/, $country );
 my $email    = decode( "utf-8", $query->param("email") );
 my $phone    = decode( "utf-8", $query->param("phone") );
 my $language = $query->param("language");
@@ -195,7 +195,7 @@ system @odtfill;
 
 # Transform invoice.odt to base64 encoded string
 my $invoice_path = "/tmp/invoice.odt";
-open( my $fh, '<', $invoice ) or die "Cannot open file: $!";
+open( my $fh, '<', $invoice_path ) or die "Cannot open file: $!";
 binmode($fh);
 my $file_contents = do { local $/; <$fh> };
 close($fh);

@@ -207,7 +207,7 @@ my $base64_encoded_invoice = encode_base64($file_contents);
 # -----------------------------------------------------------------------------
 
 my $api_key = $ENV{'FREESCOUT_API_KEY'};
-my $api_url = 'https://helpdesk.fsfe.org/conversations';
+my $api_url = 'https://helpdesk.fsfe.org/api/conversations';
 
 my $json_data = {
     "type"      => "email",

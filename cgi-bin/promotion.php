@@ -293,6 +293,7 @@ curl_setopt_array($curl, [
   CURLOPT_USERAGENT => 'FSFE promotion.php'
 ]);
 $response = curl_exec($curl);
+curl_close($curl);
 /**
  * Only process donations starting from 10 euro.
  */

@@ -274,7 +274,13 @@ $jsondata = [
       ]
   ],
   "imported"     => false,
-  "status"       => "active"
+  "status"       => "active",
+  "customFields" => [
+      [
+          "id"    => 4,              # Order ID Custom Field
+          "value" => $_POST['donationID'] ?? "NO ID"    # Donation ID
+      ]
+  ]
 ];
 $jsonDataEncoded = json_encode($jsondata);
 

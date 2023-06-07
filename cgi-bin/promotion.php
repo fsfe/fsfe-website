@@ -263,14 +263,14 @@ $jsondata = [
               "email" => $_POST['mail'],
               "firstName" => $_POST['firstname'],
               "lastName" => $_POST['lastname'],
-          ]/*,
+          ],
           "attachments" => [
               [
                   "fileName" => "letter.odt",
                   "mimeType" => "application/vnd.oasis.opendocument.text",
                   "data"     => base64_encode(file_get_contents($outfile))
               ]
-          ]*/
+          ]
       ]
   ],
   "imported"     => false,
@@ -292,7 +292,7 @@ curl_setopt_array($curl, [
   ],
   CURLOPT_USERAGENT => 'FSFE promotion.php'
 ]);
-
+$response = curl_exec($curl);
 /**
  * Only process donations starting from 10 euro.
  */

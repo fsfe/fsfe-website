@@ -243,7 +243,61 @@ if ($subcd == "y" or $subnl == "y") {
   mail_signup($signupdata);
 }
 
-$test = send_mail ("contact@fsfe.org", $_POST['firstname'] . " " . $_POST['lastname'] . " <" . $_POST['mail'] . ">", $subject, $msg, NULL, file_get_contents($outfile), "application/vnd.oasis.opendocument.text", "letter.odt");
+/**
+ * Create a new ticket in the FreeScout system
+ */
+$url = "https://helpdesk.fsfe.org/conversations";
+$apikey = $_ENV['FREESCOUT_API_KEY'];
+$jsondata = [
+  "type"      => "email",
+  "mailboxId" => 7,         # This is the Merchandise Mailbox
+  "subject"   => $subject,
+  "customer"  => [
+      "email" => $_POST['mail']
+  ],
+  "threads" => [
+      [
+          "text"     => $msg,
+          "type"     => "customer",
+          "customer" => [
+              "email" => $_POST['mail'],
+              "firstName" => $_POST['firstname'],
+              "lastName" => $_POST['lastname'],
+          ],
+          "attachments" => [
+              [
+                  "fileName" => "letter.odt",
+                  "mimeType" => "application/vnd.oasis.opendocument.text",
+                  "data"     => base64_encode(file_get_contents($outfile))
+              ]
+          ]
+      ]
+  ],
+  "imported"     => false,
+  "status"       => "pending",
+  "customFields" => [
+      [
+          "id"    => 4,              # Order ID Custom Field
+          "value" => $_POST['donationID']    # Donation ID
+      ]
+  ]
+];
+$jsonDataEncoded = json_encode($jsondata);
+
+$curl = curl_init();
+curl_setopt_array($curl, [
+  CURLOPT_RETURNTRANSFER => 1,
+  CURLOPT_URL => $url,
+  CURLOPT_POST => 1,
+  CURLOPT_CUSTOMREQUEST => "POST",
+  CURLOPT_POSTFIELDS => $jsonDataEncoded,
+  CURLOPT_HTTPHEADER => [
+      "Content-Type: application/json",
+      "Content-Length: " . strlen($jsonDataEncoded),
+      "X-FreeScout-API-Key: " . $apikey
+  ],
+  CURLOPT_USERAGENT => 'FSFE promotion.php'
+]);
 
 /**
  * Only process donations starting from 10 euro.

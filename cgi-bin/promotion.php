@@ -246,7 +246,7 @@ if ($subcd == "y" or $subnl == "y") {
 /**
  * Create a new ticket in the FreeScout system
  */
-$url = "https://helpdesk.fsfe.org/conversations";
+$url = "https://helpdesk.fsfe.org/api/conversations";
 $apikey = getenv('FREESCOUT_API_KEY');
 $jsondata = [
   "type"      => "email",
@@ -274,7 +274,7 @@ $jsondata = [
       ]
   ],
   "imported"     => false,
-  "status"       => "pending"
+  "status"       => "active"
 ];
 $jsonDataEncoded = json_encode($jsondata);
 

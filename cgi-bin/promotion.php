@@ -247,7 +247,7 @@ if ($subcd == "y" or $subnl == "y") {
  * Create a new ticket in the FreeScout system
  */
 $url = "https://helpdesk.fsfe.org/conversations";
-$apikey = $_ENV['FREESCOUT_API_KEY'];
+$apikey = getenv('FREESCOUT_API_KEY');
 $jsondata = [
   "type"      => "email",
   "mailboxId" => 7,         # This is the Merchandise Mailbox

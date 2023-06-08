@@ -18,6 +18,7 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>
 # -----------------------------------------------------------------------------
 
+use CGI;
 use CGI::Carp 'fatalsToBrowser';
 use Encode qw(decode encode);
 use POSIX qw(strftime);

@@ -149,17 +149,23 @@ my $body = <<"HTML";
     <p>Phone: $phone</p>
     <br>
     <table>
+    <thead>
+        <tr>
+            <th style="border: 1px solid black; padding: 5px;">Item</th>
+            <th style="border: 1px solid black; padding: 5px;">Subtotal</th>
+        </tr>
+    </thead>
 HTML
 
 foreach $item ( $query->param ) {
     $value = $query->param($item);
     if ( not $item =~ /^_/ and $value ) {
-        my $price = $query->param("_$item");
+        my $price    = $query->param("_$item");
+        my $subtotal = $value * $price;
         $body .= <<"HTML";
         <tr>
-            <td style="width: 40%; border: 1px solid black; padding: 5px;">$item</td>
-            <td style="width: 20%; border: 1px solid black; padding: 5px;">$value x $price</td>
-            <td style="width: 40%; border: 1px solid black; padding: 5px;">$value * $price</td>
+            <td style="width: 40%; border: 1px solid black; padding: 5px;">$value x $item</td>
+            <td style="width: 40%; border: 1px solid black; padding: 5px;">$subtotal</td>
         </tr>
 HTML
     }
@@ -168,7 +174,7 @@ HTML
 $body .= <<"HTML";
         <tr>
             <td colspan="2" style="border: 1px solid black; padding: 5px;">Shipping to $country_name</td>
-            <td style="border: 1px solid black; padding: 5px;">= $shipping</td>
+            <td style="border: 1px solid black; padding: 5px;">$shipping</td>
         </tr>
         <tr>
             <td colspan="2" style="border: 1px solid black; padding: 5px;"><strong>Total amount</strong></td>

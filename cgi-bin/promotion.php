@@ -62,55 +62,6 @@ function relay_donation($orderID) {
   ));
 }
 
-function send_mail ( $to, $from, $subject, $msg, $bcc = NULL, $att = NULL, $att_type = NULL, $att_name = NULL ) {
-  global $countrycode; // take variable from below where we split the POST string
-  $headers = "From: $from\n";
-  if ( isset( $bcc )) { $headers .= "Bcc: $bcc" . "\n"; }
-  $headers .= "X-OTRS-Queue: Shipping::Promo Material Orders\n";
-  if ( isset( $_POST["donationID"])) {
-    $headers .= "X-OTRS-DynamicField-OrderID: " . $_POST["donationID"] . "\n";
-    $headers .= "X-OTRS-DynamicField-OrderAmount: " . $_POST["donate"] . "\n";
-  }
-  $headers .= "X-OTRS-DynamicField-OrderLanguage: " . $_POST["language"] . "\n";
-  $headers .= "X-OTRS-DynamicField-OrderState: order\n";
-  $headers .= "X-OTRS-DynamicField-PromoMaterialCountry: " . $countrycode . "\n";
-  $headers .= "X-OTRS-DynamicField-PromoMaterialLanguages: " . implode(',', $_POST['languages']) . "\n";
-
-  if ( $att ) {
-    $separator = md5( time());
-    $att_f = chunk_split( base64_encode( $att ));
-
-    $headers .= "MIME-Version: 1.0\n";
-    $headers .= "Content-Type: multipart/mixed; boundary=\"".$separator."\"\n";
-    $headers .= "Content-Transfer-Encoding: 7bit";
-
-    // message
-    $message = "This is a MIME encoded message.\n\n";
-
-    // text
-    $message .= "--".$separator."\n";
-    $message .= "Content-Type: text/plain; charset=\"UTF-8\"\n";
-    $message .= "Content-Transfer-Encoding: 8bit\n\n";
-    $message .= $msg."\n";
-
-    // attachment
-    $message .= "--".$separator."\n";
-    $message .= "Content-Type: $att_type; name=\"$att_name\"\n";
-    $message .= "Content-Transfer-Encoding: base64\n";
-    $message .= "Content-Disposition: attachment\n\n";
-    $message .= $att_f."\n";
-
-    // end of message
-    $message .= "--".$separator."--";
-  } else {
-    $headers .= "Content-Type: text/plain; charset=UTF-8\n";
-    $headers .= "Content-Transfer-Encoding: 8bit";
-    $message = $msg;
-  }
-
-  return mail( $to, $subject, $message, $headers );
-}
-
 /**
  * Calls the "mail-signup" script with the data.
  * 
@@ -278,7 +229,7 @@ $jsondata = [
   "customFields" => [
       [
           "id"    => 4,              # Order ID Custom Field
-          "value" => $_POST['donationID'] ?? "NO ID"    # Donation ID
+          "value" => $_POST['donationID'] ?? ""    # Donation ID
       ]
   ]
 ];

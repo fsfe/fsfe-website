@@ -159,18 +159,16 @@ my $body = <<"HTML";
     
         https://fsfe.org/order/payonline.$language/$reference <br><br>
 
-        In case you prefer to pay by bank transfer, please use the following data:
+        In case you prefer to pay by bank transfer, please use the following data:<br><br>
 
+        Recipient: Free Software Foundation Europe e.V.<br>
+        Address: Schoenhauser Allee 6/7, 10119 Berlin, Germany<br>
+        IBAN: DE47 4306 0967 2059 7908 01<br>
+        Bank: GLS Gemeinschaftsbank eG, 44774 Bochum, Germany<br>
+        BIC: GENODEM1GLS<br>
+        Payment reference: $reference<br>
+        Payment amount: $amount Euro
     </p>
-    <pre>
-Recipient: Free Software Foundation Europe e.V.
-Address: Schoenhauser Allee 6/7, 10119 Berlin, Germany
-IBAN: DE47 4306 0967 2059 7908 01
-Bank: GLS Gemeinschaftsbank eG, 44774 Bochum, Germany
-BIC: GENODEM1GLS
-Payment reference: $reference
-Payment amount: $amount Euro
-    </pre>
     <p>
         The following order was just received by our merchandise team. We will
         ship the order as soon as we have received your payment. Attached to
@@ -280,7 +278,7 @@ my $data = {
         {
             "text"        => "$body",
             "type"        => "message",
-            "user"        => 3771,
+            "user"        => 6530,
             "attachments" => [
                 {
                     "fileName" => "invoice.odt",

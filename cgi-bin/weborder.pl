@@ -18,7 +18,7 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>
 # -----------------------------------------------------------------------------
 
-use CGI;
+use CGI::Carp 'fatalsToBrowser';
 use Encode qw(decode encode);
 use POSIX qw(strftime);
 use Digest::SHA qw(sha1_hex);
@@ -28,6 +28,8 @@ use utf8;
 use LWP::UserAgent;
 use HTTP::Request::Common qw(POST);
 use JSON;
+use warnings;
+use diagnostics;
 
 # -----------------------------------------------------------------------------
 # Get parameters

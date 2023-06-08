@@ -143,20 +143,21 @@ my $body = <<"HTML";
 <html>
 <body>
     <p>
-        Dear $name,
+        Dear $name,<br><br>
 
         thank you so much for your recent order to the Free Software Foundation
         Europe. This is to confirm your order and give you some additional
-        information about it.
+        information about it.<br><br>
 
         Once we receive payment for your order, you will get a second mail
         notifying you that the payment has been received. If you have paid
-        online this will be slightly quicker than if you pay by bank transfer.
+        online this will be slightly quicker than if you pay by bank
+        transfer.<br><br>
 
         If you have yet to pay your order, you may now do so by following this
-        link:
-
-        https://fsfe.org/order/payonline.$language/$reference
+        link:<br><br>
+    
+        https://fsfe.org/order/payonline.$language/$reference <br><br>
 
         In case you prefer to pay by bank transfer, please use the following data:
 

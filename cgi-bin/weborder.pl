@@ -143,9 +143,9 @@ my $body = <<"HTML";
 <html>
 <body>
     <p>
-        The following person would like to order merchandise. There is no need to
-        act on this ticket until the OrderStatus of the ticket is
-        <pre>paid</pre>.
+        The following order was just received by the FSFE's merchandise team. We
+        will ship the order as soon as we have received your payment. Attached
+        to this email, you can find the invoice.
     </p>
     <h2>Customer</h2>
     <p>$name</p>
@@ -164,15 +164,15 @@ foreach $item ( $query->param ) {
         my $price    = $query->param("_$item");
         my $subtotal = $value * $price;
         $body .= <<"HTML";
-        $value x $item                      $subtotal<br>
+$value x $item = $subtotal<br>
 HTML
     }
 }
 
 $body .= <<"HTML";
-        Shipping to $country_name           $shipping<br>
-        <strong>Total amount: € $amount</strong>
-        </pre>
+Shipping to $country_name           $shipping<br>
+<strong>Total amount: € $amount</strong>
+</pre>
 </body>
 </html>
 HTML
@@ -242,11 +242,16 @@ my $data = {
     },
     "threads" => [
         {
-            "text"     => "$body",
+            "text"     => "A new order came in.",
             "type"     => "customer",
             "customer" => {
                 "email" => "$email",
             },
+        },
+        {
+            "text"        => "$body",
+            "type"        => "message",
+            "user"        => 3771,
             "attachments" => [
                 {
                     "fileName" => "invoice.odt",

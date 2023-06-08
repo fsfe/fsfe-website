@@ -169,9 +169,9 @@ foreach $item ( $query->param ) {
         my $price = $query->param("_$item");
         $body .= <<"HTML";
         <tr>
-            <td style="width: 30%;">$item</td>
+            <td style="width: 40%;">$item</td>
             <td style="width: 20%;">$value x $price</td>
-            <td style="width: 50%;">= %.2f</td>
+            <td style="width: 40%;">$value * $price</td>
         </tr>
 HTML
     }

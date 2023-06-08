@@ -139,23 +139,57 @@ my $reference =
 # Compile ticket body
 # -----------------------------------------------------------------------------
 
-my $body =
-  "$name\n\n$address\n\n$zip $city\n\n$country_name\n\nPhone: $phone\n\n\n\n";
+my $body = <<"HTML";
+<html>
+<head>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 5px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <p>$name</p>
+    <p>$address</p>
+    <p>$zip $city</p>
+    <p>$country_name</p>
+    <p>Phone: $phone</p>
+    <br>
+    <table>
+HTML
 
 foreach $item ( $query->param ) {
     $value = $query->param($item);
     if ( not $item =~ /^_/ and $value ) {
         my $price = $query->param("_$item");
-        $body .= sprintf "%-30s %3u x %5.2f = %6.2f\n\n", $item, $value, $price,
-          $value * $price;
+        $body .= <<"HTML";
+        <tr>
+            <td style="width: 30%;">$item</td>
+            <td style="width: 20%;">$value x $price</td>
+            <td style="width: 50%;">= %.2f</td>
+        </tr>
+HTML
     }
 }
 
-$body .= sprintf "Shipping to %-30s   %6.2f\n\n", $country_name, $shipping;
-$body .= "---------------------------------------------------\n\n";
-$body .= sprintf "Total amount                               € %6.2f\n\n",
-  $amount;
-$body .= "===================================================\n\n";
+$body .= <<"HTML";
+        <tr>
+            <td colspan="2">Shipping to $country_name</td>
+            <td>= $shipping</td>
+        </tr>
+        <tr>
+            <td colspan="2"><strong>Total amount</strong></td>
+            <td><strong>€ $amount</strong></td>
+        </tr>
+    </table>
+</body>
+</html>
+HTML
 
 # -----------------------------------------------------------------------------
 # Generate invoice

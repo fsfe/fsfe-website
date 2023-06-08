@@ -142,19 +142,20 @@ my $reference =
 my $body = <<"HTML";
 <html>
 <body>
+    <p>
+        The following person would like to order merchandise. There is no need to
+        act on this ticket until the OrderStatus of the ticket is
+        <pre>paid</pre>.
+    </p>
+    <h2>Customer</h2>
     <p>$name</p>
     <p>$address</p>
     <p>$zip $city</p>
     <p>$country_name</p>
     <p>Phone: $phone</p>
     <br>
-    <table>
-    <thead>
-        <tr>
-            <th style="border: 1px solid black; padding: 5px;">Item</th>
-            <th style="border: 1px solid black; padding: 5px;">Subtotal</th>
-        </tr>
-    </thead>
+    <h2>Order Details</h2>
+    <pre>
 HTML
 
 foreach $item ( $query->param ) {
@@ -163,24 +164,15 @@ foreach $item ( $query->param ) {
         my $price    = $query->param("_$item");
         my $subtotal = $value * $price;
         $body .= <<"HTML";
-        <tr>
-            <td style="width: 40%; border: 1px solid black; padding: 5px;">$value x $item</td>
-            <td style="width: 40%; border: 1px solid black; padding: 5px;">$subtotal</td>
-        </tr>
+        $value x $item                      $subtotal<br>
 HTML
     }
 }
 
 $body .= <<"HTML";
-        <tr>
-            <td colspan="2" style="border: 1px solid black; padding: 5px;">Shipping to $country_name</td>
-            <td style="border: 1px solid black; padding: 5px;">$shipping</td>
-        </tr>
-        <tr>
-            <td colspan="2" style="border: 1px solid black; padding: 5px;"><strong>Total amount</strong></td>
-            <td style="border: 1px solid black; padding: 5px;"><strong>€ $amount</strong></td>
-        </tr>
-    </table>
+        Shipping to $country_name           $shipping<br>
+        <strong>Total amount: € $amount</strong>
+        </pre>
 </body>
 </html>
 HTML

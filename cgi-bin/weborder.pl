@@ -141,18 +141,6 @@ my $reference =
 
 my $body = <<"HTML";
 <html>
-<head>
-    <style>
-        table, th, td {
-            border: 1px solid black;
-            border-collapse: collapse;
-        }
-        th, td {
-            padding: 5px;
-            text-align: left;
-        }
-    </style>
-</head>
 <body>
     <p>$name</p>
     <p>$address</p>
@@ -169,9 +157,9 @@ foreach $item ( $query->param ) {
         my $price = $query->param("_$item");
         $body .= <<"HTML";
         <tr>
-            <td style="width: 40%;">$item</td>
-            <td style="width: 20%;">$value x $price</td>
-            <td style="width: 40%;">$value * $price</td>
+            <td style="width: 40%; border: 1px solid black; padding: 5px;">$item</td>
+            <td style="width: 20%; border: 1px solid black; padding: 5px;">$value x $price</td>
+            <td style="width: 40%; border: 1px solid black; padding: 5px;">$value * $price</td>
         </tr>
 HTML
     }
@@ -179,12 +167,12 @@ HTML
 
 $body .= <<"HTML";
         <tr>
-            <td colspan="2">Shipping to $country_name</td>
-            <td>= $shipping</td>
+            <td colspan="2" style="border: 1px solid black; padding: 5px;">Shipping to $country_name</td>
+            <td style="border: 1px solid black; padding: 5px;">= $shipping</td>
         </tr>
         <tr>
-            <td colspan="2"><strong>Total amount</strong></td>
-            <td><strong>€ $amount</strong></td>
+            <td colspan="2" style="border: 1px solid black; padding: 5px;"><strong>Total amount</strong></td>
+            <td style="border: 1px solid black; padding: 5px;"><strong>€ $amount</strong></td>
         </tr>
     </table>
 </body>

@@ -258,15 +258,6 @@ $request->content($json_data);
 my $ua       = LWP::UserAgent->new;
 my $response = $ua->request($request);
 
-# Error handling
-if ( $response->is_success ) {
-    print "Request was successful!\n";
-    print "Response: " . $response->decoded_content . "\n";
-}
-else {
-    print "Request failed: " . $response->status_line . "\n";
-}
-
 # -----------------------------------------------------------------------------
 # Generate form for ConCardis payment
 # -----------------------------------------------------------------------------

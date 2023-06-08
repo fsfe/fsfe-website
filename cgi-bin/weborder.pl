@@ -143,9 +143,34 @@ my $body = <<"HTML";
 <html>
 <body>
     <p>
-        The following order was just received by the FSFE's merchandise team. We
-        will ship the order as soon as we have received your payment. Attached
-        to this email, you can find the invoice.
+        thank you so much for your recent order to the Free Software Foundation
+        Europe. This is to confirm your order and give you some additional
+        information about it.
+
+        Once we receive payment for your order, you will get a second mail
+        notifying you that the payment has been received. If you have paid
+        online this will be slightly quicker than if you pay by bank transfer.
+
+        If you have yet to pay your order, you may now do so by following this
+        link:
+
+        https://fsfe.org/order/payonline.$language/$reference
+
+        In case you prefer to pay by bank transfer, please use the following data:
+
+        <pre>
+            Recipient: Free Software Foundation Europe e.V.
+            Address: Schoenhauser Allee 6/7, 10119 Berlin, Germany
+            IBAN: DE47 4306 0967 2059 7908 01
+            Bank: GLS Gemeinschaftsbank eG, 44774 Bochum, Germany
+            BIC: GENODEM1GLS
+            Payment reference: $reference
+            Payment amount: $amount Euro
+        </pre>
+
+        The following order was just received by our merchandise team. We will
+        ship the order as soon as we have received your payment. Attached to
+        this email, you can find the invoice.
     </p>
     <h2>Customer</h2>
     <p>$name</p>
@@ -164,13 +189,13 @@ foreach $item ( $query->param ) {
         my $price    = $query->param("_$item");
         my $subtotal = $value * $price;
         $body .= <<"HTML";
-$value x $item = $subtotal<br>
+$value x $item: € $subtotal<br>
 HTML
     }
 }
 
 $body .= <<"HTML";
-Shipping to $country_name           $shipping<br>
+Shipping to $country_name: € $shipping<br>
 <strong>Total amount: € $amount</strong>
 </pre>
 </body>

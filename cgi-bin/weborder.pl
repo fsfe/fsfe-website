@@ -139,22 +139,23 @@ my $reference =
 # Compile ticket body
 # -----------------------------------------------------------------------------
 
-my $body = "$name\n$address\n$zip $city\n$country_name\nPhone: $phone\n\n";
+my $body =
+  "$name\n\n$address\n\n$zip $city\n\n$country_name\n\nPhone: $phone\n\n\n\n";
 
 foreach $item ( $query->param ) {
     $value = $query->param($item);
     if ( not $item =~ /^_/ and $value ) {
         my $price = $query->param("_$item");
-        $body .= sprintf "%-30s %3u x %5.2f = %6.2f\n", $item, $value, $price,
+        $body .= sprintf "%-30s %3u x %5.2f = %6.2f\n\n", $item, $value, $price,
           $value * $price;
     }
 }
 
-$body .= sprintf "Shipping to %-30s   %6.2f\n", $country_name, $shipping;
-$body .= "---------------------------------------------------\n";
-$body .= sprintf "Total amount                               € %6.2f\n",
+$body .= sprintf "Shipping to %-30s   %6.2f\n\n", $country_name, $shipping;
+$body .= "---------------------------------------------------\n\n";
+$body .= sprintf "Total amount                               € %6.2f\n\n",
   $amount;
-$body .= "===================================================\n";
+$body .= "===================================================\n\n";
 
 # -----------------------------------------------------------------------------
 # Generate invoice

@@ -203,16 +203,6 @@ $body .= <<"HTML";
 Shipping to $country_name: € $shipping<br>
 <strong>Total amount: € $amount</strong>
 </pre>
-<p>
-    Best regards,
-</p>
-<p>
-    -- <br>
-    Merchandise Team - Free Software Foundation Europe e.V.<br>
-    Schönhauser Allee 6/7, 10119 Berlin, Germany.<br>
-    Registered at Amtsgericht Hamburg, VR 17030<br>
-    Your donation enables our work (fsfe.org/donate)
-</p>
 </body>
 </html>
 HTML

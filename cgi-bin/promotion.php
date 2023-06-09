@@ -155,9 +155,10 @@ if (isset($_POST['donate']) && ($_POST['donate'] > 0)) {
   $msg_to_staff .= "\n\nThe orderer choose to make a Donation of {$_POST['donate']} Euro.\n" .
     "Please do not assume that this donation has been made until you receive\n" .
     "confirmation from Concardis for the order: {$_POST['donationID']}";
-  $msg_to_donor = "<p>If you have yet to pay your order, you may now do so by following" . 
+  $msg_to_donor = "<p>If you have yet to make your donation, you may now do so by following" . 
     "this link: <a href=https://fsfe.org/order/payonline.$lang/".$_POST['donationID'].">" . 
-    "https://fsfe.org/order/payonline.$lang/".$_POST['donationID']."</a></p>" .
+    "https://fsfe.org/order/payonline.$lang/".$_POST['donationID']."</a>. Once the donation is" .
+    "confirmed the promotional material will be send.</p>" .
     "<p>In case you prefer to pay by bank transfer, please use the following data:</p>" .
     "<p>Recipient: Free Software Foundation Europe e.V.<br>" .
     "Address: Schoenhauser Allee 6/7, 10119 Berlin, Germany<br>" .

@@ -143,24 +143,26 @@ my $body = <<"HTML";
 <html>
 <body>
     <p>
-        Dear $name,<br><br>
-
+        Dear $name,
+    </p>
+    <p>
         thank you so much for your recent order to the Free Software Foundation
-        Europe. This is to confirm your order and give you some additional
-        information about it.<br><br>
-
+        Europe. This is an automated email to confirm your order and give you
+        some additional information about it.
+    </p>
+    <p>
         Once we receive payment for your order, you will get a second mail
         notifying you that the payment has been received. If you have paid
         online this will be slightly quicker than if you pay by bank
-        transfer.<br><br>
-
+        transfer.
+    </p>
+    <p>
         If you have yet to pay your order, you may now do so by following this
-        link:<br><br>
-    
-        https://fsfe.org/order/payonline.$language/$reference <br><br>
-
-        In case you prefer to pay by bank transfer, please use the following data:<br><br>
-
+        <a href=https://fsfe.org/order/payonline.$language/$reference>link</a>.
+    </p>
+    <p>
+        In case you prefer to pay by bank transfer, please use the following data:
+    </p>
         Recipient: Free Software Foundation Europe e.V.<br>
         Address: Schoenhauser Allee 6/7, 10119 Berlin, Germany<br>
         IBAN: DE47 4306 0967 2059 7908 01<br>
@@ -175,12 +177,13 @@ my $body = <<"HTML";
         this email, you can find the invoice.
     </p>
     <h2>Address</h2>
-    <p>$name</p>
-    <p>$address</p>
-    <p>$zip $city</p>
-    <p>$country_name</p>
-    <p>Phone: $phone</p>
-    <br>
+    <p>
+        $name<br>
+        $address<br>
+        $zip $city<br>
+        $country_name<br>
+        Phone: $phone
+    </p>
     <h2>Order Details</h2>
     <pre>
 HTML
@@ -200,6 +203,16 @@ $body .= <<"HTML";
 Shipping to $country_name: € $shipping<br>
 <strong>Total amount: € $amount</strong>
 </pre>
+<p>
+    Best regards,
+</p>
+<p>
+    -- <br>
+    Merchandise Team - Free Software Foundation Europe e.V.<br>
+    Schönhauser Allee 6/7, 10119 Berlin, Germany.<br>
+    Registered at Amtsgericht Hamburg, VR 17030<br>
+    Your donation enables our work (fsfe.org/donate)
+</p>
 </body>
 </html>
 HTML

@@ -1,6 +1,7 @@
 <?php
 
-function eval_xml_template($template, $data) {
+function eval_xml_template($template, $data)
+{
   $dir = dirname(__FILE__) . '/../templates';
   $result = file_get_contents("$dir/$template");
   foreach ($data as $key => $value)
@@ -9,16 +10,18 @@ function eval_xml_template($template, $data) {
   return $result;
 }
 
-function gen_alnum($digits){
+function gen_alnum($digits)
+{
   $alphabet = '0123456789abcdefghijklmnopqrstuvwxyz';
   $ret = '';
   for ($digits; $digits > 0; $digits--) {
-    $ret .= substr($alphabet, rand(0,35), 1);
+    $ret .= substr($alphabet, rand(0, 35), 1);
   }
   return $ret;
 }
 
-function relay_donation($orderID) {
+function relay_donation($orderID)
+{
   $name = $_POST['name'];
   $email = $_POST['mail'];
   $amount100 = $_POST['donate'] * 100;
@@ -32,33 +35,33 @@ function relay_donation($orderID) {
 
   $salt = "Only4TestingPurposes";
   $shasum = strtoupper(sha1(
-        "ACCEPTURL=$acceptURL$salt".
-        "AMOUNT=$amount100$salt".
-        "CANCELURL=$cancelURL$salt".
-        //"CN=$name$salt".
-        //"COM=Donation$salt".
-        "CURRENCY=EUR$salt".
-        "EMAIL=$email$salt".
-        "LANGUAGE=$language$salt".
-        "ORDERID=$orderID$salt".
-        "PMLISTTYPE=2$salt".
-        "PSPID=$PSPID$salt".
-        "TP=$TP$salt"
-        ));
+    "ACCEPTURL=$acceptURL$salt" .
+      "AMOUNT=$amount100$salt" .
+      "CANCELURL=$cancelURL$salt" .
+      //"CN=$name$salt".
+      //"COM=Donation$salt".
+      "CURRENCY=EUR$salt" .
+      "EMAIL=$email$salt" .
+      "LANGUAGE=$language$salt" .
+      "ORDERID=$orderID$salt" .
+      "PMLISTTYPE=2$salt" .
+      "PSPID=$PSPID$salt" .
+      "TP=$TP$salt"
+  ));
 
   echo eval_xml_template('concardis_relay.en.html', array(
-    'PSPID'      => '<input type="hidden" name="PSPID"      value="'.$PSPID.'">',
-    'orderID'    => '<input type="hidden" name="orderID"    value="'.$orderID.'">',
-    'amount'     => '<input type="hidden" name="amount"     value="'.$amount100.'">',
+    'PSPID'      => '<input type="hidden" name="PSPID"      value="' . $PSPID . '">',
+    'orderID'    => '<input type="hidden" name="orderID"    value="' . $orderID . '">',
+    'amount'     => '<input type="hidden" name="amount"     value="' . $amount100 . '">',
     //'currency'   => '<input type="hidden" name="currency"   value="EUR">',
-    'language'   => '<input type="hidden" name="language"   value="'.$language.'">',
+    'language'   => '<input type="hidden" name="language"   value="' . $language . '">',
     //'CN'         => '<input type="hidden" name="CN"         value="'.$name.'">',
-    'EMAIL'      => '<input type="hidden" name="EMAIL"      value="'.$email.'">',
-    'TP'         => '<input type="hidden" name="TP"         value="'.$TP.'">',
+    'EMAIL'      => '<input type="hidden" name="EMAIL"      value="' . $email . '">',
+    'TP'         => '<input type="hidden" name="TP"         value="' . $TP . '">',
     //'PMListType' => '<input type="hidden" name="PMListType" value="2">',
-    'accepturl'  => '<input type="hidden" name="accepturl"  value="'.$acceptURL.'">',
-    'cancelurl'  => '<input type="hidden" name="cancelurl"  value="'.$cancelURL.'">',
-    'SHASign'    => '<input type="hidden" name="SHASign"    value="'.$shasum.'">'
+    'accepturl'  => '<input type="hidden" name="accepturl"  value="' . $acceptURL . '">',
+    'cancelurl'  => '<input type="hidden" name="cancelurl"  value="' . $cancelURL . '">',
+    'SHASign'    => '<input type="hidden" name="SHASign"    value="' . $shasum . '">'
   ));
 }
 
@@ -71,7 +74,8 @@ function relay_donation($orderID) {
  * @param array $data
  * @see mail-signup.php
  */
-function mail_signup(array $data) {
+function mail_signup(array $data)
+{
   $cmd = sprintf(
     'php %s %s > /dev/null &',
     __DIR__ . '/mail-signup.php',
@@ -83,14 +87,16 @@ function mail_signup(array $data) {
 $lang = $_POST['language'];
 
 # Sanity checks (*very* sloppy input validation)
-if (empty($_POST['lastname'])  ||
-    empty($_POST['mail'])     ||
-    empty($_POST['street'])    ||
-    empty($_POST['zip'])       ||
-    empty($_POST['city'])      ||
-    empty($_POST['country'])   ||
-    empty($_POST['packagetype']) ||
-   !empty($_POST['address']) ) {
+if (
+  empty($_POST['lastname'])    ||
+  empty($_POST['mail'])        ||
+  empty($_POST['street'])      ||
+  empty($_POST['zip'])         ||
+  empty($_POST['city'])        ||
+  empty($_POST['country'])     ||
+  empty($_POST['packagetype']) ||
+  !empty($_POST['address'])
+) {
 
   header("Location: https://fsfe.org/contribute/spreadtheword-ordererror.$lang.html");
   exit();
@@ -108,45 +114,45 @@ if ($_POST['packagetype'] == 'default') {
 } else {
   $subject = "Custom promotion material order";
 }
-$msg = "Please send me promotional material:\n".
-       "First Name: {$_POST['firstname']}\n".
-       "Last Name:  {$_POST['lastname']}\n".
-       "EMail:      {$_POST['mail']}\n".
-       "\n".
-       "Address:\n".
-       "{$_POST['firstname']} " . "{$_POST['lastname']}\n";
+$msg_to_staff = "Please send me promotional material:\n" .
+  "First Name: {$_POST['firstname']}\n" .
+  "Last Name:  {$_POST['lastname']}\n" .
+  "EMail:      {$_POST['mail']}\n" .
+  "\n" .
+  "Address:\n" .
+  "{$_POST['firstname']} " . "{$_POST['lastname']}\n";
 
 if (!empty($_POST['org'])) {
-  $msg .= "{$_POST['org']}\n";
+  $msg_to_staff .= "{$_POST['org']}\n";
 }
-$msg .= "{$_POST['street']}\n".
-       "{$_POST['zip']} "."{$_POST['city']}\n".
-       "{$countryname}\n".
-       "\n".
-       "Specifics of the Order:\n";
+$msg_to_staff .= "{$_POST['street']}\n" .
+  "{$_POST['zip']} " . "{$_POST['city']}\n" .
+  "{$countryname}\n" .
+  "\n" .
+  "Specifics of the Order:\n";
 # Default or custom package?
 if ($_POST['packagetype'] == 'default') {
-  $msg .= "Default package: Something from everything listed here, depending on size, language selection and availability.\n";
+  $msg_to_staff .= "Default package: Something from everything listed here, depending on size, language selection and availability.\n";
 } else {
-  $msg .= "Custom package:\n".
-          "{$_POST['specifics']}\n";
+  $msg_to_staff .= "Custom package:\n" .
+    "{$_POST['specifics']}\n";
 }
-$languages = implode(',',$_POST['languages']);
-$msg .= "\n".
-       "Preferred language(s) (if available):\n".
-       "{$languages}\n".
-       "\n".
-       "The material is going to be used for:\n".
-       "{$_POST['usage']}\n".
-       "\n".
-       "Comments:\n".
-       "{$_POST['comment']}\n";
+$languages = implode(',', $_POST['languages']);
+$msg_to_staff .= "\n" .
+  "Preferred language(s) (if available):\n" .
+  "{$languages}\n" .
+  "\n" .
+  "The material is going to be used for:\n" .
+  "{$_POST['usage']}\n" .
+  "\n" .
+  "Comments:\n" .
+  "{$_POST['comment']}\n";
 
 if (isset($_POST['donate']) && ($_POST['donate'] > 0)) {
-  $_POST['donationID'] = "DAFSPCK".gen_alnum(5);
-  $msg .= "\n\nThe orderer choose to make a Donation of {$_POST['donate']} Euro.\n".
-          "Please do not assume that this donation has been made until you receive\n".
-          "confirmation from Concardis for the order: {$_POST['donationID']}";
+  $_POST['donationID'] = "DAFSPCK" . gen_alnum(5);
+  $msg_to_staff .= "\n\nThe orderer choose to make a Donation of {$_POST['donate']} Euro.\n" .
+    "Please do not assume that this donation has been made until you receive\n" .
+    "confirmation from Concardis for the order: {$_POST['donationID']}";
 }
 
 # Generate letter to be sent along with the material
@@ -159,8 +165,8 @@ if (!empty($_POST['org'])) {
   $address .= $_POST['org'] . "\\n";
 }
 $address .= $_POST['street'] . "\\n" .
-            $_POST['zip'] . " " . $_POST['city'] . "\\n" .
-            $countryname;
+  $_POST['zip'] . " " . $_POST['city'] . "\\n" .
+  $countryname;
 $cmd = sprintf(
   '%s %s %s %s %s %s',
   $odtfill,
@@ -194,6 +200,37 @@ if ($subcd == "y" or $subnl == "y") {
   mail_signup($signupdata);
 }
 
+$msg_to_customer = <<<EOT
+<html>
+<body>
+  <p>Dear $name,</p>
+  <p>
+    thank you for your recent request of promotional material from the FSFE!
+    We've received your request and will normally be sending this to you
+    within a few days. We will let you know once we've packed your order
+    and sent it. Please note that we usually send the material without a
+    tracking number.
+  </p>
+  <p>
+    In about two weeks after we send your material, we will contact you to
+    make sure it was received properly. We will also contact you later on to
+    get some feedback from you about the material and how it's been used. If
+    you have any questions in the mean time, please feel free to reply to
+    this message.
+  </p>
+  <p>
+    Thanks for helping us spread the word, and we hope you will have fun and
+    find the material useful! If you share pictures online of the material
+    having arrived or where it's been used, let us know by dropping a link
+    to us here or on social networks (@fsfe).
+  </p>
+  <p>
+    Best regards,
+  </p>
+</body>
+</html> 
+EOT;
+
 /**
  * Create a new ticket in the FreeScout system
  */
@@ -204,33 +241,38 @@ $jsondata = [
   "mailboxId" => 7,         # This is the Merchandise Mailbox
   "subject"   => $subject,
   "customer"  => [
-      "email" => $_POST['mail']
+    "email" => $_POST['mail']
   ],
   "threads" => [
-      [
-          "text"     => $msg,
-          "type"     => "customer",
-          "customer" => [
-              "email" => $_POST['mail'],
-              "firstName" => $_POST['firstname'],
-              "lastName" => $_POST['lastname'],
-          ],
-          "attachments" => [
-              [
-                  "fileName" => "letter.odt",
-                  "mimeType" => "application/vnd.oasis.opendocument.text",
-                  "data"     => base64_encode(file_get_contents($outfile))
-              ]
-          ]
+    [
+      "text"     => $msg_to_staff,
+      "type"     => "customer",
+      "customer" => [
+        "email" => $_POST['mail'],
+        "firstName" => $_POST['firstname'],
+        "lastName" => $_POST['lastname'],
+      ],
+      "attachments" => [
+        [
+          "fileName" => "letter.odt",
+          "mimeType" => "application/vnd.oasis.opendocument.text",
+          "data"     => base64_encode(file_get_contents($outfile))
+        ]
       ]
+    ],
+    [
+      "text"     => $msg_to_customer,
+      "type"     => "message",
+      "user"     => 6530,
+    ]
   ],
   "imported"     => false,
   "status"       => "active",
   "customFields" => [
-      [
-          "id"    => 4,              # Order ID Custom Field
-          "value" => $_POST['donationID'] ?? ""    # Donation ID
-      ]
+    [
+      "id"    => 4,              # Order ID Custom Field
+      "value" => $_POST['donationID'] ?? ""    # Donation ID
+    ]
   ]
 ];
 $jsonDataEncoded = json_encode($jsondata);
@@ -243,9 +285,9 @@ curl_setopt_array($curl, [
   CURLOPT_CUSTOMREQUEST => "POST",
   CURLOPT_POSTFIELDS => $jsonDataEncoded,
   CURLOPT_HTTPHEADER => [
-      "Content-Type: application/json",
-      "Content-Length: " . strlen($jsonDataEncoded),
-      "X-FreeScout-API-Key: " . $apikey
+    "Content-Type: application/json",
+    "Content-Length: " . strlen($jsonDataEncoded),
+    "X-FreeScout-API-Key: " . $apikey
   ],
   CURLOPT_USERAGENT => 'FSFE promotion.php'
 ]);
@@ -260,5 +302,3 @@ if (isset($_POST['donate']) && ((int) $_POST['donate']) >= 5) {
   // DEBUG: Comment out next line to be able to see errors and printed info
   header("Location: https://fsfe.org/contribute/spreadtheword-orderthanks.$lang.html");
 }
-
-?>

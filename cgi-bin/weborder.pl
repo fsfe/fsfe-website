@@ -160,8 +160,9 @@ my $body = <<"HTML";
         If you have yet to pay your order, you may now do so by following this
         link:
 
-        <a href=https://fsfe.org/order/payonline.$language/$reference>https://fsfe.org/order/payonline.$language/$reference</a>
-
+        <a href=https://fsfe.org/order/payonline.$language/$reference>
+            https://fsfe.org/order/payonline.$language/$reference
+        </a>
     </p>
     <p>
         In case you prefer to pay by bank transfer, please use the following data:

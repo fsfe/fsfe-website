@@ -158,7 +158,10 @@ my $body = <<"HTML";
     </p>
     <p>
         If you have yet to pay your order, you may now do so by following this
-        <a href=https://fsfe.org/order/payonline.$language/$reference>link</a>.
+        link:
+
+        <a href=https://fsfe.org/order/payonline.$language/$reference>https://fsfe.org/order/payonline.$language/$reference</a>
+
     </p>
     <p>
         In case you prefer to pay by bank transfer, please use the following data:
@@ -203,6 +206,9 @@ $body .= <<"HTML";
 Shipping to $country_name: € $shipping<br>
 <strong>Total amount: € $amount</strong>
 </pre>
+<p>
+    Best regards,
+</p>
 </body>
 </html>
 HTML
@@ -277,11 +283,6 @@ my $data = {
             "customer" => {
                 "email" => "$email",
             },
-        },
-        {
-            "text"        => "$body",
-            "type"        => "message",
-            "user"        => 6530,
             "attachments" => [
                 {
                     "fileName" => "invoice.odt",
@@ -289,6 +290,11 @@ my $data = {
                     "data"     => "$base64_encoded_invoice"
                 }
             ]
+        },
+        {
+            "text" => "$body",
+            "type" => "message",
+            "user" => 6530,
         }
     ],
     "imported"     => JSON::false,

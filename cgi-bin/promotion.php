@@ -148,11 +148,24 @@ $msg_to_staff .= "\n" .
   "Comments:\n" .
   "{$_POST['comment']}\n";
 
+$msg_to_donor = "";
 if (isset($_POST['donate']) && ($_POST['donate'] > 0)) {
   $_POST['donationID'] = "DAFSPCK" . gen_alnum(5);
+  $subject .= " " . $_POST['donationID'];
   $msg_to_staff .= "\n\nThe orderer choose to make a Donation of {$_POST['donate']} Euro.\n" .
     "Please do not assume that this donation has been made until you receive\n" .
     "confirmation from Concardis for the order: {$_POST['donationID']}";
+  $msg_to_donor = "<p>If you have yet to pay your order, you may now do so by following" . 
+    "this link: <a href=https://fsfe.org/order/payonline.$lang/".$_POST['donationID'].">" . 
+    "https://fsfe.org/order/payonline.$lang/".$_POST['donationID']."</a></p>" .
+    "<p>In case you prefer to pay by bank transfer, please use the following data:</p>" .
+    "<p>Recipient: Free Software Foundation Europe e.V.<br>" .
+    "Address: Schoenhauser Allee 6/7, 10119 Berlin, Germany<br>" .
+    "IBAN: DE47 4306 0967 2059 7908 01<br>" .
+    "Bank: GLS Gemeinschaftsbank eG, 44774 Bochum, Germany<br>" .
+    "BIC: GENODEM1GLS<br>" .
+    "Payment reference: ".$_POST['donationID']."<br>" .
+    "Payment amount: ".$_POST['donate']." Euro</p>";
 }
 
 # Generate letter to be sent along with the material
@@ -211,6 +224,7 @@ $msg_to_customer = <<<EOT
     and sent it. Please note that we usually send the material without a
     tracking number.
   </p>
+  $msg_to_donor
   <p>
     In about two weeks after we send your material, we will contact you to
     make sure it was received properly. We will also contact you later on to

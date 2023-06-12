@@ -1,0 +1,555 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<html>
+<version>1</version>
+
+<head>
+  <title>Geräteneutralität</title>
+</head>
+
+<body class="article">
+
+  <h1>Geräteneutralität</h1>
+
+  <div>
+
+    <div id="introduction">
+      <p>
+      Obwohl Digitalgeräte heute allgegenwärtig sind, steigt die Zahl 
+      der Geräte, die sich nicht mit Freier Software nutzen lassen, 
+      exponentiell. Die sich daraus ergebende Konsequenz ist ein 
+      Kontrollverlust der Nutzer:innen über die Technologie. 
+      Geräteneutralität zielt darauf ab, Nutzer:innen zu ermächtigen, 
+      Einschränkungen zu umgehen, um ihnen eine diskriminierungsfreie 
+      Nutzung Freier Software auf ihren Geräten zu ermöglichen.
+      </p>
+    </div>
+
+
+    <!-- @TRANSLATORS: the banner's source file you find here:
+    https://download.fsfe.org/device-neutrality/device-neutrality-logo-banner.odp -->
+
+    <figure class="max-width-100 no-border">
+      <img
+        src="https://pics.fsfe.org/uploads/original/80/67/bdbfcb4ad828737dcfa50caa5fc5.png"
+        alt="Geräteneutralität: Bewahrung von Softwarefreiheit auf Geräten" />
+    </figure>
+
+
+  <div class="toc">
+   <p>Table of contents</p>
+    <ol>
+      <li>
+	<a href="#dn-re-empowerment">Geräte und Nutzerermächtigung</a>
+      </li>
+      <li>
+	<a href="#general-purpose-computer-free-software">Universalcomputer und Freie Software</a>
+      </li>
+      <li>
+	<a href="#gatekeeper-control-monopoly-devices">Gatekeeperkontrolle und Gerätemonopoly</a>
+      </li>
+      <li>
+	<a href="#device-neutrality-free-software">Geräteneutralität und Freie Software</a>
+        <ol>
+          <li><a href="#dn-software-freedom">Softwarefreiheit</a></li>
+          <li><a href="#dn-no-lock-in">Kein Lock-In</a></li>
+          <li><a href="#dn-control-over-data">Kontrolle der Nutzer über Daten</a></li>
+        </ol>
+      </li>
+      <li>
+	<a href="#dn-reality">Geräteneutralität verwirklichen</a>
+        </li>
+    </ol>
+  </div>
+
+    <h2 id="dn-re-empowerment">Ermächtigung der Nutzenden über ihre Geräte</h2>
+
+    <p>
+      Wir alle wissen, welche Freude es macht, ein neues Gerät zu bekommen und 
+	  seine Features und Funktionalitäten zu entdecken. Stellen wir uns das 
+	  Szenario vor, dass Sie sich ein neues Smartphone gekauft haben.
+    </p>
+
+    <p>
+      Sie freuen sich riesig darauf, alles zu entdecken und auszuprobieren, 
+	  was Ihr Gerät leisten kann.
+      Sie möchten Apps installieren, die Kamera benutzen, ins Netz gehen, 
+      Spiele spielen und alles genießen, was Ihr Gerät leisten kann.
+      Jedoch stellen Sie bald fest, dass etwas nicht stimmt. Beim Einschalten 
+	  Ihres Telefons werden Sie aufgefordert, einen Onlineaccount zu erstellen,
+	  um Ihr Gerät nutzen zu können.
+     </p>
+
+     <p>
+      Und dann bemerken Sie, wie limitiert die Möglichkeiten sind, neue Apps und Programme 
+	  zu downloaden und zu installieren. Der einzige Weg führt über den App Store oder 
+	  Marketplace des herstellenden Unternehmens. Es ist Ihnen womöglich sogar untersagt, Software von 
+	  Drittanbietern aufzurufen oder zu installieren, einschließlich 
+       <a href="https://www.f-droid.org/">alternativer Repositories</a>.
+      Am verstecktesten ist jedoch, dass es Ihnen nicht erlaubt ist, vorinstallierte Programme
+	  zu deinstallieren, die den Speicherplatz Ihres Gerätes belegen und die Akkulaufzeit 
+	  verschlechtern.
+    </p>
+
+    <p>
+      Nun denken Sie, dass das vielleicht ein Problem des Betriebssystems ist und suchen 
+	  nach Alternativen. Jedoch lässt sich mit Ihrem Gerät nur ein vollständig oder teilweise 
+	  proprietäres Betriebssystem booten. In anderen Worten, Sie <a
+	  href="/activities/upcyclingandroid/">können kein anderes 
+	  Betriebssystem installieren</a>. Schließlich sehen Sie traurig ein, 
+	  dass Ihr Smartphone, obwohl es ein Allzweckcomputer ist, 
+	  dennoch ein künstlich beschränktes Gerät ist, das viel schlechtere Leistung bringt, als 
+	  erwartet.
+    </p>
+
+    <figure class="no-border">
+      <img
+        src="https://pics.fsfe.org/uploads/big/d0988bf4e317a6cd7953689adf50b573.jpg"
+        alt="Person schaut auf Smartphone, das auf dem Tisch liegt." />
+      <figcaption>
+        Einschränkung Freier Software, Vendor lock-in und fehlende Kontrolle über persönliche
+		Daten sind die Hürden, mit denen Nutzende in digitalen Märkten konfrontiert werden.
+      </figcaption>
+    </figure>
+
+    <p>
+      Probleme wie diese und andere in Bezug auf Browser, Suchmaschinen oder Hardware sind 
+	  auf digitalen Märkten an der Tagesordnung. Die Nutzenden erfahren verschiedene 
+	  Einschränkungen ihrer Rechte und Möglichkeiten, frei über ihre Geräte zu verfügen.
+      Grundlegende Freiheiten wie die Installation und Deinstallation von Software werden 
+	  von diesen Unternehmen, die durch ihre monopolistische Kontrolle über die Geräte als 
+	  Gatekeeper fungieren, unrechtmäßig eingeschränkt.
+    </p>
+
+    <p>
+      Geräteneutralität ist ein politisches Konzept, das es Nutzenden ermöglicht, 
+	  Gatekeeper zu umgehen, um Freie Software und Services unabhängig von Geräteherstellenden, 
+	  Händler:innen oder Plattformen zu nutzen. Auf dieser Seite erfahren Sie, dass Geräteneutralität 
+	  durch die Erhaltung von Freiheit bezüglich Software auf Geräten sowie durch den Schutz 
+	  der Nutzer:innen vor Lock-in-Zwang und die Förderung standardisierter Wege von 
+	  Datenkompatibilität erreicht werden kann.
+    </p>
+
+
+
+     <h2 id="general-purpose-computer-free-software">Universalcomputer und die Freie Software</h2>
+
+    <p>
+      Digitalgeräte sind in allen Bereichen unseres Lebens gegenwärtig. Wir 
+	  nutzen sie für die Arbeit, zur Kommunikation und Unterhaltung und um ins 
+	  Internet zu gehen. Diese Geräte sind machtvolle Maschinen, die uns den 
+	  Zugang zu einer Vielzahl von Features erlauben und mit denen sich fast 
+	  unendlich viele Aufgaben bewältigen lassen. Unsere Smartphones,
+      Tablets, Laptops und andere verbundene Geräte sind <strong>Universalcomputer</strong>. 
+	  Das bedeutet, dass wir theoretisch jede gewünschte Software darauf spielen 
+	  können, um die Möglichkeiten der Hardware voll zu nutzen. Dieses Potential 
+	  wird durch die Freie Software begünstigt.
+     </p>
+
+     <p>
+      Freiheit in Bezug auf Software hängt davon ab, wie wir Software auf Geräten 
+	  nutzen können. Die Bewahrung <a
+	  href="/freesoftware/freesoftware.html">der vier Freiheiten der Freien Software</a>
+      auf Betriebssystemen, Treibern, Appstores, Browsern und sonstiger Software ist
+      nicht nur in Bezug auf die Wahlfreiheit, sondern auch für eine
+      gesunde, wettbewerbsorientierte, demokratische und <a
+      href="/freesoftware/sustainability/sustainability.html#id-device-neutrality">nachhaltige</a> 
+      Digitalumgebung unabdingbar.
+    </p>
+
+    <figure class="no-border">
+      <img
+        src="https://pics.fsfe.org/uploads/medium/d534afb7636cafbee2ec91bda7283ec0.png"
+        alt="Zeichnungen eines Computers und Smartphones." />
+      <figcaption>
+        Jede:r sollte die Software seiner:ihrer Wahl auf seinem:ihrem Universalcomputer benutzen können.
+      </figcaption>
+    </figure>
+
+
+
+    <h2 id="gatekeeper-control-monopoly-devices">Gatekeepermonopoly auf Geräten</h2>
+
+    <p>
+      Obwohl die von uns genutzten Geräte Universalcomputer sind, haben Gerätehersteller:innen, 
+	  Händler:innen und Plattformbetreiber:innen die Softwarefreiheit durch ihre monopolartige 
+	  Macht über die Hardware stark eingeschränkt. Diese Macht erstreckt sich über 
+	  Funktionalitäten und Schlüsselkomponenten von Geräten wie Betriebssysteme, 
+	  Browser oder Appstores. Seit diese Komponenten zum Betrieb der Geräte benötigt 
+	  werden, schaffen diese eine <strong>Monopolstellung</strong>, die den Firmen 
+	  Kontrolle über den Zugang zu Software für Nutzer:innen ermöglicht und so eine 
+	  Gatekeeperfunktion für die Nutzer:innen in Bezug auf Zugang und Kontrolle von Software, 
+	  Hardware und Dienste auf ihren Geräten darstellt.
+    </p>
+
+    <p>
+      Hersteller:innen, Händler:innen und Plattformen üben Kontrolle über Geräte aus und haben 
+	  damit eine ähnliche <strong>Gatekeeperfunktion</strong> wie ein 
+	  Internetserviceprovider bei der Kontrolle über den Internetzugang. Je wichtiger 
+	  die Funktionalitäten der Geräte für die Nutzenden sind, umso gefestigter kann die 
+	  Gatekeeperposition auf dem Digitalmarkt werden.
+     </p>
+
+     <p>
+      Monopolisierte Märkte sind für einen fairen Wettbewerb und 
+	  Kundenzufriedenheit oft hinderlich. Mit Gatekeepern, die Betriebssysteme, 
+	  Appstores, Browser und zentrale Onlinservices kontrollieren, sind die Nutzenden
+	  mit keinen oder nur wenigen Auswahlmöglichkeiten allein gelassen und werden 
+	  somit an individueller Freiheit und Selbstbestimmung gehindert.
+      Im Einzelnen kann Gatekeeperkontrolle erreicht werden durch:
+     </p>
+
+    <ul>
+      <li>
+        <strong>Einschränkung der Softwarewahlfreiheit</strong>: Gatekeeper 
+		limitieren die Möglichkeiten der Nutzer:innen, andere Betriebssysteme,Browser, 
+		Appstores, Treiber usw. auf ihren Geräten zu installieren oder schließen 
+		dies ganz aus. Sie zwingen die Nutzer:innen vorinstallierte Apps auf und machen 
+		deren Deinstallation unmöglich.
+      </li>
+
+      <li>
+        <strong>Sperrung von Geräten</strong>: Solche Firmen verhindern 
+		Kompatibilität, üben starke Kontrolle über APIs aus und verwenden proprietäre 
+		Standards, die Funktionalitäten behindern und den Zugang zu Treibern und 
+		Hardware blockieren.
+      </li>
+
+      <li>
+        <strong>Steigende Wechselkosten</strong>: Gatekeeper halten Nutzer:innen in
+        "walled gardens", eigenen Bezahlumgebungen, binden Geräte an Onlineaccounts,
+		Appstores und behindern die Portierbarkeit von Daten, was es den Nutzer:innen 
+		erschwert, Software, Geräte und Services zu wechseln.
+      </li>
+    </ul>
+
+
+
+    <figure class="no-border">
+      <a
+      href="https://pics.fsfe.org/uploads/medium/77a19abc35b147a07d16525ddf38b37a.png">
+        <img
+          src="https://pics.fsfe.org/uploads/medium/77a19abc35b147a07d16525ddf38b37a.png"
+          alt="Zeichnung eines Smartphones, einer Person und gesperrten Geräten." />
+      </a>
+      <figcaption>
+        Die Macht von Gatekeepern über Geräte: Einschränkung von 
+        Wahlfreiheit in Bezug auf Software, Sperrung von Geräten und 
+        steigende Wechselkosten.
+      </figcaption>
+    </figure>
+
+        <module id="banner-subscribe" />
+
+    <h2 id="device-neutrality-free-software">Geräteneutralität und Freie Software</h2>
+
+    <p>
+      Die monopolistische Macht von Gatekeepern bedroht die Wahlfreiheit in Bezug 
+	  auf Software, Selbstbestimmung, Kundenzufriedenheit und digitale Souveränität. 
+	  Geräteneutralität repräsentiert Auswege aus der Macht von Gatekeepern und stellt 
+	  den Wettbewerb sowie die Kontrolle der Nutzer:innen über ihre Geräte wieder her. Die 
+	  Nutzenden sollten in der Lage sein, Gatekeeper zu umgehen und die Möglichkeit haben, 
+	  Freie Software auf ihren Geräten zu nutzen. Das Hauptziel von Geräteneutralität 
+	  ist es, das Monopol über Geräte zu durchbrechen, damit die Nutzendne wieder 
+	  Softwarewahlfreiheit genießen können und auf ihren Geräten Zugang zu alternativen 
+	  Services und Inhalten haben.
+    </p>
+
+    <p>
+      Die Wiederherstellung der Kontrolle von Nutzernden über ihre Geräte und eines fairen 
+	  Wettbewerbs auf digitalen Märkten erfordert es, die Softwarewahlfreiheit auf Geräten 
+	  zu bewahren und sie vor Lock-in Zwang zu schützen und dafür zu werben, dass sie 
+	  wieder die Kontrolle über ihre Daten haben.
+
+    </p>
+
+
+    <div class="icon-grid one-per-row">
+      <ul>
+        <li>
+          <img src="/graphics/icons/autonomy.png" alt="A broken chain" />
+          <div>
+            <h3 id="dn-software-freedom">Softwarewahlfreiheit</h3>
+            <p>
+              Dass die Freiheit der Nutzer:innen, Software auf ihren Geräten zu installieren, zu nutzen 
+			  und zu deinstallieren, blockiert wird, ist eine Säule, auf die sich die Kontrolle 
+			  von Gatekeepern stützt. Jedoch werden sie vielleicht einwenden, dass die Installation 
+			  von Drittanbietersoftware eine Gefahr für die Nutzer:innen in Bezug 
+			  auf Sicherheit, Datenintegrität oder Privatsphäre darstellen könnte. Tatsächlich sind 
+			  aber kommerzielle Interessen der Hauptgrund, Nutzer:innenrechte einzuschränken.
+            </p>
+            <p>
+              Stattdessen erfordert die Rückgewinnung der Kontrolle über die Geräte <a
+              href="/activities/upcyclingandroid/openletter.html">die Freiheit
+              in Bezug auf Software zu bewahren</a>. Die Nutzer:innen sollten die Möglichkeit haben,
+			  jede Software, einschließlich Betriebssystemen und Appstores zu installieren und 
+			  zu deinstallieren. Daher sollten Gatekeeper Drittanbieterapplikationen die gleichen
+			  Zugangsprivilegien gewähren wie der vorinstallierten Software.
+            </p>
+          </div>
+        </li>
+
+        <li>
+          <img src="/graphics/icons/no-lock-in.png" alt="An open lock" />
+          <div>
+            <h3 id="dn-no-lock-in">Kein Lock-In</h3>
+            <p>
+              Die Nutzer:innen in sehr restriktivem Umfeld zu belassen, ist eine weitere Säule 
+			  der Gatekeeperkontrolle. Sie können nur auf andere Dienste zugreifen 
+			  und diese nutzen, wenn ihre Geräte mit anderen Geräten und Diensten interagieren 
+			  und kommunizieren können. Große Technologieunternehmen üben direkte 
+			  Kontrolle über ihre Nutzer:innen aus, indem sie sie in einer 
+			  Umgebung mit einer limitierten 
+			  Zahl von proprietären Alternativen einsperren, die teilweise, aber nicht
+ vollständig kompatibel sind. Das führt für die Nutzer:innen zu weniger Freiheit und höheren 
+			  Wechselkosten.
+            </p>
+            <p>
+              Daher ist ein hoher Grad von Kompatibilität, eine weitgehende 
+			  Implementierung von <a href="/freesoftware/standards/index.html">Offenen
+              Standards</a> und ein einfacher Zugang zu API Spezifikationen und
+              -funktionalitäten, die von Drittanbieterapps stammen, essenziell.
+              Ebenso wichtig ist es, dass Geräte nicht an Appstores und Onlineaccounts 
+			  gebunden sind. Gatekeeper sollten Appstores von Drittanbietern und 
+			  Quelltextrepositories auf ihren Geräten erlauben. Sie sollten auch einen
+              diskriminierungsfreien Zugang zu Freier Software in ihren Stores ermöglichen
+              und nicht ihren eigenen Produkten den Vorzug geben.
+            </p>
+          </div>
+        </li>
+
+        <li>
+          <img src="/graphics/icons/transparency.png" alt="An open hand" />
+          <div>
+            <h3 id="dn-control-over-data">Die Kontrolle der Nutzenden über ihre Daten</h3>
+            <p>
+              Um Monopole über Geräte zu durchbrechen ist es erforderlich, die Nutzenden zu
+			  ermächtigen, Kontrolle über ihre eigenen Daten auf ihren Geräten zu haben. 
+			  Smartphones, Smartwatches und Computer sind Geräte mit sehr persönlichen 
+			  und nicht-persönlichen Daten, die für die Nutzenden wichtig sind. Solche Daten 
+			  zu transferieren, kann zu Wechselkosten führen, die Nutzende davon abhalten, 
+			  ihre Freiheit auf einen Gerätewechsel zu beanspruchen. Das stellt insbesondere 
+			  beim Wechsel zwischen Betriebssystemen ein Problem dar. Und mit zunehmender 
+			  Bedeutung der Korrelation zwischen Daten und Software, wie etwa die Entwicklung 
+			  Künstlicher Intelligenz und anderer zukünftiger Technologien kommt eine weitere 
+			  Komplexitätsschicht für die Nutzenden bezüglich der Kontrolle über ihre Daten hinzu.
+            </p>
+            <p>
+              Daher sollte es für Nutzer:innen einfach möglich sein, persönliche Daten von Apps, 
+			  Betriebssystemen und Geräten zu transferieren. Das wichtigste dabei sollte 
+			  sein, dass Gatekeeper an <a
+			  href="/freesoftware/standards/index.html">Offene Standards</a> und
+              standardisierte Interfaces für den Datentransfer gebunden sind.
+            </p>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <hr />
+
+    <h2 id="dn-reality">Geräteneutralität verwirklichen</h2>
+
+    <p>
+      Seit ihrer Gründung arbeitet die FSFE daran, die Kontrolle über Technologie
+      in die Hände der Nutzer:innen zu geben. Über die Jahre haben wir bei verschiedenen 
+	  Veranstaltungen, die der Ermächtigung der Nutzer:innen in Bezug auf ihre Geräte gewidmet 
+	  waren, an Erfahrung gewonnen. Wir arbeiten eng mit Entscheidungsträgern, Kommunen 
+	  und der Wirtschaft zusammen, um sicherzustellen, dass die Nutzenden zur Kontrolle über 
+	  ihre Technologie ermächtigt werden können. Unsere Arbeit besteht darin, die 
+	  Anforderungen für Geräteneutralität mittels verschiedener Initiativen und Veranstaltungen 
+	  in eine verständliche Realität für Digitalmärkte zu übersetzen.
+    </p>
+    
+    <h3 id="dn-dma">Offener Brief: das universale Recht darauf, jede Software auf jedem Gerät zu installieren</h3>
+    
+    <p>
+      Als Teil der 
+      <a href="/activities/upcyclingandroid/">Upcycling Android</a> Initiative,
+      hat die FSFE einen offenen Brief an die Legislative der EU darüber gestartet, warum das universale 
+	  Recht zur freien Wahl des Betriebssystems, von Software und Diensten 
+	  zentral ist für eine nachhaltigere 
+	  digitale Gesellschaft. Der Brief wird von hunderten von Menschen und 
+	  zivil-gesellschaftlichen Organisationen 
+	  unterstützt und unterzeichnet. Wir möchten, dass die Nutzenden das Recht 
+	  über ihre Hardware haben und ihre 
+	  Software so lange nutzen können, wie sie möchten. 
+      Zusammengefasst fordern wir, dass:
+	</p>
+	<p>
+	</p>
+<ul>
+ 	<li>
+ 	Nutzer:innen das Recht haben, das Betriebssystem und die Software auf 
+ 	ihren Geräten frei wählen zu können;
+ 	</li>
+  	<li>
+  	Nutzer:innen das Recht haben, frei zwischen Dienstanbietern zu wählen, mit 
+  	denen sie ihre Geräte verbinden möchten;
+  	</li>
+  	<li>
+  	Dass Geräte interoperabel und kompatibel mit offenen Standards sind;
+  	</li>
+  	<li>
+  	Quelltext von Treibern, Tools und Interfaces unter einer freien Lizenz veröffentlicht wird.
+  	</li>
+	</ul>
+    	<p class="text-center"></p>         	
+<p class="text-center">
+  <a class="btn btn-lg btn-success" 
+  href="/activities/upcyclingandroid/openletter.html#sign-the-letter">Unterzeichnen 
+  auch Sie!</a>
+</p> 
+
+    <h3 id="dn-dma">Der Digital Markets Act</h3>
+
+    <p>
+      2022 wurden mehrere Teile der Geräteneutralität in den 
+      <a href="/activities/dma/dma.html">Digital Markets Act (DMA)</a> integriert,
+      die größte Initiative der Europäischen Union zur Regulierung von Gatekeepern
+	  auf Digitalmärkten. Obwohl das Gesetz die Prinzipien schon enthält, die 
+	  Geräteneutraliät ermöglichen würden, betreffen die Regulierungen nur 
+	  sehr große Plattformen. Der DMA führt Verpflichtungen für Gatekeeper 
+	  ein - “dos” und “don'ts” an die sie sich halten müssen - und Strafen für 
+	  Verstöße. Der DMA umfasst verschiedene Regelungen zu Geräteneutralität, er 
+	  bewahrt das Recht, vorinstallierte Software zu deinstallieren und 
+	  enthält auch Maßnahmen, um Lock-in zu vermeiden so wie 
+	  Interoperabilität und die Kontrolle 
+	  der Nutzer:innen über persönliche Daten zu fördern.
+    </p>
+
+
+    <h3 id="dn-initiatives">Initiativen für Geräteneutralität</h3>
+
+   <p>
+    Digitale Ökosysteme sind extrem komplex und die Durchsetzung von Geräteneutralität 
+	erfordert entsprechende Initiativen, die auf die unterschiedlichen Aspekte der Nutzer :innen
+	abzielen, ihre Geräte zu nutzen und damit zu interagieren. Im Verlauf der Jahre haben 
+	wir Veranstaltungen zu den verschiedenen Aspekten von Geräteneutralität durchgeführt 
+	und für Softwarefreiheit geworben sowie für den Schutz von Nutzer:innen vor Lock-in und die 
+	Selbstermächtigung in Bezug auf persönliche Daten gefördert.
+   </p>
+
+   <div class="icon-grid">
+      <ul>
+        <li>
+          <img src="/graphics/icons/legal-structure.png" alt="A symbol for a legal file" />
+          <div>
+            <h3 id="id-dma-icon">DMA</h3>
+            <p>
+              Der <a href="/activities/dma/dma.html">Digital Markets Act (DMA)</a>
+              ist ein Game-Changer für die Regulierung von Gatekeepern. Die Regeln des DMA 
+			  betreffen mehrere Aspekte von Geräteneutralität. Die FSFE hat am legislativen 
+			  Prozess mitgewirkt und verfolgt auch die Umsetzung.
+            </p>
+          </div>
+        </li>
+
+        <li>
+          <img src="/graphics/logos/RouterFreedom-logo.png" alt="Router Freedom Logo" />
+          <div>
+            <h3 id="id-router-freedom">Routerfreiheit</h3>
+            <p>
+              <a href="/activities/routers/routers.html">Routerfreiheit</a> ist das Recht, das jede:r hat, 
+			  Router und Modem frei zu wählen und zu nutzen. Die FSFE arbeitet seit einem Jahrzehnt daran,
+              es zu verwirklichen.
+            </p>
+          </div>
+        </li>
+
+        <li>
+          <img src="/graphics/logos/ua.png" alt="Logo of Upcycling Android" />
+          <div>
+            <h3 id="id-ua">Androidupcycling</h3>
+            <p>
+              Freie Software hilft dabei, die Lebensspanne von Geräten 
+              zu verlängern. Mit dem <a 
+              href="/activities/upcyclingandroid">Androidupcycling</a>
+              werben wir für nachhaltige Lösungen um Softwareobsoleszenz in der Androidwelt zu überwinden.
+            </p>
+          </div>
+        </li>
+
+        <li>
+          <img src="/graphics/logos/radiodirective.png" alt="Logo of the Radio Lockdown Directive activity" />
+          <div>
+            <h3 id="id-red">Radio Lockdown Directive</h3>
+            <p>
+              Die EU Legislative stellt manchmal eine Hürde für die Nutzung Freier Software in Radiogeräten. 
+              Wir werben für <a href="/activities/radiodirective/radiodirective.html">
+              bessere politische und gesetzgeberische Lösungen</a>
+              für die Nutzer:innen von Radioequipment.
+            </p>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <figure class="no-border">
+      <img
+          src="https://pics.fsfe.org/uploads/medium/991c7845beed330024615173a7c4175d.jpg"
+          alt="Drei glückliche Menschen arbeiten zusammen mit Computern und Smartphones." />
+      <figcaption>
+        Menschen sollten Kontrolle über Technologie haben. Bitte helfen Sie uns, Geräteneutralität 
+        zu verwirklichen!
+      </figcaption>
+    </figure>
+
+    <p>
+      Obwohl die Prinzipien der Geräteneutralität in der Community der Freien Software 
+	  zumeist bekannt sind, sind sie weit davon entfernt, von den Gatekeepern in ihrer 
+	  Geschäftspraxis anerkannt zu sein. Die Überwachung der Umsetzung und Erfüllung 
+	  der DMA, die Durchführung gerätebezogener Aktivitäten und die Werbung für 
+	  Softwarefreiheit erfordern viele Ressourcen.
+      <fsfe-cd-donate-link>Bitte überlegen Sie, diemit einer Spende zu 
+      unterstützen;</fsfe-cd-donate-link> Sie ermöglichen unseren 
+      langjährigen und 
+	  professionellen Einsatz dafür, die Rechte der Menschen auf Technologiekontrolle zu 
+	  verteidigen.
+
+    </p>
+
+     <p class="text-center">
+      <fsfe-cd-donate-link class="btn btn-lg btn-primary">
+	Ich möchte für Geräteneutralität spenden!
+      </fsfe-cd-donate-link>
+    </p>
+
+
+ </div>
+
+  <related-feed tag="deviceneutrality" />
+
+</body>
+
+<sidebar promo="our-work">
+
+  <h2>Durchsetzung von Geräteneutralität</h2>
+  <ul>
+    <li><a href="/activities/dma/dma.html">Geräteneutralität und die DMA</a>
+    </li>
+  </ul>
+
+  <h2>Freie Software und Geräte</h2>
+  <ul>
+    <li><a href="/activities/routers/">Routerfreiheit</a></li>
+    <li><a href="/activities/upcyclingandroid/">Androidupcycling</a></li>
+    <li><a href="/activities/radiodirective/">EU Radio Lockdown</a></li>
+  </ul>
+
+ <h2>Unterstützung der FSFE</h2>
+
+    <p>
+    Als Non-Profitunternehmen und Nichtregierungsorganisation arbeitet die Free Software Foundation
+    Europe daran, ein umfassendes Verständnis und Unterstützung für die Freie Software
+    und Offene Standards in Politik, Wirtschaft, Recht und Gesellschaft zu erreichen.
+    Wenn Sie Unterstützer der FSFE werden, ermöglichen Sie unsere Arbeit und helfen dabei, 
+	unsere finanzielle Unabhängigkeit zu sichern.
+    </p>
+
+  <fsfe-cd-donate-link class="big-donate">Unterstützer werden</fsfe-cd-donate-link>
+
+
+</sidebar>
+
+</html>

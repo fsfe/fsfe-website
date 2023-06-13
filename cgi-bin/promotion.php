@@ -109,10 +109,11 @@ setlocale(LC_CTYPE, "en_US.UTF-8");
 $countrycode = explode('|', $_POST["country"])[0];
 $countryname = explode('|', $_POST["country"])[1];
 
+$subject = "Promotion material order";
 if ($_POST['packagetype'] == 'default') {
-  $subject = "Standard promotion material order";
+  $label = "Standard";
 } else {
-  $subject = "Custom promotion material order";
+  $label = "Custom";
 }
 $msg_to_staff = "Please send me promotional material:\n" .
   "First Name: {$_POST['firstname']}\n" .
@@ -151,7 +152,7 @@ $msg_to_staff .= "\n" .
 $msg_to_donor = "";
 if (isset($_POST['donate']) && ($_POST['donate'] > 0)) {
   $_POST['donationID'] = "DAFSPCK" . gen_alnum(5);
-  $subject .= " " . $_POST['donationID'];
+  $subject .= ": " . $_POST['donationID'];
   $msg_to_staff .= "\n\nThe orderer choose to make a Donation of {$_POST['donate']} Euro.\n" .
     "Please do not assume that this donation has been made until you receive\n" .
     "confirmation from Concardis for the order: {$_POST['donationID']}";
@@ -285,8 +286,12 @@ $jsondata = [
   "status"       => "active",
   "customFields" => [
     [
-      "id"    => 4,              # Order ID Custom Field
-      "value" => $_POST['donationID'] ?? ""    # Donation ID
+      "id"       => 4,              # Order ID Custom Field
+      "value"    => $_POST['donationID'] ?? ""    # Donation ID
+    ],
+    [
+      "id"       => 7,
+      "value"    => $label
     ]
   ]
 ];

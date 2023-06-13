@@ -27,7 +27,7 @@
 
     <form class="form-inline" id="formnl" name="formnl" method="POST" action="https://my.fsfe.org/subscribe">
       <input type="hidden" name="language" value="{$lang}"/>
-
+      <input type="input" style="display: none !important" name="password" value="1" tabindex="-1" autocomplete="off"/>
       <input id="yourname" name="name" type="text" required="required" placeholder="{$yourname}"/>
       <input id="email" name="email1" type="email" required="required" placeholder="{$email}"/>
       <fsfe-cd-referrer-input/>

@@ -11,7 +11,7 @@
 
       <form class="form-inline" method="post" action="https://my.fsfe.org/subscribe">
         <input type="hidden" name="language" value="es"/>
-        <input type="input" style="display: none !important" name="password" value="1" tabindex="-1" autocomplete="off"/>
+        <input type="input" style="display: none !important" name="password" tabindex="-1" autocomplete="off"/>
         <div class="form-group">
           <input type="text" class="form-control" name="name" placeholder="Tu Nombre" required="required"/>
         </div>

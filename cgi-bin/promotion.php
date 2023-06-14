@@ -110,11 +110,6 @@ $countrycode = explode('|', $_POST["country"])[0];
 $countryname = explode('|', $_POST["country"])[1];
 
 $subject = "Promotion material order";
-if ($_POST['packagetype'] == 'default') {
-  $label = "Standard";
-} else {
-  $label = "Custom";
-}
 $msg_to_staff = "Please send me promotional material:\n" .
   "First Name: {$_POST['firstname']}\n" .
   "Last Name:  {$_POST['lastname']}\n" .
@@ -288,10 +283,6 @@ $jsondata = [
     [
       "id"       => 4,              # Order ID Custom Field
       "value"    => $_POST['donationID'] ?? ""    # Donation ID
-    ],
-    [
-      "id"       => 7,
-      "value"    => $label
     ]
   ]
 ];

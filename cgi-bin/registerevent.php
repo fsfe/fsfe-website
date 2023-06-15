@@ -102,7 +102,7 @@ function send_registration_mail() {
 		"mailboxId" => 5,         # This is the General Helpdesk
 		"subject"   => $subject,
 		"customer"  => [
-			"email" => $_POST['mail'],
+			"email" => $_POST['email'],
 			"firstName" => $_POST['name'],
 		],
 		"threads" => [
@@ -120,28 +120,28 @@ function send_registration_mail() {
 						"data"     => base64_encode($wiki)
 					],
 					[
-						"filename" => "event-" . str_replace("-", "", $startdate) . "-01." . $lang .".xml",
+						"filename" => "event-" . str_replace("-", "", $data[startdate]) . "-01." . $data[lang] .".xml",
 						"mimeType" => "application/xml",
 						"data"     => base64_encode($event)
 					]
 				]
 			],
 			[
-				"text"     => $message,
-				"type"     => "message",
-				"user"     => 6530,
-				"attachments" => [
-					[
-						"filename" => "wiki.txt",
-						"mimeType" => "plain/text",
-						"data"     => base64_encode($wiki)
-					],
-					[
-						"filename" => "event-" . str_replace("-", "", $startdate) . "-01." . $lang .".xml",
-						"mimeType" => "application/xml",
-						"data"     => base64_encode($event)
-					]
-				]
+			  "text"     => $message,
+			  "type"     => "message",
+			  "user"     => 6530,
+			  "attachments" => [
+				  [
+					  "filename" => "wiki.txt",
+					  "mimeType" => "plain/text",
+					  "data"     => base64_encode($wiki)
+				  ],
+				  [
+					  "filename" => "event-" . str_replace("-", "", $data[startdate]) . "-01." . $data[lang] .".xml",
+					  "mimeType" => "application/xml",
+					  "data"     => base64_encode($event)
+				  ]
+			  ]
 			]
 		],
 		"imported"     => false,

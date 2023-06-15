@@ -87,16 +87,11 @@ function send_registration_mail($from) {
 	$message = eval_template('registerevent/mail.php', $data);
 
 	$subject = "Event registration: " . $_POST['title'];
-	$headers = "From: " . $from . "\n"
-		. "MIME-Version: 1.0\n"
-                . "X-OTRS-Queue: Events\n"
-		. "Content-Type: multipart/mixed; boundary=boundary";
 
   // uncomment for local debug
   // print_r($message);
   // exit(0);
 
-	//mail($to, $subject, $message, $headers);
 	/**
 	 * Create a new ticket in the FreeScout system
 	 */
@@ -152,7 +147,6 @@ if ( isset($_POST['register_event']) AND empty($_POST['spam']) AND eval_date($_P
 	AND ( eval_date($_POST['enddate']) ) || empty($_POST['enddate'])  ) {
 
 	$error = send_registration_mail();
-	//$error = send_registration_mail("FSFE <contact@fsfe.org>", $_POST['name'] . " <" . $_POST['email'] . ">");
 
 	echo eval_xml_template('registerevent/success.en.html', array(
 		'notice' => '', // TODO display some error code here

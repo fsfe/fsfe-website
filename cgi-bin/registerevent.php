@@ -84,8 +84,6 @@ function send_registration_mail() {
 	$event = eval_template('registerevent/event.php', $data);
 	$wiki = eval_template('registerevent/wiki.php', $data);
 
-	$message = eval_template('registerevent/mail.php', $data);
-
 	$subject = "Event registration: " . $_POST['title'];
 
   // uncomment for local debug
@@ -107,7 +105,7 @@ function send_registration_mail() {
 		],
 		"threads" => [
 			[
-				"text"     => $message,
+				"text"     => eval_template('registerevent/mailstaff.php', $data),
 				"type"     => "customer",
 				"customer" => [
 					"email" => $_POST['email'],
@@ -127,7 +125,7 @@ function send_registration_mail() {
 				]
 			],
 			[
-			  "text"     => $message,
+			  "text"     => eval_template('registerevent/mail.php', $data),
 			  "type"     => "message",
 			  "user"     => 6530,
 			  "attachments" => [

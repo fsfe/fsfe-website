@@ -9,7 +9,15 @@ function eval_xml_template($template, $data)
   $result = preg_replace("/<tpl name=\"[^\"]*\"><\/tpl>/", '', $result);
   return $result;
 }
-
+function eval_template($template, $data) {
+	extract($data);
+	$dir = realpath(dirname(__FILE__) . '/../templates');
+	ob_start();
+	include("$dir/$template");
+	$result = ob_get_contents();
+	ob_end_clean();
+	return $result;
+}
 function gen_alnum($digits)
 {
   $alphabet = '0123456789abcdefghijklmnopqrstuvwxyz';
@@ -144,25 +152,13 @@ $msg_to_staff .= "\n" .
   "Comments:\n" .
   "{$_POST['comment']}\n";
 
-$msg_to_donor = "";
+$donationID = "";
 if (isset($_POST['donate']) && ($_POST['donate'] > 0)) {
   $_POST['donationID'] = "DAFSPCK" . gen_alnum(5);
   $subject .= ": " . $_POST['donationID'];
   $msg_to_staff .= "\n\nThe orderer choose to make a Donation of {$_POST['donate']} Euro.\n" .
     "Please do not assume that this donation has been made until you receive\n" .
     "confirmation from Concardis for the order: {$_POST['donationID']}";
-  $msg_to_donor = "<p>If you have yet to make your donation, you may now do so by following" . 
-    "this link: <a href=https://fsfe.org/order/payonline.$lang/".$_POST['donationID'].">" . 
-    "https://fsfe.org/order/payonline.$lang/".$_POST['donationID']."</a>. Once the donation is" .
-    "confirmed the promotional material will be send.</p>" .
-    "<p>In case you prefer to pay by bank transfer, please use the following data:</p>" .
-    "<p>Recipient: Free Software Foundation Europe e.V.<br>" .
-    "Address: Schoenhauser Allee 6/7, 10119 Berlin, Germany<br>" .
-    "IBAN: DE47 4306 0967 2059 7908 01<br>" .
-    "Bank: GLS Gemeinschaftsbank eG, 44774 Bochum, Germany<br>" .
-    "BIC: GENODEM1GLS<br>" .
-    "Payment reference: ".$_POST['donationID']."<br>" .
-    "Payment amount: ".$_POST['donate']." Euro</p>";
 }
 
 # Generate letter to be sent along with the material
@@ -210,37 +206,13 @@ if ($subcd == "y" or $subnl == "y") {
   mail_signup($signupdata);
 }
 
-$msg_to_customer = <<<EOT
-<html>
-<body>
-  <p>Dear $name,</p>
-  <p>
-    thank you for your recent request of promotional material from the FSFE!
-    We've received your request and will normally be sending this to you
-    within a few days. We will let you know once we've packed your order
-    and sent it. Please note that we usually send the material without a
-    tracking number.
-  </p>
-  $msg_to_donor
-  <p>
-    In about two weeks after we send your material, we will contact you to
-    make sure it was received properly. We will also contact you later on to
-    get some feedback from you about the material and how it's been used. If
-    you have any questions in the mean time, please feel free to reply to
-    this message.
-  </p>
-  <p>
-    Thanks for helping us spread the word, and we hope you will have fun and
-    find the material useful! If you share pictures online of the material
-    having arrived or where it's been used, let us know by dropping a link
-    to us here or on social networks (@fsfe).
-  </p>
-  <p>
-    Best regards,
-  </p>
-</body>
-</html> 
-EOT;
+$data = [
+  'name'         => $_POST['firstname'] . " " . $_POST['lastname'],
+  'donationID'   => $donationID,
+  'donate'       => $_POST['donate'],
+  'lang'         => $lang,
+];
+$msg_to_customer = eval_template('promoorder/promoorder.php', $data);
 
 /**
  * Create a new ticket in the FreeScout system

@@ -115,12 +115,29 @@ function send_registration_mail() {
 				],
 				"attachments" => [
 					[
-						"data" => "wiki.txt",
+						"filename" => "wiki.txt",
 						"mimeType" => "plain/text",
 						"data"     => base64_encode($wiki)
 					],
 					[
-						"data" => "event-" . str_replace("-", "", $startdate) . "-01." . $lang .".xml",
+						"filename" => "event-" . str_replace("-", "", $startdate) . "-01." . $lang .".xml",
+						"mimeType" => "application/xml",
+						"data"     => base64_encode($event)
+					]
+				]
+			],
+			[
+				"text"     => $message,
+				"type"     => "message",
+				"user"     => 6530,
+				"attachments" => [
+					[
+						"filename" => "wiki.txt",
+						"mimeType" => "plain/text",
+						"data"     => base64_encode($wiki)
+					],
+					[
+						"filename" => "event-" . str_replace("-", "", $startdate) . "-01." . $lang .".xml",
 						"mimeType" => "application/xml",
 						"data"     => base64_encode($event)
 					]

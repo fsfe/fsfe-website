@@ -58,9 +58,9 @@ function send_registration_mail() {
 	$countryname = explode('|', $_POST['country'])[1];
 
 	if($_POST['online'] === "yes") {
-	$location = "online";
+		$location = "online";
 	} else {
-	$location = htmlspecialchars($_POST['city']) . ", " . htmlspecialchars($countryname);
+		$location = htmlspecialchars($_POST['city']) . ", " . htmlspecialchars($countryname);
 	}
 
 	$data = array(
@@ -81,8 +81,8 @@ function send_registration_mail() {
 		'lang' => $_POST['lang']
 	);
 
-	$data['event'] = eval_template('registerevent/event.php', $data);
-	$data['wiki'] = eval_template('registerevent/wiki.php', $data);
+	$event = eval_template('registerevent/event.php', $data);
+	$wiki = eval_template('registerevent/wiki.php', $data);
 
 	$message = eval_template('registerevent/mail.php', $data);
 
@@ -98,28 +98,40 @@ function send_registration_mail() {
 	$url = "https://helpdesk.fsfe.org/api/conversations";
 	$apikey = getenv('FREESCOUT_API_KEY');
 	$jsondata = [
-	"type"      => "email",
-	"mailboxId" => 5,         # This is the General Helpdesk
-	"subject"   => $subject,
-	"customer"  => [
-		"email" => $_POST['mail']
-	],
-	"threads" => [
-		[
-		"text"     => $message,
-		"type"     => "customer",
-		"customer" => [
-			"email" => $_POST['email'],
-			"lastName" => $_POST['name'],
+		"type"      => "email",
+		"mailboxId" => 5,         # This is the General Helpdesk
+		"subject"   => $subject,
+		"customer"  => [
+			"email" => $_POST['mail']
 		],
-		[
-		"text"     => $message,
-		"type"     => "message",
-		"user"     => 6530,
-		]
-	]],
-	"imported"     => false,
-	"status"       => "active",
+		"threads" => [
+			[
+			"text"     => $message,
+			"type"     => "customer",
+			"customer" => [
+				"email" => $_POST['email'],
+				"lastName" => $_POST['name'],
+			],
+			[
+			"text"     => $message,
+			"type"     => "message",
+			"user"     => 6530,
+			],
+			"attachments" => [
+			  [
+				"data" => "wiki.txt",
+				"mimeType" => "plain/text",
+				"data"     => base64_encode($wiki)
+			  ],
+			  [
+				"data" => "event.txt",
+				"mimeType" => "plain/text",
+				"data"     => base64_encode($event)
+			  ]
+			]
+		]],
+		"imported"     => false,
+		"status"       => "active",
 	];
 	$jsonDataEncoded = json_encode($jsondata);
 

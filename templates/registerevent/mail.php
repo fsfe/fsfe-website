@@ -1,10 +1,3 @@
-
---boundary 
-Content-Type: text/plain; charset=utf-8
-Content-Disposition: inline 
-
- 
- 
 Hi, 
  
 You have registered an event on https://fsfe.org/events/tools/eventregistration
@@ -21,15 +14,3 @@ please contact contact@fsfe.org
  
 Thanks,
 your website
---boundary
-Content-Type: text/plain; charset=utf-8
-Content-Disposition: attachment; filename="wikievent.txt"
-
-<?=$wiki?>
---boundary 
-Content-Type: application/xml; charset=utf-8 
-Content-Disposition: attachment; filename="event-<?php echo str_replace("-", "", $startdate) . "-01." . $lang; ?>.xml" 
-
-<?=$event?>
---boundary--
-

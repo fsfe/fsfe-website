@@ -120,7 +120,7 @@ function send_registration_mail() {
 						"data"     => base64_encode($wiki)
 					],
 					[
-						"filename" => "event-" . str_replace("-", "", $data[startdate]) . "-01." . $data[lang] .".xml",
+						"filename" => "event-" . str_replace("-", "", $data['startdate']) . "-01." . $data['lang'] .".xml",
 						"mimeType" => "application/xml",
 						"data"     => base64_encode($event)
 					]
@@ -137,7 +137,7 @@ function send_registration_mail() {
 					  "data"     => base64_encode($wiki)
 				  ],
 				  [
-					  "filename" => "event-" . str_replace("-", "", $data[startdate]) . "-01." . $data[lang] .".xml",
+					  "filename" => "event-" . str_replace("-", "", $data['startdate']) . "-01." . $data['lang'] .".xml",
 					  "mimeType" => "application/xml",
 					  "data"     => base64_encode($event)
 				  ]

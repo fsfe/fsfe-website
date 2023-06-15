@@ -1,16 +1,16 @@
-Hi, 
- 
-You have registered an event on https://fsfe.org/events/tools/eventregistration
+<p>Hi,<br /> 
+You have registered an event on https://fsfe.org/events/tools/eventregistration</p>
 
-Below is the list of the information you gave.
-	Name: <?=$name?> 
-	Email: <?=$email?> 
-
-	Location: <?=$location?>
+<p>Below is the list of the information you gave.</p>
+<ul>
+	<li>Name: <?=$name?> </li>
+	<li>Email: <?=$email?> </li>
+	<li>Location: <?=$location?></li>
+</ul>
  
-You find all other information in the xml file attached. It will be uploaded
+<p>You find all other information in the xml file attached. It will be uploaded
 in the next 24 hours. If you like to withdraw your event or in case you like to change some information,
-please contact contact@fsfe.org
+please contact contact@fsfe.org</p>
  
-Thanks,
-your website
+<p>Thanks,<br />
+your website</p>

@@ -152,7 +152,7 @@ $msg_to_staff .= "\n" .
   "Comments:\n" .
   "{$_POST['comment']}\n";
 
-$donationID = "";
+$_POST['donationID'] = "";
 if (isset($_POST['donate']) && ($_POST['donate'] > 0)) {
   $_POST['donationID'] = "DAFSPCK" . gen_alnum(5);
   $subject .= ": " . $_POST['donationID'];
@@ -208,7 +208,7 @@ if ($subcd == "y" or $subnl == "y") {
 
 $data = [
   'name'         => $_POST['firstname'] . " " . $_POST['lastname'],
-  'donationID'   => $donationID,
+  'donationID'   => $_POST['donationID'],
   'donate'       => $_POST['donate'],
   'lang'         => $lang,
 ];

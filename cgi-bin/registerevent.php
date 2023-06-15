@@ -52,16 +52,16 @@ function eval_date($date) {
 	return (!$dt['errors'] && $dt['year'] && preg_match("#^(19|20)\d\d[- /.](0[1-9]|1[012])[- /.](0[1-9]|[12][0-9]|3[01])$#", $date) === 1);
 }
 
-function send_registration_mail($from, $to) {
-  // do some prior location computation
-  $countrycode = explode('|', $_POST['country'])[0];
-  $countryname = explode('|', $_POST['country'])[1];
+function send_registration_mail($from) {
+	// do some prior location computation
+	$countrycode = explode('|', $_POST['country'])[0];
+	$countryname = explode('|', $_POST['country'])[1];
 
-  if($_POST['online'] === "yes") {
-    $location = "online";
-  } else {
-    $location = htmlspecialchars($_POST['city']) . ", " . htmlspecialchars($countryname);
-  }
+	if($_POST['online'] === "yes") {
+	$location = "online";
+	} else {
+	$location = htmlspecialchars($_POST['city']) . ", " . htmlspecialchars($countryname);
+	}
 
 	$data = array(
 		'name' => $_POST['name'],
@@ -96,15 +96,63 @@ function send_registration_mail($from, $to) {
   // print_r($message);
   // exit(0);
 
-	mail($to, $subject, $message, $headers);
+	//mail($to, $subject, $message, $headers);
+	/**
+	 * Create a new ticket in the FreeScout system
+	 */
+	$url = "https://helpdesk.fsfe.org/api/conversations";
+	$apikey = getenv('FREESCOUT_API_KEY');
+	$jsondata = [
+	"type"      => "email",
+	"mailboxId" => 5,         # This is the General Helpdesk
+	"subject"   => $subject,
+	"customer"  => [
+		"email" => $_POST['mail']
+	],
+	"threads" => [
+		[
+		"text"     => $message,
+		"type"     => "customer",
+		"customer" => [
+			"email" => $_POST['email'],
+			"lastName" => $_POST['name'],
+		],
+		[
+		"text"     => $message,
+		"type"     => "message",
+		"user"     => 6530,
+		]
+	]],
+	"imported"     => false,
+	"status"       => "active",
+	];
+	$jsonDataEncoded = json_encode($jsondata);
+
+	$curl = curl_init();
+	curl_setopt_array($curl, [
+	CURLOPT_RETURNTRANSFER => 1,
+	CURLOPT_URL => $url,
+	CURLOPT_POST => 1,
+	CURLOPT_CUSTOMREQUEST => "POST",
+	CURLOPT_POSTFIELDS => $jsonDataEncoded,
+	CURLOPT_HTTPHEADER => [
+		"Content-Type: application/json",
+		"Content-Length: " . strlen($jsonDataEncoded),
+		"X-FreeScout-API-Key: " . $apikey
+	],
+	CURLOPT_USERAGENT => 'FSFE registerevent.php'
+	]);
+	$response = curl_exec($curl);
+	curl_close($curl);
 
 	return $data['img_error'];
 }
 
 if ( isset($_POST['register_event']) AND empty($_POST['spam']) AND eval_date($_POST['startdate'])
 	AND ( eval_date($_POST['enddate']) ) || empty($_POST['enddate'])  ) {
-	$error = send_registration_mail($_POST['name'] . " <" . $_POST['email'] . ">", "FSFE <contact@fsfe.org>");
-	$error = send_registration_mail("FSFE <contact@fsfe.org>", $_POST['name'] . " <" . $_POST['email'] . ">");
+
+	$error = send_registration_mail();
+	//$error = send_registration_mail("FSFE <contact@fsfe.org>", $_POST['name'] . " <" . $_POST['email'] . ">");
 
 	echo eval_xml_template('registerevent/success.en.html', array(
 		'notice' => '', // TODO display some error code here

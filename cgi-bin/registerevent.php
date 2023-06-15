@@ -64,21 +64,21 @@ function send_registration_mail() {
 	}
 
 	$data = array(
-		'name' => $_POST['name'],
-		'email' => $_POST['email'],
-		'title' => $_POST['title'],
-		'groupname' => $_POST['groupname'],
-		'groupurl' => $_POST['groupurl'],
-		'startdate' => $_POST['startdate'],
-		'enddate' => $_POST['enddate'],
-		'description' => $_POST['description'],
-		'url' => $_POST['url'],
-		'online' => $_POST['online'],
+		'name' => isset($_POST['name'])?$_POST['name']:"",
+		'email' => isset($_POST['email'])?$_POST['email']:"",
+		'title' => isset($_POST['title'])?$_POST['title']:"",
+		'groupname' => isset($_POST['groupname'])?$_POST['groupname']:"",
+		'groupurl' => isset($_POST['groupurl'])?$_POST['groupurl']:"",
+		'startdate' => isset($_POST['startdate'])?$_POST['startdate']:"",
+		'enddate' => isset($_POST['enddate'])?$_POST['enddate']:"",
+		'description' => isset($_POST['description'])?$_POST['description']:"",
+		'url' => isset($_POST['url'])?$_POST['url']:"",
+		'online' => isset($_POST['online'])?$_POST['online']:"",
 		'location' => $location,
 		'countryname' => $countryname,
 		'countrycode' => $countrycode,
-		'tags' => $_POST['tags'],
-		'lang' => $_POST['lang']
+		'tags' => isset($_POST['tags'])?$_POST['tags']:"",
+		'lang' => isset($_POST['lang'])?$_POST['lang']:""
 	);
 
 	$event = eval_template('registerevent/event.php', $data);
@@ -102,34 +102,31 @@ function send_registration_mail() {
 		"mailboxId" => 5,         # This is the General Helpdesk
 		"subject"   => $subject,
 		"customer"  => [
-			"email" => $_POST['mail']
+			"email" => $_POST['mail'],
+			"firstName" => $_POST['name'],
 		],
 		"threads" => [
 			[
-			"text"     => $message,
-			"type"     => "customer",
-			"customer" => [
-				"email" => $_POST['email'],
-				"lastName" => $_POST['name'],
-			],
-			[
-			"text"     => $message,
-			"type"     => "message",
-			"user"     => 6530,
-			],
-			"attachments" => [
-			  [
-				"data" => "wiki.txt",
-				"mimeType" => "plain/text",
-				"data"     => base64_encode($wiki)
-			  ],
-			  [
-				"data" => "event.txt",
-				"mimeType" => "plain/text",
-				"data"     => base64_encode($event)
-			  ]
+				"text"     => $message,
+				"type"     => "customer",
+				"customer" => [
+					"email" => $_POST['email'],
+					"firstName" => $_POST['name'],
+				],
+				"attachments" => [
+					[
+						"data" => "wiki.txt",
+						"mimeType" => "plain/text",
+						"data"     => base64_encode($wiki)
+					],
+					[
+						"data" => "event-" . str_replace("-", "", $startdate) . "-01." . $lang .".xml",
+						"mimeType" => "application/xml",
+						"data"     => base64_encode($event)
+					]
+				]
 			]
-		]],
+		],
 		"imported"     => false,
 		"status"       => "active",
 	];
@@ -152,7 +149,7 @@ function send_registration_mail() {
 	$response = curl_exec($curl);
 	curl_close($curl);
 
-	return $data['img_error'];
+	return $response;
 }
 
 if ( isset($_POST['register_event']) AND empty($_POST['spam']) AND eval_date($_POST['startdate'])

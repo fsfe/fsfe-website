@@ -52,7 +52,7 @@ function eval_date($date) {
 	return (!$dt['errors'] && $dt['year'] && preg_match("#^(19|20)\d\d[- /.](0[1-9]|1[012])[- /.](0[1-9]|[12][0-9]|3[01])$#", $date) === 1);
 }
 
-function send_registration_mail($from) {
+function send_registration_mail() {
 	// do some prior location computation
 	$countrycode = explode('|', $_POST['country'])[0];
 	$countryname = explode('|', $_POST['country'])[1];

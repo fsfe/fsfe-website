@@ -431,6 +431,17 @@
     <avatar>hersel.jpg</avatar>
   </person>
 
+  <person id="hf">
+    <name>Henning Fehr</name>
+    <function>office-coordinator/m</function>
+    <employee>part/m</employee>
+    <team>core</team>
+    <country>DE</country>
+    <fingerprint>7B16AAB1507D8BA0707E686D233BD83069144A3D</fingerprint>
+    <keyhref>https://fsfe.org/about/people/hf/0x233BD83069144A3D.asc</keyhref>
+    <email>hf@fsfe.org</email>
+  </person>
+
   <person id="hopf">
     <name>Dominic Hopf</name>
     <country>DE</country>
@@ -808,6 +819,7 @@
     <function>intern/m</function>
     <team>core</team>
     <email>jithendra@fsfe.org</email>
+    <employee>full/m</employee>
   </person>
 
   <person id="piana">

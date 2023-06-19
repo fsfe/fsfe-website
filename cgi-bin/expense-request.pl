@@ -34,6 +34,7 @@ my %names = (
   "fi" => "Francesca Indorato",
   "floriansnow" => "Florian Snow",
   "gabriel.ku" => "Gabriel Ku Wei Bin",
+  "hf" => "Henning Fehr",
   "irakli" => "Irakli Maisuradze",
   "jn" => "Johannes Näder",
   "lina.ceballos" => "Lina Ceballos",
@@ -89,6 +90,7 @@ my %responsible = (
   "PERSONELL-PRESUTTI" => "council",
   "PERSONELL-MAISURADZE" => "council",
   "PERSONELL-PALEPU" => "council",
+  "PERSONELL-FEHR" => "council",
   "OFFICE-BERLIN" => "council",
 );
 
@@ -130,6 +132,7 @@ my %account = (
   "PERSONELL-PRESUTTI" => "81083",
   "PERSONELL-MAISURADZE" => "81084",
   "PERSONELL-PALEPU" => "81086",
+  "PERSONELL-FEHR" => "81087",
   "OFFICE-BERLIN" => "82001",
 );
 

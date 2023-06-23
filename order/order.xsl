@@ -119,7 +119,7 @@
 
                 <!-- Real input for quantity -->
                 <xsl:element name="input">
-                  <xsl:attribute name="type">text</xsl:attribute>
+                  <xsl:attribute name="type">number</xsl:attribute>
                   <xsl:attribute name="size">2</xsl:attribute>
                   <xsl:attribute name="name">
                     <xsl:value-of select="$id"/>

@@ -1,35 +1,17 @@
+<p>Hi <?=$name?>,<br /> 
+You have registered an event on https://fsfe.org/events/tools/eventregistration</p>
 
---boundary 
-Content-Type: text/plain; charset=utf-8
-Content-Disposition: inline 
-
+<p>Below is the list of the information you gave.</p>
+<ul>
+	<li>Name: <?=$name?></li>
+	<li>Email: <?=$email?></li>
+	<li>Event Title: <?=$title?></li>
+	<li>Location: <?=$location?></li>
+</ul>
  
- 
-Hi, 
- 
-You have registered an event on https://fsfe.org/events/tools/eventregistration
-
-Below is the list of the information you gave.
-	Name: <?=$name?> 
-	Email: <?=$email?> 
-
-	Location: <?=$location?>
- 
-You find all other information in the xml file attached. It will be uploaded
+<p>You find all other information in the xml file attached. It will be uploaded
 in the next 24 hours. If you like to withdraw your event or in case you like to change some information,
-please contact contact@fsfe.org
+please contact contact@fsfe.org</p>
  
-Thanks,
-your website
---boundary
-Content-Type: text/plain; charset=utf-8
-Content-Disposition: attachment; filename="wikievent.txt"
-
-<?=$wiki?>
---boundary 
-Content-Type: application/xml; charset=utf-8 
-Content-Disposition: attachment; filename="event-<?php echo str_replace("-", "", $startdate) . "-01." . $lang; ?>.xml" 
-
-<?=$event?>
---boundary--
-
+<p>Thanks,<br />
+your FSFE team</p>

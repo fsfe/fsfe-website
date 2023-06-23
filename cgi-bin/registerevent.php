@@ -52,59 +52,125 @@ function eval_date($date) {
 	return (!$dt['errors'] && $dt['year'] && preg_match("#^(19|20)\d\d[- /.](0[1-9]|1[012])[- /.](0[1-9]|[12][0-9]|3[01])$#", $date) === 1);
 }
 
-function send_registration_mail($from, $to) {
-  // do some prior location computation
-  $countrycode = explode('|', $_POST['country'])[0];
-  $countryname = explode('|', $_POST['country'])[1];
+function send_registration_mail() {
+	// do some prior location computation
+	$countrycode = explode('|', $_POST['country'])[0];
+	$countryname = explode('|', $_POST['country'])[1];
 
-  if($_POST['online'] === "yes") {
-    $location = "online";
-  } else {
-    $location = htmlspecialchars($_POST['city']) . ", " . htmlspecialchars($countryname);
-  }
+	if($_POST['online'] === "yes") {
+		$location = "online";
+	} else {
+		$location = htmlspecialchars($_POST['city']) . ", " . htmlspecialchars($countryname);
+	}
 
 	$data = array(
-		'name' => $_POST['name'],
-		'email' => $_POST['email'],
-		'title' => $_POST['title'],
-		'groupname' => $_POST['groupname'],
-		'groupurl' => $_POST['groupurl'],
-		'startdate' => $_POST['startdate'],
-		'enddate' => $_POST['enddate'],
-		'description' => $_POST['description'],
-		'url' => $_POST['url'],
-		'online' => $_POST['online'],
+		'name' => isset($_POST['name'])?$_POST['name']:"",
+		'email' => isset($_POST['email'])?$_POST['email']:"",
+		'title' => isset($_POST['title'])?$_POST['title']:"",
+		'groupname' => isset($_POST['groupname'])?$_POST['groupname']:"",
+		'groupurl' => isset($_POST['groupurl'])?$_POST['groupurl']:"",
+		'startdate' => isset($_POST['startdate'])?$_POST['startdate']:"",
+		'enddate' => isset($_POST['enddate'])?$_POST['enddate']:"",
+		'description' => isset($_POST['description'])?$_POST['description']:"",
+		'url' => isset($_POST['url'])?$_POST['url']:"",
+		'online' => isset($_POST['online'])?$_POST['online']:"",
 		'location' => $location,
 		'countryname' => $countryname,
 		'countrycode' => $countrycode,
-		'tags' => $_POST['tags'],
-		'lang' => $_POST['lang']
+		'tags' => isset($_POST['tags'])?$_POST['tags']:"",
+		'lang' => isset($_POST['lang'])?$_POST['lang']:""
 	);
 
-	$data['event'] = eval_template('registerevent/event.php', $data);
-	$data['wiki'] = eval_template('registerevent/wiki.php', $data);
-
-	$message = eval_template('registerevent/mail.php', $data);
+	$event = eval_template('registerevent/event.php', $data);
+	$wiki = eval_template('registerevent/wiki.php', $data);
 
 	$subject = "Event registration: " . $_POST['title'];
-	$headers = "From: " . $from . "\n"
-		. "MIME-Version: 1.0\n"
-                . "X-OTRS-Queue: Events\n"
-		. "Content-Type: multipart/mixed; boundary=boundary";
 
   // uncomment for local debug
   // print_r($message);
   // exit(0);
 
-	mail($to, $subject, $message, $headers);
+	/**
+	 * Create a new ticket in the FreeScout system
+	 */
+	$url = "https://helpdesk.fsfe.org/api/conversations";
+	$apikey = getenv('FREESCOUT_API_KEY');
+	$jsondata = [
+		"type"      => "email",
+		"mailboxId" => 5,         # This is the General Helpdesk
+		"subject"   => $subject,
+		"customer"  => [
+			"email" => $_POST['email'],
+			"firstName" => $_POST['name'],
+		],
+		"threads" => [
+			[
+				"text"     => eval_template('registerevent/mailstaff.php', $data),
+				"type"     => "customer",
+				"customer" => [
+					"email" => $_POST['email'],
+					"firstName" => $_POST['name'],
+				],
+				"attachments" => [
+					[
+						"fileName" => "wiki.txt",
+						"mimeType" => "plain/text",
+						"data"     => base64_encode($wiki)
+					],
+					[
+						"fileName" => "event-" . str_replace("-", "", $data['startdate']) . "-01." . $data['lang'] .".xml",
+						"mimeType" => "application/xml",
+						"data"     => base64_encode($event)
+					]
+				]
+			],
+			[
+			  "text"     => eval_template('registerevent/mail.php', $data),
+			  "type"     => "message",
+			  "user"     => 6530,
+			  "attachments" => [
+				  [
+					  "fileName" => "wiki.txt",
+					  "mimeType" => "plain/text",
+					  "data"     => base64_encode($wiki)
+				  ],
+				  [
+					  "fileName" => "event-" . str_replace("-", "", $data['startdate']) . "-01." . $data['lang'] .".xml",
+					  "mimeType" => "application/xml",
+					  "data"     => base64_encode($event)
+				  ]
+			  ]
+			]
+		],
+		"imported"     => false,
+		"status"       => "active",
+	];
+	$jsonDataEncoded = json_encode($jsondata);
 
-	return $data['img_error'];
+	$curl = curl_init();
+	curl_setopt_array($curl, [
+	CURLOPT_RETURNTRANSFER => 1,
+	CURLOPT_URL => $url,
+	CURLOPT_POST => 1,
+	CURLOPT_CUSTOMREQUEST => "POST",
+	CURLOPT_POSTFIELDS => $jsonDataEncoded,
+	CURLOPT_HTTPHEADER => [
+		"Content-Type: application/json",
+		"Content-Length: " . strlen($jsonDataEncoded),
+		"X-FreeScout-API-Key: " . $apikey
+	],
+	CURLOPT_USERAGENT => 'FSFE registerevent.php'
+	]);
+	$response = curl_exec($curl);
+	curl_close($curl);
+
+	return $response;
 }
 
 if ( isset($_POST['register_event']) AND empty($_POST['spam']) AND eval_date($_POST['startdate'])
 	AND ( eval_date($_POST['enddate']) ) || empty($_POST['enddate'])  ) {
-	$error = send_registration_mail($_POST['name'] . " <" . $_POST['email'] . ">", "FSFE <contact@fsfe.org>");
-	$error = send_registration_mail("FSFE <contact@fsfe.org>", $_POST['name'] . " <" . $_POST['email'] . ">");
+
+	$error = send_registration_mail();
 
 	echo eval_xml_template('registerevent/success.en.html', array(
 		'notice' => '', // TODO display some error code here

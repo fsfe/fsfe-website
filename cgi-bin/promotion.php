@@ -250,6 +250,7 @@ $jsondata = [
     ]
   ],
   "imported"     => false,
+  "assignTo"     => 6584,
   "status"       => "active",
   "customFields" => [
     [

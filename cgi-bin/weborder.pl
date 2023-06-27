@@ -299,6 +299,7 @@ my $data = {
         }
     ],
     "imported"     => JSON::false,
+    "assignTo"     => 6584,
     "status"       => "pending",
     "customFields" => [
         {

@@ -33,20 +33,28 @@ body {
 }
 
 aside#followup {
-    background: url(/graphics/ribbon.svg) no-repeat 100% -40px @body-bg;
-    text-shadow: rgb(255, 255, 255) 0 0 .5em;
+  background-color: @brand-primary;
+  color: #FFF;
 
-    @media (min-width: @screen-sm-min) {
-        background: url(/graphics/ribbon.svg) no-repeat 100% -70px @body-bg;
-    }
+  input#submit {
+    background-color: @brand-strong;
+  }
 }
 
-aside#followup.join {
-    background: url(/graphics/fellowship/ribbon_fellowship2.png) no-repeat 100% -30px @body-bg;
+aside#followup.join,
+aside#followup.donate {
+  background-color: @brand-mix;
+  color: @body-bg;
 
-    @media (min-width: @screen-sm-min) {
-        background: url(/graphics/fellowship/ribbon_fellowship2.png) no-repeat 100% -50% @body-bg;
-    }
+  a {
+    color: @body-bg;
+    text-decoration: underline;
+  }
+  a.btn {
+    color: @gray-dark;
+    background-color: @body-bg;
+    text-decoration: none;
+  }
 }
 
 img.signatory-logo {

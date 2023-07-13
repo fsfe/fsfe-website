@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 
 <employeeset>
-  <version>1</version>
+  <version>2</version>
 
   <employee id="full/m">Vollzeit-Mitarbeiter</employee>
   <employee id="full/f">Vollzeit-Mitarbeiterin</employee>
@@ -12,4 +12,6 @@
   <!--You should use the intern function rather than this, but maybe this will be needed-->
   <employee id="freelancer/m">Freier Mitarbeiter</employee>
   <employee id="freelancer/f">Freie Mitarbeiterin</employee>
+  <employee id="contractor/m">Contractor</employee>
+  <employee id="contractor/f">Contractor</employee>
 </employeeset>

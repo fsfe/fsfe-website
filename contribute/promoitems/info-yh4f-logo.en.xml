@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<infoset>
+  <version>1</version>
+
+  <info id="yh4f">
+    <!-- Leave a tag like <printready> blank or erase it if you don't 
+    want to appear it -->
+    <!-- Translations for "Type", "Size" etc. can be found in 
+    /tools/texts-**.xml -->
+    <name>YH4F - Logo</name>
+    <description>
+      YH4F - hacking competition for young people
+    </description>
+    <type>Sticker</type>
+    <size> 9 x 5 cm</size>
+    <context><a href="/activites/yh4f"></a></context>
+    <languages>
+      <a href="https://download.fsfe.org/advocacy/promomaterial/yh4f/yh4f-logo-9x5.png">png</a>,
+    </languages>
+    <printed>
+      English
+    </printed>
+   <license><a href="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA 4.0</a></license>
+   <author>Lisa Schmidt</author>
+    <source><a href="https://download.fsfe.org/advocacy/promomaterial/yh4f/yh4f-logo-9x5.png">yh4f logo in download.fsfe.org</a></source> 
+    <printready></printready>
+  </info>
+
+</infoset>
+

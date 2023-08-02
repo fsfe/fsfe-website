@@ -431,6 +431,18 @@
     <avatar>hersel.jpg</avatar>
   </person>
 
+  <person id="hf">
+    <name>Henning Fehr</name>
+    <function>office-coordinator/m</function>
+    <employee>part/m</employee>
+    <team>core</team>
+    <country>DE</country>
+    <fingerprint>7B16AAB1507D8BA0707E686D233BD83069144A3D</fingerprint>
+    <keyhref>https://keys.fsfe.org/hf@fsfe.org.asc</keyhref>
+    <email>hf@fsfe.org</email>
+    <avatar>hf.jpg</avatar>
+  </person>
+
   <person id="hopf">
     <name>Dominic Hopf</name>
     <country>DE</country>
@@ -572,7 +584,7 @@
   <person id="ku">
     <name>Gabriel Ku Wei Bin</name>
     <country>SG</country>
-    <function>senior-project-manager/m</function>
+    <function>program-manager/m</function>
     <team>core</team>
     <team>care</team>
     <email>gabriel.ku@fsfe.org</email>
@@ -586,7 +598,7 @@
   <person id="lasota">
     <name>Lucas Lasota</name>
     <country>BR</country>
-    <function>senior-project-manager/m</function>
+    <function>program-manager/m</function>
     <team>core</team>
     <email>lucas.lasota@fsfe.org</email>
     <link>/about/people/lasota/lasota.html</link>
@@ -723,6 +735,17 @@
     <function>sysadmin/m</function>
   </person>
 
+  <person id="micgor32">
+    <name>Michal Gorlas</name>
+    <country>PL</country>
+    <team>core</team>
+    <email>micgor32@fsfe.org</email>
+    <employee>full/m</employee>
+    <function>intern/m</function>
+    <fingerprint>86F9D7CF5082CCB1489D5D478CD96F19C0610513</fingerprint>
+    <keyhref>https://keys.openpgp.org/vks/v1/by-fingerprint/86F9D7CF5082CCB1489D5D478CD96F19C0610513</keyhref>
+  </person>
+
   <person id="moeller">
     <name>Marcus Maria Möller</name>
     <country>CH</country>
@@ -808,6 +831,7 @@
     <function>intern/m</function>
     <team>core</team>
     <email>jithendra@fsfe.org</email>
+    <employee>full/m</employee>
   </person>
 
   <person id="piana">
@@ -1025,6 +1049,17 @@
     <fingerprint>168FAB826B58B16874CE6E207784A1960FBEB3FA</fingerprint>
     <function>sysadmin/m</function>
     <link>https://sehn.tech</link>
+  </person>
+
+  <person id="siemer">
+    <name>Uwe Siemer</name>
+    <country>DE</country>
+    <team>core</team>
+    <email>siemer@fsfe.org</email>
+    <employee>full/m</employee>
+    <function>intern/m</function>
+    <keyhref>https://keys.fsfe.org/siemer@fsfe.org.asc</keyhref>
+    <fingerprint>D0C7E232E1424A47D74268A601C0593BC5A8D61B</fingerprint>
   </person>
 
   <person id="singhal">

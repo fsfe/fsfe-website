@@ -61,7 +61,7 @@ def find_teaser(document: BeautifulSoup) -> str:
 def process_file(filename: str):
     logger.debug("Processing file {}".format(filename))
     with open(filename, "r", encoding=("utf-8")) as file_fh:
-        file_parsed = BeautifulSoup(file_fh.read(), "lxml")
+        file_parsed = BeautifulSoup(file_fh.read(), features="html.parser")
         tags = [
             tag.get("key")
             for tag in file_parsed.find_all("tag")

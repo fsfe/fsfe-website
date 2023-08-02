@@ -34,15 +34,18 @@ my %names = (
   "fi" => "Francesca Indorato",
   "floriansnow" => "Florian Snow",
   "gabriel.ku" => "Gabriel Ku Wei Bin",
+  "hf" => "Henning Fehr",
   "irakli" => "Irakli Maisuradze",
   "jn" => "Johannes Näder",
   "lina.ceballos" => "Lina Ceballos",
   "linda" => "Linda Wagener",
   "linus" => "Linus Sehn",
   "lucas.lasota" => "Lucas Lasota",
+  "micgor32" => "Michal Gorlas",
   "mk" => "Matthias Kirschner",
   "jithendra" => "Jithendra Palepu",
   "reinhard" => "Reinhard Müller",
+  "siemer" => "Uwe Siemer",
   "tobiasd" => "Tobias Diekershoff",
 );
 
@@ -89,6 +92,9 @@ my %responsible = (
   "PERSONELL-PRESUTTI" => "council",
   "PERSONELL-MAISURADZE" => "council",
   "PERSONELL-PALEPU" => "council",
+  "PERSONELL-FEHR" => "council",
+  "PERSONELL-GORLAS" => "council",
+  "PERSONELL-SIEMER" => "council",
   "OFFICE-BERLIN" => "council",
 );
 
@@ -130,6 +136,9 @@ my %account = (
   "PERSONELL-PRESUTTI" => "81083",
   "PERSONELL-MAISURADZE" => "81084",
   "PERSONELL-PALEPU" => "81086",
+  "PERSONELL-FEHR" => "81087",
+  "PERSONELL-GORLAS" => "81088",
+  "PERSONELL-SIEMER" => "81089",
   "OFFICE-BERLIN" => "82001",
 );
 

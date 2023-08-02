@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<infoset>
+  <version>1</version>
+
+  <info id="yh4f-chara3-sticker">
+    <!-- Leave a tag like <printready> blank or erase it if you don't 
+    want to appear it -->
+    <!-- Translations for "Type", "Size" etc. can be found in 
+    /tools/texts-**.xml -->
+    <name>YH4F Character</name>
+    <description>
+      Character from <a href="/activities/yh4f/">YH4F</a> hacking competition for young people
+    </description>
+    <type>Sticker</type>
+    <size>5 x 9 cm</size>
+    <context><a href="/activities/yh4f/">Youth Hacking 4 Freedom</a></context>
+    <languages>
+      <a href="https://download.fsfe.org/advocacy/promomaterial/yh4f/yh4f-chara3-5x9.png">png</a>
+    </languages>
+    <printed>
+    English
+    </printed>
+   <license><a href="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA 4.0</a></license>
+   <author>Lisa Schmidt</author>
+    <source><a href="https://download.fsfe.org/advocacy/promomaterial/yh4f/yh4f-chara3-5x9.png">YH4F character 3 in download.fsfe.org</a></source> 
+    <printready></printready>
+  </info>
+
+</infoset>

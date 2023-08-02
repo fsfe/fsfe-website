@@ -114,24 +114,6 @@
               </xsl:element>
               <xsl:element name="li">
                 <xsl:element name="a">
-                  <xsl:attribute name="href"><xsl:value-of select="$urlprefix"/>/news/news.html</xsl:attribute>
-                  <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'news/news'" /></xsl:call-template>
-                </xsl:element>
-              </xsl:element>
-              <xsl:element name="li">
-                <xsl:element name="a">
-                  <xsl:attribute name="href"><xsl:value-of select="$urlprefix"/>/events/events.html</xsl:attribute>
-                  <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'news/events'" /></xsl:call-template>
-                </xsl:element>
-              </xsl:element>
-              <xsl:element name="li">
-                <xsl:element name="a">
-                  <xsl:attribute name="href"><xsl:value-of select="$urlprefix"/>/news/podcast.html</xsl:attribute>
-                  <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'podcast'" /></xsl:call-template>
-                </xsl:element>
-              </xsl:element>
-              <xsl:element name="li">
-                <xsl:element name="a">
                   <xsl:attribute name="href"><xsl:value-of select="$urlprefix"/>/press/press.html</xsl:attribute>
                   <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'fsfe/press'" /></xsl:call-template>
                 </xsl:element>

@@ -505,6 +505,14 @@
     <avatar>jyrinki.jpg</avatar>
   </person>
 
+  <person id="kalikiana">
+    <name>Liv Dywan</name>
+    <country>DE</country>
+    <email>kalikiana@fsfe.org</email>
+    <team>core</team>
+    <function volunteers="fsfewomen">deputy/f</function>
+  </person>
+
   <person id="kalkhoff">
     <name>Christian Kalkhoff</name>
     <country>DE</country>
@@ -783,6 +791,7 @@
     <country>DE</country>
     <team>core</team>
     <team>de</team>
+    <function country="DE">coordinator/m</function>
     <email>jn@fsfe.org</email>
     <fingerprint>1E222721ECCA6C7557AAD20B7D598E96B9B5218F</fingerprint>
     <keyhref>https://keys.fsfe.org/jn@fsfe.org.asc</keyhref>
@@ -869,8 +878,6 @@
     <country>DE</country>
     <email>dipohl@fsfe.org</email>
     <avatar>dipohl.png</avatar>
-    <team>core</team>
-    <function volunteers="fsfewomen">deputy/f</function>
   </person>
 
   <person id="kristiprogri">
@@ -1020,7 +1027,6 @@
   <person id="schiessle">
     <name>Björn Schießle</name>
     <country>DE</country>
-    <function country="DE">coordinator/m</function>
     <team>ga</team>
     <team>core</team>
     <team>de</team>
@@ -1096,7 +1102,6 @@
     <team>franconia</team>
     <employee>part/m</employee>
     <function>technical-advisor/m</function>
-    <function country="DE">deputy/m</function>
     <function group="franconia">coordinator/m</function>
     <email>floriansnow@fsfe.org</email>
     <fingerprint>59F74EF9BE39705FDDAC36E6F0A025D6E97D0E9F</fingerprint>

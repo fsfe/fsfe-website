@@ -505,6 +505,14 @@
     <avatar>jyrinki.jpg</avatar>
   </person>
 
+  <person id="kalikiana">
+    <name>Liv Dywan</name>
+    <country>DE</country>
+    <email>kalikiana@fsfe.org</email>
+    <team>core</team>
+    <function volunteers="fsfewomen">deputy/f</function>
+  </person>
+
   <person id="kalkhoff">
     <name>Christian Kalkhoff</name>
     <country>DE</country>
@@ -704,9 +712,7 @@
   <person id="maxsc">
     <name>Max Schlüter</name>
     <country>DE</country>
-    <team>core</team>
     <email>maxsc@fsfe.org</email>
-    <function>technical-advisor/m</function>
     <keyhref>https://keys.openpgp.org/vks/v1/by-fingerprint/C42B873AE7CEDB88ED722FB7D5F5A895731F1077</keyhref>
     <fingerprint>C42B873AE7CEDB88ED722FB7D5F5A895731F1077</fingerprint>
     <avatar>maxsc.jpg</avatar>
@@ -746,8 +752,8 @@
     <country>PL</country>
     <team>core</team>
     <email>micgor32@fsfe.org</email>
-    <employee>full/m</employee>
-    <function>intern/m</function>
+    <employee>part/m</employee>
+    <function>sysadmin/m</function>
     <fingerprint>86F9D7CF5082CCB1489D5D478CD96F19C0610513</fingerprint>
     <keyhref>https://keys.openpgp.org/vks/v1/by-fingerprint/86F9D7CF5082CCB1489D5D478CD96F19C0610513</keyhref>
   </person>
@@ -783,6 +789,7 @@
     <country>DE</country>
     <team>core</team>
     <team>de</team>
+    <function country="DE">coordinator/m</function>
     <email>jn@fsfe.org</email>
     <fingerprint>1E222721ECCA6C7557AAD20B7D598E96B9B5218F</fingerprint>
     <keyhref>https://keys.fsfe.org/jn@fsfe.org.asc</keyhref>
@@ -869,8 +876,6 @@
     <country>DE</country>
     <email>dipohl@fsfe.org</email>
     <avatar>dipohl.png</avatar>
-    <team>core</team>
-    <function volunteers="fsfewomen">deputy/f</function>
   </person>
 
   <person id="kristiprogri">
@@ -884,8 +889,6 @@
     <country>GR</country>
     <email>fani@fsfe.org</email>
     <team>gr</team>
-    <team>core</team>
-    <function country="GR">deputy/f</function>
     <avatar>partsafyllidou.jpg</avatar>
     <link>/about/people/partsafyllidou/</link>
     <fingerprint>0D6AF750B328D3A8847FEF21715803E592316627</fingerprint>
@@ -954,12 +957,12 @@
     <team>ga</team>
     <team>core</team>
     <team>gr</team>
-    <team>athens</team>
     <function country="GR">coordinator/m</function>
-    <function group="athens">coordinator/m</function>
     <email>comzeradd@fsfe.org</email>
-    <link>https://wiki.fsfe.org/Fellows/comzeradd</link>
+    <link>/about/people/roussos/</link>
     <avatar>roussos.jpg</avatar>
+    <fingerprint>0A42F4194D19DA7111A1BA093F353739BCE4F3DE</fingerprint>
+    <keyhref>https://roussos.cc/pub/roussos-pgp.txt</keyhref>
   </person>
 
   <person id="roy">
@@ -1022,7 +1025,6 @@
   <person id="schiessle">
     <name>Björn Schießle</name>
     <country>DE</country>
-    <function country="DE">coordinator/m</function>
     <team>ga</team>
     <team>core</team>
     <team>de</team>
@@ -1098,7 +1100,6 @@
     <team>franconia</team>
     <employee>part/m</employee>
     <function>technical-advisor/m</function>
-    <function country="DE">deputy/m</function>
     <function group="franconia">coordinator/m</function>
     <email>floriansnow@fsfe.org</email>
     <fingerprint>59F74EF9BE39705FDDAC36E6F0A025D6E97D0E9F</fingerprint>

@@ -177,8 +177,8 @@ my $body = <<"HTML";
     </p>
     <p>
         The following order was just received by our merchandise team. We will
-        ship the order as soon as we have received your payment. Attached to
-        this email, you can find the invoice.
+        ship the order as soon as we have received your payment. The invoice
+        will be included in the delivery of your order.
     </p>
     <h2>Address</h2>
     <p>

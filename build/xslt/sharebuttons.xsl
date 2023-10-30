@@ -104,21 +104,6 @@
         <xsl:text>Reddit</xsl:text>
       </xsl:element>
 
-      <!-- Flattr -->
-      <xsl:element name="button">
-        <xsl:attribute name="type">submit</xsl:attribute>
-        <xsl:attribute name="name">service</xsl:attribute>
-        <xsl:attribute name="value">flattr</xsl:attribute>
-        <xsl:attribute name="class">button share-flattr</xsl:attribute>
-        <xsl:attribute name="title">
-          <xsl:call-template name="fsfe-gettext">
-            <xsl:with-param name="id" select="'share-microdonation'" />
-          </xsl:call-template>
-          <xsl:text> Flattr</xsl:text>
-        </xsl:attribute>
-        <xsl:text>Flattr</xsl:text>
-      </xsl:element>
-
       <!-- Hacker News -->
       <xsl:element name="button">
         <xsl:attribute name="type">submit</xsl:attribute>

@@ -133,10 +133,15 @@
   <person id="bakker">
     <name>Carmen Bianca Bakker</name>
     <country>NL</country>
-    <function activity="reuse">deputy/f</function>
+    <function activity="reuse">coordinator/f</function>
     <team>ga</team>
     <team>core</team>
     <email>carmenbianca@fsfe.org</email>
+    <keyhref>https://www.carmenbianca.eu/resources/carmen-pubkey.asc</keyhref>
+    <fingerprint>2A09F62739F6DEC8CFFCA216CD0A90F1C5CA0C92</fingerprint>
+    <link>/about/people/bakker/bakker.html</link>
+    <avatar>bakker.jpg</avatar>
+    <employee>contractor/f</employee>
   </person>
 
   <person id="boehm">
@@ -868,7 +873,7 @@
     <team>core</team>
     <employee>full/m</employee>
     <fingerprint>0A64B15595796EAE84B66AAA823E095EC6EF829C</fingerprint>
-    <keyhref>/about/people/persutti/persutti-public.asc</keyhref>
+    <keyhref>/about/people/presutti/presutti-public.asc</keyhref>
   </person>
 
   <person id="dipohl">
@@ -947,7 +952,7 @@
     <email>nico.rikken@fsfe.org</email>
     <fingerprint>ECE25C5065503E34453F767B1A3C51D11C81AB68</fingerprint>
     <keyhref>/about/people/rikken/rikken-public.asc</keyhref>
-    <link>https://wiki.fsfe.org/Supporters/nico.rikken</link>
+    <link>/about/people/rikken/rikken.html</link>
     <avatar>rikken.jpg</avatar>
   </person>
 

@@ -45,8 +45,9 @@ my %names = (
   "mk" => "Matthias Kirschner",
   "jithendra" => "Jithendra Palepu",
   "reinhard" => "Reinhard Müller",
-  "siemer" => "Uwe Siemer",
   "tobiasd" => "Tobias Diekershoff",
+  "tommi" => "Tommaso Marmo",
+  "siemer" => "Uwe Siemer",
 );
 
 # -----------------------------------------------------------------------------
@@ -95,6 +96,7 @@ my %responsible = (
   "PERSONELL-FEHR" => "council",
   "PERSONELL-GORLAS" => "council",
   "PERSONELL-SIEMER" => "council",
+  "PERSONELL-MARMO" => "council",
   "OFFICE-BERLIN" => "council",
 );
 
@@ -139,6 +141,7 @@ my %account = (
   "PERSONELL-FEHR" => "81087",
   "PERSONELL-GORLAS" => "81089",
   "PERSONELL-SIEMER" => "81089",
+  "PERSONELL-MARMO" => "810xx",
   "OFFICE-BERLIN" => "82001",
 );
 

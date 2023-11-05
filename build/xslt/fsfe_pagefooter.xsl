@@ -21,6 +21,35 @@
 
         <xsl:element name="div">
 
+          <!-- Social Media links -->
+          <xsl:element name="p">
+            <xsl:attribute name="class">share-buttons footer</xsl:attribute>
+            <xsl:element name="a"> <!-- Mastodon -->
+              <xsl:attribute name="href">
+                <xsl:text>https://mastodon.social/@fsfe</xsl:text>
+              </xsl:attribute>
+              <xsl:element name="img">
+                <xsl:attribute name="src">
+                  <xsl:text>/graphics/services/mastodon.png</xsl:text>
+                </xsl:attribute>
+                <xsl:attribute name="alt">Mastodon</xsl:attribute>
+                <xsl:attribute name="title">Mastodon</xsl:attribute>
+              </xsl:element>
+            </xsl:element>
+            <xsl:element name="a"> <!-- Peertube -->
+              <xsl:attribute name="href">
+                <xsl:text>https://media.fsfe.org/a/fsfe/videos</xsl:text>
+              </xsl:attribute>
+              <xsl:element name="img">
+                <xsl:attribute name="src">
+                  <xsl:text>/graphics/services/peertube.png</xsl:text>
+                </xsl:attribute>
+                <xsl:attribute name="alt">Peertube</xsl:attribute>
+                <xsl:attribute name="title">Peertube</xsl:attribute>
+              </xsl:element>
+            </xsl:element>
+          </xsl:element>
+
           <!-- Copyright notice -->
           <xsl:element name="p">
             <xsl:text>Copyright © 2001-2023 </xsl:text>
@@ -41,20 +70,6 @@
             <xsl:call-template name="fsfe-gettext">
               <xsl:with-param name="id" select="'permission'"/>
             </xsl:call-template>
-          </xsl:element>
-
-          <!-- Javascript licenses -->
-          <xsl:element name="p">
-            <xsl:element name="a">
-              <xsl:attribute name="href">
-                <xsl:value-of select="$urlprefix"/>
-                <xsl:text>/about/js-licences.html</xsl:text>
-              </xsl:attribute>
-              <xsl:attribute name="data-jslicense">1</xsl:attribute>
-              <xsl:call-template name="fsfe-gettext">
-                <xsl:with-param name="id" select="'js-licences'"/>
-              </xsl:call-template>
-            </xsl:element>
           </xsl:element>
 
         </xsl:element>
@@ -174,35 +189,6 @@
             </xsl:element>
           </xsl:element>
 
-          <!-- Social Media links -->
-          <xsl:element name="p">
-            <xsl:attribute name="class">share-buttons footer</xsl:attribute>
-            <xsl:element name="a"> <!-- Mastodon -->
-              <xsl:attribute name="href">
-                <xsl:text>https://mastodon.social/@fsfe</xsl:text>
-              </xsl:attribute>
-              <xsl:element name="img">
-                <xsl:attribute name="src">
-                  <xsl:text>/graphics/services/mastodon.png</xsl:text>
-                </xsl:attribute>
-                <xsl:attribute name="alt">Mastodon</xsl:attribute>
-                <xsl:attribute name="title">Mastodon</xsl:attribute>
-              </xsl:element>
-            </xsl:element>
-            <xsl:element name="a"> <!-- Peertube -->
-              <xsl:attribute name="href">
-                <xsl:text>https://media.fsfe.org/a/fsfe/videos</xsl:text>
-              </xsl:attribute>
-              <xsl:element name="img">
-                <xsl:attribute name="src">
-                  <xsl:text>/graphics/services/peertube.png</xsl:text>
-                </xsl:attribute>
-                <xsl:attribute name="alt">Peertube</xsl:attribute>
-                <xsl:attribute name="title">Peertube</xsl:attribute>
-              </xsl:element>
-            </xsl:element>
-          </xsl:element>
-
           <!-- Appropriate translation notice -->
           <xsl:element name="p">
             <xsl:if test="/buildinfo/document/@language!=/buildinfo/@original">
@@ -239,6 +225,20 @@
                 <xsl:with-param name="id" select="'translator3c'"/>
               </xsl:call-template>
             </xsl:if>
+          </xsl:element>
+
+          <!-- Javascript licenses -->
+          <xsl:element name="p">
+            <xsl:element name="a">
+              <xsl:attribute name="href">
+                <xsl:value-of select="$urlprefix"/>
+                <xsl:text>/about/js-licences.html</xsl:text>
+              </xsl:attribute>
+              <xsl:attribute name="data-jslicense">1</xsl:attribute>
+              <xsl:call-template name="fsfe-gettext">
+                <xsl:with-param name="id" select="'js-licences'"/>
+              </xsl:call-template>
+            </xsl:element>
           </xsl:element>
 
         </xsl:element>

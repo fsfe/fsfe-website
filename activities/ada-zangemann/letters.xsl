@@ -97,6 +97,12 @@
 
   <xsl:template match="/buildinfo/document/set/quote">
 
+        <xsl:element name="img">
+          <xsl:attribute name="src">
+            <xsl:value-of select="image/@src" />
+          </xsl:attribute>
+        </xsl:element>
+
         <xsl:element name="blockquote">
           <xsl:attribute name="id">
             <xsl:value-of select="@id"/>

@@ -107,6 +107,9 @@
           <xsl:attribute name="id">
             <xsl:value-of select="@id"/>
           </xsl:attribute>
+          <xsl:attribute name="class">
+            <xsl:text>letter-to-zangemann</xsl:text>
+          </xsl:attribute>
           <xsl:element name="p">
             <xsl:apply-templates select="text/node()"/>
           </xsl:element>

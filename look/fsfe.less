@@ -40,6 +40,15 @@ aside#followup {
     background-color: @brand-strong;
   }
 }
+aside#followup.support {
+  background-color: @brand-donation;
+
+  a.btn {
+    background-color: lighten(@brand-donation, 10%);
+    border-color: darken(@brand-donation-border, 5%);
+    font-weight: bolder;
+  }
+}
 
 aside#followup.join,
 aside#followup.donate {

@@ -117,6 +117,7 @@ my %account = (
   "ZOOOM-OTHER" => "2590",
   "MERCHANDISE-PURCHASE" => "8154",
   "MERCHANDISE-OTHER" => "8159",
+  "PAID-COSTS" => "8711",
   "INTERNAL-COORD" => "2504",
   "INTERNAL-GA" => "2505",
   "INTERNAL-TECH" => "2506",

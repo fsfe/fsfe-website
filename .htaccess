@@ -251,3 +251,10 @@ RewriteRule ^about/printable(/.*)?$ /contribute/spreadtheword.html [R=301,L]
 
 # Forbid access to these folders
 RewriteRule ^(tools|build)(/.*)?$ - [F,L]
+
+# =============================================================================
+# CORS header
+# =============================================================================
+<IfModule mod_headers.c>
+    Header set Access-Control-Allow-Origin 'https://download.fsfe.org'
+</IfModule>

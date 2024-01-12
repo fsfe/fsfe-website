@@ -13,9 +13,11 @@
     <available size="3XL"  a="58" b="82"/>
     <available size="4XL"  a="58" b="82"/>
     <image
-      large="2024/tshirt-H4F-front.jpg"/>
+      small="2024/tshirt-H4F-front-small.jpg"
+      large="2024/tshirt-H4F-front-large.jpg"/>
     <image
-      large="2024/tshirt-H4F-back.jpg"/>
+      small="2024/tshirt-H4F-back-small.jpg"
+      large="2024/tshirt-H4F-back-large.jpg"/>
   </item>
 
   <item type="tshirt" id="tshirt-nocloud-petrol">" price="25.00" date="2024-01-12">
@@ -26,15 +28,18 @@
     <available size="XXL"  a="57" b="77"/>
     <available size="3XL"  a="58" b="82"/>
     <image
-      large="2024/tshirt-nocloud-petrol-front.jpg"/>
+      small="2024/tshirt-nocloud-petrol-front-small.jpg"
+      large="2024/tshirt-nocloud-petrol-front-large.jpg"/>
     <image
-      large="2024/tshirt-nocloud-petrol-back.jpg"/>
+      small="2024/tshirt-nocloud-petrol-back-small.jpg"
+      large="2024/tshirt-nocloud-petrol-back-large.jpg"/>
   </item>
  
  
   <item type="socks" id="socks-ilovefs">" price="15.00" date="2024-01-12">
     <image
-      large="2024/socks-ilovefs.jpg"/>
+      small="2024/socks-ilovefs-small.jpg"
+      large="2024/socks-ilovefs-large.jpg"/>
      </item>
   <!-- item type="other" id="card-christmas-blue" price="20.00" date="2019-12-09">
     <available size="#"/>

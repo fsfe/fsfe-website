@@ -1,6 +1,12 @@
 <yearset>
   <version>1</version>
 
+  <year id="2024">
+    <button type="Donor" />
+    <button type="BronzeDonor" />
+    <button type="SilverDonor" />
+    <button type="GoldDonor" />
+  </year>
   <year id="2023">
     <button type="Donor" />
     <button type="BronzeDonor" />

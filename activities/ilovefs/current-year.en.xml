@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
+<!--If you want to change to heart bullets back to normal points edit the index.en.xhtml in activities/ilovefs-->
 <data>
 	<version>4</version>
 	<module>
+	
 		<h2>I ♥ Free Software Day 2024: Forge the future of Free Software</h2>
 
 		<p>“I Love Free Software Day” has been a long lasting tradition. On this day, we thank all the people behind Free Software projects or programs and let them know that their work does not go unnoticed. Let’s celebrate together all the wonderful people working for Free Software: you are invited to join “I Love Free Software Day” celebrations all across Europe. Connect with your <a href="/about/groups.html">local FSFE group</a> and organise a fun meetup.</p>
@@ -14,6 +15,49 @@
 		<h2>Join the party</h2>
 		
 		<p>Do you want to celebrate with other Free Software enthusiasts? Soon, we will be announcing the gatherings happening all around Europe! Follow us on <a href="https://mastodon.social/@fsfe">social media</a> not to miss anything!</p>
+		<ul class="ilovefs-ul">
+		  <li>🇬🇧 FSFE Potteries, Staffordshire</li>
+                    <ul class="ilovefs-ul">
+                     <li>⏰ 13.02.204, 18:30 (GMT)</li>
+                     <li>📍KPA Clubhouse, 97 Horwood Road, Keele University, Keele, Staffordshire</li>
+                     <li>👉 See <a href="https://wiki.fsfe.org/LocalGroups/Potteries">FSFE Potteries</a> for more information.</li>
+                    </ul>
+               
+                  <li>🇩🇪 Chaos Compute Club Wiesbaden</li>
+                    <ul class="ilovefs-ul">
+                     <li>⏰ 14.02.204, 19:00 (CET)</li>
+                     <li>📍Chaos Computer Club Wiesbaden (CCCWI), Sedanplatz 7, Wiesbaden, Hessen</li>
+                     <li>👉 The Programm:</li>
+                       <ul>
+                         <li>19:00 - 19:30 👋 Welcome</li>
+                         <li>19:30 - 20:00 📢 Lightning Talks I</li>
+                         <li>20:00 - 20:30 ⏸️ Break</li>
+                         <li>20:30 - 21:00 📢 Lightning Talks II</li>
+                         <li>ab 21:00 🧉 Open round and discussion</li>
+                       </ul> 
+                     <li>See <a href="https://www.cccwi.de/">Chaos Computer Club Wiesbaden</a> for more information.</li>           
+                  </ul>
+		
+		<li> Berlin</li>
+                  <ul class="ilovefs-ul">
+                   <li>⏰ 14.02.2024, 18:00 (CET) till 21:00 (CET)</li>
+		   <li>📍 xHain, Grünberger Str. 16, 10243 Berlin</li>
+	          </ul>
+               
+                <li>🇨🇭 Zurich</li>
+                  <ul class="ilovefs-ul">
+		   <li>⏰ 14.02.2024, 18:00 (CET)</li>
+		   <li>📍 TBA</li>
+		   <li>👉 For more information take a look at the <a href="https://wiki.fsfe.org/Events/Zurich/2024-02-14">local group Zürich</a></li>
+                  </ul>
+                
+                <li>p>🇪🇸 Madrid and Barcelona</li>
+                  <ul class="ilovefs-ul">
+                    <li>⏰ TBA</li>
+                  </ul>
+                
+                </ul>		
+		
 		<p>If you want to organise an event in your local area feel free to reach out to us via <a href="/contact/">email</a>. For "I Love Free Software Day 2024" we want to organise events dedicated for young people. Here are some ideas:</p>
 		<ul class="ilovefs-ul">
 		<li>Contact your local library and organise a reading of our children's book <a href="/activities/ada-zangemann/">"Ada &amp; Zangemann"</a></li>

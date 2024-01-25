@@ -47,7 +47,6 @@ my %names = (
   "reinhard" => "Reinhard Müller",
   "tobiasd" => "Tobias Diekershoff",
   "tommi" => "Tommaso Marmo",
-  "siemer" => "Uwe Siemer",
 );
 
 # -----------------------------------------------------------------------------
@@ -95,7 +94,6 @@ my %responsible = (
   "PERSONELL-PALEPU" => "council",
   "PERSONELL-FEHR" => "council",
   "PERSONELL-GORLAS" => "council",
-  "PERSONELL-SIEMER" => "council",
   "PERSONELL-MARMO" => "council",
   "OFFICE-BERLIN" => "council",
 );
@@ -142,7 +140,6 @@ my %account = (
   "PERSONELL-PALEPU" => "81086",
   "PERSONELL-FEHR" => "81087",
   "PERSONELL-GORLAS" => "81089",
-  "PERSONELL-SIEMER" => "81091",
   "PERSONELL-MARMO" => "81090",
   "OFFICE-BERLIN" => "82001",
 );

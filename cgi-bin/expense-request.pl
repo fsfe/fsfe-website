@@ -41,6 +41,7 @@ my %names = (
   "linda" => "Linda Wagener",
   "linus" => "Linus Sehn",
   "lucas.lasota" => "Lucas Lasota",
+  "marta" => "Marta Andreoli",
   "micgor32" => "Michal Gorlas",
   "mk" => "Matthias Kirschner",
   "jithendra" => "Jithendra Palepu",

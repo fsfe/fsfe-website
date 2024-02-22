@@ -168,7 +168,7 @@ function send_registration_mail() {
 }
 
 if ( isset($_POST['register_event']) AND empty($_POST['spam']) AND eval_date($_POST['startdate'])
-	AND ( eval_date($_POST['enddate']) ) || empty($_POST['enddate'])  ) {
+	AND ( $_POST['startdate']>"2023-01-01") AND ( eval_date($_POST['enddate']) ) || empty($_POST['enddate'])  ) {
 
 	$error = send_registration_mail();
 

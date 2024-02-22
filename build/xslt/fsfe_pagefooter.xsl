@@ -52,7 +52,7 @@
 
           <!-- Copyright notice -->
           <xsl:element name="p">
-            <xsl:text>Copyright © 2001-2023 </xsl:text>
+            <xsl:text>Copyright © 2001-2024 </xsl:text>
             <xsl:element name="a">
               <xsl:attribute name="href">
                 <xsl:value-of select="$urlprefix"/>

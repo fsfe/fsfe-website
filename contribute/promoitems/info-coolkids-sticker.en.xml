@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<infoset>
+  <version>1</version>
+
+  <info id="coolkids-sticker">
+    <!-- Leave a tag like <printready> blank or erase it if you don't
+    want to appear it -->
+    <!-- Translations for "Type", "Size" etc. can be found in
+    /tools/texts-**.xml -->
+    <name>Cool Kids - Sticker</name>
+    <description>
+      Cool kids: Makes you cooler than ever!
+    </description>
+    <type>Sticker</type>
+    <size>90 x 50 mm</size>
+    <languages>
+      <a href="https://download.fsfe.org/advocacy/promomaterial/cool_kids/sticker-90x50-cool-kids.pdf">English</a>
+    </languages>
+    <printed>
+      English
+    </printed>
+    <license><a href="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA 4.0</a></license>
+    <author>Lisa "Mullana" Schmidt</author>
+    <source><a href="https://download.fsfe.org/advocacy/promomaterial/cool_kids/">cool kids sticker in download.fsfe.org</a></source>
+    <printready></printready>
+  </info>
+</infoset>

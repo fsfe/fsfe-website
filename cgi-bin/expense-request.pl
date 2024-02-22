@@ -41,13 +41,13 @@ my %names = (
   "linda" => "Linda Wagener",
   "linus" => "Linus Sehn",
   "lucas.lasota" => "Lucas Lasota",
+  "marta" => "Marta Andreoli",
   "micgor32" => "Michal Gorlas",
   "mk" => "Matthias Kirschner",
   "jithendra" => "Jithendra Palepu",
   "reinhard" => "Reinhard Müller",
   "tobiasd" => "Tobias Diekershoff",
   "tommi" => "Tommaso Marmo",
-  "siemer" => "Uwe Siemer",
 );
 
 # -----------------------------------------------------------------------------
@@ -71,6 +71,8 @@ my %responsible = (
   "ZOOOM-OTHER" => "council",
   "MERCHANDISE-PURCHASE" => "council",
   "MERCHANDISE-OTHER" => "council",
+  "PAID-PERSONELL" => "council",
+  "PAID-OTHER" => "council",
   "INTERNAL-COORD" => "council",
   "INTERNAL-GA" => "council",
   "INTERNAL-TECH" => "council",
@@ -84,8 +86,6 @@ my %responsible = (
   "PERSONELL-CEBALLOS" => "council",
   "PERSONELL-WAGENER" => "council",
   "PERSONELL-MEHRING" => "council",
-  "PERSONELL-SEHN" => "council",
-  "PERSONELL-PARTSAFYLLIDOU" => "council",
   "PERSONELL-SNOW" => "council",
   "PERSONELL-GALAN" => "council",
   "PERSONELL-NAEDER" => "council",
@@ -95,7 +95,6 @@ my %responsible = (
   "PERSONELL-PALEPU" => "council",
   "PERSONELL-FEHR" => "council",
   "PERSONELL-GORLAS" => "council",
-  "PERSONELL-SIEMER" => "council",
   "PERSONELL-MARMO" => "council",
   "OFFICE-BERLIN" => "council",
 );
@@ -132,7 +131,6 @@ my %account = (
   "PERSONELL-CEBALLOS" => "81068",
   "PERSONELL-WAGENER" => "81069",
   "PERSONELL-MEHRING" => "81085",
-  "PERSONELL-SEHN" => "81073",
   "PERSONELL-SNOW" => "81076",
   "PERSONELL-GALAN" => "81079",
   "PERSONELL-NAEDER" => "81081",
@@ -142,7 +140,6 @@ my %account = (
   "PERSONELL-PALEPU" => "81086",
   "PERSONELL-FEHR" => "81087",
   "PERSONELL-GORLAS" => "81089",
-  "PERSONELL-SIEMER" => "81091",
   "PERSONELL-MARMO" => "81090",
   "OFFICE-BERLIN" => "82001",
 );

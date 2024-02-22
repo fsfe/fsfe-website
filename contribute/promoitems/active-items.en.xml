@@ -20,7 +20,6 @@ Such an item doesn't need an image!
 <itemset>
   <version>1</version>
 
-
   <!-- FSFE -->
 
   <item type="fsfe" id="fsfe-logo-sticker" year="2017" order="01">
@@ -249,4 +248,35 @@ Such an item doesn't need an image!
     <item type="yh4f" id="yh4f-chara3-sticker" year="2023" order="1">
     <image imgsmall="/contribute/promopics/yh4f-chara3-thumb.png" />
   </item>
+
+  <!-- 2023 Stickers -->
+
+  <item type="fsfe" id="coolkids-sticker" year="2023" order="14">
+    <image imgsmall="/contribute/promopics/coolkids-sticker-thumb.jpg" />
+  </item>
+  <item type="fsfe" id="devicechoice-sticker" year="2023" order="15">
+    <image imgsmall="/contribute/promopics/devicechoice-sticker-thumb.jpg" />
+  </item>
+  <item type="fsfe" id="dontcodeevil-sticker" year="2023" order="16">
+    <image imgsmall="/contribute/promopics/dontcodeevil-sticker-thumb.jpg" />
+  </item>
+  <item type="fsfe" id="dontwreckourtech-sticker" year="2023" order="17">
+    <image imgsmall="/contribute/promopics/dontwreckourtech-sticker-thumb.jpg" />
+  </item>
+  <item type="fsfe" id="freesociety-sticker-hexagon" year="2023" order="18">
+    <image imgsmall="/contribute/promopics/freesociety-sticker-hexagon-thumb.png" />
+  </item>
+  <item type="fsfe" id="freesoftwarewins-sticker" year="2023" order="19">
+    <image imgsmall="/contribute/promopics/freesoftwarewins-sticker-thumb.jpg" />
+  </item>
+  <item type="fsfe" id="hacking4freedom-sticker" year="2023" order="20">
+    <image imgsmall="/contribute/promopics/hacking4freedom-sticke-thumb.jpg" />
+  </item>
+  <item type="fsfe" id="notold-sticker" year="2023" order="21">
+    <image imgsmall="/contribute/promopics/notold-sticker-thumb.jpg" />
+  </item>
+  <item type="fsfe" id="useunderstand-sticker" year="2023" order="22">
+    <image imgsmall="/contribute/promopics/useunderstand-sticker-thumb.jpg" />
+  </item>
+
 </itemset>

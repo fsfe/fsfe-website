@@ -7,11 +7,12 @@
   <homepage>http://okular.kde.org/</homepage>
   <license>GPL</license>
   <platform><name>GNU/Linux</name><installer>http://okular.kde.org/download.php</installer></platform>
+  <platform><name>Windows</name><installer>http://okular.kde.org/download.php</installer></platform>
   <language>en</language>
   <language>fr</language>
   <language>de</language>
 
   <description>
-    The document viewer of the KDE project also displays postscript, doc, odt and other formats. It is well integrateed with the KDE web browsers Konqueror and Rekonq.
+    The document viewer of the KDE project also displays postscript, doc, odt and other formats. It is well integrated with the KDE web browser Konqueror.
   </description>
 </reader> </readers>

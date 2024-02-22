@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<infoset>
+  <version>1</version>
+
+  <info id="notold-sticker">
+    <!-- Leave a tag like <printready> blank or erase it if you don't
+    want to appear it -->
+    <!-- Translations for "Type", "Size" etc. can be found in
+    /tools/texts-**.xml -->
+    <name>My Computer is not old - Sticker</name>
+    <description>
+      This computer is not old, it is sustainable: Old graphic and catchy slogan, this is all we need
+    </description>
+    <type>Sticker</type>
+    <size>74 x 52 mm</size>
+    <languages>
+      <a href="https://download.fsfe.org/advocacy/promomaterial/not_old/sticker-A8-74x52-not-old.pdf">English</a>
+    </languages>
+    <printed>
+      English
+    </printed>
+    <license><a href="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA 4.0</a></license>
+    <author>Lisa "Mullana" Schmidt</author>
+    <source><a href="https://download.fsfe.org/advocacy/promomaterial/not_old/">My computer is not old in download.fsfe.org</a></source>
+    <printready></printready>
+  </info>
+</infoset>

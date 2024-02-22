@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<infoset>
+  <version>1</version>
+
+  <info id="devicechoice-sticker">
+    <!-- Leave a tag like <printready> blank or erase it if you don't
+    want to appear it -->
+    <!-- Translations for "Type", "Size" etc. can be found in
+    /tools/texts-**.xml -->
+    <name>My Device, My Choice - Sticker</name>
+    <description>
+      My device, my choice:  our right to install any software on any device
+    </description>
+    <type>Sticker</type>
+    <size>98 x 58 mm</size>
+    <languages>
+      <a href="https://download.fsfe.org/advocacy/promomaterial/my_choice/sticker-90x50-device-choice.pdf">English</a>
+    </languages>
+    <printed>
+      English
+    </printed>
+    <license><a href="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA 4.0</a></license>
+    <author>Lisa "Mullana" Schmidt</author>
+    <source><a href="https://download.fsfe.org/advocacy/promomaterial/my_choice/">My Device, my Choice sticker in download.fsfe.org</a></source>
+    <printready></printready>
+  </info>
+</infoset>

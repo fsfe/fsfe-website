@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<infoset>
+  <version>1</version>
+
+  <info id="freesoftwarewins-sticker">
+    <!-- Leave a tag like <printready> blank or erase it if you don't
+    want to appear it -->
+    <!-- Translations for "Type", "Size" etc. can be found in
+    /tools/texts-**.xml -->
+    <name>Free Software Always Wins - Sticker</name>
+    <description>
+      Free software always wins: perfect to share with someone who might forget it
+    </description>
+    <type>Sticker</type>
+    <size>74 x 52 mm</size>
+    <languages>
+      <a href="https://download.fsfe.org/advocacy/promomaterial/free_software_always_wins/sticker-A8-74x52-free-software-wins.pdf">English</a>
+    </languages>
+    <printed>
+      English
+    </printed>
+    <license><a href="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA 4.0</a></license>
+    <author>Lisa "Mullana" Schmidt</author>
+    <source><a href="https://download.fsfe.org/advocacy/promomaterial/free_software_always_wins/">Free Software always wins on download.fsfe.org</a></source>
+    <printready></printready>
+  </info>
+</infoset>

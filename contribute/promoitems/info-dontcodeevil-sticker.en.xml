@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<infoset>
+  <version>1</version>
+
+  <info id="dontcodeevil-sticker">
+    <!-- Leave a tag like <printready> blank or erase it if you don't
+    want to appear it -->
+    <!-- Translations for "Type", "Size" etc. can be found in
+    /tools/texts-**.xml -->
+    <name>Don't Code Evil - Sticker</name>
+    <description>
+      Don't code evil: Always a good reminder
+    </description>
+    <type>Sticker</type>
+    <size>52 x 52 mm</size>
+    <languages>
+      <a href="https://download.fsfe.org/advocacy/promomaterial/dont_code_evil/sticker-52x52-dont-code-evil.pdf">English</a>
+    </languages>
+    <printed>
+      English
+    </printed>
+    <license><a href="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA 4.0</a></license>
+    <author>Lisa "Mullana" Schmidt</author>
+    <source><a href="https://download.fsfe.org/advocacy/promomaterial/dont_code_evil/">Don't Code Evil sticker in download.fsfe.org</a></source>
+    <printready></printready>
+  </info>
+</infoset>

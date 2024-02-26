@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
-  <xsl:import href="../../fsfe.xsl" />
+  <xsl:import href="../../../fsfe.xsl" />
 
   <!-- Include the file containing the content of the current year -->
   <xsl:template match="current-year">

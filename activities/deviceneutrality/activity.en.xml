@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
 <activityset>
-  <version>1</version>
+  <version>2</version>
 
   <activity id="devices" date="2021-11-01" status="active">
     <title>Device Neutrality</title>
@@ -13,7 +13,7 @@
       Free Software on their devices.
     </description>
     <link href="/activities/deviceneutrality/index" />
-    <image url="/graphics/logos/dn-logo.png" />
+    <image url="/graphics/logos/deviceneutrality-transparent.png" />
     <order priority="4" highlight="yes" />
     <tags>
       <tag key="policy" />

@@ -21,6 +21,7 @@
         <fsfe-cd-referrer-input/>
         <input type="hidden" name="wants_info" value="yes"/>
         <input type="hidden" name="wants_newsletter_info" value="yes"/>
+        <input type="hidden" name="category" value="i"/>
         <button class="btn btn-default" type="submit">Blijf op de hoogte</button>
       </form>
     </div>

@@ -58,6 +58,8 @@ RewriteRule ^women(/.*)?$ https://wiki.fsfe.org/Teams/Women [R=301,L]
 RewriteRule ^standards(.*) /freesoftware/standards$1 [R=301,L]
 RewriteRule ^education(.*) /freesoftware/education$1 [R=301,L]
 
+# Umweltfestival 2024
+RewriteRule ^it-nachhaltig/?$ https://share.fsfe.org/apps/forms/xx8Sd47EwRtJtXL6/submit [R=301,L]
 
 # =============================================================================
 # CAMPAIGN/TOPIC-SPECIFIC REDIRECTS
@@ -198,6 +200,7 @@ RewriteRule ^community/tools(/.*)?$ /events/tools$1 [R=301,L]
 RewriteRule ^community/projects-call(/.*)?$ /contact/projects-call$1 [R=301,L]
 RewriteRule ^community/groups(/.*)?$ /about/groups$1 [R=301,L]
 RewriteRule ^potteries/?$ https://wiki.fsfe.org/LocalGroups/Potteries [R=301,L]
+RewriteRule ^berlin/?$ https://wiki.fsfe.org/LocalGroups/Berlin [R=301,L]
 
 # Legal Questions
 RewriteRule ^activities/licence-questions/licence-questions(.*)?$ /freesoftware/legal/faq$1 [R=301,L]

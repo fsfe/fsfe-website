@@ -90,6 +90,17 @@
             </xsl:element>
           </xsl:element>
         </xsl:when>
+        <xsl:when test="/buildinfo/document/followup = 'press'">
+          <xsl:attribute name="class">join</xsl:attribute>
+          <xsl:element name="h2">
+            <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'followup/press-header'" /></xsl:call-template>
+          </xsl:element>
+          <xsl:element name="div">
+            <xsl:element name="p">
+              <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'followup/press-paragraph'" /></xsl:call-template>
+            </xsl:element>
+          </xsl:element>
+        </xsl:when>
         <xsl:when test="/buildinfo/document/followup = 'no'">
           <xsl:attribute name="class">hide</xsl:attribute>
         </xsl:when>

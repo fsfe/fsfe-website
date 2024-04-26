@@ -121,6 +121,7 @@
                 <xsl:element name="input">
                   <xsl:attribute name="type">number</xsl:attribute>
                   <xsl:attribute name="size">2</xsl:attribute>
+                  <xsl:attribute name="min">0</xsl:attribute>
                   <xsl:attribute name="name">
                     <xsl:value-of select="$id"/>
                     <xsl:text>_</xsl:text>

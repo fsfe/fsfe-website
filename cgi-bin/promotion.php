@@ -98,6 +98,7 @@ $lang = $_POST['language'];
 if (
   empty($_POST['lastname'])    ||
   empty($_POST['mail'])        ||
+  stripos($_POST['mail'], 'example') ||
   empty($_POST['street'])      ||
   empty($_POST['zip'])         ||
   empty($_POST['city'])        ||

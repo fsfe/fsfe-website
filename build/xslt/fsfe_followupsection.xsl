@@ -69,8 +69,9 @@
               <xsl:attribute name="href">https://my.fsfe.org/donate</xsl:attribute>
               <xsl:attribute name="class">btn</xsl:attribute>
               <xsl:element name="i">
-                <xsl:attribute name="class">fa fa-heart-o fa-lg</xsl:attribute> 
+                <xsl:attribute name="class">fa fa-heart-o fa-lg</xsl:attribute>
               </xsl:element>
+              <xsl:text>&#x2000;</xsl:text>
               <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'donate'" /></xsl:call-template>
             </xsl:element>
           </xsl:element>

@@ -62,15 +62,15 @@
         </xsl:when>
         <xsl:when test="/buildinfo/document/followup = 'donate'">
           <xsl:attribute name="class">donate</xsl:attribute>
-          <xsl:element name="h2">
-            <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'donate'" /></xsl:call-template>
-          </xsl:element>
           <xsl:element name="p">
             <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'donate-paragraph'" /></xsl:call-template>
             <br />
             <xsl:element name="a">
               <xsl:attribute name="href">https://my.fsfe.org/donate</xsl:attribute>
               <xsl:attribute name="class">btn</xsl:attribute>
+              <xsl:element name="i">
+                <xsl:attribute name="class">fa fa-heart-o fa-lg</xsl:attribute>
+              </xsl:element>
               <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'donate'" /></xsl:call-template>
             </xsl:element>
           </xsl:element>

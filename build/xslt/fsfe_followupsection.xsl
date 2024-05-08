@@ -63,7 +63,7 @@
         <xsl:when test="/buildinfo/document/followup = 'donate'">
           <xsl:attribute name="class">donate</xsl:attribute>
           <xsl:element name="p">
-            <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'donate-paragraph'" /></xsl:call-template>
+            <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'support-paragraph'" /></xsl:call-template>
             <br />
             <xsl:element name="a">
               <xsl:attribute name="href">https://my.fsfe.org/donate</xsl:attribute>

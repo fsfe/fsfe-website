@@ -31,6 +31,7 @@ my %names = (
   "bonnie" => "Bonnie Mehring",
   "carmenbianca" => "Carmen Bianca Bakker",
   "dario" => "Dario Presutti",
+  "delliott" => "Darragh Elliott"
   "eal" => "Erik Albers",
   "fi" => "Francesca Indorato",
   "floriansnow" => "Florian Snow",

@@ -16,12 +16,12 @@
       <xsl:choose>
         <!-- highlighted activities in full width -->
         <xsl:when test="$highlight = 'yes'">
-          <xsl:attribute name="class">icon-grid one-per-row</xsl:attribute>
+          <xsl:attribute name="class">icon-grid two-per-row</xsl:attribute>
           <xsl:element name="ul">
             <xsl:choose>
               <!-- request certain tag -->
               <xsl:when test="$tag != ''">
-                <xsl:for-each select="/buildinfo/document/set/activity [order/@highlight = 'yes' and tags/tag/@key = $tag]">
+                <xsl:for-each select="/buildinfo/document/set/activity [(order/@highlight = 'yes') and (tags/tag/@key = $tag) and not (tags/tag/@key = 'hide')]">
                   <xsl:sort select="order/@priority" order="descending"/>
                   <xsl:sort select="@date" order="descending"/>
                   <xsl:call-template name="activity" />
@@ -29,7 +29,7 @@
               </xsl:when>
               <!-- all tags -->
               <xsl:otherwise>
-                <xsl:for-each select="/buildinfo/document/set/activity [order/@highlight = 'yes']">
+                <xsl:for-each select="/buildinfo/document/set/activity [(order/@highlight = 'yes') and not (tags/tag/@key = 'hide')]">
                   <xsl:sort select="order/@priority" order="descending"/>
                   <xsl:sort select="@date" order="descending"/>
                   <xsl:call-template name="activity" />
@@ -45,7 +45,7 @@
             <xsl:choose>
               <!-- request certain tag -->
               <xsl:when test="$tag != ''">
-                <xsl:for-each select="/buildinfo/document/set/activity [(order/@highlight != 'yes' or not(order/@highlight)) and tags/tag/@key = $tag]">
+                <xsl:for-each select="/buildinfo/document/set/activity [(order/@highlight != 'yes' or not(order/@highlight)) and tags/tag/@key = $tag and not (tags/tag/@key = 'hide')]">
                   <xsl:sort select="order/@priority" order="descending"/>
                   <xsl:sort select="@date" order="descending"/>
                   <xsl:call-template name="activity" />
@@ -53,7 +53,7 @@
               </xsl:when>
               <!-- all tags -->
               <xsl:otherwise>
-                <xsl:for-each select="/buildinfo/document/set/activity [(order/@highlight != 'yes' or not(order/@highlight))]">
+                <xsl:for-each select="/buildinfo/document/set/activity [(order/@highlight != 'yes' or not(order/@highlight)) and not (tags/tag/@key = 'hide')]">
                   <xsl:sort select="order/@priority" order="descending"/>
                   <xsl:sort select="@date" order="descending"/>
                   <xsl:call-template name="activity" />
@@ -78,6 +78,7 @@
             <xsl:text>Logo of </xsl:text>
             <xsl:value-of select="title"/>
           </xsl:attribute>
+          <xsl:attribute name="class">activitylogo</xsl:attribute>
         </xsl:element>
       </xsl:if>
 

@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- @TRANSLATORS: PLEASE DON'T TRANSLATE THIS FILE YET. IT IS SUBJECT TO CHANGE DURING THE NEXT WEEKS -->
+<html>
+  <version>4</version>
+
+  <head>
+    <title>Spargi la voce!</title>
+
+  </head>
+
+  <body class="spreadtheword">
+    <p id="category"><a href="/contribute/">Contribuisci</a></p>
+
+    <h1 id="spread-the-word">Spargi la voce!</h1>
+
+    <!-- module id="order-delay" //-->
+
+    <div class="toc float-right">
+      <p class="head"><a href="#how-to-order">Ordina ora!</a></p>
+
+      <p>Materiale informativo disponibile</p>
+      <ul>
+        <li><a href="#fsfe-and-community">FSFE and our community</a></li>
+        <li><a href="#freedom">Free Software and User Freedom</a></li>
+        <li><a href="#pmpc">"Public Money, Public Code" - campaign</a></li>
+        <li><a href="#upcyclingandroid">"Upcycling Android" - campaign</a></li>
+        <li><a href="#f-droid">"Free Your Android" - campaign</a></li>
+        <li><a href="#ilovefs">"I love Free Software" - campaign</a></li>
+        <li><a href="#childrensbook">Children's Book "Ada &amp; Zangemann"</a></li>
+        <li><a href="#nocloud">"There is no cloud ..." - campaign</a></li>
+        <li><a href="#device-neutrality">Device Neutrality</a></li>
+        <li><a href="#fedigov">Fedigov</a></li>
+        <li><a href="#yh4f">Youth Hacking 4 Freedom</a></li>
+      </ul>
+      <p>Dietro le quinte</p>
+      <ul>
+        <li><a href="#feedback">Suggerimenti?</a></li>
+        <li><a href="#archives">Il nostro archivio</a></li>
+        <li><a href="#upcoming">Materiale e campagne future</a></li>
+      </ul>
+      <p>Unisciti alla comunita'</p>
+      <ul>
+        <li><a href="/about/contact.html#community">Contatta la nostra comunita'</a></li>
+        <li><a href="/about/groups.html">Trova il tuo gruppo locale</a></li>
+      </ul>
+      <p>Prepara un evento di comunita'</p>
+      <ul>
+        <li><a href="https://share.fsfe.org/apps/forms/s/Sk2teQXqccbDxcWWW3RKECMq">Modulo di preparazione deibooth</a></li>
+      </ul>
+    </div>
+
+    <h2 id="promo-material" class="noclear">FSFE Promotion Material</h2>
+
+    <p>
+      Stai andando ad un incontro a proposito del Software Libero, oppure ne vuoi organizzare uno?
+      Magari ti piacerebbe promuovere il Software Libero e il lavoro della FSFE fra i tuoi
+      amici e colleghi, oppure a qualche evento pubblico? Ci sono varie ragioni
+      per cui ti servirebbe ricevere il nostro materiale informativo e per quando.
+      Qualsiasi sia la ragione, noi siamo contenti di spedirti il nostro materiale informativo
+      in maniera assolutamente <strong>gratuita</strong>.<br/> In questa pagina,
+      puoi trovare una panoramica del nostro materiale e i dettagli di ogni prodotto.
+    </p>
+
+
+    <h2 id="how-to-order" class="noclear">Come ordinare</h2>
+
+    <p>
+      Per ordinare il nostro materiale informativo, ti preghiamo di usare il seguente modulo di ordine.Puoi ordinare 
+      un pacco standard oppure quantita' specifiche, esplicitando di che tipo di materiale hai bisogno o preferisci.
+      Sentiti libero di decidere per te stesso.Tuttavia, ti preghiamo di tenere a mente, che per ragioni di dimensioni 
+      date dal servizio postale, generalmente mandiamo pacchi <strong>fino a 500 grammi</strong> e solamente <strong>all'interno
+      dell'Area Economica Europea (EEA)</strong>. Se te ne serve ancora, diccelo in anticipo.
+    </p>
+
+    <h3 id="booth-preparation" class="noclear">Preparazione dei booth</h3>
+  
+    <p>
+      Se hai bisogno di materiale a proposito della FSFE e delle nostre attivita' per il tuo evento, per favore
+      <a href="https://share.fsfe.org/apps/forms/s/Sk2teQXqccbDxcWWW3RKECMq">compila il modulo per la prepazione dei booth</a>
+      e faccelo sapere! 
+    </p>
+
+
+    <form class="highlight labeledform form-inline" id="orderpromo" method="post" action="/cgi-bin/promotion.php" accept-charset="utf-8">
+      <add-language/>
+      <h3 class="noclear">Ordina il materiale informativo</h3>
+      <p>I campi contrassegnati da * sono obbligatori.</p>
+      <fieldset>
+        <legend>Your address</legend>
+        <div>
+          <span class="formlabel">Nome, Cognome*:</span>
+          <input type="text" name="firstname" placeholder="First Name" size="15"/>
+          <input type="text" name="lastname" placeholder="Last Name" size="15" required="required"/>
+        </div>
+        <div>
+          <span class="formlabel">Email*:</span>
+          <input type="email" name="mail" placeholder="Email" size="20" required="required"/>
+        </div>
+        <div>
+          <span class="formlabel">Azienda/Ente (se vuoi):</span>
+          <input type="text" name="org" placeholder="Organisation" size="20"/>
+        </div>
+        <div>
+          <span class="formlabel">Via, Numero civico.*:</span>
+          <input type="text" name="street" size="20" required="required"/>
+        </div>
+        <div>
+          <span class="formlabel">CAP*, Citta'*:</span>
+          <input type="text" name="zip" size="5" required="required"/>
+          <input type="text" name="city" size="15" required="required"/>
+        </div>
+        <div>
+          <span class="formlabel">Nazione*:</span>
+          <country-list/>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Componi il tuo pacco</legend>
+        <div>
+          <span class="formlabel">Selezione del tipo di pacco*:</span>
+          <label for="default"><input type="radio" name="packagetype" id="default" value="default" required="required"/>Standard: Un po' di tutto cio' che e' in elenco,
+          dipendentemente dalla taglia, lingua selezionata e disponibilita'. Seleziona <em>Custom</em> se hai delle preferenze.</label>
+          <div>
+            <label for="custom"><input type="radio" name="packagetype" id="custom" value="custom" required="required"/>Custom: puoi scegliere, per esempio campagne specifiche,
+            oppure il tipo di materiale informativo. Sfortunatamente non possiamo garantire di soddisfare tutti i tuoi desideri.
+            <div class="reveal">
+              <textarea name="specifics" rows="6" cols="40" placeholder="For example: Only leaflets explaining Free Software, no posters..."/>
+            </div>
+            </label>
+          </div>
+        </div>
+        <div>
+          <span class="formlabel">Vorrei usare il material per (breve descrizione)*:</span>
+          <textarea name="usage" rows="4" cols="40" placeholder="For example: Spreading information about Free Software in my surrounding, on event XYZ..." required="required"/>
+        </div>
+        <div class="langselector">
+          <span class="formlabel">Lingua preferita (Non garantiamo la disponibilita'):</span>
+          <ul>
+            <!-- Translators: No need to translate here, we use the native names -->
+            <!-- If you want to extend, please iterate the number behind "lang" accordingly -->
+            <li><label for="lang1"><input type="checkbox" name="languages[]" id="lang1" value="en" checked="checked"/>English</label></li>
+            <li><label for="lang2"><input type="checkbox" name="languages[]" id="lang2" value="cn"/>中文</label></li>
+            <li><label for="lang3"><input type="checkbox" name="languages[]" id="lang3" value="de"/>Deutsch</label></li>
+            <li><label for="lang4"><input type="checkbox" name="languages[]" id="lang4" value="el"/>Eλληνικά</label></li>
+            <li><label for="lang5"><input type="checkbox" name="languages[]" id="lang5" value="es"/>Español</label></li>
+            <li><label for="lang6"><input type="checkbox" name="languages[]" id="lang6" value="fr"/>Français</label></li>
+            <li><label for="lang7"><input type="checkbox" name="languages[]" id="lang7" value="it"/>Italiano</label></li>
+            <li><label for="lang8"><input type="checkbox" name="languages[]" id="lang8" value="lt"/>Latviešu</label></li>
+            <li><label for="lang9"><input type="checkbox" name="languages[]" id="lang9" value="nl"/>Nederlands</label></li>
+            <li><label for="lang10"><input type="checkbox" name="languages[]" id="lang10" value="pl"/>Polski</label></li>
+            <li><label for="lang11"><input type="checkbox" name="languages[]" id="lang11" value="ru"/>Русский</label></li>
+            <li><label for="lang12"><input type="checkbox" name="languages[]" id="lang12" value="sq"/>Shqip</label></li>
+            <li><label for="lang13"><input type="checkbox" name="languages[]" id="lang13" value="sr"/> Српски / srpski</label></li>
+            <li><label for="lang14"><input type="checkbox" name="languages[]" id="lang14" value="fi"/>Suomi</label></li>
+            <li><label for="lang15"><input type="checkbox" name="languages[]" id="lang15" value="tr"/>Türkçe</label></li>
+          </ul>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Gli ultimi passi</legend>
+        <div>
+          <span class="formlabel">Commenti:</span>
+          <textarea name="comment" rows="2" cols="40"/>
+        </div>
+        <div>
+          <input type="text" name="address" placeholder="Which address shall be used?" size="20" class="special"/>
+        </div>
+        <div>
+          <span class="formlabel">Ricevi le ultime notizie a proposito di Free Software:</span>
+          <label for="subcd"><input name="subcd" id="subcd" value="y" type="checkbox"/>Voglio ricevere occasionalmente informazioni a proposito delle attivita' della FSFE</label>
+          <label for="subnl"><input name="subnl" id="subnl" value="y" type="checkbox"/>Voglio ricevere la newsletter mensile della FSFE</label>
+        </div>
+        <div id="donate-group" class="form-group">
+          <span class="formlabel">Supporta il nostro lavoro con una donazione volontaria*:</span>
+          <div class="input-group">
+            <input id="donate" name="donate" type="number" class="form-control " value="" placeholder="0 or ≥ 10 €" min="0" required="required"/>
+            <div class="input-group-addon">€</div>
+          </div>
+          <div id="donate-error" class="help-block" style="display: none;">
+            Se vuoi fare una donazione, per favore digita almeno 10 €.<br/>
+            Se non vuoi donare, per favore digita 0 €.
+          </div>
+        </div>
+      </fieldset>
+      <div>
+        <!-- Translators: please translate the label of this button (the value field) -->
+        <input type="submit" name="dothis" value="Order now!"/>
+      </div>
+    </form>
+
+
+    <h1 id="available-promotion-material" style="margin-top:3em;">Materiale disponibile</h1>
+
+    <!-- START ITEMIZE -->
+    <h2 id="fsfe-and-community" class="left break">FSFE e la nostra community</h2>
+    <dynamic-content type="fsfe"/>
+
+    <h2 id="freedom" class="left break">Free Software and User Freedom</h2>
+    <dynamic-content type="freedom"/>
+    <dynamic-content type="hackingforfreedom"/>
+
+    <h2 id="pmpc" class="left break">Public Money, Public Code</h2>
+    <dynamic-content type="pmpc"/>
+
+    <h2 id="upcyclingandroid" class="left break">Upcycling Android</h2>
+    <dynamic-content type="upcyclingandroid"/>
+
+    <h2 id="f-droid" class="left break">Free Your Android</h2>
+    <dynamic-content type="f-droid"/>
+
+    <h2 id="ilovefs" class="left break">I love Free Software</h2>
+    <dynamic-content type="ilovefs"/>
+
+    <h2 id="childrensbook" class="left break">Children's Book Ada &amp; Zangemann</h2>
+    <dynamic-content type="childrensbook"/>
+
+    <h2 id="nocloud" class="left break">There is no cloud</h2>
+    <dynamic-content type="nocloud"/>
+    
+    <h2 id="device-neutrality" class="left break">Device Neutrality</h2>
+    <dynamic-content type="device-neutrality"/>
+
+    <h2 id="fedigov" class="left break">Fedigov</h2>
+    <dynamic-content type="fedigov"/>
+    
+    <h2 id="yh4f" class="left break">Youth Hacking 4 Freedom</h2>
+    <dynamic-content type="yh4f"/>
+    <!-- END ITEMIZE -->
+
+
+    <h2 id="feedback" class="left break">Hai dei feedback?</h2>
+
+    <p class="left break">
+      Hai avuto problemi con il tuo ordine, hai trovato un errore nei nostri testi,
+      oppure hai un commento o un'idea per del materiale informativo che vorresti vedere in futuro? Oppure
+      ti piacerebbe semplicemente mandarci un messaggio motivazionale? Per favore, manda un'e-mail a 
+      <email>contact@fsfe.org</email> per condividere le tue impressioni con noi.
+    </p>
+
+    <p class="left break">
+      Siamo sempre curiosi di ascoltare delle belle storie, o di vedere le foto che hai
+      fatto con il nostro materiale. Molte persone condividono con noi la loro esperienza e le loro foto 
+      anche tramite social media.
+    </p>
+
+    <h2 id="archives" class="left break">Archivio</h2>
+
+    <p class="left break">
+      A volte, parte del nostro materiale informativo diventa obsoleto. Per esempio, 
+      quando termina una specifica campagna. Tuttavia,
+      puoi ancora trovare e scaricare il materiale piu' vecchio nel nostro <a
+      href="/contribute/promotion-materials-archive">Archivio.</a>
+    </p>
+
+    <h2 id="upcoming" class="left break">Materiale e campagne future</h2>
+
+    <p class="left break">
+      Di tanto in tanto, dai un'occhiata a questa pagina per materiale nuovo - 
+      continueremo ad aggiornarla. Se vuoi aiutare a creare nuovi design
+      oppure migliorarne qualcuno di quelli esistenti, unisciti al <a
+      href="/contribute/designers/designers">team dei designer</a>. Oppure se ti piacerebbe
+      aiutarci nella traduzione delle pagine o del materiale, uniciti al <a
+      href="/contribute/translators/translators">team traduttori</a>.
+    </p>
+
+    <script src="/scripts/spreadtheword.js"/>
+
+  </body>
+<description>FSFE Materiale informativo</description>
+</html>

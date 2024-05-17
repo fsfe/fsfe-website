@@ -76,10 +76,50 @@ body.frontpage {
     }
 
     // ------------------------------------------------------------------------
+    // Display 2 equal columns side-by-side on larger screens (used 3 times)
+    // ------------------------------------------------------------------------
+
+    .two-columns {
+        .make-row;
+
+        .column {
+            .make-xs-column(12);
+            .make-md-column(6);
+
+            // We maintain our own margins, so suppress the bottom margin
+            // inside the grid.
+            p:last-child {
+                margin-bottom: 0;
+            }
+
+            // If the three boxes are stacked vertically, create some gap
+            // between them as well as some extra gap between the heading and
+            // the first box.
+            @media (max-width: @screen-sm-max) {
+                margin-top: 10px;
+                margin-bottom: 10px;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+            .banner-subscribe {
+                form {
+                    .form-group {
+                        input {
+                            padding: 5px;
+                        }
+                    }    
+                }
+            }
+        }
+    }
+
+    // ------------------------------------------------------------------------
     // News section
     // ------------------------------------------------------------------------
 
-    .news {
+    .press {
         .three-columns;
 
         // Show the image to the left on tablet-sized screens, to the top
@@ -110,7 +150,23 @@ body.frontpage {
                 }
             }
         }
-
+        // colorful borders depending on the category of an article
+         
+        .community img {
+            border: 5px solid #d0f400;
+        }
+        .news img {
+            border: 5px solid #6eb53d;
+        }
+        .press img {
+            border: 5px solid #00c1eb;
+        }
+        .podcast img {
+            border: 5px solid #1f80bb;
+        }
+        .newsletter img {
+            border: 5px solid #202e79;
+        }
         // Keep everything except the image in a block and put it where it
         // belongs.
         .text {
@@ -122,8 +178,12 @@ body.frontpage {
             h3 {
                 margin-top: 0;
             }
-
-            .date {
+        }
+   }
+    .press, .news, .events {
+        .text {
+            .date,
+            .tag {
                 .text-muted;
                 .small;
             }
@@ -187,7 +247,7 @@ body.frontpage {
     // ------------------------------------------------------------------------
 
     .next-steps {
-        .three-columns;
+        .two-columns;
         .text-center;
 
         h3 {

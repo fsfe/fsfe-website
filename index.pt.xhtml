@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <html>
-  <version>2</version>
+  <version>3</version>
 
   <head>
     <title>FSFE - Free Software Foundation Europe</title>
@@ -25,16 +25,31 @@
       </p>
     </div>
 
-    <h2>
-      As nossas ultimas notícias
-      <a class="learn-more" href="/news/index.html">Leia mais...</a>
-    </h2>
-
-    <div class="news">
-      <dynamic-content-news/>
+    <div class="press">
+      <dynamic-content-highlights />
     </div>
 
-    <module id="banner-subscribe"/>
+    <div class="three-columns">
+      <div class="column news">
+        <h2>
+          As nossas ultimas notícias<br />
+          <a class="learn-more" href="/news/index.html">Leia mais...</a>
+        </h2>
+        <dynamic-content-news />
+      </div>
+      <div class="column subscribe">
+        <module id="banner-subscribe-box" />
+      </div>
+      <div class="column events">
+        <h2>
+          Eventos<br />
+          <a class="learn-more" href="/events/events.html">Veja todos os eventos...</a>
+        </h2>
+        <dynamic-content-events />
+      </div>
+    </div>
+
+    <!-- module id="banner-subscribe" //-->
 
     <h2>
       A nossa comunidade
@@ -47,8 +62,6 @@
 
     <module id="banner-become-supporter"/>
 
-    <h2>Próximos passos</h2>
-
     <div class="next-steps">
       <div class="column">
         <h3>Material informativo</h3>
@@ -57,14 +70,6 @@
         </a>
         <p>
           <a class="learn-more" href="/contribute/spreadtheword.html">Passe a palavra...</a>
-        </p>
-      </div>
-
-      <div class="column events">
-        <h3>Eventos</h3>
-        <dynamic-content-events/>
-        <p>
-          <a class="learn-more" href="/events/events.html">Veja todos os eventos...</a>
         </p>
       </div>
 

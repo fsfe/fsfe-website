@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <html>
-  <version>2</version>
+  <version>3</version>
 
   <head>
     <title>FSFE - Free Software Foundation Europe</title>
@@ -21,16 +21,31 @@
       </p>
     </div>
 
-    <h2>
-      Ons laatste nieuws
-      <a class="learn-more" href="/news/index.html">Nieuwsoverzicht</a>
-    </h2>
-
-    <div class="news">
-      <dynamic-content-news/>
+    <div class="press">
+      <dynamic-content-highlights />
     </div>
 
-    <module id="banner-subscribe"/>
+    <div class="three-columns">
+      <div class="column news">
+        <h2>
+          Ons laatste nieuws<br />
+          <a class="learn-more" href="/news/index.html">Nieuwsoverzicht...</a>
+        </h2>
+        <dynamic-content-news />
+      </div>
+      <div class="column subscribe">
+        <module id="banner-subscribe-box" />
+      </div>
+      <div class="column events">
+        <h2>
+          Evenementen<br />
+          <a class="learn-more" href="/events/events.html">Alle evenementen...</a>
+        </h2>
+        <dynamic-content-events />
+      </div>
+    </div>
+
+    <!-- module id="banner-subscribe" //-->
 
     <h2>
       Onze Gemeenschap
@@ -53,14 +68,6 @@
         </a>
         <p>
           <a class="learn-more" href="/contribute/spreadtheword.html">Verspreid de boodschap...</a>
-        </p>
-      </div>
-
-      <div class="column events">
-        <h3>Evenementen</h3>
-        <dynamic-content-events/>
-        <p>
-          <a class="learn-more" href="/events/events.html">Alle evenementen...</a>
         </p>
       </div>
 

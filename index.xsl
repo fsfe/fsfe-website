@@ -8,9 +8,10 @@
   <!-- Dynamic list of news items                                           -->
   <!-- ==================================================================== -->
 
-  <xsl:template match="dynamic-content-news">
+  <xsl:template match="dynamic-content-highlights">
     <xsl:for-each select="/buildinfo/document/set/news[
-        translate(@date, '-', '') &lt;= translate(/buildinfo/@date, '-', '')
+        translate(@date, '-', '') &lt;= translate(/buildinfo/@date, '-', '') and
+        tags/tag/@key = 'highlights'
       ]">
       <xsl:sort select="@date" order="descending"/>
       <xsl:if test="position() &lt;= 3">
@@ -21,7 +22,7 @@
 
             <!-- Image (with or without link) -->
             <xsl:element name="div">
-              <xsl:attribute name="class">image</xsl:attribute>
+              <xsl:attribute name="class">image <xsl:value-of select="tags/tag[1]/@key"/></xsl:attribute>
               <xsl:call-template name="news-image"/>
             </xsl:element><!-- div/image -->
 
@@ -32,12 +33,11 @@
               <xsl:element name="h3">
                 <xsl:call-template name="news-title"/>
               </xsl:element><!-- h3 -->
-
               <!-- Date -->
               <xsl:element name="p">
-                <xsl:attribute name="class">date</xsl:attribute>
-                <xsl:call-template name="news-date"/>
-              </xsl:element><!-- p/date -->
+                <xsl:attribute name="class">tag</xsl:attribute>
+                <xsl:value-of select="tags/tag[1]"/>
+              </xsl:element><!-- p/tag -->
 
               <!-- Teaser -->
               <xsl:call-template name="news-teaser"/>
@@ -46,6 +46,32 @@
 
           </xsl:element><!-- div/row -->
         </xsl:element><!-- div/column -->
+      </xsl:if>
+    </xsl:for-each>
+  </xsl:template>
+
+  <xsl:template match="dynamic-content-news">
+    <xsl:for-each select="/buildinfo/document/set/news[
+        translate(@date, '-', '') &lt;= translate(/buildinfo/@date, '-', '')
+      ]">
+      <xsl:sort select="@date" order="descending"/>
+      <xsl:if test="position() &lt;= 3">
+        <xsl:element name="div">
+          <xsl:element name="p">
+            <xsl:attribute name="class">text</xsl:attribute>
+            <xsl:element name="a">
+              <xsl:attribute name="href"><xsl:value-of select="link"/></xsl:attribute>
+              <xsl:value-of select="title"/>
+
+              <xsl:value-of select="news-teaser"/>
+            </xsl:element>
+            <xsl:element name="br"/>
+            <xsl:element name="span">
+              <xsl:attribute name="class">date</xsl:attribute>
+              <xsl:value-of select="@date"/>
+            </xsl:element>
+          </xsl:element>
+        </xsl:element>
       </xsl:if>
     </xsl:for-each>
   </xsl:template>
@@ -116,17 +142,21 @@
       ]">
       <xsl:sort select="@start"/>
       <xsl:if test="position() &lt;= 3">
+        <xsl:element name="div">
+          <xsl:attribute name="class">text</xsl:attribute>
+            <!-- Description -->
+            <xsl:element name="p">
+              <xsl:value-of select="title"/>
+              <xsl:element name="br"/>
+              <!-- Date -->
+              <xsl:element name="span">
+                <xsl:attribute name="class">date</xsl:attribute>
+                <xsl:call-template name="event-date"/>
+              </xsl:element><!-- p/date -->
 
-        <!-- Date -->
-        <xsl:element name="p">
-          <xsl:attribute name="class">date</xsl:attribute>
-          <xsl:call-template name="event-date"/>
-        </xsl:element><!-- p/date -->
+            </xsl:element><!-- p -->
 
-        <!-- Description -->
-        <xsl:element name="p">
-          <xsl:value-of select="title"/>
-        </xsl:element><!-- p -->
+          </xsl:element><!-- div/text -->
 
       </xsl:if>
     </xsl:for-each>

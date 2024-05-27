@@ -2,33 +2,51 @@
 
 <eventset>
   <version>1</version>
-  <event start="<?php echo htmlspecialchars($startdate) ?>" end="<?php if($enddate) {
+  <event start="<?php echo htmlspecialchars($startdate); ?>" end="<?php if (
+      $enddate
+  ) {
       echo htmlspecialchars($enddate);
   } else {
       echo htmlspecialchars($startdate);
-  }?>">
-    <?php if($online === "yes") {
+  } ?>">
+    <?php if ($online === "yes") {
         $location = " ($location)";
     } else {
         $location = " in " . $location;
     } ?>
-    <title><?php echo htmlspecialchars($title) . $location ?></title>
+    <title><?php echo htmlspecialchars($title) . $location; ?></title>
+    <group>
+     <name><?php echo htmlspecialchars($groupname); ?></name> 
+     <url><?php echo htmlspecialchars($groupurl); ?></url>
+    </group>
 
     <body>
-      <p><?php echo str_replace("</p><p>", "</p>\n      <p>", nl2br(preg_replace("/(\r?\n){2,}/", "</p><p>", htmlspecialchars($description)))); ?></p>
+      <p><?php echo str_replace(
+          "</p><p>",
+          "</p>\n     <p>",
+          nl2br(
+              preg_replace(
+                  "/(\r?\n){2,}/",
+                  "</p><p>",
+                  htmlspecialchars($description)
+              )
+          )
+      ); ?></p>
     </body>
 
-    <?php if($url) {
+    <?php if ($url) {
         echo "<link>" . htmlspecialchars($url) . "</link>";
-    }?>
+    } ?>
 
     <tags>
-      <?php if($online !== "yes") { ?><tag key="<?php echo strtolower(htmlspecialchars($countrycode)); ?>"><?php echo htmlspecialchars($countryname); ?></tag><?php } ?>
-      <?php
-        foreach ($tags as $tag) {
-            echo sprintf('<tag key="%s"/>', htmlspecialchars($tag)) . "\n";
-        }
-?>
+      <?php if ($online !== "yes") { ?>
+      <tag key="<?php echo strtolower(htmlspecialchars($countrycode)); ?>">
+          <?php echo htmlspecialchars($countryname); ?>
+      </tag>
+      <?php } ?>
+      <?php foreach ($tags as $tag) {
+          echo sprintf('<tag key="%s"/>', htmlspecialchars($tag)) . "\n";
+      } ?>
       <tag key="front-page"/>
     </tags>
   </event>

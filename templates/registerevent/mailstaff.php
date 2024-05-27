@@ -9,7 +9,7 @@ there is a new event registered on https://fsfe.org/events/tools/eventregistrati
     <li>Location: <?=$location?></li>
 </ul>
  
-<p> A pull request to the website has been automatically generated <a href=<?=$pr_url?>>here</a>. Please merge the Pull Request within 24 hours or contact the contributor for clarifications.</p>
+<p>A pull request to the website has been automatically generated <a href=<?=$pr_url?>>here</a>. Please merge the Pull Request within 24 hours or contact the contributor for clarifications.</p>
 
 <p><?=$extra_message?></p>
  

@@ -9,8 +9,8 @@ You have registered an event on https://fsfe.org/events/tools/eventregistration<
 	<li>Location: <?=$location?></li>
 </ul>
  
-<p>You find all other information in the xml file attached. It will be uploaded
-in the next 24 hours. If you like to withdraw your event or in case you like to change some information,
+<p> You can review the information you have submitted at the automatically generated pull request <a href=<?=$pr_url?>>here</a>.
+If you like to withdraw your event or in case you like to change some information,
 please contact contact@fsfe.org</p>
 
 <p>If you need material about the FSFE and our activities for your event, please

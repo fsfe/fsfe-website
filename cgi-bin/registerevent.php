@@ -121,6 +121,7 @@ function calculate_information($data)
         0,
         16
     );
+    $event_start_date = str_replace("-", "", $data["startdate"]);
     $newbranch = null;
     $success = true;
 
@@ -145,49 +146,44 @@ function calculate_information($data)
         $value = json_decode(json_encode($value), true);
     }
     unset($value);
-    for ($i = 0; $i <= count($decoded_response); $i++) {
-        // Events are sorted newest to oldest, so if events are older than current event we can stop processing them
-        if (
-            date_parse(substr($decoded_response[$i]["created_at"], 0, 10)) <
-            date_parse($data["startdate"])
-        ) {
-            $newbranch = true;
-            break;
-        }
+    for ($i = 0; $i < count($decoded_response); $i++) {
+        $response_head_label = $decoded_response[$i]["head"]["label"];
+
         // If title of branch does not match the pattern of an autogenerted title, skip it
         if (
-            !isset($decoded_response[$i]["head"]["label"]) ||
-            strlen($decoded_response[$i]["head"]["label"]) != 41
+            !isset($response_head_label) ||
+            strlen($response_head_label) != 41
         ) {
-            continue;
+            goto end;
         }
         // If events have the same hash and date, assume that they are the same.
+        $response_head_eventhash = substr(
+            $decoded_response[$i]["head"]["label"],
+            -strlen($eventhash)
+        );
+        $response_head_date = substr($decoded_response[$i]["head"]["label"], 10, 8);
+        $response_head_digit = substr($decoded_response[$i]["head"]["label"], 19, 2);
 
         if (
-            substr(
-                $decoded_response[$i]["head"]["label"],
-                -strlen($eventhash)
-            ) == $eventhash &&
-            substr($decoded_response[$i]["head"]["label"], 10, 8) ==
-                str_replace("-", "", $data["startdate"])
+            $response_head_eventhash == $eventhash &&
+            $response_head_date == $event_start_date
         ) {
             $newbranch = false;
             $pr_url = $decoded_response[$i]["url"];
-            $digit = substr($decoded_response[$i]["head"]["label"], 19, 2);
             $filename =
                 "event-" .
-                str_replace("-", "", $data["startdate"]) .
+                $event_start_date .
                 "-" .
-                $digit .
+                $response_head_digit .
                 "." .
                 $data["lang"] .
                 ".xml";
             $file_url = "https://git.fsfe.org/api/v1/repos/FSFE/fsfe-website/contents/events/{$year}/{$filename}";
-            $branchname = $decoded_response[$i]["head"]["label"];
+            $branchname = $response_head_label;
             break;
         }
-
-        if ($i == count($decoded_response)) {
+        end:
+        if (($i == count($decoded_response)) || ($i == (count($decoded_response) - 1))) {
             $newbranch = true;
         }
     }
@@ -197,7 +193,7 @@ function calculate_information($data)
             $digit = str_pad($count, 2, "0", STR_PAD_LEFT);
             $filename =
                 "event-" .
-                str_replace("-", "", $data["startdate"]) .
+                $event_start_date .
                 "-" .
                 $digit .
                 "." .

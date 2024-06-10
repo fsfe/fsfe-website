@@ -58,9 +58,6 @@ RewriteRule ^women(/.*)?$ https://wiki.fsfe.org/Teams/Women [R=301,L]
 RewriteRule ^standards(.*) /freesoftware/standards$1 [R=301,L]
 RewriteRule ^education(.*) /freesoftware/education$1 [R=301,L]
 
-# Umweltfestival 2024
-RewriteRule ^it-nachhaltig/?$ https://share.fsfe.org/apps/forms/s/N2nse7oQn6GDRbfbBcHiFwKA [R=301,L]
-
 # =============================================================================
 # CAMPAIGN/TOPIC-SPECIFIC REDIRECTS
 # =============================================================================

@@ -71,12 +71,17 @@ RewriteRule ^news/podcast.rss$ /news/podcast.en.rss [L,R=301]
 RewriteRule ^news/podcast-opus.rss$ /news/podcast-opus.en.rss [L,R=301]
 
 # ILoveFS
+# TODO for new news-item: update links for latest news-item
+RewriteRule ^news/latest-news$ /news/2024/news-20240610-01.html [R=301,L]
+
 # TODO each year: update links for latest report
 RewriteRule ^activities/ilovefs/latest-report$ /activities/ilovefs/report/report_2024.html [R=301,L]
 RewriteRule ^activities/ilovefs/latest-podcast$ /news/podcast/episode-24.html [R=301,L]
+
 # Redirect from old locations
 RewriteRule ^activities/ilovefs/ilovefs(.*)html$ /activities/ilovefs/index$1html [R=301,L]
 RewriteRule ^activities/ilovefs/20..(/.*)?$ /activities/ilovefs/index.html [R=301,L]
+
 # Sharepic redirection
 RewriteRule ^activities/ilovefs/sharepics?/?$ https://sharepic.fsfe.org/ilovefs [R=301,L]
 

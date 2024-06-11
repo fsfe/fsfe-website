@@ -54,16 +54,6 @@ my $email    = decode( "utf-8", $query->param("email") );
 my $phone    = decode( "utf-8", $query->param("phone") );
 my $language = $query->param("language");
 
-# Determine shipping fees based on country code from drop-down list
-my $shipping;
-
-if ( $country_code eq 'DE' ) {
-    $shipping = 5;
-}
-else {
-    $shipping = 8;
-}
-
 # Remove all parameters except for items and prices.
 $query->delete(
     "url",   "name",  "address", "zip", "city", "country",
@@ -104,6 +94,17 @@ foreach $item ( $query->param ) {
         $count  += 1;
         $amount += $value * $price;
     }
+}
+
+# Determine shipping fees based on country code from drop-down list
+my $shipping;
+
+if ( $amount >= 6 ) {
+    $shipping = 0;
+} elsif ( $country_code eq 'DE' ) {
+    $shipping = 5;
+} else {
+    $shipping = 8;
 }
 
 $amount += $shipping;

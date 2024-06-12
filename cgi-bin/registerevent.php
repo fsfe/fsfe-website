@@ -28,7 +28,7 @@ function eval_xml_template($template, $data)
 function eval_template($template, $data, $pr_url = "")
 {
     $extra_message =
-        $pr_url == ""
+        $pr_url === ""
             ? "Pr url undefined due to error in process of adding file and creating PR. Please add file to website manually and investigate/request investigation of source of issue."
             : "";
     extract($data);
@@ -110,21 +110,24 @@ function parse_submission()
 
 function calculate_information($data)
 {
+    // Constants
     $year = substr($data["startdate"], 0, 4);
-    $apikey = getenv("GITEA_API_KEY");
-    $filename = "";
-    $file_url = "";
-    $branchname = "";
-    $pr_url = "";
     $eventhash = substr(
         hash("sha256", $data["email"] . $data["startdate"] . $data["enddate"]),
         0,
         16
     );
     $event_start_date = str_replace("-", "", $data["startdate"]);
+    $apikey = getenv("GITEA_API_KEY");
+    // Updated in the course of this function
+    $filename = "";
+    $file_url = "";
+    $branchname = "";
+    $pr_url = "";
     $newbranch = null;
     $success = true;
 
+    // Deciding if a pr exists that matches requirements
     $url =
         "https://git.fsfe.org/api/v1/repos/FSFE/fsfe-website/pulls?state=open";
     $curl = curl_init();
@@ -146,49 +149,62 @@ function calculate_information($data)
         $value = json_decode(json_encode($value), true);
     }
     unset($value);
-    for ($i = 0; $i < count($decoded_response); $i++) {
-        $response_head_label = $decoded_response[$i]["head"]["label"];
+    foreach ($decoded_response as $pr) {
+        $pr_head_label = $pr["head"]["label"];
 
-        // If title of branch does not match the pattern of an autogenerted title, skip it
-        if (
-            !isset($response_head_label) ||
-            strlen($response_head_label) != 41
-        ) {
-            goto end;
-        }
-        // If events have the same hash and date, assume that they are the same.
-        $response_head_eventhash = substr(
-            $decoded_response[$i]["head"]["label"],
-            -strlen($eventhash)
-        );
-        $response_head_date = substr($decoded_response[$i]["head"]["label"], 10, 8);
-        $response_head_digit = substr($decoded_response[$i]["head"]["label"], 19, 2);
+        // Only do detailed comparisons on the branch label if it is the right length for an autogenerted pr
+        if (isset($pr_head_label) && strlen($pr_head_label) === 41) {
+            // If events have the same hash and date, assume that they are the same.
+            $pr_head_eventhash = substr(
+                $pr["head"]["label"],
+                -strlen($eventhash)
+            );
+            $pr_head_date = substr($pr["head"]["label"], 10, 8);
+            $pr_head_digit = substr($pr["head"]["label"], 19, 2);
 
-        if (
-            $response_head_eventhash == $eventhash &&
-            $response_head_date == $event_start_date
-        ) {
-            $newbranch = false;
-            $pr_url = $decoded_response[$i]["url"];
-            $filename =
-                "event-" .
-                $event_start_date .
-                "-" .
-                $response_head_digit .
-                "." .
-                $data["lang"] .
-                ".xml";
-            $file_url = "https://git.fsfe.org/api/v1/repos/FSFE/fsfe-website/contents/events/{$year}/{$filename}";
-            $branchname = $response_head_label;
-            break;
+            if (
+                $pr_head_eventhash === $eventhash &&
+                $pr_head_date === $event_start_date
+            ) {
+                $newbranch = false;
+                $pr_url = $pr["url"];
+                $filename =
+                    "event-" .
+                    $event_start_date .
+                    "-" .
+                    $pr_head_digit .
+                    "." .
+                    $data["lang"] .
+                    ".xml";
+                $file_url = "https://git.fsfe.org/api/v1/repos/FSFE/fsfe-website/contents/events/{$year}/{$filename}";
+                $branchname = $pr_head_label;
+                break;
+            }
         }
-        end:
-        if (($i == count($decoded_response)) || ($i == (count($decoded_response) - 1))) {
+        if ($pr === end($decoded_response)) {
             $newbranch = true;
         }
     }
+    // If there is no matching pr
     if ($newbranch) {
-        // Check if file already exists, and increment untitl it does not.
+        // Check if file already exists, and increment until it does not.
+        $url = "https://git.fsfe.org/api/v1/repos/FSFE/fsfe-website/contents/events/{$year}";
+        $curl = curl_init();
+        curl_setopt_array($curl, [
+            CURLOPT_RETURNTRANSFER => 1,
+            CURLOPT_URL => $url,
+            CURLOPT_CUSTOMREQUEST => "GET",
+            CURLOPT_HTTPHEADER => ["Authorization: token " . $apikey],
+            CURLOPT_USERAGENT => "FSFE registerevent.php",
+        ]);
+        $response = curl_exec($curl);
+        $http_info = curl_getinfo($curl);
+        curl_close($curl);
+        $decoded_response = json_decode($response);
+        foreach ($decoded_response as &$value) {
+            $value = json_decode(json_encode($value), true);
+        }
+        unset($value);
         for ($count = 1; $count <= 30; $count++) {
             $digit = str_pad($count, 2, "0", STR_PAD_LEFT);
             $filename =
@@ -199,20 +215,15 @@ function calculate_information($data)
                 "." .
                 $data["lang"] .
                 ".xml";
-            $file_url = "https://git.fsfe.org/api/v1/repos/FSFE/fsfe-website/contents/events/{$year}/{$filename}";
-            $curl = curl_init();
-            curl_setopt_array($curl, [
-                CURLOPT_RETURNTRANSFER => 1,
-                CURLOPT_URL => $file_url,
-                CURLOPT_CUSTOMREQUEST => "GET",
-                CURLOPT_HTTPHEADER => ["Authorization: token " . $apikey],
-                CURLOPT_USERAGENT => "FSFE registerevent.php",
-            ]);
-            $response = curl_exec($curl);
-            $file_http_info = curl_getinfo($curl);
-            curl_close($curl);
-            // Assume that if we get a file missing response that there is no file available,not that the server is down or something
-            if ((int) $file_http_info["http_code"] == 404) {
+            if (
+                empty(
+                    array_filter(
+                        $decoded_response,
+                        fn($file) => $file["name"] === $filename
+                    )
+                )
+            ) {
+                $file_url = "https://git.fsfe.org/api/v1/repos/FSFE/fsfe-website/contents/events/{$year}/{$filename}";
                 break;
             }
             if ($count == 30) {
@@ -220,7 +231,24 @@ function calculate_information($data)
             }
         }
         // Check if branch already exists, and increment until it does not
-        for ($count = 1; $count <= 30; $count = $count + 1) {
+        $url = "https://git.fsfe.org/api/v1/repos/FSFE/fsfe-website/branches";
+        $curl = curl_init();
+        curl_setopt_array($curl, [
+            CURLOPT_RETURNTRANSFER => 1,
+            CURLOPT_URL => $url,
+            CURLOPT_CUSTOMREQUEST => "GET",
+            CURLOPT_HTTPHEADER => ["Authorization: token " . $apikey],
+            CURLOPT_USERAGENT => "FSFE registerevent.php",
+        ]);
+        $response = curl_exec($curl);
+        $http_info = curl_getinfo($curl);
+        curl_close($curl);
+        $decoded_response = json_decode($response);
+        foreach ($decoded_response as &$value) {
+            $value = json_decode(json_encode($value), true);
+        }
+        unset($value);
+        for ($count = 1; $count <= 30; $count++) {
             $digit = str_pad($count, 2, "0", STR_PAD_LEFT);
             $branchname =
                 "ADD-" .
@@ -229,20 +257,15 @@ function calculate_information($data)
                 $digit .
                 "-" .
                 $eventhash;
-            $branch_url = "https://git.fsfe.org/api/v1/repos/FSFE/fsfe-website/branches/{$branchname}";
-            $curl = curl_init();
-            curl_setopt_array($curl, [
-                CURLOPT_RETURNTRANSFER => 1,
-                CURLOPT_URL => $branch_url,
-                CURLOPT_CUSTOMREQUEST => "GET",
-                CURLOPT_HTTPHEADER => ["Authorization: token " . $apikey],
-                CURLOPT_USERAGENT => "FSFE registerevent.php",
-            ]);
-            $response = curl_exec($curl);
-            $branch_http_info = curl_getinfo($curl);
-            curl_close($curl);
-            // Assume that if we get a file missing response that there is no file available,not that the server is down or something
-            if ((int) $branch_http_info["http_code"] == 404) {
+            if (
+                empty(
+                    array_filter(
+                        $decoded_response,
+                        fn($branch) => $branch["name"] === $branchname
+                    )
+                )
+            ) {
+                $branch_url = "https://git.fsfe.org/api/v1/repos/FSFE/fsfe-website/branches/{$branchname}";
                 break;
             }
             if ($count == 30) {
@@ -437,7 +460,6 @@ if (
         $parsed_information["data"]
     );
     $pr_url = $calculated_information["pr_url"];
-
     // If we failed to calculate information, skip trying to make branch and stuff.
     if (!$calculated_information["success"]) {
         goto sendemail;
@@ -450,8 +472,8 @@ if (
     );
     // If making a newbranch failed, or the branch and pr already existed, as determined in calculated_information, then skip trying to make a new pr.
     if (
-        (int) $file_info["http_code"] != 201 ||
-        $calculated_information["newbranch"] == false
+        (int) $file_info["http_code"] !== 201 ||
+        $calculated_information["newbranch"] === false
     ) {
         goto sendemail;
     }
@@ -460,10 +482,9 @@ if (
         $parsed_information["data"],
         $calculated_information
     );
-    if ((int) $pr_info["http_code"] != 201) {
+    if ((int) $pr_info["http_code"] !== 201) {
         goto sendemail;
     }
-
     $decoded_pr_response = json_decode($pr_response, true);
     $pr_url = $decoded_pr_response["url"];
 

@@ -20,7 +20,7 @@
   </item>
 
   <item type="tshirt" id="tshirt-multilingual-black" price="20.00" date="2019-12-07">
-    <available size="S"    a="46" b="66"/>
+    <!-- available size="S"    a="46" b="66"/ -->
     <image
       small="2019/tshirt-multilingual-black-front-small.jpg"
       large="2019/tshirt-multilingual-black-front-large.jpg"/>
@@ -41,7 +41,7 @@
   </item>
 
   <item type="girlie" id="girlie-multilingual-blue" oldprice="20.00" price="15.00" date="2019-12-07">
-    <available size="M"    a="47.5" b="62"/>
+    <!-- available size="M"    a="47.5" b="62"/ -->
     <available size="L"    a="48"   b="65"/>
     <available size="XL"   a="53.5" b="66"/>
     <image

@@ -19,8 +19,8 @@
       large="2019/pin-fsfe-white-large.jpg"/>
   </item>
 
-  <!--
   <item type="tshirt" id="tshirt-multilingual-black" price="20.00" date="2019-12-07">
+    <available size="M"    a="50" b="70"/>
     <image
       small="2019/tshirt-multilingual-black-front-small.jpg"
       large="2019/tshirt-multilingual-black-front-large.jpg"/>
@@ -28,7 +28,6 @@
       small="2019/tshirt-multilingual-black-back-small.jpg"
       large="2019/tshirt-multilingual-black-back-large.jpg"/>
   </item>
-  //-->
 
   <item type="girlie" id="girlie-multilingual-black" price="20.00" date="2019-12-07">
     <available size="L"    a="48"   b="65"/>

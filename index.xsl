@@ -143,10 +143,16 @@
       <xsl:sort select="@start"/>
       <xsl:if test="position() &lt;= 3">
         <xsl:element name="div">
-          <xsl:attribute name="class">text</xsl:attribute>
             <!-- Description -->
             <xsl:element name="p">
-              <xsl:value-of select="title"/>
+              <xsl:attribute name="class">text</xsl:attribute>
+              <xsl:element name="a">
+                <xsl:attribute name="href">
+                  <xsl:text>/events/index.html#</xsl:text>
+                  <xsl:value-of select="@filename"/>
+                </xsl:attribute>
+                <xsl:value-of select="title"/>
+              </xsl:element>
               <xsl:element name="br"/>
               <!-- Date -->
               <xsl:element name="span">

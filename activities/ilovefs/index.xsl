@@ -9,30 +9,30 @@
   </xsl:template>
 
   <!-- This creates looping pictures in a box. All pictures are located in a directory and have numbered names (here ilovefs-gallery-thumb-NNN.jpg) -->
-  <xsl:template match="picture-box">
-    <!-- appears once when <picture-box /> is called -->
+  <xsl:template match="picture-box-index">
+    <!-- appears once when <picture-box-index /> is called -->
     <xsl:variable name="from"><xsl:value-of select="@from"/></xsl:variable>
     <xsl:variable name="to"><xsl:value-of select="@to"/></xsl:variable>
 
-    <div id="picture-box" style="height:340.157px;"> <!-- change to height of pictures -->
-      <div id="picture-box-inner" class="logo-list quote">
-        <a href="https://download.fsfe.org/campaigns/ilovefs/share-pics/picturebox/Share-Pic-1.png">
+    <div id="picture-box-index" style="height:340.157px;"> <!-- change to height of pictures -->
+      <div id="picture-box-index-inner" class="logo-list quote">
+        <a href="https://download.fsfe.org/campaigns/ilovefs/share-pics/picturebox/Share-Pic-1.jpg">
           <div class="img">
             <noscript>
               <img>
-                <xsl:attribute name="src">https://download.fsfe.org/campaigns/ilovefs/share-pics/picturebox/Share-Pic-1.png</xsl:attribute>
+                <xsl:attribute name="src">https://download.fsfe.org/campaigns/ilovefs/share-pics/picturebox/Share-Pic-1.jpg</xsl:attribute>
               </img>
             </noscript>
           </div> <!-- /img -->
         </a>
-      </div> <!-- /picture-box-inner -->
-    </div> <!-- /picture-box -->
-
+      </div> <!-- /picture-box-index-inner -->
+    </div> <!-- /picture-box-index -->
+    
     <script type="text/javascript">
       /* &lt;![CDATA[ */
       var quotes = [
       <!-- this template calls the loop below -->
-      <xsl:call-template name="picture-box">
+      <xsl:call-template name="picture-box-index">
         <xsl:with-param name="num" select="$from"/> <!-- starting number -->
         <xsl:with-param name="max" select="$to"/> <!-- select maximum number of pictures which should be shown in picture box -->
       </xsl:call-template>
@@ -42,11 +42,11 @@
       <![CDATA[
       var index = Math.floor(Math.random()*quotes.length);
       function changeImage() {
-        $('#picture-box-inner').fadeOut('slow', function() {
-          $('#picture-box-inner').html('<a href="' + quotes[index]['link'] + '">'
+        $('#picture-box-index-inner').fadeOut('slow', function() {
+          $('#picture-box-index-inner').html('<a href="' + quotes[index]['link'] + '">'
                                      + '<div class="img"><img src="' + quotes[index]['photo'] + '"/></div>'
                                      );
-          $('#picture-box-inner').fadeIn('slow', function() {});
+          $('#picture-box-index-inner').fadeIn('slow', function() {});
           });
         index = (index+1)%quotes.length;
         setTimeout("changeImage();",5000);
@@ -59,15 +59,15 @@
     </script>
   </xsl:template>
 
-  <xsl:template name="picture-box">
+  <xsl:template name="picture-box-index">
     <xsl:param name="num"/>
     <xsl:param name="max"/>
     <xsl:if test="not($num > $max)">
       {
-        'photo': 'https://download.fsfe.org/campaigns/ilovefs/share-pics/picturebox/Share-Pic-<xsl:value-of select="$num"/>.png',
-        'link': 'https://download.fsfe.org/campaigns/ilovefs/share-pics/picturebox/Share-Pic-<xsl:value-of select="$num"/>.png',
+        'photo': 'https://download.fsfe.org/campaigns/ilovefs/share-pics/picturebox/Share-Pic-<xsl:value-of select="$num"/>.jpg',
+        'link': 'https://download.fsfe.org/campaigns/ilovefs/share-pics/picturebox/Share-Pic-<xsl:value-of select="$num"/>.jpg',
       },
-      <xsl:call-template name="picture-box"> <!-- initiate the next round -->
+      <xsl:call-template name="picture-box-index"> <!-- initiate the next round -->
         <xsl:with-param name="num">
           <xsl:value-of select="$num+1" /> <!-- count +1 -->
         </xsl:with-param>
@@ -75,6 +75,6 @@
       </xsl:call-template>
     </xsl:if>
   </xsl:template>
-  <!-- / picture-box -->
-
+  <!-- / picture-box-index -->
+  
 </xsl:stylesheet>

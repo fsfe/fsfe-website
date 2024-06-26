@@ -28,6 +28,19 @@
           <xsl:element name="h2">
             <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'subscribe-newsletter'" /></xsl:call-template>
           </xsl:element>
+          <xsl:element name="p">
+            <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'subscribe-newsletter-text'" /></xsl:call-template>
+            <xsl:element name="span">
+              <xsl:attribute name="style">font-size:0.8em</xsl:attribute>
+              (<xsl:element name="a">
+                <xsl:attribute name="href">/about/legal/imprint.html#id-privacy-policy</xsl:attribute>
+                <xsl:element name="span">
+                  <xsl:attribute name="style">color:white; text-decoration: underline;</xsl:attribute>
+                  <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'privacy-policy'" /></xsl:call-template>
+                </xsl:element>
+              </xsl:element>)
+            </xsl:element>
+          </xsl:element>
           <xsl:call-template name="subscribe-nl" />
         </xsl:when>
         <xsl:when test="/buildinfo/document/followup = 'support'">
@@ -49,15 +62,16 @@
         </xsl:when>
         <xsl:when test="/buildinfo/document/followup = 'donate'">
           <xsl:attribute name="class">donate</xsl:attribute>
-          <xsl:element name="h2">
-            <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'donate'" /></xsl:call-template>
-          </xsl:element>
           <xsl:element name="p">
-            <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'donate-paragraph'" /></xsl:call-template>
+            <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'support-paragraph'" /></xsl:call-template>
             <br />
             <xsl:element name="a">
               <xsl:attribute name="href">https://my.fsfe.org/donate</xsl:attribute>
               <xsl:attribute name="class">btn</xsl:attribute>
+              <xsl:element name="i">
+                <xsl:attribute name="class">fa fa-heart-o fa-lg</xsl:attribute>
+              </xsl:element>
+              <xsl:text>&#x2000;</xsl:text>
               <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'donate'" /></xsl:call-template>
             </xsl:element>
           </xsl:element>
@@ -77,12 +91,38 @@
             </xsl:element>
           </xsl:element>
         </xsl:when>
+        <xsl:when test="/buildinfo/document/followup = 'press'">
+          <xsl:attribute name="class">join</xsl:attribute>
+          <xsl:element name="h2">
+            <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'followup/press-header'" /></xsl:call-template>
+          </xsl:element>
+          <xsl:element name="div">
+            <xsl:element name="p">
+              <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'followup/press-paragraph'" /></xsl:call-template>
+            </xsl:element>
+          </xsl:element>
+        </xsl:when>
         <xsl:when test="/buildinfo/document/followup = 'no'">
           <xsl:attribute name="class">hide</xsl:attribute>
         </xsl:when>
         <xsl:otherwise>
           <xsl:attribute name="class">subscribe-nl</xsl:attribute>
-          <xsl:element name="h2"><xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'subscribe-newsletter'" /></xsl:call-template></xsl:element>
+          <xsl:element name="h2">
+            <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'subscribe-newsletter'" /></xsl:call-template>
+          </xsl:element>
+          <xsl:element name="p">
+            <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'subscribe-newsletter-text'" /></xsl:call-template>
+            <xsl:element name="span">
+              <xsl:attribute name="style">font-size:0.8em</xsl:attribute>
+              (<xsl:element name="a">
+                <xsl:attribute name="href">/about/legal/imprint.html#id-privacy-policy</xsl:attribute>
+                <xsl:element name="span">
+                  <xsl:attribute name="style">color:white; text-decoration: underline;</xsl:attribute>
+                  <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'privacy-policy'" /></xsl:call-template>
+                </xsl:element>
+              </xsl:element>)
+            </xsl:element>
+          </xsl:element>
           <xsl:call-template name="subscribe-nl" />
         </xsl:otherwise>
       </xsl:choose>

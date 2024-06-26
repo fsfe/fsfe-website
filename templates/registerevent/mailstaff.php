@@ -9,8 +9,9 @@ there is a new event registered on https://fsfe.org/events/tools/eventregistrati
     <li>Location: <?=$location?></li>
 </ul>
  
-<p>Find attached the event data as XML file for the webpage and data file for the Wiki. Please upload the
-XML file in the next 24 hours to the webpage. Or contact the contributor for clarifications.</p>
+<p>A pull request to the website has been automatically generated <a href=<?=$pr_url?>>here</a>. Please merge the Pull Request within 24 hours or contact the contributor for clarifications.</p>
+
+<p><?=$extra_message?></p>
  
 <p>Thanks,<br />
 your website</p>

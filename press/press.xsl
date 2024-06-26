@@ -16,6 +16,15 @@
 
         <!-- A news entry -->
         <xsl:if test="position()&lt;4">
+          <xsl:if test="position()=1">
+            <xsl:element name="a">
+              <xsl:attribute name="href"><xsl:value-of select="link"/></xsl:attribute>
+              <xsl:element name="img">
+                <xsl:attribute name="src"><xsl:value-of select="image/@url" /></xsl:attribute>
+                <xsl:attribute name="alt"><xsl:value-of select="image/@alt" /></xsl:attribute>
+              </xsl:element>
+            </xsl:element>
+          </xsl:if>
           <xsl:element name="dt">
             <xsl:value-of select="@date"/>
           </xsl:element>

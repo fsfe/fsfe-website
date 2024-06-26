@@ -1,95 +1,213 @@
 #!/usr/bin/env bash
-
-print_usage () { echo "make-outdated-list.sh -o outfile -r repo_path"; }
+set -euo pipefail
+print_usage() { echo "make-outdated-list.sh -o outdir -r repo_path"; }
 
 while getopts o:r:h OPT; do
-  case $OPT in
-    o)  OUT=$OPTARG;;
-    r)  REPO=$OPTARG;;
-    h)  print_usage; exit 0;;
-    *)  echo "Unknown option: -$OPTARG"; print_usage; exit 1;;
-  esac
+	case $OPT in
+	o) OUT=$OPTARG ;;
+	r) REPO=$OPTARG ;;
+	h)
+		print_usage
+		exit 0
+		;;
+	*)
+		echo "Unknown option: -$OPTARG"
+		print_usage
+		exit 1
+		;;
+	esac
 done
 
 if [[ -z "${OUT}" || -z "${REPO}" ]]; then
-  echo "Mandatory option missing:"
-  print_usage
-  exit 1
+	echo "Mandatory option missing:"
+	print_usage
+	exit 1
 fi
 
 cd "${REPO}" || exit 2
 
-nowlang=''
+prevlang=''
 yearago=$(date +%s --date='1 year ago')
 texts_dir="global/data/texts"
 texts_en=$(grep 'id=".*"' ${texts_dir}/texts.en.xml | perl -pe 's/.*id=\"(.*?)\".*/\1/g')
 
-OUT_TMP="${OUT}.tmp"
+OUT_TMP="${OUT}/.tmp-translations"
+LOGFILE="${OUT}/log.txt"
+echo "Making required dirs." | tee "$LOGFILE"
+mkdir -p "${OUT_TMP}/translations" || exit
 
-cat > "${OUT_TMP}" << _END_
-<html>
- <body>
-  <p><span style="color: red">Red entries</span> are pages where the original is newer than one year.</p>
-  <p>Click on the links below to jump to a particular language</p>
-
-_END_
-
-find . -type f -iname "*\.en\.xhtml" | grep -v '^./[a-z][a-z]/\|^./news'|sed 's/\.[a-z][a-z]\.xhtml//'|sort|while read A; do
-   for i in $A.[a-z][a-z].xhtml; do
-         lang_uniq=`echo $i|sed 's/.*\.\([a-z][a-z]\)\.xhtml/\1/'`
-         echo $lang_uniq
-     done
- done|sort|uniq|while read lang_uniq; do
-   echo "<a href=#$lang_uniq>$lang_uniq</a>" >> "${OUT_TMP}"
+echo "Making index" | tee -a "$LOGFILE"
+cat >"${OUT_TMP}/translations.html" <<-EOF
+	<!DOCTYPE html>
+	<html lang="en">
+	<body>
+	<p><span style="color: red">Red entries</span> are pages where the original is newer than one year.</p>
+	<p>Click on the links below to jump to a particular language</p>
+EOF
+: >"${OUT_TMP}/translations/langs.txt"
+find . -type f -iname "*\.en\.xhtml" | sed 's/\.[a-z][a-z]\.xhtml//' | sort | while read -r A; do
+	for i in "$A".[a-z][a-z].xhtml; do
+		# shellcheck disable=SC2001
+		lang_uniq=$(echo "$i" | sed 's/.*\.\([a-z][a-z]\)\.xhtml/\1/')
+		if [ "$lang_uniq" != "en" ]; then
+			echo "$lang_uniq"
+		fi
+	done
+done | sort | uniq | while read -r lang_uniq; do
+	cat >>"${OUT_TMP}/translations.html" <<-EOF
+		<a href="/translations/$lang_uniq.html">$lang_uniq</a>
+	EOF
+	cat >>"${OUT_TMP}/translations/langs.txt" <<-EOF
+		$lang_uniq
+	EOF
 done
 
-find . -type f \( -iname "*\.en\.xhtml" -o -iname "*\.en\.xml" \) -not -path "*/\.*" | grep -v '^./[a-z][a-z]/\|^./news\|^./events' |sort|while read fullname; do
-   ext="${fullname##*.}"
-   base="$(echo $fullname | sed "s/\.[a-z][a-z]\.$ext//")"
-   original_version=$(xsltproc build/xslt/get_version.xsl $base.en.$ext)
-   for i in $base.[a-z][a-z].$ext; do
-     if [[ $i != *".en."* ]]; then
-       translation_version=$(xsltproc build/xslt/get_version.xsl $i)
-       if [ ${translation_version:-0} -lt ${original_version:-0} ]; then
-         originaldate=`git log --pretty="%cd" --date=raw -1 $base.en.$ext|cut -d' ' -f1`
-         lang=$(echo $i|sed "s/.*\.\([a-z][a-z]\)\.$ext/\1/")
-         echo "$lang $base $originaldate $original_version $translation_version"
-       fi
-     fi
-  done
-done|sort -t' ' -k 1,1 -k 3nr,3 -k 5nr,5|\
-while read lang page originaldate original_version translation_version; do
-  if [[ "$nowlang" != "$lang" ]]; then
-    if [[ "$nowlang" != "" ]]; then
-      echo "</table>" >> "${OUT_TMP}"
+cat >>"${OUT_TMP}/translations.html" <<-EOF
+	</body>
+	</html>
+EOF
+echo "Index finished" | tee -a "$LOGFILE"
 
-      # Translatable strings
-      texts_file="${texts_dir}/texts.${nowlang}.xml"
-      missing_texts=
-      for text in $texts_en; do
-        if ! xmllint --xpath "//text[@id = \"${text}\"]" "${texts_file}" &>/dev/null; then
-          missing_texts="$missing_texts $text"
-        fi
-      done
-      echo "<p>Missing texts in ${texts_file}:</br>$missing_texts" >> "${OUT_TMP}"
-    fi
-    echo "<h1 id=\"$lang\">Language: $lang</h1>" >> "${OUT_TMP}"
-    echo "<table>" >> "${OUT_TMP}"
-    echo "<tr><th>Page</th><th>Original date</th><th>Original version</th><th>Translation version</th></tr>" >> "${OUT_TMP}"
-    nowlang=$lang
-  fi
-  orig=`date +"%Y-%m-%d" --date="@$originaldate"`
-
-  if [[ $originaldate -gt $yearago ]]; then
-    color=' style="color: red;"'
-  else
-    color=''
-  fi
-  echo "<tr><td$color>$page</td><td>$orig</td><td>$original_version</td><td>$translation_version</td></tr>" >> "${OUT_TMP}"
+# Make filedates match git commits
+echo "Begin syncing filedates with git commit dates" | tee -a "${LOGFILE}"
+./tools/filedate-sync-git.sh >>"${LOGFILE}"
+echo "File date sync finished" | tee -a "${LOGFILE}"
+# Recently edited files, except news and events
+echo "Search 1" >>"$LOGFILE"
+files=$(find . -type f \( -iname "*\.en\.xhtml" -o -iname "*\.en\.xml" \) -mtime -365 -not -path './news/*' -not -path './events/*' | tee -a "$LOGFILE")
+# News must be more recent
+echo "Search 2" | tee -a "$LOGFILE"
+files+=$'\n'$(find ./news -type f \( -iname "*\.en\.xhtml" -o -iname "*\.en\.xml" \) -mtime -30 | tee -a "$LOGFILE")
+# Files in root directory, probably important
+echo "Search 3" | tee -a "$LOGFILE"
+files+=$'\n'$(find . -maxdepth 1 -type f \( -iname "*\.en\.xhtml" -o -iname "*\.en\.xml" \) | tee -a "$LOGFILE")
+# Activitities are important
+echo "Search 4" | tee -a "$LOGFILE"
+files+=$'\n'$(find ./activities -type f \( -iname "*\.en\.xhtml" -o -iname "*\.en\.xml" \) | tee -a "$LOGFILE")
+# Remove files that are not in the list of those managed by git
+files="$(echo "$files""$(git ls-files)" | sort | uniq -d)"
+# List of extra dirs/files to exclude
+exclude=(
+	# Internal pages
+	"internal"
+	# Order Items
+	"order/.*/item"
+	# Stuff not really important for other languages
+	"donate/germany"
+	"donate/netherlands"
+	"donate/switzerland"
+	# The boiler plate
+	"boilerplate"
+	# Some misc xml files
+	"/\..*\.xml"
+)
+exclude_string=""
+exclude_indexes=("${!exclude[@]}")
+last_index=${exclude_indexes[-1]}
+for index in "${!exclude[@]}"; do
+	exclude["$index"]="$(echo "${exclude["$index"]}" | xargs | sed 's/\//\\\//g')"
+	if [[ "$index" != "$last_index" ]]; then
+		exclude_string+="${exclude["$index"]}\|"
+	else
+		exclude_string+="${exclude["$index"]}"
+	fi
 done
+echo "Pre exclusion files:"$'\n'"${files}" >>"$LOGFILE"
+echo "Excluding according to pattern: ${exclude_string}" >>"$LOGFILE"
+echo "Excluding unwanted files" | tee -a "$LOGFILE"
+files=$(echo "$files" | grep -v "$exclude_string" | sort)
+echo "Post exclusion files:"$'\n'"${files}" >>"$LOGFILE"
 
-echo "</table>" >> "${OUT_TMP}"
-echo "</body>" >> "${OUT_TMP}"
-echo "</html>" >> "${OUT_TMP}"
+echo "Begin generating language status for found langs" | tee -a "$LOGFILE"
+echo "$files" | while read -r fullname; do
+	ext="${fullname##*.}"
+	base="${fullname//\.[a-z][a-z]\.${ext}/}"
+	original_version=$(xsltproc build/xslt/get_version.xsl "$base".en."$ext")
+	while read -r lang; do
+		i="$base"."$lang"."$ext"
+		echo "Processing file $i" >>"$LOGFILE"
+		if [[ -f $i ]]; then
+			translation_version=$(xsltproc build/xslt/get_version.xsl "$i")
+		else
+			translation_version="-1"
+		fi
+		if [ "${translation_version:-0}" -lt "${original_version:-0}" ]; then
+			originaldate=$(git log --pretty="%cd" --date=raw -1 "$base".en."$ext" | cut -d' ' -f1)
+			# shellcheck disable=SC2001
+			lang=$(echo "$i" | sed "s/.*\.\([a-z][a-z]\)\.$ext/\1/")
+			if [ "$ext" == "xhtml" ]; then
+				url="https://fsfe.org/${base/#\.\//}.$lang.html"
+			elif [ "$ext" == "xml" ]; then
+				url="https://git.fsfe.org/FSFE/fsfe-website/src/branch/master/${fullname/#\.\//}"
+			else
+				url=""
+			fi
+			echo "$lang $base $url $originaldate $original_version ${translation_version/-1/Untranslated}"
+		fi
+	done <"${OUT_TMP}/translations/langs.txt"
+done | sort -t' ' -k 1,1 -k 6,6 -k 2,2 |
+	while read -r lang page page_url originaldate original_version translation_version; do
+		if [[ "$prevlang" != "$lang" ]]; then
+			if [[ "$prevlang" != "" ]]; then
+				cat >>"${OUT_TMP}/translations/$prevlang.html" <<-EOF
+					</table>  
+				EOF
 
-mv "${OUT_TMP}" "${OUT}"
+				# Translatable strings
+				texts_file="${texts_dir}/texts.${prevlang}.xml"
+				missing_texts=()
+				longest_text_length=0
+				for text in $texts_en; do
+					if ! xmllint --xpath "//text[@id = \"${text}\"]" "${texts_file}" &>/dev/null; then
+						missing_texts+=("$text")
+						tmp_length="${#text}"
+						if [ "$tmp_length" -gt "$longest_text_length" ]; then
+							longest_text_length="$tmp_length"
+						fi
+					fi
+				done
+				echo "Longest text length for ${prevlang}: ${longest_text_length}" | tee -a "$LOGFILE"
+				for index in "${!missing_texts[@]}"; do
+					missing_texts["$index"]="<li style=\"display: inline-block; width: ${longest_text_length}em;\">${missing_texts["$index"]}</li>"$'\n'
+				done
+
+				cat >>"${OUT_TMP}/translations/$prevlang.html" <<-EOF
+					<p>
+					Missing texts in <a style="width: 100%;" href="https://git.fsfe.org/FSFE/fsfe-website/src/branch/master/${texts_file}">${texts_file}</a>:
+					</p> 
+					<ul>
+					</ul>
+					${missing_texts[*]}     
+					</body>
+					</html>
+				EOF
+			fi
+			cat >"${OUT_TMP}/translations/$lang.html" <<-EOF
+				<!DOCTYPE html>
+				<html lang="en">
+				<body>
+				<h1 id="$lang">Language: $lang</h1>
+				<table>
+				<tr><th>Page</th><th>Original date</th><th>Original version</th><th>Translation version</th></tr>
+			EOF
+			prevlang=$lang
+		fi
+		orig=$(date +"%Y-%m-%d" --date="@$originaldate")
+
+		if [[ $originaldate -gt $yearago ]]; then
+			color=' style="color: red;"'
+		else
+			color=''
+		fi
+		cat >>"${OUT_TMP}/translations/$lang.html" <<-EOF
+			<tr><td$color><a style="width: 100%;" href="${page_url}">$page</a></td><td>$orig</td><td>$original_version</td><td>$translation_version</td></tr> 
+		EOF
+	done
+echo "Finished creating language pages" | tee -a "$LOGFILE"
+
+echo "Replacing old output" | tee -a "$LOGFILE"
+rm -r -f "${OUT}/translations"
+mv -f "${OUT_TMP}"/* "${OUT}"
+rm -r "${OUT_TMP}"
+echo "Finished" | tee -a "$LOGFILE"
+rm "$LOGFILE"

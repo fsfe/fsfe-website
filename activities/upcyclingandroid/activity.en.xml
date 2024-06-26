@@ -3,7 +3,7 @@
 <activityset>
   <version>1</version>
 
-  <activity id="upcyclingandroid" date="2021-10-01" status="active">
+  <activity id="upcyclingandroid" date="2021-10-01" status="finished">
     <title>Upcycling Android</title>
     <description>
 Keep using your phone with Free Software. Upcycling Android explains 
@@ -12,7 +12,7 @@ people flashing their phones with Free Software operating systems.
     </description>
     <link href="/activities/upcyclingandroid/upcyclingandroid.html" />
     <image url="/graphics/logos/ua.png" />
-    <order priority="4" highlight="yes" />
+    <order priority="4" highlight="no" />
     <tags>
         <tag key="awareness"/>
     </tags>

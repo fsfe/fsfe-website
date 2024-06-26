@@ -58,7 +58,6 @@ RewriteRule ^women(/.*)?$ https://wiki.fsfe.org/Teams/Women [R=301,L]
 RewriteRule ^standards(.*) /freesoftware/standards$1 [R=301,L]
 RewriteRule ^education(.*) /freesoftware/education$1 [R=301,L]
 
-
 # =============================================================================
 # CAMPAIGN/TOPIC-SPECIFIC REDIRECTS
 # =============================================================================
@@ -69,11 +68,17 @@ RewriteRule ^news/podcast.rss$ /news/podcast.en.rss [L,R=301]
 RewriteRule ^news/podcast-opus.rss$ /news/podcast-opus.en.rss [L,R=301]
 
 # ILoveFS
+# TODO for new news-item: update links for latest news-item
+RewriteRule ^news/latest-news$ /news/2024/news-20240610-01.html [R=301,L]
+
 # TODO each year: update links for latest report
-#RewriteRule ^activities/ilovefs/report/latest-report.*$ /activities/ilovefs/report/report_2023.html [R=301,L]
+RewriteRule ^activities/ilovefs/latest-report$ /activities/ilovefs/report/report_2024.html [R=301,L]
+RewriteRule ^activities/ilovefs/latest-podcast$ /news/podcast/episode-24.html [R=301,L]
+
 # Redirect from old locations
 RewriteRule ^activities/ilovefs/ilovefs(.*)html$ /activities/ilovefs/index$1html [R=301,L]
 RewriteRule ^activities/ilovefs/20..(/.*)?$ /activities/ilovefs/index.html [R=301,L]
+
 # Sharepic redirection
 RewriteRule ^activities/ilovefs/sharepics?/?$ https://sharepic.fsfe.org/ilovefs [R=301,L]
 
@@ -88,6 +93,10 @@ RewriteRule ^help/(.*) /donate/$1 [R=301,L]
 RewriteRule ^pdfreaders(/.*)? https://pdfreaders.org$1 [R=301,L]
 RewriteRule ^drm.info(/.*)? https://drm.info$1 [R=301,L]
 
+# Youth Hacking 4 Freedom
+# Redirect for registration
+# TODO please update the link for new registration form
+RewriteRule ^activities/yh4f/register https://survey.fsfe.org/index.php/188572 [R=301,L]
 
 # =============================================================================
 # MOVED PAGES
@@ -196,6 +205,8 @@ RewriteRule ^work(\...)?(\.html)?$ /about/ourwork$1.html [R=301,L]
 RewriteRule ^community/tools(/.*)?$ /events/tools$1 [R=301,L]
 RewriteRule ^community/projects-call(/.*)?$ /contact/projects-call$1 [R=301,L]
 RewriteRule ^community/groups(/.*)?$ /about/groups$1 [R=301,L]
+RewriteRule ^potteries/?$ https://wiki.fsfe.org/LocalGroups/Potteries [R=301,L]
+RewriteRule ^berlin/?$ https://wiki.fsfe.org/LocalGroups/Berlin [R=301,L]
 
 # Legal Questions
 RewriteRule ^activities/licence-questions/licence-questions(.*)?$ /freesoftware/legal/faq$1 [R=301,L]

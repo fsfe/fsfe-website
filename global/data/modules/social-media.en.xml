@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <data>
-  <version>1</version>
+  <version>2</version>
 
   <module>
     <div class="module-social-media">
@@ -13,9 +13,7 @@
 
       <div class="share-buttons center">
         <a class="button share-mastodon" href="https://mastodon.social/@fsfe" target="_blank">Mastodon</a>
-        <a class="button share-twitter" href="https://twitter.com/fsfe" target="_blank">Twitter</a>
         <a class="button share-peertube" href="https://media.fsfe.org/a/fsfe/videos" target="_blank">Peertube</a>
-        <a class="button share-youtube" href="https://www.youtube.com/c/FreeSoftwareFoundationEurope" target="_blank">Youtube</a>
       </div>
     </div>
   </module>

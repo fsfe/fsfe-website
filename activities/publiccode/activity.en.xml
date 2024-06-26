@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
 <activityset>
-  <version>1</version>
+  <version>2</version>
 
   <activity id="publiccode" date="2017-09-13" status="active">
     <title>Public Money? Public Code!</title>
@@ -10,7 +10,7 @@
     </description>
     <link href="/activities/publiccode/publiccode.html" />
     <image url="/graphics/logos/publiccode.png" />
-    <order priority="5" highlight="yes" />
+    <order priority="9" highlight="yes" />
     <tags>
       <tag key="awareness" />
       <tag key="policy" />

@@ -133,10 +133,15 @@
   <person id="bakker">
     <name>Carmen Bianca Bakker</name>
     <country>NL</country>
-    <function activity="reuse">deputy/f</function>
+    <function activity="reuse">coordinator/f</function>
     <team>ga</team>
     <team>core</team>
     <email>carmenbianca@fsfe.org</email>
+    <keyhref>https://www.carmenbianca.eu/resources/carmen-pubkey.asc</keyhref>
+    <fingerprint>2A09F62739F6DEC8CFFCA216CD0A90F1C5CA0C92</fingerprint>
+    <link>/about/people/bakker/bakker.html</link>
+    <avatar>bakker.jpg</avatar>
+    <employee>contractor/f</employee>
   </person>
 
   <person id="boehm">
@@ -153,6 +158,14 @@
     <team>sicilia</team>
     <function group="sicilia">coordinator/m</function>
     <email>mibofra@fsfe.org</email>
+  </person>
+
+  <person id="bonissi">
+    <name>Luca Bonissi</name>
+    <function volunteers="translators">deputy/m</function>
+    <team>core</team>
+    <team>translation-coordinators</team>
+    <email>lucabon@fsfe.org</email>
   </person>
 
   <person id="borchardt">
@@ -221,8 +234,6 @@
       <name>Amandine “Cryptie” Jambert</name>
       <function volunteers="translators-fr">deputy/f</function>
       <country>FR</country>
-      <team>ga</team>
-      <team>core</team>
       <team>fr</team>
       <team>translation-coordinators</team>
       <email>cryptie@fsfe.org</email>
@@ -472,6 +483,8 @@
     <email>fi@fsfe.org</email>
     <employee>part/f</employee>
     <avatar>indorato.jpg</avatar>
+    <fingerprint>AF9802E409996C4BC93776A6A9FBBAA2FFF880CD</fingerprint>
+    <keyhref>https://fsfe.org/about/people/fi/publickey_fi_at_fsfe.org.asc</keyhref>
   </person>
 
   <person id="jean">
@@ -503,6 +516,14 @@
     <email>mirv@fsfe.org</email>
     <link>http://iki.fi/tjyrinki/</link>
     <avatar>jyrinki.jpg</avatar>
+  </person>
+
+  <person id="kalikiana">
+    <name>Liv Dywan</name>
+    <country>DE</country>
+    <email>kalikiana@fsfe.org</email>
+    <team>core</team>
+    <function volunteers="fsfewomen">deputy/f</function>
   </person>
 
   <person id="kalkhoff">
@@ -704,9 +725,7 @@
   <person id="maxsc">
     <name>Max Schlüter</name>
     <country>DE</country>
-    <team>core</team>
     <email>maxsc@fsfe.org</email>
-    <function>technical-advisor/m</function>
     <keyhref>https://keys.openpgp.org/vks/v1/by-fingerprint/C42B873AE7CEDB88ED722FB7D5F5A895731F1077</keyhref>
     <fingerprint>C42B873AE7CEDB88ED722FB7D5F5A895731F1077</fingerprint>
     <avatar>maxsc.jpg</avatar>
@@ -746,8 +765,7 @@
     <country>PL</country>
     <team>core</team>
     <email>micgor32@fsfe.org</email>
-    <employee>full/m</employee>
-    <function>intern/m</function>
+    <function>sysadmin/m</function>
     <fingerprint>86F9D7CF5082CCB1489D5D478CD96F19C0610513</fingerprint>
     <keyhref>https://keys.openpgp.org/vks/v1/by-fingerprint/86F9D7CF5082CCB1489D5D478CD96F19C0610513</keyhref>
   </person>
@@ -764,7 +782,6 @@
   <person id="mueller">
     <name>Reinhard Müller</name>
     <country>AT</country>
-    <team>ga</team>
     <team>core</team>
     <team>at</team>
     <email>reinhard@fsfe.org</email>
@@ -783,6 +800,7 @@
     <country>DE</country>
     <team>core</team>
     <team>de</team>
+    <function country="DE">coordinator/m</function>
     <email>jn@fsfe.org</email>
     <fingerprint>1E222721ECCA6C7557AAD20B7D598E96B9B5218F</fingerprint>
     <keyhref>https://keys.fsfe.org/jn@fsfe.org.asc</keyhref>
@@ -836,10 +854,12 @@
   <person id="palepu">
     <name>Jithendra Palepu</name>
     <country>IN</country>
-    <function>intern/m</function>
+    <function>project-manager/m</function>
     <team>core</team>
     <email>jithendra@fsfe.org</email>
-    <employee>full/m</employee>
+    <employee>part/m</employee>
+    <fingerprint>05D220597B47CDBDB62879ED4FFCF21D2489626C</fingerprint>
+    <keyhref>https://fsfe.org/about/people/jithendra/publickey_jithendra_at_fsfe.org.asc</keyhref>
   </person>
 
   <person id="piana">
@@ -853,15 +873,28 @@
     <avatar>piana.jpg</avatar>
   </person>
 
+  <person id="delliott">
+    <name>Darragh Elliott</name>
+    <country>IE</country>
+    <email>delliott@fsfe.org</email>
+    <team>core</team>
+    <employee>full/m</employee>
+    <function>intern/m</function>
+    <fingerprint>0B8233A11ABCB64BA21D1EA9DA5F4575B2AED9D5</fingerprint>
+    <keyhref>https://keys.fsfe.org/delliott@fsfe.org.asc</keyhref>
+    <avatar>darragh.jpg</avatar>
+  </person>
+
   <person id="presutti">
     <name>Dario Presutti</name>
     <country>IT</country>
-    <function>intern/m</function>
     <email>dario@fsfe.org</email>
     <team>core</team>
     <employee>full/m</employee>
+    <function>project-manager/m</function>
     <fingerprint>0A64B15595796EAE84B66AAA823E095EC6EF829C</fingerprint>
-    <keyhref>/about/people/persutti/persutti-public.asc</keyhref>
+    <keyhref>/about/people/presutti/presutti-public.asc</keyhref>
+		<avatar>presutti.jpg</avatar>
   </person>
 
   <person id="dipohl">
@@ -869,8 +902,6 @@
     <country>DE</country>
     <email>dipohl@fsfe.org</email>
     <avatar>dipohl.png</avatar>
-    <team>core</team>
-    <function volunteers="fsfewomen">deputy/f</function>
   </person>
 
   <person id="kristiprogri">
@@ -884,8 +915,6 @@
     <country>GR</country>
     <email>fani@fsfe.org</email>
     <team>gr</team>
-    <team>core</team>
-    <function country="GR">deputy/f</function>
     <avatar>partsafyllidou.jpg</avatar>
     <link>/about/people/partsafyllidou/</link>
     <fingerprint>0D6AF750B328D3A8847FEF21715803E592316627</fingerprint>
@@ -944,7 +973,7 @@
     <email>nico.rikken@fsfe.org</email>
     <fingerprint>ECE25C5065503E34453F767B1A3C51D11C81AB68</fingerprint>
     <keyhref>/about/people/rikken/rikken-public.asc</keyhref>
-    <link>https://wiki.fsfe.org/Supporters/nico.rikken</link>
+    <link>/about/people/rikken/rikken.html</link>
     <avatar>rikken.jpg</avatar>
   </person>
 
@@ -1022,7 +1051,6 @@
   <person id="schiessle">
     <name>Björn Schießle</name>
     <country>DE</country>
-    <function country="DE">coordinator/m</function>
     <team>ga</team>
     <team>core</team>
     <team>de</team>
@@ -1054,7 +1082,6 @@
     <email>linus@fsfe.org</email>
     <team>core</team>
     <avatar>sehn.png</avatar>
-    <employee>full/m</employee>
     <keyhref>https://keys.openpgp.org/vks/v1/by-fingerprint/168FAB826B58B16874CE6E207784A1960FBEB3FA</keyhref>
     <fingerprint>168FAB826B58B16874CE6E207784A1960FBEB3FA</fingerprint>
     <function>sysadmin/m</function>
@@ -1064,10 +1091,7 @@
   <person id="siemer">
     <name>Uwe Siemer</name>
     <country>DE</country>
-    <team>core</team>
     <email>siemer@fsfe.org</email>
-    <employee>full/m</employee>
-    <function>intern/m</function>
     <keyhref>https://keys.fsfe.org/siemer@fsfe.org.asc</keyhref>
     <fingerprint>D0C7E232E1424A47D74268A601C0593BC5A8D61B</fingerprint>
   </person>
@@ -1080,6 +1104,16 @@
     <employee>contractor/f</employee>
     <function>project-manager/f</function>
     <avatar>singhal.jpg</avatar>
+  </person>
+
+  <person id="slartibartfast">
+    <name>Øjvind Fritjof Arnfred</name>
+    <country>DK</country>
+    <function country="DK">deputy/m</function>
+    <team>core</team>
+    <team>dk</team>
+    <email>slartibartfast@fsfe.org</email>
+    <avatar>slartibartfast.jpg</avatar>
   </person>
 
   <person id="sliwinski">
@@ -1098,7 +1132,6 @@
     <team>franconia</team>
     <employee>part/m</employee>
     <function>technical-advisor/m</function>
-    <function country="DE">deputy/m</function>
     <function group="franconia">coordinator/m</function>
     <email>floriansnow@fsfe.org</email>
     <fingerprint>59F74EF9BE39705FDDAC36E6F0A025D6E97D0E9F</fingerprint>
@@ -1141,6 +1174,15 @@
     <keyhref>https://matija.suklje.name/documents/publickey.asc</keyhref>
     <link>http://matija.suklje.name</link>
     <avatar>suklje.jpg</avatar>
+  </person>
+
+  <person id="tommi">
+    <name>Tommaso Marmo</name>
+    <country>IT</country>
+    <email>tommi@fsfe.org</email>
+    <fingerprint>A91304BF701ED3FE58AF70620FAF46FD381AC57F</fingerprint>
+    <keyhref>https://keys.fsfe.org/tommi@fsfe.org.asc</keyhref>
+    <avatar>tommi.jpg</avatar>
   </person>
 
   <person id="tomas">

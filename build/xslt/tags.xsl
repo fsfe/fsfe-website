@@ -8,7 +8,7 @@
   <xsl:template match="tags">
     <xsl:element name="ul">
       <xsl:attribute name="class">tags</xsl:attribute>
-      <xsl:for-each select="tag[not(@key='front-page')]">
+      <xsl:for-each select="tag[not(@key='front-page') and not(@key='press') and not(@key='highlights')]">
         <xsl:element name="li">
           <xsl:element name="a">
             <xsl:attribute name="href">

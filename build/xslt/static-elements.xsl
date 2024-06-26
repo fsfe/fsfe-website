@@ -33,6 +33,7 @@
       <fsfe-cd-referrer-input/>
       <input type="hidden" name="wants_info" value="yes"/>
       <input type="hidden" name="wants_newsletter_info" value="yes"/>
+      <input type="hidden" name="category" value="i"/>
       <input id="submit" type="submit" value="{$submit}"/>
     </form>
   </xsl:template>

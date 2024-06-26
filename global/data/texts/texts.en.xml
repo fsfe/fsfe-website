@@ -81,8 +81,6 @@
   <text id="fs/basics">Free Software Basics</text>
   <text id="community/discuss">Free Software Discussions</text>
 
-
-
   <text id="learn-more">Learn more</text>
 
   <text id="newsletter">Newsletter</text>
@@ -97,7 +95,9 @@
   <text id="breadcrumb-news">News</text>
   <text id="pages">Pages</text>
   <text id="receive-newsletter">Subscribe to FSFE's monthly newsletter</text>
-  <text id="subscribe-newsletter">Subscribe to the newsletter</text>
+  <text id="subscribe-newsletter">Subscribe to our email updates</text>
+  <text id="subscribe-newsletter-text">Our experts inform you about current news, events, activities, and how you can contribute.</text>
+  
 
 
 
@@ -173,14 +173,11 @@
 
   <!-- Motivational texts for fellowship, support or donations -->
 
-
-
-
   <text id="support">Support the FSFE</text>
   <text id="show-support">Show your support!</text>
   <text id="show-support-paragraph">FSFE needs your support to get its voice heard! Every hit counts!</text>
   <text id="support-fsfe">I support the FSFE!</text>
-  <text id="support-paragraph">Become a supporter of the FSFE to empower our work and assure our financial independence!</text>
+  <text id="support-paragraph">Freedom in the information society needs your financial contribution.</text>
 
   <text id="donate">Donate</text>
   <text id="donate-paragraph">
@@ -192,6 +189,9 @@
     strength and autonomy. They enable us to continue working for Free
     Software wherever necessary, and to be an independent voice.
   </text>
+
+  <text id="followup/press-header">Stay informed</text>
+  <text id="followup/press-paragraph">The best way to keep up to date is to subscribe to our <a href="/press/press.html">press releases</a> or <a href="/news/index.html">news updates</a>. You can also contact our press team at <email mailto="yes">press@fsfe.org</email>.</text>
 
   <!-- pdfreaders.org -->
   <text id="pdfreaders-head-readers">The Readers</text>

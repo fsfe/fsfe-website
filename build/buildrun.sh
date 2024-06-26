@@ -105,6 +105,13 @@ git_build_into(){
   done
 
   if [ "$gitterm" -ne 0 ]; then
+    debug "Three git pulls failed, hard resetting and repulling"
+    git -C "$basedir" reset --hard HEAD~50 >"$GITchanges" 2>"$GITerrors"
+    git -C "$basedir" pull >>"$GITchanges" 2>>"$GITerrors"
+    gitterm="$?"
+  fi
+
+  if [ "$gitterm" -ne 0 ]; then
     die "GIT reported the following problem:\n$(cat "$GITerrors")"
   fi
 

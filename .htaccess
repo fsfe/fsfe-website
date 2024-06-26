@@ -96,7 +96,7 @@ RewriteRule ^drm.info(/.*)? https://drm.info$1 [R=301,L]
 # Youth Hacking 4 Freedom
 # Redirect for registration
 # TODO please update the link for new registration form
-RewriteRule ^activities/yh4f/register  https://survey.fsfe.org/index.php/65853i4 [R=301,L]
+RewriteRule ^activities/yh4f/register  https://survey.fsfe.org/index.php/658534 [R=301,L]
 
 # =============================================================================
 # MOVED PAGES

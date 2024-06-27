@@ -30,6 +30,7 @@ use utf8;
 use LWP::UserAgent;
 use HTTP::Request::Common qw(POST);
 use JSON;
+use strict;
 use warnings;
 use diagnostics;
 
@@ -91,16 +92,18 @@ if ( !$email ) {
     exit;
 }
 
-my $catalogue_file = $ENV{"DOCUMENT_ROOT"} . "/order/catalogue.xml";
-my $catalogue = XML::LibXML->load_xml(location => $catalogue_file);
+my $items_file = $ENV{"DOCUMENT_ROOT"} . "order/data/items.en.xml";
+my $items = XML::LibXML->load_xml(location => $items_file);
 
 my $count  = 0;
 my $amount = 0;
 
-foreach $item ( $query->param ) {
-    $value = $query->param($item);
+foreach my $item ( $query->param ) {
+    my $value = $query->param($item);
     if ( not $item =~ /^_/ and $value ) {
-        my $price = $catalogue->findvalue("/catalogue/item[\@id=\"$item\"]/\@price");
+        # Remove size from item info so price is found properly
+        $item =~ s/_.*//;
+        my $price = $items->findvalue("/itemset/item[\@id=\"$item\"]/\@price");
         $count  += 1;
         $amount += $value * $price;
     }
@@ -201,10 +204,12 @@ my $body = <<"HTML";
     <pre>
 HTML
 
-foreach $item ( $query->param ) {
-    $value = $query->param($item);
+foreach my $item ( $query->param ) {
+    my $value = $query->param($item);
     if ( not $item =~ /^_/ and $value ) {
-        my $price = $catalogue->findvalue("/catalogue/item[\@id=\"$item\"]/\@price");
+        # Remove size from item info so price is found properly
+        $item =~ s/_.*//;
+        my $price = $items->findvalue("/itemset/item[\@id=\"$item\"]/\@price");
         my $subtotal = $value * $price;
         $body .= <<"HTML";
 $value x $item: € $subtotal
@@ -244,10 +249,12 @@ push @odtfill, "Name=" . $name;
 push @odtfill, "Address=" . $address =~ s/\n/\\n/gr;
 push @odtfill, "ZipCity=" . $zip . " " . $city;
 push @odtfill, "Country=" . $country_name;
-foreach $item ( $query->param ) {
-    $value = $query->param($item);
+foreach my $item ( $query->param ) {
+    my $value = $query->param($item);
     if ( not $item =~ /^_/ and $value ) {
-        my $price = $catalogue->findvalue("/catalogue/item[\@id=\"$item\"]/\@price");
+        # Remove size from item info so price is found properly
+        $item =~ s/_.*//;
+        my $price = $items->findvalue("/itemset/item[\@id=\"$item\"]/\@price");
         push @odtfill, "Count=" . $value;
         push @odtfill, "Item=" . $item;
         push @odtfill, "Amount=" . sprintf "%.2f", $value * $price;

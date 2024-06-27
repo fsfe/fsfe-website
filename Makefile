@@ -155,6 +155,3 @@ localmenus: $(SUBDIRS)
 all: xmllists
 xmllists: $(SUBDIRS)
 	tools/update_xmllists.sh
-
-order/catalogue.xml: order/catalogue.xsl $(wildcard order/*/item*.xml)
-	(echo -e "<?xml version=\"1.0\"?>\n<catalogue>"; xsltproc $^; echo "</catalogue>") > $@

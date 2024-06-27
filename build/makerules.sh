@@ -203,7 +203,7 @@ COPY_SRC_FILES := \$(shell find "\$(INPUTDIR)" -type f \
   -not -name '*.xhtml' \
   -not -name '*.xml' \
   -not -name '*.xsl' \
-)
+) \$(INPUTDIR)/order/data/items.en.xml
 
 # The same as above, but moved to the output directory
 COPY_DST_FILES := \$(sort \$(patsubst \$(INPUTDIR)/%,\$(OUTPUTDIR)/%,\$(COPY_SRC_FILES)))

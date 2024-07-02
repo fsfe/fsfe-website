@@ -105,9 +105,7 @@ foreach $item ( $query->param ) {
 # Determine shipping fees based on country code from drop-down list
 my $shipping;
 
-if ( $amount >= 6 ) {
-    $shipping = 0;
-} elsif ( $country_code eq 'DE' ) {
+if ( $country_code eq 'DE' ) {
     $shipping = 5;
 } else {
     $shipping = 8;

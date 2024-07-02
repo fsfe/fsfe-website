@@ -38,6 +38,12 @@ use diagnostics;
 
 my $query = new CGI;
 
+if (index($query->param("email"), "example.com") != -1) {
+    print "Content-type: text/html\n\n";
+    print "<p>Invalid input!</p>\n";
+    exit;
+} 
+
 if ( $query->param("url") ) {
     print "Content-type: text/html\n\n";
     print "<p>Invalid input!</p>\n";

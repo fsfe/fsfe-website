@@ -194,6 +194,12 @@
       </xsl:if>
     </xsl:variable>
 
+    <!-- Mastodon link to profile -->
+    <xsl:element name="meta">
+      <xsl:attribute name="name">fediverse:creator</xsl:attribute>
+      <xsl:attribute name="content">@fsfe@mastodon.social</xsl:attribute>
+    </xsl:element>
+
     <!-- Twitter cards -->
     <xsl:element name="meta">
       <xsl:attribute name="name">twitter:card</xsl:attribute>

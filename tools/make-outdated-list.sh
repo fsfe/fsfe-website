@@ -27,7 +27,6 @@ fi
 cd "${REPO}" || exit 2
 
 prevlang=''
-yearago=$(date +%s --date='1 year ago')
 texts_dir="global/data/texts"
 texts_en=$(grep 'id=".*"' ${texts_dir}/texts.en.xml | perl -pe 's/.*id=\"(.*?)\".*/\1/g')
 
@@ -40,8 +39,8 @@ echo "Making index" | tee -a "$LOGFILE"
 cat >"${OUT_TMP}/translations.html" <<-EOF
 	<!DOCTYPE html>
 	<html lang="en">
+	<h1>Translation Status Page</h1>
 	<body>
-	<p><span style="color: red">Red entries</span> are pages where the original is newer than one year.</p>
 	<p>Click on the links below to jump to a particular language</p>
 EOF
 : >"${OUT_TMP}/translations/langs.txt"
@@ -187,6 +186,7 @@ done | sort -t' ' -k 1,1 -k 6,6 -k 2,2 |
 				<html lang="en">
 				<body>
 				<h1 id="$lang">Language: $lang</h1>
+				<p><span style="color: red">Red entries</span> are pages where the original is newer than 6 months.</p>
 				<table>
 				<tr><th>Page</th><th>Original date</th><th>Original version</th><th>Translation version</th></tr>
 			EOF
@@ -194,13 +194,13 @@ done | sort -t' ' -k 1,1 -k 6,6 -k 2,2 |
 		fi
 		orig=$(date +"%Y-%m-%d" --date="@$originaldate")
 
-		if [[ $originaldate -gt $yearago ]]; then
-			color=' style="color: red;"'
+		if [[ $originaldate -gt $(date +%s --date='6 months ago') ]]; then
+			color='color: red;'
 		else
 			color=''
 		fi
 		cat >>"${OUT_TMP}/translations/$lang.html" <<-EOF
-			<tr><td$color><a style="width: 100%;" href="${page_url}">$page</a></td><td>$orig</td><td>$original_version</td><td>$translation_version</td></tr> 
+			<tr><td><a style="width: 100%; $color" href="${page_url}">$page</a></td><td>$orig</td><td>$original_version</td><td>$translation_version</td></tr> 
 		EOF
 	done
 echo "Finished creating language pages" | tee -a "$LOGFILE"

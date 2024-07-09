@@ -24,7 +24,7 @@
       </div> -->
 
       <!-- Outdated note -->
-      <xsl:if test="/buildinfo/@outdated='yes'">
+      <xsl:if test="/buildinfo/@translation_state='outdated'">
         <xsl:element name="div">
           <xsl:attribute name="class">alert warning yellow</xsl:attribute>
           <xsl:element name="a">
@@ -49,8 +49,25 @@
         </xsl:element>
       </xsl:if> <!-- End Outdated note -->
 
+      <!-- So outdated we fellback to english note -->
+      <xsl:if test="/buildinfo/@translation_state='very-outdated'">
+        <xsl:element name="div">
+          <xsl:attribute name="class">alert warning yellow</xsl:attribute>
+          <xsl:element name="a">
+            <xsl:attribute name="class">close</xsl:attribute>
+            <xsl:attribute name="data-dismiss">alert</xsl:attribute>
+            <xsl:attribute name="href">#</xsl:attribute>
+            <xsl:attribute name="aria-hidden">true</xsl:attribute>
+            ×
+          </xsl:element>
+            <xsl:element name="p">
+            <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'very-outdated'" /></xsl:call-template>
+          </xsl:element>
+        </xsl:element>
+      </xsl:if> <!-- End very outdated note -->
+
       <!-- Missing translation note -->
-      <xsl:if test="/buildinfo/@language!=/buildinfo/document/@language">
+      <xsl:if test="/buildinfo/@translation_state='untranslated'">
         <xsl:element name="div">
           <xsl:attribute name="class">alert warning yellow</xsl:attribute>
           <xsl:element name="a">

@@ -56,11 +56,7 @@ function eval_date($date)
 {
     $dt = date_parse($date);
     return !$dt["errors"] &&
-        $dt["year"] &&
-        preg_match(
-            "#^(19|20)\d\d[- /.](0[1-9]|1[012])[- /.](0[1-9]|[12][0-9]|3[01])$#",
-            $date
-        ) === 1;
+        $dt["year"] && $dt["month"] && $dt["day"] && isset($dt["hour"]) && isset($dt["minute"]);
 }
 
 function parse_submission()
@@ -84,8 +80,8 @@ function parse_submission()
         "title" => isset($_POST["title"]) ? $_POST["title"] : "",
         "groupname" => isset($_POST["groupname"]) ? $_POST["groupname"] : "",
         "groupurl" => isset($_POST["groupurl"]) ? $_POST["groupurl"] : "",
-        "startdate" => isset($_POST["startdate"]) ? $_POST["startdate"] : "",
-        "enddate" => isset($_POST["enddate"]) ? $_POST["enddate"] : "",
+        "startdate" => isset($_POST["startdate"]) ? ($_POST["startdate"] . ":00Z") : "",
+        "enddate" => isset($_POST["enddate"]) ?  ($_POST["enddate"] . ":00Z") : "",
         "description" => isset($_POST["description"])
             ? $_POST["description"]
             : "",
@@ -117,7 +113,7 @@ function calculate_information($data)
         0,
         16
     );
-    $event_start_date = str_replace("-", "", $data["startdate"]);
+    $event_start_date = str_replace("-", "", strtok($data["startdate"], "T"));
     $apikey = getenv("GITEA_API_KEY");
     // Updated in the course of this function
     $filename = "";
@@ -444,11 +440,16 @@ function send_event_email(
     return $response;
 }
 
+// Enable for debugging
+// ini_set('display_errors', '1');
+// ini_set('display_startup_errors', '1');
+// error_reporting(E_ALL);
+
 if (
     isset($_POST["register_event"]) and
     empty($_POST["spam"]) and
     eval_date($_POST["startdate"]) and
-    $_POST["startdate"] > "2023-01-01" and
+    $_POST["startdate"] > date("Y-M-d", strtotime("-1 year", time())) and
     eval_date($_POST["enddate"]) || empty($_POST["enddate"]) and
     !stripos($_POST["email"], "example.com")
 ) {

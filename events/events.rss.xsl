@@ -94,7 +94,7 @@
 
         <!-- Event items -->
         <xsl:for-each select="/buildinfo/document/set/event[
-            translate(@end, '-', '') &gt;= translate(/buildinfo/@date, '-', '')
+            translate(substring(@end,1,10), '-', '') &gt;= translate(/buildinfo/@date, '-', '')
           ]">
           <xsl:sort select="@start" />
           <xsl:if test="position() &lt; 11">

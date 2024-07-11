@@ -110,6 +110,9 @@
         </p>
       </div>
 
+      <p class="help-block">
+        Please note input times are in UTC.
+      </p>
       <table>
         <tr>
           <td>
@@ -120,8 +123,8 @@
               name="startdate"
               value=""
               required="required"
-              type="date"
-              placeholder="YYYY-MM-DD"
+              type="datetime-local"
+              placeholder="YYYY-MM-DD HH:MM"
             />
           </td>
           <td>
@@ -129,8 +132,8 @@
             <input
               name="enddate"
               value=""
-              type="date"
-              placeholder="YYYY-MM-DD"
+              type="datetime-local"
+              placeholder="YYYY-MM-DD HH:MM"
             />
           </td>
         </tr>
@@ -243,7 +246,7 @@
         <p class="help-block">
           Please indicate the group the event is intended for here. If the event
           is not for a group, then please select none. If the local group is not
-          represented here, please contact us at contact@fsfe.org. This
+          represented here, please contact us at <email>contact@fsfe.org</email>. This
           information is used to automatically add it to the nextcloud calendars
           for each group, links to which can be found on the groups page.
         </p>

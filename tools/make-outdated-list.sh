@@ -69,7 +69,7 @@ echo "Index finished" | tee -a "$LOGFILE"
 
 # Make filedates match git commits
 echo "Begin syncing filedates with git commit dates" | tee -a "${LOGFILE}"
-# ./tools/filedate-sync-git.sh >>"${LOGFILE}"
+./tools/filedate-sync-git.sh >>"${LOGFILE}"
 echo "File date sync finished" | tee -a "${LOGFILE}"
 # Recently edited files, except news and events
 echo "Search 1" >>"$LOGFILE"

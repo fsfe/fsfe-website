@@ -69,7 +69,7 @@ echo "Index finished" | tee -a "$LOGFILE"
 
 # Make filedates match git commits
 echo "Begin syncing filedates with git commit dates" | tee -a "${LOGFILE}"
-./tools/filedate-sync-git.sh >>"${LOGFILE}"
+# ./tools/filedate-sync-git.sh >>"${LOGFILE}"
 echo "File date sync finished" | tee -a "${LOGFILE}"
 # Recently edited files, except news and events
 echo "Search 1" >>"$LOGFILE"
@@ -135,17 +135,23 @@ echo "$files" | while read -r fullname; do
 			# shellcheck disable=SC2001
 			lang=$(echo "$i" | sed "s/.*\.\([a-z][a-z]\)\.$ext/\1/")
 			if [ "$ext" == "xhtml" ]; then
-				url="https://fsfe.org/${base/#\.\//}.$lang.html"
+				original_url="https://webpreview.fsfe.org?uri=/${base/#\.\//}.en.html"
+				translation_url="https://webpreview.fsfe.org?uri=/${base/#\.\//}.$lang.html"
 			elif [ "$ext" == "xml" ]; then
-				url="https://git.fsfe.org/FSFE/fsfe-website/src/branch/master/${fullname/#\.\//}"
+				original_url="https://git.fsfe.org/FSFE/fsfe-website/src/branch/master/${base/#\.\//}.en.xml"
+				translation_url="https://git.fsfe.org/FSFE/fsfe-website/src/branch/master/${base/#\.\//}.$lang.xml"
 			else
-				url=""
+				translation_url="#"
+				original_url="#"
 			fi
-			echo "$lang $base $url $originaldate $original_version ${translation_version/-1/Untranslated}"
+			if [ "$translation_version" == "-1" ]; then
+				translation_url="#"
+			fi
+			echo "$lang $base $originaldate $original_url $original_version $translation_url ${translation_version/-1/Untranslated}"
 		fi
 	done <"${OUT_TMP}/translations/langs.txt"
-done | sort -t' ' -k 1,1 -k 6,6 -k 2,2 |
-	while read -r lang page page_url originaldate original_version translation_version; do
+done | sort -t' ' -k 1,1 -k 7,7 -k 2,2 |
+	while read -r lang page originaldate original_url original_version translation_url translation_version; do
 		if [[ "$prevlang" != "$lang" ]]; then
 			if [[ "$prevlang" != "" ]]; then
 				cat >>"${OUT_TMP}/translations/$prevlang.html" <<-EOF
@@ -200,7 +206,7 @@ done | sort -t' ' -k 1,1 -k 6,6 -k 2,2 |
 			color=''
 		fi
 		cat >>"${OUT_TMP}/translations/$lang.html" <<-EOF
-			<tr><td><a style="width: 100%; $color" href="${page_url}">$page</a></td><td>$orig</td><td>$original_version</td><td>$translation_version</td></tr> 
+			<tr><td><a style="width: 100%; $color">$page</a></td><td>$orig</td><td><a href="$original_url">$original_version</a></td><td><a href="$translation_url">$translation_version</a></td></tr> 
 		EOF
 	done
 echo "Finished creating language pages" | tee -a "$LOGFILE"

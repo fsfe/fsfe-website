@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- ***************************************************** -->
+<!-- This file has been automatically generated.           -->
+<!-- Please do not modify it, and do not commit it to git. -->
+<!-- ***************************************************** -->
+
+<newsset>
+  <news date="2021-12-16">
+    <title>La mancanza di codice pubblico costa a Stoccolma 100 milioni di Euro
+</title>
+    <body>
+      <p>
+ <i>Öppna skolplattformen</i> è stata sviluppata dalla frustrazione di alcuni genitori di Stoccolma quando hanno notato anomalie e problematiche di sicurezza nella piattaforma proprietaria della scuola della città. L'app originale è costata alla città 1 miliardo di corone svedesi (circa 100 milioni di Euro) ed è risultata essere gravemente difettosa.</p>
+    </body>
+    <body-complete>
+
+<h1>La mancanza di codice pubblico costa a Stoccolma 100 milioni di Euro</h1>
+
+<p>
+ <i>Öppna skolplattformen</i> è stata sviluppata dalla frustrazione di alcuni genitori di Stoccolma quando hanno notato anomalie e problematiche di sicurezza nella piattaforma proprietaria della scuola della città. L'app originale è costata alla città 1 miliardo di corone svedesi (circa 100 milioni di Euro) ed è risultata essere gravemente difettosa.</p>
+
+<figure>
+<img src="https://pics.fsfe.org/uploads/big/089c7baba968418669601f56d1f72d86.png" alt="PMPC"/>
+ </figure>
+
+<p>Le amministrazioni si affidano sempre più a soluzioni digitali per migliorare il loro flusso di lavoro e rendere le procedure giornaliere più semplici. È stato esattamente questo il caso della città di Stoccolma e della sua originale <i>Skolplattformen</i>. Questa piattaforma era stata realizzata per essere utilizzata come piattaforma digitale in comune tra gli asili e le scuole di Stoccolma, fornendo ai genitori informazioni sulla scuola dei loro bambini direttamente sui loro dispositivi. La piattaforma, però, non funzionava come ci si aspettava e, quando i genitori ha studiato meglio il software, hanno trovato numerosi difetti nell'app.</p>
+
+
+<p>La situazione frustrante li ha portati a decidere di fare il reverse engineering delle API della piattaforma per creare un'alternativa di Software Libero – <a href="https://github.com/kolplattformen/skolplattformen">Öppna skolplattformen</a> – che offre una esperienza di utilizzo più semplice, più veloce e più sicura. Nonostante questi sforzi, la città di Stoccolma non era né contenta né ha voluto collaborare con il team di <i>Öppna skolplattformen</i>, e ha deciso invece di iniziare un'indagine legale e di sporgere denuncia alla polizia contro gli sviluppatori dell'app sostenendo un uso illecito dei dati personali.
+</p>
+
+<blockquote>
+<p>«Se potessimo usare la trasparenza a vantaggio della nostra competitività e collaborare molto di più l'uno con l'altro, potremmo iniziare a vedere un'Europa con molto più potenziale per essere più competitiva nell'economia globale» <cite>Christian Landberg, cofondatore e sviluppatore di Öppna skolplattformen </cite>
+</p>
+</blockquote>
+
+
+<p>Questa è la storia della lotta di alcuni genitori che hanno tentato di risolvere i problemi portati da un costoso software proprietario, e di una scettica amministrazione che si è trovata intrappolata in una pesante dipendenza dal fornitore. Con Christian
+  Landberg – cofondatore e sviluppatore di <i>Öppna skolplattformen</i> – e con Alexander
+  Crawford – primo sostenitore e consulente per la strategia, la politica e la comunicazione di
+  <i>Öppna skolplattformen</i> – abbiamo discusso a fondo sulla piattaforma di scuola aperta.
+  Cosa li ha portati a rilasciarla con una licenza di Software Libero, quali sono i progressi e la situazione attuale, e cosa ci si aspetta in futuro per questa piattaforma, ma anche per l'utilizzo del codice pubblico nel settore pubblico?</p>
+
+ <video preload="none" controls="controls" width="100%">
+        <source src="https://download.fsfe.org/videos/pmpc/OpenSchoolPlatform.mp4" type="video/mp4; codecs=&quot;avc1.42E01E, mp4a.40.2&quot;"/>
+        </video>
+
+        <p>Video (in English)</p>
+
+
+<blockquote>
+<p><i>«Öppna skolplattformen</i> sta diventando una palla di neve che si sta ingigantendo e sta cambiando lo scenario a riguardo della tecnologia e digitalizzazione civile nel settore pubblico»
+<cite>Alexander Crawford, primo sostenitore e consulente di Öppna skolplattformen</cite>
+</p>
+</blockquote>
+
+
+<h2>Denaro pubblico? Codice pubblico!</h2>
+<p>Negli ultimi quattro anni, la Free Software Foundation Europe (FSFE) ha promosso l'introduzione di maggiore libertà software nel settore pubblico nella panoramica dell'iniziativa "Denaro pubblico? Codice pubblico!". Questa iniziativa chiede che gli sviluppi software finanziati pubblicamente per il settore pubblico vengano resi pubblicamente disponibili con licenze di Software Libero. Le argomentazioni per questa richiesta sono basate sui benefici che il Software Libero può favorire, come il risparmio sul lungo termine, la promozione e il sostengo dell'economia locale, la trasparenza, l'interoperabilità e molte altre.</p>
+
+<p>Puoi sostenere questa richiesta <a href="https://publiccode.eu/">partecipando alla nostra campagna</a>, <a href="/activities/publiccode/brochure">distribuendo la nostra brochure</a> e convincendo <a href="https://wiki.fsfe.org/Activities/ContactingAdministrationsForPMPC">la tua amministrazione locale</a> ad usare il Software Libero.
+</p>
+
+
+
+</body-complete>
+    <image url="https://pics.fsfe.org/uploads/big/089c7baba968418669601f56d1f72d86.png" alt="PMPC"/>
+    <link>/news/2021/news-20211216-01.html</link>
+    <tags>
+<tag key="front-page"/>
+<tag key="pmpc">Denaro pubblico? Codice pubblico!</tag>
+<tag key="procurement">Appalti pubblici</tag>
+<tag key="public-administration">Pubblica amministrazione</tag>
+<tag key="education">Educazione</tag>
+</tags>
+    <discussion href="https://community.fsfe.org/t/787"/>
+  </news>
+</newsset>

@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- ***************************************************** -->
+<!-- This file has been automatically generated.           -->
+<!-- Please do not modify it, and do not commit it to git. -->
+<!-- ***************************************************** -->
+
+<newsset>
+  <news date="2024-06-04" type="newsletter">
+    <title>EU-verkiezingen +++ VDM &amp; Apple +++ REUSE-gereedschap</title>
+    <body>
+      <p>
+In deze aflevering leggen we onze plannen uit om een film te maken over 
+Ada &amp; Zangemann en we vragen uw steun. We hebben een nieuwe 
+REUSE-versie gepubliceerd. Lees FSFE's opinie voor de Europese Commissie 
+over Apple's nieuwe strategie om de VDM na te leven en het gevolg voor 
+Vrije Software.
+ </p>
+    </body>
+    <body-complete>
+
+<h1>EU-verkiezingen +++ VDM &amp; Apple +++ REUSE-gereedschap</h1>
+
+<p>
+In deze aflevering leggen we onze plannen uit om een film te maken over 
+Ada &amp; Zangemann en we vragen uw steun. We hebben een nieuwe 
+REUSE-versie gepubliceerd. Lees FSFE's opinie voor de Europese Commissie 
+over Apple's nieuwe strategie om de VDM na te leven en het gevolg voor 
+Vrije Software.
+ </p>
+
+<figure>
+	<img src="https://pics.fsfe.org/uploads/medium/3f/21/24d04ba4d35dfa3e42d79e36909d.png" alt="Verzameling van afbeeldingen, met een illustratie van Ada, het logo van REUSE-software en een illustratie van een stadhuis"/>
+</figure>
+
+<div class="toc">
+  <p>Inhoudsopgave</p>
+	<ul id="toc">
+		<li><a href="#quote-of-the-month"><strong>Citaat van de maand</strong></a></li>
+		<li><a href="#take-action"><strong>Kom in actie! Praat met uw politici, zoals onze coördinator van FSFE Nederland</strong></a></li>
+		<li><a href="#reuse"><strong>REUSE v.3.1.0a1</strong></a></li>
+		<li><a href="#interoperability-apple"><strong>Apple's aanpak van VDM zal Vrije Software beschadigen</strong></a></li>
+		<li><a href="#ada-video"><strong>Ada gaat naar de set: laten we een tekenfilm maken!</strong></a></li>
+		<li><a href="#stories-community"><strong>Verhalen van onze gemeenschap</strong></a></li>
+                <li><a href="#more-conferences"><strong>En nog meer: LibreItalia, DORS/CLUC 2024 en esLibre 2024-conferenties</strong></a></li>
+		<li><a href="contribute"><strong>Draag bij aan onze nieuwsbrief</strong></a></li>
+	</ul>
+</div>
+	
+<h3 id="quote-of-the-month">Citaat van de maand</h3>
+<blockquote>
+	<p>“Sokken. Ik wil de sokken. Ik hou van de sokken. En als je ze hebt, anderen ook.”</p>
+	<cite>-Bezoeker FSFE op FOSDEM 2024-</cite>
+</blockquote>
+
+
+<h3 id="take-action">Kom in actie! Praat met uw politici, zoals onze coördinator van FSFE Nederland</h3>
+
+<p>
+Over enkele dagen zullen de Europese burgers hun volgende 
+vertegenwoordigers in het Europese Parlement kiezen. <a href="/activities/publiccode/get-active.html">Kom in actie</a> om 
+zeker te stellen dat Softwarevrijheid deel is van het grotere politieke 
+debat!
+</p>
+
+<p>De coördinator FSFE Nederland <a href="/news/2024/news-20240530-01.html">voegde voor Vrije Software zijn stem 
+toe aan het debat van de digitale stad in Amsterdam</a>. Nu is het uw 
+kans om het belang van Vrije Software uit te lichten in de aanloop naar 
+de komende verkiezingen voor het Europese Parlement.</p>
+
+<figure>
+  <peertube url="https://media.fsfe.org/w/bfXqXqTZwipM9zbubjbDHV"/>
+  <figcaption>Vraag van de coördinator FSFE Nederland: "In maart gebeurde er wat 
+  moois in Amsterdam: het 'Digitaal Onafhankelijk 
+  Amsterdam'-initiatiefvoorstel aangenomen. Ik vraag me eigenlijk af: 
+  daar wordt open source aangehaald om autonomie te promoten en ook 
+  transparantie te promoten en ik zou zeggen dat haakt aan bij de 
+  NSC-punten. Wat gaan jullie doen in Europa om dat verder te brengen en 
+  overheden en gemeenten te ondersteunen om echt vrije en open source 
+  software verder te brengen?"
+  </figcaption>
+</figure>
+
+<h3 id="reuse">REUSE v.3.1.0a1</h3>
+
+<p>We hebben het REUSE-gereedschap v3.1.0a1 zojuist gepubliceerd! Dit is 
+een alfa-publicatie die de nieuwe REUSE.toml-functionaliteit bevat, die 
+.reuse/dep5 vervangt (en zacht wordt afgeschreven). Het belangrijkste 
+doel van REUSE.toml is om .reuse/dep5-scenario's op te lossen, zoals 
+beschreven in <a href="https://github.com/fsfe/reuse-tool/issues/779">https://github.com/fsfe/reuse-tool/issues/779</a>: 
+als een bestand een header heeft, ook aan bod komt in .reuse/dep5 en de 
+twee informatie-bronnen zijn het niet eens over de licentie, welke 
+licentie is dan van toepassing?</p>
+
+<p>
+REUSE-software gaat in drie stappen in op een fundamenteel probleem met 
+Vrije Software-licenties in haar bron: onder welke licentie valt een 
+bestand en van wie is het auteursrecht? Het REUSE-project bestaat uit 
+een verzameling beste praktijken en een gereedschap dat het gemakkelijk 
+en eenvoudig maakt om deze juridische informatie toe te voegen aan ieder 
+afzonderlijk bestand in een project.
+</p>
+
+<p>We werken aan een snelle publicatie van <a href="https://reuse.software/spec-3.2/">versie 3.2</a> van de 
+specificatie, dus blijf op de hoogte!</p>
+ 
+<h3 id="interoperability-apple">Apple's aanpak van VDM zal Vrije Software beschadigen</h3>
+
+<p>De FSFE werkt door aan de implementatie van de Verordening Digitale 
+Markten (VDM) en houdt de strategieën van de betreffende bedrijven 
+(poortwachters) en hun invloed op Vrije Software. We hebben <a href="https://download.fsfe.org/device-neutrality/202404-FSFE-apple-report-EC.pdf">een 
+uitgebreid standpunt als belanghebbende</a> ingediend bij de Europese 
+Commissie over hoe Apple VDM niet na kan leven en haar strategie haar 
+anti-competitieve positie zal versterken. Ons rapport stelt dat:</p>
+<ul>
+<li>Apple haar zakelijke en eindgebruikers niet in hun softwarevrijheid moet 
+beperken door argumenten met betrekking to integriteit en veiligheid van 
+apparaten te overdrijven.</li>
+<li>Apple zou niet moeten discrimineren tegen Vrije Software.</li>
+<li>Apple zou niet toegestaan moeten zijn om 
+DRM-encryptie op te leggen voor app-distribuering met betrekking tot 
+Vrije Software.</li>
+<li>Apple zou niet toegestaan moeten zijn om willekeurige verzoekformuleren over interoperabiliteit op te leggen. 
+Interoperabiliteit zou automatisch en effectief moeten zijn 
+toegestaan.</li>
+</ul>
+
+<p>
+Dit onderzoek ontvangt substantiële bijdragen van andere organisaties en 
+experts zoals F-Droid, Onion Browser en AppFair.
+</p>
+
+<figure>
+	<img src="https://pics.fsfe.org/uploads/original/6a/92/2e2ca130f208449ebfd0dbed4a6c.png" alt="Afbeelding met een van de deelnemende FSFE-stafleden, zittende met een laptop en sprekend voor een microfoon op de tafel"/>
+		<figcaption>Apple's aanpak van VDM zal Vrije Software beschadigen</figcaption>
+</figure>
+
+<p>
+Dit rapport concludeert dat, hoewel de VDM als doel heeft om 
+betwistbaarheid en eerlijkheid te promoten, Apple's voorgestelde 
+veranderingen haar monopolistische gedrag zou kunnen versterken, waarbij 
+de afhankelijkheid van ontwikkelaars en gebruikers van haar eigen 
+diensten en producten groter wordt, alsmede overstapkosten. Het rapport 
+licht ook uit hoe de integriteit van het besturingssysteem niet slechts 
+gebruikt moet worden voor het opleggen van beperkingen aan app-winkels 
+van derde partijen.
+</p>
+
+
+<h3 id="ada-video">Ada gaat naar de set: laten we een tekenfilm maken!</h3>
+
+<p>Het geïllustreerde boek 'Ada &amp; Zangemann: een verhaal over software, 
+skateboards en frambozenijs' bracht het tot woningen en bibliotheken 
+over de hele wereld. Nu hebben we uw hulp nodig om zelfs nog meer 
+kinderen te bereiken! <a href="/news/2024/news-20240515-01.html">Help 
+ons om een film van dit verhaal te maken</a> en door te gaan met 
+lezingen om meer interesse van kinderen voor coderen en knutselen te 
+wekken!</p>
+ 
+ 
+<h3 id="stories-community">Verhalen van onze gemeenschap</h3>
+ 
+<p>
+Op 25 en 26 mei vond de RoboCup Frankrijk Junior plaats in Bordeaux. 
+Kinderen op kinderdagverblijven en basisscholen presenteerden hun robots 
+terwijl tieners en jongvolwassenen deelnamen aan verschillende 
+wedstrijden, van voetbal tot reddingen. Op zondag 26 mei hebben twee 
+jonge Franse supporters, Théo (15 jaar) and Émilie (12 jaar), een deel 
+van de kraam voor hun lokale robotclub (CDSR) omgekat tot hun eerste 
+FSFE-kraam! De tieners deelden trots FSFE-stickers en presenteerden het 
+kinderboek Ada &amp; Zangemann.
+</p>
+
+<p>Ook in Frankrijk, in dit geval Lyon: FSFE-vrijwilliger Vincent 
+Lequertier nam met twee lezingen van het geïllustreerde boek 'Ada &amp; 
+Zangemann: een verhaal over software, skateboards en frambozenijs' deel 
+aan de Dagen van Softwarevrijheid (JDLL is het Franse acroniem).</p>
+
+<p>
+En in Nederland presenteerde André Ockers, vrijwilliger en 
+vice-cöordinator van het Nederlandse FSFE-team, de Free Software 
+Foundation Europe (in het Engels) op WikiconNL 2024, de tweejaarlijkse 
+conferentie over Wikipedia, Wikimedia, digitaal erfgoed en vrije toegang 
+tot informatie in een veranderende wereld.
+</p>
+
+<p>
+En vergeet niet om <a href="https://planet.fsfe.org/">planet.fsfe.org</a> te bekijken: onze 
+blog-aggregator heeft verschillende artikelen die u interessant zou 
+kunnen vinden!
+</p>
+
+
+<h3 id="more-conferences">En nog meer: LibreItalia, DORS/CLUC 2024 en esLibre 2024-conferenties</h3>
+
+<p>
+Begin mei namen we deel aan de conferentie LibreItalia. Het was een 
+fantastische gelegenheid om de Italiaanse Vrije Software-gemeenschap te 
+ontmoeten en met ze te praten. We hadden de mogelijkheid om te praten 
+over Publiek Geld? Publieke Code! en dankzij het Ada en 
+Zangemann-verhaal konden we ons bezighouden met een jonger publiek!
+</p>
+
+<p>
+Iets later deze maand namen we deel aan DORS/CLUC, een conferentie in 
+Zagreb met twee lezingen: "KI echt open maken: het huidige landschap van 
+Vrije Software en KI-licenties" en een andere over "Wanneer onze routers 
+niet vrij zijn: de uitdagingen voor een open en neutraal internet".
+</p>
+<p>
+We hebben tenslotte naar Valencia gereisd om esLibre 2024 te bezoeken. 
+Daar presenteerden we de JHvV-wedstrijd, spraken we over CRA, PLD en 
+aansprakelijkheid in Europa en legden we uit waarom Vrije Software 
+belangrijk is voor onze samenleving!
+</p>
+
+<p>
+Onze lezingen op esLibre en DORS/CLUC werden opgenomen dus we zullen ze, 
+zodra ze beschikbaar zijn, meteen uploaden naar onze gebruikelijke 
+kanalen!
+</p>
+
+<figure>
+	<img src="https://pics.fsfe.org/uploads/medium/22/33/416769c56617d2e3dc856f085944.png" alt="Verzameling afbeeldingen met verschillende FSFE-stafleden die lezingen geven op DORS/CLUC en esLibre"/>
+</figure>
+
+<h3 id="contribute">Draag bij aan onze nieuwsbrief</h3>
+<p>We zouden graag van u willen horen. Als u uw gedachten, foto's of nieuws
+wilt delen, stuur ze dan alstublieft naar ons via
+<email>newsletter@fsfe.org</email>. U kunt ons ook <a href="/donate/donate.html">steunen</a>, <a href="/contribute/contribute.html">bijdragen aan ons werk</a> <a href="/about/groups.html">en deelnemen aan onze gemeenschap</a>. We
+willen onze gemeenschap en alle vrijwilligers, supporters en donateurs
+die ons werk mogelijk maken bedanken. En met speciale dank aan onze
+vertalers, die u in staat stellen om deze nieuwsbrief in uw moedertaal
+te lezen.</p>
+
+<p>
+Uw eindredacteur,<br/>
+Ana
+</p>
+
+</body-complete>
+    <image url="https://pics.fsfe.org/uploads/medium/3f/21/24d04ba4d35dfa3e42d79e36909d.png" alt="Verzameling van afbeeldingen, met een illustratie van Ada, het logo van REUSE-software en een illustratie van een stadhuis"/>
+    <link>/news/nl/nl-202406.html</link>
+    <tags>
+    <tag key="newsletter">Nieuwsbrief</tag>
+    <tag key="front-page"/>
+    <tag key="pmpc">Publiek Geld? Publieke Code!</tag>
+    <tag key="elections">EU-verkiezingen</tag>
+    <tag key="legal">Juridisch</tag>
+    <tag key="ada-zangemann">Ada en Zangemann</tag>
+    <tag key="fr">Frankrijk</tag>
+    <tag key="es">Spanje</tag>
+    <tag key="nl">Nederland</tag>
+    <tag key="hr">Kroatië</tag>
+    <tag key="event">Evenement</tag>
+    <tag key="dma">Verordening Digitale Markten</tag>
+
+    <tag key="highlights"/>
+</tags>
+  </news>
+</newsset>

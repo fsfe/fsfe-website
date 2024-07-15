@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- ***************************************************** -->
+<!-- This file has been automatically generated.           -->
+<!-- Please do not modify it, and do not commit it to git. -->
+<!-- ***************************************************** -->
+
+<newsset>
+  <news date="2022-12-12">
+    <title>Copyleft-licensed chess engine wins legal case against proprietary counterpart</title>
+    <body>
+      <p>
+  Copyleft ensures that Free Software remains Free. Stockfish filed a 
+  lawsuit when ChessBase distributed parts of Stockfish work under a 
+  proprietary license, violating GNU GPL obligations. Checkmate! 
+  Copyleft won. Stockfish secured numerous concessions from ChessBase 
+  to respect the GPL.
+</p>
+    </body>
+    <body-complete>
+
+<h1 id="copyleft-licensed-chess-engine-wins-legal-case-against-proprietary-counterpart">Copyleft-licensed chess engine wins legal case against proprietary counterpart</h1>
+
+<p>
+  Copyleft ensures that Free Software remains Free. Stockfish filed a 
+  lawsuit when ChessBase distributed parts of Stockfish work under a 
+  proprietary license, violating GNU GPL obligations. Checkmate! 
+  Copyleft won. Stockfish secured numerous concessions from ChessBase 
+  to respect the GPL.
+</p>
+
+<figure>
+  <img src="https://pics.fsfe.org/uploads/medium/2f/4c/a417a2cf4466f2edcee94bf1e2c1.jpg" alt="Chess board with a white horse pawn in between a black horse and a black tower."/>
+</figure>
+
+<h3 id="the-players">The players</h3>
+
+<p>
+  Stockfish is is a Free Software chess engine licensed under the GNU 
+  General Public License version 3 (GPL-3.0). It was created in 2004 
+  and, through its strong community support, is now the strongest chess 
+  engine available to the public. ChessBase is a German software 
+  company that develops and sells proprietary chess software.
+</p>
+
+<p>
+  In 2021, Stockfish filed a lawsuit against ChessBase GmbH, alleging 
+  that ChessBase had distributed to customers software products under 
+  proprietary licenses despite them being derivative works of 
+  Stockfish. The most notable derivatives were the Fat Fritz 2 and 
+  Houdini 6 software distributed by ChessBase. By doing so, Stockfish 
+  alleged that ChessBase has violated central obligations of the 
+  GPL-3.0, which ensures that users of the software are informed of 
+  their rights. Despite leading developers with Stockfish terminating 
+  their licensing of Stockfish to ChessBase, ChessBase continued to 
+  distribute a number of Stockfish derivatives.
+</p>
+
+<p>
+  This suit is notable as it is among the first of its type to involve 
+  a permanent termination of a Free Software license to a specific 
+  party. Additionally, Stockfish did not seek damages or other forms of 
+  financial compensation in their lawsuit, but rather pressed the court 
+  only for judicial actions that would result in the enforcement of the 
+  GPL-3.0.
+</p>
+
+<h3 id="copyleft-licenses-protect-free-software">Copyleft licenses protect Free Software</h3>
+
+<p>
+  Having a <a href="/freesoftware/legal/faq.html#copyleft">copyleft 
+  license</a> means that the derivative and/or combined work has to be 
+  licensed under the same license as the original work. As a result, 
+  this ensures that a copylefted piece of Free Software can remain 
+  free, and it is difficult to transform it into proprietary software.
+</p>
+
+<h3 id="win">Win</h3>
+
+<p>
+  On 7 November 2022, a settlement was reached between Tord Romstad and 
+  Stéphane Nicolet (leading developers of Stockfish), and ChessBase in 
+  the District Court of Munich I (Case No. 42 0 9765/21). Under this 
+  settlement, ChessBase will no longer be able to distribute Stockfish 
+  for a year, whether in its original or modified form. Nevertheless, 
+  licensing of the rights to Stockfish under the GPL v3 to ChessBase 
+  will resume after this year, provided that distribution of Stockfish 
+  or its derivatives in this time must comply fully with the license 
+  conditions of the GPL-3.0, which includes informing all its users 
+  that their use of Stockfish in their products will be subject to the 
+  GPL-3.0. To this end, ChessBase can seek certification from the <a href="https://sfconservancy.org/">Software Freedom Conservancy</a>, a 
+  non-profit organization based in New York that works for software 
+  freedom, that their software is in compliance with the GPL-3.0.
+</p>
+
+<p>
+  To prevent any future violations, ChessBase will also create the 
+  position of a Free Software Compliance Officer and maintain a domain 
+  (foss.chessbase.com) that lists any of their products that contain 
+  Free Software.
+</p>
+
+<p>
+  Additionally, in case of future violations ChessBase is required to 
+  pay a contractual penalty to the FSFE for each breach of Stockfish’s 
+  initial request for ChessBase to cease its violations of the GPL-3.0. 
+  Under the terms of the settlement, this amount will be determined at 
+  Stockfish’s discretion.
+</p>
+
+<p>
+  It is heartening to see the enforcement in this settlement of the 
+  GPL-3.0 and copyleft principles, and we hope that this contributes to 
+  a climate where the freedoms of Free Software are respected by 
+  businesses and upheld by the courts. We thank the developers behind 
+  Stockfish for their great work and for sticking to the Community 
+  Enforcement principles
+</p>
+
+</body-complete>
+    <image url="https://pics.fsfe.org/uploads/medium/2f/4c/a417a2cf4466f2edcee94bf1e2c1.jpg" alt="Chess board with a white horse pawn in between a black horse and a black tower."/>
+    <link>/news/2022/news-20221212-01.html</link>
+    <tags>
+  <tag key="front-page"/>
+  <tag key="compliance">Compliance</tag>
+  <tag key="gpl">GNU GPL</tag>
+  <tag key="gaming">gaming</tag>
+</tags>
+    <discussion href="https://community.fsfe.org/t/950"/>
+  </news>
+</newsset>

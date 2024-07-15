@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- ***************************************************** -->
+<!-- This file has been automatically generated.           -->
+<!-- Please do not modify it, and do not commit it to git. -->
+<!-- ***************************************************** -->
+
+<newsset>
+  <news date="2021-08-05">
+    <title>L'autorité néerlandaise fait respecter la Liberté des Routeurs</title>
+    <body>
+      <p>
+    L'Autorité néerlandaise pour les consommateurs et les marchés (ACM) a publié de nouvelles règles qui feront progresser la Liberté des Routeurs aux Pays-Bas. Dans un délai de 6 mois, les FAI doivent se mettre en conformité et offrir la possibilité aux consommateurs et aux entreprises de connecter un modem ou un routeur de leur choix. La FSFE se réjouit de cette décision qui est une victoire majeure pour les droits des consommateurs.
+  </p>
+    </body>
+    <body-complete>
+
+  <h1>L'autorité néerlandaise fait respecter la Liberté des Routeurs</h1>
+
+  <p>
+    L'Autorité néerlandaise pour les consommateurs et les marchés (ACM) a publié de nouvelles règles qui feront progresser la Liberté des Routeurs aux Pays-Bas. Dans un délai de 6 mois, les FAI doivent se mettre en conformité et offrir la possibilité aux consommateurs et aux entreprises de connecter un modem ou un routeur de leur choix. La FSFE se réjouit de cette décision qui est une victoire majeure pour les droits des consommateurs.
+  </p>
+
+  <p>
+    <a href="/activities/routers/">La Liberté des Routeurs</a> est le droit qu'ont les consommateurs de tout fournisseur d'accès Internet (FAI) de choisir et d'utiliser un modem et un routeur privés au lieu de l'équipement fourni par le FAI. Dans sa <a href="https://www.acm.nl/sites/default/files/documents/beleidsregel-handhaving-besluit-eindapparaten.pdf">publication
+    (.pdf)</a> (en anglais) l'autorité néerlandaise cite les lignes directrices du <a href="https://berec.europa.eu/eng/document_register/subject_matter/berec/regulatory_best_practices/guidelines/9277-berec-guidelines-on-the-implementation-of-the-open-internet-regulation">BEREC
+    sur la mise en œuvre du règlement sur l'Internet neutre et libre</a> comme raison de l'établissement de ce <a href="https://www.acm.nl/en/publications/consumers-and-businesses-are-allowed-choose-their-own-modems">nouveau
+    règlement</a>. Ces directives sont le fruit des efforts de la FSFE pour attirer l'attention sur l'importance et le droit à la liberté de routage. Comme autre motivation, l'ACM mentionne explicitement le nombre « significatif » d'utilisateurs souhaitant reprendre le contrôle sur leurs données personnelles et de leurs périphériques réseau.
+  </p>
+
+  <p>
+    Le nouveau règlement clarifie quelle partie de l'infrastructure relève de la gouvernance du FAI et pour quelle partie l'utilisateur est libre de choisir sa propre solution. La liberté de choix du routeur implique également que l'utilisateur reste libre de choisir un modem ou un routeur proposé par le FAI. Le fait que cette pratique sera la norme à partir du 27 février 2022 et qu'elle sera appliquée par le régulateur néerlandais constitue une avancée importante. Bien que les aspects juridiques soient désormais définis aux Pays-Bas, dans la pratique, la liberté de choix du routeur était <a href="https://wiki.fsfe.org/Activities/CompulsoryRouters">dans le pays</a>.
+     La plupart des FAI ont indiqué qu'ils autorisaient les consommateurs à connecter leurs propres appareils préférés. L'un d'entre eux accorde même une remise aux consommateurs s'ils utilisent leur propre routeur ou modem.
+  </p>
+
+
+  <h2>Les détails</h2>
+
+  <p>
+    Une avancée importante est le choix explicite par l'ACM du point de terminaison du réseau (NTP). Les lignes directrices de l'ORECE suggèrent trois emplacements possibles, en bref A) à l'extrémité du câble B) après le modem C) après le routeur ou la box fourni par le FAI. L'ACM a choisi de placer le NTP à l'extrémité du câble, offrant ainsi un maximum de flexibilité à l'utilisateur. Ce point de terminaison « passif » évite aux utilisateurs d'avoir à accepter le fonctionnement d'un appareil hors de leur contrôle, et permet la Liberté des Routeurs.
+  </p>
+
+  <figure>
+    <img src="https://pics.fsfe.org/uploads/big/6d6922a13499024cacf5c0872f0a65df.png" alt="Network Termination Point (NTP) - ISP and user domain"/>
+    <figcaption>Schéma d'un point de terminaison du réseau</figcaption>
+  </figure>
+
+  <p>
+    Les nouvelles règles contiennent des déclarations sur le service qui doit être fourni. Les FAI sont autorisés à publier une liste d'appareils, mais ne peuvent pas limiter le support à cette seule liste d'appareils. Les FAI doivent fournir les mesures administratives dans un délai d'un jour ouvrable. Les FAI conservent la possibilité de déconnecter un utilisateur en cas de dommages causés au réseau. Pour le dépannage, une politique est décrite selon laquelle le FAI doit d'abord vérifier que ce n'est pas son réseau qui est défectueux, après quoi il peut être demandé à l'utilisateur d'utiliser un appareil fonctionnel connu fourni par le FAI pour vérifier que ce n'est pas le modem ou le routeur différent qui est en cause. Si c'est le modem ou le routeur personnalisé qui est en cause, le FAI est autorisé à demander une compensation financière pour la fourniture du dispositif connu en état de marche à des fins de test.
+  </p>
+
+  <h2>Une belle progression</h2>
+
+  <p>
+  La décision de l'ACM est une victoire importante pour tous les utilisateurs finaux aux Pays-Bas. La décision apporte plus de clarté sur les aspects juridiques impliquant le NTP. Cependant, les pratiques commerciales des FAI concernant les routeurs et les modems constituent toujours des obstacles à la Liberté des Routeurs pour les utilisateurs finaux :
+  </p>
+
+  <ul>
+    <li>
+      La plupart des FAI n'offrent actuellement que peu ou pas de soutien aux utilisateurs qui souhaitent installer leur propre routeur ;
+    </li>
+    <li>
+      La plupart des FAI exigent que vous louiez toujours un modem dans le cadre du service et que vous le conserviez ;
+    </li>
+    <li>
+      La plupart des FAI n'offrent pas le même niveau de service comme IPv6 lorsque vous choisissez votre propre routeur ;
+    </li>
+    <li>
+      Certains FAI offrent des solutions IPTV (télévision en continu) qui reposent sur des canaux différents de ceux du service Internet et ces mediabox ne fonctionneront donc pas avec un modem personnalisé. Ce point est souligné par l'ACM comme quelque chose qu'elle réévaluera à l'avenir.
+    </li>
+  </ul>
+
+  <p>
+    Les nouvelles règles ne contiennent pas de déclarations qui changeront la situation sur ces points, donc la FSFE continuera à appeler à une Liberté des Routeurs plus robuste et à surveiller la situation aux Pays-Bas.
+  </p>
+
+  <h2>L'initiative La Liberté des Routeurs</h2>
+
+  <p>
+    Depuis 2013, la Free Software Foundation Europe s'est engagée dans l'initiative La Liberté des Routeurs, qui promeut la liberté des utilisateurs finaux de choisir et d'utiliser leur propre équipement terminal – d'abord en Allemagne comme précédent, et maintenant dans de nombreux pays européens. Rejoignez-nous et apprenez-en plus sur les différentes façons de vous <a href="/news/2021/news-20210330-01.html">impliquer</a>.
+  </p>
+
+</body-complete>
+    <image url="https://pics.fsfe.org/uploads/medium/5a92ce4766c686c21f06f0fec28618e1.jpg" alt=""/>
+    <link>/news/2021/news-20210805-01.html</link>
+    <tags>
+  <tag key="front-page"/>
+  <tag key="routers">Liberté des Routeurs</tag>
+  <tag key="nl">Pays-Bas</tag>
+</tags>
+    <discussion href="https://community.fsfe.org/t/714"/>
+  </news>
+</newsset>

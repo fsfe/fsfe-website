@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- ***************************************************** -->
+<!-- This file has been automatically generated.           -->
+<!-- Please do not modify it, and do not commit it to git. -->
+<!-- ***************************************************** -->
+
+<newsset>
+  <news date="2021-10-15">
+    <title>Ecodesign Directive: FSFE calls for Device Neutrality and Upcycling of Software</title>
+    <body>
+      <p> 
+    As a contribution to the revision of the EU ecodesign directive and to help understand the impact of software obsolescence, the FSFE publishes a study on the sustainability of software. The findings of the study culminate in five core demands for a more sustainable digitisation, covering the interplay of devices, software, and infrastructure.
+  </p>
+    </body>
+    <body-complete>
+
+  <h1>Ecodesign Directive: FSFE calls for Device Neutrality and Upcycling of Software</h1>
+
+    <p> 
+    As a contribution to the revision of the EU ecodesign directive and to help understand the impact of software obsolescence, the FSFE publishes a study on the sustainability of software. The findings of the study culminate in five core demands for a more sustainable digitisation, covering the interplay of devices, software, and infrastructure.
+  </p> 
+  
+
+  <p>
+    In the European Union we currently see a strong desire to make digitisation more sustainable with the European Commission aiming at making products more resource-efficient as well as circular economy methods applicable. The ecodesign directive from 2009 shall be updated in this regard with the <a href="https://ec.europa.eu/info/law/better-regulation/have-your-say/initiatives/12567-Sustainable-products-initiative_en">"Sustainable Products Initiative"</a> (SPI) that aims "to make products placed on the EU market more sustainable". The SPI will then serve as the main European product policy instrument, in the electronic sector additionally complemented by the <a href="https://www.europarl.europa.eu/legislative-train/theme-a-european-green-deal/file-circular-electronics">"Circular Electronics Initiative"</a> (CEI). 
+  </p>
+
+  <figure>
+    <img src="https://pics.fsfe.org/uploads/medium/6101b685d12ecfdc41b57213e295749a.jpg" alt="Circular electronics, symbolised with Arduino Robot Top"/>
+  </figure>
+  <p class="license">"Circular electronics", symbolized with <a href="https://commons.wikimedia.org/wiki/File:Arduino_Robot_Top.jpg">Arduino Robot Top.jpg</a> by Arduino SA, <a href="https://creativecommons.org/licenses/by-sa/3.0/deed.en">CC-BY-SA 3.0</a></p>
+  
+  <p>
+    It will be for the first time that phones and tablets are included in the ecodesign criteria of the European Union's market. The CEI directly asks for new "regulatory measures for electronics and ICT including mobile phones, tablets, and laptops under the Ecodesign Directive;" and addresses among other things the devices' "shortcomings in durability, [...] reparability, [...] upgradability, e-waste [...], reuse and recycling."</p>
+
+  <p>
+    The European Commission is expected to publish its final proposal for the new SPI by the end of 2021 and the proposal for the CEI by the second quarter of 2022. In August this year, however, several news magazines already reported about what details to expect from the new ecodesign criteria regarding electronic devices. Among other things, it has been consistently written that the Commission wants manufacturers of smartphones and tablets to provide security updates for five years and function updates for three years free of charge.
+  </p>
+
+  <h3 id="fsfe-demands">FSFE demands the upcycling of software</h3>
+
+  <p>
+    Although an extended support time is one step forward in helping durability and lifetime of devices, the obligation of offering several years of security and functional updates is not sufficient enough for a real game change towards a more sustainable (re-)use of our devices. For a critical, long-lasting, and sustainable change and extension of our hardware usage lifetimes, products need to be designed with <a href="/freesoftware/sustainability/sustainability.html#id-device-neutrality">device neutrality</a> in mind from the beginning. Until we are there, however, and with the current debates about updating the ecodesign directive in mind, the FSFE asks for truly opening up the circular reuse of electronics by enabling an <a href="/freesoftware/sustainability/sustainability.html#upcycling-of-software">upcycling of software</a>. Such an upcycling will be possible with the manufacturers obligation to publish a device's underlying source code under a Free Software licence at the end of support for any software necessary to run or modify the initial functioning of the device. 
+  </p>
+  
+  <p>
+    The downsides of extending support obligations for proprietary software in contrast to directly opening up aftermarket economies and reuse possibilities through the publication of source code under a Free Software license is manifold: what time span of support seems appropriate for electronic devices in general and others in particular? Is it three years, five years, seven years? Will the decision of today still be valid and up to date at the end of this decade? Even worse, this approach does not fundamentally help one of the core problems of our digital societies which is an e-waste overflow of often still pretty well-working devices that have only been thrown away because a proprietary manufacturer decided to stop support of the device. An extended support obligation does not solve this problem at its core - it just postpones the often unnecessary growth of e-waste for a certain time. Last but not least it takes away the freedom of manufacturers to not continue support for a certain device if, for example, it does not sell well enough.
+  </p>
+
+    
+  <figure>
+    <img src="https://pics.fsfe.org/uploads/medium/c5/0e/34d0ef26365f03837ef3d1bfb16c.png" alt="Internet of things -&gt; End of Support -&gt; Publication of Source Code -&gt; Upcycling by third parties -&gt; Second life"/>
+    <figcaption>The graphic demonstrates how the "upcycling of software" can ideally help to extend usage lifetimes and to grow aftermarkets after the end of support by the initial manufacturers.</figcaption>
+  </figure>
+  <p class="license">Icons reused from sources available on <a href="https://freepik.com">Freepik.com</a></p>
+
+  <p>
+    The obligation of publishing a device's underlying source code under a Free Software licence at the end of support instead solves many of these problems in its core: manufacturers can stop the support of a certain device any time and instead of directly de-valuating affected products with the end of support, an aftermarket is enabled to further continue the development and reuse of certain devices. This will not happen as a law of nature, but begin with some popular devices that will experience a second life which got enabled by the publication of their source code as Free Software. And as we can see with the rise of other markets, the more this happens and the more success stories there are, the more competitors and imitators will join and further help creating a market of reuse and cicular electronics. Releasing source code as Free Software thus is the most efficient way to steer the European digitisation from a market of linear hardware production towards circular electronics devices. You can read more about the upcycling of software, the background and its derivation in our <a href="/freesoftware/sustainability/sustainability.html">in-depth study about software obsolescence and sustainability of Free Software</a> that the FSFE has been able to produce with the support of the German Environment Agency.
+  </p>
+
+  <h3 id="study-about-sustainability-software">In-depth study about the sustainability of Free Software</h3>
+
+  <p>
+    The study starts with a <a href="/freesoftware/sustainability/sustainability.html#about-the-sustainability-of-free-software">definition of software sustainablility</a> and shows from there how <a href="/freesoftware/sustainability/sustainability.html#conservation-and-loss-of-resources-a-question-of-reproducibility">the inherent characteristics of Free Software enable a sustainability of software</a> as well as their <a href="/freesoftware/sustainability/sustainability.html#free-software-and-it-infrastructures">positive impact on the sustainability of IT infrastructures</a>. <a href="/freesoftware/sustainability/sustainability.html#software-obsolescence">Software obsolescence is explained</a> and the benefits of using Free Software in saving natural resources by <a href="/freesoftware/sustainability/sustainability.html#hardware-production-and-usage-times">extending hardware usage lifetime</a> and through <a href="/freesoftware/sustainability/sustainability.html#energy-consumption">saving energy cunsumption</a> of software. Finally, based on the findings, <a href="/freesoftware/sustainability/sustainability.html#what-can-politics-and-society-do-for-a-more-sustainable-digitization">five politically demands</a> for a more sustainable digital society are outlined: 
+  </p>
+
+  <blockquote>
+    For a European shift from linear production and ewaste producion towards a circular electronic economy full <a href="/freesoftware/sustainability/sustainability.html#id-device-neutrality">device neutrality</a> must be established that includes the <a href="/freesoftware/sustainability/sustainability.html#general-purpose-computers">Right to use alternative operating systems and software</a> with <a href="/freesoftware/sustainability/sustainability.html#general-purpose-computers">full access to hardware</a> and <a href="/freesoftware/sustainability/sustainability.html#general-purpose-computers">freedom of choice</a>. Until then, the <a href="/freesoftware/sustainability/sustainability.html#general-purpose-computers">upcycling of software</a> will help in the transition as well as the obligation for any <a href="/freesoftware/sustainability/sustainability.html#public-infrastructure-public-code">public smart infrastructure to be set up with Free Software and public code.</a>
+  </blockquote>
+
+  <p>
+    Erik Albers, the FSFE's Programme Manager on Sustainability says: "It has been long time overdue for the European Union to apply ecodesign critera for the currently most selling electronic products, phones, and tablets. The FSFE welcomes the initiative by the European Commission to finally update the European Directive on this. Now it is crucial to do it right from the beginning. Our study explains the benefits of upcycling software in detail but can only be the start of a long time process and transition. In the next months we concentrate on explaining decision takers that we can only overcome linear product waste by an upcycling of software through its final publication under a Free Software licence."
+  </p>
+
+  <p>
+    If you are curious now to learn more about the sustainability of Free Software, we invite you read our study <a href="/freesoftware/sustainability/sustainability.html">"On the sustainability of Free Software"</a> and to watch <a href="/events/events.html#event-20211112-01">the upcoming FSFE's track about sustainability at the SFSCon</a>. If you like to support our work in the upcoming months and help us to influence legislation <a href="https://my.fsfe.org/donate">please help us with a financial support</a>. 
+  </p>
+
+
+
+</body-complete>
+    <image url="https://pics.fsfe.org/uploads/medium/6101b685d12ecfdc41b57213e295749a.jpg" alt=""/>
+    <link>/news/2021/news-20211015-01.html</link>
+    <tags>
+  <tag key="front-page"/>
+  <tag key="upcyclingandroid">Upcycling Android</tag>
+  <tag key="sustainability">Sustainability</tag>
+</tags>
+    <discussion href="https://community.fsfe.org/t/751"/>
+  </news>
+</newsset>

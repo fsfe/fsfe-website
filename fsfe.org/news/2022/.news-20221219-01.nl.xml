@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- ***************************************************** -->
+<!-- This file has been automatically generated.           -->
+<!-- Please do not modify it, and do not commit it to git. -->
+<!-- ***************************************************** -->
+
+<newsset>
+  <news date="2022-12-19">
+    <title>GNU Health kiest voor REUSE</title>
+    <body>
+      <p> 
+In het kader van het REUSE-stimuleringsinitiatief Booster geeft de FSFE 
+individuele beoordelingen en directe hulp aan Vrije Softwareprojecten 
+bij de implementatie van de REUSE beste praktijken. GNU Health, een 
+project dat sociale geneeskunde combineert met technologie, is onlangs 
+REUSE-conform geworden. We hebben gesproken met oprichter Dr. Luis Falcón.
+</p>
+    </body>
+    <body-complete>
+
+<h1>GNU Health kiest voor REUSE</h1>
+
+<p> 
+In het kader van het REUSE-stimuleringsinitiatief Booster geeft de FSFE 
+individuele beoordelingen en directe hulp aan Vrije Softwareprojecten 
+bij de implementatie van de REUSE beste praktijken. GNU Health, een 
+project dat sociale geneeskunde combineert met technologie, is onlangs 
+REUSE-conform geworden. We hebben gesproken met oprichter Dr. Luis Falcón.
+</p>
+
+
+<h2 id="boosting-reuse">REUSE stimuleren</h2>
+
+<p> 
+Het begrijpen en naleven van juridische verplichtingen kan soms een last zijn, vooral bij hergebruik van software van verschillende projecten die onder verschillende licenties zijn uitgebracht. Het <a href="https://reuse.software/">REUSE</a>-initiatief, geïntroduceerd door de Free Software Foundation Europe (FSFE), heeft als doel de communicatie van licentie- en auteursrechtinformatie van Vrije Softwareprojecten voor iedereen gemakkelijker te maken. Met een verzameling beste praktijken en het hulpgereedschap is het toevoegen van deze juridische informatie in elk bestand van het project een eenvoudig proces. 
+</p>
+
+<p> 
+Vorig jaar lanceerde de FSFE <a href="https://reuse.software/booster/"> 
+REUSE Booster</a>, een initiatief dat tot doel heeft projecten die bezig zijn met de uitvoering van REUSE rechtstreeks te helpen en projecten die bezig zijn met de implementatie van REUSE te ondersteunen. Als resultaat van die inspanningen heeft <strong>het Vrije Software-project <a href="https://gnuhealth.org/">GNU Health</a> onlangs de 
+REUSE-specificatie 3.0</strong> in haar componenten Ziekenhuis 
+Management Systeem (zowel server als cliënt) en Thalamus (de berichtenserver voor de GH Federatie) overgenomen.
+</p>
+
+
+ <figure>
+<img src="https://pics.fsfe.org/uploads/original/cb/1e/7b4adcee4b05157f003fe2f646bb.jpg" alt="Het GNU Health-team met hun prijs en certificaat voor het naleven van REUSE."/> 
+   <figcaption>
+       De FSFE maakte van de gelegenheid gebruik om deel te nemen aan de GHCon van dit jaar om de prijs voor REUSE-conformiteit te overhandigen aan het hele team van GNU Health. 
+  </figcaption>
+ </figure>
+ 
+ 
+<h2 id="gnu-health-and-its-reuse-adoption">GNU Health en het overnemen van REUSE</h2>
+
+<p> 
+GNU Health is een gemeenschapsgestuurd Vrije Software-project van GNU Solidario, een humanitaire organisatie zonder winstoogmerk die zich richt op zowel technologie als op sociale geneeskunde. De software is overgenomen door verschillende organisaties en nationale gezondheidsstelsels over de hele wereld. Door de REUSE-specificatie te volgen hebben gebruikers en hergebruikers van GNU Health vanaf nu een duidelijk 
+overzicht van de auteursrechten en licentievoorwaarden.
+</p>     
+
+<blockquote>
+<p><em>"De taak van het handmatig bijhouden, weergeven en schrijven van de juridische informatie in grote Free/Libre-projecten zoals GNU Health kan ontmoedigend zijn. Het REUSE-project maakt dit vervelende proces 
+eenvoudig. Ik nodig de Libre Software-gemeenschap uit om REUSE als de standaard over te nemen voor het weergeven van juridische informatie om de ontwikkeling, de productiviteit en de integratie tussen projecten te stimuleren."</em> 
+</p>  
+<cite>Dr. Luis Falcón, oprichter van GNU Solidario en auteur van GNU Health.</cite>
+</blockquote>
+
+<p> 
+In dit korte video-interview deelt Dr. Luis Falcón met ons hoe het 
+proces van het invoeren van REUSE was voor het GNU Health-team, terwijl hij ook 
+andere Vrije Software projecten aanmoedigt om zich bij hen aan te sluiten bij het op een ondubbelzinnige en voor mens en machine perfect leesbare manier weergeven van  
+hun licentie- en auteursrechtinformatie.
+</p>
+
+<figure>
+  <peertube url="https://media.fsfe.org/w/nCFNDeRxh3QpQoEMZd3w5W"/>
+<figcaption>
+    Dr. Luis Falcón vertelt ons meer over het proces om REUSE-conform te worden. Bekijk <a href="https://media.fsfe.org/w/nCFNDeRxh3QpQoEMZd3w5W">hier het hele interview.</a> 
+</figcaption>
+</figure>
+    
+    
+
+<h2 id="reuse-adopters">Overnemers van REUSE</h2>
+
+<p> 
+Momenteel heeft de <a href="https://api.reuse.software/">REUSE API</a> 
+meer dan 1300 projecten als REUSE-conform geregistreerd. Daarbinnen kunnen we 
+projecten zoals <strong>curl en cosmoscout-vr van het Duitse lucht- en ruimtevaartcentrum DLR)</strong> uitlichten. De <strong>Linux Kernel</strong> heeft REUSE ook gedeeltelijk overgenomen en de bekende <strong>KDE gemeenschap</strong> nam REUSE op in haar licentiebeleid; ze hebben al hun raamwerken gemigreerd naar de aanbevolen standaard. 
+</p>
+
+<p> 
+Wij verwelkomen andere ontwikkelaars om REUSE over te nemen en kijken uit naar terugkoppeling en samenwerking. Als u contact met ons wilt opnemen, u een extra hand nodig hebt bij 
+de implementatie van REUSE in uw project of gewoon wilt deelnemen aan 
+de discussie, dan nodigen wij u uit om lid te worden van de <a href="https://lists.fsfe.org/postorius/lists/reuse.lists.fsfe.org">e-maillijst.</a> 
+</p>
+
+<h2 id="thanks-to-all-our-volunteers-contributors-and-supporters-">Met dank aan al onze vrijwilligers, bijdragers en supporters!</h2>
+
+<p> 
+Dit is dan ook een mooie gelegenheid om onze vrijwilligers en externe bijdragers aan REUSE te bedanken voor hun geweldige werk bij het voortdurend verbeteren van het gereedschap en de documentatie, maar ook voor het in stand houden van een voortdurende en vruchtbare discussie over de specificatie ervan. 
+</p>
+
+<p> 
+De bijdrage van al onze supporters maakt het ook mogelijk om ons werk aan REUSE en al onze andere activiteiten voort te zetten. U kunt zich bij hen aansluiten door supporter te worden; vertel uw vrienden hoe ze ons werk met een kleine donatie kunnen steunen of vraag zelfs aan uw familie om de FSFE en onze campagnes als een betekenisvol geschenk voor feestdagen te steunen.
+</p>
+
+<div class="text-center">
+<fsfe-cd-donate-link class="btn btn-lg btn-primary">Doneer nu</fsfe-cd-donate-link>
+</div>
+
+
+</body-complete>
+    <image url="https://pics.fsfe.org/uploads/original/cb/1e/7b4adcee4b05157f003fe2f646bb.jpg" alt="Het GNU Health-team met hun prijs en certificaat voor het naleven van REUSE."/>
+    <link>/news/2022/news-20221219-01.html</link>
+    <tags>
+  <tag key="front-page"/>
+  <tag key="reuse">REUSE</tag>
+  <tag key="licensing">Licenties</tag>
+  <tag key="copyright">Auteursrecht</tag>
+ </tags>
+    <discussion href="    https://community.fsfe.org/t/961"/>
+  </news>
+</newsset>

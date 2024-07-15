@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- ***************************************************** -->
+<!-- This file has been automatically generated.           -->
+<!-- Please do not modify it, and do not commit it to git. -->
+<!-- ***************************************************** -->
+
+<newsset>
+  <news date="2013-06-26">
+    <title>Un «compliance workshop» de la FSFE découvre une violation  de la GPL par FANTEC, Welte gagne le procés</title>
+    <body>
+      <p>Le <a href="http://www.ifross.org/sites/default/files/130618%20Urteil%20Fantec.pdf">tribunal régional de Hamburg [Landgericht Hamburg] a déclaré FANTEC GmbH coupable de violation de la GNU General Public License</a> dans son lecteur multimédia FANTEC 3DFHDL. Dans l'affaire Harald Welte contre FANTEC GmbH le tribunal a jugé que FANTEC devait payer une amende et les frais d'avocat additionnels et avait obligation de doner aux utilisateurs les informations exactes concernant leur chaine de distribution du lecteur multimédia FANTEC 3DFHDL.</p>
+    </body>
+    <body-complete>
+    <h1>Un « compliance workshop » de la FSFE découvre une violation de
+        la GPL par FANTEC, Welte gagne le procés</h1>
+      
+    <p>Le <a href="http://www.ifross.org/sites/default/files/130618%20Urteil%20Fantec.pdf">tribunal régional de Hamburg [Landgericht Hamburg] a déclaré FANTEC GmbH coupable de violation de la GNU General Public License</a> dans son lecteur multimédia FANTEC 3DFHDL. Dans l'affaire Harald Welte contre FANTEC GmbH le tribunal a jugé que FANTEC devait payer une amende et les frais d'avocat additionnels et avait obligation de doner aux utilisateurs les informations exactes concernant leur chaine de distribution du lecteur multimédia FANTEC 3DFHDL.</p>
+    
+    <p>FANTEC utilisait le logiciel netfilter/iptables (un logiciel de firewall pour GNU/Linux) dans un des micrologiciels pour FANTEC 3DFHD disponible en ligne. Ils distribuaient ce micrologiciel sans donner l'intégralité du code source correspondant contrairement à ce qui est requis par la GNU General Public License, version 2 (GPLv2) qui est utilisée par le logiciel netfilter/iptables. Les tentatives de résolution du conflit ayant échouées, Harald Welte, un des titulaires des droits d'auteur sur iptables, avait décidé de porter l'affaire devant les tribunaux. La Cour a décidé que FANTEC avait fait preuve de négligence : la firme aurait dû s'assurer de distribuer le logiciel en respectant les conditions indiquées par la GPLv2. La cour a fait clairement savoir qu'il n'était pas suffisant que FANTEC se repose sur le fait que ses fournisseurs soient eux-mêmes en règle avec les licences. L'entreprise FANTEC doit faire en sorte qu'aucun des droits des tiers ne soient violés.</p> 
+    
+    <blockquote><p>« Il est heureux de voir la Cour reconnaître qu'il est de la responsabilité des vendeurs de vérifier la conformité de leur produit avec la GNU GPL. FANTEC, qui a déjà eu des problèmes avec la GNU GPL dans le passé, aurait dû agir avec plus de discernement. C'était juste de la paresse, » a déclaré Harald Welte, fondateur du site <a href="http://gpl-violations.org">gpl-violations.org</a> et demandeur au litige. </p></blockquote>
+
+    <p>La violation de la GNU GPL a été découverte pendant un atelier « Hacking for Compliance » de la Free Software Foundation Europe en Mai 2012 à Berlin. Plusieurs volontaires y ont aidé à vérifier la conformité de différents systèmes vis-à-vis de la GNU GPL. Les résultats ont ensuite été communiqués à gpl-violations.org et à ses avocats qui ont pris la suite.</p> 
+    
+    <p>Bien que FANTEC ait d'abord nié, les ingénieurs en conformité de la FSFE et de gpl-violations.org ont pu prouver que la version 1.3.7. du logiciel iptables était utilisée, et ce malgré le fait que FANTEC n'ait pas inclu les sources de programme dans le code source distribué. Ils ont de plus pu montrer que le logiciel avait été compilé à une date différente de celle du code source mis à disposition, démontrant ainsi que le code source fourni par FANTEC n'était pas à jour.</p>
+
+    <blockquote><p>« Avec nos bénévoles, nous continuerons d'assurer que les utilisateurs bénéficient des libertés d'utiliser, d'étudier, de partager, et d'améliorer les logiciels contenus dans leurs produits. Ce sont les principes de base de la communauté du logiciel libre, et chaque entreprise distribuant des logiciels doit respecter les licences correspondantes. Les entreprises voient clairement l'avantage de construire leur produit en se basant sur du logiciel libre. Elles devraient respecter ces règles basiques et simples. » déclare Matthias Kirschner, coordinateur de la FSFE pour l'Allemagne et un des organisateurs du « compliance workshop ».</p></blockquote>
+
+    <p>La FSFE met à disposition quelques <a href="/activities/ftf/useful-tips-for-vendors.html">étapes simples</a> à suivre pour s'assurer qu'un produit respecte la GNU GPL.</p> <p>La décision de la Cour (en Allemand) est disponible sur <a href="http://www.ifross.org/sites/default/files/130618%20Urteil%20Fantec.pdf">le site IFRFOSS (PDF)</a>.</p> 
+
+    <p>Autres nouvelles sur les cas de violation de la licence GNU GPL : </p> 
+    
+    <ul> 
+        <li>2011-11-10 : <a href="/news/2011/news-20111110-01.html">La Cour rejette les demandes d'AVM s'opposant à la modification par des tiers de logiciels sous GNU GPL.</a>.</li> 
+    </ul>
+
+  </body-complete>
+    <image url="" alt=""/>
+    <link>/news/2013/news-20130626-01.html</link>
+    <tags>
+    <tag key="front-page"/> 
+    <tag key="compliance"/> 
+    <tag key="legal"/>
+    <tag key="gpl">GNU GPL</tag>
+    <tag key="legal"/>
+    <tag key="licensing"/> 
+  </tags>
+  </news>
+</newsset>

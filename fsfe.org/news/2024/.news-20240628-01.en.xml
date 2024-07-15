@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- ***************************************************** -->
+<!-- This file has been automatically generated.           -->
+<!-- Please do not modify it, and do not commit it to git. -->
+<!-- ***************************************************** -->
+
+<newsset>
+  <news date="2024-06-28">
+    <title>Interview with last year's YH4F winner, Davide Rorato</title>
+    <body>
+      <p>
+After six months of programming there are only a few days left until the 
+end of Youth Hacking 4 Freedom 2024. We are very excited to see this 
+year's projects and to learn more about the participants and their work 
+during the past months. Before we dive into the new projects, let us 
+take a deeper look at last year's winner, Davide Rorato.
+</p>
+    </body>
+    <body-complete>
+
+<h1>Interview with last year's YH4F winner, Davide Rorato</h1>
+
+<p>
+After six months of programming there are only a few days left until the 
+end of Youth Hacking 4 Freedom 2024. We are very excited to see this 
+year's projects and to learn more about the participants and their work 
+during the past months. Before we dive into the new projects, let us 
+take a deeper look at last year's winner, Davide Rorato.
+</p>
+
+<figure>
+	<img src="https://pics.fsfe.org/uploads/medium/fe/55/3fd471428caca234f3821998ecbd.JPG" alt="Davide standing next to his computer and presenting his ArduPlot project at the Award cermony in Brussels, Oktober 2023"/>
+		<figcaption>Davide presenting his winning project, 'ArduPlot', at the Award ceremony in Brussels, October 2023</figcaption>
+</figure>
+
+<p>Davide programmed the tool <a href="https://github.com/Dave879/ArduPlot">"ArduPlot"</a>, a real-time 
+	serial plotter that automatically adjusts itself to your use
+ case. ArduPlot provides a nice graphical overview of the sensor data 
+ from any Arduino board. But let us hear all about ArduPlot from its 
+ developer.
+</p><p/>
+
+<hr/>
+
+<p>
+<strong>FSFE</strong>: Hi Davide, thank you very much for your time. 
+Before we learn more about "ArduPlot" we want to learn more about you 
+and your skills. What was your first experience with programming, and 
+how did you start learning to write code? 
+</p>
+
+<p/>
+<p>
+<strong>Davide</strong>: My first ever experience with programming was 
+creating Automator scripts. Automator is an application that lets you 
+create a sequence of actions such as keyboard presses and mouse 
+movements that can be recorded and then played back without the need to 
+write any code (it’s actually a lot more powerful but I used it in a 
+very basic way).
+</p>
+
+<p>
+The next thing I started to experiment with was coding on an Arduino UNO 
+that I borrowed from my older brother. When it wasn't in use I would 
+write simple programs by copying them from a book of ready-made projects 
+and adapting them to suit my needs. This gradually evolved into me 
+wanting to know more about programming and electronics, and a couple of 
+years later, during summer vacation, I thought it would be fun to 
+actually learn how to code, so I opened up YouTube and followed the 
+first C++ tutorial I could find.
+</p>
+
+<p>
+After getting accustomed to the basics, when I got an idea for a 
+project, I would start coding until I found a problem I didn't know how 
+to tackle. I then googled and tried every way possible to make the 
+program work until it did.
+</p>
+
+<p><strong>FSFE</strong>: Can you remember when you first used Free Software?</p>
+
+<p><strong>Davide</strong>: I think my first contact with Free Software was 
+with the OpenOffice suite, followed by the Arduino IDE. Of course at 
+first I didn't realise what Free Software meant, and I was simply glad I 
+could use the software for free, but as years passed I came to really 
+appreciate the ethical principles of Free Software.</p>
+
+
+<p><strong>FSFE</strong>: How did you find out about this contest?</p>
+
+<p><strong>Davide</strong>: It was thanks to my IT teacher, who told my 
+class about this contest when the first edition of YH4F started. I 
+actually participated in the first edition of YH4F as well, but I didn’t 
+manage to win, and seeing the <a href="news/2022/news-20221004-01.en.html">quality of the projects</a> 
+that did it was clear why, they were amazing!</p>
+
+<p><strong>FSFE</strong>: Why did you decide to join YH4F?</p> 
+
+<p><strong>Davide</strong>: The first year I decided to join because I 
+thought it would be an excellent opportunity to do a bigger project, and 
+in turn learn a lot of new things that I didn't have an opportunity to 
+before. Had I not participated in the first edition, I wouldn’t have 
+been able to create ArduPlot the following year.</p>
+
+<p>
+For the second edition of the contest, I actually didn't have any plans 
+to submit a project, but incidentally I had been working on ArduPlot to 
+help with the debugging of a robot for a school project, so the day of 
+the submission deadline I thought: “Well, I got nothing to lose so I 
+might as well submit this!”. I can safely say I did not regret that 
+decision!
+</p>
+
+<figure>
+	<img src="https://pics.fsfe.org/uploads/small/61/1c/3b160c81453e09f8f37ba1caba1a.png" alt="The Free Software ArduPlot displaying input from an Arduino board"/>
+		<figcaption>ArduPlot graphical output of the input from an Arduino board</figcaption>
+</figure>
+
+<p>
+<strong>FSFE</strong>: And before we talk a bit more about 
+	ArduPlot, what did you enjoy the most about this contest?
+</p>
+
+<p>
+<strong>Davide</strong>: The thing I enjoyed the most was the open-ended 
+nature of the contest. Any type of Free Software can be created and 
+submitted, with no restriction to a specific type or theme, letting 
+everyone work on something they are passionate about at the moment.
+</p>
+
+<p>
+<strong>FSFE</strong>:This is nice to hear, however we 
+	also know that this can be quite a challenge for some to find "their 
+	perfect project". Here as you said it is very important to find 
+	something you are passionate about, or a problem you want to fix. And 
+	of course, the YH4F team is there to help you to come up with an idea. 
+	Now for some more detailed questions about ArduPlot. Can you explain 
+	how ArduPlot works and how you came up with the idea? 
+</p>
+<p>
+<strong>Davide</strong>: I created ArduPlot from a need to analyse 
+different types of data coming from a microcontroller for an autonomous 
+robotics project one of my classmates and I were developing.
+The robot had all kinds of sensors on it, and we needed to split fast 
+paced data from the sensors, that required a specific visualisation 
+(line graph, heatmap), from the less frequent text logs.
+If these two things are mixed together in a single text console, it’s 
+much harder to see what’s happening at a glance.</p>
+
+<p>
+What ArduPlot does is split this data in two: when it recognises a data 
+packet, it gets analysed and displayed as a visualisation. For any other 
+case the data gets redirected to a text console.
+</p>
+
+<p><strong>FSFE</strong>: What was the biggest challenge or 
+	problem you faced when developing your idea?</p>
+
+<p>
+<strong>Davide</strong>: The main challenge I faced was reading data 
+from the microcontroller reliably, which meant reading, parsing and 
+displaying it faster than the data coming in, which isn’t a problem with 
+low data rates, but as they get higher issues start to appear if 
+everything isn’t properly implemented.
+</p>
+
+<p>
+<strong>FSFE</strong>:It sounds like you were already 
+	somehow familiar with microcontrollers before you started ArduPlot. 
+	Have you worked with the data from microcontrollers before? 
+</p>
+
+<p>
+<strong>Davide</strong>: Yes, but in past projects I didn’t need this 
+type of detailed visual feedback. The Serial Plotter in the Arduino IDE 
+sufficed most of the time, because I had a couple of sensors at most 
+attached to the microcontroller.
+</p>
+
+<figure>
+	<img src="https://pics.fsfe.org/uploads/small/7d/7e/0e2bdff629f0562b0892b13814da.png" alt="The Free Software ArduPlot displaying input from an Arduino board"/>
+</figure>
+
+<p>
+<strong>FSFE</strong>: Are there any problems that 
+	ArduPlot has solved for you when working with this kind of data? 
+</p>
+
+<p>
+<strong>Davide</strong>: ArduPlot made it possible to see through the 
+'eyes' of the robot in real time and discover and fix bugs faster. For 
+example, if a sensor got slightly moved and suddenly the robot started to 
+work badly, we instantly knew what went wrong at a glance by looking at the data.
+</p>
+
+<p><strong>FSFE</strong>: What motivated you to keep working 
+	on ArduPlot during the programming period?</p>
+
+<p>
+<strong>Davide</strong>: The main motivation was the fact that I 
+actually needed the program I was developing, and without ArduPlot, 
+debugging the code of the robot would have been much more time-consuming.
+</p>
+
+<p><strong>FSFE</strong>: Have you continued to work on your 
+	project in recent months?</p>
+
+<p>
+<strong>Davide</strong>: Yes, but not as much as I wanted to. I have 
+lots of ideas for features I want to implement (and bugs that need to be 
+fixed) but during the past months I have been busy with other projects, 
+and most importantly university, which I have prioritised.
+</p>
+
+<p>
+Nevertheless, since the contest ended I’ve added Windows support, I 
+fixed a couple of critical bugs, optimised heatmap rendering, added 
+friendly USB device names alongside the serial device’s location on 
+Linux and added serial output, which was the last thing keeping ArduPlot 
+from reaching feature parity with the Arduino integrated serial 
+terminal/plotter, but with the addition of other quality of life 
+improvements, such as auto reconnect and, of course, the ability to plot 
+graphs on demand!
+</p>
+
+<p>
+<strong>FSFE</strong>: 
+And last but not least, is there anything you would tell new participants to do or not to do? 
+</p>
+
+<p>
+<strong>Davide</strong>: Build something you are passionate about and 
+that other people would find useful or cool, but most importantly have 
+fun doing it!
+</p>
+
+<p>
+<strong>FSFE</strong>:Thank you Davide for your time, it 
+	was a pleasure to meet you in the Youth Hacking 4 Freedom contest.
+</p>
+
+<hr/>
+
+<p>
+The 2024 edition of Youth 
+	Hacking 4 Freedom is still going on now! The coding period ends on 30 
+	June. The next edition will start on 01.01.2025. You can already 
+	register <a href="yh4f.org/register">now</a>. Check out the <a href="https://yh4f.org">YH4F website</a> to find out all the details of 
+	this competition or feel free to reach out to the organisers via <a href="mailto:contact@fsfe.org">mail</a>!
+	</p>
+
+
+</body-complete>
+    <image url="https://pics.fsfe.org/uploads/medium/66/c6/0da002d353f2bfecfcb043ea9ea7.png" alt="YH4F main illustration wtih the 3 YH4F figures and with the “2023 projects” label"/>
+    <link>/news/2024/news-20240628-01.html</link>
+    <tags>
+	<tag key="front-page"/>
+	<tag key="news">News</tag>
+	<tag key="interview">Interview</tag>
+	<tag key="yh4f">Youth Hacking 4 Freedom</tag>
+	<tag key="yh4f-project">Youth Hacking 4 Freedom - Project</tag>
+</tags>
+    <discussion href="https://community.fsfe.org/t/1173"/>
+  </news>
+</newsset>

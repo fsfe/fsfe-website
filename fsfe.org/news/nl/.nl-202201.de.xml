@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- ***************************************************** -->
+<!-- This file has been automatically generated.           -->
+<!-- Please do not modify it, and do not commit it to git. -->
+<!-- ***************************************************** -->
+
+<newsset>
+  <news date="2022-01-11" type="newsletter">
+    <title>Geräteneutralität wird Realität +++ Stockholm +++ FSFE-Infrastruktur +++ KI</title>
+    <body>
+      <p>
+	In unserem Januar-Newsletter würdigen wir die Bedeutung des Gesetzes über digitale Märkte als eine überwiegend positive Entwicklung für die Softwarefreiheit. Lesen Sie, wie das Fehlen von Freier Software Stockholm 100 Millionen Euro gekostet hat. Unser Systemhacker-Team zeigt die Hintergründe der FSFE-Infrastruktur. Vincent Lequertier betont, dass KI Transparenz braucht. Die FOSDEM steht vor der Tür.
+  </p>
+    </body>
+    <body-complete>
+	  
+<h1>Geräteneutralität wird Realität +++ Stockholm +++ FSFE-Infrastruktur +++ KI </h1>
+  
+  <p>
+	In unserem Januar-Newsletter würdigen wir die Bedeutung des Gesetzes über digitale Märkte als eine überwiegend positive Entwicklung für die Softwarefreiheit. Lesen Sie, wie das Fehlen von Freier Software Stockholm 100 Millionen Euro gekostet hat. Unser Systemhacker-Team zeigt die Hintergründe der FSFE-Infrastruktur. Vincent Lequertier betont, dass KI Transparenz braucht. Die FOSDEM steht vor der Tür.
+  </p>
+
+<h2>Geräteneutralität wird endlich Realität</h2>
+  
+  <p>
+	Das Europäische Parlament hat das Gesetz über digitale Märkte (Digital Markets Act) verabschiedet, das <a href="/news/2021/news-20211215-01.html">den Grundsatz der Geräteneutralität</a> einführt. Dies ist ein wichtiger erster Schritt. Das Recht der Endnutzer, ihr eigenes Gerät und Betriebssystem zu verwenden, ist ein wichtiger Faktor, um den Zugang von Betriebssystemen mit Freier Software zu den dominierenden Plattformen zu gewährleisten. Da das für viele Nutzer alltägliche Realität ist, vergrößert diese Option die Zielgruppe für die Einführung Freier Software.
+  </p>
+
+  <p>
+    Das Gesetz über digitale Märkte (Digital Markets Act) schützt die Nutzer, da es eine strengere Zustimmung für vorinstallierte Anwendungen verlangt, die Bindung an einen bestimmten Anbieter verhindern soll und die Übertragbarkeit von Daten in Echtzeit fordert. Wir bedauern jedoch, dass bei der Abstimmung die Festlegung offener Standards als Voraussetzung für die Definition der Interoperabilität nicht in Betracht gezogen wurde.
+  </p>
+
+<h2>Fehlen von Freier Software kostet Stockholm 100 Millionen Euro</h2>
+  
+  <p>
+    Mit Hilfe von Skolplattformen ("Schulplattform"), einer von der Stadt Stockholm angebotenen digitalen Plattform, erhalten Eltern in Stockholm Informationen über die Schulen oder Kindergärten ihrer Kinder direkt auf ihre Geräte. Sie kostete schätzungsweise 100 Millionen Euro, und obwohl sie öffentlich finanziert wurde, war der Code von Skolplattformen unfrei. Die Eltern entdeckten Unregelmäßigkeiten und Sicherheitsprobleme in der Plattform und machten sich daran, die Fehler selbst zu beheben. Sie schufen eine funktionelle und sichere Alternative mit Freier Software, Öppna skolplattformen ("Offene Schulplattform"). Die Stadt Stockholm ergriff rechtliche Maßnahmen gegen die Entwickler, die helfen wollten.
+  </p>
+  
+  <figure>
+    <img src="https://pics.fsfe.org/uploads/big/089c7baba968418669601f56d1f72d86.png"/>
+    <figcaption>
+      Interview mit Christian Landberg und Alexander Crawford von Öppna skolplattformen
+    </figcaption>
+  </figure>
+  
+  <p>
+    Wir <a href="/news/2021/news-20211216-01.html">führten ein Interview mit Christian Landberg und Alexander Crawford, zwei Hauptakteuren der Initiative</a>. Laut Alexander Crawford verändert Öppna skolplattformen die Diskussion über zivile Technik und die Digitalisierung des öffentlichen Sektors.
+  </p>
+
+<h2>Infrastruktur, die die Ideale der Softwarefreiheit lebt</h2>
+  
+<p>
+    Können Organisationen mit begrenzten Ressourcen digital souverän sein und trotzdem moderne Dienstleistungen anbieten? Es ist nicht trivial, aber die FSFE beweist, dass es möglich ist. Wir haben unsere Kontrolle über Dienste und Server durch den Einsatz Freier Software maximiert. Wir demonstrieren interne und externe Transparenz. Die Komplexität unserer Systeme ist erträglich, während wir eine Vielzahl nützlicher Funktionen anbieten.
+  </p>
+
+  <figure>
+    <img src="https://pics.fsfe.org/uploads/medium/a9669e241527f1769e2fe67418a77f0d.jpg"/>
+  </figure>
+   
+  <p>
+    Die FSFE gibt in einem <a href="/news/2021/news-20211203-01.html">Artikel</a> einen Überblick über ihre digitale Infrastruktur, der anderen NGOs helfen könnte, von proprietären Dienstanbietern unabhängig zu werden. Wir nehmen dich mit auf eine Reise durch unsere Infrastruktur und ihre Prinzipien, von den glänzenden Benutzeroberflächen unserer Dienste über die Virtualisierungsmethoden und die Überwachung bis hin zu den Bare-Metal-Servern, auf denen sie laufen. Unsere Infrastruktur wird vom System-Hackers-Team verwaltet.
+  </p>
+
+<h2>Interview mit Vincent Lequertier über KI</h2>
+  
+  <p>
+    Vincent Lequertier ist Mitglied des System-Hackers-Teams und ein Forscher für künstliche Intelligenz im Gesundheitswesen. Für 20-jährige Jubiläum der FSFE <a href="/news/2021/news-20211209-01.html">haben wir Vincent zu entscheidenden Aspekten der künstlichen Intelligenz befragt</a>. Transparenz in der KI ist notwendig, um zu bewerten und zu verstehen, wie Daten verarbeitet und Ergebnisse berechnet werden. Freie Software kann eine entscheidende Rolle dabei spielen, KI transparenter zu machen.
+  </p>
+
+  <figure>
+    <img src="https://pics.fsfe.org/uploads/medium/8d10355a4334cefde7f2f21d6f44daaa.jpg"/>
+    <figcaption>
+      Vincent Lequertier stellt wichtige Punkte zum Thema KI vor auf einem FSFE-Community-Treffen in Bozen, Italien, 2019.
+    </figcaption>
+  </figure>
+  
+  <p>
+    Vincent stellt fest, dass im Gesundheitssektor einige aggregierte Statistiken weithin verfügbar sind. Seiner Einschätzung nach werden sich Offenheit und kollaborative Aspekte der KI-Forschung verbessern. In dem Interview werden brandaktuelle Themen angesprochen, wie z. B. die Möglichkeit, dass KI das Recht erhalten könnte, Urheberrechte zu beanspruchen. 
+  </p>
+
+<h2 id="save-the-date">Termine</h2>
+  <ul>
+    <li>
+       Am Mittwoch, den 19. Januar, findet das monatliche <a href="https://wiki.fsfe.org/Events/Netherlands/2022-01-19">Online-Treffen</a> des FSFE-Länderteams Niederlande statt.
+    </li>
+    <li>
+       Am Samstag, den 5. und Sonntag, den 6. Februar findet die FOSDEM 2022 online statt, und die FSFE wird wieder den Legal and Policy Devroom mitgestalten. Letztes Jahr haben wir den Legal and Policy Devroom zum ersten Mal mitorganisiert; er umfasste <a href="/news/2021/news-20210311-01.html">11 Vorträge zu vielen verschiednen Themen</a>. Wir freuen uns auf die FOSDEM 2022. Sei dabei und erfahre die neuesten Entwicklungen in Sachen Softwarefreiheit. Das Programm wird noch bekannt gegeben.
+    </li>
+  </ul>
+
+<h2>Was wir gemacht haben</h2>
+  <ul>
+    <li>
+      Am 28. Dezember hielt Alexander Sander, Policy Consultant der FSFE, einen Vortrag zum Thema "Public Money? Public Code! in Zeiten von Corona" auf der rC3-Konferenz.
+    </li>
+    <li>
+      Am 16. Dezember nahm Lina Ceballos, Projektmanagerin der FSFE, an einer Online-Sitzung teil, in der sie über die wichtigsten Aktivitäten der FSFE mit dem Schwerpunkt "Öffentliches Geld? Public Code!" und dessen aktuellen Status in Spanien und Europa. Der Vortrag fand bei Trantor Tech Talks statt; ein <a href="https://media.fsfe.org/w/6AnT1Z2zeCzdskVL3tZw7Z">Video ist auf Spanisch verfügbar</a>.
+    </li>
+    <li>
+      Im Dezember haben die Community-Mitglieder drei Beiträge im Planet veröffentlicht. In einer Buchbesprechung des Romans "Walkaway" von Cory Doctorow wird die Geschichte gelobt, trotz einer persönlichen Abneigung gegen Fantasien rund um die "Mind Scan"-Technologie. Eine Anleitung zeigt, wie man die interne Tastatur/das Touchpad ausschaltet, wenn eine Katze auftaucht. Ein feierlicher Beitrag kündigt die Veröffentlichung von PGPainless Version 1.0.0 an. Die Stimmen der FSFE-Community kannst du auf <a href="https://planet.fsfe.org/">Planet</a> lesen.
+    </li>
+  </ul>
+
+<h2 id="contribute-to-our-newsletter">An unserem Newsletter mitwirkenr</h2>
+  <p>Wenn ihr Gedanken, Bilder oder Neuigkeiten mit uns teilen wollt, schickt sie bitte zu uns. Unsere Adresse lautet wie immer <email>newsletter@fsfe.org</email>. Wir freuen uns darauf, von euch zu hören! Wenn ihr außerdem uns und unsere Arbeit unterstützen wollt, tretet unserer Community bei und unterstützt uns mit einer einmaligen oder <a href="https://my.fsfe.org/donate?referrer=newsletter">monatlichen Spende</a>. Unser Dank gilt der Community und den Freiwilligen, Unterstützern und Spendern, die unsere Arbeit möglich machen. Und ein Dank geht an die Übersetzer, die es möglich machen, dass ihr den Newsletter in eurer Muttersprache lesen könnt.
+  </p>
+  
+  <p>Eure Redakteurin, Fani Partsafyllidou</p>
+
+  </body-complete>
+    <image url="https://pics.fsfe.org/uploads/medium/a9669e241527f1769e2fe67418a77f0d.jpg" alt=""/>
+    <link>/news/nl/nl-202201.html</link>
+    <tags>
+      <tag key="front-page"/>
+      <tag key="newsletter">Newsletter</tag>
+      <tag key="deviceneutrality">Device Neutrality</tag>
+      <tag key="pmpc">Public Money? Public Code!</tag>
+      <tag key="education">Education</tag>
+      <tag key="se">Sweden</tag>
+      <tag key="internal">Internal</tag>
+      <tag key="fosdem">FOSDEM</tag>
+  </tags>
+    <discussion href="https://community.fsfe.org/t/788"/>
+  </news>
+</newsset>

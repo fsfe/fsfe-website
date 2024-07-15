@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- ***************************************************** -->
+<!-- This file has been automatically generated.           -->
+<!-- Please do not modify it, and do not commit it to git. -->
+<!-- ***************************************************** -->
+
+<newsset>
+  <news date="2022-02-02">
+    <title>Welcome to the Matrix: the FSFE now runs its own server</title>
+    <body>
+      <p>
+  The FSFE is eager to support its community with diverse Free Software
+  communication channels. We are happy to announce that we have recently added
+  Matrix to this list. After successful beta tests, every FSFE supporter and
+  volunteer can now create their own Matrix account. We will also use our
+  instance for the FSFE’s virtual booth during FOSDEM!
+</p>
+    </body>
+    <body-complete>
+
+<h1>Welcome to the Matrix: the FSFE now runs its own server</h1>
+
+<p>
+  The FSFE is eager to support its community with diverse Free Software
+  communication channels. We are happy to announce that we have recently added
+  Matrix to this list. After successful beta tests, every FSFE supporter and
+  volunteer can now create their own Matrix account. We will also use our
+  instance for the FSFE’s virtual booth during FOSDEM!
+</p>
+
+<p>
+  For over a decade now, the FSFE has been offering an XMPP (also known as
+  Jabber) server as well as a traditional IRC channel for <a href="/about/contact.html#community">our community</a> to quickly exchange messages.
+  Today we officially open the gates to our new Matrix server, which has been
+  successfully tested for a few months and has a few advantages over XMPP.
+</p>
+
+<figure>
+  <img src="https://pics.fsfe.org/uploads/medium/ae0b688f41701e0dbf2212609f8565c5.png" alt="A computer screen with Matrix on it in a nice office space"/>
+  <figcaption>
+    Connect with the FSFE community at FOSDEM – from home!
+  </figcaption>
+</figure>
+
+<h2>Federated and encrypted</h2>
+
+<p>
+  Matrix is a comparatively new protocol for real-time communication that
+  enables federation similar to XMPP. Federation means that users of one
+  instance can communicate with users of other instances over the same protocol.
+  Matrix has some features directly built in, ranging from automatic encryption
+  to sending pictures and the possibility of audio and video chats, or allowing
+  responding to messages with emojis. With XMPP, some of these features are also
+  available through extensions, but not all servers support all such additional
+  features, which means that some users cannot benefit from them.
+</p>
+
+<p>
+  Matrix is of course not perfect either, but meanwhile many Free Software
+  organisations such as KDE and Mozilla as well as a number of public
+  administrations use Matrix, for example the French state. And most
+  importantly, the feedback from our test users and teams was very positive.
+  That is why we now invite our community to make up their own mind about
+  Matrix. For the time being, we will keep both Matrix and XMPP running so that
+  individual users, groups, and teams can evaluate the technologies for
+  themselves.
+</p>
+
+<h2>How to enter the Matrix</h2>
+
+<p>
+  For those who have an FSFE account - i.e. <fsfe-cd-donate-link>all
+  supporters</fsfe-cd-donate-link> and registered volunteers - getting started is
+  super easy. We provide a <a href="https://wiki.fsfe.org/TechDocs/Matrix">wiki
+  page</a> where all the necessary information is collected. Due to the
+  encryption features of the messenger, the first steps should be taken with
+  some caution, but after that everything is quite self-explanatory.
+</p>
+
+<p>
+  If you already have an account on a homeserver other than the FSFE's, you can
+  of course keep it and still join our rooms. There are some recommendations
+  listed in the FSFE space (<code>#fsfe:fsfe.org</code>), such as the main
+  community room <code>#community:fsfe.org</code>. There is also a <a href="https://ems.element.io/tools/matrix-migration">service by the Matrix
+  developers</a> to migrate one's account from one server to another if you'd like
+  to make use of the fancy fsfe.org handle.
+</p>
+
+<p>
+  A great way to experience Matrix on a grand scale is at the virtual FOSDEM
+  this coming weekend, where the <a href="/news/2022/news-20220127-01.html">FSFE
+  will once again have a devroom and a booth</a>. Participation and visiting is
+  possible via distinct Matrix rooms. So get a Matrix account on our homeserver
+  beforehand and join us at FOSDEM!
+</p>
+
+<p>
+  <em>
+    Like all FSFE services, this one is part of our <a href="/news/2021/news-20211203-01.html">Free Software infrastructure</a>
+    with <a href="https://git.fsfe.org/fsfe-system-hackers/synapse/">public
+    deployment code</a>. We would like to thank Michael Weimann, one of our
+    System Hackers, who maintains the service.
+  </em>
+</p>
+
+</body-complete>
+    <image url="https://pics.fsfe.org/uploads/medium/ae0b688f41701e0dbf2212609f8565c5.png" alt="A computer screen with Matrix on it in a nice office space"/>
+    <link>/news/2022/news-20220202-01.html</link>
+    <tags>
+  <tag key="front-page"/>
+  <tag key="internal">FSFE Internal</tag>
+  <tag key="tech-teams">Technical Teams</tag>
+  <tag key="tools">Tools</tag>
+  <tag key="fosdem">FOSDEM</tag>
+</tags>
+    <discussion href="https://community.fsfe.org/t/797"/>
+  </news>
+</newsset>

@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- ***************************************************** -->
+<!-- This file has been automatically generated.           -->
+<!-- Please do not modify it, and do not commit it to git. -->
+<!-- ***************************************************** -->
+
+<newsset>
+  <news date="2022-07-12">
+    <title>A PC in your pocket: Librem 5, a Free Software phone</title>
+    <body>
+      <p>
+  Librem 5 runs the fully convergent PureOS, which means you can take 
+  your desktop with you within your phone. Its dedicated graphical 
+  environment, Phosh, is becoming a popular option for Linux phones. 
+  Guido Günther, one of Purism’s main developers, reveals details of 
+  Librem’s software development in this interview.
+</p>
+    </body>
+    <body-complete>
+
+<h1 id="a-pc-in-your-pocket-librem-5-a-free-software-phone">A PC in your pocket: Librem 5, a Free Software phone</h1>
+
+<p>
+  Librem 5 runs the fully convergent PureOS, which means you can take 
+  your desktop with you within your phone. Its dedicated graphical 
+  environment, Phosh, is becoming a popular option for Linux phones. 
+  Guido Günther, one of Purism’s main developers, reveals details of 
+  Librem’s software development in this interview.
+</p>
+
+<figure>
+  <img src="https://pics.fsfe.org/uploads/medium/7dc839ec11961ef684d5f5e6eb6b1b88.png" alt="Connecting a phone to a laptop"/>
+  <figcaption>
+  Pure OS offers convergence, the ability to have almost the same OS both on your phone and your laptop.
+  </figcaption>
+</figure>
+
+<p>
+  Having a Free Software phone gives you control over your device. You 
+  can gain a higher level of privacy protection, and you can finally 
+  avoid apps you were stuck with before. It also means you can often 
+  keep your device for longer, and <a href="/activities/upcyclingandroid/index.html">protect the 
+  environment</a> by reducing e-waste.
+</p>
+
+<p>
+  When deciding on your switch to a Free Software operating system, your 
+  options are installing a new system on your current phone or 
+  acquiring a phone with a Free Software operating system 
+  pre-installed.
+</p>
+
+<p>
+  The latter is clearly the easier route, and Purism’s Librem 5 may be 
+  the solution for you. By default, it runs PureOS, a Free Software 
+  operating system that comes with Phosh, its polished graphical 
+  environment. Projects like postmarketOS, Mobian, and Debian have 
+  picked up Phosh too, putting it into use on other devices and 
+  contributing patches.
+</p>
+
+<p>
+  Guido Günther is one of the main developers of Phosh (and an <a href="https://my.fsfe.org/donate">FSFE supporter</a>!) and he kindly 
+  agreed to tell us about the software, how it fits within the Librem 5 
+  ecosystem, and its advantages.
+</p>
+
+<p>
+  <strong>Fani Partsafyllidou</strong>: I would like to start with a basic question, 
+  what do you do at Purism?
+</p>
+
+<p>
+  <strong>Guido Günther</strong>: That is not easy to answer, but here goes: I am mostly 
+  working on the Librem 5 phone. I was involved with the initial board 
+  bringup of making Linux work on the device by writing device drivers 
+  and user space components. Since we needed a graphical shell and 
+  compositor, I worked with others on the team on that too. That is how 
+  Phosh was born.
+</p>
+
+<p>
+  I also work on improving PureOS, the Debian based Linux distribution 
+  that runs on the phones and on the laptops. Our aim is to improve the 
+  Free Software ecosystems for mobile devices (like smartphones) in 
+  general, and the Librem 5 in particular.
+</p>
+
+<p>
+  <strong>Fani</strong>: Librem 5 runs PureOS, right?
+</p>
+
+<p>
+  <strong>Guido</strong>: Yes. Like all of Purism's products, the Librem 5 runs 
+  PureOS, which is a Debian-based operating system that is customized 
+  to fit Purism's devices so it is convenient for end users. It 
+  also has <a href="https://www.fsf.org/news/fsf-adds-pureos-to-list-of-endorsed-gnu-linux-distributions-1">FSF’s 
+  endorsement</a>
+</p>
+
+<p><strong>Fani</strong>: And what does Phosh do?</p>
+
+<p>
+  <strong>Guido</strong>: Phosh is the graphical shell, the environment you interact 
+  with on the phone. It is built up from multiple components:
+</p>
+
+<ul>
+  <li>
+    the Wayland compositor, phoc, is responsible for drawing things on the screen, it leverages the wlroots library for that;
+  </li>
+  <li>
+    then there is an on-screen keyboard called squeekboard; 
+  </li>
+  <li>
+    finally there is the shell itself, which is responsible for things like the lock screen, notifications, the GUI elements on the top and bottom bar, quick settings, etc. It is based on the gimp toolkit and other components of the GNOME desktop. Here is an <a href="https://honk.sigxcpu.org/con/phosh_overview.html">overview</a>.
+  </li>
+</ul>
+
+<p>
+  Initially we were only going to call the graphical shell itself 
+  “Phosh”, but the community latched on to the name and identified the 
+  whole mobile experience that it is based on (phosh + phoc + 
+  squeekboard + all the GNOME components) as “Phosh”, so the name 
+  stuck.
+</p>
+
+<p><strong>Fani</strong>: Which phones run Phosh?</p>
+
+<p>
+  <strong>Guido</strong>: While Phosh was initially developed for the Librem 5, it is 
+  also being used by all kinds of mobile devices that can run Linux, 
+  like the original Pinephones and the Pinephone Pro. It's also 
+  used on devices that formerly ran Android but can now also run Linux, 
+  like the OnePlus devices. People are also using it on tablets and 
+  laptops running Linux. The main use case is certainly smartphones 
+  running Linux, though.
+</p>
+
+<p>
+  It is worth noting that Phosh is not restricted to PureOS. 
+  PostmarketOS, for example, ships it. It is in Debian, and, as far as 
+  I know, also in Fedora, Manjaro, and many other Linux distributions.
+</p>
+
+<p>
+  Very often when you see screenshots of phones running Linux, they will 
+  be running Phosh. Here is someone running it on a <a href="https://twitter.com/xmlich02/status/1519966989116133376">cutiepie</a>, 
+  and here's someone running Phosh (using postmarketOS) on a <a href="https://twitter.com/calebccff/status/1510930222757158917">Poco 
+  F1</a>, which was an Android phone before.
+</p>
+
+<p>
+  Phosh is very often used by people who use their Linux-based phones 
+  as a "daily driver", basically as their only smartphone. We 
+  are very happy about that.
+</p>
+
+
+<figure class="no-border">
+  <a href="https://docs.puri.sm/Librem_5/Disassembly.html">
+    <img src="https://pics.fsfe.org/uploads/medium/a9325aa93933ce04d74a380a884862d9.png" alt="Librem 5 opened"/>
+  </a>
+  <figcaption>
+    You can disassemble Librem 5 using just a screwdriver. An easy to 
+    repair phone is a sustainable option. 
+  </figcaption>
+</figure>
+
+<p>
+  <strong>Fani</strong>: I have seen references about sustainability in Librem5. At the 
+  FSFE we are also dealing with sustainability in software. What do you 
+  understand as a sustainable technology? What do you see as its main 
+  challenges?
+</p>
+
+<p>
+  <strong>Guido</strong>: For me, technology that has been produced with sustainability 
+  in mind allows the user to replace software and parts, as well as 
+  repair the device over a long period of time without special 
+  equipment.
+</p>
+
+<p>
+  There are multiple challenges. For example, on the software side, you 
+  need to make sure your kernel and userspace do not include any 
+  non-free components, which is also worthwhile for privacy reasons. 
+  Otherwise you might hit the end of life of your product because you 
+  are not able to update to the newer, security-supported versions. 
+  This happens every so often to Android devices. Users find they 
+  cannot move to a newer kernel as the non-free, binary-only bits that 
+  are needed to run the device are only available for older kernels.
+</p>
+
+<p>
+  Finding or writing Free Software drivers can be very challenging, 
+  especially when it comes to complex things like the GPU, as these are 
+  very complex devices. Similarly for software components in the camera 
+  stack. But having free drivers is a requirement for sustainability.
+</p>
+
+<p>
+  On the hardware side, you want to make sure parts are easily 
+  replaceable, that as little as possible is glued in and parts can be 
+  replaced with mostly a screwdriver. <a href="https://docs.puri.sm/Librem_5/Disassembly.html">This is true in 
+  Librem 5</a>.
+</p>
+
+<p>
+  There are limits to sustainability. For example, to decode videos in 
+  a power-efficient way your hardware needs to support this, as doing 
+  it on the CPU takes way too much battery. When a new video standard 
+  emerges on the web, you cannot always decode it in an efficient way. 
+  The device will keep working but it might just not be as useful.
+</p>
+
+<figure>
+  <img src="https://pics.fsfe.org/uploads/medium/2236e84e0cfd0534e58c122968ce6cc9.png" alt="phone side with switches"/>
+  <figcaption>
+    With kill switches, you can physically disconnect the WiFi, 
+    Bluetooth, cellular signal, microphone and camera.
+  </figcaption>
+</figure>
+
+<p>
+  <strong>Fani</strong>: Moving back to Librem 5 users and software adaptability: What 
+  are the best hacks people came up with when using a Librem5 phone?
+</p>
+
+<p>
+  <strong>Guido</strong>: The thing that comes to mind is not something I would call a 
+  hack, as it is an intended use case, but one of the most amazing 
+  things is that <a href="https://puri.sm/posts/librem-5-laptop-mode/">you can turn it 
+  into a "laptop" by using a dock</a>. So basically you carry 
+  your phone and can attach it to a projector -- I have given talks at 
+  conferences like that. Or you can hook it up to a "dock" 
+  and it becomes a laptop-screen+keyboard, then you can add a usb-c 
+  monitor and turn it into a "full" PC.
+</p>
+
+<p>
+  People have used their Librem5 as a mobile hotspot to supply the 
+  whole house when there was an outage on their cable line, or as a 
+  loudspeaker as their laptops had bad audio quality, and have rerouted 
+  the laptop audio to the phone via pulseaudio.
+</p>
+
+<p>
+  Since you're not restricted by any means and you can install any 
+  software, there are unlimited possibilities. I'm so used to 
+  everything being possible that I currently have a hard time thinking 
+  of "cool" things as everything feels so natural already.
+</p>
+
+<p>
+  <strong>Fani</strong>: How does convergence, that is, the ability to have almost the 
+  same OS in phones and laptops, as in PureOS, benefit software 
+  development?
+</p>
+
+<p>
+  <strong>Guido</strong>: Since we are reusing lots of existing components, we benefit 
+  from the stability of already existing Free Software solutions, as 
+  well as being able to contribute back. For example, the libhandy and 
+  libadwaita libraries are now part of GNOME and used by lots of 
+  applications.
+</p>
+
+<p>
+  Using mostly the same components across devices helps avoid developing 
+  the same things twice, one for mobile and one for desktop. It allows 
+  people with knowledge of desktop Linux to find their way around right 
+  away, especially when it comes to configuration. It also allows them 
+  to contribute more easily as it is the same technology stack.
+</p>
+
+<p>
+  Developers, users, and sysadmins can use the very same 
+  trouble-shooting tools they know, such as wireshark, perf, and 
+  sysprof, across devices. And, if you find a bug and fix it on one 
+  side, the "other" side benefits directly. It is really the 
+  same software coming from the same source tree. As for users, 
+  switching becomes very easy, as they will already be familiar with 
+  the software.
+</p>
+
+<figure class="no-border">
+  <img src="https://pics.fsfe.org/uploads/medium/dc77572897682c7acf4321f856a77959.JPG" alt="Group of people"/>
+  <figcaption>
+    Debian Groupware meeting.
+  </figcaption>
+</figure>
+
+<p>
+  <strong>Fani</strong>: On a side note I would like to ask you about Bonn. You have 
+  been active in the FSFE Bonn local group for many years. Do you 
+  recall any fun local activities there?
+</p>
+
+<p>
+  <strong>Guido</strong>: In fact, one of the recent fun things is when we switched to 
+  BigBlueButton meetings due to the pandemic. We had old friends from 
+  Düsseldorf in the meetings who otherwise would not have made it to 
+  the local meetings due to the distance.
+</p>
+
+<p>
+  The FSFE booth in FrosCon, a social event often staffed with people 
+  from the Bonn group, is usually a highlight. I am glad this FrosCon 
+  is on site again. However, I am not super active in the local group 
+  at the moment, mostly due to time constraints.
+</p>
+
+<p>
+  The local FSFE meetings often had a short talk about different topics 
+  which is usually the best part since it pulls in more people, and 
+  very often brings in new people. I hope we resume these when the 
+  pandemic situation has settled down. Many people, including myself, 
+  feel less inclined to prepare talks when it's "only" 
+  online.
+</p>
+
+<p>
+  <strong>Fani</strong>: You work in Free Software development, and you are involved 
+  with the FSFE. What keeps you motivated when it comes to supporting 
+  software freedom and the FSFE?
+</p>
+
+<p>
+  <strong>Guido</strong>: It is really motivating for me that we can get to a point 
+  where people can use a Free-Software-only device as their main phone 
+  or laptop. Improving that keeps me motivated on the development side. 
+  We cannot have free democracies without Free Software, hence doing 
+  anything else is not time well-spent. It is also a reason why the 
+  FSFE is important, as telling people about it and nudging decision 
+  makers to embrace it is key.
+</p>
+
+<h2 id="free-software-initiatives-for-phones">Free Software initiatives for phones</h2>
+
+<figure class="no-border">
+  <img src="https://pics.fsfe.org/uploads/medium/a0da43aac80cf4d611b0a45e2e6a925f.jpg" alt="Upcycling Android"/>
+</figure>
+
+
+<p>
+  If you would like to explore more options on Free Software phones, 
+  check out:
+</p>
+
+<ul>
+  <li><a href="/freesoftware/freesoftware.html">What is Free Software</a>?;</li>
+  <li>How you can <a href="/activities/upcyclingandroid/howtoupcycle.html">upcycle your phone</a>;</li>
+  <li>Our community-led <a href="https://wiki.fsfe.org/Activities/Android/OtherInitiatives">wiki</a> with Free Software initiatives for phones;</li>
+  <li>Our interview with <a href="/news/2022/news-20220323-01.html">Plasma Mobile developer Bhushan Shah</a>.</li>
+</ul>
+
+
+</body-complete>
+    <image url="https://pics.fsfe.org/uploads/medium/7dc839ec11961ef684d5f5e6eb6b1b88.png" alt="Connecting a phone to a laptop"/>
+    <link>/news/2022/news-20220712-01.html</link>
+    <tags>
+  <tag key="front-page"/>
+  <tag key="sustainability">Sustainability</tag>
+  <tag key="upcyclingandroid">Upcycling Android</tag>
+  <tag key="localgroup">Local group</tag>
+  <tag key="interview">Interview</tag>
+</tags>
+    <discussion href="https://community.fsfe.org/t/881"/>
+  </news>
+</newsset>

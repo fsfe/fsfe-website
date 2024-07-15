@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- ***************************************************** -->
+<!-- This file has been automatically generated.           -->
+<!-- Please do not modify it, and do not commit it to git. -->
+<!-- ***************************************************** -->
+
+<newsset>
+  <news date="2023-06-06">
+    <title>Germany: dPhoenix on the road to failure?</title>
+    <body>
+      <p>
+A Free Software office and collaboration suite for the public sector is 
+one of the projects with which the German government aims to fulfil the 
+goals of the coalition agreement. But a closer look at the project 
+raises questions: Where is the source code? Who is responsible? What 
+happens to the public money involved? We asked the relevant ministry.
+</p>
+    </body>
+    <body-complete>
+<h1>Germany: dPhoenix on the road to failure?</h1>
+
+<p>
+A Free Software office and collaboration suite for the public sector is 
+one of the projects with which the German government aims to fulfil the 
+goals of the coalition agreement. But a closer look at the project 
+raises questions: Where is the source code? Who is responsible? What 
+happens to the public money involved? We asked the relevant ministry.
+</p>
+
+<p>
+Back in 2020, the north German IT service provider Dataport started the 
+first pilots of its dPhoenixSuite as an alternative to Microsoft’s 
+proprietary office and collaboration suite. The dPhoenixSuite integrates 
+Free Software components such as Nextcloud, Matrix, Jitsi, Collabora, 
+and UCS. The suite is already being offered on a small scale as a cloud 
+service to German adminstrations, taking a stand where the German IT 
+Planning Council is calling for a sovereign working environment for 
+administrations, with Free Software solutions as a priority. But 
+Dataport seems to fall short of this expectation.
+</p>
+
+<p>
+The current issue 07/23 of Linux Magazin comes with a <a href="https://www.linux-magazin.de/ausgaben/2023/07/dataport-phoenix/">detailed 
+and critical analysis</a> by Markus Feilner, which covers both the 
+history and the problems of Dataport’s “Projekt Phoenix” and its 
+relation to the “Sovereign Workplace” (“Souveräner Arbeitsplatz”), a 
+long promised reference implementation under the responsibility of the 
+German Federal Ministry of the Interior and Community (BMI), coordinated 
+by the recently founded Centre for Digital Sovereignty of Public 
+Administration (ZenDiS). Some of the major problems Feilner reveals are 
+the missing dPhoenixSuite source code, a lack of understanding of Free 
+Software and of collaboration within the Free Software community, a 
+tendency to open-wash by claiming to be “based on open source”, unclear 
+responsibilities, and an opaque relationship to the BMI’s “Sovereign 
+Workplace” project.
+</p>
+<p>
+We have been promoting the concept of <a href="https://publiccode.eu">“Public Money? Public Code!”</a> since 
+2017, and we welcome and encourage every step towards Free Software in 
+public administrations. However, the recent news developments around 
+Dataport and the Sovereign Workplace are reason to be wary, especially 
+of any attempts to open-wash.
+</p>
+<p>
+Therefore, we have today sent a list of questions to the BMI, expecting 
+that the answers will make the situation around the dPhoenixSuite and 
+the Sovereign Workplace transparent.
+</p>
+
+<h2>Questions for the Federal Ministry of the Interior and Community (BMI):</h2>
+
+<ol type="A">
+<li><p>Dataport advertises its dPhoenixSuite as an “open source solution”. 
+So far, however, only the source code of the underlying Free Software 
+(also known as Open Source) components is available under Free Software 
+licences. The code of the complete, integrated suite cannot be obtained 
+from Dataport upon request.</p> 
+  <ol type="1"> 
+    <li>When will the full source code of the Sovereign Workplace be 
+    published on OpenCoDE?</li> 
+    <li>Will the code be published under a Free Software license, and if 
+    yes, under which one?</li>
+    <li>Is the Sovereign Workplace based on the same code stack as the 
+    dPhoenixSuite?</li>
+    <li>What part of the Sovereign Workplace code comes from dPhoenixSuite? 
+    In which parts do they differ and why?</li>
+    <li>Will it be possible for everyone to compile the Sovereign Workplace 
+    from the source code and run it on one’s own infrastructure as soon as 
+    it is published on OpenCoDE? Will an elaborate documentation to the 
+    code be available?</li>
+    <li>Are there plans do further develop the Sovereign Workplace in 
+    collaboration with the community of the underlying Free Software 
+    projects after the code has been published?</li>
+    <li>Will further development using OpenCoDE take place openly 
+    according to the tried and tested principles of “coding in the open” 
+    and “release early, release often”, establishing and involving a 
+    community?</li>
+  </ol>
+</li>
+<li><p>According to public news and information from Dataport, the 
+dPhoenixSuite is based on the Sovereign Workplace, which is to be 
+published on OpenCoDE before the end of 2023. According to the BMI, the 
+Sovereign Workplace is based on dPhoenixSuite.</p>
+  <ol type="1"> 
+    <li>Which of the two statements is correct? How did the two 
+    different statements come about?</li>
+    <li>Which contracts with reference to the Sovereign Workplace exist 
+    between the BMI or ZenDiS on the one hand and Dataport on the 
+    other?</li>
+    <li>Is the Sovereign Workplace rather a fork of dPhoenixSuite or a 
+    reference implementation? Once the source code has been published 
+    on OpenCoDE, will the Sovereign Workplace be further developed 
+    independently of dPhoenixSuite or will it remain coupled to 
+    dPhoenixSuite?</li>
+    <li>Can you provide us with an organisation chart of the Sovereign 
+    Workplace project with all the authorities, offices, public bodies, 
+    and responsible persons involved? If this is not possible: 
+    Which authorities, offices, public bodies, and responsible persons 
+    are involved in the Sovereign Workplace project (in each case with 
+    details of their role and responsibility within the project)?</li>
+    <li>Who is responsible for the Sovereign Workplace project in the 
+    BMI?</li> 
+    <li>What competences does the CIO have in coordinating the project 
+    and in coordinating with Dataport?</li>
+    <li>Where and by whom is the cooperation between Dataport and 
+    BMI/ZenDiS on the Sovereign Workplace and the Phoenix project 
+    controlled and coordinated?</li>
+    <li>Where and under whose leadership are the components of the 
+    Sovereign Workplace that are not adopted from the Free Software 
+    community (for example gluecode and integration scripts) 
+    developed?</li>
+    <li>How many people develop code for the Sovereign Workplace at 
+    the BMI or ZenDiS? Is this code also made available to Dataport 
+    for the dPhoenixSuite?</li>
+    <li>Are there any requirements from BMI/ZenDiS to Dataport for 
+    the development of the dPhoenixSuite? If yes: Are these 
+    fulfilled?</li>
+    <li>Has the BMI exerted any influence on Dataport to publish 
+    the complete dPhoenixSuite as Free Software?</li>
+  </ol>
+</li>
+<li><p>Funding</p>
+  <ol type="1">
+    <li>What public funding has been spent on the Sovereign Workplace 
+    so far?</li>
+    <li>What funding is available for the project for the current year?</li>
+    <li>What annual funding is needed until 2025 to further develop the 
+    Sovereign Workplace?</li>
+    <li>Did Dataport receive any funding from the BMI/ZenDiS for the 
+    development of dPhoenixSuite or contributions to the Sovereign 
+    Workplace?</li>
+  </ol>
+</li>
+</ol>
+<p>
+We expect that the BMI’s response will give the public a better 
+understanding of what is going on around the Sovereign Workplace and the 
+dPhoenixSuite. We will stay tuned to this issue and report back as soon 
+as we receive a response.
+</p>
+
+<h2>Free Software and “Public Money? Public Code!”</h2>
+<p>
+Free Software gives everyone the right to use, study, share and improve 
+applications for any purpose. These freedoms ensure that similar 
+applications do not have to be programmed from scratch every time and, 
+thanks to transparent processes, others do not have to reinvent the 
+wheel. In large projects, expertise and costs can be shared and 
+applications paid for by the general public are available to all. This 
+promotes innovation and saves taxpayers money in the medium to long 
+term. Dependencies on vendors are minimised and security issues can be 
+fixed more easily. The Free Software Foundation Europe, together with 
+over 200 organisations and administrations, is therefore calling for 
+“Public Money? Public Code!” - If it is public money, it should be 
+public code as well. More information on the initiative on the <a href="https://publiccode.eu">“Public Money? Public Code!” website</a>.
+</p>
+
+</body-complete>
+    <image url="https://pics.fsfe.org/uploads/medium/6c8d43ffc1013f647affa17d8f0929d5.jpg" alt="House consisting of 0s and 1s"/>
+    <link>/news/2023/news-20230606-01.html</link>
+    <tags>
+	 <tag key="front-page"/>
+	 <tag key="de">Germany</tag>
+	 <tag key="pmpc">Public Money? Public Code!</tag>
+	</tags>
+    <discussion href="https://community.fsfe.org/t/1039"/>
+  </news>
+</newsset>

@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- ***************************************************** -->
+<!-- This file has been automatically generated.           -->
+<!-- Please do not modify it, and do not commit it to git. -->
+<!-- ***************************************************** -->
+
+<newsset>
+  <news date="2020-06-01">
+    <title>La Liberté des Routeurs défiée par de nouvelles règles européennes</title>
+    <body>
+      <p>Depuis le 21 juin 2020, un nouvel ensemble de règles va guider l'implémentation de la Liberté des Routeurs en Europe. L'internalisation des règles par les 27 états membres de l'Union vont faire face à des conséquences négatives pour la Liberté des Routeurs. La FSFE a contribué à plusieurs améliorations des Directives et va être attentive à leur respect.</p>
+    </body>
+    <body-complete>
+
+<h1>La Liberté des Routeurs défiée par de nouvelles règles européennes</h1>
+
+<p>Depuis le 21 juin 2020, un nouvel ensemble de règles va guider l'implémentation de la Liberté des Routeurs en Europe. L'internalisation des règles par les 27 états membres de l'Union vont faire face à des conséquences négatives pour la Liberté des Routeurs. La FSFE a contribué à plusieurs améliorations des Directives et va être attentive à leur respect.</p>
+
+<p> La pandémie de COVID-19 montre à quel point les gens dépendent d'Internet pour leur travail et leur vie personnelle. En temps de confinement, quand les personnes doivent rester chez elles et télétravailler, le trafic internet, le chiffrement, les interactions de travail et de business passent par des routeurs personnels. Depuis 2013, la FSFE promeut la Liberté des Routeurs en Europe avec des résultats remarquables en Allemagne et des effets au delà de ses frontières. Maintenant, un nouvel ensemble de règles, dont la FSFE <a href="/news/2019/news-20191120-01.html">a contribué à l'amélioration</a>, va guider l'implémentation de la Liberté des Routeurs en Europe. On résume les résultats positifs et les défis à venir.</p>
+
+<h2>Le cadre légal de la Liberté des Routeurs</h2>
+
+<p>En Europe, la Liberté des Routeurs est régulée par trois ensemble de règles. Le premier vient de la <a href="https://eur-lex.europa.eu/legal-content/FR/TXT/?uri=uriserv%3AOJ.L_.2015.310.01.0001.01.ENG">Régulation de la
+Neutralité du Net (Regulation (EU) 2015/2120</a>, qui établit que les gens sont libres de choisir leur propre équipement numérique. Le second ensemble consiste en les nouvelles <a href="https://berec.europa.eu/eng/document_register/subject_matter/berec/download/0/9033-berec-guidelines-on-common-approaches-to_0.pdf">Directives sur la localisation des points de terminaison des réseaux (NTP)</a>, élaborées par le BEREC (Body of European Regulators for Electronic Communications). Les législations nationales et les actes administratifs dans chaque état membre de l'UE composent le troisième ensemble.
+Cela sera implémenté localement par les autorités de régulation nationale conformément à la Régulation de la neutralité du Net et les Directives sur les NTP.</p>
+
+<p>Les Directives sur les NTP ont l'objectif de fournir des guides pour les autorités de régulation nationale pour
+déterminer dans leurs juridictions si le modem/routeur doit appartenir aux utilisatrices et utilisateurs ou aux
+Fournisseurs d'Accès Internet (FAI). En mars 2020, le BEREC a publié la version finale du texte, après une consultation publique à laquelle la FSFE a <a href="/news/2019/news-20191120-01.html">participé</a> en novembre 2019. Les Directives ont pris effet le 21 juin 2020, et les autorités de régulation nationale sont censées prendre en compte au maximum ces Directives quand elles vont définir la localisation du NTP.</p>
+
+<blockquote><p>"La FSFE se réjouit des efforts du BEREC pour fournir un ensemble de principes pour déterminer le NTP. Cependant, du fait de termes peu clairs dans les nouvelles Directives, le manque d'application par les autorités de régulation et les comportements abusifs des FAI, l'implémentation de la Liberté des Routeurs par les 27 états membres de l'UE va être difficile. À la FSFE, notre tâche va être d'être vigilants au respect des Directives et la dénonciation des pratiques illégales", Max Mehl, Responsable du Programme de la FSFE.</p></blockquote>
+
+<figure>
+  <img src="https://pics.fsfe.org/uploads/big/a1163af2fed042612f70db07b0566322.png" alt="Chronologie du cadre légal de la Liberté des Routeurs"/>
+  <figcaption>
+    Chronologie du cadre légal de la Liberté des Routeurs.
+  </figcaption>
+</figure>
+
+<h2>Les contributions de la FSFE</h2>
+
+<p>La version finale des Directives sur le NTP a apporté des changements clarifiants et explicatifs.
+Fondamentalement, le BEREC a conservé la proposition originale de l'ébauche de donner aux autorités de régulation nationale la possibilité de choisir parmi trois endroits différents pour le NTP :</p>
+
+<blockquote><p>
+ <ol>
+   <li>Le NTP est au point A. Cela signifie que le routeur et le modem sont sous le contrôle de l'utilisatrice ou de
+l'utilisateur, qui peut décider quel équipement utiliser - soit celui recommandé et fourni par le FAI ou bien un
+équipement tiers. Cela serait la Liberté des Routeurs.</li>
+   <li>Le NTP est au point B. Cela signifie que le modem fera partie du réseau du FAI, mais les routeurs additionnels seront dans le domaine de l'utilisatrice ou de l'utilisateur. On déconseille cette configuration parce que cela a des impacts négatifs sur le réseau local des utilisateurs, allant à l'encontre de la Liberté des Routeurs.</li>
+   <li>Le NTP est au point C. C'est l'option la plus restrictive puisque le modem et le routeur ou l'équipement qui
+contient les deux est uniquement sous le contrôle du FAI. Cette option nie complètement la Liberté des Routeurs,
+puisque les utilisateurs n'ont aucun droits sur leur propre équipement.</li>
+ </ol>
+</p></blockquote>
+
+<figure>
+  <img src="https://pics.fsfe.org/uploads/big/37c03c4a34cb2a6c58d347c0b29f0a4d.png" alt=" Trois localisations du NTP"/>
+  <figcaption>
+   Les autorités de régulation nationale vont choisir quel modèle de NTP dans leur juridiction. Source : BEREC.
+  </figcaption>
+</figure>
+
+<p>Bien que la FSFE défend que seul le point A pourrait respecter la Liberté des Routeurs, le BEREC a laissé la
+possibilité de définir le NTP à trois endroits différents. Néanmoins, nous avons exercé une <a href="https://download.fsfe.org/policy/routers/Fsfe-contribution-berec-guidelines.pdf">influence positive</a>, en soulignant la nécessité de conserver la Liberté des Routeurs comme principe majeur lorsque l'on définit le NTP. Voici les changements clé et les réactions aux contributions de la FSFE :</p>
+
+<ul>
+  <li>Le BEREC a légerement modifié le texte officiel de manière à adopter notre position, le point A devrait être la règle lorsque l'on détermine le NTP. Il a clarifié le fait qu'une nécessité technologique objective doit
+exister si une autorité de régulation nationale veut déterminer le NTP en B ou C, et ainsi nier la Liberté des
+Routeurs.</li>
+  <li>Le BEREC a explicitement reconnu notre argument comme quoi il était impossible de trouver un cas réel où n'importe quel incident avec la Liberté des Routeurs pourrait justifier la violation de la Régulation de Neutralité du Net. L'expérience en Allemagne avec le NTP au point A depuis 2016 prouve que les équipements choisis par les utilisatrices ou utilisateurs ne causent pas de dommage technologique pour les FAIs.</li>
+  <li>Le BEREC a explicitement reconnu notre argument comme quoi localiser le NTP en A permet le plus d'innovation et de compétition sur le marché des modems/routeurs.</li>
+  <li>Le BEREC a reconnu que la libéralisation du marché des modems/routeurs n'a pas causé de dommages au réseau public. Le BEREC demande donc aux FAIs et aux équipementiers de travailler ensemble plutôt que d'essayer de créer une illusion de sécurité en isolant le réseau public.</li>
+  <li>Le BEREC a reconnu que les points B ou C entraveraient sérieusement la souveraineté numérique des utilisateurs, la protection des données et l'empreinte écologique, et augmenteraient le coût de changement d'opérateur.</li>
+</ul>
+
+<figure>
+  <img src="https://pics.fsfe.org/uploads/big/f0bb57b6899e3429728de5051c7b0f44.png" alt="Quelques bénéfices de la Liberté des Routeurs"/>
+  <figcaption>
+    Quelques bénéfices de la Liberté des Routeurs.
+  </figcaption>
+</figure>
+
+<h2>Défis pour la Liberté des Routeurs</h2>
+
+<p>Malgré les efforts du BEREC pour évaluer les possibilités de localisation du NTP et de prendre en compte les suggestions des partis prenants, il y a toujours des menaces qui pourraient avoir des impacts négatifs sur la Liberté des Routeurs en Europe. C'est dû aux termes vagues utilisés dans les Directives qui vont provoquer des divergences lors des implémentations nationale, le manque d'engagement des autorités de régulation nationale pour protéger la Liberté des Routeurs, et l'attitude abusive des FAIs.</p>
+
+<h3>Le pouvoir discrétionnaire des autorités de régulations à définir la "nécessité technologique"</h3>
+
+<p>Les Directives à propos du NTP accordent aux autorités de régulation nationale le pouvoir discrétionnaire de décider si il y a une "nécessité technologique objective" pour que les routeurs fassent partie du réseau des FAI. Permettre aux autorités de régulation nationale de définir l'endroit du NTP sur la base de la "nécessité technologique" ouvre un précédent dangereux pour une interprétation discrétionnaire et abusive des Directives. Alors que la nécessité d'établir le NTP au point C serait difficile à prouver, les influences politiques et économiques pourraient facilement passer outre les seuils de ces nécessités pour avoir au moins le modem au prémisses du FAI (point B) – et ainsi nuire sérieusement à la Liberté des Routeurs. De plus, la décision par les autorités de régulation de déterminer la "nécessité technologique" serait difficile à contrer, possiblement uniquement par du contentieux.</p>
+
+<h3>Le manque d'engagement des autorités de régulation à protéger la Liberté des Routeurs</h3>
+
+<p>Une <a href="https://en.epicenter.works/content/report-net-neutrality-compliance-and-enforcement-in-the-eu-is-spotty">étude récente</a> a démontré que les autorités de régulation nationale ont été extrêmement frileuses à condamner les violations de la Neutralité du Net. Pire encore, certains pays comme l'Irlande et le Portugal, ont été incapables de sanctionner les FAIs qui ne la respectaient pas. D'autres autorités de régulation ont fixé des montants très bas pour les amendes, ce qui ne va certainement pas empêcher les FAIs de violer à nouveau la Liberté des Routeurs. Les plus gros FAIs en Europe ont des revenus annuels à neuf chiffres ou plus. Pout eux, une amende de quatre à sept chiffres n'est ni dissuasive ni efficace pour empêcher les activités lucratives contrevenantes. Par conséquent, la liberté des Routeurs pourrait être facilement violée par les FAIs sans contre mesure efficace des autorités de régulation.</p>
+
+<figure>
+  <img src="https://pics.fsfe.org/uploads/big/283ec6b82db533de03f29d6d00f20d4d.png" alt="Carte des amendes pour violation de la Neutralité du Net"/>
+  <figcaption>
+    Carte des amendes pour violation de la Neutralité du Net. Source: epicenter.works, 2019.
+  </figcaption>
+</figure>
+
+<h3>Les barrières imposées par les FAIs</h3>
+
+<p>Comme on a pu le voir <a href="/news/2020/news-20200302-01.html">en Allemagne</a>, les FAIs sont très créatifs pour imposer leurs routeurs à leurs clients, en créant des barrières qui peuvent complètement bloquer la Liberté des Routeurs. On appelle cela des barrières douces quand les FAIs n'interdisent pas à leurs clients d'utiliser leur propre routeur dans les conditions générales, ni ne refusent de donner les informations nécessaires à la configuration (données de connexion), mais tentent de persuader autrement leurs clients de ne pas utiliser leur propre routeurs avec des arguments peu scrupuleux. La plupart du temps cela suffit à faire peur aux gens et à les éloigner de la Liberté des Routeurs. Parfois, les FAIs poussent les limites et créent des barrières dures pour leur clients. Par exemple, les FAIs qui imposent des limitations dans les conditions générales, qui ne fournissent pas les informations nécessaires à la configuration, ou refusent simplement de fournir du support technique.</p>
+
+<figure>
+  <img src="https://pics.fsfe.org/uploads/big/48324e598fb3d81f1b72e387d1cc459f.png" alt="Les barrières à la Liberté des Routeurs"/>
+  <figcaption>
+    Quelques barrières imposées par les FAIs. Trouvez<a href="/news/2020/news-20200302-01.html">ici</a> ce que vous pouvez
+    faire contre.
+  </figcaption>
+</figure>
+
+<h2>Aidez nous à suivre le futur de la Liberté des Routeurs en Europe</h2>
+
+<p>La FSFE va continuer à suivre de près les nouvelles évolutions de la Liberté des Routeurs en Europe. Les nouvelles directives sur le NTP devront être appliquées par les autorités de régulation nationale de 27 états
+différents, ce qui va certainement mener à beaucoup de disparités. Les six prochains mois seront essentiels pour
+comprendre si l'approche des autorités de régulation ira dans le sens ou à l'encontre de la Liberté des Routeurs. Notre expertise de longue date en matière de défense du droit des utilisatrices et des utilisateurs à choisir leur propre équipement, et l'énorme succès que nous avons obtenu en Allemagne, nous placent dans la meilleure position pour continuer à être un défenseur de premier plan de la Liberté des Routeurs.</p>
+
+<p>Cependant, ce genre d'engagement au long terme n'est possible qu'avec <a href="https://my.fsfe.org/donate">votre aide</a>. Vous pouvez faire la différence en nous rejoignant en tant que supporteur et ainsi prendre position pour la Liberté des Routeurs ! Comme vous pouvez le voir, il y a beaucoup à faire.</p>
+
+<figure>
+  <img src="https://pics.fsfe.org/uploads/big/90f71dd1c739864cb71efe324dd5e2ea.png" alt="La Liberté des Routeurs en Europe"/>
+  <figcaption>
+   Il y a beaucoup à faire pour la Liberté des Routeurs en Europe.
+  </figcaption>
+</figure>
+
+</body-complete>
+    <image url="https://pics.fsfe.org/uploads/big/d69825fe57c9f7e65b5fb0f02a3ad1b9.png" alt=""/>
+    <link>/news/2020/news-20200601-01.html</link>
+    <tags>
+  <tag key="front-page"/>
+  <tag key="routers">Router Freedom</tag>
+  <tag key="competition">Competition</tag>
+  <tag key="policy">Policy</tag>
+</tags>
+    <discussion href="https://community.fsfe.org/t/472"/>
+  </news>
+</newsset>

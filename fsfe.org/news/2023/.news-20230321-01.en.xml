@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- ***************************************************** -->
+<!-- This file has been automatically generated.           -->
+<!-- Please do not modify it, and do not commit it to git. -->
+<!-- ***************************************************** -->
+
+<newsset>
+  <news date="2023-03-21">
+    <title>Meet Andrei and David, two first edition YH4F participants</title>
+    <body>
+      <p>
+  The coding period of the Youth Hacking 4 Freedom hacking contest has 
+  been running for almost three months now. The
+  competition continues to be a fun contest for young hackers to 
+  test and develop their skills. The previous edition 
+  ended with 35 great projects submitted with inspiring stories 
+  behind them. Read about Andrei's and David's projects.
+  </p>
+    </body>
+    <body-complete>
+
+<h1 id="interview-with-Andrei-and-David">Meet Andrei and David, two first edition YH4F participants</h1>
+
+  <p>
+  The coding period of the Youth Hacking 4 Freedom hacking contest has 
+  been running for almost three months now. The
+  competition continues to be a fun contest for young hackers to 
+  test and develop their skills. The previous edition 
+  ended with 35 great projects submitted with inspiring stories 
+  behind them. Read about Andrei's and David's projects.
+  </p>
+
+ <p>The rules for the contest are simple: the projects must be Free Software. There are 
+ no limits to the possibilities on the kinds of projects that can be 
+ submitted. Any technical idea is welcome. This gives each
+ participant the chance to create a project according to their wishes, 
+ skills, and interests. At the end of the first 
+ edition of the <a href="/activities/yh4f/">Youth Hacking 4 Freedom</a> 
+ competition, 35 amazing projects had been submitted. Each of these 
+ projects has an inspiring story behind it. Let us introduce you to two of these amazing 
+ projects. 
+ Take a look at Andrei's handy tool for dmenu and David's <a href="https://github.com/david-0609/OpenCV-Hand-Gesture-Control">"OpenCV 
+ Hand Gesture Control"</a> project.
+ </p>
+ 
+ <p>
+ Before joining YH4F, Andrei was already involved in the Free Software world. He 
+ has not only used various GNU/Linux distributions as his main operating 
+ system, but also made sure it stays fun with games 
+ available for everybody. He recently helped port <a href="https://www.minetest.net/">Minetest (a Free Software game)</a> to 
+ the cross-platform library <a href="https://www.libsdl.org/">"Simple 
+ DirectMedia Layer" (SDL)</a>, which helps developers to make sure their 
+ games are working on different types of operating systems. But instead of 
+ sticking to only a technical world Andrei channels his artistic 
+ energy into both shell and film scripts. 
+</p>
+
+<p>
+The mind behind "OpenCV Hand Gesture Control" is David. David has a 
+passion for Free Software and software development. He
+ learned the basics of Scratch programming in Grade 3. Since then he has 
+ improved his skills and widened his knowledge of programming. David 
+ started writing scripts in Python and Bash and has now moved on to 
+ learning Rust. After the YH4F contest David has also continued to work on 
+ projects such as the <a href="https://gitlab.com/david-0609/matrix-modbot">Matrix-Modbot</a>, 
+ which is a bot that automatically moderates Matrix rooms.
+</p>
+ 
+
+ <p><strong><span style="color:#3394ce"> FSFE</span></strong>: Hello 
+    Andrei and David. Thank you for joining us.</p>
+   
+   <p>
+   <strong><span style="color:#3394ce">FSFE</span></strong>: How did you 
+   come into contact with programming and how did you learn to program?
+   </p>
+  
+ 
+        <p>
+    <strong><span style="color:#d0f400">David</span></strong>: When I 
+    was in China, in grade 3 I was introduced to Scratch programming and 
+    immediately became fond of it. Then I learned through experimenting 
+    with the program to create simple animations and games. When I got 
+    my first computer, I started to learn Python from a video series for 
+    beginners. After learning the basics, I began to write some small 
+    scripts in Python and Bash for myself. And last year, I managed to 
+    secure an internship position at a software company. There I learned 
+    a lot and this experience also led me to learning about python OOP 
+    design and software design in general. Now I am learning Rust and 
+    working on a project called <a href="https://gitlab.com/david-0609/matrix-modbot">Matrix-Modbot</a>, 
+    which is an automated bot for Matrix.
+  </p>
+  
+     <p>
+     <strong><span style="color:#ce6d33">Andrei</span></strong>: I used 
+     to go to a programming club a friend of mine invited me to. We were 
+     writing C++ to solve some mathematical problems (things like 
+     greatest common factor, factorial etc.) though we (unofficially) 
+     spent too much time playing games there as well.
+     </p>
+     <p>
+     
+    <strong><span style="color:#3394ce">FSFE</span></strong>: Andrei, can 
+    you tell us what was your first contact with Free Software?</p>
+
+   <p><strong><span style="color:#ce6d33">Andrei</span></strong>: When I was 
+	 going through The Odin Project they required at some point to install a
+	  derivative of Ubuntu (they said nearly half of software engineers use 
+	  it and it’s easier to install software and so on). I was convinced my 
+	  computer would stop booting but went along with it. Xubuntu installed 
+	  fine! Later on I learned all about the parts of the free GNU/Linux 
+	  operating system and how they work together so now I have started 
+	  writing package files (PKGBUILDs) on Arch so that I may too try and 
+	  contribute to this freeing ecosystem.</p>
+  
+  
+  <p><strong><span style="color:#3394ce">FSFE</span></strong>: Andrei, you have already 
+     coded before and used Free Software in your daily life. What motivated you
+    to participate in the YH4F contest?</p>
+  
+   
+    <p><strong><span style="color:#ce6d33">Andrei</span></strong>: I did not 
+    know the FSF had an European sister organisation before and I was really 
+    happy to get involved! I really liked the way the contest gives an 
+    opportunity to choose a concrete, practical task and go through with it. 
+    (Too often I get stuck halfway on coding a cool thing, and that’s not great.)</p>
+    
+    <p><strong><span style="color:#3394ce">FSFE</span></strong>: David, what motivated you 
+    to join the YH4F contest?</p>  
+  
+        <p>
+    <strong><span style="color:#d0f400">David</span></strong>: I saw the 
+    advertisement on Mastodon and became interested in the competition, 
+    so I joined and used my free time to work on the project.</p>
+    
+    <p>
+    <strong><span style="color:#3394ce">FSFE</span></strong>: David, how 
+    did you come up with your project idea to use your hand motion for 
+    executing commands?
+    </p>     
+  	<p>
+  	<strong><span style="color:#d0f400">David</span></strong>: It 
+  	actually started while I was trying to read novels or to watch movies 
+  	on my laptop. When I read, I am usually in a relaxed position and I 
+  	find it cumbersome to reach for the mouse or the keyboard to turn 
+  	pages, so I thought: What if I can turn pages or pause the video with 
+  	the wave of my hand? And that is how I got my idea for the project.<br/>
+  	</p>
+
+<figure>
+		  <iframe title="Hand gesture detection" src="https://download.fsfe.org/videos/yh4f/Hand-Gesture-Detection-Demo.webm" allowfullscreen="" sandbox="allow-same-origin allow-scripts allow-popups" width="560" height="315" frameborder="0"/>	
+		  <figcaption>
+		  David demonstrating his "OpenCV Hand Gesture Control" project.
+		  </figcaption>
+		</figure>
+		    
+	<p>
+	<strong><span style="color:#3394ce">FSFE</span></strong>: Andrei, could 
+	you also give us an overview of your project
+	</p>
+	 
+	 <p>
+	 <strong><span style="color:#ce6d33">Andrei</span></strong>: I added 
+	 clipboard functionality to a dynamic menu program called bemenu. 
+	 Pressing ctrl-Y inserts the system clipboard into the command's 
+	 command buffer now.
+	 </p> 
+	 
+	<p>
+	 <strong><span style="color:#3394ce">FSFE</span></strong>: What 
+	 motivated you to work on your project?
+	 </p>
+	 
+	 	<p>
+    <strong><span style="color:#d0f400">David</span></strong>: It was 
+    mainly to solve my own problem, and my program could also be used on 
+    smart TVs or other devices with a camera to control the device 
+    without using a keyboard or a controller.</p>
+    
+    	 <p>
+    	 <strong><span style="color:#ce6d33">Andrei</span></strong>: The bemenu project 
+    	 is written in C, and it sounded nice to maybe learn to do some advanced tasks in 
+    	 C like programmatically copying and pasting. That it would solve a practical 
+    	 problem for me was a nice bonus too.</p> 
+    
+	 <p>
+	 <strong><span style="color:#3394ce">FSFE</span></strong>: Andrei, could you 
+	 briefly explain what a dynamic menu like bemenu is?
+	 </p>
+	 
+	<p><strong><span style="color:#ce6d33">Andrei</span></strong>: A dynamic 
+	menu takes in a list of things, for example some URLs, or some commands, 
+	or usernames, and allows matching and selecting one of them. For example, 
+	typing in fire or fox will match firefox but still allow selecting fire 
+	or fox by itself. This means, for example, that finding and running a 
+	command is made much easier. Think of it as a start menu, except one 
+	that can be programmed to be taken into other programs, like for example 
+	using it as a password prompt or a confirmation box. This works because 
+	it always gives back the thing that was selected, and that can be used
+	by a different program.</p>
+
+
+<p><strong><span style="color:#3394ce">FSFE</span></strong>: Did any of you encounter 
+any problems during the coding period or the building period?
+</p>	
+
+<p>
+<strong><span style="color:#d0f400">David</span></strong>: I did 
+encounter many issues, and they were mostly some design flaws that I did 
+not anticipate. At that time I had little knowledge about software 
+design and was struggling to make the code clean and cohesive.
+</p>
+		
+<p>
+ <strong><span style="color:#ce6d33">Andrei</span></strong>: It turns out 
+ getting clipboard data is not the same everywhere! It is one thing on X11, and 
+ a different thing on Wayland. At first, writing a clipboard manager myself 
+ sounded fine (a likely story!), though eventually I decided on using 
+ wl-clipboard and xclip. I am glad I learned to not be excessively afraid of 
+ pulling in dependencies where it really solves a complex problem that writing 
+ by hand would make little sense.
+</p>
+
+<p>
+<strong><span style="color:#3394ce">FSFE</span></strong>: David, can 
+every user define the shortcuts themself and do you have an example on 
+how your program works?
+</p>
+
+<p>
+<strong><span style="color:#d0f400">David</span></strong>: Yes, and 
+there is an example config file in the git repo of the <a href="https://edugit.org/david-0609/OpenCV-Hand-Gesture-Control">OpenCV-Hand-Gesutre-Control</a>. 
+For example three fingers to the right open a terminal window.
+</p>
+	
+<p>
+<strong><span style="color:#3394ce">FSFE</span></strong>: How did you 
+train your tool to recognise your hand movements?
+</p>
+
+<p>
+<strong><span style="color:#d0f400">David</span></strong>: The hand 
+movement recognition is based off OpenCV, however I used a 3rd party 
+library to provide a trained model as implementing the same model myself 
+would be “reinventing the wheel”, but this time the wheel would probably 
+not spin as well.
+</p>
+<p>
+ <strong><span style="color:#3394ce">FSFE</span></strong>: Andrei and David do you think you will
+  continue working on your project and what would be some next steps you would 
+  like to realize?
+</p>	
+
+<p>
+ <strong><span style="color:#ce6d33">Andrei</span></strong>: I think I am happy 
+ with how the project is right now! They may say code never stops changing, but 
+ when something is really finished that is great feeling. I’m sure I’ll be back 
+ at it if something feels like it needs improvement though! My confidence is 
+ certainly there now. 
+</p>
+
+
+<p>
+<strong><span style="color:#d0f400">David</span></strong>: I think I 
+will work on the project in the future and re-factor the code as it is 
+currently quite messy and somewhat buggy. To make the detection more 
+accurate, I could use the power of python’s data science libraries to 
+make better sense of the input data.
+</p>
+	
+<p>
+ <strong><span style="color:#3394ce">FSFE</span></strong>: Thank you for 
+ your time and we wish you both good luck with your next steps.</p>
+
+<p>
+The coding period for the second edition of YH4F is still ongoing. 
+For more information about the contest please visit <a href="/activities/yh4f">yh4f.org</a>.
+</p>
+	 
+</body-complete>
+    <image url="https://pics.fsfe.org/uploads/medium/9594f30fb15a8edf5082d60baac594bd.png" alt="Three young hackers are tinkering on their laptops"/>
+    <link>/news/2023/news-20230321-01.html</link>
+    <tags>
+ <tag key="front-page"/>
+ <tag key="interview">Interview</tag>
+ <tag key="yh4f">Youth Hacking 4 Freedom</tag>
+ <tag key="yh4f-project">Youth Hacking 4 Freedom - Project</tag>
+</tags>
+    <discussion href="https://community.fsfe.org/t/947"/>
+  </news>
+</newsset>

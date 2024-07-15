@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- ***************************************************** -->
+<!-- This file has been automatically generated.           -->
+<!-- Please do not modify it, and do not commit it to git. -->
+<!-- ***************************************************** -->
+
+<newsset>
+  <news date="2021-05-31" type="newsletter">
+    <title>Cory Doctorow +++ Intelligenza Artificiale +++ New entry Fani Partsafyllidou</title>
+    <body>
+      <p>Nella nostra newsletter di maggio, leggi del nostro viaggiatore del tempo Cory Doctorow che manda i suoi auguri per i 20 anni della FSFE da un utopico 2041, degli sviluppi sulla Libertà del Router in Grecia, Germania e Austria, dei benefici delle applicazioni IA rilasciate come Software Libero e, come al solito, della varie attività della comunità.</p>
+    </body>
+    <body-complete>
+          
+    <h1 id="router-freedom-activity-package-fernanda-weiden-spring-sales">Cory Doctorow +++ Intelligenza Artificiale +++ New entry Fani Partsafyllidou</h1>
+    
+    <p>Nella nostra newsletter di maggio, leggi del nostro viaggiatore del tempo Cory Doctorow che manda i suoi auguri per i 20 anni della FSFE da un utopico 2041, degli sviluppi sulla Libertà del Router in Grecia, Germania e Austria, dei benefici delle applicazioni IA rilasciate come Software Libero e, come al solito, della varie attività della comunità.</p>
+    
+    <h2 id="20-years-fsfe-time-traveller-cory-doctorow-sends-his-wishes-from-utopian-2041-">20 anni di FSFE: il viaggiatore del tempo Cory Doctorow manda i suoi auguri da un utopico 2041!</h2>
+    
+    <p>Il prolifico autore fantascientifico Cory Doctorow immagina il mondo nel 2041 e ci informa che il genere umano è stato capace di risolvere i più importanti problemi del mondo grazie al lavoro collettivo e alla reciproca condivisione della conoscenza. Doctorow sostiene instancabilmente la FSFE ormai da molti anni. Nel suo video festeggia il 20º anniversario della FSFE nel suo solito modo accattivante: Doctorow viaggia nel tempo per accoglierci e congratularsi con noi nel nostro 40º anniversario, parlandoci dal 2041.</p>
+
+	<figure>
+		<video width="100%" crossorigin="crossorigin" poster="https://pics.fsfe.org/uploads/medium/65f178190d23b13698df901452b25f42.png" controls="controls">
+			<source media="screen" type="video/mp4; codecs=&quot;avc1.42E01E, mp4a.40.2&quot;" src="https://download.fsfe.org/videos/20years/cory_doctorow/cory_doctorow_en_desktop.mp4"/>
+			<source media="screen" type="video/webm; codecs=&quot;vp9, opus&quot;" src="https://download.fsfe.org/videos/20years/cory_doctorow/cory_doctorow_en_desktop.webm"/>
+			<track default="default" label="English" srclang="en" kind="subtitles" src="https://download.fsfe.org/videos/20years/cory_doctorow/subtitles/webvtt/cory_doctorow_en.vtt"/>
+			<track default="default" label="Italiano" srclang="it" kind="subtitles" src="https://download.fsfe.org/videos/20years/cory_doctorow/subtitles/webvtt/cory_doctorow_it.vtt"/>
+		</video>
+	</figure>
+
+	<p>Il suo viaggio nel tempo gli permette di vedere la fondamentale importanza che ha avuto la FSFE nel passaggio ad una società digitale. Richiamiamo le parole dell'autore: «In queste due decadi abbiamo visto la massiva decentralizzazione di Internet grazie in parte a profonde riforme delle nostre leggi sull'antitrust e sui monopoli, ai mandati per l'interoperabilità e alle interfacce delle applicazioni (API) aperte». Per questo Doctorow ringrazia la FSFE per i nostri prossimi 20 anni in cui si vedrà rafforzata la libertà e la decentralizzazione. </p>
+	
+    <h2 id="rapid-developments-in-router-freedom-in-greece-germany-and-austria">Decisi sviluppi per la Libertà del Router in Grecia, Germania e Austria</h2>
+
+    <p>Nei paesi UE sono in atto decisi sviluppi a riguardo della Libertà del Router dal momento che una riforma della legge europea sulle telecomunicazioni dovrà essere applicata nelle giurisdizioni nazionali. Il processo di implementazione è stato complesso ed ha portato a diverse soluzioni che potrebbero influenzare negativamente la Libertà del Router. La FSFE ha monitorato da vicino la legislazione nazionale sulle telecomunicazioni e ha preso attivamente parte alle consultazioni pubblche insieme alle organizzazioni locali per sostenere cambiamenti legislativi in favore della Libertà del Router. Ad esempio, in Grecia la FSFE e altre sei organizzazioni hanno sostenuto la decisione preliminare dell'ente regolatore greco di inserire la Libertà del Router nella legislazione nazionale.</p>
+
+      <figure>
+			<img src="https://pics.fsfe.org/uploads/medium/bf26bd4311e29cbfab2a1f9dcee36cae.png" alt=""/>
+			<figcaption>L'UE è nel processo di riformare la legge sulle telecomunicazioni che influenzerà la Libertà del Router.</figcaption>
+	  </figure>
+
+
+	<p>I prossimi sei mesi saranno fondamentali per la Libertà del Router nei paesi dell'UE. Ci saranno sfide da affrontare. Diversamente dalla Grecia, la <a href="/news/2021/news-20210505-01.html">Germania</a> si è mossa nella direzione di rivalutare la struttura già consolidata, che potrebbe portare a più restrizioni per i diritti degli utenti. In <a href="/news/2021/news-20210506-01.html">Austria</a>, la sorte della Libertà del Router sarà decisa dall'autorità garante nazionale RTR dopo la completa implementazione della riforma sulle telecomunicazioni.</p>
+	
+	<h2 id="achieving-accuracy-and-fairness-in-artificial-intelligence-ai-applications-using-free-software">Ottenere accuratezza e correttezza da applicazioni di Intelligenza Artificiale (IA) utilizzando il Software Libero</h2>
+	
+	<p>Vincent Lequertier <a href="/freesoftware/artificial-intelligence.html">ha pubblicato un articolo</a> nel quale vengono indicate le ragioni del perché applicazioni IA rilasciate con una licenza di Software Libero possono prevenire i problemi conosciuti nell'IA, rendendo il suo utilizzo sia performante che corretto. Tre elementi dell'IA dovrebbero essere forniti in maniera aperta: il codice sorgente utilizzato per istruire l'IA, l'insieme dei dati e i modelli di apprendimento dell'IA. Essere capaci o capire come funziona l'IA ci permetterà di rettificare discriminazioni scorrette generate dall'IA e di dare la possibilità a ciascuno di migliorare la trasparenza dell'IA. Inoltre, rilasciare l'IA come Software Libero, può aiutare a favorire l'innovazione in questo campo.</p>
+	
+	<p>Vincent, in un <a href="https://vl8r.eu/posts/2021/05/16/artificial-intelligence-safety-embracing-checklists/">post</a> sul <a href="https://planet.fsfe.org">Planet dell'FSFE</a>, suggerisce anche che l'obbligo della lista dei controlli inserito con successo in settori critici può essere utilizzato come esempio di buona prassi nello sviluppo dell'IA. </p>
+
+		<figure>
+			<img src="https://pics.fsfe.org/uploads/medium/54754bcae9f31f10659ff4c9037e4447.jpg" alt=""/>
+		</figure>
+   
+  <hr/>  
+    <p>Quest'anno la FSFE festeggia il suo 20º anniversario. <fsfe-cd-donate-link>Sostieni il nostro lavoro anche per i prossimi 20 anni</fsfe-cd-donate-link></p> 
+  <hr/>
+  
+	<h2 id="internal-our-new-staffer-fani-partsafyllidou">Interno: la nostra new entry dello staff Fani Partsafyllidou</h2>
+	
+	<p>Diamo il benvenuto a Fani Partsafyllidou, new entry del nostro staff! Fani si è laureata in storia moderna e scienze politiche e, dopo aver lavorato per Euroclio (European Association of History and Citizenship Educators), si è unita il primo di maggio al team delle comunicazioni. Leggerai sempre più notizie scritte da lei nei prossimi mesi e – con l'eccezione di questo specifico paragrafo – stai già leggendo la prima newsletter redatta da Fani per te. </p>
+	
+	<figure>
+			<img src="https://pics.fsfe.org/uploads/medium/ed45573523c4bb8e7c5d9f32089400a1.jpg" alt=""/>
+		</figure>
+	
+	<h2 id="upcoming-events">Prossimi eventi</h2>
+	
+	  <p>Matthias Kirschner, il presidente della FSFE, e Bonnie Mehring, la coordinatrice delle traduzioni, faranno un intervento alla conferenza OpenSUSE su "Denaro pubblico, codice pubblico" e sui progressi della FSFE dopo 20 anni di azioni comuni. La conferenza OpenSUSE si terrà il 18 e 19 giugno, il programma dettagliato è ancora da definirsi. </p>
+	
+	<h2 id="what-we-have-done">Cosa abbiamo fatto</h2>
+	
+	<ul>
+	  <li>Nell'iniziativa Nuova Generazione Internet Zero, la FSFE ha collaborato con altre organizzazioni europee per agevolare l'utilizzo di licenze di Software Libero da parte degli sviluppatori, fornendo materiale didattico e consulenza. Abbiamo recentemente pubblicato un resoconto di come la FSFE  <a href="/news/2021/news-20210504-01.html">aiuta gli sviluppatori di Software Libero a creare un'Internet migliore</a>. </li>
+	  <li>Lo scorso 22 maggio la FSFE ha partecipato a MERGE-it, una conferenza organizzata per le comunità italiane che lavorano con il Software Libero e Open Source. Patrick Ohnewein, tesoriere della FSFE e vice-coordinatore per l'Italia, ha fatto un intervento sul Software Libero nella pubblica amministrazione, con la sessione e la discussione moderata da Francesca Indorato, impiegata della FSFE.</li>
+	  <li>Matthias Kirschner è stato <a href="https://www.co-vienna.com/de/leute/der-digitale-freiheitskampfer/">intervistato (tedesco)</a> da Co-Vienna dove ha analizzato il concetto di software etico e la sua relazione con il diritto di parola.  </li>
+	  <li>Il 6 maggio Alexander Sander, il consulente della FSFE per le politiche, ha contribuito ad una sessione su come <a href="https://www.ioew.de/veranstaltung/european-approaches-towards-a-sustainable-digitalization">promuovere la sostenibilità digitale a livello UE</a>.  </li>
+	  <li>Il 5 maggio Alexander Sander ha tenuto una sessione su "Denaro pubblico? Codice pubblico!" durante un evento di  <a href="https://digitalezivilgesellschaft.org/en-">oltre 50 organizzazioni europee della società civile</a> che hanno formulato diversi suggerimenti per i politici responsabili delle decisioni alla luce delle imminenti elezioni politiche tedesche.</li>
+	  <li>Alexander ha anche tenuto un webinar il 26 maggio per evidenziare i <a href="https://public-money.confetti.events/">benefici nell'utilizzo del Software Libero nella pubblica amministrazione</a> e per spiegarne il processo di implementazione.</li>
+	  <li>Alexander Sander ha preso parte alla <a href="https://www.egovkommunal.de/#Agenda">tavola rotonda su centralizzazione e standardizzazione</a> con rappresentanti del governo tedesco e associazioni governative locali. Alexander ha mostrato nella tavola rotonda la prospettiva degli Standard Aperti e del Software Libero.</li>
+	  <li>Il nostro team nazionale olandese ha organizzato un incontro online lo scorso 19 maggio.</li>
+	</ul>
+	
+	<h2 id="get-active">Attiviamoci</h2>
+	
+	<p>Il nostro nuovo bando per progetti locali è aperto fino al <a href="/news/2021/news-20210526-01.html">25 luglio!</a> Se sei un sostenitore della FSFE e hai in mente un tuo progetto che volevi fare da lungo tempo, candidati per un finanziamento da parte della FSFE e fai che il tuo progetto si realizzi. Se sei un sostenitore ma non hai alcun progetto tra le mani, cerca un gruppo locale nei tuoi dintorni o creane uno. E, se non sei già un sostenitore, è giunto il momento di <a href="https://my.fsfe.org/donate">unirsi alla FSFE</a>.</p>
+	
+	  <figure>
+			<img src="https://pics.fsfe.org/uploads/medium/1dcdf901936a5b357597c7fa91a20ca8.jpg" alt="Lampadina disegnata su una bacheca, rappresentate un idea, vicino ai loghi fsfe e ilovefs"/>
+	  </figure>
+
+
+            
+  <h2 id="contribute-to-our-newsletter">Contribuisci alla nostra newsletter</h2>
+    
+  <p>Se vuoi condividere qualche pensiero, immagine, o notizia, inviacele. Come sempre, l'indirizzo è <email>newsletter@fsfe.org</email>. Ci aspettiamo di ricevere tue notizie!</p>
+
+  <p><fsfe-cd-donate-link>E se vuoi anche sostenere noi e il nostro lavoro, unisciti alla nostra comunità e sostienici con una donazione o un contributo mensile</fsfe-cd-donate-link>.</p>
+
+  <p>Un grazie alla nostra comunità e a tutti i <a href="/contribute">volontari</a>,
+  <a href="https://my.fsfe.org/support">sostenitori</a> e <a href="/donate/thankgnus">donatori</a> che rendono possibile il nostro lavoro. E grazie ai
+  <a href="/contribute/translators">nostri traduttori</a>, che ti permettono di leggere questa newsletter nella tua lingua.</p>
+
+  <p>Un saluto da chi ti scrive,
+    Fani Partsafyllidou</p>
+
+<hr/>
+<p><a href="https://my.fsfe.org/donate?referrer=nl">Sostienici con una donazione</a></p>
+<hr/>
+
+  </body-complete>
+    <image url="https://pics.fsfe.org/uploads/medium/8da733c745bf00f13549c1eefae8e9d9.png" alt=""/>
+    <link>/news/nl/nl-202105.html</link>
+    <tags>
+      <tag key="front-page"/>
+      <tag key="newsletter">Newsletter</tag>
+      <tag key="routers">Libertà del Router</tag>
+      <tag key="fsfe20">20 anni di FSFE</tag>
+      <tag key="ngi">Next Generation Internet</tag>
+  </tags>
+    <discussion href="https://community.fsfe.org/t/685"/>
+  </news>
+</newsset>

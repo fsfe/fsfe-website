@@ -12,7 +12,7 @@
                 xmlns:psc="http://podlove.org/simple-chapters"
                 xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">
 
-  <xsl:import href="../build/xslt/gettext.xsl" />
+  <xsl:import href="../../build/xslt/gettext.xsl" />
 
   <xsl:output method="xml" encoding="utf-8" indent="yes"/>
 

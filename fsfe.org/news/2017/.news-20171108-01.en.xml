@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- ***************************************************** -->
+<!-- This file has been automatically generated.           -->
+<!-- Please do not modify it, and do not commit it to git. -->
+<!-- ***************************************************** -->
+
+<newsset>
+  <news date="2017-11-08">
+    <title>FSFE makes copyrights computer readable</title>
+    <body>
+      <p>
+The Free Software Foundation Europe (FSFE) is proud to release its next version of our REUSE practices designed to make computers understand software copyrights and licenses.
+</p>
+    </body>
+    <body-complete>
+  
+  <h1>FSFE makes copyrights computer readable</h1>
+
+<p>
+The Free Software Foundation Europe (FSFE) is proud to release its next version of our REUSE practices designed to make computers understand software copyrights and licenses.
+</p>
+
+<p>
+The <a href="https://reuse.software/">REUSE practices</a> help software developers make simple additions to license headers which make it easier for a computer to determine what license applies to the various parts of a programs source code. By following the REUSE practices, software developers can ensure their intent to license software under a particular license is understood
+and more readily adhered to.
+</p>
+<p>
+Together with the updated practices, which mostly clarify and make
+explicit some points, the FSFE is also releasing a set of
+developer tools and examples which show the REUSE practices in action.
+Three example repositories, together with an example walkthrough of the
+process used to make the cURL project REUSE compliant, are complemented
+with a simple tool to validate whether a program is REUSE compliant.
+</p>
+<blockquote>
+<p>
+With our REUSE initiative, we hope to inspire software developers to
+think about writing copyright and license information -- the metadata of
+software -- in ways which make them easier to parse programmatically.
+</p>
+<p>
+says Jonas Öberg, Executive Director of the FSFE.
+</p>
+</blockquote>
+<p>
+The new REUSE practices and related documentation and examples can
+be found on: <a href="https://reuse.software/">https://reuse.software</a>.
+</p>
+
+</body-complete>
+    <image url="" alt=""/>
+    <link>/news/2017/news-20171108-01.html</link>
+    <tags>
+  <tag key="front-page"/>
+  <tag key="reuse"/>
+
+  <tag key="tools"/>
+
+
+</tags>
+    <author id="oberg"/>
+  </news>
+</newsset>

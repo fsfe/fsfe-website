@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- ***************************************************** -->
+<!-- This file has been automatically generated.           -->
+<!-- Please do not modify it, and do not commit it to git. -->
+<!-- ***************************************************** -->
+
+<newsset>
+  <news date="2021-06-11">
+    <title>Niederlande: App für Bürgerbeteiligung bleibt der Öffentlichkeit
+  verwehrt</title>
+    <body>
+      <p>Das niederländische Repräsentantenhaus (Tweede Kammer) diskutiert in der
+  Öffentlichkeit, so wie es angedacht ist. Da aber nicht alle die Möglichkeit
+  haben, nach Den Haag zu reisen und im Kabinett zu sitzen, hat die Tweede
+  Kammer eine App herausgebracht, mit der man die Debatten via Livestream
+  verfolgen kann. Leider wurde diese App nicht unter einer Freie-Software-Lizenz
+  veröffentlicht. Unser niederländischer Ehrenamtlicher Jos van den Oever wollte
+  sich an den Debatten betiligen, konnte die App aber nicht auf seinem Gerät
+  installieren, und wurde deshalb aktiv.</p>
+    </body>
+    <body-complete>
+
+  <h1>Niederlande: App für Bürgerbeteiligung bleibt der Öffentlichkeit
+  verwehrt</h1>
+
+  <p>Das niederländische Repräsentantenhaus (Tweede Kammer) diskutiert in der
+  Öffentlichkeit, so wie es angedacht ist. Da aber nicht alle die Möglichkeit
+  haben, nach Den Haag zu reisen und im Kabinett zu sitzen, hat die Tweede
+  Kammer eine App herausgebracht, mit der man die Debatten via Livestream
+  verfolgen kann. Leider wurde diese App nicht unter einer Freie-Software-Lizenz
+  veröffentlicht. Unser niederländischer Ehrenamtlicher Jos van den Oever wollte
+  sich an den Debatten betiligen, konnte die App aber nicht auf seinem Gerät
+  installieren, und wurde deshalb aktiv.</p>
+
+  <p>Im Prinzip ist es eine gute Idee, mit der Entwicklung und dem Einsatz von
+  technischen Lösungen die Transparenz in den Parlamenten zu erhöhen.
+  Allerdings stellt die niederländische Implementierung mit der Debat Direct
+  App das Gegenteil dar, da sie nicht von allen verwendet werden kann. Sie ist
+  lediglich in den App-Stores von Apple, Google und Microsoft erhältlich und
+  steht nicht unter einer Freie-Software-Lizenz. Neben der App gibt es
+  außerdem eine Webapplikation, die eine ähnliche Funktionsweise bietet. Jos
+  wollte darüber an den Debatten teilnehmen und die Webapplikation auf
+  seinem Smartphone mit Firefox OS - einem Freie-Software-Betriebssystem für
+  Smartphones - verwenden, leider ohne Erfolg. Daher versuchte Jos im Januar
+  2018, den Quellcode der Applikation zu bekommen, um die Lauffähigkeit auf
+  anderen Geräten zu ermöglichen. Dies erwies sich als eine große
+  Herausforderung.</p>
+
+  <figure>
+    <img src="https://pics.fsfe.org/uploads/medium/d9a1339d919cc9aa979241a4738e7c9d.png" alt="PMPC"/>
+    <figcaption>Public Money? Public Code!</figcaption>
+  </figure>
+
+  <h2>Anfrage mittels PSI</h2>
+
+  <p>Die Anfrage für den Quellcode berief sich auf die niederländische Version
+  der European Public Sector Information (PSI)-Richtlinie (Wet hergebruik
+  overheidsinformatie). Diese Richtlinie erlaubt es, öffentliche Informationen
+  im originalen und wiederverwendbaren Zustand, wie sie in der öffentlichen
+  Institution vorliegen, anzufordern. Es ist anzumerken, dass das
+  Parlament davon befreit ist, nicht öffentliche Inhalte aufgrund einer
+  Informationsfreiheitsanfrage öffentlich verfügbar zu machen. Die
+  PSI-Richtlinie ist daher nur anwendbar, falls die Informationen bereits
+  öffentlich sind. Nichtsdestotrotz bat ein Großteil der niederländischen
+  Abgeordneten die Regierung um den Einsatz und die Veröffentlichung unter einer
+  Freie-Software-Lizenz. Somit hätten alle das Recht zur Verwendung, zum
+  Untersuchen und zum Teilen und Verbessern des Codes. Aber bisher ging das
+  Parlament nicht mit gutem Beispiel voran. Jos' Anfrage wurde nicht
+  entsprochen und der Code blieb der Öffentlichkeit verwehrt. Jos gab nicht
+  auf und brachte den Fall vor Gericht.</p>
+
+  <h2>Reverse Engineering</h2>
+
+  <p>Leider widersprach das Gericht und entschied, dass Quellcode kein
+  wiederverwendbarer Teil von Software sei. Allerdings wurde ein Großteil des
+  Quellcodes für die Webapplikation über Source Maps öffentlich gemacht. Jos
+  schrieb ein Skript, das die JavaScript-Dateien der Source-Maps abspeichert
+  und konnte somit einen Großteil der Anwendung rekonstruieren. Hierzu betrieb
+  er auch Reverse Engineering für Dateien, die für die Kompilierung notwendig
+  sind. Trotz aller Möglichkeiten, den Code zu bekommen, steht dieser unter
+  keiner richtigen Lizenz; man kann sich in den Code einarbeiten, ihn aber
+  nicht teilen oder verbessern.</p>
+
+  <h2>Gerichtsprozess</h2>
+
+  <p>Jos berief sich auf die gerade entdeckten Source Maps, was eine Anhörung am
+  17. März 2021 nach sich zog. Jos klagte vor dem höchsten Verwaltungsgericht in
+  den Niederlanden, der Abteilung für Verwaltungsgerichtsbarkeit des
+  Staatsrats. In der Anhörung argumentierte das Parlament, dass die Source
+  Maps keinen Quellcode enthielten, obwohl Jos den extrahierten Quellcode für
+  die Anhörung eingereicht hatte. Am 31. März 2021 entschied der Staatsrat,
+  dass das Parlament den Quellcode nicht veröffentlichen müsse und dieser nicht
+  für die Öffentlichkeit bestimmt sei. Das heißt, dass der Code, obwohl er über
+  die Source Maps einsehbar ist, rechtlich gesehen nicht öffentlich ist. In
+  anderen Worten: Er ist nicht öffentlich, da das Parlament dies so
+  entscheidet.</p>
+
+  <p>So seltsam es auch klingen mag: rechtlich gesehen ist die PSI-Richtlinie
+  nicht auf das Parlament anwendbar, daher muss die App nicht öffentlich
+  zugänglich gemacht werden. Das Gute an der Entscheidung ist, dass sie
+  nichts Negatives über die Beschaffung des Quellcodes für öffentlich
+  zugängliche Software aussagt.</p>
+
+  <p>Die FSFE fordert das niederländische Parlament hiermit auf, Regeln für
+  sich selbst zu erlassen, transparent zu handeln und Quellcode solcher
+  Anwendungen unter einer Freie-Software-Lizenz zu veröffentlichen.</p>
+
+  <p>Hier kann man mehr zur Tätigkeit von Jos erfahren (niederländisch): <a href="https://broncode.org/">https://broncode.org</a></p>
+
+</body-complete>
+    <image url="https://pics.fsfe.org/uploads/medium/d9a1339d919cc9aa979241a4738e7c9d.png" alt="PMPC"/>
+    <link>/news/2021/news-20210611-01.html</link>
+    <tags>
+  <tag key="front-page"/>
+  <tag key="pmpc">Public Money? Public Code!</tag>
+  <tag key="public-administration">Öffentliche Verwaltung</tag>
+  <tag key="nl">Niederlande</tag>
+</tags>
+    <discussion href="https://community.fsfe.org/t/699"/>
+  </news>
+</newsset>

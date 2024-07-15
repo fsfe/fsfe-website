@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- ***************************************************** -->
+<!-- This file has been automatically generated.           -->
+<!-- Please do not modify it, and do not commit it to git. -->
+<!-- ***************************************************** -->
+
+<newsset>
+  <news date="2021-06-11">
+    <title>Nederland: participatie-app blijft gesloten voor het publiek</title>
+    <body>
+      <p>De Tweede Kamer debatteert in het openbaar, zoals het hoort. Maar omdat niet iedereen in de gelegenheid is 
+        om naar Den Haag te gaan en op de tribune te zitten heeft de Tweede Kamer een app uitgebracht om de debatten via livestream te volgen. Helaas is deze app niet vrijgegeven onder een Vrije Softwarelicentie. Onze Nederlandse vrijwilliger Jos van den Oever wilde wel meedoen maar kon de app niet op zijn apparaat te draaien en werd actief.</p>
+    </body>
+    <body-complete>
+
+        <h1>Nederland: participatie-app blijft gesloten voor het publiek</h1>
+        
+        <p>De Tweede Kamer debatteert in het openbaar, zoals het hoort. Maar omdat niet iedereen in de gelegenheid is 
+        om naar Den Haag te gaan en op de tribune te zitten heeft de Tweede Kamer een app uitgebracht om de debatten via livestream te volgen. Helaas is deze app niet vrijgegeven onder een Vrije Softwarelicentie. Onze Nederlandse vrijwilliger Jos van den Oever wilde wel meedoen maar kon de app niet op zijn apparaat te draaien en werd actief.</p>
+        
+        <p>In principe is het een goed idee om technische oplossingen te creëren en te gebruiken om de transparantie van parlementen te vergroten. De implementatie in Nederland is met de 
+        Debat Direct-app echter het tegenovergestelde omdat deze app niet voor iedereen toegankelijk is. Met de Debat Direct-app kunnen burgers parlementaire 
+        debatten gemakkelijk overal vandaan volgen maar niet met elk apparaat. De app is alleen beschikbaar in de app stores van Apple, Google en Microsoft en is niet beschikbaar 
+        onder een Vrije Softwarelicentie. Een vergelijkbare functionaliteit wordt aangeboden in een online webapp. Onze Nederlandse vrijwilliger Jos van den Oever wilde graag meedoen en 
+        de app gebruiken op zijn Firefox OS telefoon (een Vrije Software besturingssysteem voor mobiele telefoons) maar dat was helaas zonder succes. Daarom heeft Jos in januari 2018 geprobeerd om de 
+        broncode van de app te krijgen om deze ook op andere apparaten toegankelijk te maken. Het bleek een lange strijd te zijn.</p>
+        
+         <figure>
+            <img src="https://pics.fsfe.org/uploads/medium/d9a1339d919cc9aa979241a4738e7c9d.png" alt="PMPC"/> 
+            <figcaption>Publiek Geld? Publieke Code!</figcaption>
+        </figure>
+        
+        <h2>Verzoek onder PSI</h2>
+        
+        <p>Het verzoek om de broncode berustte op de Nederlandse implementatie (Wet Hergebruik Overheidsinformatie) van de Europese richtlijn Overheidsinformatie (PSI). De PSI-richtlijn staat toe dat overheidsinformatie wordt opgevraagd in de oorspronkelijke, herbruikbare vorm waarin deze bij de overheidsinstelling aanwezig is.  Het is vermeldenswaard 
+        dat het Parlement vrijgesteld is van PSI-verzoeken van niet-openbare informatie en dat de richtlijn Overheidsinformatie dus alleen van toepassing is indien informatie al openbaar is. Al bijna twee decennia vraagt een grote meerderheid van de Nederlandse parlementsleden echter dat de regering software onder een Vrije Softwarelicentie gebruikt en publiceert zodat iedereen het recht heeft de code te gebruiken, te bestuderen, te delen en te verbeteren. Maar tot nu toe heeft het parlement het goede voorbeeld niet gegeven. Het verzoek van Jos werd niet ingewilligd en de code bleef gesloten voor het publiek. Jos gaf niet op en bracht de zaak voor de rechter.</p>
+        
+      
+        <h2>Reverse Engineering</h2>     
+        
+        <p>Helaas was de rechtbank het niet met Jos eens en besliste dat broncode niet de herbruikbare vorm van software is. Het grootste deel van de broncode werd echter openbaar gemaakt 
+        op de website van de app als bronkaarten. Jos schreef een script om de js-bestanden van de bronkaarten op te slaan en slaagde erin om de app grotendeels overnieuw te programmeren uit deze bestanden en 
+        reverse engineered build-bestanden. Maar hoewel Jos en ieder ander de broncode kan achterhalen blijft het zonder de juiste licentie: het kan worden bestudeerd, maar niet gedeeld of verbeterd.</p>
+        
+        <h2>Rechtszaak</h2>
+        
+        <p>Jos ging in beroep met de nieuw ontdekte bronkaarten, hetgeen resulteerde in een hoorzitting op 17 maart 2021. Jos was de eiser tijdens de zitting bij de hoogste 
+        algemene bestuursrechter in Nederland, de Afdeling bestuursrechtspraak bij de Raad van State (RvS). In de hoorzitting heeft het Parlement 
+        aangevoerd dat de bronkaarten niet de broncode bevatten, hoewel Jos tijdens de zitting de er door hem uitgehaalde broncode heeft overgelegd. Op 31 maart 2021 
+        oordeelde de RvS dat het Parlement de broncode niet hoeft te publiceren omdat de broncode naar haar oordeel niet openbaar is. Dus ook al is het 
+        feitelijk via de bronkaarten openbaar, toch is het volgens het RvS-oordeel juridisch niet openbaar. Met andere woorden: het is niet openbaar omdat het Parlement zegt dat het niet openbaar is.</p>
+        
+        <p>Hoe vreemd dat ook mag klinken, vanuit juridisch oogpunt is de PSI-richtlijn niet van toepassing op het Parlement en hoeft de app dus niet openbaar te worden gemaakt. 
+        De positieve kant van het besluit is dat het niets negatiefs zegt over de mogelijkheid om voor software die publiek beschikbaar is broncode te verkrijgen.</p>
+        
+        <p>De FSFE roept het Nederlandse parlement dan ook op om zichzelf regels op te leggen, transparant te handelen en de broncode van dergelijke applicaties in de toekomst onder een Vrije Softwarelicentie te publiceren.</p>
+        
+        <p>Hier kunt u meer lezen over deze activiteit (Nederlands): <a href="https://broncode.org/">https://broncode.org</a></p>
+        
+     
+       
+</body-complete>
+    <image url="https://pics.fsfe.org/uploads/medium/d9a1339d919cc9aa979241a4738e7c9d.png" alt="PMPC"/>
+    <link>/news/2021/news-20210611-01.html</link>
+    <tags>
+<tag key="front-page"/>
+<tag key="pmpc">Publiek Geld? Publieke Code!</tag>
+<tag key="public-administration">Overheid</tag>
+<tag key="nl">Nederland</tag>
+</tags>
+    <discussion href="https://community.fsfe.org/t/699"/>
+  </news>
+</newsset>

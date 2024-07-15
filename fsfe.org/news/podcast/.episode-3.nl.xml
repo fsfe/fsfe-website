@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- ***************************************************** -->
+<!-- This file has been automatically generated.           -->
+<!-- Please do not modify it, and do not commit it to git. -->
+<!-- ***************************************************** -->
+
+<newsset>
+  <news date="2019-12-20" type="podcast">
+    <title>SFP#3 over Vrije Software mobiele telefooncommunicatie met Harald Welte</title>
+    <body>
+      <p>
+    Eén keer per maand praten we met mensen die inspirerende ideeën hebben over softwarevrijheid. In deze derde aflevering is onze gast Vrije Softwareprogrammeur en -activist Harald Welte. Harald bespreekt met ons zijn huidige projecten op het gebied van mobiele telefooncommunicatie en de algemene status van Vrije Software op dit gebied. 
+    </p>
+    </body>
+    <body-complete>
+
+    <h1>SFP#3 over Vrije Software mobiele telefooncommunicatie met Harald Welte
+    </h1>
+
+    <p>
+    Eén keer per maand praten we met mensen die inspirerende ideeën hebben over softwarevrijheid. In deze derde aflevering is onze gast Vrije Softwareprogrammeur en -activist Harald Welte. Harald bespreekt met ons zijn huidige projecten op het gebied van mobiele telefooncommunicatie en de algemene status van Vrije Software op dit gebied. 
+    </p>
+
+    <audio-player/>
+
+    <p>
+Een van de belangrijkste onderwerpen dit jaar was en is de komende implementatie van de 5G-norm. Er waren lange discussies en verschillende landen hebben stappen ondernomen om specifieke leveranciers te verbieden. Deze landen proberen zelfs anderen te overtuigen om hetzelfde te doen. Om voldoende ruimte voor dit brede onderwerp te creëren en om er ook een expert te betrekken besteden we een volledige Software Freedom Podcast aflevering aan de bespreking hiervan met Harald Welte. Harald is een Vrije Software-ontwikkelaar die bekend staat om zijn betrokkenheid bij OpenMoko (de eerste Vrije Softwaretelefoon), zijn werk voor gplviolations.org om ervoor te zorgen dat bedrijven zich houden aan de verplichtingen van Vrije Softwarelicenties en tegenwoordig om zijn werk aan het overkoepelende project "Open source mobile communications", of kortweg Osmocom.</p>
+    <p>Samen met Harald geven we u een overzicht van het gebruik van Vrije Software in mobiele telefooncommunicatie. We praten u bij over de basisprincipes van deze technologie, over het verschil tussen 3G, 4G en 5G, het Huawei-verbod en <a href="https://osmocom.org/">Osmocom</a> en over de toestand van Vrije Software op die gebieden.</p>
+
+
+    <p>Lees verder:</p>
+
+    <ul>
+      <li><a href="https://osmocom.org/">Over Osmocom</a></li>
+      <li><a href="http://git.osmocom.org/">Osmocom Git repositories</a></li>
+      <li><a href="/news/2019/news-20190205-01.html">Zaak-Huawei toont het belang van Vrije Software voor veiligheid</a></li>
+      <li><a href="/news/2019/news-20190520-01.html">Google verbiedt Huawei toegang tot software en drie conclusies die we hieruit kunnen trekken </a></li>
+     </ul>
+     
+     <p>Als u deze aflevering leuk vond en u ons voortdurende werk voor softwarevrijheid wil steunen, help ons dan alstublieft met een <a href="https://my.fsfe.org/donate">donatie</a>.</p>
+
+    </body-complete>
+    <image url="/graphics/podcast-logo.png" alt=""/>
+    <link>/news/podcast/episode-3.html</link>
+    <tags>
+      <tag key="front-page"/>
+      <tag key="podcast">Software Freedom Podcast</tag>
+      <tag key="huawei">Huawei</tag>
+    </tags>
+    <podcast>
+      <subtitle>Interview met Harald Welte over Vrije Software op het gebied van mobiele telefoniecommunicatie. De perfecte aflevering voor een snel overzicht van Vrije Software op het gebied van mobiele telefoniecommunicatie.</subtitle>
+   <duration>30:18</duration>
+  <episode>3</episode> <!-- number of episode -->
+  <!-- OPUS -->
+  <opus>
+  <url>https://download.fsfe.org/audio/podcast/SFP003.opus</url>
+    <length>7526611</length> <!-- size of file in bytes -->
+  </opus>
+  <!-- MP3 -->
+  <mp3>
+    <url>https://download.fsfe.org/audio/podcast/SFP003.mp3</url>
+    <length>25449693</length> <!-- size of file in bytes -->
+  </mp3>
+      <chapters>
+        <chapter start="0:00">Welkom bij de podcast</chapter>
+        <chapter start="00:32">Introductie van Harald Welte</chapter>
+        <chapter start="01:03">Interview met Harald Welte over Vrije Software op het gebied van mobiele telefoniecommunicatie</chapter>
+        <chapter start="29:35">Afronding</chapter>
+      </chapters>
+    </podcast>
+    <discussion href="https://community.fsfe.org/t/software-freedom-podcast-3-about-free-software-mobile-phone-communication-with-harald-welte/375"/>
+  </news>
+</newsset>

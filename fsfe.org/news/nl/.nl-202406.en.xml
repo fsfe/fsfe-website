@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- ***************************************************** -->
+<!-- This file has been automatically generated.           -->
+<!-- Please do not modify it, and do not commit it to git. -->
+<!-- ***************************************************** -->
+
+<newsset>
+  <news date="2024-06-04" type="newsletter">
+    <title>EU election +++ DMA &amp; Apple +++ REUSE tool</title>
+    <body>
+      <p>
+In this issue, we explain our plans to make a movie of the story of Ada 
+&amp; Zangemann and we are asking for your support. A new REUSE version 
+released; read the FSFE opinion to the European Commission on 
+Apple’s new strategy to comply with DMA and its impact on Free Software.
+ </p>
+    </body>
+    <body-complete>
+
+<h1>EU election +++ DMA &amp; Apple +++ REUSE tool</h1>
+
+<p>
+In this issue, we explain our plans to make a movie of the story of Ada 
+&amp; Zangemann and we are asking for your support. A new REUSE version 
+released; read the FSFE opinion to the European Commission on 
+Apple’s new strategy to comply with DMA and its impact on Free Software.
+ </p>
+
+<figure>
+	<img src="https://pics.fsfe.org/uploads/medium/3f/21/24d04ba4d35dfa3e42d79e36909d.png" alt="Picture collage showing an illustration of Ada, REUSE software logo, and an illustration of a city hall"/>
+</figure>
+
+<div class="toc">
+  <p>Table of contents</p>
+	<ul id="toc">
+		<li><a href="#quote-of-the-month"><strong>Quote of the Month</strong></a></li>
+		<li><a href="#take-action"><strong>Take action! Talk to your politicians, like our FSFE Netherlands coordinator</strong></a></li>
+		<li><a href="#reuse"><strong>REUSE v.3.1.0a1</strong></a></li>
+		<li><a href="#interoperability-apple"><strong>Apple's approach to DMA will harm Free Software</strong></a></li>
+		<li><a href="#ada-video"><strong>Ada goes to the set: let’s make an animated movie!</strong></a></li>
+		<li><a href="#stories-community"><strong>Stories from our community</strong></a></li>
+                <li><a href="#more-conferences"><strong>And even more: LibreItalia, DORS/CLUC 2024 and esLibre 2024 conferences</strong></a></li>
+		<li><a href="contribute"><strong>Contribute to our Newsletter</strong></a></li>
+	</ul>
+</div>
+	
+<h3 id="quote-of-the-month">Quote of the Month</h3>
+<blockquote>
+	<p>“Socks. I want the socks. I love the FS socks. And if you have, others too”</p>
+	<cite>-FOSDEM 2024 FSFE attendant-</cite>
+</blockquote>
+
+
+<h3 id="take-action">Take action! Talk to your politicians, like our 
+FSFE Netherlands coordinator</h3> 
+
+<p>In a couple of days, the European 
+citizens will choose their next representatives in the European 
+Parliament. <a href="/activities/publiccode/get-active.html">Get 
+active</a> to ensure that Software Freedom is part of the larger 
+political debate! </p> 
+
+<p>The FSFE Netherlands coordinator <a href="/news/2024/news-20240530-01.html">has added his voice for Free 
+Software to Amsterdam's digital city debate</a>. Now it's your chance 
+to highlight the importance of Free Software in the lead-up to the 
+upcoming European Elections next week. </p> 
+
+<figure>
+  <peertube url="https://media.fsfe.org/w/bfXqXqTZwipM9zbubjbDHV"/>
+  <figcaption>FSFE Netherlands coordinator question (in Dutch):"I think 
+  in March something beautiful happened in Amsterdam: the proposal 
+  'Amsterdam Digital Independent' (or 'autonomous') was adopted. I was 
+  wondering: in it open source is mentioned to promote autonomy, but 
+  also to promote transparency. I would say this aligns with the points 
+  of the NSC. What will you do in Europe to bring that further and to 
+  support governments and municipalities to really make progress with free and 
+  open source software?"
+  </figcaption>
+</figure>
+
+<h3 id="reuse">REUSE v.3.1.0a1</h3>
+
+<p>The REUSE tool v3.1.0a1 has just been released! This is an alpha 
+release that includes the new REUSE.toml functionality that replaces 
+.reuse/dep5 (which is being soft-deprecated). The main purpose of 
+REUSE.toml is to resolve .reuse/dep5 scenarios as described in <a href="https://github.com/fsfe/reuse-tool/issues/779">https://github.com/fsfe/reuse-tool/issues/779</a>: 
+if a file has a header 
+and is also covered by .reuse/dep5, and the two sources of information 
+disagree about the licence, which licence applies?</p>
+
+<p>In three steps, REUSE software addresses a fundamental problem with 
+Free Software licensing at its source: what licence is a file licensed 
+under, and who owns the copyright? The REUSE project consists of a set 
+of best practices and a tool that makes it easy and simple to add this 
+legal information to every single file in a project.</p>
+
+<p>We are working on releasing <a href="https://reuse.software/spec-3.2/">version 3.2</a> of this tool soon, 
+so stay tuned!</p>
+ 
+<h3 id="interoperability-apple">Apple's approach to DMA will harm Free Software</h3> 
+
+<p>The FSFE continues to work on the implementation of the Digital Markets 
+Act (DMA), monitoring the strategies adopted by affected companies 
+(gatekeepers), and their impact on Free Software. We submitted <a href="https://download.fsfe.org/device-neutrality/202404-FSFE-apple-report-EC.pdf">a 
+comprehensive stakeholder position</a> to the European Commission on how 
+Apple cannot be compliant with DMA, and their strategy will reinforce 
+their anti-competitive position. Our report lists that:
+</p>
+<ul>
+<li>Apple should not limit business and end-users in their software freedom by 
+overstating arguments of integrity and security of devices. </li>
+<li>Apple should not discriminate against Free Software.</li>
+<li>Apple should not be allowed to impose DRM encryption for app distribution regarding Free 
+Software.</li>
+<li>Apple should not be allowed to impose 
+arbitraryinteroperability request forms, but interoperability 
+should be granted automaticallyand effectively.</li>
+</ul>
+
+<p>This study received substantial contributions from experts and other 
+organizations including F-Droid, Onion Browser, and AppFair.</p>
+
+<figure>
+	<img src="https://pics.fsfe.org/uploads/original/6a/92/2e2ca130f208449ebfd0dbed4a6c.png" alt="Image showing one of FSFE staffers participating sitting with a laptop and talking to a microphone on the table"/>
+		<figcaption>FSFE at the DMA compliance workshop about Apple</figcaption>
+</figure>
+
+<p>This report concludes that, while the DMA aims to promote contestability 
+and fairness, Apple's proposed changes may reinforce its monopolistic 
+behaviour by restricting software freedom, strengthening the dependency 
+of developers and users on its own services and products, and increasing 
+switching costs. <br/><br/>The report also sets forth how integrity of 
+operating systems must not be used for summarily imposing restrictions 
+on 3rd party app stores</p>
+
+
+<h3 id="ada-video">Ada goes to the set: let’s make an animated movie!</h3>
+
+<p>The illustrated book 'Ada &amp; Zangemann: A Tale of Software, 
+Skateboards, and Raspberry Ice Cream' has made it into homes and libraries 
+around the world. Now we need your help to reach even more kids! <a href="/news/2024/news-20240515-01.html">Help us make a film of this 
+story</a> and continue doing readings to spark more 
+kids’ interest in coding and tinkering!</p>
+ 
+ 
+<h3 id="stories-community">Stories from our community</h3>
+ 
+<p>On 25 and 26 May, the RoboCup France Junior took place in Bordeaux. 
+Nursery and primary kids presented their robots while the teens and 
+young adults competed with theirs in various competitions from soccer 
+to rescue. On Sunday 26 May, Théo (15y) and Émilie (12y), two young 
+French supporters, repurposed some of their local robot club (CDSR) 
+booth into their first FSFE booth! They proudly shared FSFE 
+stickers and presented the children's book Ada &amp; Zangemann.</p>
+
+<p>Also in France, in this case in Lyon, FSFE volunteer Vincent Lequertier 
+participated in the Days of the Software Libre (JDLL is its acronym in 
+French) with two readings of the illustrated book "Ada &amp; Zangemann: 
+Un conte sur les logiciels, le skateboard et la glace à la framboise".</p>
+
+<p>And in the Netherlands, André Ockers, volunteer and deputy 
+coordinator of the Dutch FSFE team, presented (in English) the Free 
+Software Foundation Europe at WikiconNL 2024, the annual conference on 
+Wikipedia, Wikimedia, digital heritage, and free access to information 
+in a changing world.</p>
+
+<p>
+Do not forget to check out <a href="https://planet.fsfe.org/">planet.fsfe.org</a>; our blog aggregator 
+has several articles that you might find interesting!
+</p>
+
+
+<h3 id="more-conferences">And even more: LibreItalia, DORS/CLUC 2024 and esLibre 2024 conferences</h3>
+
+<p>At the beginning of May, we took part in the LibreItalia 
+Conference. It was a great occasion to meet and chat with the Italian 
+Free Software community. We had the possibility to talk about Public 
+Money? Public Code! and engage with a younger audience thanks to the Ada 
+and Zangemann story!</p>
+
+<p>A bit later last month, we participated in DORS/CLUC, a conference 
+in Zagreb with two talks, one about "Making AI Really Open: The 
+Current Landscape of Free Software and AI Licensing" and another about 
+"When our routers are not free: the challenges for an Open and Neutral 
+Internet".</p> 
+<p>Finally, we travelled to Valencia to attend esLibre 
+2024. There we presented the competition YH4F, talked about CRA, PLD, 
+and liability in Europe and explained why Free Software is important
+for our society!</p> 
+
+<p>
+Our talks from esLibre and DORS/CLUC were recorded so we will upload 
+them in our usual channels as soon as they are available!
+</p>
+
+<figure>
+	<img src="https://pics.fsfe.org/uploads/medium/22/33/416769c56617d2e3dc856f085944.png" alt="Image collage showing different FSFE staffers giving talks at DORS/CLUC and esLibre"/>
+</figure>
+
+
+<h3 id="contribute">Contribute to our Newsletter</h3>
+<p>
+We would love to hear from you. If you have any thoughts, pictures, or 
+news to share, please send them to us at newsletter@fsfe.org. You can 
+also <a href="/donate/donate.html">support us</a>, <a href="/contribute/contribute.html">contribute to our work</a>, and <a href="/about/groups.html">join our community</a>. We would like to thank 
+our community and all the volunteers, supporters, and donors who make 
+our work possible, with a special mention to our translators who make it 
+possible for you to read this newsletter in your mother tongue.
+</p>
+<p>
+Your editor,<br/>
+Ana
+</p>
+
+</body-complete>
+    <image url="https://pics.fsfe.org/uploads/medium/3f/21/24d04ba4d35dfa3e42d79e36909d.png" alt="Picture collage showoing an illustration of Ada, REUSE software logo and an illustration of a city hall"/>
+    <link>/news/nl/nl-202406.html</link>
+    <tags>
+    <tag key="newsletter">Newsletter</tag>
+    <tag key="front-page"/>
+    <tag key="pmpc">Public Money? Public Code!</tag>
+    <tag key="elections">EU elections</tag>
+    <tag key="legal">Legal</tag>
+    <tag key="ada-zangemann">Ada and Zangemann</tag>
+    <tag key="fr">France</tag>
+    <tag key="es">Spain</tag>
+    <tag key="nl">Netherlands</tag>
+    <tag key="hr">Croatia</tag>
+    <tag key="event">Event</tag>
+    <tag key="dma">Digital Markets Act</tag>
+
+    <tag key="highlights"/>
+</tags>
+  </news>
+</newsset>

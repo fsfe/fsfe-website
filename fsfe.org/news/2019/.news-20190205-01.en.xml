@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- ***************************************************** -->
+<!-- This file has been automatically generated.           -->
+<!-- Please do not modify it, and do not commit it to git. -->
+<!-- ***************************************************** -->
+
+<newsset>
+  <news date="2019-02-05">
+    <title>Huawei case demonstrates importance of Free Software for security</title>
+    <body>
+      <p>The discussion of the Huawei security concerns
+showcases a general trust issue when it comes to critical
+infrastructure. A first step to solve this problem is to publish the
+code under a Free and Open Source Software licence and take measures to
+facilitate its independently-verifiable distribution.</p>
+    </body>
+    <body-complete>
+
+<h1>
+  Huawei case demonstrates importance of Free Software for security
+</h1>
+
+<p>The discussion of the Huawei security concerns
+showcases a general trust issue when it comes to critical
+infrastructure. A first step to solve this problem is to publish the
+code under a Free and Open Source Software licence and take measures to
+facilitate its independently-verifiable distribution.</p>
+
+<p>The ongoing debate about banning Huawei hardware for the rollout of
+5G networks, following earlier state espionage allegations, falls too
+short. It is not just about the Chinese company but about a general
+lack of transparency within this sector. As past incidents proved, the
+problem of backdoors inside blackboxed hard- and software is widely
+spread, independently from the manufacturers' origins.</p>
+
+<div class="captioned" style="margin: 1.5em auto;">
+  <figure>
+    <img src="https://pics.fsfe.org/uploads/big/49b5342a0da31877a6c7bb01dc5a482d.jpg" alt="A digital building disallows to audit its code. A metaphor for software blackboxes."/>
+  </figure>
+</div>
+
+<p>However, it is unprecedented that the demand to inspect the source
+code of a manufacturer's equipment has been discussed so broadly and
+intensely. The Free Software Foundation Europe (FSFE) welcomes that the
+importance of source code is recognised, but is afraid that the
+proposed solution falls too short. Allowing inspection of the secret
+code by selected authorities and telephone companies might help in this
+specific case, but will not solve the general problem.</p>
+
+<p>To establish trust in critical infrastructure like 5G, it is a
+crucial precondition that all software code powering those devices is
+published under a Free and Open Source Software licence. Free and Open
+Source Software guarantees the four freedoms to use, study, share, and
+improve an application. On this basis, everyone can inspect the code,
+not only for backdoors, but for all security risks. Only these freedoms
+allow for independent and continuous security audits which will lead
+citizens, the economy, and the public sector to trust their
+communication and data exchange.</p>
+
+<p>Furthermore, in order to verify code integrity – so that the
+provided source code corresponds to the executable code running on the
+equipment – it is either necessary that there are reproducible builds
+in case of binary distribution, or that providers are brought into the
+position to compile and deploy the code on their own.</p>
+
+<blockquote><p>"We should not only debate the Huawei case but extend
+the discussion to all critical infrastructure." says Max Mehl, FSFE
+Programme Manager. "Only with Free and Open Source Software,
+transparency and accountability can be guaranteed. This is a long-known
+crucial precondition for security and trust. We expect from state
+actors to immediately implement this solution not only for the Huawei
+case but for all comparable IT security issues."</p></blockquote>
+
+
+</body-complete>
+    <image url="https://pics.fsfe.org/uploads/big/49b5342a0da31877a6c7bb01dc5a482d.jpg" alt="A digital building disallows to audit its code. A metaphor for software blackboxes."/>
+    <link>/news/2019/news-20190205-01.html</link>
+    <tags>
+  <tag key="front-page"/>
+  <tag key="security">IT Security</tag>
+  <tag key="pmpc">Public Code</tag>
+  <tag key="huawei">Huawei</tag>
+ </tags>
+  </news>
+</newsset>

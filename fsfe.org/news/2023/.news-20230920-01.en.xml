@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- ***************************************************** -->
+<!-- This file has been automatically generated.           -->
+<!-- Please do not modify it, and do not commit it to git. -->
+<!-- ***************************************************** -->
+
+<newsset>
+  <news date="2023-09-21">
+    <title>Sovereign workspace openDesk: German Ministry of the Interior provides answers</title>
+    <body>
+      <p>The German Federal Ministry of the Interior (BMI) and the public IT 
+service provider Dataport are working on administrative workspaces to 
+enable digital sovereignty. But are both products Free Software? How 
+are they related? We asked the BMI and publish the answers here.</p>
+    </body>
+    <body-complete>
+
+<h1>Sovereign workspace openDesk: German Ministry of the Interior provides answers</h1>
+
+<p>The German Federal Ministry of the Interior (BMI) and the public IT 
+service provider Dataport are working on administrative workspaces to 
+enable digital sovereignty. But are both products Free Software? How 
+are they related? We asked the BMI and publish the answers here.</p> 
+
+
+<figure class="no-border">
+  <img src="https://pics.fsfe.org/uploads/medium/80/55/3fc43813d932a3a95f7a233e2f76.png" alt="Image showing a computer with the dphoenix suit on it"/>
+</figure>
+
+<p>In June, the Free Software Foundation Europe (FSFE) sent a catalogue 
+of questions to the BMI about its “Sovereign Workspace” project. <a href="/news/2023/news-20230606-01.html">Our 
+questions</a> covered the relationship between the BMI workspace and Dataport's 
+dPhoenixSuite, the funding of both projects, and the availability of 
+their respective source code.</p>
+
+<h3>New developments: openDesk code available, dPhoenixSuite still 
+proprietary</h3> 
+
+<p>Some weeks later, the BMI released the first source 
+code of its workspace suite as Free Software on openCoDE, the code 
+repository for public administration. According to extensive 
+documentation, the release is an alpha version, with the first 
+operational release planned for later this year. The documentation 
+states that the suite will be released entirely under Free Software 
+licences and will include modules such as Univention Corporate Server, 
+Collabora Online, Nextcloud, OpenProject, XWiki, Jitsi and the Matrix 
+client Element. Extensibility through new and alternative modules is 
+planned. The suite was renamed "openDesk" a few weeks ago. As of 2024, 
+the coordination and management of openDesk will be completely handed 
+over to the Centre for Digital Sovereignty (ZenDiS GmbH). ZenDiS was 
+founded at the end of 2022 to bundle the German government's digital 
+sovereignty initiatives, and is fully state-owned.</p> 
+
+<p>In contrast, Dataport has not yet released the source code for its 
+workspace suite. The dPhoenixSuite contains numerous Free Software 
+components and is advertised as "open source", "based on open source" 
+and "digitally sovereign". This gives the false impression that 
+dPhoenixSuite is Free Software. Dataport has not yet taken any steps to 
+correct this impression or to actually make the suite available as Free 
+Software.</p>
+
+<h3>BMI: Dataport collaborates intensively on openDesk</h3> 
+
+<p>Meanwhile, FSFE has received the BMI's response to our 
+questions. The answers clarify that Dataport 
+plays an important role in the development of openDesk, especially in 
+the architectural design and operational development of the product, 
+and receives public funding from the BMI for this. For 2023 alone, the 
+BMI has earmarked 21.6 million euros for openDesk. However, it remains 
+unclear what proportion of this funding is passed on to Dataport. There 
+is also a lack of transparency about how much of the funding will 
+actually go to the companies driving the development and integration of 
+the modules used in openDesk.</p> 
+
+<p>According to the BMI, there are overlaps between openDesk and the 
+older dPhoenixSuite, which has mainly influenced the architecture of 
+openDesk. However, the Ministry emphasises the independence of its 
+openDesk suite: "The Sovereign Workspace is building its own 
+architecture. [...] The Sovereign Workspace is an independent project. 
+[…] To what extent Dataport aligns its dPhoenixSuite with it is up to 
+Dataport". The BMI does not disclose to what extent dPhoenix code has 
+been incorporated into openDesk. The Ministry states that it did not 
+influence Dataport to make the dPhoenixSuite available as Free 
+Software.</p> 
+
+<p><a href="https://download.fsfe.org/policy/Dataport_BMI_answers.pdf">The full BMI response can be found here</a>.</p>
+
+<h3>Dataport must take a stand</h3> 
+
+<p>So far, when asked about the dPhoenixSuite code, Dataport has referred to the source code of the 
+included modules and to the BMI's openDesk project. The BMI's answers 
+make it clear once again: Despite some similarities and organisational 
+entanglements, dPhoenixSuite and openDesk are two different products. 
+Dataport can no longer shift the responsibility for releasing its own 
+source code onto the BMI, but must take a stand: if the dPhoenixSuite 
+is to be a digitally sovereign workspace for public administrations, 
+then Dataport should finally make the complete dPhoenix code available 
+under a Free Software licence, ideally compliant with the openDesk 
+reference implementation and not as a competing product.</p>
+
+<p>However, BMI's response also contains a reference to possible 
+proprietary components of the dPhoenixSuite. If Dataport continues with 
+its proprietary strategy, and if the suite does contain proprietary 
+code, it should no longer be advertised with the misleading terms 
+"digitally sovereign" and "open source". In this case, Dataport should 
+also correct the previous misleading communication by stating on its 
+website that the suite is not Free Software to avoid any impression of 
+open-washing.</p>
+
+<h3>openDesk needs transparency and efficiency</h3> 
+
+<p>Regarding the openDesk workspace, its funding and its links to the dPhoenixSuite, the 
+BMI's answers only partially provide the necessary transparency. 
+However, the publication of the openDesk code and its open development 
+on openCoDE are important steps in the right direction. The 
+documentation and announcements about the future of the openDesk 
+project also give reason for cautious optimism that a fully-fledged 
+Free Software workspace for administrations might soon be 
+available.</p> 	
+
+<p>In the future, the BMI and ZenDiS should not only manage the 
+development of openDesk transparently, but also make the governance of 
+the project transparent and understandable to the public – a 
+prerequisite for openDesk to gain trust and acceptance in public 
+administrations. Transparency is also the only way to ensure that public funds for 
+openDesk are used efficiently and actually contribute to the 
+development of Free Software. </p> 
+
+<p>The FSFE has recently <a href="/news/2023/news-20230829-01.html">called on the 
+German government to increase funding for Free Software instead of 
+cutting it</a>, as is 
+currently planned in the 2024 budget. Since openDesk is a major digital 
+sovereignty project of this legislative period, there should be more 
+budget for it, and that money should be used for actual Free Software 
+development, feature implementation, maintenance, and integration of 
+the modules. The BMI must finally make the organisational development 
+of ZenDiS a priority and thereby secure Free Software projects for 
+public administration in the long term.</p> 
+
+<p><strong>The FSFE will continue to monitor developments around openDesk and 
+the dPhoenixSuite. If you have any relevant information, you're welcome 
+to <a href="/about/contact.html">share it with us</a>.</strong></p>
+
+
+<h3>Free Software and "Public Money? Public Code!”</h3> <p>Free 
+Software gives everyone the right to use, study, share, and improve 
+applications for any purpose. These freedoms ensure that similar 
+applications do not have to be programmed from scratch every time and, 
+thanks to transparent processes, others do not have to reinvent the 
+wheel. In large projects, expertise and costs can be shared and 
+applications paid for by the general public are available to all. This 
+promotes innovation and saves taxpayers money in the medium to long 
+term. Dependencies on vendors are minimised and security issues can be 
+fixed more easily. The Free Software Foundation Europe, together with 
+over 200 organisations and administrations, is therefore calling for 
+“Public Money? Public Code!” - If it is public money, it should be 
+public code as well. More information on the initiative is available on 
+the <a href="https://publiccode.eu/">“Public Money? Public Code!” website</a>.</p>
+</body-complete>
+    <image url="https://pics.fsfe.org/uploads/medium/80/55/3fc43813d932a3a95f7a233e2f76.png" alt="Image showing a computer with the dphoenix suit on it"/>
+    <link>/news/2023/news-20230920-01.html</link>
+    <tags>
+  <tag key="front-page"/>
+  <tag key="de">Germany</tag>
+  <tag key="pmpc">Public Money? Public Code!</tag>
+</tags>
+    <discussion href="https://community.fsfe.org/t/1075"/>
+  </news>
+</newsset>

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- ***************************************************** -->
+<!-- This file has been automatically generated.           -->
+<!-- Please do not modify it, and do not commit it to git. -->
+<!-- ***************************************************** -->
+
+<newsset>
+  <news date="2022-01-11" type="newsletter">
+    <title>La Neutralidad del Dispositivo: una realidad +++ Estocolmo +++ FSFE +++ IA</title>
+    <body>
+      <p>
+	En este Boletín, reconocemos la importancia de la "Digital Markets Act", un gran avance para la libertad del software. Lee cómo la falta de código público supone en Estocolmo 100 millones de €. El Equipo de Jáquers de Sistemas nos desvela la infraestructura de la FSFE. Vincent Lequertier destaca que la IA necesita ser transparente. Próxima FOSDEM. 
+  </p>
+    </body>
+    <body-complete>
+	  
+<h1>La Neutralidad del Dispositivo: una realidad +++ Estocolmo +++ FSFE +++ IA</h1>
+  
+  <p>
+	En este Boletín, reconocemos la importancia de la "Digital Markets Act", un gran avance para la libertad del software. Lee cómo la falta de código público supone en Estocolmo 100 millones de €. El Equipo de Jáquers de Sistemas nos desvela la infraestructura de la FSFE. Vincent Lequertier destaca que la IA necesita ser transparente. Próxima FOSDEM. 
+  </p>
+
+<h2>La Neutralidad del Dispositivo finalmente se convierte en realidad</h2>
+  
+  <p>
+	El Parlamento Europeo adoptó la "Digital Markets Act" (La Ley de Mercados Digitales), la cual <a href="/news/2021/news-20211215-01.html">introduce el principio de Neutralidad del Dispositivo </a>. Este es un primer gran paso. El derecho de los usuarios finales de usar su propio dispositivo y sistema operativo es un factor importante para garantizar el acceso de los sistemas operativos de Software Libre a las plataformas dominantes. Como realidad diaria para muchos usuarios, esta adopción aumenta el público en la adopción del Software Libre. 
+  </p>
+
+  <p>
+    La Ley de Mercados Digitales protege a los usuarios ya que requiere un consentimiento más estricto de las aplicaciones preinstaladas, se orienta a prevenir el bloqueo por parte del vendedor, y requiere la portabilidad en tiempo real. Sin embargo, lamentamos que la votación no ha contemplado establecer los Estándares Abiertos como la opción predeterminada para definir la interoperabilidad.
+  </p>
+
+<h2>La falta de código público le cuesta a la ciudad de Estocolmo 100 millones de euros</h2>
+  
+  <p>
+    Las familias de Estocolmo reciben información de las escuelas o guarderías de sus hijos directamente en sus dispositivos con la ayuda de Skolplattformen ('Plataforma de la escuela'), una plataforma digital ofrecida por la ciudad de Estocolmo. Tiene un coste estimado de 100 millones de euros y aunque está financiada públicamente, el código de Skolplattformen fue privativo. Los padres de los alumnos sacaron a la luz irregularidades y problemas de seguridad de la plataforma y se dedicaron a arreglar los defectos ellos mismos. Crearon una alternativa de Software Libre funcional y segura,  Öppna skolplattformen ('Plataforma de escuela abierta'). La ciudad de Estocolmo llevó a cabo varias iniciativas legales contra los desarrolladores que quisieron ayudar.
+  </p>
+  
+  <figure>
+    <img src="https://pics.fsfe.org/uploads/big/089c7baba968418669601f56d1f72d86.png"/>
+    <figcaption>
+      Entrevista con Christian Landberg y Alexander Crawford de Öppna skolplattformen
+    </figcaption>
+  </figure>
+  
+  <p>
+    Nosotros <a href="/news/2021/news-20211216-01.html">entrevistamos a 
+    Christian Landberg y a Alexander Crawford, los dos mayores contribuidores detrás de esta iniciativa</a>. Según Alexander Crawford, Öppna 
+    skolplattformen reorienta el debate en torno al la tecnología cívica y la digitalización del sector público.
+  </p>
+
+<h2>La infraestructura vive los ideales de la libertad del software</h2>
+  
+<p>
+    ¿Pueden las organizaciones con recursos limitados ser digitalmente soberanas y aún así proveer servicios modernos? Esto no es una pregunta trivial, y la FSFE misma es la prueba de que esto es posible. Hemos maximizado nuestro control sobre los servicios y servidores usando Software Libre. Demostramos transparencia interna y externa. Con una complejidad de nuestros sistemas asumible, proveemos una variada gama de recursos útiles.
+  </p>
+
+  <figure>
+    <img src="https://pics.fsfe.org/uploads/medium/a9669e241527f1769e2fe67418a77f0d.jpg"/>
+  </figure>
+   
+  <p>
+    La FSFE comparte un resumen de su infraestructura digital en un<a href="/news/2021/news-20211203-01.html"> artículo</a> 
+    que podría ayudar a otras ONG a llegar a ser independientes de los proveedores de servicios propietarios. Déjanos acompañarte en un viaje a través de nuestra infraestructura y sus principios, desde las relucientes interfaces de usuario de nuestros servicios, siguiendo con los métodos de virtualización y monitoreo, hasta profundizar en los servidores físicos en los que funciona todo esto. Nuestra infraestructura está gestionada por el Equipo de Jáquers de Sistemas.
+  </p>
+
+<h2>Entrevista con Vincent Lequertier sobre IA</h2>
+  
+  <p>
+    Vincent Lequertier es un miembro del Equipo de Jáquers de Sistemas y un investigador en inteligencia artificial (IA) para la sanidad. Por los 20 años, de la
+FSFE, <a href="/news/2021/news-20211209-01.html">realizamos una entrevista a Vincent en la que le preguntamos acerca de los aspectos cruciales de la inteligencia artificial. </a> La transparencia en la IA es necesaria para evaluar y comprender cómo son procesados los datos y cómo son calculados los resultados. El Software Libre puede jugar un papel crucial para hacer que la IA sea más transparente.
+  </p>
+
+  <figure>
+    <img src="https://pics.fsfe.org/uploads/medium/8d10355a4334cefde7f2f21d6f44daaa.jpg"/>
+    <figcaption>
+      Vincent Lequertier presenta los puntos cruciales sobre IA durante un evento comunitario de la FSFE en Bolzano. Italia, 2019.
+    </figcaption>
+  </figure>
+  
+  <p>
+    Vincent indica que en el sector de la salud algunas estadísticas agregadas se encuentran ampliamente disponibles. De acuerdo con su estimación, la apertura y los aspectos colaborativos de la investigación en IA mejorarán. La entrevista desvela los tópicos de vanguardia, como la posibilidad de que la IA obtenga el derecho legal de reclamar los derechos de autor. 
+  </p>
+
+<h2 id="save-the-date">Anota estas fechas</h2>
+  <ul>
+    <li>
+       El miércoles 19 de enero, el equipo de la FSFE de Holanda llevará a cabo su reunión mensual
+       <a href="https://wiki.fsfe.org/Events/Netherlands/2022-01-19">de forma telemática</a>.
+    </li>
+    <li>
+       El sábado 5 y el domingo 6 de febrero, la FOSDEM 2022 se llevará a cabo de forma remota, y la FSFE coordinará de nuevo la Sala de Desarrollo de Política y Legal. El año pasado coorganizamos la Sala de Desarrollo de Política y Legal por primera vez; la misma incluyó <a href="/news/2021/news-20210311-01.html">11 presentaciones con una gran variedad de temas</a>. Estamos deseando que llegue la FOSDEM 2022. Únete a nosotros para conocer los últimos avances en la libertad del software. Sigue atento para saber la programación.
+    </li>
+  </ul>
+
+<h2>Qué hemos hecho</h2>
+  <ul>
+    <li>
+      El 28 de diciembre, Alexander Sander, Consultor de Política de la FSFE, impartió una conferencia sobre "¿Dinero público? ¡Código público! en tiempos del coronavirus" en la conferencia rc3.
+     
+    </li>
+    <li>
+      El 16 de diciembre, Lina Ceballos, gestora de proyectos de la FSFE, participó en una sesión telemática sobre algunas de las principales actividades con el foco en la campaña ¿Dinero público? ¡Código público! y su estado actual en España y en Europa. Esta sesión tuvo lugar en la Trantor Tech Talks; ya está disponible <a href="https://media.fsfe.org/w/6AnT1Z2zeCzdskVL3tZw7Z">un vídeo en español de la misma.</a></li>
+    <li>
+      En diciembre, los miembros de la comunidad  publicaron tres entradas en el Planeta. Un resumen de la novela de de Cory Doctorow "Walkaway" ensalza la narración a pesar de la poca atracción del crítico por el género de la tecnología en la "lectura de la mente". Otra entrada instructiva demuestra cómo desactivar tu teclado/touchpad interno cuando aparece un gato. Una entrada de celebración anuncia la publicación de la versión 1.0.0. de PGPainless. Puedes leer estas ideas de la comunidad de la FSFE en <a href="https://planet.fsfe.org/">el  Planeta</a>.
+    </li>
+  </ul>
+
+<h2 id="contribute-to-our-newsletter">Contribuye a nuestro Boletín</h2>
+  <p>
+    Si quisieras compartir cualquier idea, foto o noticia, mándanoslas por favor. Como siempre, la dirección es <email>newsletter@fsfe.org</email>. ¡Estamos deseando saber de ti! Si además quieres respaldarnos y a nuestro trabajo, únete a nuestra comunidad y respáldanos con una donación o una <a href="https://my.fsfe.org/donate?referrer=newsletter">contribución mensual</a>. Gracias a nuestra comunidad y a todos los voluntarios, promotores, y donantes quienes hacen posible nuestro trabajo. Y gracias a nuestros traductores, quienes consiguen que mucha gente lea este boletín en su lengua nativa.
+  </p>
+  
+  <p>Tu editora, Fani Partsafyllidou</p>
+
+  </body-complete>
+    <image url="https://pics.fsfe.org/uploads/medium/a9669e241527f1769e2fe67418a77f0d.jpg" alt=""/>
+    <link>/news/nl/nl-202201.html</link>
+    <tags>
+      <tag key="front-page"/>
+      <tag key="newsletter">Boletín</tag>
+      <tag key="deviceneutrality">Neutralidad del Dispositivo</tag>
+      <tag key="pmpc">¿Dinero público? ¡Código público!</tag>
+      <tag key="education">Educación</tag>
+      <tag key="se">Suecia</tag>
+      <tag key="internal">Interno</tag>
+      <tag key="fosdem">FOSDEM</tag>
+  </tags>
+    <discussion href="https://community.fsfe.org/t/788"/>
+  </news>
+</newsset>

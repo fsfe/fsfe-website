@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- ***************************************************** -->
+<!-- This file has been automatically generated.           -->
+<!-- Please do not modify it, and do not commit it to git. -->
+<!-- ***************************************************** -->
+
+<newsset>
+  <news date="2022-12-19">
+    <title>GNU Health opta per REUSE</title>
+    <body>
+      <p>Nel contesto dell'iniziativa REUSE Booster, la FSFE fornisce valutazioni individuali e assistenza diretta ai progetti di Software Libero nell'implementazione di REUSE. GNU Health, un progetto che combina la medicina sociale con la tecnologia, è recentemente diventato conforme a REUSE. Abbiamo parlato con il dottor Luis Falcón, il suo fondatore.</p>
+    </body>
+    <body-complete>
+
+<h1>GNU Health opta per REUSE </h1>
+
+<p>Nel contesto dell'iniziativa REUSE Booster, la FSFE fornisce valutazioni individuali e assistenza diretta ai progetti di Software Libero nell'implementazione di REUSE. GNU Health, un progetto che combina la medicina sociale con la tecnologia, è recentemente diventato conforme a REUSE. Abbiamo parlato con il dottor Luis Falcón, il suo fondatore.</p>
+
+
+<h2 id="boosting-reuse">Incentivare REUSE</h2>
+
+<p>Capire e rispettare gli obblighi legali può essere a volte una preoccupazione, soprattutto quando si riutilizza il software da diversi progetti che vengono rilasciati con diverse licenze. L'iniziativa <a href="https://reuse.software/"> REUSE</a>, introdotta dalla Free Software Foundation Europe (FSFE), mira a rendere più facile per tutti la comunicazione delle licenze e delle informazioni sul copyright nei progetti di Software Libero. Con una serie di procedure ottimali e con lo strumento di aiuto che viene fornito, l'aggiunta di queste informazioni legali in ogni singolo file del progetto diventa un processo semplicissimo.</p>
+
+<p>Lo scorso anno, la FSFE ha lanciato<a href="https://reuse.software/booster/">
+REUSE Booster</a>, un'iniziativa che mira ad assistere e supportare direttamente i progetti nel processo di attuazione di REUSE. Come risultato di tali sforzi, <strong>il progetto di Software Libero  <a href="https://gnuhealth.org/"> GNU Health</a> ha recentemente adottato le specifiche REUSE 3.0</strong> nei suoi componenti: Hospital Management System (sia server che client) e Thalamus (il server di messaggi per la federazione GH).</p>
+
+
+ <figure>
+<img src="https://pics.fsfe.org/uploads/original/cb/1e/7b4adcee4b05157f003fe2f646bb.jpg" alt="Il team di GNU Health team mostra il premio e il certificato di conformità a REUSE"/> 
+   <figcaption>La FSFE ha colto l'opportunità di partecipare all'edizione di quest'anno del GHCon per consegnare il premio di conformità REUSE all'intero team di GNU Health.</figcaption>
+ </figure>
+ 
+ 
+<h2 id="gnu-health-and-its-reuse-adoption">GNU Health e l'adozione di REUSE</h2>
+
+<p>GNU Health è un progetto di Software Libero guidato dalla comunità di GNU Solidario, un'organizzazione umanitaria senza scopo di lucro che si concentra sia sulla tecnologia che sulla medicina sociale. Il software è stato adottato da diverse organizzazioni e sistemi sanitari pubblici nazionali in tutto il mondo. D'ora in poi, gli utenti e i ri-utenti di GNU Health avranno una chiara panoramica delle note di copyright e dei termini di licenza grazie al modo standardizzato di visualizzarlo seguendo le specifiche REUSE.</p>	 
+	 
+
+
+<blockquote>
+<p><em>«Il compito di tenere traccia, visualizzare e scrivere le informazioni legali in grandi progetti Free/Liberi come GNU Health può essere demoralizzante. Il progetto REUSE rende semplice questo seccante processo. Invito la comunità del Software Libero ad adottare REUSE come standard per la visualizzazione delle informazioni legali in modo da potenziare lo sviluppo, la produttività e l'integrazione tra i progetti».</em> 
+</p> 
+<cite>Dott. Luis  Falcón, fondatore di GNU Solidario e autore di GNU Health. </cite>
+</blockquote>
+
+
+
+<p>In questa breve intervista video, il Dott. Luis Falcón condivide come il processo di adozione di REUSE fosse per il team di GNU Health, ed incoraggia allo stesso tempo anche altri progetti di Software Libero ad unirsi a loro per mostrare le proprie informazioni di licenza e di copyright in modo inequivocabile e leggibile perfettamente sia dalle persone che dalle macchine.
+</p>
+
+
+
+<figure>
+  <peertube url="https://media.fsfe.org/w/nCFNDeRxh3QpQoEMZd3w5W"/>
+<figcaption>Il Dott. Luis Falcón ci racconta di più a riguardo del processo nel diventare conforme a REUSE. Guarda l'intera intervista <a href="https://media.fsfe.org/w/nCFNDeRxh3QpQoEMZd3w5W">qui.</a> 
+</figcaption>
+</figure>
+	
+	
+
+<h2 id="reuse-adopters">Chi ha adottato REUSE</h2>
+
+<p>Al momento le <a href="https://api.reuse.software/"> API di REUSE</a>
+hanno più di 1300 progetti registrati come conformi a REUSE. All'interno di questo insieme possiamo evidenziare, tra gli altri, progetti come <strong> curl e
+cosmoscout-vr dal Centro Aerospaziale tedesco (DLR)</strong>. Anche il
+<strong>kernel Linux</strong> ha parzialmente adottato REUSE, 
+e la conosciutissima <strong>KDE community</strong> ha incluso REUSE nelle proprie policy delle licenze ed ha già migrato tutti i propri framework agli standard raccomandati. 
+</p>
+
+<p>Invitiamo altri sviluppatori ad adottare REUSE con la speranza di avere feedback e collaborazione. Se vuoi contattarci, se hai bisogno di una mano extra per implementare REUSE nel tuo progetto, o se vuoi semplicemente partecipare alla discussione, ti invitiamo ad iscriverti alla <a href="https://lists.fsfe.org/postorius/lists/reuse.lists.fsfe.org"> mailing list.</a> 
+</p>
+
+<h2 id="thanks-to-all-our-volunteers-contributors-and-supporters-">Grazie a tutti i volontari, a chi contribuisce e ai sostenitori!</h2>
+
+<p>Questa è quindi una grande opportunità per ringraziare i nostri volontari e collaboratori esterni a REUSE per il loro grande lavoro nel continuare a migliorare lo strumento e la documentazione, ma anche per mantenere una discussione continua e fruttuosa sulle sue specifiche.</p>
+
+<p>Il contributo di tutti i nostri sostenitori permette anche il nostro continuo lavoro su REUSE e su tutte le nostre attività. Puoi unirsi a loro diventando un sostenitore, dicendo ai tuoi amici come possono sostenere il nostro lavoro con una piccola donazione, o anche chiedendo ai tuoi familiari di sostenere la FSFE e le nostre campagne come un significativo regalo delle festività.</p>
+
+<div class="text-center">
+<fsfe-cd-donate-link class="btn btn-lg btn-primary">Dona ora</fsfe-cd-donate-link>
+</div>
+
+
+</body-complete>
+    <image url="https://pics.fsfe.org/uploads/original/cb/1e/7b4adcee4b05157f003fe2f646bb.jpg" alt="the GNU Health team holding their REUSE compliance award and certificate"/>
+    <link>/news/2022/news-20221219-01.html</link>
+    <tags>
+  <tag key="front-page"/>
+  <tag key="reuse">REUSE</tag>
+  <tag key="licensing">Licenze</tag>
+  <tag key="copyright">Copyright</tag>
+ </tags>
+    <discussion href=" https://community.fsfe.org/t/961"/>
+  </news>
+</newsset>

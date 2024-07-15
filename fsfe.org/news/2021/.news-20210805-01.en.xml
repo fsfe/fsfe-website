@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- ***************************************************** -->
+<!-- This file has been automatically generated.           -->
+<!-- Please do not modify it, and do not commit it to git. -->
+<!-- ***************************************************** -->
+
+<newsset>
+  <news date="2021-08-05">
+    <title>Dutch authority enforces Router Freedom</title>
+    <body>
+      <p>
+    The Dutch Authority for Consumers and Markets (ACM) has published new rules
+    that will move Router Freedom forward in the Netherlands. Within 6 months
+    ISPs have to comply and offer the option for
+    consumers and companies to connect a modem or router of their own choice.
+    The FSFE acknowledges this decision as a major win for consumer rights.
+  </p>
+    </body>
+    <body-complete>
+
+  <h1>Dutch authority enforces Router Freedom</h1>
+
+  <p>
+    The Dutch Authority for Consumers and Markets (ACM) has published new rules
+    that will move Router Freedom forward in the Netherlands. Within 6 months
+    ISPs have to comply and offer the option for
+    consumers and companies to connect a modem or router of their own choice.
+    The FSFE acknowledges this decision as a major win for consumer rights.
+  </p>
+
+  <p>
+    <a href="/activities/routers/">Router Freedom</a> is the
+    right that consumers of any Internet Service Provider (ISP) have to choose and use a private modem and
+    router instead of equipment that the ISP provides. In its <a href="https://www.acm.nl/sites/default/files/documents/beleidsregel-handhaving-besluit-eindapparaten.pdf">publication
+    (.pdf)</a> the Dutch Authority cites the <a href="https://berec.europa.eu/eng/document_register/subject_matter/berec/regulatory_best_practices/guidelines/9277-berec-guidelines-on-the-implementation-of-the-open-internet-regulation">BEREC
+    Guidelines on the Implementation of the Open Internet Regulation</a> as the
+    reason for stating the <a href="https://www.acm.nl/en/publications/consumers-and-businesses-are-allowed-choose-their-own-modems">new
+    rules</a>. These guidelines came about with the persistent effort of the
+    FSFE to draw attention to the importance of and right to Router Freedom. As
+    another motivation the ACM explicitly mentions the "significant" group of
+    users wanting to take control of their personal data and network devices.
+  </p>
+
+  <p>
+    The new regulation clarifies which part of the infrastructure falls under
+    the governance of the ISP and for which part the user is free to choose
+    their own solution. Router Freedom also implies a user is still free to
+    choose a modem or router offered by the ISP. It is an important step forward
+    that this practice will be the norm from 27 February 2022 and will be
+    enforced by the Dutch regulator. Although the legal aspects have been
+    defined now in the Netherlands, in practice Router Freedom was <a href="https://wiki.fsfe.org/Activities/CompulsoryRouters">already tolerated
+    in the country</a>. Most ISPs indicated that they allow consumers to connect
+    their own preferred devices. One even gives consumers a discount if they use
+    their own router or modem.
+  </p>
+
+
+  <h2>The details</h2>
+
+  <p>
+    An important step forward is the explicit choice by the ACM for the Network
+    Termination Point (NTP). The BEREC Guidelines suggest three possible
+    locations, in short A) at the end of the cable B) after the modem C) after
+    the router or mediabox. The ACM has opted for the NTP to be at the end of
+    the cable, offering the maximum of flexibility to the user. This "passive"
+    termination point avoids users having to accept the operation of a device
+    outside of their control, and allows for Router Freedom.
+  </p>
+
+  <figure>
+    <img src="https://pics.fsfe.org/uploads/big/6d6922a13499024cacf5c0872f0a65df.png" alt="Network Termination Point (NTP) - ISP and user domain"/>
+    <figcaption>Schematic overview of the Network Termination Point (NTP)</figcaption>
+  </figure>
+
+  <p>
+    The new rules contain statements on what service should be provided. ISPs
+    are allowed to publish a list of devices, but cannot limit the support to
+    only that list of devices. ISPs should provide the administrative measures
+    within one working day. ISPs maintain the ability to disconnect a user in
+    case damage is done to the network. For troubleshooting a policy is
+    described by which first the ISP has to check it is not their network that
+    is faulty, after which the user can be requested to use a known working
+    device provided by the ISP to verify it is not the different modem or router
+    that is at fault. In case the custom modem or router is at fault, the ISP is
+    allowed to request a financial compensation for providing the known working
+    device for testing purposes.
+  </p>
+
+  <h2>Space for improvement</h2>
+
+  <p>
+    ACM's decision is a major win for all end-users in the Netherlands. The
+    decision provides more clarity on the legal aspects involving the NTP.
+    However, ISPs' commercial practices involving routers and modems still pose
+    barriers against end-users' Router Freedom:
+  </p>
+
+  <ul>
+    <li>Most ISPs currently offer little to no support for users wanting to
+    install their own router;</li>
+    <li>Most ISPs demand you still lease a modem as part of the service and keep
+    it stored;</li>
+    <li>Most ISPs don't offer the same level of service like IPv6 when choosing
+    your own router;</li>
+    <li>
+      Some ISPs offer IPTV (streaming television) solutions that rely on
+      different channels than the internet service and so these mediaboxes will
+      not work in combination with a custom modem. This point is underscored by
+      the ACM as something that they will be reevaluating in the future.
+    </li>
+  </ul>
+
+  <p>
+    The new rules don't contain statements that will change the situation on
+    these points, so the FSFE will continue to call for a more robust Router
+    Freedom and monitor the situation in the Netherlands.
+  </p>
+
+  <h2>The Router Freedom initiative</h2>
+
+  <p>
+    Since 2013, the Free Software Foundation Europe has engaged with Router
+    Freedom, promoting end-users' freedom to choose and use their own terminal
+    equipment - first in Germany as a precedent, and now in many European
+    countries. Join us and learn more about the several ways to get <a href="/news/2021/news-20210330-01.html">involved</a>.
+  </p>
+
+</body-complete>
+    <image url="https://pics.fsfe.org/uploads/medium/5a92ce4766c686c21f06f0fec28618e1.jpg" alt=""/>
+    <link>/news/2021/news-20210805-01.html</link>
+    <tags>
+  <tag key="front-page"/>
+  <tag key="routers">Router Freedom</tag>
+  <tag key="nl">Netherlands</tag>
+</tags>
+    <discussion href="https://community.fsfe.org/t/714"/>
+  </news>
+</newsset>

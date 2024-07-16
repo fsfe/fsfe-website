@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- ***************************************************** -->
+<!-- This file has been automatically generated.           -->
+<!-- Please do not modify it, and do not commit it to git. -->
+<!-- ***************************************************** -->
+
+<newsset>
+  <news date="2022-07-12">
+    <title>Een pc in uw zak: Librem 5, een Vrije Software-telefoon</title>
+    <body>
+      <p>
+  Librem 5 draait op het volledig convergente PureOS, wat betekent dat u 
+  uw desktop op uw telefoon kunt meenemen. De speciale grafische 
+  omgeving, Phosh, is een populaire optie voor Linux-telefoons aan het worden. 
+  Guido Günther, een van de hoofdontwikkelaars van PureOS, onthult in dit interview details over 
+  Librem's software-ontwikkeling.
+</p>
+    </body>
+    <body-complete>
+
+<h1 id="a-pc-in-your-pocket-librem-5-a-free-software-phone">Een pc in uw zak: Librem 5, een Vrije Software-telefoon</h1>
+
+<p>
+  Librem 5 draait op het volledig convergente PureOS, wat betekent dat u 
+  uw desktop op uw telefoon kunt meenemen. De speciale grafische 
+  omgeving, Phosh, is een populaire optie voor Linux-telefoons aan het worden. 
+  Guido Günther, een van de hoofdontwikkelaars van PureOS, onthult in dit interview details over 
+  Librem's software-ontwikkeling.
+</p>
+
+<figure>
+  <img src="https://pics.fsfe.org/uploads/medium/7dc839ec11961ef684d5f5e6eb6b1b88.png" alt="Een telefoon met een laptop verbinden"/>
+  <figcaption>
+        Pure OS biedt convergentie: de mogelijkheid om bijna hetzelfde besturingssysteem op uw telefoon als op uw laptop te draaien.
+  </figcaption>
+</figure>
+
+<p>
+  Met een Vrije Software-telefoon hebt u controle over uw apparaat. U 
+  kunt een hoger niveau van privacybescherming krijgen en u kunt eindelijk 
+  apps vermijden waarmee u vroeger opgescheept zat. Het betekent ook dat u uw toestel vaak 
+  langer kunt houden en <a href="/activities/upcyclingandroid/index.html">het milieu kunt beschermen</a> door de hoeveelheid elektronisch afval te verminderen.
+</p>
+
+<p>
+  Wanneer u besluit over te stappen op een besturingssysteem met Vrije Software, kunt u een nieuw systeem op uw huidige telefoon installeren of een telefoon kopen met een voorgeïnstalleerd Vrije Software-besturingssysteem.
+</p>
+
+<p>
+  Dat laatste is duidelijk de gemakkelijkste weg en de Librem 5 van Purism is misschien 
+  de oplossing voor u. Het draait standaard PureOS, een Vrije Software-besturingssysteem dat geleverd wordt met Phosh, zijn gepolijste grafische 
+  omgeving. Projecten zoals postmarketOS, Mobian en Debian hebben 
+  Phosh ook opgepikt, door het op andere toestellen in gebruik te nemen en 
+  patches bij te dragen.
+</p>
+
+<p>
+  Guido Günther is een van de hoofdontwikkelaars van Phosh (en een <a href="https://my.fsfe.org/donate">FSFE supporter</a>!). Hij was zo vriendelijk om ons te vertellen over de software, hoe die past in het Librem 5-ecosysteem en de voordelen ervan.
+</p>
+
+<p>
+  <strong>Fani Partsafyllidou</strong>: Ik zou willen beginnen met een eenvoudige vraag: 
+  wat doet u bij Purism?
+</p>
+
+<p>
+  <strong>Guido Günther</strong>: Dat is niet gemakkelijk te beantwoorden, maar hier gaat het: ik werk vooral 
+  aan de Librem 5-telefoon. Ik was betrokken bij de aanvankelijke raad die Linux op het toestel liet werken door apparaatstuurprogramma's en gebruikersruimtecomponenten te schrijven. Aangezien wij een grafische shell en 
+  compositor nodig hadden, werkte ik daar met anderen in het team ook aan. Dat is hoe 
+  Phosh geboren.
+</p>
+
+<p>
+  Ik werk ook aan de verbetering van PureOS, de op Debian gebaseerde Linux-distributie die op de telefoons en laptops draait. Ons doel is om de Vrije Software-ecosystemen voor mobiele apparaten (zoals smartphones) in in het algemeen, en de Librem 5 in het bijzonder, te verbeteren.
+</p>
+
+<p>
+  <strong>Fani</strong>: Librem 5 draait PureOS, toch?
+</p>
+
+<p>
+  <strong>Guido</strong>: Ja. Zoals alle producten van Purism draait de Librem 5 
+  PureOS, dat is een op Debian gebaseerd besturingssysteem dat aangepast is 
+  om op de apparaten van Purism te passen, zodat het handig is voor de eindgebruikers. Het 
+  heeft ook <a href="https://www.fsf.org/news/fsf-adds-pureos-to-list-of-endorsed-gnu-linux-distributions-1">FSF's 
+  goedkeuring</a>.
+</p>
+
+<p><strong>Fani</strong>: En wat doet Phosh?</p>
+
+<p>
+  <strong>Guido</strong>: Phosh is de grafische schil, de omgeving waarmee u communiceert 
+  op de telefoon. Het is opgebouwd uit verschillende componenten:
+</p>
+
+<ul>
+  <li>    de Wayland compositor, phoc, is verantwoordelijk voor het tekenen van dingen op het scherm, hij gebruikt daarvoor de wlroots-bibliotheek;
+  </li>
+  <li>
+    dan is er een toetsenbord op het scherm dat squeekboard heet; 
+   </li>
+  <li>
+          tenslotte is er de shell zelf, die verantwoordelijk is voor dingen als het lock screen, meldingen, de GUI-elementen op de boven- en onderbalk, snelle instellingen, enz. Hij is gebaseerd op de gimp-toolkit en andere componenten van de GNOME-desktop. Hier is een <a href="https://honk.sigxcpu.org/con/phosh_overview.html">overzicht</a>.
+  </li>
+</ul>
+
+<p>
+  Aanvankelijk zouden wij alleen de grafische schil zelf 
+  "Phosh" noemen, maar de gemeenschap heeft zich aan de naam vastgeklampt en de 
+  hele mobiele ervaring waarop het gebaseerd is (phosh + phoc + 
+  squeekboard + alle Gnome-componenten) wordt nu "Phosh" genoemd, dus de naam is
+  blijven hangen.
+</p>
+
+<p><strong>Fani</strong>: Welke telefoons draaien Phosh?</p>
+
+<p>
+  <strong>Guido</strong>: Hoewel Phosh in eerste instantie ontwikkeld is voor de Librem 5, wordt het 
+  ook gebruikt door allerlei mobiele apparaten die Linux kunnen draaien, 
+  zoals de originele Pinephones en de Pinephone Pro. Het wordt ook 
+  gebruikt op apparaten die vroeger Android draaiden, maar nu ook Linux kunnen draaien, 
+  zoals de OnePlus-apparaten. Mensen gebruiken het ook op tablets en 
+  laptops waarop Linux draait. Het belangrijkste gebruik wordn zeker gevormd door de smartphones 
+  waarop Linux draait, dat wel.
+</p>
+
+<p>
+  Het is vermeldenswaard dat Phosh niet beperkt is tot PureOS. PostmarketOS bijvoorbeeld, heeft het ook. Het zit in Debian en, voor zover ik weet, ook in Fedora, Manjaro en vele andere Linux-distributies.
+</p>
+
+<p>
+  Heel vaak wanneer u screenshots ziet van telefoons die Linux draaien, zal het 
+  Phosh draaien. Hier is iemand die het draait op een <a href="https://twitter.com/xmlich02/status/1519966989116133376">cutiepie</a>, 
+  en hier is iemand die Phosh (met postmarketOS) draait op een <a href="https://twitter.com/calebccff/status/1510930222757158917">Poco 
+  F1</a>, dat vroeger een Android-telefoon was.
+</p>
+
+<p>
+  Phosh wordt heel vaak gebruikt door mensen die hun op Linux gebaseerde telefoons gebruiken 
+  als een "daily driver": eigenlijk als hun enige smartphone. Wij zijn daar erg blij mee.
+</p>
+
+
+<figure class="no-border">
+  <a href="https://docs.puri.sm/Librem_5/Disassembly.html">
+    <img src="https://pics.fsfe.org/uploads/medium/a9325aa93933ce04d74a380a884862d9.png" alt="Librem 5 geopend"/>
+  </a>
+  <figcaption>
+          U kunt de Librem 5 met slechts een schroevendraaier uit elkaar halen. Een gemakkelijk te 
+    te repareren telefoon is een duurzame optie. 
+  </figcaption>
+</figure>
+
+<p>
+  <strong>Fani</strong>: Ik heb verwijzingen gezien over duurzaamheid in Librem5. Bij de 
+  FSFE houden we ons ook bezig met duurzaamheid in software. Wat verstaat u 
+  onder een duurzame technologie? Wat ziet u als de belangrijkste 
+  uitdagingen?
+</p>
+
+<p>
+  <strong>Guido</strong>: Voor mij is dat technologie die geproduceerd is met duurzaamheid in gedachten, die de gebruiker in staat stelt software en onderdelen te vervangen, en in staat stelt om het apparaat over een lange periode zonder speciale apparatuur te repareren.
+</p>
+
+<p>
+  Er zijn meerdere uitdagingen. Bijvoorbeeld: aan de softwarekant moet u ervoor zorgen dat uw kernel en gebruikersruimte geen niet-vrije componenten bevatten, wat ook om privacy-redenen de moeite waard is. Anders zou u aan het eind van de levensduur van uw produkt kunnen komen, omdat u niet meer kunt opwaarderen naar de nieuwere, door beveiliging ondersteunde versies. Dit gebeurt zo nu en dan met Android-toestellen. Gebruikers merken dat zij niet naar een nieuwere kernel kunnen overschakelen, omdat de niet-vrije, alleen binaire, bits die nodig zijn om het toestel te laten werken, alleen beschikbaar zijn voor oudere kernels.
+</p>
+
+<p>
+  Het vinden of schrijven van Vrije Software-stuurprogramma's kan een hele uitdaging zijn, vooral als het gaat om complexe dingen als de GPU, want dat zijn zeer complexe apparaten. Hetzelfde geldt voor softwarecomponenten in de camera-stack. Maar het hebben van vrije stuurprogramma's is een vereiste voor duurzaamheid.
+</p>
+
+<p>
+  Wat de hardware betreft wilt u ervoor zorgen dat onderdelen gemakkelijk 
+  vervangbaar zijn, dat er zo weinig mogelijk in gelijmd is en dat onderdelen kunnen worden 
+  vervangen met meestal een schroevendraaier. <a href="https://docs.puri.sm/Librem_5/Disassembly.html">Dit is zo in 
+  Librem 5</a>.
+</p>
+
+<p>
+  Er zijn grenzen aan duurzaamheid. Bijvoorbeeld: om video's te decoderen op een 
+  energie-efficiënte manier, moet uw hardware dat ondersteunen, want dat 
+  op de CPU doen kost veel te veel batterij. Wanneer een nieuwe videostandaard 
+  op het web verschijnt, kunt u die niet altijd op een efficiënte manier decoderen. 
+  Het apparaat zal blijven werken, maar het is misschien niet meer zo nuttig.
+</p>
+
+<figure>
+  <img src="https://pics.fsfe.org/uploads/medium/2236e84e0cfd0534e58c122968ce6cc9.png" alt="zijkant van telefoon met schakelaars"/>
+  <figcaption>
+          Met noodstopschakelaars kunt u WiFi, Bluetooth, het cellulaire signaal, de microfoon en de camera fysiek uitschakelen.
+  </figcaption>
+</figure>
+
+<p>
+  <strong>Fani</strong>: Terug naar Librem 5-gebruikers en aanpasbaarheid van de software: Wat 
+  zijn de beste hacks die mensen bedacht hebben bij het gebruik van een Librem5-telefoon?
+</p>
+
+<p>
+  <strong>Guido</strong>: Wat me te binnen schiet is niet iets wat ik een 
+  hack noemen, want het is een bedoeld gebruiksvoorwerp, en een van de meest verbazingwekkende 
+  dingen is dat <a href="https://puri.sm/posts/librem-5-laptop-mode/">u er een 
+  in een "laptop" kunt veranderen door een dock te gebruiken</a>. Dus eigenlijk draagt u 
+  uw telefoon bij u en kunt hem aan een projector bevestigen; ik heb op die manier voordrachten gehouden. Of u kunt hem aansluiten op een "dock" en het wordt een laptop-scherm+toetsenbord, dan kunt u er een usb-c 
+  monitor toevoegen en er een "volledige" pc van maken.
+</p>
+
+<p>
+  Mensen hebben hun Librem5 gebruikt als een mobiele hotspot om het 
+  het hele huis te voorzien wanneer er een storing was op hun kabellijn, of als 
+  luidspreker omdat hun laptops een slechte geluidskwaliteit hadden, waarbij ze 
+  de audio van de laptop via pulseaudio naar de telefoon hebben omgeleid.
+</p>
+
+<p>
+  Aangezien u op geen enkele manier beperkt bent en u elke willekeurige software kunt installeren, zijn de mogelijkheden onbeperkt. Ik ben er zo aan gewend dat alles mogelijk is, dat ik het momenteel moeilijk heb om te denken aan "coole" dingen, omdat alles al zo natuurlijk aanvoelt.
+</p>
+
+<p>
+  <strong>Fani</strong>: Hoe komt convergentie, dat wil zeggen, de mogelijkheid om bijna hetzelfde 
+  hetzelfde besturingssysteem in telefoons en laptops, als in PureOS, ten goede aan de ontwikkeling van software?
+</p>
+
+<p>
+  <strong>Guido</strong>: Aangezien wij veel bestaande componenten hergebruiken, profiteren wij 
+  van de stabiliteit van reeds bestaande Vrije Software-oplossingen, en 
+  kunnen wij ook aan hen bijdragen. Bijvoorbeeld: de libhandy- en 
+  libadwaita-bibliotheken zijn nu onderdeel van GNOME en worden door veel 
+  toepassingen gebruikt.
+</p>
+
+<p>
+  Door voor alle apparaten grotendeels dezelfde componenten te gebruiken, vermijdt u dat u dezelfde dingen twee keer ontwikkelt: één voor mobiel en één voor desktop. Het stelt mensen met kennis van de Linux-desktop in staat meteen hun weg te vinden, vooral als het om configuratie gaat. Het stelt hen ook in staat gemakkelijker bij te dragen, omdat het dezelfde technologiestack is.
+</p>
+
+<p>
+  Ontwikkelaars, gebruikers en systeembeheerders kunnen op alle apparaten dezelfde probleemoplossingshulpmiddelen gebruiken die zij kennen, zoals wireshark, perf en sysprof. En als u een bug vindt en die aan de ene kant oplost, profiteert de "andere" kant daar direct van. Het is echt dezelfde software die uit dezelfde broncode komt. Wat de gebruikers betreft, wordt overschakelen heel gemakkelijk omdat zij met de software al vertrouwd zullen zijn.
+</p>
+
+<figure class="no-border">
+  <img src="https://pics.fsfe.org/uploads/medium/dc77572897682c7acf4321f856a77959.JPG" alt="Groep mensen"/>
+  <figcaption>
+    Debian Groupware-ontmoeting.
+  </figcaption>
+</figure>
+
+<p>
+  <strong>Fani</strong>: Terzijde zou ik u iets willen vragen over Bonn. U bent al vele jaren actief in die plaatselijke FSFE-groep. Kunt u zich daar nog leuke lokale activiteiten herinneren?
+</p>
+
+<p>
+  <strong>Guido</strong>: In feite is het een van de recente leuke dingen dat wij overschakelden op BigBlueButton-bijeenkomsten vanwege de pandemie. Wij hadden oude vrienden uit Düsseldorf op de bijeenkomsten, die anders niet naar   de plaatselijke bijeenkomsten zouden zijn gekomen vanwege de afstand.
+</p>
+
+<p>
+  De FSFE-kraam op FrosCon, een sociaal evenement waarbij vaak mensen van de groep in Bonn in de organisatie zitten, is meestal een hoogtepunt. Ik ben blij dat deze FrosCon weer ter plaatse gehouden wordt. Ik ben op dit moment echter niet superactief in de plaatselijke groep, vooral wegens tijdgebrek.
+</p>
+
+<p>
+  De lokale FSFE-bijeenkomsten hadden vaak een korte lezing over verschillende onderwerpen wat meestal het beste deel is, omdat het meer mensen trekt, en heel vaak nieuwe mensen binnenbrengt. Ik hoop dat we deze bijeenkomsten hervatten wanneer de pandemische situatie tot rust gekomen is. Veel mensen, waaronder ikzelf, voelen zich minder geneigd om besprekingen voor te bereiden wanneer het "alleen" online is.
+</p>
+
+<p>
+  <strong>Fani</strong>: U werkt in de ontwikkeling van Vrije Software en u bent betrokken bij de FSFE. Wat houdt u gemotiveerd als het gaat om het steunen van softwarevrijheid en de FSFE?
+</p>
+
+<p>
+  <strong>Guido</strong>: Het is voor mij echt motiverend dat wij op een punt kunnen komen waarop mensen een apparaat met alleen Vrije Software kunnen gebruiken als hun belangrijkste telefoon of laptop. Dat verbeteren houdt mij gemotiveerd aan de ontwikkelingskant. Wij kunnen geen vrije democratieën hebben zonder Vrije Software, dus iets anders doen is geen goed bestede tijd. Het is ook een reden waarom de FSFE belangrijk is, omdat mensen erover vertellen en besluitvormers over te halen om het te omhelzen, essentieel is.
+  </p>
+
+<h2 id="free-software-initiatives-for-phones">Vrije Software-initiatieven voor telefoons</h2>
+
+<figure class="no-border">
+  <img src="https://pics.fsfe.org/uploads/medium/a0da43aac80cf4d611b0a45e2e6a925f.jpg" alt="Android Opwaarderen"/>
+</figure>
+
+
+<p> Als u meer opties over Vrije Software-telefoons wilt onderzoeken, kijk dan eens op:
+</p>
+
+<ul>
+  <li><a href="/freesoftware/freesoftware.html">Wat is Vrije Software</a>?;</li>
+  <li>Hoe u <a href="/activities/upcyclingandroid/howtoupcycle.html">uw telefoon kunt opwaarderen</a>;</li>
+  <li>Onze, door onze gemeenschap geleide, <a href="https://wiki.fsfe.org/Activities/Android/OtherInitiatives">wiki</a> met Vrije Software-initiatieven voor telefoons;</li>
+  <li>Ons interview met <a href="/news/2022/news-20220323-01.html">Plasma Mobile-ontwikkelaar Bhushan Shah</a>.</li>
+</ul>
+
+
+</body-complete>
+    <image url="https://pics.fsfe.org/uploads/medium/7dc839ec11961ef684d5f5e6eb6b1b88.png" alt="Connecting a phone to a laptop"/>
+    <link>/news/2022/news-20220712-01.html</link>
+    <tags>
+  <tag key="front-page"/>
+  <tag key="sustainability">Duurzaamheid</tag>
+  <tag key="upcyclingandroid">Android Opwaarderen</tag>
+  <tag key="localgroup">Lokale groep</tag>
+  <tag key="interview">Interview</tag>
+</tags>
+    <discussion href="https://community.fsfe.org/t/881"/>
+  </news>
+</newsset>

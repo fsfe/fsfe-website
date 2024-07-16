@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- ***************************************************** -->
+<!-- This file has been automatically generated.           -->
+<!-- Please do not modify it, and do not commit it to git. -->
+<!-- ***************************************************** -->
+
+<newsset>
+  <news date="2023-06-06">
+    <title>Deutschland: dPhoenix vor dem Scheitern?</title>
+    <body>
+      <p>Mit einer Freie-Software-Office- und Kollaborations-Suite für Behörden will die Bundesregierung den Zielen des Koalitionsvertrags näher kommen. Doch ein genauerer Blick auf das Projekt wirft Fragen auf: Wo ist der Quellcode? Wer ist verantwortlich? Was passiert mit den eingesetzten Steuergeldern? Wir haben im zuständigen Ministerium nachgefragt.</p>
+    </body>
+    <body-complete>
+
+<h1>Deutschland: dPhoenix vor dem Scheitern?</h1>
+
+<p>Mit einer Freie-Software-Office- und Kollaborations-Suite für Behörden will die Bundesregierung den Zielen des Koalitionsvertrags näher kommen. Doch ein genauerer Blick auf das Projekt wirft Fragen auf: Wo ist der Quellcode? Wer ist verantwortlich? Was passiert mit den eingesetzten Steuergeldern? Wir haben im zuständigen Ministerium nachgefragt.</p>
+
+<p>Bereits im Jahr 2020 startete der norddeutsche IT-Dienstleister Dataport die ersten Pilotprojekte seiner <em>dPhoenixSuite</em> als Alternative zur proprietären Office- und Kollaborations-Suite von Microsoft. Die dPhoenixSuite integriert Freie Software-Komponenten wie Nextcloud, Matrix, Jitsi, Collabora und UCS. Sie wird bereits in kleinem Umfang als Cloud-Service für deutsche Verwaltungen angeboten – eine Reaktion auf die Forderung des deutschen IT-Planungsrats nach einer souveränen Arbeitsumgebung für Verwaltungen, in der Freie Software eine wichtige Rolle zukommt. Dataport scheint jedoch hinter dieser Erwartung zurückzubleiben.</p>
+
+<p>Die aktuelle Ausgabe 07/23 des Linux Magazins enthält eine <a href="https://www.linux-magazin.de/ausgaben/2023/07/dataport-phoenix/">ausführliche und kritische Analyse</a> von Markus Feilner, die sich sowohl mit der Geschichte als auch mit den Problemen des <em>Projekt Phoenix</em> von Dataport sowie mit seinem Verhältnis zum <em>Souveränen Arbeitsplatz</em> befasst. Der <em>Souveräne Arbeitsplatz</em> ist eine seit langem versprochenen Referenzimplementierung unter der Verantwortung des Bundesministeriums des Inneren und für Heimat (BMI), koordiniert durch das kürzlich gegründete Zentrum für Digitale Souveränität der öffentlichen Verwaltung (ZenDiS). Einige der Hauptprobleme, die Feilner aufzeigt, sind der fehlende <em>dPhoenixSuite</em>-Quellcode, Dataports mangelndes Verständnis von Freier Software und der Zusammenarbeit innerhalb der Freien Software-Gemeinschaft, eine Tendenz zum Open-Washing durch die Behauptung, „auf Open-Source-Basis“ zu arbeiten, unklare Zuständigkeiten und ein undurchsichtiges Verhältnis zum Projekt <em>Souveräner Arbeitsplatz</em> des BMI.</p>
+
+<p>Wir fordern seit 2017 <a href="https://publiccode.eu">„Public Money? Public Code!”</a> und begrüßen und unterstützen jeden Schritt in Richtung Freier Software in öffentlichen Verwaltungen. Die jüngsten Entwicklungen rund um Dataport und den <em>Souveränen Arbeitsplatz</em> geben jedoch Anlass zur Vorsicht, besonders mit Blick auf mögliches Open-Washing.</p>
+
+<p>Daher haben wir heute einen Fragenkatalog an das BMI geschickt und erwarten, dass die Antworten die Situation rund um die <em>dPhoenixSuite</em> und den Souveränen Arbeitsplatz transparent machen.</p>
+
+<h2>Fragen an das Bundesministerium des Inneren und für Heimat (BMI):</h2>
+
+<ol type="A">
+<li><p>Dataport bewirbt seine <em>dPhoenixSuite</em> als “Open-Source-Lösung”. Bisher liegt jedoch nur der Quellcode der verwendeten Freie-Software-Teilkomponenten unter Free-Software-Lizenzen (auch als Open-Source-Lizenzen bekannt) vor. Der Code der vollständigen, integrierten Suite ist von Dataport auf Nachfrage nicht zu erhalten. </p>
+<ol type="1">
+<li>Wann wird der vollständige Quellcode des <em>Souveränen Arbeitsplatzes</em> auf OpenCoDE veröffentlicht?</li>
+<li>Wird der Code unter einer Freie-Software-Lizenz veröffentlicht? Wenn ja: unter welcher?</li>
+<li>Basiert der <em>Souveräne Arbeitsplatz </em>auf dem selben Code Stack wie die <em>dPhoenixSuite</em>?</li>
+<li>Welcher Anteil des Codes des <em>Souveränen Arbeitsplatzes </em>stammt aus der <em>dPhoenixSuite</em>? In welchen Komponenten bestehen Unterschiede und wieso?</li>
+<li>Wird es möglich sein, den <em>Souveränen Arbeitsplatz </em>aus dem auf OpenCoDE veröffentlichten Quellcode selbst zu kompilieren und auf eigener Infrastruktur zu betreiben? Wird eine umfängliche Kommentierung des Codes verfügbar sein?</li>
+<li>Soll der <em>Souveräne Arbeitsplatz </em>nach Veröffentlichung des Codes gemeinsam mit der Community der Teilprojekte weiterentwickelt werden?</li>
+<li>Wird die weitere Entwicklung unter Nutzung von OpenCoDE offen erfolgen gemäß der erprobten Prinzipien „coding in the open“ und „release early, release often”, unter Etablierung und Einbindung einer Community?</li>
+</ol></li>
+<li><p>Gemäß öffentlicher Berichterstattung und Auskunft von Dataport basiert die <em>dPhoenixSuite</em> auf dem <em>Souveränen Arbeitsplatz</em>, der noch im Jahr 2023 auf OpenCoDE veröffentlicht werden soll. Dem BMI zufolge setzt der <em>Souveräne Arbeitsplatz </em>auf der <em>dPhoenixSuite</em> auf.</p>
+<ol type="1">
+<li>Welche Darstellung ist richtig? Wie kommt es zu den beiden widersprüchlichen Darstellungen?</li>
+<li>Welche Verträge mit Bezug zum <em>Souveränen Arbeitsplatz </em>bestehen zwischen dem BMI bzw. ZenDiS einerseits und Dataport andererseits?</li>
+<li>Ist der <em>Souveräne Arbeitsplatz </em>ein Fork der <em>dPhoenixSuite </em>oder eine Referenzimplementierung? Wird der <em>Souveräne Arbeitsplatz </em>nach Veröffentlichung des Quellcodes auf OpenCoDE unabhängig von der <em>dPhoenixSuite</em> weiterentwickelt oder bleibt er weiterhin an die <em>dPhoenixSuite</em> gekoppelt?</li>
+<li>Können Sie uns ein Organigramm des Projekts <em>Souveräner Arbeitsplatz </em>mit allen beteiligten Behörden, Ämtern, öffentlichen Stellen und verantwortlichen Personen zur Verfügung stellen? Falls dies nicht möglich ist: Welche Behörden, Ämter, öffentliche Stellen und verantwortliche Personen sind am Projekt <em>Souveräner Arbeitsplatz </em>beteiligt (jeweils mit Angaben zur Rolle und Zuständigkeit im Rahmen des Projekts)?</li>
+<li>Wer trägt im BMI die Verantwortung für das Projekt <em>Souveräner Arbeitsplatz</em>?</li>
+<li>Welche Kompetenzen hat der CIO bei der Koordination des Projekts und bei der Koordination mit Dataport?</li>
+<li>Wo und von wem wird die Zusammenarbeit von Dataport und BMI/ZenDiS im Rahmen des Projekts <em>Souveräner Arbeitsplatz </em>bzw. <em>dPhoenixSuite</em> gesteuert und koordiniert?</li>
+<li>Wo und unter wessen Federführung werden diejenigen Komponenten des <em>Souveränen Arbeitsplatzes</em>, die nicht aus der Freie-Software-Community übernommen werden, also beispielsweise Gluecode und Integrationsskripte, entwickelt?</li>
+<li>Wie viele Personen entwickeln im BMI bzw. bei ZenDiS Code für den <em>Souveränen Arbeitsplatz</em>? Wird dieser Code auch Dataport für die <em>dPhoenixSuite</em> zur Verfügung gestellt?</li>
+<li>Gibt es Vorgaben zur Entwicklung der <em>dPhoenixSuite</em> seitens des BMI/ZenDiS an Dataport? Wenn ja: Werden diese erfüllt?</li>
+<li>Gab es seitens des BMI bis dato Einflussnahme auf Dataport, die vollständige <em>dPhoenixSuite</em> als Freie Software zu veröffentlichen? </li>
+</ol></li>
+<li><p>Finanzierung</p>
+<ol type="1">
+<li>Welche Finanzmittel wurden bisher für den <em>Souveränen Arbeitsplatz </em>aufgewendet?</li>
+<li>Welche Mittel stehen für das laufende Jahr für das Projekt zur Verfügung?</li>
+<li>Welche jährlichen Mittel werden bis 2025 benötigt, um den <em>Souveränen Arbeitsplatz </em>weiterzuentwickeln?</li>
+<li>Hat Dataport vom BMI/ZenDiS Finanzmittel für die Entwicklung der <em>dPhoenixSuite</em> oder für Beiträge zum <em>Souveränen Arbeitsplatz </em>erhalten?</li>
+</ol></li></ol>
+<p>Wir gehen davon aus, dass die Antwort des BMI der Öffentlichkeit ein besseres Verständnis der Vorgänge um den <em>Souveränen Arbeitsplatz </em>und die <em>dPhoenixSuite</em> ermöglichen wird. Wir werden dieses Thema weiterverfolgen und berichten, sobald wir eine Antwort erhalten.</p>
+
+<h2>Freie Software und „Public Money? Public Code!”</h2>
+<p>Freie Software gibt allen das Recht, Programme für jeden Zweck zu verwenden, zu verstehen, zu verbreiten und zu verbessern. Durch diese Freiheiten müssen ähnliche Programme nicht komplett neu programmiert werden und dank transparenter Prozesse muss das Rad nicht ständig neu erfunden werden. Bei großen Projekten können Expertise und Kosten geteilt werden und von der Allgemeinheit bezahlte Anwendungen stehen allen zur Verfügung. So wird Innovation gefördert und mittel- bis langfristig Steuergeld gespart. Abhängigkeiten von einzelnen Anbieterinnen werden minimiert und Sicherheitslücken können leichter geschlossen werden. Die Free Software Foundation Europe fordert daher mit über 200 Organisation und Verwaltungen „Public Money? Public Code!“ - Wenn es sich um öffentliche Gelder handelt, sollte auch der Code öffentlich sein! Mehr Informationen zur Initiative: <a href="https://publiccode.eu">„Public Money? Public Code!”</a></p>
+
+</body-complete>
+    <image url="https://pics.fsfe.org/uploads/medium/6c8d43ffc1013f647affa17d8f0929d5.jpg" alt="House consisting of 0s and 1s"/>
+    <link>/news/2023/news-20230606-01.html</link>
+    <tags>
+	 <tag key="front-page"/>
+	 <tag key="de">Germany</tag>
+	 <tag key="pmpc">Public Money? Public Code!</tag>
+	</tags>
+    <discussion href="https://community.fsfe.org/t/1039"/>
+  </news>
+</newsset>

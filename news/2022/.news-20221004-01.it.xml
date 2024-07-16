@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- ***************************************************** -->
+<!-- This file has been automatically generated.           -->
+<!-- Please do not modify it, and do not commit it to git. -->
+<!-- ***************************************************** -->
+
+<newsset>
+  <news date="2022-10-04">
+    <title>✦ Vincitori di Youth Hacking 4 Freedom ✦</title>
+    <body>
+      <p>Dopo un anno di codifica e valutazione, termina il concorso Youth Hacking 4 Freedom, con dei progetti sbalorditivi. Chi ha vinto? I sei programmi vincitori sono stati trascrizione del linguaggio dei segni, tavolo robot smart, assistente personale, tutorial per la musica, condivisione file, programmazione per i compiti. Tutti Software Libero.
+</p>
+    </body>
+    <body-complete>
+  
+<h1 id="youth-hacking-4-freedom-winners">✦ Vincitori di Youth Hacking 4 Freedom ✦</h1>
+
+<p>Dopo un anno di codifica e valutazione, termina il concorso Youth Hacking 4 Freedom, con dei progetti sbalorditivi. Chi ha vinto? I sei programmi vincitori sono stati trascrizione del linguaggio dei segni, tavolo robot smart, assistente personale, tutorial per la musica, condivisione file, programmazione per i compiti. Tutti Software Libero.
+</p>
+
+<figure>
+  <a href="https://pics.fsfe.org/uploads/big/9594f30fb15a8edf5082d60baac594bd.png">
+  <img src="https://pics.fsfe.org/uploads/medium/9594f30fb15a8edf5082d60baac594bd.png" alt="Illustrazione di tre adolescenti in uno spazio hacker"/></a>
+</figure>
+
+<p>
+  Nel mese di ottobre dello scorso anno la FSFE ha fatto partire il concorso <a href="/activities/yh4f/index.html">Youth Hacking 4 Freedom</a> per ispirare la generazione più giovane alla libertà del software. Abbiamo avuto il piacere di ricevere molti progetti interessanti e fantastici da tutta Europa. Oltre cento persone provenienti da 25 paesi si sono registrate al concorso, rendendolo un evento veramente paneuropeo. Adesso è giunto il toccante momento di annunciare i risultati! I vincitori ricevono un premio in denaro destinato ad aiutarli a sviluppare ulteriormente i propri programmi, o a sostenere i propri studi. Dopo un'attenta considerazione e i colloqui, ecco i sei vincitori:
+</p>
+
+<p>Premio <strong>Hacker estremo</strong>: Stavros con SignTrack 🥇
+</p>
+<p>Premio <strong>Hacker esperto</strong>: Miquel con lo Smart Table Assistant 
+  🥈
+</p>
+<p>Premio <strong>Hacker fantastico</strong>: Artur con Aspinwall 🥉
+</p>
+<p>Premio <strong>Hacker estrema</strong>: Ekaterina con Music 
+  Companion 🏅
+</p>
+<p>Premio <strong>Hacker speciale</strong>: dalla zona di guerra: Mark con Sharik 🤍
+</p>
+<p>Premio <strong>Hacker più giovane</strong>: Héctor con LibreHomework ⭐
+</p>
+
+<h2 id="ultimate-hacker-award-stavros-for-signtrack">🥇Premio Hacker estremo: Stavros con SignTrack</h2>
+
+<p>Stavros, studente di 17 anni di Heraklion, una città nell'isola greca di Creta, ha vinto il primo premio con un progetto che stupisce sia per la sua implementazione che per la sua idea. <a href="https://edugit.org/Piperakis/SignTrack">SignTrack</a> punta a trascrivere il linguaggio dei segni. È una tecnologia preziosa per le persone che usano il linguaggio dei segni per poter comunicare velocemente con persone che invece non lo conoscono. Questo potrebbe aiutarli personalmente e professionalmente. Ecco quello che Stavros ha da dire su SignTrack.
+</p>
+
+<p class="question"><em>Cosa fa SignTrack?</em></p>
+
+<p class="answer">
+  <strong>Stavros</strong>: SignTrack trascrive in tempo reale il linguaggio dei segni in testo da una sorgente video. Il modello fa previsioni istantanee del gesto che stai facendo. Dopo aver completato la frase, uno strato di processo addizionale ristruttura la frase seguendo le regole grammaticali, che sono differenti nel linguaggio dei segni. Creare un modello personalizzato richiede competenze di programmazione minime. Un'interfaccia grafica ti assiste nella raccolta dei dati. E con la potenza di AutoTrain, l'apprendimento del tuo modello non richiede aggiustamenti complicati.
+</p>
+
+<p class="question"><em>Come ti è venuta in mente l'idea?</em></p>
+
+<p class="answer">
+  <strong>Stavros</strong>: Le classi della mia scuola dove viene utilizzato il linguaggio dei segni hanno evidenziato la necessità di riconoscere il linguaggio come una funzionalità per l'accessibilità. Dopo avere constatato che non c'erano progetti di Software Libero semplici da usare in questo campo, ho deciso di sviluppare SignTrack.
+</p>
+
+<p class="question"><em>Come è stata la tua esperienza con il concorso?</em></p>
+
+<p class="answer">
+  <strong>Stavros</strong>: Il concorso YH4F è stata una notevole opportunità per presentare
+  SignTrack. La trasparenza del concorso andava perfettamente a pennello con l'idea che sta dietro il progetto. In aggiunta, mentre lavoravo al progetto, ho imparato molto sulle reti neurali, il linguaggio dei segni, e il Software Libero, tutti ugualmente importanti a loro modo.
+</p>
+
+<h2 id="elite-hacker-award-miquel-for-smart-table-assistant"> 🥈 Premio Hacker esperto: Miquel con lo Smart Table Assistant</h2>
+
+<p>
+  Il 17enne Miquel dalla Catalogna, Spagna, ha ottenuto il secondo posto con lo
+  <a href="https://github.com/puuiixx/SmartTableAssistant">Smart Table 
+  Assistant</a>, un progetto con un favoloso obiettivo che include sia software che hardware. Miquel ha creato un modello di robot con l'intento di aiutare le persone con disabilità negli arti inferiori. <a href="https://www.youtube.com/watch?v=NRL_homPyIw">Il tavolo può adattarsi all'utente e rendere più semplice consumare giornalmente il pasto</a>.
+</p>
+
+<p class="question"><em>Come funziona?</em></p>
+
+<p class="answer">
+  <strong>Miquel</strong>: Lo Smart Table Assistant può memorizzare il percorso da un punto iniziale, andare dal destinatario e rimanere in posizione finché non gli viene dato l'ordine di ritornare al punto di partenza. Può muoversi in molte direzioni, grazie alle ruote omnidirezionali posizionate alla base del "tavolo smart". Il dispositivo contiene un telecomando per eseguire determinate funzioni, come la fuoriuscita di un piano removibile, una bottiglieria, accendere la retroilluminazione e fare spazio per il poggiapiedi. Alla sommità del tavolo, c'è un secchiello integrato che può essere rimosso dopo aver mangiato, in modo che sia più semplice pulire le stoviglie usate per mangiare e metterle nella lavastoviglie.</p>
+
+<p class="question"><em>Sembra ottimo, come lo hai progettato?</em></p>
+
+<p class="answer">
+  <strong>Miquel</strong>: Il robot è stato progettato tenendo presente una buona ergonomia, poi sono state programmate le funzioni del tavolo e dopo sono state applicate ai componenti tramite Arduino. Infine, è stato realizzato il meccanismo affinché funzionasse correttamente. Per l'estetica del prodotto ho preso ispirazione dalla forma dei pilastri della Sagrada Familia e la proiezione della luce dalle sue finestre di vetro colorate. È stato possibile realizzare la maggior parte della struttura di questo progetto tramite la stampa 3D..
+</p>
+
+<h2 id="awesome-hacker-award-artur-for-aspinwall">🥉Premio Hacker fantastico: Artur con Aspinwall</h2>
+
+<p>Il 16enne Artur dalla Polonia è un attivo sostenitore del Software Libero, che contribuisce a molti progetti come Alpine Linux e postmarketOS, 
+  ed è anche impegnato come traduttore. Si è classificato terzo nel concorso con <a href="https://github.com/aspinwall-ui/aspinwall">Aspinwall</a>, un modo semplice per trasformare vecchi dispositivi touch screen in display smart.
+</p>
+
+<p class="question"><em>Cosa fa Aspinwall?</em></p>
+
+<p class="answer">
+  <strong>Artur</strong>: Aspinwall è un'interfaccia utente che può trasformare un tablet o un altro dispositivo mobile in un assistente personale, mostrando le informazioni più importanti tutte assieme. Le informazioni visualizzate possono essere personalizzate tramite widget, che possono contenere qualsiasi cosa - una lista delle cose da fare, informazioni meteo, notifiche... È un modo divertente per riutilizzare vecchi dispositivi che altrimenti raccoglierebbero polvere su uno scaffale o finirebbero in una discarica.</p>
+
+<p class="question"><em>Come ti è venuto in mente di creare Aspinwall?</em></p>
+
+<p class="answer">
+  <strong>Artur</strong>: La prima volta che mi sono approcciato al concetto di “smart display”, si è scatenata la mia curiosità: mi piaceva vederli mentre rimanevano funzionali, e ho pensato che un dispositivo simile potrebbe essere abbastanza utile nella vita quotidiana (ad esempio, in una cucina, dove magari potrebbe servire le informazioni per una ricetta, ma non si lo spazio / mani pulite per utilizzare un tablet completo o un computer portatile). La mia preoccupazione principale, tuttavia, era che la maggior parte di questi dispositivi sono stati prodotti dalle grandi aziende tecnologiche note per la loro intensiva raccolta di dati. Ho sentito che avremmo potuto fare di meglio, e quindi ho iniziato a pensare ad un'alternativa di Software Libero che potrebbe anche funzionare su diversi vecchi dispositivi come i tablet, senza che sia necessario acquistare nuovo e costoso hardware. L'idea è rimasta nella mia testa per un po', ma non sono mai riuscito a lavorarci sopra. Quando poi ho sentito parlare del concorso YH4F, mi è stata data la spinta necessaria per trasformare il mio concetto in realtà.
+</p>
+
+<p class="question"><em>Come è stata la tua esperienza con il concorso?</em></p>
+
+<p class="answer">
+  <strong>Artur</strong>: Ho imparato molto durante il periodo di codifica. Alcune delle cose che ho imparato erano di tipo tecnico, ad esempio utilizzare pigobject e GTK, e ho migliorato la mia conoscenza Python. Oltre a questo, però, è stato un buon esercizio nella gestione del tempo: ho dovuto capire quali attività fare e in che ordine farle prima della scadenza. Dovere giostrare il tempo tra la scuola e il mio progetto è stato a volte un po' difficile, ma sono ancora abbastanza contento di quanto sono riuscito a fare prima di esaurire il tempo a disposizione. In generale, è stata una grande esperienza di apprendimento, e ho avuto la motivazione di lavorare su un progetto che è stato nella mia mente per un bel po'. Sono stato entusiasta di aver visto che cosa hanno fatto gli altri partecipanti per il concorso, e magari di incontrarli a Bruxelles quest'anno. Grazie agli organizzatori per una opportunità così grande!
+</p>
+
+<h2 id="ultimate-girl-hacker-award-ekaterina-for-music-companion">🏅Premio ragazza Hacker estrema: Ekaterina con Music Companion</h2>
+
+<p>Ekaterina, 17 anni, vive a Cipro, le piace suonare il pianoforte e anche programmare. I suoi interessi le hanno dato l'idea vincente: <a href="https://edugit.org/ateraeva/musiccompanion">un programma per aiutare l'utente ad imparare a suonare la musica</a>.
+</p>
+
+<p class="question"><em>Che cosa fa Music Companion?</em></p>
+
+<p class="answer">
+  <strong>Ekaterina</strong>: Il programma permette all'utente di conoscere le basi della musica, come le note, gli accordi e le scale. Cliccando sulle differenti modalità e leggendo la descrizione nel “?”, si potrà esplorare questo semplice glossario musicale e acquisire la conoscenza di cosa è una scala, quali sono i diversi accordi e altri elementi musicali. In aggiunta si potrà sentire come vengono suonati!
+</p>
+
+<p class="question"><em>Come è stata la tua esperienza con il concorso?</em></p>
+
+<p class="answer">
+  <strong>Ekaterina</strong>: Prendere parte a questo concorso è stato personalmente un grande passo in quanto non avevo mai programmato nulla prima e non avevo alcuna conoscenza per farlo. Durante il progetto ho imparato molto di più sui concetti della programmazione, come potevo implementare i moduli e in generale il linguaggio di programmazione, Python.
+</p>
+
+<h2 id="special-hacker-award-coming-from-warzone-mark-for-sharik">🤍 Premio Hacker speciale: dalla zona di guerra: Mark con Sharik</h2>
+
+<p>Quando abbiamo annunciato il concorso Youth Hacking 4 Freedom nel 2021 abbiamo invitato a partecipare persone da tutta Europa. Non ci aspettavamo che durante il periodo di codifica alcuni dei partecipanti si sarebbero trovati in zona di guerra. Con la consapevolezza che non tutti avrebbero potuto partecipare in un clima di pace, abbiamo assegnato il premio Hacker speciale. 
+  Mark dall'Ucraina vince il premio Hacker speciale con il suo <a href="https://github.com/marchellodev/sharik">programma per condivide i file</a>.
+</p>
+
+<p class="question"><em>Cos'è Sharik?</em></p>
+
+<p class="answer">
+  <strong>Mark</strong>: Sharik è una soluzione semplice e multipiattaforma per la condivisione di file all'interno di una rete locale. Se da un lato Sharik è estremamente semplice, carino e soprattutto libero, dall'altro è anche molto versatile e minimalista.</p>
+
+<p class="question"><em>Come ti è venuta in mente l'idea?</em></p>
+
+<p class="answer">
+  <strong>Mark</strong>: Avendo un accesso limitato ad un'Internet veloce, era prassi per me condividere con i miei amici musica, app, alcuni documenti per la scuola e altri tipi di file direttamente via  bluetooth o numerose applicazioni. Anche se l'attività era estremamente semplice, il software che poteva farla era lento, pieno di annunci pubblicitari, e francamente anche brutto. Per questo, avendo un po' di esperienza nello sviluppo software, ho deciso di creare una mia app.
+</p>
+
+<p class="question"><em>Come è stata la tua esperienza con il concorso?</em></p>
+
+<p class="answer">
+  <strong>Mark</strong>: Questo concorso mi ha mostrato quanto sia bello creare un progetto di Software Libero, ma dovrebbe essere prioritario pubblicizzarlo. Diventando sempre più popolare, il progetto attrae più persone che contribuiscono, rendendo di conseguenza migliore il progetto stesso.
+</p>
+
+<h2 id="youngest-hacker-award-héctor-for-librehomework">⭐ Premio Hacker più giovane: Héctor con LibreHomework</h2>
+
+<p class="answer">Il 15enne Héctor dalla Spagna ha impressionato con il suo <a href="https://edugit.org/HGEpro/LibreHomework">LibreHomework</a> e ha vinto il premio dell'Hacker più giovane. Héctor è un utente GNU/Linux e un appassionato del Software Libero. Di seguito ciò che ha condiviso a riguardo del suo progetto.
+</p>
+
+<p class="question"><em>Cos'è LibreHomework?</em></p>
+
+<p class="answer">
+  <strong>Héctor</strong>: LibreHomework è uno strumento di Software Libero fatto per gli studenti e dagli studenti. Pianificare le attività e averle notificate, annotarsi i compiti in classe, organizzare i propri documenti e bloccare lo schermo per aiutare a concentrarsi sulle proprie attività. Il progetto è anche disponibile in 6 lingue diverse. Nel prossimo aggiornamento si sarà anche in grado di incontrare altri studenti grazie alla rete di LibreHomework. È ancora un lavoro in via di sviluppo e quindi sentitevi liberi di controllare e suggerire nuove funzionalità!
+</p>
+
+<p class="question"><em>Come ti è venuta l'idea di realizzarlo?</em></p>
+
+<p class="answer">
+  <strong>Héctor</strong>: Molti degli studenti hanno problemi ad organizzare le proprie attività, e quindi perché non renderlo più facile? Ci sono già strumenti per farlo, ma qualcuno di essi è Software Libero? Quante funzionalità hanno? Sono troppo semplici o troppo complicati? Per questo motivo ho creato
+  LibreHomework.
+</p>
+
+<p class="question"><em>Come è stata la tua esperienza con il concorso?</em></p>
+
+<p class="answer">
+  <strong>Héctor</strong>: Ho inizialmente scoperto questo concorso grazie il mio insegnante di informatica. Prima di sapere del concorso, stavo cercando un nuovo progetto interessante sul quale lavorare, e questa è stata l'occasione perfetta. L'idea è nata perché mi è sembrato che agli studenti mancassero dei (buoni) strumenti di Software Libero. Il concetto è abbastanza semplice, ma dal momento che avevo abbastanza tempo ho deciso di espanderlo in qualcosa di più grande, e così ho finito per imparare alcune cose tecniche come la gestione dei server e lo sviluppo web.
+</p>
+
+<figure>
+  <img src="https://pics.fsfe.org/uploads/medium/8bd7f4e70ea6a8d1cc2dca7a7581fe4b.png" alt="logo di YH4F"/>
+</figure>
+
+<h2 id="more-projects">Altri progetti</h2>
+
+<p>Ci sono molti altri fantastici progetti presentati nel concorso Youth Hacking 4 Freedom. Vogliamo condividere di più su ciò che i giovani hacker hanno inventato. Continua a seguirci per ulteriori notizie nelle prossime settimane!
+</p>
+
+</body-complete>
+    <image url="https://pics.fsfe.org/uploads/medium/9594f30fb15a8edf5082d60baac594bd.png" alt="illustration of three teenagers in a hackerspace"/>
+    <link>/news/2022/news-20221004-01.html</link>
+    <tags>
+  <tag key="front-page"/>
+  <tag key="yh4f">Youth Hacking 4 Freedom</tag>
+  <tag key="interview">Intervista</tag>
+</tags>
+    <discussion href="https://community.fsfe.org/t/911"/>
+  </news>
+</newsset>

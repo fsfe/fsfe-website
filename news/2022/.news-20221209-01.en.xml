@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- ***************************************************** -->
+<!-- This file has been automatically generated.           -->
+<!-- Please do not modify it, and do not commit it to git. -->
+<!-- ***************************************************** -->
+
+<newsset>
+  <news date="2022-12-09">
+    <title>Discover more YH4F projects and learn about the participants Héctor and Leonardo</title>
+    <body>
+      <p>
+   Are you thinking about registering for the second edition of Youth 
+   Hacking 4 Freedom? But you are not yet sure? Two participants from 
+   the last edition, Héctor and Leonardo, talked with us about the 
+   projects they developed and their journey throughout the Free 
+   Software world! Discover their experiences during the first edition 
+   of YH4F.
+  </p>
+    </body>
+    <body-complete>
+
+<h1 id="interview-with-Hector">Discover more YH4F projects and learn about the participants Héctor and Leonardo</h1>
+
+  <p>
+   Are you thinking about registering for the second edition of Youth 
+   Hacking 4 Freedom? But you are not yet sure? Two participants from 
+   the last edition, Héctor and Leonardo, talked with us about the 
+   projects they developed and their journey throughout the Free 
+   Software world! Discover their experiences during the first edition 
+   of YH4F.
+  </p>
+
+ <p>
+ While the second edition of the YH4F contest is now open for <a href="/activities/yh4f">registration</a>, the first edition of the 
+ Youth Hacking 4 Freedom contest has ended with 35 amazingly well done 
+ projects. There are no limits to the possibilities of projects that 
+ could be submitted and every technical idea is welcome. Among those 
+ great inspiring ones were Héctor's and Leonardo's projects: 
+ LibreHomework and Presents, respectively.
+ </p>
+ 
+ <p>
+ Leonardo is studying Computer Science Engineering in Milan. He has been an 
+ active member of the European Youth Parliament since 2019 and among his 
+ hobbies was already hacking, even before participating in the 
+ contest. Our second guest is Héctor, the youngest winner of the first 
+ edition of the Youth Hacking 4 Freedom contest. Héctor has always been 
+ interested in science and in understanding the world around him in 
+ greater detail. He has created LibreHomework out of the desire to help 
+ others with learning and organising their homework.
+ </p>
+ 
+
+ <p>
+    <strong><span style="color:#3394ce"> FSFE</span></strong>: Hello 
+    Leonardo and Héctor. Thank you for joining us.
+  </p>
+   
+   <p>
+    <strong><span style="color:#3394ce">FSFE</span></strong>: Leonardo, 
+    you have already been in contact with Free Software before the YH4F 
+    contest but you have not always loved it. When did you start to 
+    appreciate Free Software for the concept itself?
+  </p>
+  
+      <p>
+    <strong><span style="color:#d0f400">Leonardo</span></strong>: I would 
+    say that I am aware of Free Software since I have started using 
+    computers, using LibreOffice instead of Microsoft Office, GIMP 
+    instead of Adobe Photoshop, etc. but I have always seen them as the 
+    cheaper (and worse) alternatives to the popular programs that 
+    everyone was using. Someone would say, I was seeing it free as in 
+    free beer and not as in freedom.
+  </p>
+  
+  <p>
+  My actual interest in Free Software is way more recent and probably 
+  started about 2 years ago after I saw the documentary ‘The 
+  Social Dilemma’ and started educating myself a bit about digital 
+  privacy and the ethical use of technology. I asked myself how some 
+  products I was using every day could be free for everyone. I started 
+  looking for some alternatives to them, and joined some communities on 
+  Mastodon and Reddit of people who care about those topics. This whole 
+  process of digging online, getting in touch with new people and caring 
+  about the consequences of my approach to technology led me to 
+  (re)discover the big world of Free Software: this time together with 
+  its philosophy and principles that made me fall in love with it.
+  </p>
+  
+  <p>
+  <strong><span style="color:#3394ce">FSFE</span></strong>: And how did you learn programming?
+  </p>
+    <p>
+    <strong><span style="color:#d0f400">Leonardo</span></strong>: My 
+    first contact with programming dates back to when I was 13: my 
+    middle school technology teacher showed us one day a website where 
+    you had to solve some Angry Birds puzzles using block-coding. I 
+    enjoyed it so much that I kept on playing it as soon as I came home. 
+    Then, I thought, if that game was so fun, coding something from 
+    scratch could be even better!</p>
+
+<p>
+I started watching some videos online on how to start coding with 
+JavaScript, even though I have never actually learned it. But the first 
+programming language I can say I learned is Python, thanks to a "Summer 
+Camp": I attended at a school called H-Farm near my home city. This 
+course has been followed, in the past 6 years, by many other courses and 
+tutorials about other languages such as C# and Flutter/Dart, which is 
+the one I used for my YH4F project.
+  </p>
+  
+    <strong><span style="color:#3394ce">FSFE</span></strong>: Héctor, what about you how did you learn programming?
+  <p>
+    <strong><span style="color:#ce6d33"><br/>Héctor</span></strong>: Like 
+    most people I started with Scratch at the age of 10-11 and then I 
+    moved towards more advanced languages like Javascript and Python. I 
+    was initially fond of game development but now I like working on 
+    servers and backend stuff.</p>
+  
+<p>
+<strong><span style="color:#3394ce">FSFE</span></strong>: So, you 
+already had some knowledge about coding. Why did you join the YH4F 
+contest?
+</p>
+	
+	 <p>
+	 <strong><span style="color:#ce6d33">Héctor</span></strong>: My IT 
+	 teacher encouraged me to participate in the contest, so the project 
+	 would decide my final mark. Working on an actual programming project 
+	 was way more exciting than doing what my classmates were doing. I 
+	 joined the contest in October and worked, since then, on the idea: the 
+	 app, the server and the daemon.</p>
+	 
+	<p>
+	 <strong><span style="color:#3394ce">FSFE</span></strong>: And what 
+	 about you, Leonardo, what motivated you to join our competition?
+	 </p>
+	
+	 <p>
+	 <strong><span style="color:#d0f400">Leonardo</span></strong>: Not long 
+	 after the "change" I mentioned, I saw an advertisement for this 
+	 contest, organized by the Free Software Foundation Europe, that was 
+	 aiming to promote and encourage the Free Software culture among young 
+	 minds. I thought it was not only a commendable idea, but also a great 
+	 opportunity for me to merge my recent interest for FOSS with my 
+	 passion for coding. So I decided to participate, re-building from 
+	 scratch my recent coding project in order to make it fully Free 
+	 Software, and ready to be used by large communities.</p>
+	
+	 
+	<p>
+	 <strong><span style="color:#3394ce">FSFE</span></strong>: How did you 
+	 came up with your individual project idea?
+	 </p>
+	 
+	 <p>
+	 <strong><span style="color:#d0f400">Leonardo</span></strong>:The idea 
+	 for <a href="https://codeberg.org/LezSoft/Presents">"Presents"</a> 
+	 came into my mind back in 2020. After the lockdown period caused by 
+	 the COVID-19 pandemic, it was time to think about birthday gifts for 
+	 all the friends that had turned 18 during the lockdown (which were a 
+	 lot, since my classmates and I are born in 2002). Since it takes me 
+	 some time to come up with a good gift idea for a friend, and I'm 
+	 definitely a lazy person, I thought: shouldn't there be an easier way 
+	 for all this?</p>
+	 
+	 <figure>
+  <img src="https://pics.fsfe.org/uploads/medium/9f/64/f1203a25ffe279b875482d5a5905.png" alt="several screenshots showing the different stages from the App Presents"/>
+  <figcaption>
+    The App <a href="https://codeberg.org/LezSoft/Presents">"Presents"</a> developed from Leonardo.
+  </figcaption>
+</figure>
+
+<p>
+That is how I started shaping the idea of this app in which people could 
+add their wishes and forget about them while their friends or family 
+could get inspiration from it to make the perfect gift without ruining 
+the surprise effect. I started looking online for the best tech stack to 
+realize this project. I ended up following some really great quality 
+tutorials about the programming language Flutter and Googles App 
+development platform Firebase. They made me publish the first version of 
+the app in October 2020! But then I didn't like the fact that my own app 
+wasn't following the Free Software philosophy, so I took the YH4F 
+contest as an opportunity to develop a better, fresher and free version 
+of Presents, Presents 2.0.
+</p>
+		
+<p>
+<strong><span style="color:#ce6d33">Héctor</span></strong>: Since I 
+started learning programming I always wanted to make a task manager, so 
+it was an idea that was already in my head, well, kind of. I also felt 
+that the Free Software community lacked a good app for students, to help 
+us manage our time and tasks, so an app like LibreHomework was a good 
+target.</p> 
+<p>
+LibreHomework is an open-source tool made for students by students. It 
+can schedule tasks, exams, organise your documents and lock your device 
+screen to help you focus on your tasks.
+</p>
+	
+<p><strong><span style="color:#3394ce">FSFE</span></strong>: Are there some 
+special functions in the application?
+</p>	
+		
+<p>
+ <strong><span style="color:#ce6d33">Héctor</span></strong>: The lock 
+ your screen function. It basically blocks the user from accessing the 
+ computer until a button is pressed or a timer finishes. It is achieved 
+ by putting the app in full screen and setting it “always on top”. It is 
+ not 100% effective but for someone with little to no knowledge of 
+ programming/computers it’s more than enough. In fact, making it more 
+ secure would imply making the app more aggressive on a system/kernel 
+ level.</p>
+<p>
+LibreHomework will also be able to send you reminders. This is achieved 
+by the daemon, written in Rust. It is a completely different program 
+from the app and it’s not so well integrated yet, so it is a milestone.
+</p>
+	
+<p>
+ <strong><span style="color:#3394ce">FSFE</span></strong>: What is your favourite function?
+</p>	
+		
+<p>
+ <strong><span style="color:#ce6d33">Héctor</span></strong>:I don’t 
+ really have one because the app is supposed to be useful with all of 
+ them, but if I have to choose one I’ll choose the network/server. It’s 
+ completely coded and running, but the User Interface is not done yet, 
+ so it’s planned for the near future.
+</p>
+	
+<p>
+ <strong><span style="color:#3394ce">FSFE</span></strong>: Now that we 
+ have learned more about your projects, what kind of problems have both 
+ of you encountered during the coding period?
+ </p>
+<p>
+ <strong><span style="color:#d0f400">Leonardo</span></strong>: I would 
+ say I encountered many problems during the coding phase: some minor 
+ ones that could have been easily solved with a quick search on Stack 
+ Overflow. Some others took me several days and a lot of effort to be 
+ fixed.</p>
+<p>
+Actually, the majority of the issues I faced from the latter category 
+were related with AppWrite: the open-source backend I adopted to replace 
+Google Firebase. I didn't know AppWrite before starting Presents 2.0, 
+and I learned using their official documentation during this 
+competition. But, even so it has strong and well-done documentations, 
+AppWrite is missing all the "unofficial resources" like articles, video 
+tutorials, and so on that other proprietary backends can count on and 
+that make life for beginner-programmers like me way easier.</p>
+<p>
+That's why, I started thinking about writing a series of articles about 
+my experience with AppWrite, why I find it a great alternative to Google 
+Firebase, and how to use it as a backend for your next Flutter app.
+</p>
+	
+<p>
+ <strong><span style="color:#ce6d33">Héctor</span></strong>: A lot of 
+ bugs as expected. Some of them were really weird but I ended up solving 
+ them with some technical help. I also faced some decisions about the 
+ design or the network’s security, so I hope they didn’t backfire.</p>
+	
+<p>
+ <strong><span style="color:#3394ce">FSFE</span></strong>: Despite these 
+ challenges, will you continue to work on your project?
+ </p>
+
+<p>
+ <strong><span style="color:#ce6d33">Héctor</span></strong>: Yes, there 
+ are some planned things and they are specified in the README: managing 
+ exams/documents, finishing the network’s tab, integrating the daemon, 
+ and making the project available in more languages.</p>
+
+<p>
+<strong><span style="color:#d0f400">Leonardo</span></strong>:I am 
+continuously working on Presents, and I will keep on doing it since I 
+don't see it just as a project for a competition but as an actual app 
+that could help many people during their daily life. Up until now, the 
+development has been focused on bridging the gap between version 1 and 2 
+in terms of functionalities and availability. As soon as this gap won't 
+exist any more, Presents 2.0 will replace its ancestor both on the app 
+stores and on the website. Then I will start working on some new 
+features, hopefully following also community's suggestions (that by the 
+way I'm always happy to accept and discuss in the Issues page of <a href="https://codeberg.org/LezSoft/Presents">the project repository on 
+Codeberg</a>).
+</p>
+	
+<p>
+ <strong><span style="color:#3394ce">FSFE</span></strong>: Thank you for 
+ your time and we wish you good luck with your next steps.
+ </p>	
+
+<p>
+The registration for the second edition of YH4F is now open. For more 
+information on the contest please visit <a href="/activities/yh4f">yh4f.org</a>.
+</p>
+	 
+</body-complete>
+    <image url="https://pics.fsfe.org/uploads/medium/9594f30fb15a8edf5082d60baac594bd.png" alt="Three young hackers are tinkering on their laptops"/>
+    <link>/news/2022/news-20221209-01.html</link>
+    <tags>
+ <tag key="front-page"/>
+ <tag key="interview">Interview</tag>
+ <tag key="yh4f">Youth Hacking 4 Freedom</tag>
+ <tag key="yh4f-project">Youth Hacking 4 Freedom - Project</tag>
+</tags>
+    <discussion href="https://community.fsfe.org/t/947"/>
+  </news>
+</newsset>

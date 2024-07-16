@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- ***************************************************** -->
+<!-- This file has been automatically generated.           -->
+<!-- Please do not modify it, and do not commit it to git. -->
+<!-- ***************************************************** -->
+
+<newsset>
+  <news date="2024-08-06" type="newsletter">
+    <title>La UE recorta la financiación del Sofware Libre +++ Libertad del Router +++ SFP</title>
+    <body>
+      <p>La Comisión Europea planea recortar su financiación a los proyectos 
+NGI, mientras que en Bélgica un juzgado ha respaldado los derechos de la 
+Libertad del Router de los usuarios. También enviamos nuestros comentarios a
+la implementación de NIS2; aprendimos sobre Linqa, una plataforma de 
+Software Libre desarrollada con dinero público; y nos reunimos con 
+voluntarios en el Summer Meeting. Escuche un nuevo episodio 
+del SFP.
+</p>
+    </body>
+    <body-complete>
+
+<h1>La UE recorta la financiación del Sofware Libre +++ Libertad del Router +++ SFP</h1>
+
+<p>La Comisión Europea planea recortar su financiación a los proyectos 
+NGI, mientras que en Bélgica un juzgado ha respaldado los derechos de la 
+Libertad del Router de los usuarios. También enviamos nuestros comentarios a
+la implementación de NIS2; aprendimos sobre Linqa, una plataforma de 
+Software Libre desarrollada con dinero público; y nos reunimos con 
+voluntarios en el Summer Meeting. Escuche un nuevo episodio 
+del SFP.
+</p>
+
+<figure>
+	<img src="https://pics.fsfe.org/uploads/medium/98/41/8f93925bf0a8c657cf5bb4608a72.png" alt="Composición que muestra una imagen del NGI de una ciudad futurible, la pegatina de la libertad del enrutador y una foto con la palabra ciberseguridad con un candado"/>
+</figure>
+
+<div class="toc">
+  <p>Tabla de contenidos</p>
+	<ul id="toc">
+        <li><a href="#quote-of-the-month"><strong>Cita del mes</strong></a></li>
+		<li><a href="#NGI-funding"><strong>La Comisión Europea reduce la financiación a proyectos de Software Libre</strong></a></li>
+		<li><a href="#take-action"><strong>¡Actúa! Pide a los representantes de la UE que financien el Software Libre</strong></a></li>
+		<li><a href="#NIS2"><strong>NIS2: Protegiendo el ecosistema del Software Libre en su implementación </strong></a></li>
+		<li><a href="#router-freedom"><strong>La decisión de un juzgado belga afecta el futuro de la Libertad del Router </strong></a></li>
+		<li><a href="#public-code"><strong>Linqa: una plataforma de colaboración bilingüe de Software Libre desarrollada con dinero público</strong></a></li>
+        <li><a href="#SFP"><strong>SFP#25: MirageOS y OCaml con Hannes Mehnert y Matthias Kirschner</strong></a></li>
+        <li><a href="#conferences"><strong>Únete a nosotros en FrOSCon</strong></a></li>
+
+		<li><a href="contribute"><strong>Contribuye a nuestra Newsletter</strong></a></li>
+	</ul>
+</div>
+	
+<h3 id="quote-of-the-month">Cita del mes</h3>
+<blockquote>
+	<p>“Por lo tanto, reclamamos estos fondos vuelvan a estar disponibles 
+	de inmediato y que la financiación esté 
+	asegurada a medio y largo plazo. Esta es la única manera de impulsar con éxito la digitalización de 
+	Europa."</p>
+	<cite>Declaración de la FSFE sobre los planes de la Comisión Europea de 
+	suprimir la financiación del proyecto NGI</cite>
+</blockquote>
+
+<h3 id="NGI-funding">La Comisión Europea reduce la financiación a proyectos de Software Libre</h3> 
+<p>La iniciativa Next Generation Internet ha respaldado proyectos de 
+Software Libre con financiación y asistencia técnica desde 2018. A pesar 
+de su contrastable éxito, <a href="/news/2024/news-20240719-01.html">la 
+Comisión Europea ha tomado la decisión de interrumpir esta financiación </a> 
+en el actual borrador para el Programa de Trabajo Horizonte Europa 2025. Esta 
+decisión pone en relieve un mayor problema, la falta de 
+financiación pública, motivada y sostenible a los proyectos de 
+Software Libre.
+</p> 
+
+<p>Por tanto, pedimos que estos fondos estén 
+disponibles de nuevo de forma inmediata y que se garantice su 
+financiación a medio y largo plazo. Esta es la única manera de impulsar 
+con éxito la digitalización de Europa.
+</p> 
+
+<h3 id="take-action">¡Actúa! Pide a los representantes de la UE que financien el Software Libre</h3> 
+<p>¡Necesitamos una financiación sostenible, segura y exclusiva para el 
+proyecto NGI y soluciones de Software Libre que que ayuden a Europa 
+a controlar su tecnología!
+</p> 
+<p>¡Ayúdanos a hacer conscientes de ello a nuestros representantes de la 
+UE! La decisión del presupuesto no es oficial todavía - así que aún 
+existe una oportunidad de asignar fondos a NGI. Por ello, es muy 
+importante contactar con
+ <a href="https://commissioners.ec.europa.eu/ursula-von-der-leyen_de#paragraph_343">Ursula 
+ von der Leyen</a> (Presidenta de la Comisión Europea) y <a href="https://digital-strategy.ec.europa.eu/en/write-us">DG Connect</a> 
+ para pedirles que vuelvan a estar disponibles estos fondos. Además puedes ponerte en contacto con tu
+ <a href="https://www.ideal-ist.eu/representatives">Punto Nacional de Contacto
+ (NCP)</a> y persuadirles para que defiendan que los fondos a NGI estén disponibles de nuevo.
+</p> 
+<p>Otra forma es apoyándonos con una donación para que así podamos 
+continuar defendiendo por la libertad del software.
+</p>
+
+<div class="color-box background fullwidth" data-color="dark-green">
+ <a class="btn btn-lg btn-default" href="https://my.fsfe.org/donate?amount=300&amp;period=m">Dona ahora</a>
+</div>
+
+<h3 id="NIS2">NIS2: protegiendo el ecosistema del Software Libre en su implementación. 
+</h3> 
+<p>Junto con NLnet Labs y la Open Source 
+Security Foundation, <a href="/news/2024/news-20240715-01.html">la FSFE 
+presentó sus comentarios a la Ley de Implementación NIS2 
+</a>, señalando la necesidad de proteger el ecosistema de Software Libre europeo.
+</p> 
+
+<h3 id="router-freedom">La decisión de un juzgado belga afecta el futuro de la Libertad del Router
+</h3> 
+<p>Un juzgado belga ha confirmado la decisión del regulador del país de 
+introducir la Libertad del Router en las redes de fibra óptica. Las 
+objeciones, elevadas por un proveedor de servicios de red local, fueron 
+desestimadas. Esta decisión histórica representa una victoria importante 
+para los derechos de los consumidores, y animamos a otros reguladores 
+nacionales a seguir su ejemplo.
+</p>
+<p><a href="/news/2024/news-20240709-01.html">Más información</a></p>
+
+
+<figure>
+<img src="https://pics.fsfe.org/uploads/medium/33/5a/15a5cb2e1bf4f1344d439b215dcd.jpg" alt="Un hombre sentado en una silla cerca de una pantalla que muestra un gráfico sobre el funcionamiento de la UE. En primer plano, las espaldas de personas que miran fijamente al orador, también sentadas y con ordenadores portátiles sobre la mesa."/>
+<figcaption>
+Durante la Summer Meeting 2024 de la FSFE, los asistentes tuvieron la 
+oportunidad de debatir juntos sobre el estado actual de la política de 
+la UE en relación con el Software Libre. Los voluntarios también 
+tuvieron la oportunidad de resolver sus dudas y aportar ideas sobre cómo 
+participar en estos asuntos.
+</figcaption>
+</figure>
+
+<h3 id="public-code">Linqa: una plataforma de colaboración bilingüe de Software Libre desarrollada con dinero público 
+</h3> 
+<p>Linqa es una plataforma de colaboración bilingüe cuyo código es Software 
+Libre y fue desarrollada empleando dinero público. Ayuda en el trabajo 
+diario del Foro Franco-Alemán para el Futuro, una institución pública 
+que refuerza la colaboración entre los actores en Francia y Alemania. 
+Nos sumergimos en <a href="/news/2024/news-20240726-01.html">las raíces 
+de Linqa con la gente que se encuentra detrás de la misma</a>.</p>
+
+<h3 id="SFP">SFP#25: MirageOS y OCaml con Hannes Mehnert y 
+Matthias Kirschner</h3> 
+<p>En ocasión de <a href="/news/podcast/episode-25.html">nuestro episodio 25º del Software Freedom 
+Podcast</a> estamos felices de dar la bienvenida a Hannes Mehnert, uno 
+de los desarrolladores clave de MirageOS. 
+ Matthias Kirschner, presidente de la FSFE, y Hannes hablan sobre 
+ MirageOS. Este episodio ofrece una visión general sobre todo lo 
+ necesario para conocer MirageOS desde lo más básico hasta su futuro 
+ desarrollo.
+ </p>
+
+<figure>
+	<img src="https://pics.fsfe.org/uploads/original/9f/7d/1c0adcc4296da3ab09f0769dd7d1.jpg" alt="Asistentes del Encuentro de Verano de la FSFE posando con camisetas rosas en el jardín del LinuxHotel"/>
+	<figcaption>¡Encuentro de Verano 2024 de la FSFE! Como en 2023, el personal y los 
+	voluntarios se encontraron en el LinuxHotel en un fin de semana lleno 
+	de sorpresas, charlas y talleres, y por supuesto con mucha diversión. 
+	Por segunda vez consecutiva, la FSFE organizó este encuentro para 
+	informar de primera mano a nuestros voluntarios sobre nuestras 
+	actividades e iniciativas así como para recoger sus pareceres e ideas.
+	</figcaption> 
+</figure>
+
+<h3 id="conferences">Únete a nosotros en FrOSCon</h3>
+<p>
+Una vez más, este mes de agosto estaremos asistiendo a FrOSCon en Sankt Augustin. 
+Los días 17 y 18 de agosto nuestro equipo y voluntarios estarán presentes con
+<a href="/events/index.html#event-20240817-01">un stand y varias charlas informativas</a>.
+</p> 
+<p>
+Además, el grupo local de la FSFE de Bonn está organizando <a href="/events/index.html#event-20240816-01">¡un encuentro conjunto de la comunidad</a> 
+la tarde anterior! Así que incluso si no puedes estar en FrOSCon, ¡únete a ellos el 16 de agosto!
+</p>
+
+
+
+<h3 id="contribute">Contribuye a nuestra Newsletter</h3>
+<p>
+Nos encantaría saber de ti. Si tuvieras cualquier idea, foto o noticia 
+para compartir, por favor mándanosla a
+ newsletter@fsfe.org. Puedes además <a href="/donate/donate.html">apoyarnos </a>, <a href="/contribute/contribute.html">contribuir a nuestro trabajo</a>, y <a href="/about/groups.html">unirte a nuestra comunidad</a>. Nos gustaría 
+ dar las gracias a nuestra comunidad y a todos los voluntarios, 
+ promotores y donantes, quienes hacen posible nuestro trabajo, con una 
+ mención especial a nuestros traductores, quienes consiguen que mucha 
+ gente lea esta newsletter en su lengua nativa.
+</p>
+
+<p>
+Tu editora,<br/>
+Ana
+</p>
+
+</body-complete>
+    <image url="https://pics.fsfe.org/uploads/medium/98/41/8f93925bf0a8c657cf5bb4608a72.png" alt="Composición de imágenes mostrando una de NGI y una ciudad futurible, la pegatina de la Libertad del Enrutador y una foto con la palabra ciberseguridad con un candado"/>
+    <link>/news/nl/nl-202408.html</link>
+    <tags>
+    <tag key="newsletter">Newsletter</tag>
+    <tag key="front-page"/>
+    <tag key="deviceneutrality">Neutralidad del Dispositivo</tag>
+    <tag key="european=union">Unión Europea</tag>
+    <tag key="ada-zangemann">Ada y Zangemann</tag>
+    <tag key="policy">Política Pública Europea</tag>
+    <tag key="event">Evento</tag>
+    <tag key="education">Educación</tag>
+    <tag key="pmpc">"¿Dinero Público? ¡Código Público!"</tag>
+    <tag key="podcast">Software Freedom Podcast</tag>
+    <tag key="de">Alemania</tag>
+    <tag key="ngi">Next Generation Internet Zero</tag>
+    <tag key="routers">Libertad del Enrutador</tag>
+    <tag key="highlights"/>
+</tags>
+  </news>
+</newsset>

@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- ***************************************************** -->
+<!-- This file has been automatically generated.           -->
+<!-- Please do not modify it, and do not commit it to git. -->
+<!-- ***************************************************** -->
+
+<newsset>
+  <news date="2022-03-23">
+    <title>Intervista con lo sviluppatore di Plasma Mobile Bhushan Shah</title>
+    <body>
+      <p>
+  Che opzioni ci sono se volessi far girare Software Libero sul mio 
+  telefono? Per la nostra campagna Upcycling Android abbiamo 
+  intervistato lo sviluppatore di Plasma Mobile Bhushan Shah sul far 
+  girare sul proprio telefono un ecosistema GNU/Linux per dispositivi mobili che 
+  sia sicuro e rispettoso della privacy.
+  </p>
+    </body>
+    <body-complete>
+
+<h1 id="interview-with-plasma-mobile-developer-bhushan-shah">Intervista con lo sviluppatore di Plasma Mobile Bhushan Shah</h1>
+
+  <p>
+  Che opzioni ci sono se volessi far girare Software Libero sul mio 
+  telefono? Per la nostra campagna Upcycling Android abbiamo 
+  intervistato lo sviluppatore di Plasma Mobile Bhushan Shah sul far 
+  girare sul proprio telefono un ecosistema GNU/Linux per dispositivi mobili che 
+  sia sicuro e rispettoso della privacy.
+  </p>
+
+ <p>
+ KDE è una comunità internazionale di Software Libero fondata nel 1996, 
+ e KDE e.V. è un'organizzazione associata della FSFE.  Nel 2014, KDE ha 
+ rilasciato la prima versione di Plasma, un ambiente di lavoro grafico 
+ che è divenuto uno dei progetti principali. Plasma Mobile è una 
+ variante di Plasma 5 per gli smartphone basati su Linux. Bhushan Shah è 
+ uno sviluppatore del progetto Plasma Mobile dal 2015. Abbiamo chattato 
+ con Bhushan per conoscere meglio questo promettente progetto. In questa 
+ intervista Bhushan spiega perché usare Plasma Mobile va a vantaggio 
+ della propria privacy, e come iniziare ad usarlo. Buon divertimento!
+ </p>
+
+<figure>
+  <img src="https://pics.fsfe.org/uploads/big/6e35e7f3972dab183787344981dfc924.png" alt="Un telefono su cui gira Plasma Mobile, e un team di sviluppatori"/>
+</figure>
+
+  <p>
+    <strong><span style="color:#3394ce"> FSFE</span></strong>: Ciao 
+    Bhushan 🙂 grazie per aver accettato l'invito!
+  </p>
+  
+  <p>
+    <strong><span style="color:#ce6d33">Bhushan Shah</span></strong>: Ciao! Buona giornata! 🙂
+  </p>
+  
+  <p>
+    <strong><span style="color:#3394ce">FSFE</span></strong>: Per 
+    iniziare vorremo chiederti qualche cosa di te, ad esempio in che 
+    modo ti sei approcciato al Software Libero e come hai iniziato a 
+    lavorare per Plasma Mobile?
+  </p>
+  
+  <p>
+    <strong><span style="color:#ce6d33">Bhushan</span></strong>: Certo. 
+    Il mio primo contatto con il Software Libero è stato un corso su 
+    Linux all'università, il quale ha suscitato in me l'interesse per 
+    Linux e l'open source in generale. Da questo ho iniziato a scrivere 
+    articoli per siti di notizie su Linux (Muktware), e ciò mi ha 
+    introdotto nella comunità di KDE. Praticamente, man mano che mi 
+    avvicinavo alla comunità di KDE come utente, ho iniziato ad usare le 
+    mie conoscenze di sviluppatore per contribuire, e poi non mi sono 
+    più voltato indietro. Stavo lavorando con la comunità di KDE come 
+    collaboratore quando è stato annunciato Plasma Mobile, e sono stato 
+    assunto da Bluesystems GmbH per lavorare su Plasma Mobile. Tutto 
+    questo accadeva nel 2015, e dopo sono cresciuto molto più vicino al 
+    progetto Plasma Mobile, sia dal punto di vista tecnico che come 
+    "movimento" per fornire un'alternativa aperta ad Android/iOS 🙂
+  </p>
+  
+  <p>
+    <strong><span style="color:#3394ce"> FSFE</span></strong>: Qual è il tuo ruolo attuale in Plasma Mobile?
+  </p>
+  
+  <p>
+    <strong><span style="color:#ce6d33">Bhushan</span></strong>: 
+    Attualmente sto lavorando come sviluppatore e responsabile del 
+    progetto Plasma Mobile. Devo far notare che essere il responsabile 
+    non mi rende BDFL* 😉 e la responsabilità per ogni componente rimane 
+    tra tutte le persone che contribuiscono. 🙂
+  </p>
+  
+  <p>
+    <strong><span style="color:#3394ce"> FSFE</span></strong>: Perfetto, 
+    perché vorremmo che condividessi con noi cosa è Plasma Mobile. In 
+    che modo è diverso dagli altri sistemi operativi mobili? Fai finta 
+    che sia la prima volta che noi sentiamo parlare di Software Libero.
+  </p>
+  
+  <p>
+    <strong><span style="color:#ce6d33">Bhushan</span></strong>: Ottimo. 
+    In termini puramente tecnici, Plasma Mobile è una raccolta di vari 
+    componenti software, ma mi piace pensarlo più come un ecosistema di 
+    software mobile che di sua natura è aperto e ha un approccio dove la 
+    comunità viene prima di tutto.
+  </p>
+  
+  <p>
+  Altri sistemi operativi mobili come Android e iOS vengono sviluppati a 
+  porte chiuse da grandi aziende e forniscono nuove release o come un 
+  enorme listato di codice o, in alcuni casi, non viene nemmeno fornito 
+  il codice sorgente, mentre Plasma Mobile mira a fornire un processo di 
+  sviluppo completamente trasparente dove ogni cambiamento è sviluppato 
+  insieme alla comunità ed è disponibile con licenze che permettono successivamente a 
+  chiunque di utilizzare, di ispezionare e di sviluppare.
+  </p>
+
+  <p>
+    <strong>Il nostro obiettivo è che ogni utente, sviluppatore, 
+    progettista, traduttore possa partecipare allo sviluppo e alla 
+    comunità di Plasma Mobile e possa lavorare per migliorarlo</strong>. 
+    Per quanto riguarda cos'è Plasma Mobile, ancora una volta si tratta 
+    di una questione tecnica, ma Plasma Mobile include una shell o 
+    interfaccia utente, applicazioni e distribuzione / sistema di base    per vari dispositivi mobili.
+  </p>
+
+<figure>
+  <img src="https://pics.fsfe.org/uploads/medium/b9b1f761fd936faa0aab1e11fe3f70bd.jpg" alt="7 persone di fronte ad un giardino e un edificio in una giornata estiva"/>
+  <figcaption>Bhushan Shah (secondo da sinistra) durante Akademy, all'annuale summit mondiale di KDE.</figcaption>
+</figure>
+
+  <p>
+    <strong><span style="color:#3394ce"> FSFE</span></strong>: Sembra un 
+    vasto progetto collaborativo. Vorremmo anche sapere cosa diresti a 
+    qualcuno che ha deciso di optare per un sistema operativo di 
+    Software Libero, e deve scegliere tra una custom ROM basata su 
+    Android o una distribuzione GNU/Linux completa, come Plasma Mobile. 
+    Quali sono le principali differenze, e cosa dovrebbe tenere in 
+    considerazione un utente per fare la scelta giusta?
+  </p>
+
+  <p>
+    <strong><span style="color:#ce6d33">Bhushan</span></strong>: Bene, 
+    questa è una domanda che darà 10 risposte diverse se la si chiede 10 
+    persone diverse 😄
+  </p>
+  
+  <p>
+  Ma alla fine dipende da ciò che l'utente vuole dal proprio 
+  dispositivo. Ci sono <strong>alcuni casi d'uso, per esempio le 
+  applicazioni bancarie o di pagamento mobile, che purtroppo non è 
+  possibile eseguire in modo semplice quando si utilizza la 
+  distribuzione completa 
+  basata su Linux</strong>, in quanto il mercato per questi sistemi 
+  operativi è ancora un po' di nicchia e gli sviluppatori di app non 
+  supportano queste distribuzioni. Detto questo, ci sono però soluzioni 
+  come Waydroid che permettono di eseguire sul sistema GNU/Linux queste 
+  applicazioni Android essenziali.
+  </p>
+
+  <p>
+  Se non si ricade in questi casi d'uso, dove è necessario un dispositivo 
+  Android nella vostra vita quotidiana, allora un sistema basato interamente su 
+  Linux è sicuramente una scelta migliore, rispetto ad esempio 
+  a LineageOS o un dispositivo de-googlizzato, per via delle libertà 
+  software che vengono date. Quindi il discorso di fondo è che ogni utente 
+  avrà bisogni diversi e, se da una parte possiamo provare a dare il nostro 
+  meglio per soddisfare le aspettative degli utenti, alla fine è l'utente che dovrà prendere una decisione.
+  </p>
+  
+  <p>
+  Credo che la differenza principale che influenzerà gli utenti sia 
+  l'ecosistema di app a loro disposizione. L'ecosistema app per Mobile 
+  Linux sta crescendo, ma purtroppo non è in alcun modo vicino a ciò che 
+  Android e iOS offrono in questo momento. Come comunità e appassionati 
+  di Software Libero, dovremo lavorare per migliorare questo aspetto 
+  dell'ecosistema mobile del Software Libero. 🙂
+  </p>
+  
+  <p>
+    <strong><span style="color:#3394ce"> FSFE</span></strong>: Grazie. 
+    Qual è il modo più veloce per iniziare a utilizzare Plasma Mobile? 
+    Se sono in procinto di acquistare un nuovo dispositivo e sono 
+    interessato a Plasma Mobile, quali sono le mie opzioni?
+  </p>
+  
+  <p>
+    <strong><span style="color:#ce6d33">Bhushan</span></strong>: Ci sono 
+    alcuni fornitori, come Pine64 e Purism, che hanno dispositivi con 
+    installato Linux un modo predefinito, come PinePhone, PinePhone Pro 
+    e Librem 5, e che dovrebbero supportare Plasma Mobile senza troppi 
+    problemi. I dispositivi Pine64 vengono anche forniti con Plasma 
+    Mobile in modo predefinito, ma se questi non dovesse andare bene per 
+    qualsiasi motivo, la comunità postmarketOS sta anche lavorando per 
+    l'aggiunta del supporto del kernel mainline di Linux per i 
+    dispositivi che escono dalla fabbrica con Android. Puoi trovare un <a href="https://wiki.postmarketos.org/wiki/Devices">elenco dei dispositivi supportati in questa pagina</a>.
+  </p>
+
+  <p>
+    <strong><span style="color:#3394ce"> FSFE</span></strong>: 
+    Fantastico. E una volta che abbiamo Plasma Mobile, quali sono le app 
+    che tu più preferisci e che ci consiglieresti?
+  </p>  
+
+  <p>
+    <strong><span style="color:#ce6d33">Bhushan</span></strong>: La 
+    maggior parte delle distribuzioni sono dotare di un insieme di 
+    applicazioni base, come il compositore telefonico, applicazione per 
+    SMS, orologio, impostazioni, ecc. Abbiamo <a href="https://plasma-mobile.org/">un elenco di applicazioni sul sito 
+    web di Plasma Mobile</a> che è possibile consultare.
+  </p>
+  
+  <p>
+  Se però mi chiedete quale sia la mia preferita, è di certo <a href="https://kdeconnect.kde.org/">KDE connect</a> per interagire e 
+    controllare altri dispositivi che utilizzano Plasma Mobile 😉
+  </p>
+
+<figure>
+ <img src="https://pics.fsfe.org/uploads/medium/c038ebc0800a895cd42debf8d44d1ebc.png" alt="Anteprime della pagina principale, calendario, calcolatrice e fotocamera in Plasma Mobile OS"/>
+ <figcaption>
+ Schermate di Plasma Mobile
+ </figcaption>
+</figure>  
+
+  <p>
+    <strong><span style="color:#3394ce"> FSFE</span></strong>: Plasma 
+    Mobile sostiene di essere un ecosistema per telefoni rispettoso 
+    della privacy. Come fa Plasma Mobile a garantire la privacy delle 
+    persone?
+  </p>
+  
+  <p>
+    <strong><span style="color:#ce6d33">Bhushan</span></strong>: Giusto. 
+    Molte applicazioni e software nell'attuale ecosistema mobile sono 
+    essenzialmente creati con lo scopo di tracciare gli utenti e 
+    raccogliere svariati GB di dati sugli utenti.
+  </p>
+  
+  <p>
+  Quasi tutte <strong>queste cose vengono vendute come "miglioramento 
+  dell'esperienza dell'utente" o come "funzionalità", in modo che gli 
+  utenti non percepiscano che vengono raccolti i loro dati</strong>. 
+  Vuoi attivare il telefono con voce? Vuoi condividere la tua attuale 
+  posizione con il tuo amico? Vuoi forse sbloccare il tuo dispositivo 
+  con un'impronta digitale o con il tracciamento degli occhi?
+  </p>
+  
+  <p>
+  La maggior parte degli utenti darà il proprio consenso, e Android/iOS 
+  estrarranno questi dati, li useranno per pubblicità mirata e nel 
+  peggiore dei casi li condivideranno con soggetti governativi che 
+  vogliono spiare gli utenti. Noi di Plasma Mobile ci siamo impegnati a 
+  costruire un ecosistema in cui la privacy dell'utente sia rispettata. 
+  Telemetria opt-in molto elementare a parte, kde.org non raccoglie 
+  alcun dato dell'utente, e lavoriamo per aggiungere lo stesso insieme 
+  di miglioramenti per l'utente senza raccolta nascosta di dati o 
+  pubblicità mirata.
+  </p>
+  
+  <p>
+  Oltre a questo, essere aperti per sua natura significa che gli utenti 
+  sono liberi di ispezionare l'applicazione/software installati sul 
+  proprio dispositivo per verificare la presenza di qualsiasi 
+  funzionalità anti-privacy o tracker nascosti 🙂
+  </p>
+  
+  <p>
+    <strong><span style="color:#3394ce"> FSFE</span></strong>: Il 
+    contrasto in materia di privacy con gli ecosistemi mobili dominanti 
+    è davvero impressionante. Tornando agli altri dispositivi, i sistemi 
+    GNU/Linux sono famosi per essere in grado di funzionare su una 
+    varietà di dispositivi. Posso usare Plasma Mobile su altri 
+    dispositivi che non siano telefoni, o questa possibilità è prevista 
+    per il futuro?
+  </p>
+
+  <p>
+    <strong><span style="color:#ce6d33">Bhushan</span></strong>: Sì, è 
+    possibile utilizzare Plasma Mobile anche sui dispositivi 
+    tablet/desktop. Molti di noi programmatori, tra l'altro, sviluppano 
+    Plasma Mobile facendolo girare inizialmente sul desktop 🙂 Alcune 
+    distribuzioni offrono immagini live che è possibile avviare sul 
+    proprio computer portatile per provare Plasma Mobile.
+  </p>
+
+  <p>
+    <strong><span style="color:#3394ce"> FSFE</span></strong>: Sembra 
+    divertente! Come ultima domanda, vorremmo chiederti cosa ti motiva 
+    nel tuo lavoro per Plasma Mobile?
+  </p>
+  
+  <p>
+    <strong><span style="color:#ce6d33">Bhushan</span></strong>: La mia 
+    motivazione è duplice. Primo, credo molto nell'idea di Plasma 
+    Mobile, e vorrei aiutare la comunità di KDE a raggiungere questo 
+    obiettivo, e la mia seconda motivazione è la tecnologia. Il mio DNA 
+    è di sviluppatore, e Plasma Mobile è supportato da diverse 
+    tecnologie ed è divertente svilupparci sopra!
+  </p>
+  
+  <p>
+    <strong><span style="color:#3394ce"> FSFE</span></strong>: Grazie 
+    Bhushan, per l'intervista e anche per offrirci un'alternativa 
+    rispettosa della privacy nell'attuale mondo mobile. Auguro tutto il 
+    meglio al progetto Plasma Mobile, che contribuisce alla libertà del 
+    software.
+  </p>
+
+  <p>
+    <strong><span style="color:#ce6d33">Bhushan</span></strong>: Grazie mille a voi!
+  </p>
+
+<br/><br/>
+<br/>
+<br/>
+<br/>
+<hr/>  
+  <p>
+    * BDFL: Acronino per "benevolo dittatore a vita" (benevolent 
+    dictator for life), vuole prendersi gioco del potere degli sviluppatori di 
+    Software Libero che hanno l'ultima parola in una disputa.
+  </p>
+
+</body-complete>
+    <image url="https://pics.fsfe.org/uploads/big/6e35e7f3972dab183787344981dfc924.png" alt="Un telefono su cui gira Plasma Mobile, e un team di sviluppatori"/>
+    <link>/news/2022/news-20220323-01.html</link>
+    <tags>
+  <tag key="front-page"/>
+  <tag key="interview">Intervista</tag>
+  <tag key="upcyclingandroid">Upcycling Android</tag>
+  <tag key="security">Sicurezza informatica</tag>
+</tags>
+    <discussion href="https://community.fsfe.org/t/819"/>
+  </news>
+</newsset>

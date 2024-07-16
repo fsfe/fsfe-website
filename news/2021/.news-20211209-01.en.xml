@@ -1,0 +1,498 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- ***************************************************** -->
+<!-- This file has been automatically generated.           -->
+<!-- Please do not modify it, and do not commit it to git. -->
+<!-- ***************************************************** -->
+
+<newsset>
+  <news date="2021-12-09">
+    <title>20 Years FSFE: Interview with Vincent Lequertier on AI</title>
+    <body>
+      <p>
+	In our sixth birthday publication we are interviewing Vincent 
+	Lequertier about crucial aspects of artificial intelligence, such 
+	as its transparency, its connection to Open Science, and questions 
+	of copyright. Vincent also recommends further readings and responds 
+	to 20 Years FSFE.
+  </p>
+    </body>
+    <body-complete>
+
+<h1>20 Years FSFE: Interview with Vincent Lequertier on AI</h1>
+
+  <p>
+	In our sixth birthday publication we are interviewing Vincent 
+	Lequertier about crucial aspects of artificial intelligence, such 
+	as its transparency, its connection to Open Science, and questions 
+	of copyright. Vincent also recommends further readings and responds 
+	to 20 Years FSFE.
+  </p>
+
+ <p>
+   A PhD candidate at the Claude Bernard university in Lyon who 
+   researches artificial intelligence for healthcare, Vincent supports 
+   software freedom and volunteers for the FSFE in his free time. He 
+   has been a part of the <a href="https://wiki.fsfe.org/Teams/System-Hackers">System 
+   Hackers</a>, the team responsible for the technical infrastructure 
+   of the FSFE, for many years. His contribution was valuable in 
+   setting the foundation for the for the good state that the FSFE's 
+   System Hackers team is today. Vincent is also a member of the FSFE's 
+   General Assembly, and participates in the 'Public Money? Public 
+   Code!' campaign. In our interview, Vincent shares his thoughts 
+   answering questions about the current state of AI and its future 
+   implications.
+ </p>
+
+<h3 id="interview-with-Nico-Rikken">Interview with Vincent Lequertier</h3>
+
+  <p>
+	<strong> FSFE: You are deeply involved in the field of artificial 
+	intelligence. How would you explain to a 10-year-old what AI 
+	is?</strong>
+  </p>
+
+<div class="answer">
+  <p>
+	<strong>Vincent Lequertier:</strong> A few years ago I was a 
+	speaker at a local radio station, and sometimes I was responsible 
+	for mixing the audio. At the station, there were several inputs: the 
+	mics of the radio speakers (mine included), the music, the jingles, 
+	and so on. And then there was the output broadcast to the radio 
+	listeners. Between the inputs and output there was the mixing 
+	table, with its uncountable knobs and sliders. I needed to adjust 
+	the knobs and sliders so that the inputs were well mixed together, 
+	thus producing an output that sounded nice to the listeners. At the 
+	time of writing, an AI works just like that. It automatically adjusts 
+	the numerous parameters of a digital, virtual mixing table. 
+	Once put through it, the inputs produce a satisfying output 
+	according to a predefined definition of success (that the sound was 
+	nice in this analogy).
+  </p>
+</div>
+
+  <figure>
+    <img src="https://pics.fsfe.org/uploads/medium/9161b78da1d86f828a793d2fbf000dfd.jpg"/>
+  <figcaption>A PhD candidate at the Claude Bernard university in Lyon who 
+   researches artificial intelligence for healthcare, Vincent supports 
+   Software Freedom and volunteers for the FSFE in his free time.</figcaption>
+  </figure>
+
+<div class="question">
+  <p>
+	<strong>You are advocating for accessible and transparent AI. 
+	According to your research, what would you say are the necessary 
+	requirements to make sure that programs using artificial 
+	intelligence are accessible and transparent?</strong>
+  </p>
+</div>
+
+<div class="answer">
+ <p>
+  Reusing AIs makes sense because they are costly to develop and 
+  train, both in terms of human and computer resources. Additionally, 
+  training AI models demands a lot of data which are particularly hard 
+  to obtain and work with. Therefore, being able to reuse an AI is 
+  important, as it saves time and potentially scarce resources. 
+  Moreover, making an AI available to others fosters innovation by 
+  facilitating collaboration. I think a fundamental requirement for AI 
+  accessibility is Free Software, because AIs licensed as Free Software 
+  (also known as Open Source) are inherently accessible. Other 
+  requirements can be Open Standards and Open Data. AI models should 
+  therefore be published and freely accessible.
+ </p>
+ 
+ <p>
+  Transparency in AI is the ability to understand and interpret the 
+  output coming from it. Although given the complexity of today's AI 
+  systems transparency can be hard to obtain, it is an important 
+  characteristic as it fosters trust. <strong>Being able to understand why a 
+  given output was produced, and what part contributed the most to it, 
+  increases confidence in the model and makes it easier to debug.</strong> 
+  Moreover, understanding the role played by each input can help 
+  data-driven policy making. For example, in healthcare, understanding 
+  the most important factors impacting the quality of patients' care 
+  for a disease can validate or change healthcare practices. Free 
+  Software is a key part of transparency because it allows everyone to 
+  use the AI and analyze its predictions to better understand them.
+ </p>
+</div>
+
+<div class="question">
+  <p>
+	<strong>How can we make sure that inequalities in our current 
+	societies do not pass on to AI data training? How can we assure 
+	that AI results are fair?</strong>
+  </p>
+</div>
+
+<div class="answer">
+ <p>
+  As AI is really good at magnifying existing inequalities found in the 
+  data used for its training, fairness issues will creep into AI. 
+  Detecting those issues in the dataset and in the AI's output is 
+  therefore critical. However, simply removing data that might be a 
+  source for unfairness (e.g. a training dataset variable that is not 
+  representative of the data used once the model is put in production) 
+  may not always work, because these data might be correlated to other 
+  attributes in the dataset which would need to be removed as well. 
+  Completely removing any potential inequality may therefore remove a 
+  lot of data from the dataset, potentially limiting the ability 
+  of the AI to properly address the problem it has been designed to 
+  solve. Inequalities therefore come from badly constructed datasets, 
+  and advanced methods are required to circumvent them.
+ </p>
+  
+ <blockquote>
+  Data related to COVID-19 are public, and <a href="https://covidtracker.fr/">the most popular website</a> to 
+  visualize these data as well as other tools <a href="https://github.com/CovidTrackerFr">are Free Software</a>.  
+ </blockquote>
+
+
+ <p>
+  To detect fairness issues, a definition of fairness must be decided 
+  upon. For example, fairness may be defined as whether pairs of 
+  similar individuals get similar predictions (individual fairness), or 
+  it may be defined as whether predictions are similar across a 
+  majority and minority group according to some characteristics (group 
+  fairness). This fairness measure may be computed once the AI has 
+  been trained to identify potential unfairness, or may be computed 
+  during the AI training so that it can take the notion of fairness 
+  into account when it adjusts its parameters.  
+ </p>
+
+ <p>
+  Free Software is also important here, as it <strong>allows everyone to check 
+  for fairness issues, whether by inspecting the source code or by 
+  running the AI directly and analysing its predictions.</strong>
+ </p>
+</div>
+
+<figure>
+ <img src="https://pics.fsfe.org/uploads/medium/8d10355a4334cefde7f2f21d6f44daaa.jpg"/>
+ <figcaption>
+  Vincent Lequertier presents crucial points about AI during an FSFE Community meeting in Bolzano. Italy, 2019.
+ </figcaption>
+</figure>
+
+<div class="question">
+ <p>
+  <strong>
+   Your research focuses on healthcare, a field that has universally 
+   raised the question of supporting Open Science. To what extent are 
+   health metrics and biometrics open? Is artificial intelligence for 
+   healthcare a big and globally collaborative aim or independent and 
+   competitive?
+  </strong>
+ </p>
+</div>
+
+<div class="answer">
+ <p>
+  Well, it depends! Because of security and privacy, access to 
+  individualized healthcare metrics is often restricted and each study 
+  using them must be approved by a ethical committee. However, 
+  aggregated statistics may be widely available. For example, the 
+  website data.gouv.fr has a <a href="https://www.data.gouv.fr/fr/pages/donnees-sante/">section 
+  dedicated to healthcare</a>. Also, the data related to COVID-19 are 
+  public, and <a href="https://covidtracker.fr/">the most popular 
+  website</a> to visualize these data as well as other tools <a href="https://github.com/CovidTrackerFr">are Free Software</a>.   
+ </p>
+
+ <blockquote>
+  The openness and collaborative aspects of research on AI will 
+  improve, partly because scientific journals encourage researchers to 
+  share all the research materials, including source code, and also 
+  because funding institutions can also ask them to do so. [...]   I also think that the 
+  line of reasoning around our "<a href="https://publiccode.eu/">Public Money? Public 
+  Code!</a>" campaign applies for AI research.
+ </blockquote>
+
+ <p>
+  However, it should be noted that data without enough granularity can 
+  reduce the AI's performance in healthcare, as, just like humans, 
+  an AI application needs to have detailed information, especially if 
+  the goal of the AI is to make predictions at the individual level. 
+  Because healthcare outcomes are so dependent on context, prediction 
+  abilities depend on specific healthcare situations. More open data 
+  and more Free Software (i.e. Open Science) make it easier to 
+  collaborate. A shared dataset released under a Free Software licence creates a "playground" where AI 
+  models can be easily compared and where we can create benchmarking 
+  tasks, such as hospital length of stay prediction. Without a proper 
+  benchmarking task, finding methodological improvements is harder. An 
+  example of an open dataset for healthcare is <a href="https://physionet.org/content/mimiciii/">MIMIC</a>.
+  Also, a lot of papers about AI research are freely available on arxiv.org. I 
+  think the openness and collaborative aspects of research on AI will 
+  improve, partly because scientific journals encourage researchers to 
+  share all the research materials, including source code, and also 
+  because funding institutions can also ask them do do so. For example 
+  the Horizon 2020 program of the European Union <a href="https://ec.europa.eu/programmes/horizon2020/en/h2020-section/open-science-open-access">values 
+  Open Science</a>.
+ </p>
+
+ <p>
+  I also think that the line of reasoning around our "<a href="https://publiccode.eu/">Public Money? Public Code!</a>" 
+  campaign applies for AI research.
+ </p>
+</div>
+
+
+<div class="question">
+ <p>
+  <strong>
+   A common expectation for the future of AI is that it can have abrupt 
+   economical and societal impact by making many job positions 
+   redundant. Do you see this as a possibility for the upcoming years? 
+   If so, is there any practice that could alleviate these 
+   consequences? Would Free Software be one?
+  </strong>
+ </p>
+</div>
+
+<div class="answer">
+ <p>        
+  I think AI has come a long way in the last ten years. It is more and 
+  more able to organize and structure information. The fields which 
+  have made the most impressive progress are natural language 
+  processing (i.e. tasks involving text such as sentiment analysis) and 
+  computer vision (i.e. tasks involving images such as image 
+  classification). In natural language processing, deep learning models 
+  can semantically understand words and documents as well as the 
+  relationships between them. So I think the jobs where AI will be able 
+  to assist us (I consider things only from a technical point of view 
+  here) are the jobs dealing with a lot of structured information that 
+  needs to be understood, processed, and memorized, as AI is becoming 
+  better at this than us. For example, AI-based software has shown 
+  good results in assisting in <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6268174/">radiology</a>, 
+  legal document analysis, and programming (see next question). So 
+  it's possible that AI makes people more efficient, which would 
+  reduce the amount of human work required. However, this work would 
+  require skills where AI does not work well at the time of writing, 
+  such as creativity or emphatic and thoughtful communication.
+ </p>
+
+ <blockquote>
+  The jobs where AI will be able to assist us (I consider things only 
+  from a technical point of view here) are the jobs dealing with a lot 
+  of structured information that needs to be understood, processed, and 
+  memorized, as AI is becoming better at this than us. For example, 
+  AI-based software has shown good results in assisting in <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6268174/">radiology</a>, 
+  legal document analysis, and programming. 
+ </blockquote>
+
+ <p>
+  If AI is bound to get better, and will at some point have the 
+  capacity to completely automate some work, transparency and fairness 
+  can only become more and more important.  Although not sufficient, 
+  Free Software is a big part of what helps putting strong 
+  safeguards in place.
+ </p>
+ <p>
+  However, I don't think it's up to the scientific community to design 
+  policies around employment. Putting together a proof of concept or 
+  finding a novel theory that could automate some work is not a reason 
+  for implanting it in everyday lives. In the past years, the EU has 
+  already had to deal with AI applications that are impressive 
+  technically but raise ethical concerns. For example, the Clearview AI 
+  facial recognition platform has been judged illegal in some EU 
+  countries, and citizens have the right to opt out from this 
+  technology. The next few years will be important with regard to AI 
+  ethical concerns, and the upcoming EU Artificial Intelligence Act 
+  might play a big role in it.
+ </p>
+ <p>
+  And finally, although I'm not a historian, I think that over the last 
+  centuries we have made tremendous technological progress and 
+  society has always evolved along with it. Thinking about the past 
+  challenges of technological improvements would help us to 
+  understand whether they would be different this time around, and how to 
+  deal with them as best as we can.
+ </p>
+</div>
+
+<figure>
+  <img src="https://pics.fsfe.org/uploads/medium/97bcc3b73d413a4eae7143025fb6323f.jpg"/>
+  <figcaption>FSFE Community Meeting during Rencontres mondiales du logiciel libre conference in Strasbourg. France, 2018.</figcaption>
+</figure>
+
+<div class="question">
+ <p>
+  <strong>
+   What legal issues do you think will be raised regarding AI in the 
+   next ten years? Would it be issues of ownership or responsibility? 
+   For example, we are already seeing ethical and technical aspects of 
+   the AI ownership in  Github's Copilot. We 
+   are interested to know what the upcoming crucial questions are, 
+   according to you.
+  </strong>
+ </p>
+</div>
+
+<div class="answer">
+ <p>
+  Issues around ownership and responsibility will be very important, 
+  and Copilot is a prime example of that, where the fundamental 
+  question is whether AI creations can be considered as novel ideas, 
+  and, if they do, whether they are copyrightable on their own. 
+  Specifically on Copilot, the fact that a code completion tool may 
+  yield <a href="https://twitter.com/mitsuhiko/status/1410886329924194309">straight 
+  copies of licensed work</a> can be problematic, as, at the time of 
+  writing, the AI does not know the licence under which the source of 
+  autocompleted code is released, and how the licence should be 
+  respected. For example, to the best of my knowledge, it is not clear 
+  whether code autocompleted by Copilot originally released under the 
+  GNU Public Licence makes the rest of the project a derivative work. 
+  Being able to freely use source code often comes with obligations 
+  that need to be fulfilled, regardless of whether it is accessed by an 
+  AI or a human being. Our <a href="https://reuse.software/">REUSE 
+  project</a>, which aims to make it easier to programmatically 
+  understand how a project and its diverse components are licensed, may 
+  help building licensing-aware programming tools. The same legal 
+  troubles apply to other models able to generate content, in domains 
+  such as in painting or in music production.  
+ </p>
+    
+ <p>
+  Another legal issue is with patents, where <strong>the question of 
+  whether an AI can be a patent author is still undecided</strong>. In 
+  the UK and EU, a patent whose inventor was an AI was rejected because 
+  they considered that AI does not have a legal personality and cannot 
+  have a legal right over its output. But a couple of months ago, <a href="https://theconversation.com/in-a-world-first-south-africa-grants-patent-to-an-artificial-intelligence-system-165623">the 
+  first patent which lists AI as the inventor was approved</a>.
+ </p>
+</div>
+
+ <blockquote>
+  The fundamental question is whether AI creations can be considered as 
+  novel ideas, and, if they do, whether they are copyrightable on their 
+  own.    
+ </blockquote>
+
+<div class="question">
+ <p>
+  <strong>
+   Is there any book about artificial intelligence you would like to recommend to our readers?
+  </strong>
+ </p>
+</div>
+
+<div class="answer">
+
+ <p>
+  I can't recommend "Genesis" from Bernard Beckett enough. It is a 
+  small novel showing a philosophical debate around the questions of 
+  what it means to be human and of whether machines can have 
+  consciousness. The classic "I, Robot" from Isaac Asimov also raises 
+  many questions that make a lot of sense today (it was published in 
+  1950!) If we are building autonomous robots with some freedom of 
+  action, what safeguards must we put in place? The book is really 
+  about how to ensure AI works as intended.
+ </p>
+
+</div>
+
+<div class="question">
+ <p>
+  <strong>
+   You have been a part of the FSFE for several years. What is an 
+   important thing that you learnt from this experience?
+  </strong>
+ </p>
+</div>
+
+<div class="answer">
+ <p>
+  I learnt that Free Software can be viewed from a lot of different 
+  angles and is not only a technical topic. This translates into the 
+  diversity and breadth of our community. This diversity is a huge 
+  strength.
+ </p>
+</div>
+
+
+<div class="question">
+ <p>
+  <strong>
+   And what is a story that still makes you smile when you remember it? 
+  </strong>
+ </p>
+</div>
+
+<div class="answer">
+ <p>
+  My first FOSDEM in 2019. I met some awesome people from our 
+  community. That was really heartwarming.
+ </p>
+</div>
+
+<div class="question">
+  <p>
+    <strong>As a last question, what do you wish the FSFE for the next 20 years?</strong>
+  </p>
+</div>
+
+<div class="answer">
+ <p>
+  I wish the FSFE will be able to tackle the challenges ahead. The next 
+  years will be full of innovations that will make technology even more 
+  ubiquitous in our lives. I hope we will be able to keep spreading the 
+  word about Free Software and the values behind it.
+ </p>
+</div>
+
+ <blockquote>
+  Being able to freely use source code often comes with obligations 
+  that need to be fulfilled, regardless of whether it is accessed by an 
+  AI or a human being. Our <a href="https://reuse.software/">REUSE 
+  project</a>, which aims to make it easier to programmatically 
+  understand how a project and its diverse components are licensed, may 
+  help building licensing-aware programming tools.  
+ </blockquote>
+
+<div class="question">
+  <p>
+    <strong>FSFE: Thank you very much!</strong>
+  </p>
+</div>
+
+<h3>About "20 Years FSFE"</h3>
+
+  <p>
+    In 2021 the Free Software Foundation Europe turns 20. This means 
+    two decades of <a href="/about/about.html">empowering users to 
+    control technology</a>. 
+  </p>
+    <figure>
+      <img src="https://pics.fsfe.org/uploads/medium/53aeebdafa0a0c83324dcafc1e4bef1c.png" alt="Banner with FSFE 20 years. FSFE since 2001"/>
+    </figure>
+  <p>
+    Turning 20 is a time when we like to take a breath and to look back 
+    on the road we have come, to reflect the milestones we have passed, 
+    the successes we have achieved, the stories we have written, and 
+    the moments that brought us together and that we will always 
+    joyfully  remember. In 2021 we want to give momentum to the 
+    FSFE and even more to our pan-European community, the community 
+    that has formed  and always will form the shoulders that our 
+    movement relies on. 
+  </p>
+
+  <p>
+    <strong>20 Years FSFE is meant to be a celebration of everyone who 
+    has accompanied us in the past or still does. Thank you for your 
+    place in the structure of the FSFE today and for setting the 
+    foundation for the next decades of software freedom to 
+    come.</strong>
+  </p>
+
+</body-complete>
+    <image url="https://pics.fsfe.org/uploads/medium/8d10355a4334cefde7f2f21d6f44daaa.jpg" alt=""/>
+    <link>/news/2021/news-20211209-01.html</link>
+    <tags>
+  <tag key="front-page"/>
+  <tag key="interview">Interview</tag>
+  <tag key="AI">AI</tag>
+  <tag key="fsfe20">20 Years FSFE</tag>
+</tags>
+    <discussion href="https://community.fsfe.org/t/769"/>
+  </news>
+</newsset>

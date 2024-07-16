@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- ***************************************************** -->
+<!-- This file has been automatically generated.           -->
+<!-- Please do not modify it, and do not commit it to git. -->
+<!-- ***************************************************** -->
+
+<newsset>
+  <news date="2021-12-03">
+    <title>Infrastrutture che rispecchiano gli ideali della libertà del software</title>
+    <body>
+      <p>Organizzazioni con risorse limitate possono avere il pieno controllo digitale e fornire comunque servizi moderni? Non è banale, ma la FSFE dimostra che è possibile. Insieme a noi approfondisci la nostra infrastruttura per scoprire come vengono gestiti i diversi servizi della FSFE e affrontate le numerose sfide. Una storia non solo per tecnici.</p>
+    </body>
+    <body-complete>
+
+<h1>Infrastrutture che rispecchiano gli ideali della libertà del software</h1>
+
+<p>Organizzazioni con risorse limitate possono avere il pieno controllo digitale e fornire comunque servizi moderni? Non è banale, ma la FSFE dimostra che è possibile. Insieme a noi approfondisci la nostra infrastruttura per scoprire come vengono gestiti i diversi servizi della FSFE e affrontate le numerose sfide. Una storia non solo per tecnici.</p>
+
+<p>Organizzazioni benefiche e non profit si scontrano con dei limiti ogni giorno: personale, budget, tempo e la persistente questione di come utilizzare le donazioni nel modo più efficiente possibile. Quando si arriva all'infrastruttura tecnica, molte organizzazioni purtroppo decidono di darla in gestione ad esterni e di utilizzare servizi proprietari e non liberi. Con questa decisione, rinunciano alla libertà del software e quindi al pieno controllo digitale e all'indipendenza.</p>
+
+<p>Fin dalla sua fondazione, più di 20 anni fa, la FSFE ha seguito la strada opposta. Partendo già dall'inizio, ci siamo sempre affidati al Software Libero anche se talvolta ha voluto dire non essere in grado di offrire servizi alla moda. Date le risorse limitate, dobbiamo continuamente scegliere tra funzionalità utili e manutenibilità.</p>
+
+<figure>
+  <img src="https://pics.fsfe.org/uploads/medium/a9669e241527f1769e2fe67418a77f0d.jpg" alt="Le quattro libertà e sopra esse i servizi di Software Libero"/>
+</figure>
+
+<p>E comunque la nostra infrastruttura non è né perfetta né trasferibile 1:1 ad altre organizzazioni. Ma riteniamo importante che le organizzazioni scambino le loro esperienze e ciò che imparano, soprattutto quando è a riguardo di qualcosa di importante come la libertà del software.</p>
+
+<p>Lasciati quindi condurre in un viaggio attraverso la nostra struttura e i suoi principi, dalle stupende interfacce utente dei nostri <a href="#services">servizi</a>, passando dai <a href="#virtualisation">metodi di virtualizzazione</a> e il <a href="#monitoring">monitoraggio</a>, arrivando fino ai <a href="#servers">server fisici</a> su cui girano. Questa non è una storia solo per gli addetti ai lavori, ma per chiunque sia interessato a rendere o mantenere una ONG indipendente dai fornitori di servizi proprietari.
+</p>
+
+<h2 id="team">Un team e i suoi principi</h2>
+
+<p>Tutta l'infrastruttura della FSFE è gestita dagli <a href="https://wiki.fsfe.org/Teams/System-Hackers">hacker di sistema</a>. Soltanto pochi anni fa, in un momento di maggiore carenza tecnica e di ristrutturazione, il team era composto da sole tre persone. Fortunatamente, da allora abbiamo visto una costante crescita dei membri. Oggi, è un team ben in salute che consiste in 9 volontari attivi, integrato da due membri dello staff che dedicano parte del loro lavoro alle attività del team.</p>
+
+<figure>
+  <img src="https://pics.fsfe.org/uploads/medium/04ff9b7b037924fa522e2a1e47ac3a94.JPG" alt="Foto di gruppo degli hacker di sistema nel 2020"/>
+  <figcaption>Foto dal meeting degli hacker di sistema nel 2020 a Lione</figcaption>
+</figure>
+
+<p>Con un team di queste dimensioni era fondamentale definire <a href="https://wiki.fsfe.org/Teams/System-Hackers/Principles">i principi fondamentali per questo team</a>, che formano le basi degli obiettivi degli hacker di sistema:
+  più controllo possibile dei servizi e dei server usando 100%
+  Software Libero, trasparenza interna ed esterna e una complessità sostenibile, e allo stesso tempo fornire funzionalità utili ai vari team della FSFE e a tutta la comunità.</p>
+
+<p>A parte il lavoro puramente autonomo, le email e le chat, nei tempi pre-pandemia gli hacker di sistema si incontravano fisicamente anche almeno una volta all'anno, e continuano a farlo ora in maniera virtuale. Durante questi incontri, eravamo in grado di affrontare efficacemente più decisioni complesse e cambiamenti tecnici, ma ci gustavamo anche semplicemente le conversazioni non tecniche e attività divertenti. Il team è coordinato da noi, gli autori di questo testo, Albert e Max, che mantengono anche un vasto numero di servizi e sistemi.</p>
+
+<h2 id="services">Servizi, servizi ovunque</h2>
+
+<p>L'infrastruttura della FSFE è molto orientata ai servizi. I volontari e lo staff si basano su funzionalità di base come inviare e ricevere email o scambiarsi file, ma anche su un sito web alimentato da un sistema di controllo delle versioni, su una wiki, su un sistema di videoconferenza e chat. Per fare solo un esempio delle complesse interconnessioni dei diversi componenti, il solo scrivere e pubblicare questo articolo ha coinvolto almeno 12 servizi che devono funzionare insieme perfettamente.</p>
+
+<module id="banner-become-supporter"/>
+
+<p>I servizi più importanti ed attualmente più utilizzati sono Mailman per le mailing list o Gitea come nostro sistema Git per il controllo delle versioni. Al fine di permettere la condivisione e salvaguardare la conoscenza, i nostri <a href="https://wiki.fsfe.org/Teams/WikiCaretakers">curatori della Wiki</a> mantengono MoinMoin, mentre Björn si occupa di Nextcloud per condividere i file, coordinare le attività e modificare collaborativamente i documenti. Gestiamo le nostre istanze di BigBlueButton e Jitsi per le video conferenze, e XMPP/Jabber per le chat testuali. Altri servizi aggiunti recentissimamente sono Matrix come altro servizio di chat, introdotto e mantenuto da Michael, e Peertube per ospitare e condividere i nostri video tramite la nostra infrastruttura, reso possibile da Alvar.
+</p>
+
+<p>La lista dei servizi è <a href="https://wiki.fsfe.org/TechDocs/Services">molto ampia</a> ed include anche sistemi fondamentali come il sistema per la gestione degli account e il database della comunità sviluppati da <a href="/news/2021/news-20210305-01.html">Reinhard</a>, i nostri server DNS, o
+  Drone come nostro sistema di integrazione e distribuzione continua (CI/CD, Continue Integration Continue Delivery) che elabora i dati da Gitea, li controlla, e alla fine li installa su altri server.
+</p>
+
+<p>È inutile dire che il team riceve periodicamente richieste per fornire servizi aggiuntivi. Qui la sfida è quella di fare una attenta selezione basata sulle risorse disponibili (di calcolo, di spazio, di tempo dei volontari) e stimare l'utilizzo per l'organizzazione, e valutare se una soluzione sia facilmente mantenibile, se non si sovrappone a servizi esistenti e se lascia in generale una buona impressione.</p>
+
+<p>Questo significa anche che dobbiamo testare le soluzioni nella pratica su un periodo di tempo più lungo. La modifica in tempo reale dei documenti è un ottimo esempio, per la quale abbiamo attualmente molteplici possibilità. I documenti più corposi sono spesso modificati con file ODF tramite Collabora Online collegata a Nextcloud, ma alcuni preferiscono usare direttamente Etherpad o Git. Tutte le soluzioni hanno vantaggi e lati negativi, e non è così banale trovare un buon compromesso tra avere varie opzioni da una parte e sovraccaricare le risorse dall'altra.</p>
+
+<h2 id="virtualisation">Virtualizzazione e distribuzione</h2>
+
+<p>Se da una parte la FSFE possiede dei server dedicati posti in rack (torneremo sul punto più avanti), tutti i servizi vengono eseguiti in qualche sorta di virtualizzazione. Al momento della stesura di questo articolo, contiamo un totale di 43 macchine virtuali distribuite su diversi centri di elaborazione. Alcune hanno solo un utilizzo interno, ad esempio fare da gateway per altre macchine virtuali o assistere i servizi web creando certificati TLS.</p>
+
+<figure class="no-border">
+  <a href="https://pics.fsfe.org/uploads/big/0b41e57a4d5163ef911cfd913b9af640.png">
+    <img src="https://pics.fsfe.org/uploads/medium/0b41e57a4d5163ef911cfd913b9af640.png" alt="All virtual servers of the FSFE"/>
+  </a>
+  <figcaption>Una panoramica dei server virtuali della FSFE attualmente in esecuzione e la loro distribuzione sui diversi cluster.
+  </figcaption>
+</figure>
+
+<p>Altre, al contrario, ospitano un certo numero di vari servizi. Dal 2017 stiamo usando <a href="https://git.fsfe.org/explore/repos?q=docker&amp;topic=1">Docker</a> come motore per i
+  container. Non è stata una scelta semplice, dal momento che la tecnologia aggiunge molta complessità e talvolta richiede stratagemmi straordinari per poter funzionare in modo sicuro. D'altro canto, specialmente per piccoli servizi o strumenti più complessi scritti da noi, è l'ideale per farli partire velocemente, testarli e distribuirli con il nostro sistema di integrazione continua, fornendo un ambiente locale di sviluppo più o meno uniforme, e mantenere una (innegabilmente limitata) riproducibilità delle configurazioni.</p>
+
+<p>Periodicamente valutiamo motori alternativi che forniscano un accesso senza privilegi di root più trasparente, che siano compatibili con il nostro sistema CI/CD
+  (Drone) e con il proxy inverso, e che preferibilmente non richiedano una sostanziosa riscrittura del codice esistente per la distribuzione. Ancora una volta, anche qui, è importante per gli hacker di sistema che almeno due membri conoscano a fondo la tecnologia ad alta priorità.
+</p>
+
+<p>Per far partire le macchine virtuali e implementare servizi non legati a container in un modo riproducibile, ci <a href="https://git.fsfe.org/explore/repos?q=ansible&amp;topic=1">affidiamo molto ad
+  Ansible</a>, uno strumento per la gestione dell'installazione e configurazione. Se anche la messa in servizio con Ansible potrebbe non essere perfetta, apprezziamo l'approccio dell'infrastruttura come se fosse codice, che può essere eseguita da qualsiasi computer e non richiede un server centrale. Nel frattempo, solo pochi servizi non sono mantenuti né da Ansible né da Docker, il che rende più semplice la comprensione dell'infrastruttura esistente, il reclutamento di nuovi volontari e la documentazione dei cambiamenti.</p>
+
+<h2 id="monitoring">L'occhio che tutto osserva e uniformità</h2>
+
+<p>Dozzine di server e servizi: come si fa a sapere se c'è un problema con uno dei essi? Dobbiamo ammettere che solo fino a due anni fa qualche volta venivamo a sapere che un server si era bloccato da una mail di un gentile membro della comunità. Ora abbiamo un <a href="https://git.fsfe.org/fsfe-system-hackers/monitoring">sistema di monitoraggio basato su Icinga2</a> che si occupa di questo. Attualmente ci sono 50 server e 690 servizi che vengono continuamente controllati, ad esempio gli aggiornamenti pendenti del sistema operativo, i servizi di systemd, backup non andati a buon fine, spazio su disco, o validità del certificato TLS.</p>
+
+<p>Questo controllo è semplificato da altre parti della nostra strategia: con l'eccezione di 4 macchine virtuali, su tutti i server gira Debian GNU/Linux. Dopo la creazione iniziale, una nuova macchina viene impostata con una configurazione <a href="https://git.fsfe.org/fsfe-system-hackers/baseline">di riferimento</a> con i settaggi critici per la sicurezza, il monitoraggio, il backup e gli aggiornamenti automatici. Grazie a questo, la manutenzione di un server è per lo più limitata ai servizi che vi girano sopra, e altri miglioramenti possono essere applicati automaticamente a molti server in pochi minuti.</p>
+
+<p>Per rendere ancora più semplice la gestione e la manutenzione, qualche volta scriviamo degli strumenti ad-hoc. Ad esempio, <a href="https://git.fsfe.org/fsfe-system-hackers/ssh-key-distributor">ssh-key-distributor</a>
+  fornisce una interfaccia e un metodo di messa in produzione semplici per gestire e documentare gli accessi via SSH sui nostri server. Oppure
+  <a href="https://git.fsfe.org/fsfe-system-hackers/docker-utils">docker-utils</a>, che è fatto su misura per la nostra infrastruttura Docker e si occupa di analizzare e aggiornare le immagini Docker e i container. Entrambi gli strumenti sono stati creati dal nostro studente lavoratore Linus. Puoi trovare più strumenti e più in generale la maggior parte del codice di messa in produzione
+  di Ansible/Docker nei
+  <a href="https://git.fsfe.org/fsfe-system-hackers">repository Git</a>.
+</p>
+
+<h2 id="servers">Server fisici</h2>
+
+<p>Al contrario dell'attuale attuale nell'industria informatica, siamo fieri di far girare la stragrande maggioranza dei servizi sui nostri server fisici. Questo ci garantisce il massimo controllo, la sicurezza dei dati con dischi completamente criptati e l'indipendenza tecnologica. Per incrementare la flessibilità, mettiamo assieme 3 server in un cluster Proxmox con Ceph per lo storage, in modo che se un server fisico dovesse crashare, una macchina virtuale può essere semplicemente spostata su uno degli altri due server del cluster.
+</p>
+
+<p>Come sicurezza addizionale, i tre cluster e una macchina singola sono spalmati su quattro diversi data center che ci hanno <a href="/donate/hardware.html">gentilmente donato lo spazio</a>.
+</p>
+
+<p>Questo è però possibile solo grazie ad una fortunata combinazione di condizioni. Prima di tutto, siamo fortunati di avere Albert con noi che ha moltissima esperienza, tra le varie altre cose, con Proxmox, Ceph e una conoscenza approfondita di come funziona la rete. Poi, abbiamo il gentile supporto dei data center che ci forniscono la possibilità di mettere i nostri server così come anche i donatori dell'hardware, e i <fsfe-cd-donate-link>sostenitori della FSFE</fsfe-cd-donate-link> che contribuiscono finanziariamente. E possiamo anche beneficiare di una configurazione all'incirca identica su tutti e quattro i siti che rende la manutenzione un po' più semplice. Ma stiamo comunque considerando di dismettere i cluster formati dai server più vecchi così come la macchina fisica singola per ridurre lavoro e complessità.</p>
+
+<h2 id="challenges">Le sfide attuali e future</h2>
+
+<p>Nel corso degli anni, siamo riusciti a superare molte sfide: carenza tecnica, software obsoleto che ha bloccato gli aggiornamenti del sistema operativo, mancanza di risorse hardware, crash fatale di componenti singoli, e difficili decisione tecniche di come sviluppare ulteriormente l'infrastruttura. In uno di questi momenti difficili, il nostro prima stagista e da allora hacker di sistema <a href="/about/people/interviews/lequertier.html">Vincent</a>
+ha svolto un ruolo importante e ha aiutato a porre le fondamenta per l'ottimo stato in cui siamo oggi. Malgrado tutta la preparazione e tutte le valutazioni, abbiamo sempre fatto molti errori, ma – molto più importante – da essi abbiamo imparato molto.</p>
+
+<module id="banner-subscribe"/>
+
+<p>Ci sono nuovi ostacoli che stiamo affrontando ora. Ad esempio, con un grossa mole di server, non possiamo più dare ad ogni macchina virtuale un indirizzo IPv4 dedicato. Sfortunatamente, molte tecnologie e servizi Internet, e anche grandi aziende proprietarie e presumibilmente professionali, non supportano ancora il più moderno, orientato al futuro e già vecchio di 20 anni protocollo IPv6. Questo richiede di trafficare con qualche stratagemma come il <a href="https://git.fsfe.org/fsfe-system-hackers/ip-proxy/">proxy inverso</a>, i <a href="https://git.fsfe.org/fsfe-system-hackers/docker2caddy/">servizi di ricerca dei container</a>,
+  <a href="https://git.fsfe.org/fsfe-system-hackers/fsfe-gw">NAT</a> e <a href="https://git.fsfe.org/fsfe-system-hackers/innernet-playbook">VPN</a>.
+</p>
+
+<p>Un'altra decisione interessante da prendere è quella che riguarda i canali di comunicazione. Se le email solo testo e, dal 2004, XMPP/Jabber
+  hanno costituito lo standard di fatto per la FSFE, molte persone nel tempo hanno preferito <a href="https://wiki.fsfe.org/TechDocs/Matrix">Matrix</a>,
+  <a href="https://community.fsfe.org">Discourse</a> o ancora il tradizionale IRC. Se da una parte vediamo vantaggi e svantaggi in ognuno di questi canali, dall'altra vorremmo anche evitare la frammentazione della nostra comunità. Non è una questione puramente tecnica, ma un ottimo esempio delle necessità per un buona comunicazione all'interno del team e per prendere delle decisioni.</p>
+
+<p>Non da ultimo, abbiamo qualche tecnologia che è per noi un grattacapo. Prendiamo Mailman 2 come esempio con cui sono state gestite le nostre 116 mailing list per anni. Purtroppo il progetto non è più sviluppato attivamente, e il suo successore e le alternative hanno tutti delle serie inconvenienze. Qui abbiamo bisogno di fare una accurata valutazione e molti test, e alla fine trovare la migliorare soluzione tra la mole di opzioni imperfette.</p>
+
+<p>Detto questo, vorremmo esprimere la nostra gratitudine ai molti progetti di Software Libero di tutto il mondo e ai loro sviluppatori. Ci garantiscono la possibilità di scegliere tra diverse soluzioni, formano le fondamenta della nostra infrastruttura e forniscono favolose soluzioni che rendono la nostra vita più semplice ogni giorno. È un piacere essere parte di questa grande comunità.</p>
+
+<h2>Perché tutto questo?</h2>
+
+<p>Come hai potuto vedere, l'infrastruttura tecnica della nostra organizzazione è tutto fuorché noiosa o semplice. Questo non è dovuto solo alle dimensioni della FSFE e della sua comunità, ma anche ai nostri standard elevati: vivere la libertà del software nella pratica e mantenere quanta più possibile indipendenza tecnica e quanto più possibile pieno controllo. Allo stesso tempo, ci curiamo dell'accessibilità tecnica per permettere anche ai non tecnici di interagire con i nostri servizi. Questo talvolta richiede un lavoro e degli strumenti aggiuntivi, ma siamo convinti che ne valga la pena.</p>
+
+<p>Tutto questo dipende dalla dedizione e dall'impegno a lungo termine di molte persone, ed è alimentato da suo uso produttivo e dai riscontri dell'intera comunità della FSFE. Ed è possibile solo grazie ai sostenitori della FSFE che ci permettono di investire risorse in una infrastruttura completamente formata da Software Libero. Se condividi questo ideale, <fsfe-cd-donate-link>se puoi fai una donazione</fsfe-cd-donate-link>.
+</p>
+
+</body-complete>
+    <image url="https://pics.fsfe.org/uploads/medium/a9669e241527f1769e2fe67418a77f0d.jpg" alt="Le quattro libertà e sopra esse i servizi di Software Libero"/>
+    <link>/news/2021/news-20211203-01.html</link>
+    <tags>
+  <tag key="front-page"/>
+  <tag key="internal">Interno FSFE</tag>
+  <tag key="tech-teams">Team tecnico</tag>
+</tags>
+    <author id="dengg"/>
+    <author id="mehl"/>
+    <discussion href="https://community.fsfe.org/t/775"/>
+  </news>
+</newsset>

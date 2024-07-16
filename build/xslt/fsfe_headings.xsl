@@ -78,34 +78,34 @@
               </xsl:variable>
 
               <xsl:choose>
-                  <xsl:when test="@id and document('../../about/people/people.en.xml')/personset/person[@id=$id]">
+                  <xsl:when test="@id and document('../../fsfe.org/about/people/people.en.xml')/personset/person[@id=$id]">
                   <!-- if the author is in fsfe's people.xml then we take information from there -->
                     <xsl:choose>
                       <!-- person has a link -->
-                      <xsl:when test="document('../../about/people/people.en.xml')/personset/person[@id=$id]/link">
+                      <xsl:when test="document('../../fsfe.org/about/people/people.en.xml')/personset/person[@id=$id]/link">
                           <xsl:element name="a">
                                   <xsl:attribute name="class">author p-author h-card</xsl:attribute>
                                   <xsl:attribute name="rel">author</xsl:attribute>
-                                  <xsl:attribute name="href"><xsl:value-of select="document('../../about/people/people.en.xml')/personset/person[@id=$id]/link" /></xsl:attribute>
-                                  <xsl:if test="document('../../about/people/people.en.xml')/personset/person[@id=$id]/avatar">
+                                  <xsl:attribute name="href"><xsl:value-of select="document('../../fsfe.org/about/people/people.en.xml')/personset/person[@id=$id]/link" /></xsl:attribute>
+                                  <xsl:if test="document('../../fsfe.org/about/people/people.en.xml')/personset/person[@id=$id]/avatar">
                                           <xsl:element name="img">
                                                   <xsl:attribute name="alt"></xsl:attribute>
-                                                  <xsl:attribute name="src">/about/people/avatars/<xsl:value-of select="document('../../about/people/people.en.xml')/personset/person[@id=$id]/avatar" /></xsl:attribute>
+                                                  <xsl:attribute name="src">/about/people/avatars/<xsl:value-of select="document('../../fsfe.org/about/people/people.en.xml')/personset/person[@id=$id]/avatar" /></xsl:attribute>
                                           </xsl:element>
                                   </xsl:if>
-                                  <xsl:value-of select="document('../../about/people/people.en.xml')/personset/person[@id=$id]/name" />
+                                  <xsl:value-of select="document('../../fsfe.org/about/people/people.en.xml')/personset/person[@id=$id]/name" />
                           </xsl:element>
                       </xsl:when>
                       <!-- person has no link -->
                       <xsl:otherwise>
-                          <xsl:if test="document('../../about/people/people.en.xml')/personset/person[@id=$id]/avatar">
+                          <xsl:if test="document('../../fsfe.org/about/people/people.en.xml')/personset/person[@id=$id]/avatar">
                                   <xsl:element name="img">
                                           <xsl:attribute name="alt"></xsl:attribute>
-                                          <xsl:attribute name="src">/about/people/avatars/<xsl:value-of select="document('../../about/people/people.en.xml')/personset/person[@id=$id]/avatar" /></xsl:attribute>
+                                          <xsl:attribute name="src">/about/people/avatars/<xsl:value-of select="document('../../fsfe.org/about/people/people.en.xml')/personset/person[@id=$id]/avatar" /></xsl:attribute>
                                   </xsl:element>
                           </xsl:if>
                           <span class="author p-author">
-                            <xsl:value-of select="document('../../about/people/people.en.xml')/personset/person[@id=$id]/name" />
+                            <xsl:value-of select="document('../../fsfe.org/about/people/people.en.xml')/personset/person[@id=$id]/name" />
                           </span>
                       </xsl:otherwise>
                     </xsl:choose>

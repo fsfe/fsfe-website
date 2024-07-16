@@ -105,7 +105,7 @@ for tag in $(ls "fsfe.org/tags" | sed -rn 's/tagged-(.*)\.en.xhtml/\1/p'); do
   fi
 done
 
-for tag in $(ls -a "tags" | sed -rn 's/.tagged-(.*)\.xmllist/\1/p'); do
+for tag in $(ls -a "fsfe.org/tags" | sed -rn 's/.tagged-(.*)\.xmllist/\1/p'); do
   if [ ! -f "${tagmaps}/${tag}" ]; then
     echo "*   Deleting fsfe.org/tags/.tagged-${tag}.xmllist"
     rm "fsfe.org/tags/.tagged-${tag}.xmllist"

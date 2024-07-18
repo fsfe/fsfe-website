@@ -24,6 +24,7 @@
       </xsl:element>
       <xsl:text>Your browser dows not support the audio element.</xsl:text>
     </xsl:element>
+    
 
     <!-- Subscribe feed / Download file row -->
     <xsl:element name="div">
@@ -64,6 +65,13 @@
             <xsl:value-of select="/buildinfo/document/podcast/mp3/url" /><xsl:text>?ref=download</xsl:text>
           </xsl:attribute>
           MP3
+        </xsl:element>
+         <xsl:text> | </xsl:text>
+        <xsl:element name="a">
+          <xsl:attribute name="href">
+            <xsl:value-of select="/buildinfo/document/podcast/transcript/url" /><xsl:text>?ref=download</xsl:text>
+          </xsl:attribute>
+          Transcript
         </xsl:element>
       </xsl:element>
     </xsl:element>

@@ -1,0 +1,726 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<html>
+ <version>3</version>
+<head>
+<title>Transcript SFP Special</title>
+</head>
+<body>
+  
+<h1>Transcript of SFP Special about GNU Health with Dr. Luis Falcón and Dr. Axel Braun</h1>
+
+<p><a href="/news/podcast/episode-special-1.html">Back to the episode SFP#25</a></p>
+<p>This is a transcript created with the Free Software tool Whisper. For more information and feedback reach out to <email mailto="yes">podcast@fsfe.org</email></p>
+
+<pre class="transcript">
+WEBVTT
+
+00:00.000 --> 00:06.160
+Unfortunately, as we do this podcast remotely this time, we cannot provide the same level
+
+00:06.160 --> 00:09.400
+of audio quality as you are used to in this podcast.
+
+00:09.400 --> 00:14.720
+We apologize for this and will look into better solutions for remote recordings for future
+
+00:14.720 --> 00:15.560
+episodes.
+
+00:30.560 --> 00:34.160
+Welcome to the sixth episode of the Software Freedom Podcast.
+
+00:34.160 --> 00:37.840
+This podcast is presented to you by the Free Software Foundation Europe.
+
+00:37.840 --> 00:41.120
+We are a charity that empowers users to control technology.
+
+00:41.120 --> 00:44.560
+I'm Matthias Kirschner, I'm the president of the Free Software Foundation Europe
+
+00:44.560 --> 00:46.880
+and I'm doing this podcast with Bonnie Merring.
+
+00:46.880 --> 00:52.080
+Hello, in times where the corona virus spreads around the world, every country is busy with
+
+00:52.080 --> 00:57.520
+countering or preparing the healthcare system for this crisis. Software is a crucial tool
+
+00:57.520 --> 01:00.320
+that can support humankind in this challenge.
+
+01:00.320 --> 01:04.320
+In this episode, we will focus on one of such tools, new health.
+
+01:04.320 --> 01:07.600
+New health is the Libre Health and Hospital Information System.
+
+01:07.600 --> 01:11.120
+Our guests for today are Dr. Axel Brown and Dr. Louis Falcon.
+
+01:11.120 --> 01:15.680
+Louis Falcon is the founder of the new Solidario and the author of Knew Health.
+
+01:15.680 --> 01:19.920
+Axel Brown published the first Knew Health life city and is deeply involved in the Knew Health
+
+01:19.920 --> 01:22.640
+project. So welcome Axel and welcome Louis.
+
+01:23.600 --> 01:27.200
+Thank you, Matthias and thank you, Bonnie, for inviting us over here
+
+01:27.200 --> 01:30.480
+and presenting new health to the Free Software hackers.
+
+01:31.520 --> 01:32.560
+Yeah, and likewise.
+
+01:32.560 --> 01:36.480
+Axel, can you start with briefly introducing what Knew Health is in general?
+
+01:37.360 --> 01:42.960
+Knew Health is a fully featured health and hospital information and management system.
+
+01:43.680 --> 01:50.640
+So we can distinguish for different areas of functionality or for different layers which
+
+01:50.640 --> 01:56.880
+all build on top of each other. The first area is the area of social medicine.
+
+01:56.880 --> 02:00.960
+Here we look at an individual before he becomes a patient.
+
+02:00.960 --> 02:06.560
+So we can look how he's living at his housing conditions, what his family relationships are,
+
+02:07.440 --> 02:15.520
+what his socioeconomic lifestyle is and so on. As soon as he becomes a patient and has to enter
+
+02:15.520 --> 02:21.760
+a hospital or a health practitioner's office or something like that, we do the full recording
+
+02:21.760 --> 02:30.080
+of his medical record with all activities involved. So the diagnosis, the prescriptions,
+
+02:31.280 --> 02:36.560
+the health situation, the history and everything around.
+
+02:37.680 --> 02:44.320
+The next layer is the area of managing a hospital or a practitioner's office.
+
+02:44.880 --> 02:50.800
+So there we have everything that you need. For example, management of housing, of beds,
+
+02:50.800 --> 02:56.480
+of operation rooms, surgery rooms, of health professionals, of pharmacy.
+
+02:57.440 --> 03:04.400
+We have a laboratory module. We have connectors to external systems like PACSERVERS.
+
+03:05.040 --> 03:09.520
+These are servers that manage medical images and something like that.
+
+03:10.800 --> 03:15.600
+Or the interconnection layer of financial accounting, supply chain management and so on.
+
+03:16.240 --> 03:23.680
+And last but not least, we have the area of reporting where we focus mainly on the
+
+03:23.680 --> 03:30.000
+Ministry of Health and their reporting needs, but as well as local authorities and hospital
+
+03:30.000 --> 03:35.200
+management. That's really interesting. And here at Lewis, that you were the author of,
+
+03:35.200 --> 03:38.800
+can you have, how and why did you get the idea for it?
+
+03:39.360 --> 03:47.360
+New health starts in the north of Argentina in 2006. We were actually doing implementations
+
+03:47.360 --> 03:55.440
+or deploying new Linux systems on rural schools. That gave me the idea to put together
+
+03:55.440 --> 04:05.600
+my background as a computer scientist and in medicine to work on social medicine and help
+
+04:05.680 --> 04:11.920
+the rural doctors to improve the determinants of health for their population.
+
+04:11.920 --> 04:22.000
+And that was the initial idea behind new health to work on social medicine and to work on primary care.
+
+04:22.640 --> 04:31.040
+And then within the years, we have seen how it has evolved to a full-blown health and hospital
+
+04:32.000 --> 04:36.800
+Lewis, can you briefly explain to our listeners what you understand under social medicine?
+
+04:37.360 --> 04:47.360
+By social medicine, we talk about all those determinants of health related to the socio-economic
+
+04:47.360 --> 04:57.360
+conditions of a person or a society. We could say that social medicine prevents social diseases.
+
+04:58.320 --> 05:07.680
+If we look today, we have over 20,000 children that die every single day from social diseases.
+
+05:07.680 --> 05:15.440
+What does it mean? We look at tuberculosis, we look at jagged disease, we look at war, we look at
+
+05:15.440 --> 05:23.680
+prostitution, we look at modern world slavery, all of those are social diseases.
+
+05:24.400 --> 05:34.480
+And what we do with new health, it's making sure that we have the tools to capture all those
+
+05:34.480 --> 05:42.560
+hot spots, homeless people, overcrowding conditions of those houses, domestic violence.
+
+05:43.680 --> 05:48.400
+If we don't tackle those issues, we are not doing inventive medicine.
+
+05:49.360 --> 05:56.960
+Because if you don't do that, what you are doing, it's working on the areas of the system of disease.
+
+05:56.960 --> 06:05.440
+And that's what most countries in the Western world do, erroneously, on my humble opinion.
+
+06:05.440 --> 06:11.520
+Because what you are doing today in most health systems is not preventive medicine.
+
+06:11.520 --> 06:16.640
+You are doing reactive medicine. You are trying to cure somebody that is already sick.
+
+06:17.440 --> 06:22.720
+And if somebody is already sick, probably, and we have seen perfectly, and I guess we'll talk
+
+06:22.720 --> 06:31.760
+later about that in the COVID-19 pandemic. If you tackle the sources of the disease soon enough,
+
+06:32.320 --> 06:40.480
+then you are doing good preventive medicine and you would detect the outbreaks before they become
+
+06:40.480 --> 06:47.760
+an epidemic. You already mentioned COVID-19, and it's a huge challenge for the whole
+
+06:47.760 --> 06:53.040
+healthcare system around the world. So I was wondering, what are your thoughts on your team,
+
+06:53.040 --> 07:02.560
+and how do you deal with this situation? So it's a tragedy, right? It's a tragedy that, on my opinion,
+
+07:02.560 --> 07:12.960
+we could have prevented as a humanity. COVID-19 or SARS-CoV-2, it's a new virus,
+
+07:13.760 --> 07:22.000
+but the same family of viruses, also, coronavirus, have been doing really bad epidemics,
+
+07:22.560 --> 07:29.600
+but we have us epidemic, and then we had the nurse epidemic.
+
+07:29.680 --> 07:36.480
+How could we have help with this? Well, mainly in different areas, as Axel was saying before,
+
+07:36.480 --> 07:45.200
+we work on the concept of people before patients. We have all the domiciliar units. We know at
+
+07:45.200 --> 07:51.520
+every single moment who lives where we have operational areas that divide the country or the
+
+07:51.520 --> 07:57.920
+region, administrative sectors, where those are provinces, cities, and whatever. So each of
+
+07:58.400 --> 08:05.200
+these administrative areas, we know are the hospitals are there. We know which health professionals
+
+08:05.200 --> 08:11.520
+are active. The specialty of all these health professionals should we need them to go from one
+
+08:11.520 --> 08:18.640
+place to the other. We know that nicity, the education level, the population density, population density
+
+08:18.640 --> 08:27.040
+is key on COVID-19 and many other infectious diseases. We know that the higher the population
+
+08:27.040 --> 08:35.680
+densities, the faster that the disease will spread. And guess what? The highest areas
+
+08:36.640 --> 08:45.520
+or the most dense population are always on the slums. They are always on areas of poverty. All
+
+08:45.520 --> 08:53.200
+those pockets of poverty and social exclusions are the areas or are the worst reservoirs
+
+08:54.160 --> 09:00.960
+or contagious diseases. You know, just to give you an analogy, the ventilation of the houses.
+
+09:01.840 --> 09:07.360
+You know in New Health, how many rooms do you have there? Is it well ventilated? How many people
+
+09:07.360 --> 09:11.360
+is actually living there? Do you have good sanitary conditions? Do you have sewers?
+
+09:12.080 --> 09:20.160
+So, and by the way, all of these is geo-referensated and geo-located linked to open street maps.
+
+09:21.120 --> 09:28.000
+So, again, look at this. If we have all this information, we are doing preventive medicine.
+
+09:28.720 --> 09:36.000
+We can track, we can do contact tracing when we have an index case. Imagine like this. Now,
+
+09:36.000 --> 09:44.240
+we know that we need to do tests, right? To check the antibodies where they are early stage antibodies,
+
+09:44.240 --> 09:53.360
+early infection stage antibodies, or where they are the IGG, and those are the memory antibodies.
+
+09:53.360 --> 10:01.680
+So, if you are IGM or early stage infection antibody is positive, it means that you are going through
+
+10:02.320 --> 10:08.720
+at this moment of active disease. Now, if you are IGG, that means that you already passed
+
+10:09.520 --> 10:17.840
+the disease, you are most probably immune to that disease. So, in that case, you could go back to work.
+
+10:18.720 --> 10:27.840
+And that's beautiful. So, we can do point-of-care testing with New Health in outpatient settings
+
+10:28.560 --> 10:35.920
+and get that information. So, putting all of these together and Axel can talk more if he wants
+
+10:35.920 --> 10:42.400
+about the inpatient settings and ICU and all that. But all of these that I'm talking now,
+
+10:42.400 --> 10:49.360
+it's all about preventing the disease and the pandemic to actually spread further.
+
+10:50.000 --> 10:57.680
+And that is a key that distinguishes New Health from other hospital management information
+
+10:57.680 --> 11:06.720
+systems because we before tackling the disease, we tackle the causes and the source, the root
+
+11:06.720 --> 11:13.200
+that generate that disease. And that is doing good primary care program, that is doing good
+
+11:13.760 --> 11:18.080
+public health program, health promotion and disease prevention.
+
+11:19.120 --> 11:21.120
+Axel, do you have anything to add here?
+
+11:21.120 --> 11:26.960
+Question was how do we think about it and what could we do about it? I mean, what we're trying
+
+11:26.960 --> 11:34.240
+is to network with other parties. For example, there was a press release about one or two weeks ago
+
+11:34.880 --> 11:42.720
+about the German company Bush wanted to release an analytic device that should do a corona test
+
+11:42.720 --> 11:51.360
+in about two hours, which would be a tremendous increase because currently you need a couple of days
+
+11:51.440 --> 11:58.080
+until you get a result. So I got a contact with Bush and asked them, look guys, we have a
+
+11:58.080 --> 12:04.960
+free health and hospital information system here. So we can immediately take your testing result,
+
+12:04.960 --> 12:11.680
+put them into the database, analyze them and do all the necessary steps behind it.
+
+12:12.240 --> 12:19.360
+Wouldn't it be an ideal combination if we can interface to your device and so build a nice
+
+12:19.360 --> 12:26.240
+little package, which will be especially interesting for emerging countries, not for the developed
+
+12:26.240 --> 12:33.680
+countries, like we have them here in Europe or North America, but mainly focusing on the emerging
+
+12:33.680 --> 12:43.840
+countries where we expect an explosion of the infection rate in the next weeks. Yeah, having said
+
+12:44.000 --> 12:49.760
+this, I got at least the confirmation that the email was received, but nothing more up to now,
+
+12:49.760 --> 12:55.600
+unfortunately. Is it in general that new health is mainly used in the countries you call
+
+12:55.600 --> 13:02.000
+emerging countries or where is it mainly used? Yes, basically it's used all around the world.
+
+13:02.000 --> 13:08.800
+As Louis said, the starting point was South America and Argentina. So it is used in various
+
+13:08.800 --> 13:15.200
+hospitals there. We have corporations with the University there and 30 years, for example,
+
+13:15.200 --> 13:21.680
+on the development of new health. We have currently a couple of projects going on in Africa,
+
+13:21.680 --> 13:28.960
+together with World Health Organization and the local ministries of health. We have implementations
+
+13:28.960 --> 13:37.120
+in Middle East, for example, in Pakistan. In India, big implementations going on at the moment
+
+13:37.920 --> 13:46.800
+and, for example, one of the oldest implementations is in Laos, the Center for Medical Rehabilitation,
+
+13:46.800 --> 13:54.160
+where they are taking care about people who are suffering from unexploded ordinances from the Vietnam
+
+13:54.160 --> 14:04.480
+War. In developed countries like Europe, there we have a high level of regulation. So if you look
+
+14:04.560 --> 14:10.640
+at Germany, for example, first of all, you need a certification if you want to deal with a public
+
+14:10.640 --> 14:17.440
+health system. We have two implementations from which we know in Germany. One is a charitable
+
+14:17.440 --> 14:25.520
+organization. They are giving medical help for homeless, for refugees, for people without health
+
+14:25.520 --> 14:32.640
+insurance and something like that, and they use new health to record their patients and the diagnosis
+
+14:32.880 --> 14:39.760
+and so on. And the other implementation is with an alternative practitioner who is only,
+
+14:40.480 --> 14:49.280
+let's say, bill-private patients. So both are not in relation and have no connection with the
+
+14:49.280 --> 14:54.880
+public health system. If you want to do business with the public health system, you need to have
+
+14:54.880 --> 15:01.760
+certain certifications. And as long as nobody stands up and say, look, we think this is interesting,
+
+15:02.320 --> 15:09.440
+and we want to pay for the certifications, we're probably not going to do it. So if by chance Mr. Spahn
+
+15:09.440 --> 15:16.960
+is listening, if he wants to spend some money in a sensible way, or if directive to the
+
+15:16.960 --> 15:25.440
+schematic, it would probably be a piece of cake for them to put the certification in place for
+
+15:25.440 --> 15:30.400
+new health, because it's all open and free software, so it should be easy for them to do that.
+
+15:31.120 --> 15:38.880
+But at the moment, we see not many interests from side of the European Ministry of Health,
+
+15:38.880 --> 15:46.240
+unfortunately. Do you see a way how this could be fixed? That is now interested from the European
+
+15:46.240 --> 15:51.520
+Health Commission. Yeah, I mean, the public sector is not straightforward with their open-source
+
+15:51.520 --> 15:59.200
+strategy. The German Christ Democrats have this now decided, basically, that if they develop
+
+15:59.200 --> 16:05.040
+software from public money, it should be released as source software, which is basically the
+
+16:05.040 --> 16:10.720
+public money, public code initiative, also driven from the free software foundation, Europe.
+
+16:10.720 --> 16:18.560
+I think this is a good approach, but the difficult thing is the way how free software comes into
+
+16:18.560 --> 16:24.480
+a company or into the public sector is completely different from the way it works with business
+
+16:24.480 --> 16:29.920
+software or proprietary software. So if you send out a request for information and say, look,
+
+16:29.920 --> 16:37.360
+I'm going to install a new ERP system and what are your offers? Then it takes two days and you
+
+16:37.360 --> 16:42.880
+have the sales troops already on your doorstep and telling you why this is the perfect system that
+
+16:42.960 --> 16:50.400
+you just have to buy and you're done forever. Perfect, wonderful. That does not work with free software
+
+16:50.400 --> 16:57.520
+because free software is not being sold to you. You have to become an active part and investigate
+
+16:57.520 --> 17:04.480
+for information. You can of course ask in the community and so on, but there is nobody coming to
+
+17:04.560 --> 17:14.000
+you and trying to sell you this. And this change of mind has to take place in the companies and
+
+17:14.000 --> 17:21.120
+in the public sector. And I think before this change in the mindset is not taking place, we will not
+
+17:21.120 --> 17:27.600
+be really successful with establishing free software in public institutions. I mean, there is free
+
+17:27.600 --> 17:32.320
+software, I think, where when people hear someone is interested in that, you have people reaching
+
+17:32.400 --> 17:38.080
+out to them and selling them their services. But for new health, how is it looking there? I mean,
+
+17:38.080 --> 17:44.800
+how are you financing yourself and what people are you having involved in your team? So is it mainly
+
+17:44.800 --> 17:53.280
+coders there or mainly doctors or how is it your team set up? We have a mixed team. We have a
+
+17:53.280 --> 18:00.960
+couple of medical doctors, of course. We have people from universities involved. I'm for example,
+
+18:00.960 --> 18:07.920
+I'm coming from a consulting background. I've spent many years in the ERP business and have
+
+18:07.920 --> 18:16.080
+done development there as well. The finance thing is of course an issue because we are fully
+
+18:16.080 --> 18:25.680
+financed only from donations. Recently received first small donation from the public sector,
+
+18:26.480 --> 18:34.240
+local health ministry. But besides this, we are only having donations from individuals mostly
+
+18:34.240 --> 18:41.200
+and of course a lot of volunteer work. When Lewis was explaining all this with with new health
+
+18:41.200 --> 18:47.760
+and how it's using a lot of data and a lot of all the private data from the living circumstances
+
+18:47.760 --> 18:53.440
+of people, I can imagine that there are some countries where, for example, Germany, where you
+
+18:53.440 --> 19:00.800
+also live, where people react a little bit like, oh, that's a huge privacy concern. So how do you
+
+19:00.800 --> 19:05.520
+tackle that? On one side, you can benefit from a lot of data there, but on the other hand,
+
+19:05.520 --> 19:10.720
+when a lot of this data is gathered, how do you make sure that a system like new health that doesn't
+
+19:10.720 --> 19:19.360
+turn into a surveillance tool for some countries? Yeah, it's a very interesting and a very important
+
+19:19.360 --> 19:27.680
+question. So first of all, we are taking widely-except standards, for example, for data encryption.
+
+19:28.400 --> 19:39.440
+So we're using new PG as the tool to sign data, certificates or prescriptions or to encrypt data.
+
+19:40.080 --> 19:45.600
+And we could encrypt data down to the lowest field level, basically, if this is needed.
+
+19:46.560 --> 19:54.000
+But if we have a fully encrypted database, we could probably not take benefit from
+
+19:54.800 --> 20:02.880
+interrelations between data records, the data analytical part. So here we need to draw an abstraction
+
+20:02.880 --> 20:11.280
+layer in between that allows us to analyze the data, but on the other hand, not go back onto
+
+20:11.280 --> 20:20.160
+an individual, because we are very concerned about data privacy. And unfortunately,
+
+20:20.160 --> 20:27.680
+what we've seen up to now is that always, let's say, comfort, beads, security, and privacy.
+
+20:28.960 --> 20:36.000
+So the people do not really take care about the value of their data, and I mean the current data,
+
+20:36.960 --> 20:43.040
+general data protection regulations as we have them now are in many areas really over the top.
+
+20:43.760 --> 20:51.360
+But I feel in some areas they are completely right. For example, that I have the right to ask
+
+20:51.920 --> 21:00.320
+each company or each local ministry about the data that is stored about myself and that I have
+
+21:00.800 --> 21:06.480
+the right for fortification. Thank you all. But for the overview of new health and how this could
+
+21:06.480 --> 21:13.360
+help with the pandemic, I was wondering what are your next steps, especially in regard to the
+
+21:13.360 --> 21:19.600
+current pandemic. Are you planning to implement any new tools in new health? We already have
+
+21:19.600 --> 21:27.760
+updated new health with ICD 10 codes of the pandemic. Now we can also, if you do point of
+
+21:28.240 --> 21:36.080
+testing, you can certify and associate the health condition with that code itself. So as I said,
+
+21:36.080 --> 21:41.680
+from public health point of view, it's very good because at that point, you could say, well,
+
+21:41.680 --> 21:48.000
+this person is already immune because he went through and he passed the disease and he has developed
+
+21:48.000 --> 21:55.440
+the antibodies and so on. And on the other hand, we are working with the community in having new
+
+21:56.400 --> 22:02.880
+health implemented with telemedicine where, you know, you can use the federation or the
+
+22:02.880 --> 22:09.520
+new health mobile application that that's what we are doing now on QT. So, you know, the person can
+
+22:09.520 --> 22:18.960
+do this rapid test from his house and also allow primary care physicians to give instructions
+
+22:19.040 --> 22:25.440
+on in an outpatient settings because, you know, new health is also embedded. So with the Raspberry
+
+22:25.440 --> 22:33.200
+PI, for example, they can have the new health on their houses and communicate with whether
+
+22:33.200 --> 22:41.760
+is the health professional or the nurse and do a quick assessment on their health status from
+
+22:41.760 --> 22:48.400
+remote. So, you don't compromise those health professionals. The solutions are there. The
+
+22:48.400 --> 22:53.920
+technical functionality is there. We just need the government to listen to us.
+
+22:55.520 --> 22:57.920
+Axel, do you want to add anything to this?
+
+22:57.920 --> 23:04.960
+Yeah, in terms of next steps, we have all the measures in place. We are ICD-10 encoded, including
+
+23:05.520 --> 23:12.080
+the latest encoding for Corona. So, everything is really there. There are some developments going
+
+23:12.080 --> 23:19.680
+on. For example, at the moment, we are working together with the KDE project on a mobile client
+
+23:19.680 --> 23:29.840
+for new health using Kirigami and plasma technology. The federation server, which is the model
+
+23:29.920 --> 23:38.320
+that can be used to connect multiple nodes like health information systems or smaller subsets
+
+23:38.320 --> 23:43.760
+running on a Raspberry PI, like Luis mentioned beforehand, that are reporting into this federation
+
+23:43.760 --> 23:54.320
+server is being developed further in terms of reporting facilities and other projects that are
+
+23:55.120 --> 24:03.120
+have a public funding, for example, Opememis, which is an insurance management tool for
+
+24:03.760 --> 24:10.240
+public health care sector. Thank you, Axel. Thank you, Luis. Unfortunately, we are already
+
+24:10.800 --> 24:18.160
+coming to an end. As in every podcast, I would like to ask the two of you if there are any free
+
+24:18.160 --> 24:24.080
+software developers, contributors or free software projects you would like to thank. Because that's
+
+24:24.080 --> 24:30.400
+what we always encourage people in February to do, but I think especially in times when
+
+24:30.400 --> 24:35.120
+humankind is under threat like this. It's important to not forget to say thank you to others
+
+24:35.120 --> 24:42.240
+who contribute there. So, Luis, is there any individual or project out there you would like to thank?
+
+24:42.240 --> 24:49.760
+Oh, it would be endless. You would take me another hour to thank all the people from Python
+
+24:49.760 --> 24:58.560
+community, LibreOffice where we've done some reporting, Flask, the KDE, and also from the research
+
+24:58.560 --> 25:06.480
+community, the European Bioinformatic Institute that is having all the protein natural variants,
+
+25:06.480 --> 25:12.800
+so important on genomics that we use in new health and genetic diseases, you know, all the research
+
+25:13.680 --> 25:20.720
+community around the world that allow us to build this project, a big thank you, and of course,
+
+25:20.720 --> 25:26.320
+at this moment, big thank you to all health professionals around the world that are giving
+
+25:26.320 --> 25:34.400
+their lives for curing and accompanying the people that is going through the COVID-19 disease,
+
+25:34.400 --> 25:40.400
+a big hug to all of them. So, next to the ones that Luis mentioned already, which would
+
+25:40.480 --> 25:46.880
+on my favorite list as well, I would like to add two projects, first of all, GNU-P, because with
+
+25:46.880 --> 25:53.600
+their technology, they're one of the defenders of a privacy in general, and second of all, I would
+
+25:53.600 --> 26:00.240
+like to thank the OpenSUSA project, because they're a regular sponsor of new health conferences,
+
+26:00.960 --> 26:07.760
+and they are the only distribution that's shipping GNU health already in their system standard
+
+26:08.240 --> 26:13.360
+right now. Thank you. Thank you very much, Axel, thank you very much, Luis, for being with us on
+
+26:13.360 --> 26:20.160
+this podcast. Yeah, thanks, Bonnie and Matthias, and keep the good work of the free software foundation
+
+26:20.160 --> 26:27.200
+Europe up. I think we have to challenge our politicians with free software. Thank you for that.
+
+26:27.840 --> 26:33.840
+Thank you for having us, Bonnie and Matthias, it's been a real pleasure, and thank you for putting
+
+26:33.920 --> 26:41.600
+the accent again on public health care, and keep up the excellent job you're doing with your
+
+26:41.600 --> 26:48.160
+public money, public code. This was the software freedom podcast. If you liked this episode,
+
+26:48.160 --> 26:53.680
+please recommend it to your friends and rate it. Also subscribe to make sure you will get the next
+
+26:53.680 --> 26:57.920
+episode. This podcast is presented to you by the free software foundation Europe,
+
+26:57.920 --> 27:02.640
+where a charity that works on promoting software freedom. If you like our work, please consider
+
+27:02.640 --> 27:08.240
+supporting us with a donation. You'll find more information on FSFE.org slash donate. We're
+
+27:08.240 --> 27:13.280
+looking forward to the next episode with you. Until then, please stay healthy. Goodbye. Goodbye.
+
+</pre>
+
+<p><a href="/news/podcast/episode-special-1.html">Back to the episode SFP Special</a></p>
+
+</body>
+<sidebar promo="our-work">
+
+</sidebar>
+  
+</html> 

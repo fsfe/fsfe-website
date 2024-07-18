@@ -208,7 +208,7 @@ foreach my $item ( $query->param ) {
     my $value = $query->param($item);
     if ( not $item =~ /^_/ and $value ) {
         # Remove size from item info so price is found properly
-        $orig_item = $item;
+        my $orig_item = $item;
         $item =~ s/_.*//;
         my $price = $items->findvalue("/itemset/item[\@id=\"$item\"]/\@price");
         my $subtotal = $value * $price;

@@ -253,11 +253,12 @@ push @odtfill, "Country=" . $country_name;
 foreach my $item ( $query->param ) {
     my $value = $query->param($item);
     if ( not $item =~ /^_/ and $value ) {
+        my $orig_item = $item;
         # Remove size from item info so price is found properly
         $item =~ s/_.*//;
         my $price = $items->findvalue("/itemset/item[\@id=\"$item\"]/\@price");
         push @odtfill, "Count=" . $value;
-        push @odtfill, "Item=" . $item;
+        push @odtfill, "Item=" . $orig_item;
         push @odtfill, "Amount=" . sprintf "%.2f", $value * $price;
     }
 }

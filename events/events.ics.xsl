@@ -16,11 +16,11 @@
 
     <!-- Create variables -->
     <xsl:variable name="start">
-      <xsl:value-of select="translate (@start, '-', '')" />
+      <xsl:value-of select="translate(translate(@start, '-', ''),':','')" />
     </xsl:variable>
 
     <xsl:variable name="end">
-      <xsl:value-of select="translate (@end, '-', '')" />
+      <xsl:value-of select="translate(translate(@end, '-', ''),':','')" />
     </xsl:variable>
 
     <xsl:variable name="link">
@@ -40,9 +40,9 @@
     </xsl:call-template>
     <xsl:call-template name="nl" />
 
-    <xsl:text>DTSTART;VALUE=DATE:</xsl:text><xsl:value-of select="$start" /><xsl:call-template name="nl" />
+    <xsl:text>DTSTART;VALUE=DATE-TIME:</xsl:text><xsl:value-of select="$start" /><xsl:call-template name="nl" />
     <xsl:if test="not($start = $end)">
-      <xsl:text>DTEND;VALUE=DATE:</xsl:text><xsl:value-of select="$end" /><xsl:call-template name="nl" />
+      <xsl:text>DTEND;VALUE=DATE-TIME:</xsl:text><xsl:value-of select="$end" /><xsl:call-template name="nl" />
     </xsl:if>
 
     <xsl:text>URL:</xsl:text>
@@ -72,7 +72,7 @@
     <xsl:text>PRODID:fsfe.org/events/events.ics.xsl</xsl:text><xsl:call-template name="nl" />
       <!-- Future events -->
       <xsl:for-each select="/buildinfo/document/set/event[
-          translate(@start, '-', '') &gt;= translate(/buildinfo/@date, '-', '')
+          translate(substring(@start,1,10), '-', '') &gt;= translate(/buildinfo/@date, '-', '')
         ]">
         <xsl:sort select="@start" order="descending" />
         <xsl:call-template name="event"/>

@@ -119,6 +119,9 @@
         >Name der Veranstaltung<span class="star">*</span></label
       >
       <input name="title" value="" required="required" type="text" />
+      <p class="help-block">
+        Bitte beachte die Eingabezeiten sind in UTC
+      </p>
       <table>
         <tr>
           <td>
@@ -129,8 +132,8 @@
               name="startdate"
               value=""
               required="required"
-              type="date"
-              placeholder="YYYY-MM-DD"
+              type="datetime-local"
+              placeholder="YYYY-MM-DD HH:MM"
             />
           </td>
           <td>
@@ -138,8 +141,8 @@
             <input
               name="enddate"
               value=""
-              type="date"
-              placeholder="YYYY-MM-DD"
+              type="datetime-local"
+              placeholder="YYYY-MM-DD HH:MM"
             />
           </td>
         </tr>
@@ -217,7 +220,7 @@
           Bitte gib hier die Gruppe an, für die die Veranstaltung bestimmt ist.
           Wenn die Veranstaltung von keiner Gruppe getragen wird, wähle bitte
           keine aus. Wenn die lokale Gruppe hier nicht vertreten ist,
-          kontaktiere uns bitte unter contact@fsfe.org. Diese Informationen
+          kontaktiere uns bitte unter <email>contact@fsfe.org</email>. Diese Informationen
           werden verwendet, um die Veranstaltung automatisch zu den
           NextCloud-Kalendern der einzelnen Gruppen hinzuzufügen, deren Links
           auf der Gruppen-Seite zu finden sind.

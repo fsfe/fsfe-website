@@ -71,34 +71,41 @@ echo "Index finished" | tee -a "$LOGFILE"
 echo "Begin syncing filedates with git commit dates" | tee -a "${LOGFILE}"
 ./tools/filedate-sync-git.sh >>"${LOGFILE}"
 echo "File date sync finished" | tee -a "${LOGFILE}"
-# Recently edited files, except news and events
-echo "Search 1" >>"$LOGFILE"
-files=$(find . -type f \( -iname "*\.en\.xhtml" -o -iname "*\.en\.xml" \) -mtime -365 -not -path './news/*' -not -path './events/*' | tee -a "$LOGFILE")
-# News must be more recent
-echo "Search 2" | tee -a "$LOGFILE"
-files+=$'\n'$(find ./news -type f \( -iname "*\.en\.xhtml" -o -iname "*\.en\.xml" \) -mtime -30 | tee -a "$LOGFILE")
-# Files in root directory, probably important
-echo "Search 3" | tee -a "$LOGFILE"
-files+=$'\n'$(find . -maxdepth 1 -type f \( -iname "*\.en\.xhtml" -o -iname "*\.en\.xml" \) | tee -a "$LOGFILE")
-# Activitities are important
-echo "Search 4" | tee -a "$LOGFILE"
-files+=$'\n'$(find ./activities -type f \( -iname "*\.en\.xhtml" -o -iname "*\.en\.xml" \) | tee -a "$LOGFILE")
+files=""
+# Grouped by priority
+files+=$'\n'$(find ./index.en.xhtml | sed 's/$/ 1/')
+files+=$'\n'$(find ./freesoftware/freesoftware.en.xhtml | sed 's/$/ 1/')
+
+files+=$'\n'$(find ./activities -type f \( -iname "activity\.en\.xml" \) | sed 's/$/ 2/')
+
+files+=$'\n'$(find ./activities -type f \( -iname "*\.en\.xhtml" -o -iname "*\.en\.xml" \) | sed 's/$/ 3/')
+files+=$'\n'$(find ./freesoftware -type f \( -iname "*\.en\.xhtml" -o -iname "*\.en\.xml" \) | sed 's/$/ 3/')
+
+files+=$'\n'$(find ./order -maxdepth 1 -type f \( -iname "*\.en\.xhtml" -o -iname "*\.en\.xml" \) | sed 's/$/ 4/')
+files+=$'\n'$(find ./contribute -maxdepth 1 -type f \( -iname "spreadtheword*\.en\.xhtml" -o -iname "spreadtheword*\.en\.xml" \) | sed 's/$/ 4/')
+
+files+=$(find . -type f \( -iname "*\.en\.xhtml" -o -iname "*\.en\.xml" \) -mtime -365 -not -path './news/*' -not -path './events/*' | sed 's/$/ 5/')
+files+=$'\n'$(find ./news -type f \( -iname "*\.en\.xhtml" -o -iname "*\.en\.xml" \) -mtime -30 | sed 's/$/ 5/')
 # Remove files that are not in the list of those managed by git
-files="$(echo "$files""$(git ls-files)" | sort | uniq -d)"
-# List of extra dirs/files to exclude
+tmp=""
+files="$(echo "$files" | while read -r line priority; do if [[ "$(git ls-files | grep -o "${line:2}" | wc -l)" -ge 1 ]] && [[ "$(echo "$tmp" | grep "$line")" == "" ]]; then
+	echo "$line" "$priority"
+	tmp+="$line"
+fi; done)"
+# List of dirs/files to exclude
 exclude=(
 	# Internal pages
 	"internal"
 	# Order Items
-	"order/.*/item"
+	"order/data/items.en.xml"
 	# Stuff not really important for other languages
 	"donate/germany"
 	"donate/netherlands"
 	"donate/switzerland"
-	# The boiler plate
+	# The boilerplate
 	"boilerplate"
 	# Some misc xml files
-	"/\..*\.xml"
+	"/\\\..*\\\.xml"
 )
 exclude_string=""
 exclude_indexes=("${!exclude[@]}")
@@ -111,14 +118,10 @@ for index in "${!exclude[@]}"; do
 		exclude_string+="${exclude["$index"]}"
 	fi
 done
-echo "Pre exclusion files:"$'\n'"${files}" >>"$LOGFILE"
-echo "Excluding according to pattern: ${exclude_string}" >>"$LOGFILE"
-echo "Excluding unwanted files" | tee -a "$LOGFILE"
 files=$(echo "$files" | grep -v "$exclude_string" | sort)
-echo "Post exclusion files:"$'\n'"${files}" >>"$LOGFILE"
 
 echo "Begin generating language status for found langs" | tee -a "$LOGFILE"
-echo "$files" | while read -r fullname; do
+echo "$files" | while read -r fullname priority; do
 	ext="${fullname##*.}"
 	base="${fullname//\.[a-z][a-z]\.${ext}/}"
 	original_version=$(xsltproc build/xslt/get_version.xsl "$base".en."$ext")
@@ -147,11 +150,11 @@ echo "$files" | while read -r fullname; do
 			if [ "$translation_version" == "-1" ]; then
 				translation_url="#"
 			fi
-			echo "$lang $base $originaldate $original_url $original_version $translation_url ${translation_version/-1/Untranslated}"
+			echo "$lang $base $priority $originaldate $original_url $original_version $translation_url ${translation_version/-1/Untranslated}"
 		fi
 	done <"${OUT_TMP}/translations/langs.txt"
-done | sort -t' ' -k 1,1 -k 7,7 -k 2,2 |
-	while read -r lang page originaldate original_url original_version translation_url translation_version; do
+done | sort -t' ' -k 1,1 -k 3,3 -k 2,2 |
+	while read -r lang page priority originaldate original_url original_version translation_url translation_version; do
 		if [[ "$prevlang" != "$lang" ]]; then
 			if [[ "$prevlang" != "" ]]; then
 				cat >>"${OUT_TMP}/translations/$prevlang.html" <<-EOF
@@ -193,8 +196,9 @@ done | sort -t' ' -k 1,1 -k 7,7 -k 2,2 |
 				<body>
 				<h1 id="$lang">Language: $lang</h1>
 				<p><span style="color: red">Red entries</span> are pages where the original is newer than 6 months.</p>
+				<p>Priority decreases with higher numbers. Eg. 1 is highest priority.</p>
 				<table>
-				<tr><th>Page</th><th>Original date</th><th>Original version</th><th>Translation version</th></tr>
+				<tr><th>Page</th><th>Priority</th><th>Original date</th><th>Original version</th><th>Translation version</th></tr>
 			EOF
 			prevlang=$lang
 		fi
@@ -206,7 +210,7 @@ done | sort -t' ' -k 1,1 -k 7,7 -k 2,2 |
 			color=''
 		fi
 		cat >>"${OUT_TMP}/translations/$lang.html" <<-EOF
-			<tr><td><a style="width: 100%; $color">$page</a></td><td>$orig</td><td><a href="$original_url">$original_version</a></td><td><a href="$translation_url">$translation_version</a></td></tr> 
+			<tr><td><a style="$color">$page</a><td>$priority</td></td><td>$orig</td><td><a href="$original_url">$original_version</a></td><td><a href="$translation_url">$translation_version</a></td></tr> 
 		EOF
 	done
 echo "Finished creating language pages" | tee -a "$LOGFILE"

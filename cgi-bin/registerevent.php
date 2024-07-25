@@ -81,7 +81,7 @@ function parse_submission()
         "groupname" => isset($_POST["groupname"]) ? $_POST["groupname"] : "",
         "groupurl" => isset($_POST["groupurl"]) ? $_POST["groupurl"] : "",
         "startdate" => isset($_POST["startdate"]) ? ($_POST["startdate"] . ":00Z") : "",
-        "enddate" => isset($_POST["enddate"]) ?  ($_POST["enddate"] . ":00Z") : "",
+        "enddate" => isset($_POST["enddate"]) ? ($_POST["enddate"] . ":00Z") : "",
         "description" => isset($_POST["description"])
             ? $_POST["description"]
             : "",
@@ -450,7 +450,7 @@ if (
     empty($_POST["spam"]) and
     eval_date($_POST["startdate"]) and
     $_POST["startdate"] > date("Y-M-d", strtotime("-1 year", time())) and
-    eval_date($_POST["enddate"]) || empty($_POST["enddate"]) and
+    eval_date($_POST["enddate"]) and
     !stripos($_POST["email"], "example.com")
 ) {
     $parsed_information = parse_submission();

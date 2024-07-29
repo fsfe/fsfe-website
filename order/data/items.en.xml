@@ -37,23 +37,25 @@
       large="data/pictures/tshirt-nocloud-black-back-large.jpg"/>
   </item -->
   <item type="tshirt" id="tshirt-hacking-4-freedom" price="25.00" date="2024-01-12">
-    <!-- <available size="S" a="46" b="66"/> -->
-    <available size="M"    a="50" b="70"/>
-    <!-- available size="L"    a="51" b="71"/ -->
-    <available size="XL" a="55" b="75"/>
+    <available size="XS"  a="48" b="68"/>
+    <available size="S"   a="50" b="70"/>
+    <available size="M"   a="53" b="70"/>
+    <available size="L"   a="57" b="72"/>
+    <available size="XL"  a="55" b="75"/>
     <available size="XXL" a="57" b="77"/>
-    <available size="3XL" a="58" b="82"/>
-    <!-- available size="4XL"  a="58" b="82"//-->
+    <available size="3XL" a="65" b="79"/>
+    <available size="4XL" a="70" b="82"/>
     <image small="data/pictures/tshirt-H4F-front-small.jpg" large="data/pictures/tshirt-H4F-front-large.jpg"/>
     <image small="data/pictures/tshirt-H4F-back-small.jpg" large="data/pictures/tshirt-H4F-back-large.jpg"/>
   </item>
   <item type="tshirt" id="tshirt-nocloud-petrol" price="25.00" date="2024-01-12">
-    <available size="S" a="46" b="66"/>
-    <available size="M" a="50" b="70"/>
-    <available size="L" a="51" b="71"/>
+    <!-- available size="XS" a="48" b="68"/ -->
+    <available size="S" a="50" b="70"/>
+    <available size="M" a="53" b="70"/>
+    <available size="L" a="57" b="72"/>
     <available size="XL" a="55" b="75"/>
     <available size="XXL" a="57" b="77"/>
-    <available size="3XL" a="58" b="82"/>
+    <available size="3XL" a="70" b="82"/>
     <image small="data/pictures/tshirt-nocloud-petrol-front-small.jpg" large="data/pictures/tshirt-nocloud-petrol-front-large.jpg"/>
     <image small="data/pictures/tshirt-nocloud-petrol-back-small.jpg" large="data/pictures/tshirt-nocloud-petrol-back-large.jpg"/>
   </item>

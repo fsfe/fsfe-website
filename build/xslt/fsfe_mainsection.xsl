@@ -8,6 +8,11 @@
     <xsl:element name="main">
       <xsl:element name="div">
         <xsl:attribute name="id">content</xsl:attribute>
+        <xsl:if test="/buildinfo/@translation_state='very-outdated' or /buildinfo/@translation_state='untranslated'">
+          <xsl:attribute name="lang">
+            <xsl:value-of select="/buildinfo/@original"/>
+          </xsl:attribute>
+        </xsl:if>
         <xsl:if test="/buildinfo/document/body/@microformats">
           <xsl:attribute name="class"><xsl:value-of select="/buildinfo/document/body/@microformats" /></xsl:attribute>
         </xsl:if>

@@ -77,13 +77,15 @@ build_xmlstream(){
   texts_xml="$basedir/global/data/texts/.texts.${lang}.xml"
   date="$(date +%Y-%m-%d)"
   time="$(date +%H:%M:%S)"
-  outdated=no
-
+  
   if [ -f "${shortname}.${lang}.xhtml" ]; then
     act_lang="$lang"
-    [ $(get_version "${shortname}.${olang}.xhtml") -gt $(get_version "${shortname}.${lang}.xhtml") ] && outdated=yes
+    translation_state="up-to-date"
+    [ $(get_version "${shortname}.${olang}.xhtml") -gt $(get_version "${shortname}.${lang}.xhtml") ] && translation_state="outdated"
+    [ $(( $(get_version "${shortname}.${olang}.xhtml") - 3 )) -gt $(get_version "${shortname}.${lang}.xhtml") ] && act_lang="$olang" && translation_state="very-outdated"
   else
     act_lang="$olang"
+    translation_state="untranslated"
   fi
 
   infile="${shortname}.${act_lang}.xhtml"
@@ -95,7 +97,7 @@ build_xmlstream(){
 	  filename="/${shortname#$basedir/}"
 	  dirname="/${dirname#$basedir/}"
 	  language="$lang"
-	  outdated="$outdated"
+	  translation_state="$translation_state"
 	>
 
 	<trlist>

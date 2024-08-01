@@ -79,6 +79,24 @@
 
       </xsl:element>
 
+      <xsl:element name="div">
+        <xsl:attribute name="id">notifications</xsl:attribute>
+        <xsl:element name="div">
+          <xsl:attribute name="class">alert warning yellow</xsl:attribute>
+          <xsl:element name="a">
+            <xsl:attribute name="class">close</xsl:attribute>
+            <xsl:attribute name="data-dismiss">alert</xsl:attribute>
+            <xsl:attribute name="href">#</xsl:attribute>
+            <xsl:attribute name="aria-hidden">true</xsl:attribute>
+            ×
+          </xsl:element>
+            <xsl:element name="p">
+            <xsl:text>The pdfreaders campaign has ended, and this site is no longer updated.</xsl:text>
+          </xsl:element>
+        </xsl:element>
+    </xsl:element>
+
+
       <xsl:call-template name="notifications" />
 
       <xsl:element name="main">

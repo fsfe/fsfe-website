@@ -1,0 +1,52 @@
+.interview {
+  #content {
+    padding-right: 0;
+  }
+
+  h2 {
+    margin-top: 8rem;
+  }
+
+  .question {
+    font-size: 110%;
+    font-weight: bold;
+    margin-bottom: .5em;
+    margin-top: 2em;
+  }
+
+  .answer {
+    padding-left: 1em;
+  }
+
+  .interview-support-btn-container {
+    margin: 30px 0 40px;
+  }
+
+  // Hide the sidebar on mobile devices.
+  // It doesn't contain any content but the "become a supporter" button, yet.
+  // This button is also displayed at the bottom of the page.
+  #sidebar {
+    display: none;
+  }
+}
+
+@media screen and (min-width: @screen-sm-min) {
+  .interview {
+    #content {
+      padding-right: 15px;
+    }
+
+    #sidebar {
+      display: block;
+    }
+  }
+}
+
+@media screen and (min-width: @screen-md-min) {
+  .interview {
+    .interview-support-btn-container {
+      margin: 30px auto 40px;
+      max-width: 90%;
+    }
+  }
+}

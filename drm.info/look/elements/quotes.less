@@ -1,0 +1,73 @@
+// ----------------------------------------------------------------------------
+// All kinds of quotes and testimonials
+// ----------------------------------------------------------------------------
+
+// Mixins
+// Special formatting for the source of the quote
+.quote-source-bold {
+  font-weight: bold;
+  margin-left: 3em;
+
+  &:before {
+    content: '\2014 \00A0'; // EM DASH, NBSP
+  }
+}
+
+// Extend rules for <cite>
+cite {
+  &:before {
+    content: '\2014 \00A0'; // EM DASH, NBSP
+  }
+}
+
+// List of quotes, e.g. testimonials
+ul.quote-list {
+  .list-unstyled();
+  .quote();
+  margin-top: 30px;
+  margin-bottom: 30px;
+
+  >li {
+    // Add thin lines between the quotes
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border-top: 1px solid @hr-border;
+    border-bottom: 1px solid @hr-border;
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+
+    // Special formatting for complementary information
+    p.complementary {
+      font-family: "Roboto", sans-serif;
+      margin-left: 1.5em;
+    }
+    p.source {
+      .quote-source-bold();
+    }
+  }
+}
+
+// Blockquotes (for single quotes)
+blockquote,
+.blockQuote {
+  .quote;
+  border: 0;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  /* does not work, weird: background-color: lighten(@brand-secondary, 77%);*/
+  background-color: rgba(116, 140, 156, 0.23);
+
+  p {
+    line-height: 1.35;
+  }
+
+  & + & {
+    margin-top: -1.3em;
+  }
+}
+
+.letter-to-zangemann {
+  margin-bottom: 120px !important;
+}

@@ -1,0 +1,144 @@
+// ============================================================================
+// Styles specific to /news, single news items etc
+// ============================================================================
+
+// ------------------------------------------------------------------------
+// Single news (news/*/news-*.xhtml)
+// ------------------------------------------------------------------------
+
+body.news {
+    .article;
+
+    #article-metadata + p {
+        font-weight: bold;
+        font-size: 1.2em;
+    }
+}
+
+
+// ----------------------------------------------------------------------------
+// Condensed listing of news and events
+// ----------------------------------------------------------------------------
+
+ul.news-list, ul.event-list {
+    span.date {
+        .text-muted;
+        .small;
+    }
+}
+
+
+// ----------------------------------------------------------------------------
+// Verbose listing of news and events (/news/, /events/)
+// ----------------------------------------------------------------------------
+
+body.news-index {
+    // A wrapper around the 3 modules that modifies their behaviour
+    .module-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0;
+
+        .module-follow-news, .module-social-media {
+            // hide headlines and paragraphs
+            h2 { display: none; }
+            p { display: none; }
+
+            .share-buttons {
+                // no margin, important for mobile view
+                margin: 0;
+            }
+        }
+
+        // just show the subscribe form, no box
+        .banner-subscribe {
+            margin: 0;
+            background-color: unset;
+            p { display: none; }
+
+            // on small screen, show full-width
+            flex-grow: 2;
+        }
+
+        // special rules for the wrapper on /news and the news archives
+        &.news {
+            .share-buttons {
+                // hide button to /news as this is the page we're on
+                .share-news { display: none; }
+            }
+        }
+
+        // special rules for the wrapper on /news/podcast
+        &.podcast {
+            .share-buttons {
+                // hide button to /news/podcast as this is the page we're on
+                .share-podcast { display: none; }
+            }
+        }
+    }
+}
+
+article.news, article.event {
+    border-bottom: 1px solid @gray-lighter;
+    margin-bottom: 10px;
+
+    > img:first-child,
+    > a:first-child img {
+        // same margin for image as for headline
+        margin-top: 20px;
+        // make image as wide as possible
+        padding: 0;
+    }
+
+    p.meta {
+        .text-muted;
+        .small;
+
+        a {
+            color: inherit;
+        }
+    }
+
+    ul.tags {
+        .list-inline;
+        .text-muted;
+        .small;
+
+        li {
+            white-space: nowrap;
+
+            a {
+                color: inherit;
+            }
+        }
+    }
+}
+
+
+// ----------------------------------------------------------------------------
+// Related news sections in sidebar or below page
+// ----------------------------------------------------------------------------
+
+// In a "related news" section, display all but the first news items in a
+// compressed form.
+section#related-news article.news:nth-of-type(n+2) {
+    border-bottom: none;
+    margin-bottom: 0;
+
+    h3 {
+        font-size: inherit;
+        margin-right: .5em;
+        display: inline;
+    }
+
+    p {
+        display: none;
+    }
+
+    // Make sure that there is no line break within the news date. The p.meta
+    // element also is responsible for the margin-bottom of the while item.
+    p.meta {
+        display: inline-block;
+    }
+}

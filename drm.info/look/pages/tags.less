@@ -1,0 +1,39 @@
+// ============================================================================
+// Styles specific to the tag overview page (/tags/tags.??.html)
+// ============================================================================
+
+body.tags {
+  #tagkey-toggle {
+    & ~ label {
+      .btn;
+      .btn-sm;
+      .btn-default;
+    }
+
+    & ~ ul > li > a > span.tagkey {
+      display: none;
+    }
+  }
+
+  #tagkey-toggle:checked {
+    & ~ label {
+      .btn-primary;
+    }
+
+    & ~ ul > li > a > span.tagkey {
+      display: inline;
+    }
+  }
+
+  ul.column {
+    columns: 1;
+
+    @media (min-width: @screen-xs-min) {
+      columns: 2;
+    }
+
+    @media (min-width: @screen-md-min) {
+      columns: 3;
+    }
+  }
+}

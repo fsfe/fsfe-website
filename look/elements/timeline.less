@@ -1,0 +1,82 @@
+// ============================================================================
+// Styles specific to displaying timelines
+// ============================================================================
+div.timeline-holder * {
+  border-radius: 4px;
+  padding: 4px;
+}
+div.timeline-year {
+  display: flex;
+}
+div.timeline-year h2 {
+  /* height: 100%; */
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+  writing-mode: vertical-lr;
+  text-orientation: upright;
+}
+div.timeline-year-content {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: baseline;
+  border-style: solid;
+  border-width: 2px 0px 2px 2px;
+  border-color: @brand-primary;
+}
+div.timeline-item {
+  max-width: 20em;
+  min-width: 4em;
+  min-height: 4em;
+  margin: 5px;
+}
+div.timeline-item > div.topline {
+  display: flex;
+  /* border-style: solid; */
+  /* border-width: 0px 0px 2px 20x; */
+}
+div.timeline-item > div.topline > div.icon  {
+  font-variant-emoji: text;  
+  font-size: 4em;
+}
+div.timeline-item > div.description > img {
+  object-fit: contain;
+}
+div.timeline-item.legal {
+  background-color: @brand-primary;
+}
+/* div.timeline-item.legal > div.topline { */
+  /* border-color: @brand-primary; */
+/* } */
+div.timeline-item.legal > div.description {
+  background-color: white;
+}
+div.timeline-item.policy {
+  background-color: @brand-secondary;
+}
+/* div.timeline-item.policy > div.topline { */
+  /* border-color: @brand-secondary; */
+/* } */
+div.timeline-item.policy > div.description {
+  background-color: white;
+}
+div.timeline-item.public {
+  background-color: @brand-strong-semialpha;
+}
+/* div.timeline-item.public > div.topline { */
+  /* border-color: @brand-strong-semialpha; */
+/* } */
+div.timeline-item.public > div.description {
+  background-color: white;
+}
+div.timeline-item.internal {
+  background-color: @brand-green;
+}
+/* div.timeline-item.internal > div.topline { */
+  /* border-color: @brand-green; */
+/* } */
+div.timeline-item.internal > div.description {
+  background-color: white;
+}

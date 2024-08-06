@@ -7,7 +7,7 @@ set -euo pipefail
 # =============================================================================
 
 deperrors=''
-for depend in xmllint find cat read wc; do
+for depend in git grep xmllint find cat read wc; do
 	if ! command -v "$depend" >/dev/null 2>&1; then
 		deperrors="$depend $deperrors"
 	fi
@@ -21,7 +21,7 @@ if [ -n "$deperrors" ]; then
 	EOF
 	exit 1
 fi >>/dev/stderr
-all_files="$(find . -type f \( -iname "*\.xml" -o -iname "*\.xsl" -o -iname "*\.xhtml" \))"
+all_files="$(git ls-files | grep '\.xml\|\.xsl\|\.xhtml')"
 style_class_files="$(
 	echo "$all_files" | while read -r file; do
 		if xmllint --xpath "//style" "${file}" &>/dev/null; then

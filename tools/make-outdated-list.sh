@@ -263,6 +263,6 @@ done | sort -t' ' -k 1,1 -k 3,3 -k 2,2 |
 echo "Finished creating language pages" | tee -a "$LOGFILE"
 
 echo "Replacing old output" | tee -a "$LOGFILE"
-rsync -a --remove-source-files --delete-after "${OUT_TMP}"/ "$OUT" | tee -a "$LOGFILE"
+rsync -a --remove-source-files "${OUT_TMP}"/ "$OUT" | tee -a "$LOGFILE"
 echo "Finished" | tee -a "$LOGFILE"
 rm "$LOGFILE"

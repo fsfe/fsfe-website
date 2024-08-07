@@ -54,6 +54,7 @@ elif [ "$duration" -gt 0 ]; then
     echo Success
 fi)
 
+printf %s\\n\\n "Content-Type: text/html;charset=utf-8"
 cat <<-HTML_END
 <!DOCTYPE HTML>
 <html lang="en">

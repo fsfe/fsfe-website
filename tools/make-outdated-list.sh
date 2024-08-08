@@ -42,6 +42,7 @@ cat >"${OUT_TMP}/translations.html" <<-EOF
 	<html lang="en">
 	<head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="https://fsfe.org/look/fsfe.min.css">
 	<link rel="icon" href="https://fsfe.org/graphics/fsfe.ico" type="image/x-icon">
 	<title>FSFE Translation Languages</title>
@@ -207,6 +208,7 @@ done | sort -t' ' -k 1,1 -k 3,3 -k 2,2 |
 				<html lang="en">
 				<head>
 				<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+				<meta name="viewport" content="width=device-width, initial-scale=1.0">
 				<link rel="stylesheet" href="https://fsfe.org/look/fsfe.min.css">
 				<link rel="icon" href="https://fsfe.org/graphics/fsfe.ico" type="image/x-icon">
 				<title>FSFE Translation Status: $lang</title>

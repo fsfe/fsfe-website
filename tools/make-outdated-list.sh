@@ -27,6 +27,7 @@ fi
 cd "${REPO}" || exit 2
 
 prevlang=''
+prev_priority=''
 texts_dir="global/data/texts"
 texts_en=$(grep 'id=".*"' ${texts_dir}/texts.en.xml | perl -pe 's/.*id=\"(.*?)\".*/\1/g')
 
@@ -39,6 +40,12 @@ echo "Making index" | tee -a "$LOGFILE"
 cat >"${OUT_TMP}/translations.html" <<-EOF
 	<!DOCTYPE html>
 	<html lang="en">
+	<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel="stylesheet" href="https://fsfe.org/look/fsfe.min.css">
+	<link rel="icon" href="https://fsfe.org/graphics/fsfe.ico" type="image/x-icon">
+	<title>FSFE Translation Languages</title>
+	</head>
 	<h1>Translation Status Page</h1>
 	<body>
 	<p>Click on the links below to jump to a particular language</p>
@@ -159,6 +166,7 @@ done | sort -t' ' -k 1,1 -k 3,3 -k 2,2 |
 			if [[ "$prevlang" != "" ]]; then
 				cat >>"${OUT_TMP}/translations/$prevlang.html" <<-EOF
 					</table>  
+					</details>
 				EOF
 
 				# Translatable strings
@@ -174,18 +182,22 @@ done | sort -t' ' -k 1,1 -k 3,3 -k 2,2 |
 						fi
 					fi
 				done
-				echo "Longest text length for ${prevlang}: ${longest_text_length}" | tee -a "$LOGFILE"
 				for index in "${!missing_texts[@]}"; do
-					missing_texts["$index"]="<li style=\"display: inline-block; width: ${longest_text_length}em;\">${missing_texts["$index"]}</li>"$'\n'
+					missing_texts["$index"]="<div style=\"width: $((longest_text_length + 5))ch;\">${missing_texts["$index"]}</div>"$'\n'
 				done
 
 				cat >>"${OUT_TMP}/translations/$prevlang.html" <<-EOF
 					<p>
-					Missing texts in <a style="width: 100%;" href="https://git.fsfe.org/FSFE/fsfe-website/src/branch/master/${texts_file}">${texts_file}</a>:
-					</p> 
-					<ul>
-					</ul>
+					Missing texts in <a href="https://git.fsfe.org/FSFE/fsfe-website/src/branch/master/${texts_file}">${texts_file}</a>:
+					</p>
+					<details>
+					<summary>
+					Show missing texts
+					</summary>
+					<div style="width: 100%; display: flex; flex-wrap: wrap;">
 					${missing_texts[*]}     
+					</div>
+					</details>
 					</body>
 					</html>
 				EOF
@@ -193,14 +205,49 @@ done | sort -t' ' -k 1,1 -k 3,3 -k 2,2 |
 			cat >"${OUT_TMP}/translations/$lang.html" <<-EOF
 				<!DOCTYPE html>
 				<html lang="en">
+				<head>
+				<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+				<link rel="stylesheet" href="https://fsfe.org/look/fsfe.min.css">
+				<link rel="icon" href="https://fsfe.org/graphics/fsfe.ico" type="image/x-icon">
+				<title>FSFE Translation Status: $lang</title>
+				</head>
 				<body>
 				<h1 id="$lang">Language: $lang</h1>
 				<p><span style="color: red">Red entries</span> are pages where the original is newer than 6 months.</p>
 				<p>Priority decreases with higher numbers. Eg. 1 is highest priority.</p>
-				<table>
-				<tr><th>Page</th><th>Priority</th><th>Original date</th><th>Original version</th><th>Translation version</th></tr>
+				<p>Simply click on a priority or the text section to expand it and see contained information</p>
+
+				<p>Now, a brief explanation of each column</p>
+				<dl>
+				  <dt>Page</dt>
+				  <dd>The filepath of the page, relative to website root</dd>
+				  <dt>Original Date</dt>
+				  <dd>Date the original file (Engligh version) was modified</dd>
+				  <dt>Original Version</dt>
+				  <dd>The version number of the original file. Is also a link to the original file, viewable with the webpreview tool if possible and just the raw source from the website repo if not.</dd>
+				  <dt>Translation Version</dt>
+				  <dd>The version number of the translated file. Is also a link to the translated file, viewable with the webpreview tool if possible and just the raw source from the website repo if not. If the file has not been translated then the link simply goes nowhere.</dd>
+				</dl>     
 			EOF
+			prev_priority=""
 			prevlang=$lang
+		fi
+		if [[ "$priority" != "$prev_priority" ]]; then
+			if [[ "$prev_priority" != "" ]]; then
+				cat >>"${OUT_TMP}/translations/$lang.html" <<-EOF
+					</table>  
+					</details>
+				EOF
+			fi
+			cat >>"${OUT_TMP}/translations/$lang.html" <<-EOF
+				<details>
+				<summary>
+				Priority: $priority
+				</summary>
+				<table>
+				<tr><th>Page</th><th>Original date</th><th>Original version</th><th>Translation version</th></tr>
+			EOF
+			prev_priority=$priority
 		fi
 		orig=$(date +"%Y-%m-%d" --date="@$originaldate")
 
@@ -210,14 +257,12 @@ done | sort -t' ' -k 1,1 -k 3,3 -k 2,2 |
 			color=''
 		fi
 		cat >>"${OUT_TMP}/translations/$lang.html" <<-EOF
-			<tr><td><a style="$color">$page</a><td>$priority</td></td><td>$orig</td><td><a href="$original_url">$original_version</a></td><td><a href="$translation_url">$translation_version</a></td></tr> 
+			<tr><td><a style="$color">$page</a></td><td>$orig</td><td><a href="$original_url">$original_version</a></td><td><a href="$translation_url">$translation_version</a></td></tr> 
 		EOF
 	done
 echo "Finished creating language pages" | tee -a "$LOGFILE"
 
 echo "Replacing old output" | tee -a "$LOGFILE"
-rm -r -f "${OUT}/translations"
-mv -f "${OUT_TMP}"/* "${OUT}"
-rm -r "${OUT_TMP}"
+rsync -a --remove-source-files "${OUT_TMP}"/ "$OUT" | tee -a "$LOGFILE"
 echo "Finished" | tee -a "$LOGFILE"
 rm "$LOGFILE"

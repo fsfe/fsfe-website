@@ -43,11 +43,9 @@ fi
 if [ -n "$statusdir" ]; then
   mkdir -p "$statusdir"
   [ ! -w "$statusdir" -o ! -d "$statusdir" ] && \
-  die "Unable to set up status directory in \"$statusdir\",\n" \
-      "either select a status directory that exists and is writable,\n" \
-      "or run the build script without output to a status directory"
+  die "Unable to set up status directory in \"$statusdir\""
 fi
-readonly statusdir="${statusdir:+$(realpath "$statusdir")}"
+readonly statusdir="${statusdir:+$(realpath "$statusdir")}"  
 
 buildpids=$(
   ps -eo command \

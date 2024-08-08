@@ -8,9 +8,6 @@ if [ -z "$inc_arguments" ]; then
 
   while [ "$#" -gt 0 ]; do
     case "$1" in
-      -s|--statusdir|--status-dir)
-        [ "$#" -gt 0 ] && shift 1 && statusdir="$1"
-        ;;
       --domain)
         [ "$#" -gt 0 ] && shift 1 && domain="$1"
         ;;
@@ -70,11 +67,12 @@ if [ -z "$inc_arguments" ]; then
   readonly basedir="${basedir:+$(realpath "$basedir")}"
   readonly domain="${domain:-www.fsfe.org}"
   readonly command
-  if [ "$stagedir" != "$target" ] && printf %s "$target" |egrep -q '^.+@.+:(.+)?$'; then
+  if [ "$stagedir" != "$target" ] && printf %s "$target" | egrep -q '^.+@.+:(.+)?$'; then
     readonly target
   else 
     readonly target="${target:+$(realpath "$target")}"
   fi
+  statusdir="${target}"/status.fsfe.org/"${build_env:-fsfe.org}"  
   
   case "$command" in
     build_into)      [ -z "$target" ]      && die "Missing destination directory" ;;

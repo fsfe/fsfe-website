@@ -37,8 +37,6 @@ buildrun(){
 
   ncpu="$(grep -c ^processor /proc/cpuinfo)"
 
-  [ -n "$statusdir" ] && cp "$basedir/build/status.html.sh" "$statusdir/index.cgi"
-
   [ -f "$(logname lasterror)" ] && rm "$(logname lasterror)"
   [ -f "$(logname debug)" ] && rm "$(logname debug)"
 

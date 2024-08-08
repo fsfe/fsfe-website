@@ -41,12 +41,6 @@ OPTIONS
   redundant. The option exists to provide backward compatibility to the 2002
   build script.
 
---statusdir "status_dir"
-  A directory to which messages are written. If no status_dir is provided
-  information will be written to stdout. The directory will also be used
-  to store some temporary files, which would otherwise be set up in the
-  system wide temp directory.
-
 --build-env "selection"
   Indicate the current build environment. "selection" can be one of:
   * "fsfe.org": building https://fsfe.org on the production server

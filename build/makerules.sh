@@ -237,7 +237,7 @@ clean:
 	\$(file >\$(STATUSDIR)/manifest)
 	\$(foreach filename,\$(ALL_DST),\$(file >>\$(STATUSDIR)/manifest,\$(filename)))
 	sort "\$(STATUSDIR)/manifest" > "\$(STATUSDIR)/manifest.sorted"
-	find -L "\$(OUTPUTDIR)" -type f \\
+	find -L "\$(OUTPUTDIR)" -type f -path "\$(STATUSDIR)" -prune \\
 	  | sort \\
 	  | diff - "\$(STATUSDIR)/manifest.sorted" \\
 	  | sed -rn 's;^< ;;p' \\

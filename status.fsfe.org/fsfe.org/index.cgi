@@ -55,22 +55,8 @@ elif [ "$duration" -gt 0 ]; then
 fi)
 
 printf %s\\n\\n "Content-Type: text/html;charset=utf-8"
+sed -e '/<!--\ spacing-comment\ -->/,$d' template.en.html
 cat <<-HTML_END
-<!DOCTYPE HTML>
-<html lang="en">
-<head>
-<link rel="stylesheet" href="https://fsfe.org/look/fsfe.min.css">
-<link rel="icon" href="https://fsfe.org/graphics/fsfe.ico" type="image/x-icon">
-<title>Build Status</title>
-<style>
-div.scrollbox { 
-    max-height: 30em;
-    overflow: scroll;
-    display: inline-block;
-}
-</style>
-</head>
-<body>
 <h1>Build report</h1>
 <dl class="buildinfo">
 <dt>Start time:</dt><dd>$(timestamp ${start_time})</dd>
@@ -197,6 +183,5 @@ $(
 )
 </div>
 </details>
-</body>
-</html>
 HTML_END
+sed -n -e '/<\/body>/,$p' template.en.html

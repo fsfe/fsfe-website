@@ -189,7 +189,7 @@ EOF
 # -----------------------------------------------------------------------------
 
 # All files which should just be copied over
-COPY_SRC_FILES := \$(shell find "\$(INPUTDIR)" -type f \
+COPY_SRC_FILES := \$(shell find -L "\$(INPUTDIR)" -type f \
   -not -path '\$(INPUTDIR)/.git/*' \
   -not -path '\$(INPUTDIR)/build/*' \
   -not -path '\$(INPUTDIR)/global/*' \
@@ -237,7 +237,7 @@ clean:
 	\$(file >\$(STATUSDIR)/manifest)
 	\$(foreach filename,\$(ALL_DST),\$(file >>\$(STATUSDIR)/manifest,\$(filename)))
 	sort "\$(STATUSDIR)/manifest" > "\$(STATUSDIR)/manifest.sorted"
-	find -L "\$(OUTPUTDIR)" -type f \\
+	find -L "\$(OUTPUTDIR)" -type f -path "\$(STATUSDIR)" -prune \\
 	  | sort \\
 	  | diff - "\$(STATUSDIR)/manifest.sorted" \\
 	  | sed -rn 's;^< ;;p' \\

@@ -54,7 +54,7 @@
     </xsl:element>
 
     <xsl:choose>
-      <xsl:when test="$build-env = 'development'">
+      <xsl:when test="$build-env = 'development' and not(/buildinfo/document/@external)">
         <xsl:choose>
           <xsl:when test="$mode = 'valentine'">
             <xsl:element name="link">

@@ -205,7 +205,7 @@ for f in $files_all; do
   fileregex="(\.xhtml$|\.xml$|\.xsl$)"
   if matchfile "${f}" "${fileregex}"; then
     regex="(utf-8|us-ascii)"
-    if ! [[ $(file -b --mime-encoding "${f}") =~ $regex ]]; then
+    if ! [[ $(file -b --mime-encoding "$(realpath "${f}")") =~ $regex ]]; then
       RETURN_ENC=$((RETURN_ENC + 1))
       FILES_ENC="${FILES_ENC}|${f}"
     fi

@@ -15,3 +15,9 @@ global/data/topbanner/.topbanner.??.xml
 search/index.js
 tags/tagged-*.en.xhtml
 tags/.tags.??.xml
+
+## Status dir stuff
+status.fsfe.org/*fsfe.org/*
+!status.fsfe.org/*fsfe.org/index.cgi
+!status.fsfe.org/*fsfe.org/template.en.xhtml
+status.fsfe.org/translations/data/*

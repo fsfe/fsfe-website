@@ -14,6 +14,9 @@ timestamp() {
     date -d "@$1" +"%F %T (%Z)"
 }
 
+DATADIR="data"
+readonly DATADIR
+
 duration() {
     minutes=$(($1 / 60))
     if [ "${minutes}" == "1" ]; then
@@ -39,14 +42,14 @@ htmlcat() {
  s;'\'';\&apos\;;g;' $@
 }
 
-start_time=$(cat "start_time" || stat -c %Y "$0" || echo 0)
-t_gitupdate=$(stat -c %Y "GITlatest" || echo 0)
-t_phase_1=$(stat -c %Y "phase_1" || echo 0)
-t_makefile=$(stat -c %Y "Makefile" || echo 0)
-t_phase_2=$(stat -c %Y "phase_2" || echo 0)
-t_manifest=$(stat -c %Y "manifest" || echo 0)
-t_stagesync=$(stat -c %Y "stagesync" || echo 0)
-end_time=$(cat "end_time" || echo 0)
+start_time=$(cat "$DATADIR/start_time" || stat -c %Y "$0" || echo 0)
+t_gitupdate=$(stat -c %Y "$DATADIR/GITlatest" || echo 0)
+t_phase_1=$(stat -c %Y "$DATADIR/phase_1" || echo 0)
+t_makefile=$(stat -c %Y "$DATADIR/Makefile" || echo 0)
+t_phase_2=$(stat -c %Y "$DATADIR/phase_2" || echo 0)
+t_manifest=$(stat -c %Y "$DATADIR/manifest" || echo 0)
+t_stagesync=$(stat -c %Y "$DATADIR/stagesync" || echo 0)
+end_time=$(cat "$DATADIR/end_time" || echo 0)
 duration=$(($end_time - $start_time))
 term_status=$(if [ "$duration" -gt 0 -a -f lasterror ]; then
     echo Error
@@ -64,7 +67,7 @@ cat <<-HTML_END
 <dt>Duration:</dt><dd>$([ "$duration" -gt 0 ] && duration ${duration})</dd>
 <dt>Termination Status:</dt><dd>${term_status:-running...}</dd>
 </dl>
-$(if [ ./full_build -nt ./index.cgi ]; then
+$(if [ ./$DATADIR/full_build -nt ./index.cgi ]; then
     printf '<span class="fullbuild">Full rebuild will be started within next minute.</span>'
 else
     printf '<a class="fullbuild" href="./?full_build">Schedule full rebuild</a>'
@@ -74,7 +77,7 @@ fi)
 <div class="scrollbox">
 <a href="./">latest</a><br>
 $(
-    ls -t status_*.html | head -n10 | while read stat; do
+    ls -t "$DATADIR"/status_*.html | head -n10 | while read stat; do
         t="${stat#status_}"
         t="${t%.html}"
         printf '<a href="%s">%s</a> - %s<br>' \
@@ -90,7 +93,7 @@ $(
 $(
     if [ ${start_time} -le ${t_gitupdate} ]; then
         echo "at $(timestamp ${t_gitupdate})" \
-            "<pre>$(htmlcat GITlatest)</pre>" \
+            "<pre>$(htmlcat "$DATADIR"/GITlatest)</pre>" \
             "checked"
     else
         echo "Unconditional build, changes ignored"
@@ -104,10 +107,10 @@ $(
 $(
     if [ $start_time -lt $t_phase_1 -a $start_time -lt $t_gitupdate ]; then
         echo "$(duration $(($t_phase_1 - $t_gitupdate)))" \
-            "<pre>$(htmlcat phase_1)</pre>"
+            "<pre>$(htmlcat "$DATADIR"/phase_1)</pre>"
     elif [ $start_time -lt $t_phase_1 ]; then
         echo "$(duration $(($t_phase_1 - $start_time)))" \
-            "<pre>$(htmlcat phase_1)</pre>"
+            "<pre>$(htmlcat "$DATADIR"/phase_1)</pre>"
     else
         echo "waiting"
     fi
@@ -121,7 +124,7 @@ $(
 $(
     if [ $start_time -lt $t_makefile ]; then
         echo "$(duration $(($t_makefile - $t_phase_1)))" \
-            "<pre>$(htmlcat Makefile)</pre>"
+            "<pre>$(htmlcat "$DATADIR"/Makefile)</pre>"
     else
         echo "waiting"
     fi
@@ -134,7 +137,7 @@ $(
 $(
     if [ $start_time -lt $t_phase_2 ]; then
         echo "$(duration $(($t_phase_2 - $t_makefile)))" \
-            "<pre>$(htmlcat phase_2)</pre>"
+            "<pre>$(htmlcat "$DATADIR"/phase_2)</pre>"
     else
         echo "waiting"
     fi
@@ -147,7 +150,7 @@ $(
 $(
     if [ ${start_time} -lt ${t_stagesync} -a -s stagesync ]; then
         echo "$(($(wc -l stagesync | cut -f1 -d\ ) - 4)) updated files" \
-            "<pre>$(htmlcat stagesync)</pre>"
+            "<pre>$(htmlcat "$DATADIR"/stagesync)</pre>"
     elif [ -z ${term_status} ]; then
         echo "waiting"
     else
@@ -162,7 +165,7 @@ $(
 $(
     if [ -f lasterror ]; then
         echo "There were errors" \
-            "<pre>$(htmlcat lasterror)</pre>" \
+            "<pre>$(htmlcat "$DATADIR"/lasterror)</pre>" \
             "checked"
     else
         echo "none"
@@ -175,8 +178,8 @@ $(
 <div class="scrollbox">
 $(
     if [ $start_time -lt $t_manifest ]; then
-        echo "$(wc -l manifest | cut -d\-f1) files" \
-            "<a href=\"manifest\">view</a>"
+        echo "$(wc -l "$DATADIR"/manifest | cut -d\-f1) files" \
+            "<a href=\"$DATADIR/manifest\">view</a>"
     else
         echo "waiting"
     fi

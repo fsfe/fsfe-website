@@ -33,6 +33,7 @@ my %names = (
   "dario" => "Dario Presutti",
   "delliott" => "Darragh Elliott",
   "eal" => "Erik Albers",
+  "epiric" => "Erika Pirić",
   "fi" => "Francesca Indorato",
   "floriansnow" => "Florian Snow",
   "gabriel.ku" => "Gabriel Ku Wei Bin",

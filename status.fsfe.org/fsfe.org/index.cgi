@@ -2,9 +2,12 @@
 
 exec 2>/dev/null
 
+DATADIR="data"
+readonly DATADIR
+
 if [ "$QUERY_STRING" = "full_build" ]; then
     if printf %s "$HTTP_REFERER" | grep -qE '^https?://([^/]+\.)?fsfe\.org/'; then
-        touch ./full_build
+        touch ./"$DATADIR"/full_build
     fi
     printf 'Location: ./\n\n'
     exit 0
@@ -51,7 +54,7 @@ t_manifest=$(stat -c %Y "$DATADIR/manifest" || echo 0)
 t_stagesync=$(stat -c %Y "$DATADIR/stagesync" || echo 0)
 end_time=$(cat "$DATADIR/end_time" || echo 0)
 duration=$(($end_time - $start_time))
-term_status=$(if [ "$duration" -gt 0 -a -f lasterror ]; then
+term_status=$(if [ "$duration" -gt 0 -a -f "$DATADIR"/lasterror ]; then
     echo Error
 elif [ "$duration" -gt 0 ]; then
     echo Success
@@ -77,7 +80,7 @@ fi)
 <div class="scrollbox">
 <a href="./">latest</a><br>
 $(
-    ls -t "$DATADIR"/status_*.html | head -n10 | while read stat; do
+    find "$DATADIR" -name "status_*.html" -type f -printf "%f\n" | head -n10 | while read stat; do
         t="${stat#status_}"
         t="${t%.html}"
         printf '<a href="%s">%s</a> - %s<br>' \
@@ -88,100 +91,110 @@ $(
 </div>
 </details>
 <details>
-<summary>GIT changes</summary>
-<div class="scrollbox">
+<summary>GIT changes: 
 $(
     if [ ${start_time} -le ${t_gitupdate} ]; then
-        echo "at $(timestamp ${t_gitupdate})" \
+        echo "at $(timestamp ${t_gitupdate})" "</summary>" \
+            "<div class=\"scrollbox\">" \
             "<pre>$(htmlcat "$DATADIR"/GITlatest)</pre>" \
             "checked"
     else
-        echo "Unconditional build, changes ignored"
+        echo "Unconditional build, changes ignored" \
+            "</summary>" \
+            "<div class=\"scrollbox\">"
     fi
 )
 </div>
 </details>
 <details>
-<summary>Phase 1</summary>
-<div class="scrollbox">
+<summary>Phase 1: 
 $(
     if [ $start_time -lt $t_phase_1 -a $start_time -lt $t_gitupdate ]; then
-        echo "$(duration $(($t_phase_1 - $t_gitupdate)))" \
+        echo "$(duration $(($t_phase_1 - $t_gitupdate)))" "</summary>" \
+            "<div class=\"scrollbox\">" \
             "<pre>$(htmlcat "$DATADIR"/phase_1)</pre>"
     elif [ $start_time -lt $t_phase_1 ]; then
-        echo "$(duration $(($t_phase_1 - $start_time)))" \
+        echo "$(duration $(($t_phase_1 - $start_time)))" "</summary>" \
+            "<div class=\"scrollbox\">" \
             "<pre>$(htmlcat "$DATADIR"/phase_1)</pre>"
     else
-        echo "waiting"
+        echo "waiting" "</summary>" \
+            "<div class=\"scrollbox\">"
     fi
 )
 </div>
 </details>
 
 <details>
-<summary>Phase 2 Makefile</summary>
-<div class="scrollbox">
+<summary>Phase 2 Makefile: 
 $(
     if [ $start_time -lt $t_makefile ]; then
-        echo "$(duration $(($t_makefile - $t_phase_1)))" \
+        echo "$(duration $(($t_makefile - $t_phase_1)))" "</summary>" \
+            "<div class=\"scrollbox\">" \
             "<pre>$(htmlcat "$DATADIR"/Makefile)</pre>"
     else
-        echo "waiting"
+        echo "waiting" "</summary>" \
+            "<div class=\"scrollbox\">"
     fi
 )
 </div>
 </details>
 <details>
-<summary>Phase 2</summary>
-<div class="scrollbox">
+<summary>Phase 2: 
 $(
     if [ $start_time -lt $t_phase_2 ]; then
-        echo "$(duration $(($t_phase_2 - $t_makefile)))" \
+        echo "$(duration $(($t_phase_2 - $t_makefile)))" "</summary>" \
+            "<div class=\"scrollbox\">" \
             "<pre>$(htmlcat "$DATADIR"/phase_2)</pre>"
     else
-        echo "waiting"
+        echo "waiting" "</summary>" \
+            "<div class=\"scrollbox\">"
     fi
 )
 </div>
 </details>
 <details>
-<summary>Target update</summary>
-<div class="scrollbox">
+<summary>Target update: 
 $(
-    if [ ${start_time} -lt ${t_stagesync} -a -s stagesync ]; then
-        echo "$(($(wc -l stagesync | cut -f1 -d\ ) - 4)) updated files" \
+    if [ ${start_time} -lt ${t_stagesync} -a -s "$DATADIR"/stagesync ]; then
+        echo "$(($(wc -l "$DATADIR"/stagesync | cut -f1 -d\ ) - 4)) updated files" "</summary>" \
+            "<div class=\"scrollbox\">" \
             "<pre>$(htmlcat "$DATADIR"/stagesync)</pre>"
     elif [ -z ${term_status} ]; then
-        echo "waiting"
+        echo "waiting" "</summary>" \
+            "<div class=\"scrollbox\">"
     else
-        echo "-"
+        echo "-" "</summary>" \
+            "<div class=\"scrollbox\">"
     fi
 )
 </div>
 </details>
 <details>
-<summary>Errors</summary>
-<div class="scrollbox">
+<summary>Errors: 
 $(
     if [ -f lasterror ]; then
-        echo "There were errors" \
+        echo "There were errors" "</summary>" \
+            "<div class=\"scrollbox\">" \
             "<pre>$(htmlcat "$DATADIR"/lasterror)</pre>" \
             "checked"
     else
-        echo "none"
+        echo "none" "</summary>" \
+            "<div class=\"scrollbox\">"
     fi
 )
 </div>
 </details>
 <details>
-<summary>File Manifest</summary>
-<div class="scrollbox">
+<summary>File Manifest: 
 $(
     if [ $start_time -lt $t_manifest ]; then
-        echo "$(wc -l "$DATADIR"/manifest | cut -d\-f1) files" \
+        echo "$(wc -l < "$DATADIR"/manifest) files" "</summary>" \
+            "<div class=\"scrollbox\">" \
             "<a href=\"$DATADIR/manifest\">view</a>"
     else
-        echo "waiting"
+        echo "waiting" "</summary>" \
+            "<div class=\"scrollbox\">"
     fi
 )
 </div>

@@ -71,7 +71,7 @@ buildrun(){
     {
       for destination in ${target//,/ }; do
         echo "Syncing files to $(echo "$destination" | grep -Po "(?<=@)[^:]+")"
-        rsync -av --copy-unsafe-links --del "$stagedir/" "$destination/" | grep -v "copying unsafe symlink"
+        rsync -av --copy-unsafe-links --del --exclude "status.fsfe.org/*fsfe.org/data" "$stagedir/" "$destination/" | grep -v "copying unsafe symlink"
       done
     } | t_logstatus stagesync
   fi
@@ -79,7 +79,7 @@ buildrun(){
   date +%s > "$(logname end_time)"
 
   if [ -n "$statusdir" ]; then
-    ( cd "$statusdir"; ./index.cgi | tail -n+3 > status_$(date +%s).html )
+    ( cd "$statusdir"; ./../index.cgi | tail -n+3 > status_$(date +%s).html )
   fi
 }
 

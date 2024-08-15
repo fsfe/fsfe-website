@@ -79,7 +79,7 @@ buildrun(){
   date +%s > "$(logname end_time)"
 
   if [ -n "$statusdir" ]; then
-    ( cd "$statusdir"; ./../index.cgi | tail -n+3 > status_$(date +%s).html )
+    ( cd "$statusdir"/..; ./index.cgi | tail -n+3 > "$statusdir"/status_$(date +%s).html )
   fi
 }
 

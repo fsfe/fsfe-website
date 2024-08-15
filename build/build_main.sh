@@ -40,6 +40,7 @@ if [ "$build_env" == "fsfe.org" ] || [ "$build_env" == "test.fsfe.org" ]; then
   check_dependencies lessc
 fi
 
+statusdir="${statusdir/#\~/$HOME}"
 if [ -n "$statusdir" ]; then
   mkdir -p "$statusdir"
   [ ! -w "$statusdir" -o ! -d "$statusdir" ] && \

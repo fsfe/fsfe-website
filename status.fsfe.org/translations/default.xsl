@@ -13,6 +13,7 @@
           <th>Priority 2 files in need of translation</th>
         </tr>
         <xsl:for-each select="/buildinfo/document/set/language">
+        <xsl:sort select="@long" order="descending"/>
           <tr>
             <td>
               <a>

@@ -19,19 +19,37 @@ Our web team has compiled some information about technology used for this websit
 
 Most files are XHTML files organised in a rather logical folder structure. 
 
+Every website served using this repo has its own folder with the full domain name it is to be served from.
+
+### Domains
+
+This repository also contains the source files of other websites the FSFE hosts:
+
+* `fsfe.org` for [fsfe.org](http://fsfe.org)
+* `activities/android` for [freeyourandroid.org](http://freeyourandroid.org)
+* `activities/ilovefs` for [ilovefs.org](http://ilovefs.org)
+* `drm.info` for [drm.info](http://drm.info)
+* `pdfreaders.org` for [pdfreaders.org](http://pdfreaders.org)
+* [test.fsfe.org](https://test.fsfe.org) is fsfe.org built from the test branch of this repository
+
 ### Important folders
 
-Notable directories are:
+Notable toplevel directories are:
 
+* `build`: Mostly custom Bash and XSL scripts to build the website
+* `global`: Globally used data files and modules, also the static translated strings.
+* `tools`: Contains miscellaneous XML, XSL, and SH files.
+
+and of course the different website folders.
+
+And here are dome notable directories inside the folder for the main webpage, fsfe.org.
 * `about`: Information about the FSFE itself, its team members etc
 * `activities`: All specific FSFE activities
 * `at`, `de`, `ee` etc: Folders used for the FSFE country teams
-* `build`: Mostly custom Bash and XSL scripts to build the website
 * `cgi-bin`: Our very few CGI scripts
 * `error`: Custom 4xx and 5xx error pages
 * `events`: Files for our events, ordered by year
 * `freesoftware`: More timeless pages explaining Free Software and related topics
-* `global`: Globally used data files and modules, also the static translated strings.
 * `graphics`: Icons, pictures and logos
 * `internal`: Forms used mostly by FSFE staff for internal processes
 * `look`: CSS and other style files
@@ -39,17 +57,6 @@ Notable directories are:
 * `order`: Our web shop
 * `scripts`: JavaScript files used on our pages
 * `tags`: Files necessary to display used tags throughout the website. Mostly automatically generated
-* `tools`: Contains miscellaneous XML, XSL, and SH files.
-
-### Other domains
-
-This repository also contains the source files of other websites the FSFE hosts:
-
-* `activities/android` for [freeyourandroid.org](http://freeyourandroid.org)
-* `activities/ilovefs` for [ilovefs.org](http://ilovefs.org)
-* `drm.info` for [drm.info](http://drm.info)
-* `pdfreaders` for [pdfreaders.org](http://pdfreaders.org)
-* [test.fsfe.org](https://test.fsfe.org) is build from the test branch of this repository
 
 ## Contribute
 
@@ -61,6 +68,8 @@ We adore our voluntary translators who make information about Free Software avai
 
 Join them to spread the message of our community in all over Europe and beyond. The [translators team page](https://fsfe.org/contribute/translators/) will introduce you to their amazing work.
 
+You can see the current status of translation progress of fsfe.org at [status.fsfe.org/translations](https://status.fsfe.org/translations)
+
 ## Build
 
-You can build the fsfe.org website on your own computer to make previews of single pages possible offline and without having to wait for an online website build. A [dedicated wiki page](https://wiki.fsfe.org/TechDocs/Mainpage/BuildLocally) tells you how to do it.
+You can build the fsfe.org website on your own computer to make previews of single pages possible offline and without having to wait for an online website build. A [dedicated docs page](https://docs.fsfe.org/en/techdocs/mainpage/buildlocally) tells you how to do it.

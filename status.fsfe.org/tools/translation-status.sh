@@ -20,13 +20,16 @@ REPO="$SCRIPT_DIR"/../..
 readonly REPO
 OUT="${REPO}"/status.fsfe.org/translations/data
 readonly OUT
+OUT_TMP="${REPO}"/status.fsfe.org/translations/data-tmp
+readonly OUT_TMP
 
 cd "${REPO}" || exit 2
 
 echo "Making required directories!"
 mkdir -p "$OUT"
+mkdir -p "$OUT_TMP"
 
-LOGFILE="${OUT}/log.txt"
+LOGFILE="${OUT_TMP}/log.txt"
 
 langs="$(
 	find ./global/languages -type f -printf "%f\n" | while read -r lang; do
@@ -111,7 +114,7 @@ statuses="$(
 echo "Status Generated" | tee -a "$LOGFILE"
 
 echo "Generate language status overview" | tee -a "$LOGFILE"
-cat >"${OUT}/langs.en.xml" <<-EOF
+cat >"${OUT_TMP}/langs.en.xml" <<-EOF
 	<?xml version="1.0" encoding="UTF-8"?>
 
 	<translation-overall-status>
@@ -122,7 +125,7 @@ echo "$langs" | while read -r lang_short lang_long; do
 	for i in {1..6}; do
 		prio_counts["$i"]="<priority number=\"$i\" value=\"$(echo "$statuses" | sed -n "/^$lang_short\ $lang_long\ [^\ ]*\ $i/p" | wc -l)\"/>"
 	done
-	cat >>"${OUT}/langs.en.xml" <<-EOF
+	cat >>"${OUT_TMP}/langs.en.xml" <<-EOF
 		<language short="$lang_short" long="$lang_long">
 		${prio_counts["1"]}
 		${prio_counts["2"]}
@@ -130,7 +133,7 @@ echo "$langs" | while read -r lang_short lang_long; do
 	EOF
 	unset prio_counts
 done
-cat >>"${OUT}/langs.en.xml" <<-EOF
+cat >>"${OUT_TMP}/langs.en.xml" <<-EOF
 	</translation-overall-status>
 EOF
 echo "Finished Generating status overview" | tee -a "$LOGFILE"
@@ -156,7 +159,7 @@ echo "$statuses" | while read -r lang_short lang_long page priority originaldate
 				missing_texts["$index"]="<text>${missing_texts["$index"]}</text>"$'\n'
 			done
 
-			cat >>"${OUT}/translations.$prevlang.xml" <<-EOF
+			cat >>"${OUT_TMP}/translations.$prevlang.xml" <<-EOF
 				</priority>  
 				<missing-texts>
 				<url>https://git.fsfe.org/FSFE/fsfe-website/src/branch/master/${texts_file}</url> 
@@ -170,7 +173,7 @@ echo "$statuses" | while read -r lang_short lang_long page priority originaldate
 				break
 			fi
 		fi
-		cat >"${OUT}/translations.$lang_short.xml" <<-EOF
+		cat >"${OUT_TMP}/translations.$lang_short.xml" <<-EOF
 			<?xml version="1.0" encoding="UTF-8"?>
 
 			<translation-status>
@@ -181,11 +184,11 @@ echo "$statuses" | while read -r lang_short lang_long page priority originaldate
 	fi
 	if [[ "$priority" != "$prevprio" ]]; then
 		if [[ "$prevprio" != "" ]]; then
-			cat >>"${OUT}/translations.$lang_short.xml" <<-EOF
+			cat >>"${OUT_TMP}/translations.$lang_short.xml" <<-EOF
 				</priority>  
 			EOF
 		fi
-		cat >>"${OUT}/translations.$lang_short.xml" <<-EOF
+		cat >>"${OUT_TMP}/translations.$lang_short.xml" <<-EOF
 			<priority value="$priority">
 		EOF
 		prevprio=$priority
@@ -197,7 +200,7 @@ echo "$statuses" | while read -r lang_short lang_long page priority originaldate
 	else
 		new=false
 	fi
-	cat >>"${OUT}/translations.$lang_short.xml" <<-EOF
+	cat >>"${OUT_TMP}/translations.$lang_short.xml" <<-EOF
 		<file>
 			<page>$page</page>
 			<original_date>$orig</original_date>
@@ -211,5 +214,5 @@ echo "$statuses" | while read -r lang_short lang_long page priority originaldate
 done
 echo "Finished creating language pages" | tee -a "$LOGFILE"
 
+rsync -avz --delete --remove-source-files "$OUT_TMP"/ "$OUT"/
 echo "Finished !"
-# rm "$LOGFILE"

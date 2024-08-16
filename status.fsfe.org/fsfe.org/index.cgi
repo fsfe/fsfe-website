@@ -84,7 +84,7 @@ $(
         t="${stat#status_}"
         t="${t%.html}"
         printf '<a href="%s">%s</a> - %s<br>' \
-            "$stat" "$(timestamp "$t")" "$(sed -rn 's;^.*<dt>Duration:</dt><dd>(.+)</dd>.*$;\1;p;T;q' "$stat")"
+            "data/$stat" "$(timestamp "$t")" "$(sed -rn 's;^.*<dt>Duration:</dt><dd>(.+)</dd>.*$;\1;p;T;q' "$stat")"
         printf $'\n'
     done
 )

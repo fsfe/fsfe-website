@@ -69,7 +69,7 @@ def process_file(filename: str):
         ]
         articles.append(
             {
-                "url": "https://fsfe.org/" + filename.replace("xhtml", "html"),
+                "url": "https://fsfe.org/" + filename.removeprefix("fsfe.org/").replace("xhtml", "html"),
                 "tags": " ".join(tags),
                 "title": file_parsed.title.text,
                 "teaser": " ".join(

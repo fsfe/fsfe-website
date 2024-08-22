@@ -67,7 +67,7 @@ fi
 [ -z "$inc_scaffold" ]  && . "$basedir/build/scaffold.sh"
 
 case "$command" in
-  git_build_into)  if [ "${statusdir}/full_build" -nt "${statusdir}/index.cgi" ]; then
+  git_build_into)  if [ "${statusdir}/full_build" -nt "${statusdir}/../index.cgi" ]; then
                      debug "discovered flag file, performing full build"
                      build_into
                    else

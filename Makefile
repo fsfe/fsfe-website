@@ -34,10 +34,11 @@ searchindex:
 # distributed to the web server.
 
 ifneq ($(build_env),development)
-all: look/fsfe.min.css look/valentine.min.css
-look/%.min.css: $(shell find "look" -name '*.less')
+websites:= pdfreaders.org drm.info fsfe.org
+all: $(foreach dir,$(websites), $(dir)/look/fsfe.min.css $(dir)/look/valentine.min.css)
+$(dir $@)%.min.css: $(shell find $(dir $@) -name '*.less')
 	echo "* Compiling $@"
-	lessc "look/$*.less" -x "$@"
+	lessc "$*.less" -x "$@"
 endif
 
 # -----------------------------------------------------------------------------

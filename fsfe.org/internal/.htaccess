@@ -1,4 +1,4 @@
 AuthType Basic
 AuthName "internal forms"
-AuthUserFile /srv/www/fsfe.org/global/internal/.htusers
+AuthUserFile /srv/www/fsfe.org/global/fsfe.org/internal/.htusers
 Require user fsfe

@@ -36,7 +36,7 @@ ARCH_SOURCES := $(foreach year,$(ARCH_YEARS),$(year)/index.sources)
 all: $(ARCH_SOURCES)
 $(ARCH_SOURCES): %.sources:
 	@echo "*   Creating $@"
-	@printf "news/$(dir $@)news-*:[]\nnews/$(dir $@).news-*:[]\nnews/.localmenu:[]\n" > $@
+	@printf "fsfe.org/news/$(dir $@)news-*:[]\nfsfe.org/news/$(dir $@).news-*:[]\nfsfe.org/news/.localmenu:[]\n" > $@
 
 # -----------------------------------------------------------------------------
 # Remove generated .xml files where original .xhtml file does not exist anymore

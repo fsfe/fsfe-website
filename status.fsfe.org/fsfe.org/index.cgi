@@ -70,7 +70,7 @@ cat <<-HTML_END
 <dt>Duration:</dt><dd>$([ "$duration" -gt 0 ] && duration ${duration})</dd>
 <dt>Termination Status:</dt><dd>${term_status:-running...}</dd>
 </dl>
-$(if [ ./$DATADIR/full_build -nt ./index.cgi ]; then
+$(if [ -f ./$DATADIR/full_build ]; then
     printf '<span class="fullbuild">Full rebuild will be started within next minute.</span>'
 else
     printf '<a class="fullbuild" href="./?full_build">Schedule full rebuild</a>'

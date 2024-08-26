@@ -78,7 +78,6 @@ fi)
 <details>
 <summary>Previous builds</summary>
 <div class="scrollbox">
-<a href="./">latest</a><br>
 $(
     find "$DATADIR" -name "status_*.html" -type f -printf "%f\n" | sort -r | head -n10 | while read stat; do
         t="${stat#status_}"

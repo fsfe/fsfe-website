@@ -80,7 +80,7 @@ fi)
 <div class="scrollbox">
 <a href="./">latest</a><br>
 $(
-    find "$DATADIR" -name "status_*.html" -type f -printf "%f\n" | head -n10 | while read stat; do
+    find "$DATADIR" -name "status_*.html" -type f -printf "%f\n" | sort -r | head -n10 | while read stat; do
         t="${stat#status_}"
         t="${t%.html}"
         printf '<a href="%s">%s</a> - %s<br>' \

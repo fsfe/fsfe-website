@@ -44,7 +44,7 @@
           <xsl:element name="ul">
             <xsl:element name="li">
               <xsl:element name="a">
-                <xsl:attribute name="href">pdfreaders.html</xsl:attribute>
+                <xsl:attribute name="href">index.html</xsl:attribute>
                 <xsl:call-template name="fsfe-gettext">
                   <xsl:with-param name="id" select="'pdfreaders-head-readers'" />
                 </xsl:call-template>

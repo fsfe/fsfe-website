@@ -48,19 +48,19 @@ echo "Begin syncing filedates with git commit dates" | tee "${LOGFILE}"
 echo "File date sync finished" | tee -a "${LOGFILE}"
 files=""
 # Grouped by priority
-files+=$'\n'$(find ./index.en.xhtml | sed 's/$/ 1/')
-files+=$'\n'$(find ./freesoftware/freesoftware.en.xhtml | sed 's/$/ 1/')
+files+=$'\n'$(find ./fsfe.org/index.en.xhtml | sed 's/$/ 1/')
+files+=$'\n'$(find ./fsfe.org/freesoftware/freesoftware.en.xhtml | sed 's/$/ 1/')
 
-files+=$'\n'$(find ./activities -type f \( -iname "activity\.en\.xml" \) | sed 's/$/ 2/')
+files+=$'\n'$(find ./fsfe.org/activities -type f \( -iname "activity\.en\.xml" \) | sed 's/$/ 2/')
 
-files+=$'\n'$(find ./activities -type f \( -iname "*\.en\.xhtml" -o -iname "*\.en\.xml" \) | sed 's/$/ 3/')
-files+=$'\n'$(find ./freesoftware -type f \( -iname "*\.en\.xhtml" -o -iname "*\.en\.xml" \) | sed 's/$/ 3/')
+files+=$'\n'$(find ./fsfe.org/activities -type f \( -iname "*\.en\.xhtml" -o -iname "*\.en\.xml" \) | sed 's/$/ 3/')
+files+=$'\n'$(find ./fsfe.org/freesoftware -type f \( -iname "*\.en\.xhtml" -o -iname "*\.en\.xml" \) | sed 's/$/ 3/')
 
-files+=$'\n'$(find ./order -maxdepth 1 -type f \( -iname "*\.en\.xhtml" -o -iname "*\.en\.xml" \) | sed 's/$/ 4/')
-files+=$'\n'$(find ./contribute -maxdepth 1 -type f \( -iname "spreadtheword*\.en\.xhtml" -o -iname "spreadtheword*\.en\.xml" \) | sed 's/$/ 4/')
+files+=$'\n'$(find ./fsfe.org/order -maxdepth 1 -type f \( -iname "*\.en\.xhtml" -o -iname "*\.en\.xml" \) | sed 's/$/ 4/')
+files+=$'\n'$(find ./fsfe.org/contribute -maxdepth 1 -type f \( -iname "spreadtheword*\.en\.xhtml" -o -iname "spreadtheword*\.en\.xml" \) | sed 's/$/ 4/')
 
-files+=$'\n'$(find . -type f \( -iname "*\.en\.xhtml" -o -iname "*\.en\.xml" \) -mtime -200 -not -path './news/*' -not -path './events/*' | sed 's/$/ 5/')
-files+=$'\n'$(find ./news -type f \( -iname "*\.en\.xhtml" -o -iname "*\.en\.xml" \) -mtime -30 | sed 's/$/ 5/')
+files+=$'\n'$(find ./fsfe.org -type f \( -iname "*\.en\.xhtml" -o -iname "*\.en\.xml" \) -mtime -200 -path './fsfe.org/news' -prune -path './fsfe.org/events' -prune | sed 's/$/ 5/')
+files+=$'\n'$(find ./fsfe.org/news -type f \( -iname "*\.en\.xhtml" -o -iname "*\.en\.xml" \) -mtime -30 | sed 's/$/ 5/')
 # Remove files that are not in the list of those managed by git
 tmp=""
 files="$(
@@ -94,8 +94,8 @@ statuses="$(
 			if [ "${translation_version:-0}" -lt "${original_version:-0}" ]; then
 				originaldate=$(git log --pretty="%cd" --date=raw -1 "$base".en."$ext" | cut -d' ' -f1)
 				if [ "$ext" == "xhtml" ]; then
-					original_url="https://webpreview.fsfe.org?uri=/${base/#\.\//}.en.html"
-					translation_url="https://webpreview.fsfe.org?uri=/${base/#\.\//}.$lang_short.html"
+					original_url="https://webpreview.fsfe.org?uri=${base/#\.\/fsfe.org/}.en.html"
+					translation_url="https://webpreview.fsfe.org?uri=${base/#\.\/fsfe.org/}.$lang_short.html"
 				elif [ "$ext" == "xml" ]; then
 					original_url="https://git.fsfe.org/FSFE/fsfe-website/src/branch/master/${base/#\.\//}.en.xml"
 					translation_url="https://git.fsfe.org/FSFE/fsfe-website/src/branch/master/${base/#\.\//}.$lang_short.xml"

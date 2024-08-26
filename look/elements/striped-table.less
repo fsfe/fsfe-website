@@ -1,0 +1,28 @@
+// ============================================================================
+// Classes for striped tables 
+// ============================================================================
+table.striped tr:nth-child(odd) {
+  background-color: #f9f9f9;
+}
+table.striped th {
+  color: white;
+  background-color: #3394ce;
+}
+table.striped td {
+  border-bottom: 1px solid #4ad2f0;
+}
+table.striped th, td {
+  text-align: right;
+  padding-left: .3em;
+  padding-right: .3em;
+  width: 12em;
+}
+table.striped th:first-child, td:first-child {
+  text-align: left;
+  width: auto;
+}
+table.striped tr.sum td {
+  font-weight: bold;
+  background-color: #d7eaf6;
+  border-bottom: 1.5em solid white;
+}

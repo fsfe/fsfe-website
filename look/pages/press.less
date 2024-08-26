@@ -1,0 +1,45 @@
+/* Specific to press page */ 
+
+ul.press.subheadings li {
+  grid-template-columns: 1fr 4fr;
+  display: grid;
+  grid-column-gap: 10px;
+  margin-top: 20px;
+}
+ul.press.subheadings li h3 {
+  margin-top: 0px;
+}
+
+div.press.icon {
+  max-width: 72px;
+}
+
+.box-pressicons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+}
+.pressicon {
+  flex: 0.2;
+  float: left;
+  margin: 20px;
+  text-align: center;
+}
+.pressicon img {
+  padding-bottom: 10px;
+  max-width: 90px !important;
+}
+.press.btn {
+  margin: 5px;
+}
+@media (min-width: 992px) {
+  .press.space15 {
+    padding-top: 45px;
+  }
+}
+@media (min-width: 1200px) {
+  .press.space15 {
+    padding-top: 15px;
+  }
+}

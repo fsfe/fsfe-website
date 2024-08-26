@@ -128,7 +128,7 @@ git_build_into(){
 build_into(){
 
   # Clean up source directory.
-  git -C "${basedir}" clean -dxf
+  git -C "${basedir}" clean -dxf --exclude=status.fsfe.org/translations/data
 
   # Remove old stage directory.
   rm -rf "${stagedir}"

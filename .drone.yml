@@ -8,8 +8,11 @@ clone:
 
 steps:
   - name: checks
-    image: nixery.dev/shell/git/libxml2/gnused/gnugrep/findutils/perl/file/mediainfo/curl:latest
+    image: debian:bookworm
     commands:
+      - apt update
+      # Install required packages
+      - apt install --yes coreutils sed grep libxml2-utils git findutils perl-base file mediainfo curl
       # Check whether non-EN news item would appear on front-page
       - bash tools/check-non-en-frontpage.sh news
       # Run pre-commit checks
@@ -24,3 +27,8 @@ trigger:
   event:
     - push
     - pull_request
+---
+kind: signature
+hmac: 4c0dd0f272458d12234c72f66c4d420069591cac83819644df3c03a280102ded
+
+...

@@ -92,7 +92,14 @@ statuses="$(
 				translation_version="-1"
 			fi
 			if [ "${translation_version:-0}" -lt "${original_version:-0}" ]; then
-				originaldate=$(git log --pretty="%cd" --date=raw -1 "$base".en."$ext" | cut -d' ' -f1)
+				  # TODO the line directly below this is because after moving main website to fsfe.org dir the translation status
+				  # stuff based on dates became a bit useless.
+				  # So we use the second to last commit date for every file.
+				  # after 6 months or so (february 2025) remove the line below with --follow in it, and uncomment the touch underneath it
+				  # TLDR: If after February 2025 remove line directly below this, containign follow and uncomment the touch line below that, 
+				  # without a follow. Please also remove this comment then
+				originaldate=$(git log --follow --pretty="%ct" -2 "$base".en."$ext" | tail -n1)
+				# originaldate=$(git log --pretty="%ct" -1 "$base".en."$ext")
 				if [ "$ext" == "xhtml" ]; then
 					original_url="https://webpreview.fsfe.org?uri=${base/#\.\/fsfe.org/}.en.html"
 					translation_url="https://webpreview.fsfe.org?uri=${base/#\.\/fsfe.org/}.$lang_short.html"

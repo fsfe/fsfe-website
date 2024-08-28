@@ -78,12 +78,13 @@ fi)
 <details>
 <summary>Previous builds</summary>
 <div class="scrollbox">
+<a href="/${PWD##*/}">latest</a><br/>
 $(
     find "$DATADIR" -name "status_*.html" -type f -printf "%f\n" | sort -r | head -n10 | while read stat; do
         t="${stat#status_}"
         t="${t%.html}"
-        printf '<a href="%s">%s</a> - %s<br>' \
-            "data/$stat" "$(timestamp "$t")" "$(sed -rn 's;^.*<dt>Duration:</dt><dd>(.+)</dd>.*$;\1;p;T;q' "$stat")"
+        printf '<a href="%s">%s</a> - %s<br/>' \
+            "/${PWD##*/}/${DATADIR}/$stat" "$(timestamp "$t")" "$(sed -rn 's;^.*<dt>Duration:</dt><dd>(.+)</dd>.*$;\1;p;T;q' "$stat")"
         printf $'\n'
     done
 )

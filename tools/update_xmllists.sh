@@ -124,7 +124,7 @@ declare -A filecount
 
 for section in "news" "events"; do
   for tag in $(ls "${tagmaps}"); do
-    filecount["${tag}:${section}"]=$(grep "^${section}/" "${tagmaps}/${tag}" | wc --lines || true)
+    filecount["${tag}:${section}"]=$(grep "^fsfe.org/${section}/" "${tagmaps}/${tag}" | wc --lines || true)
   done
 done
 

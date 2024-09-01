@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE xml>
+<?xml version="1.0" encoding="utf-8"?>
 <timeline>
   <version>1</version>
   <year value="2017">
@@ -13,9 +12,7 @@
     </event>
     <event month="11" type="internal">
       <title>Community Meeting in Berlin</title>
-      <url
-        >http://blog.3rik.cc/2017/12/report-about-the-fsfe-community-meeting-2017/</url
-      >
+      <url>http://blog.3rik.cc/2017/12/report-about-the-fsfe-community-meeting-2017/</url>
       <body>
         For the first time, the FSFE holds an open-invite community meeting. In
         order to share knowledge, grow projects, and discuss code.
@@ -90,7 +87,7 @@
         La Rete Legale arriva a 400 partecipanti
       </body>
     </event>
-    <event month="01" type="public">
+    <event month="10" type="public">
       <title>
         FSFE convince 1125 amministrazionipubbliche a rimuovereannunci
         pubblicitari disoftware proprietario
@@ -119,7 +116,7 @@
     </event>
   </year>
   <year value="2014">
-    <event month="01" type="policy">
+    <event month="05" type="policy">
       <title>
         33 sostenitoridell'Accordo sulSoftware Libero elettial Parlamento della
         UE
@@ -144,17 +141,12 @@
   <year value="2013">
     <event month="09" type="internal">
       <title>Primo incontro deicoordinatori europei</title>
-      <url
-        >https://blogs.fsfe.org/eal/2013/10/08/fsfes-first-european-coordinators-meeting/</url
-      >
+      <url>https://blogs.fsfe.org/eal/2013/10/08/fsfes-first-european-coordinators-meeting/</url>
       <body>
         La Fellowship dei coordinatori da tutta Europa si incontra a Berlino per
         la prima volta per scambiare conoscenza e discutere future strategie
       </body>
-      <img
-        src="https://pics.fsfe.org/uploads/big/6e459b4ea03aceb6456a2ccb5c17d8f3.jpg"
-        alt="Group picture of the first European Coordinators meeting"
-      />
+      <img src="https://pics.fsfe.org/uploads/big/6e459b4ea03aceb6456a2ccb5c17d8f3.jpg" alt="Group picture of the first European Coordinators meeting"/>
     </event>
     <event month="06" type="policy">
       <title>Il Parlamento tedescounanime contro ibrevetti software</title>
@@ -167,7 +159,7 @@
     </event>
   </year>
   <year value="2012">
-    <event month="01" type="legal">
+    <event month="11" type="legal">
       <title>
         Analisi della garanziadopo aver "flashato"il telefono cellulare
       </title>
@@ -219,7 +211,7 @@
         alcune restrizioni. FSFE inizia una campagna per aiutare gli utenti a
         liberare i loro telefoni e ad usare app Software Libero
       </body>
-      <img src="/graphics/logos/android.png" alt="Free Your Android Logo" />
+      <img src="/graphics/logos/android.png" alt="Free Your Android Logo"/>
     </event>
     <event month="02" type="legal">
       <title>FSFE avverte ilDipartimento diGiustizia americano</title>
@@ -249,10 +241,7 @@
         FSFE riceve la medaglia Theodor Heuss per il suo lavoro sulla libertà
         nella società dell'informazione
       </body>
-      <img
-        src="/graphics/theodor-heuss-medal.png"
-        alt="The Theodor Heuss Medal, a small medal depicting Theodor Heuss"
-      />
+      <img src="/graphics/theodor-heuss-medal.png" alt="The Theodor Heuss Medal, a small medal depicting Theodor Heuss"/>
     </event>
     <event month="04" type="internal">
       <title>
@@ -263,10 +252,7 @@
         Georg C. F. Greve riceve questo alto riconoscimento per il suo lavoro
         sul Software Libero
       </body>
-      <img
-        src="/graphics/ribbonofmerit.png"
-        alt="German Merrit Cross on Ribbon"
-      />
+      <img src="/graphics/ribbonofmerit.png" alt="German Merrit Cross on Ribbon"/>
     </event>
     <event month="02" type="public">
       <title>Prima giornata "Amoil Software Libero"</title>
@@ -276,10 +262,7 @@
         Libero di mostrare il loro amore e rispetto per gli sviluppatori dei
         Software che essi usano ogni giorno
       </body>
-      <img
-        src="/graphics/ilovefs-hashtag-campaignbox.png"
-        alt="I Love Free Software Day logo"
-      />
+      <img src="/graphics/ilovefs-hashtag-campaignbox.png" alt="I Love Free Software Day logo"/>
     </event>
   </year>
   <year value="2009">
@@ -303,7 +286,7 @@
         istituzioni pubbliche per dirglielo. Da allora più di 600 istituzioni
         hanno rimosso la loro pubblicità non libera.
       </body>
-      <img src="/graphics/pdfreaders-logo.png" alt="pdfreaders Logo" />
+      <img src="/graphics/pdfreaders-logo.png" alt="pdfreaders Logo"/>
     </event>
   </year>
   <year value="2008">
@@ -315,7 +298,7 @@
         celebrare e mostrare il sostegno per l'accesso alle informazioni e agli
         Standard Aperti. La più grande campagna di FSFE fino ad ora.
       </body>
-      <img src="/graphics/dfd.logo.png" alt="Document Freedom Day Logo" />
+      <img src="/graphics/dfd.logo.png" alt="Document Freedom Day Logo"/>
     </event>
     <event month="02" type="legal">
       <title>Primo seminarioeuropeo "Licenze delSoftware Libero"</title>
@@ -352,9 +335,7 @@
     </event>
     <event month="02" type="legal">
       <title>Accordo Fiduciariodi Licenza</title>
-      <url
-        >https://lists.fsfe.org/pipermail/press-release/2007q1/000168.html</url
-      >
+      <url>https://lists.fsfe.org/pipermail/press-release/2007q1/000168.html</url>
       <body>
         FSFE rilascia l'AFL per assicurare manutenibilità legale di progetti
         Software Libero ed assicurare i diritti in tribunale. Anche KDE, nel
@@ -373,9 +354,7 @@
     </event>
     <event month="11" type="legal">
       <title>Lancio della SquadraLegale di FSFE</title>
-      <url
-        >https://lists.fsfe.org/pipermail/press-release/2006q4/000159.html</url
-      >
+      <url>https://lists.fsfe.org/pipermail/press-release/2006q4/000159.html</url>
       <body>
         "FSFE Legal", stabilito ed operante in stretta collaborazione con
         gpl-violations.org, forma e supporta gli sviluppatori di Software Libero
@@ -396,9 +375,7 @@
   <year value="2005">
     <event month="11" type="legal">
       <title>Intervento nellacausa di antitrustcontro Microsoftdella CE</title>
-      <url
-        >https://lists.fsfe.org/pipermail/press-release/2005q4/000122.html</url
-      >
+      <url>https://lists.fsfe.org/pipermail/press-release/2005q4/000122.html</url>
       <body>
         Per sostenere la battaglia contro i brevetti software FSFE archivia una
         istanza di intervento in questa importante causa
@@ -406,9 +383,7 @@
     </event>
     <event month="06" type="policy">
       <title>Il Parlamento dellaUE vota contro ibrevetti software</title>
-      <url
-        >https://lists.fsfe.org/pipermail/press-release/2005q3/000109.html</url
-      >
+      <url>https://lists.fsfe.org/pipermail/press-release/2005q3/000109.html</url>
       <body>
         Dopo una intensa campagna di FSFE e di molte altre organizzazioni, il
         Parlamento europeo respinge la nuova iniziativa sui brevetti software
@@ -425,15 +400,13 @@
     </event>
     <event month="02" type="internal">
       <title>Creazione dellaFellowship di FSFE</title>
-      <url
-        >https://lists.fsfe.org/pipermail/press-release/2005q1/000094.html</url
-      >
+      <url>https://lists.fsfe.org/pipermail/press-release/2005q1/000094.html</url>
       <body>
         I sostenitore europei del Software Libero ora possono diventare membri
         sostenitori di FSFE ed usare la sua infrastruttura per promuovere e
         diffondere la visione di FSFE
       </body>
-      <img src="/graphics/plussy.png" alt="Plussy, the fellowship mascot" />
+      <img src="/graphics/plussy.png" alt="Plussy, the fellowship mascot"/>
     </event>
   </year>
   <year value="2004">
@@ -449,9 +422,7 @@
     </event>
     <event month="05" type="public">
       <title>Settimanadi azione contro ibrevetti software</title>
-      <url
-        >https://lists.fsfe.org/pipermail/press-release/2004q2/000057.html</url
-      >
+      <url>https://lists.fsfe.org/pipermail/press-release/2004q2/000057.html</url>
       <body>
         Per informare i cittadini, economisti e politici riguardo le conseguenze
         dannose dell'iniziativa sui brevetti software, FSFE apre
@@ -490,14 +461,12 @@
     </event>
     <event month="04" type="internal">
       <title>Fondazione di FSFE</title>
-      <url
-        >https://lists.fsfe.org/pipermail/press-release/2001q2/000003.html</url
-      >
+      <url>https://lists.fsfe.org/pipermail/press-release/2001q2/000003.html</url>
       <body>
         Georg C. F. Greve è diventato il fondatore e primo presidente della Free
         Software Foundation Europe: organizzazione omologa di FSF
       </body>
-      <img src="/graphics/logo.png" alt="FSFE Logo" />
+      <img src="/graphics/logo.png" alt="FSFE Logo"/>
     </event>
   </year>
 </timeline>

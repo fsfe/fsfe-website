@@ -72,7 +72,7 @@ files="$(
 	done
 )"
 unset tmp
-files=$(echo "$files" | grep -v "internal\|order\/data\/items\.en\.xml\|donate\/germany\|donate\/netherlands\|donate\/switzerland\|status.fsfe.org\|boilerplate\|\/\..*\.xml\|)")
+files=$(echo "$files" | grep -v "internal\|order/data/items\.en\.xml\|donate/germany\|donate/netherlands\|donate/switzerland\|status.fsfe.org\|boilerplate\|/\..*\.xml\|)")
 readonly files
 
 prevlang=""

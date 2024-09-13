@@ -214,17 +214,6 @@ all: \$(COPY_DST_FILES)
 	ln -sf "\$<" "\$@"
 
 # -----------------------------------------------------------------------------
-# Copy .xhtml files to "source" directory in target directory tree
-# -----------------------------------------------------------------------------
-
-SOURCE_DST_FILES := \$(sort \$(patsubst \$(INPUTDIR)/%,\$(OUTPUTDIR)/source/%,\$(HTML_SRC_FILES)))
-
-all: \$(SOURCE_DST_FILES)
-\$(SOURCE_DST_FILES): \$(OUTPUTDIR)/source/%: \$(INPUTDIR)/%
-	echo "* Linking source \$*"
-	ln -sf "\$<" "\$@"
-
-# -----------------------------------------------------------------------------
 # Clean up excess files in target directory
 # -----------------------------------------------------------------------------
 

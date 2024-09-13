@@ -203,6 +203,7 @@ COPY_SRC_FILES := \$(shell find -L "\$(INPUTDIR)" -type f \
   -not -name '*.xhtml' \
   -not -name '*.xml' \
   -not -name '*.xsl' \
+  -not -name '*.nix' \
 ) \$(INPUTDIR)/fsfe.org/order/data/items.en.xml
 
 # The same as above, but moved to the output directory

@@ -34,8 +34,8 @@ searchindex:
 # distributed to the web server.
 
 ifneq ($(build_env),development)
-websites:= pdfreaders.org drm.info fsfe.org
-all: $(foreach dir,$(websites), $(dir)/look/fsfe.min.css $(dir)/look/valentine.min.css)
+websites:=$(shell find . -mindepth 2 -maxdepth 2 -type d -regex "./[a-z\.]+\.[a-z]+/look")
+all: $(foreach dir,$(websites), $(dir)/fsfe.min.css $(dir)/valentine.min.css)
 $(dir $@)%.min.css: $(shell find $(dir $@) -name '*.less')
 	echo "* Compiling $@"
 	lessc "$*.less" -x "$@"

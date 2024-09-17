@@ -18,14 +18,12 @@ dir_maker(){
 
   curpath="$output"
   find "$input" -depth -type d \
-       \! -path '*/.svn' \! -path '*/.svn/*' \
-       \! -path '*/.git' \! -path '*/.git/*' \
+       -regex "$input/[a-z\.]+\.[a-z]+\(/.*\)?" \
        -printf '%P\n' \
-  | while read filepath; do
+  | while read -r filepath; do
     oldpath="$curpath"
     curpath="$output/$filepath/"
-    srcdir="$output/source/$filepath/"
-    match "$oldpath" "^$curpath" || mkdir -p "$curpath" "$srcdir"
+    match "$oldpath" "^$curpath" || mkdir -p "$curpath" 
   done
 }
 

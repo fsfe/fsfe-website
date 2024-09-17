@@ -203,6 +203,7 @@ COPY_SRC_FILES := \$(shell find -L "\$(INPUTDIR)" -type f \
   -not -name '*.xhtml' \
   -not -name '*.xml' \
   -not -name '*.xsl' \
+  -not -name '*.nix' \
 ) \$(INPUTDIR)/fsfe.org/order/data/items.en.xml
 
 # The same as above, but moved to the output directory
@@ -211,17 +212,6 @@ COPY_DST_FILES := \$(sort \$(patsubst \$(INPUTDIR)/%,\$(OUTPUTDIR)/%,\$(COPY_SRC
 all: \$(COPY_DST_FILES)
 \$(COPY_DST_FILES): \$(OUTPUTDIR)/%: \$(INPUTDIR)/%
 	echo "* Linking file \$*"
-	ln -sf "\$<" "\$@"
-
-# -----------------------------------------------------------------------------
-# Copy .xhtml files to "source" directory in target directory tree
-# -----------------------------------------------------------------------------
-
-SOURCE_DST_FILES := \$(sort \$(patsubst \$(INPUTDIR)/%,\$(OUTPUTDIR)/source/%,\$(HTML_SRC_FILES)))
-
-all: \$(SOURCE_DST_FILES)
-\$(SOURCE_DST_FILES): \$(OUTPUTDIR)/source/%: \$(INPUTDIR)/%
-	echo "* Linking source \$*"
 	ln -sf "\$<" "\$@"
 
 # -----------------------------------------------------------------------------

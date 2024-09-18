@@ -95,6 +95,7 @@ build_xmlstream(){
 	  date="$date"
 	  original="$olang"
 	  filename="/${shortname#$basedir/}"
+	  fileurl="/${shortname#$basedir/*/}"
 	  dirname="/${dirname#$basedir/}"
 	  language="$lang"
 	  translation_state="$translation_state"

@@ -274,7 +274,7 @@
     </xsl:element>
     <xsl:element name="meta">
       <xsl:attribute name="property">og:url</xsl:attribute>
-      <xsl:attribute name="content">https://fsfe.org<xsl:value-of select="/buildinfo/@filename"/>.html</xsl:attribute>
+      <xsl:attribute name="content">https://fsfe.org<xsl:value-of select="/buildinfo/@fileurl"/>.html</xsl:attribute>
     </xsl:element>
     <xsl:element name="meta">
       <xsl:attribute name="property">og:title</xsl:attribute>

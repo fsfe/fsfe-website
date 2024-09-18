@@ -148,7 +148,7 @@
         <xsl:attribute name="rel">alternate</xsl:attribute>
         <xsl:attribute name="hreflang"><xsl:value-of select="@id" /></xsl:attribute>
         <xsl:attribute name="lang"><xsl:value-of select="@id" /></xsl:attribute>
-        <xsl:attribute name="href">/<xsl:value-of select="substring-after(substring-after(/buildinfo/@filename, '/'), '/')"/>.<xsl:value-of select="@id"/>.html</xsl:attribute>
+        <xsl:attribute name="href"><xsl:value-of select="/buildinfo/@fileurl"/>.<xsl:value-of select="@id"/>.html</xsl:attribute>
         <xsl:attribute name="title"><xsl:value-of select="."  disable-output-escaping="yes" /></xsl:attribute>
       </xsl:element>
     </xsl:for-each>

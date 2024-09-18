@@ -35,7 +35,7 @@
                 <xsl:element name="li">
                   <xsl:element name="a">
                     <xsl:attribute name="href">
-                      <xsl:value-of select="$urlprefix"/>/<xsl:value-of select="substring-after(substring-after(/buildinfo/@filename,'/'),'/')"/>.<xsl:value-of select="@id"/>.html</xsl:attribute>
+                      <xsl:value-of select="$urlprefix"/><xsl:value-of select="/buildinfo/@fileurl"/>.<xsl:value-of select="@id"/>.html</xsl:attribute>
                     <xsl:value-of select="." disable-output-escaping="yes"/>
                   </xsl:element>
                 </xsl:element>

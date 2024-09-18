@@ -103,15 +103,6 @@
       <xsl:attribute name="type">text/css</xsl:attribute>
     </xsl:element>
 
-    <xsl:if test="/buildinfo/@language='ar'">
-      <xsl:element name="link">
-        <xsl:attribute name="rel">stylesheet</xsl:attribute>
-        <xsl:attribute name="media">all</xsl:attribute>
-        <xsl:attribute name="href"><xsl:value-of select="$urlprefix"/>/look/rtl.css</xsl:attribute>
-        <xsl:attribute name="type">text/css</xsl:attribute>
-      </xsl:element>
-    </xsl:if>
-
     <xsl:element name="link">
       <xsl:attribute name="rel">icon</xsl:attribute>
       <xsl:attribute name="href">

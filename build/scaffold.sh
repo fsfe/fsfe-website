@@ -94,8 +94,9 @@ build_xmlstream(){
 	<buildinfo
 	  date="$date"
 	  original="$olang"
-	  filename="/${shortname#$basedir/}"
-	  dirname="/${dirname#$basedir/}"
+	  filename="/${shortname#"$basedir"/}"
+	  fileurl="/${shortname#"$basedir"/*/}"
+	  dirname="/${dirname#"$basedir"/}"
 	  language="$lang"
 	  translation_state="$translation_state"
 	>

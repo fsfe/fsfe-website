@@ -79,7 +79,7 @@
                 <xsl:element name="a">
                   <xsl:attribute name="href">
                     <xsl:text>https://my.fsfe.org/donate?referrer=https://fsfe.org</xsl:text>
-                    <xsl:value-of select="/buildinfo/@filename"/>
+                    <xsl:value-of select="/buildinfo/@fileurl"/>
                     <xsl:text>.html</xsl:text>
                   </xsl:attribute>
                   <xsl:element name="i">

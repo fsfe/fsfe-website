@@ -39,7 +39,7 @@
             <xsl:element name="a">
               <xsl:attribute name="href">
                 <xsl:value-of select="$urlprefix"/>
-                <xsl:value-of select="/buildinfo/@filename"/>
+                <xsl:value-of select="/buildinfo/@fileurl"/>
                 <xsl:text>.en.html</xsl:text>
               </xsl:attribute>
               <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'translator3b'" /></xsl:call-template>

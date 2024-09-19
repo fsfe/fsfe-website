@@ -211,8 +211,8 @@ COPY_DST_FILES := \$(sort \$(patsubst \$(INPUTDIR)/%,\$(OUTPUTDIR)/%,\$(COPY_SRC
 
 all: \$(COPY_DST_FILES)
 \$(COPY_DST_FILES): \$(OUTPUTDIR)/%: \$(INPUTDIR)/%
-	echo "* Linking file \$*"
-	ln -sf "\$<" "\$@"
+	echo "* Copying file \$*"
+	rsync -l "\$<" "\$@"
 
 # -----------------------------------------------------------------------------
 # Clean up excess files in target directory

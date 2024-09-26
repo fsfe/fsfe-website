@@ -6,7 +6,8 @@ set -euo pipefail
 
 # We have the -z flag so that git does not replace unicode chars with escape codes, and quote the filenames
 # This also uses null bytes instead of newlines, so we swap them
-files=$(git ls-files -z "$(git rev-parse --show-toplevel)" | sed 's/\x0/\n/g')
+# Only operate on xml and xhtml files. Faster, and all thats needed for translation-status.sh
+files=$(git ls-files -z "$(git rev-parse --show-toplevel)" | sed 's/\x0/\n/g' | grep -E '^[a-z\.]+\.[a-z]+/.*(xml|xhtml)$')
 
 total=$(echo "$files" | wc -l)
 i=1

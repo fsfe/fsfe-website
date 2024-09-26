@@ -63,7 +63,7 @@ stylesheets: $(SUBDIRS)
 # Dive into subdirectories
 # -----------------------------------------------------------------------------
 
-SUBDIRS := $(shell find */* -name "Makefile" | xargs dirname)
+SUBDIRS := $(shell find . -regex "./[a-z\.]+\.[a-z]+/.*/Makefile" | xargs dirname)
 
 all: $(SUBDIRS)
 $(SUBDIRS): .FORCE

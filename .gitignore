@@ -15,6 +15,9 @@ global/data/topbanner/.topbanner.??.xml
 fsfe.org/search/index.js
 fsfe.org/tags/tagged-*.en.xhtml
 fsfe.org/tags/.tags.??.xml
+# Local build stuff
+output/*
+!output/README.md
 
 ## Status dir stuff
 status.fsfe.org/*/data*/*

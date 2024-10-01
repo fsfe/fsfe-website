@@ -37,7 +37,6 @@ my %names = (
   "floriansnow" => "Florian Snow",
   "gabriel.ku" => "Gabriel Ku Wei Bin",
   "hf" => "Henning Fehr",
-  "irakli" => "Irakli Maisuradze",
   "jn" => "Johannes Näder",
   "lina.ceballos" => "Lina Ceballos",
   "linus" => "Linus Sehn",

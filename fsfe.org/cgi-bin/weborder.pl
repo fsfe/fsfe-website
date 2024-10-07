@@ -97,6 +97,7 @@ my $items = XML::LibXML->load_xml(location => $items_file);
 
 my $count  = 0;
 my $amount = 0;
+my $pickup = 0;
 
 foreach my $item ( $query->param ) {
     my $value = $query->param($item);
@@ -106,6 +107,7 @@ foreach my $item ( $query->param ) {
         my $price = $items->findvalue("/itemset/item[\@id=\"$item\"]/\@price");
         $count  += 1;
         $amount += $value * $price;
+        $pickup = "hoodie-fourfreedoms" eq substr($item,0,length("hoodie-fourfreedoms"));
     }
 }
 
@@ -116,6 +118,9 @@ if ( $country_code eq 'DE' ) {
     $shipping = 5;
 } else {
     $shipping = 8;
+}
+if ( $pickup ) {
+    $shipping = 0;
 }
 
 $amount += $shipping;

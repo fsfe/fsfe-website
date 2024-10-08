@@ -103,11 +103,12 @@ foreach my $item ( $query->param ) {
     my $value = $query->param($item);
     if ( not $item =~ /^_/ and $value ) {
         # Remove size from item info so price is found properly
+        my $origitem = $item;
         $item =~ s/_.*//;
         my $price = $items->findvalue("/itemset/item[\@id=\"$item\"]/\@price");
         $count  += 1;
         $amount += $value * $price;
-        $pickup = "hoodie-fourfreedoms" eq substr($item,0,length("hoodie-fourfreedoms"));
+        $pickup = "hoodie-fourfreedoms" eq substr($origitem,0,length("hoodie-fourfreedoms"));
     }
 }
 
@@ -223,6 +224,18 @@ HTML
     }
 }
 
+if ( $pickup ) {
+$body .= <<"HTML";
+Self pick-up (Shipping): € 0<br>
+<strong>Total amount: € $amount</strong>
+</pre>
+<p>
+    Best regards,
+</p>
+</body>
+</html>
+HTML
+} else {
 $body .= <<"HTML";
 Shipping to $country_name: € $shipping<br>
 <strong>Total amount: € $amount</strong>
@@ -233,6 +246,7 @@ Shipping to $country_name: € $shipping<br>
 </body>
 </html>
 HTML
+}
 
 # -----------------------------------------------------------------------------
 # Generate invoice

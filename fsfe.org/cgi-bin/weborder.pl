@@ -261,7 +261,11 @@ my @odtfill = qw();
 push @odtfill, $ENV{"DOCUMENT_ROOT"} . "/cgi-bin/odtfill";
 
 # template file
-push @odtfill, $ENV{"DOCUMENT_ROOT"} . "/templates/invoice.odt";
+if ( !$pickup ) {
+    push @odtfill, $ENV{"DOCUMENT_ROOT"} . "/templates/invoice.odt";
+} else {
+    push @odtfill, $ENV{"DOCUMENT_ROOT"} . "/templates/invoicepu.odt";
+}
 
 # output file
 push @odtfill, "/tmp/invoice.odt";
@@ -284,8 +288,10 @@ foreach my $item ( $query->param ) {
         push @odtfill, "Amount=" . sprintf "%.2f", $value * $price;
     }
 }
-push @odtfill, "Country=" . $country_name;    # 2nd Country placeholder
-push @odtfill, "Shipping=" . sprintf "%.2f", $shipping;
+if ( !$pickup ) {
+    push @odtfill, "Country=" . $country_name;    # 2nd Country placeholder
+    push @odtfill, "Shipping=" . sprintf "%.2f", $shipping;
+}
 push @odtfill, "Total=" . $amount_f;
 push @odtfill, "Net=" . $net;
 push @odtfill, "Vat=" . $vat;

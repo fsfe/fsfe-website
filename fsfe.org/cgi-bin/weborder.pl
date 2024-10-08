@@ -108,7 +108,9 @@ foreach my $item ( $query->param ) {
         my $price = $items->findvalue("/itemset/item[\@id=\"$item\"]/\@price");
         $count  += 1;
         $amount += $value * $price;
-        $pickup = "hoodie-fourfreedoms" eq substr($origitem,0,length("hoodie-fourfreedoms"));
+        if ( !$pickup ) {
+            $pickup = "hoodie-fourfreedoms" eq substr($origitem,0,length("hoodie-fourfreedoms"));
+        }
     }
 }
 
@@ -120,6 +122,7 @@ if ( $country_code eq 'DE' ) {
 } else {
     $shipping = 8;
 }
+# if one item was for pick up only, then shipping cost are 0
 if ( $pickup ) {
     $shipping = 0;
 }

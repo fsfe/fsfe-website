@@ -97,15 +97,20 @@ my $items = XML::LibXML->load_xml(location => $items_file);
 
 my $count  = 0;
 my $amount = 0;
+my $pickup = 0;
 
 foreach my $item ( $query->param ) {
     my $value = $query->param($item);
     if ( not $item =~ /^_/ and $value ) {
         # Remove size from item info so price is found properly
+        my $origitem = $item;
         $item =~ s/_.*//;
         my $price = $items->findvalue("/itemset/item[\@id=\"$item\"]/\@price");
         $count  += 1;
         $amount += $value * $price;
+        if ( !$pickup ) {
+            $pickup = "hoodie-fourfreedoms" eq substr($origitem,0,length("hoodie-fourfreedoms"));
+        }
     }
 }
 
@@ -116,6 +121,10 @@ if ( $country_code eq 'DE' ) {
     $shipping = 5;
 } else {
     $shipping = 8;
+}
+# if one item was for pick up only, then shipping cost are 0
+if ( $pickup ) {
+    $shipping = 0;
 }
 
 $amount += $shipping;
@@ -218,6 +227,18 @@ HTML
     }
 }
 
+if ( $pickup ) {
+$body .= <<"HTML";
+Self pick-up (Shipping): € 0<br>
+<strong>Total amount: € $amount</strong>
+</pre>
+<p>
+    Best regards,
+</p>
+</body>
+</html>
+HTML
+} else {
 $body .= <<"HTML";
 Shipping to $country_name: € $shipping<br>
 <strong>Total amount: € $amount</strong>
@@ -228,6 +249,7 @@ Shipping to $country_name: € $shipping<br>
 </body>
 </html>
 HTML
+}
 
 # -----------------------------------------------------------------------------
 # Generate invoice
@@ -239,7 +261,11 @@ my @odtfill = qw();
 push @odtfill, $ENV{"DOCUMENT_ROOT"} . "/cgi-bin/odtfill";
 
 # template file
-push @odtfill, $ENV{"DOCUMENT_ROOT"} . "/templates/invoice.odt";
+if ( !$pickup ) {
+    push @odtfill, $ENV{"DOCUMENT_ROOT"} . "/templates/invoice.odt";
+} else {
+    push @odtfill, $ENV{"DOCUMENT_ROOT"} . "/templates/invoicepu.odt";
+}
 
 # output file
 push @odtfill, "/tmp/invoice.odt";
@@ -262,8 +288,10 @@ foreach my $item ( $query->param ) {
         push @odtfill, "Amount=" . sprintf "%.2f", $value * $price;
     }
 }
-push @odtfill, "Country=" . $country_name;    # 2nd Country placeholder
-push @odtfill, "Shipping=" . sprintf "%.2f", $shipping;
+if ( !$pickup ) {
+    push @odtfill, "Country=" . $country_name;    # 2nd Country placeholder
+    push @odtfill, "Shipping=" . sprintf "%.2f", $shipping;
+}
 push @odtfill, "Total=" . $amount_f;
 push @odtfill, "Net=" . $net;
 push @odtfill, "Vat=" . $vat;

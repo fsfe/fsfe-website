@@ -61,11 +61,12 @@ my ( $country_code, $country_name ) = split( /\|/, $country );
 my $email    = decode( "utf-8", $query->param("email") );
 my $phone    = decode( "utf-8", $query->param("phone") );
 my $language = $query->param("language");
+my $notes    = decode( "utf-8", $query->param("notes") );
 
 # Remove all parameters except for items and prices.
 $query->delete(
     "url",   "name",  "address", "zip", "city", "country",
-    "email", "phone", "language"
+    "email", "phone", "language", "notes"
 );
 
 my $lang = substr $language, 0, 2;
@@ -195,6 +196,9 @@ my $body = <<"HTML";
         BIC: GENODEM1GLS<br>
         Payment reference: $reference<br>
         Payment amount: $amount Euro
+    </p>
+    <p>
+        Notes: $notes
     </p>
     <p>
         The following order was just received by our merchandise team. We will

@@ -20,6 +20,7 @@ while [ "$#" -gt 0 ]; do
         ;;
     esac
 done
+mkdir -p ./output
 ./build/build_main.sh "$command" ./output/final --statusdir ./output/final/status.fsfe.org/fsfe.org/data
 if [[ "$serve" ]]; then
     python3 ./serve-websites.py

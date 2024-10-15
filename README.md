@@ -34,13 +34,13 @@ This repository also contains the source files of other websites the FSFE hosts:
 
 ### Important folders
 
-Notable toplevel directories are:
+Notable top level directories are:
 
 * `build`: Mostly custom Bash and XSL scripts to build the website
 * `global`: Globally used data files and modules, also the static translated strings.
 * `tools`: Contains miscellaneous XML, XSL, and SH files.
 
-and of course the different website folders.
+And of course the different website folders.
 
 And here are dome notable directories inside the folder for the main webpage, fsfe.org.
 * `about`: Information about the FSFE itself, its team members etc
@@ -60,7 +60,7 @@ And here are dome notable directories inside the folder for the main webpage, fs
 
 ## Contribute
 
-Become member of our awesome [webmaster team](https://fsfe.org/contribute/web/) and help improving our online information platform! The [web teams wiki page](https://wiki.fsfe.org/Teams/Web) contains info how to join the mailing list, where a issue tracker can be found, and how to edit the website's source code.
+Become member of our awesome [webmaster team](https://fsfe.org/contribute/web/) and help to improve our online information platform! 
 
 ## Translate
 
@@ -72,4 +72,38 @@ You can see the current status of translation progress of fsfe.org at [status.fs
 
 ## Build
 
-You can build the fsfe.org website on your own computer to make previews of single pages possible offline and without having to wait for an online website build. A [dedicated docs page](https://docs.fsfe.org/en/techdocs/mainpage/buildlocally) tells you how to do it.
+There are two ways to build and develop the directory locally. Initial builds of the webpages may take ~40 minutes, but subsequent builds should be much faster.
+
+Alterations to build scripts or the files used site-wide will result in near full rebuilds.
+
+### Native
+We can either install the required dependencies manually using our preferred package manager. If you are a nix use one can run `nix-shell` to enter a shell with the required build dependencies.
+
+The required binary names are 
+```
+realpath rsync xsltproc xmllint sed find egrep grep wc make tee date iconv wget shuf python3
+```
+The package names for Debian, are 
+```
+bash bash-completion coreutils diffutils findutils inotify-tools libxml2-utils libxslt make procps python3 rsync
+```
+
+After getting the dependencies one way or another we can actually build and serve the pages.
+
+The pages can be built and served by running `./build.sh`. Try `--help` for more information. The simple web server used lacks the features of `apache` which used on the FSFE web servers. This is why no index is automatically selected form and directory and other behaviors.
+
+### Docker
+Simply running `docker compose run --service-ports build --serve` should build the webpages and make them available over localhost.
+Some more explanation: we are essentially just using docker as a way to provide dependencies and then running the build script. All flags after `build` are passed to `build.sh`. The `service-ports` flag is required to open ports from the container for serving the output, not needed if not using the `--serve` flag of the build script.
+
+Please note that files generated during the build process using docker are owned by root. This does not cause issues unless you with to manually alter the output or switch to native building instead of docker.
+
+If you wish to switch to native building after using docker, you must use `sudo git clean -fdx` to remove the files generated using docker.
+
+
+## Testing
+While most small changes can be tested adequately by building locally some larger changes, particularly ones relating to the order pages, event registration and other forms may require more integrated testing. This can be achieved using the `test` branch. This branch is built and served in the same way as the main site, [fsfe.org](https://fsfe.org). The built version of the `test` branch may be viewed at [test.fsfe.org](https://test.fsfe.org).
+
+## Status Viewing
+The status of builds of [fsfe.org](https://fsfe.org) and [test.fsfe.org](https://test.fsfe.org) can be viewed at [status.fsfe.org](https://status.fsfe.org)
+

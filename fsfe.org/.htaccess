@@ -163,7 +163,7 @@ RewriteRule ^activities/ftf/ngi0(.*)$ /activities/ngi/ [R=301,L]
 RewriteRule ^activities/ftf/?(.*)$ /activities/legal.html [R=301,L]
 
 # /activities/childrensbook
-RewriteRule ^activities/childrensbook(.*)$ /activities/ada-zangemann/$1 [R=301,L]
+RewriteRule ^activities/childrensbook(.*)$ /activities/ada-zangemann$1 [R=301,L]
 
 # /activities
 RewriteRule ^activities/askyourcandidates(.*) /activities/elections/askyourcandidates$1 [R=301,L]

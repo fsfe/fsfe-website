@@ -190,10 +190,7 @@ EOF
 
 # All files which should just be copied over
 COPY_SRC_FILES := \$(shell find -L "\$(INPUTDIR)" -type f \
-  -not -path '\$(INPUTDIR)/.git/*' \
-  -not -path '\$(INPUTDIR)/build/*' \
-  -not -path '\$(INPUTDIR)/global/*' \
-  -not -path '\$(INPUTDIR)/tools/*' \
+  -regex "\$(INPUTDIR)/[a-z\.]+\.[a-z]+/.*" \
   -not -name '.drone.yml' \
   -not -name '.gitignore' \
   -not -name 'README*' \

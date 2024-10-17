@@ -1,4 +1,4 @@
 AuthType Basic
 AuthName "LLW25 Schedule"
-AuthUserFile /srv/www/fsfe.org/global/fsfe.org/activities/ln/2025/.htusers
+AuthUserFile /srv/www/test.fsfe.org/global/fsfe.org/activities/ln/2025/.htpassword
 Require user llw25

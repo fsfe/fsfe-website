@@ -72,7 +72,7 @@ You can see the current status of translation progress of fsfe.org at [status.fs
 
 ## Build
 
-There are two ways to build and develop the directory locally. Initial builds of the webpages may take ~40 minutes, but subsequent builds should be much faster. Using the `--languages` flag to avoid building all supported languages can make this much faster. See ./build/README.md for more information.
+There are two ways to build and develop the directory locally. Initial builds of the webpages may take ~40 minutes, but subsequent builds should be much faster.
 
 Alterations to build scripts or the files used site-wide will result in near full rebuilds.
 

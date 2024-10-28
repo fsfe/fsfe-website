@@ -6,6 +6,6 @@ basedir="${0%/*}/.."
 . "$basedir/build/arguments.sh"
 
 case "$command" in
-process_file) process_file "$workfile" "$processor" ;;
-*) die "Unrecognised command or no command given" ;;
+  process_file) process_file "$workfile" "$processor" ;;
+  *) die "Unrecognised command or no command given" ;;
 esac

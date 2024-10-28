@@ -19,7 +19,7 @@ ARCH_YEARS := $(filter-out $(lastword $(ARCH_YEARS)),$(ARCH_YEARS))
 ARCH_YEARS := $(filter-out $(lastword $(ARCH_YEARS)),$(ARCH_YEARS))
 
 # Languages in which the template exists
-ARCH_LANGS := $(filter $(foreach lang,$(languages),.$(lang)),$(suffix $(basename $(wildcard archive-template.??.xhtml))))
+ARCH_LANGS := $(suffix $(basename $(wildcard archive-template.??.xhtml)))
 
 # .xhtml files to generate
 ARCH_XHTML := $(foreach year,$(ARCH_YEARS),$(foreach lang,$(ARCH_LANGS),$(year)/index$(lang).xhtml))
@@ -62,7 +62,7 @@ all: $(GENERATED_XML_SOURCES)
 # -----------------------------------------------------------------------------
 
 # All existing .xhtml files
-XHTML := $(filter $(foreach lang,$(languages),%.$(lang).xhtml),$(shell ls */*.??.xhtml | xargs grep -l '<html newsdate'))
+XHTML := $(shell ls */*.??.xhtml | xargs grep -l '<html newsdate')
 
 # List of .xml files to generate
 XML := $(patsubst %.xhtml,%.xml,$(subst /,/.,$(XHTML)))

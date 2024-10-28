@@ -29,6 +29,7 @@ set -e
 set -o pipefail
 
 pid=$$
+languages="$1"
 
 nextyear=$(date --date="next year" +%Y)
 thisyear=$(date --date="this year" +%Y)
@@ -54,7 +55,7 @@ mkdir "${taglabels}"
 
 echo "* Generating tag maps"
 
-for xml_file in $(find * -name '*.??.xml' -not -path 'fsfe.org/tags/*' | xargs grep -l '<tag' | sort); do
+for xml_file in $(find * -regex "[a-z.]+.[a-z]+/.*/*.\(${languages// /\\\|}\).xml" -not -path 'fsfe.org/tags/*' | xargs grep -l '<tag' | sort); do
   xsltproc "build/xslt/get_tags.xsl" "${xml_file}" | while read tag label; do
     # Add file to list of files by tag key
     echo "${xml_file%.??.xml}" >> "${tagmaps}/${tag}"

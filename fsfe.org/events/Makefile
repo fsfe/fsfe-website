@@ -19,7 +19,7 @@ ARCH_YEARS := $(filter-out $(lastword $(ARCH_YEARS)),$(ARCH_YEARS))
 ARCH_YEARS := $(filter-out $(lastword $(ARCH_YEARS)),$(ARCH_YEARS))
 
 # Languages in which the template exists
-ARCH_LANGS := $(suffix $(basename $(wildcard archive-template.??.xhtml)))
+ARCH_LANGS := $(filter $(foreach lang,$(languages),.$(lang)),$(suffix $(basename $(wildcard archive-template.??.xhtml))))
 
 # .xhtml files to generate
 ARCH_XHTML := $(foreach year,$(ARCH_YEARS),$(foreach lang,$(ARCH_LANGS),$(year)/index$(lang).xhtml))

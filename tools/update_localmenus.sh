@@ -40,11 +40,7 @@ for dir in ${!files_by_dir[@]}; do
     if [ "${file}" -nt "${dir}/.localmenu.en.xml" ]; then
 
       # Find out which languages to generate.
-      languages=$(
-        ls ${files_by_dir[${dir}]} \
-          | sed 's/.*\.\(..\)\.xhtml/\1/' \
-          | sort --uniq
-      )
+      languages="$1"
 
       # Compile the list of base filenames of the source files.
       basefiles=$(

@@ -133,18 +133,18 @@
     <image small="data/pictures/tshirt-multilingual-black-front-small.jpg" large="data/pictures/tshirt-multilingual-black-front-large.jpg"/>
     <image small="data/pictures/tshirt-multilingual-black-back-small.jpg" large="data/pictures/tshirt-multilingual-black-back-large.jpg"/>
   </item>
-  <item type="slimfit" id="slimfit-multilingual-black" price="20.00" date="2019-12-07">
+  <item type="slimfit" id="slimfit-multilingual-black" oldprice="20.00" price="15.00" date="2019-12-07">
     <available size="L" a="48" b="65"/>
     <available size="XL" a="53.5" b="66"/>
     <image small="data/pictures/slimfit-multilingual-black-front-small.jpg" large="data/pictures/slimfit-multilingual-black-front-large.jpg"/>
     <image small="data/pictures/slimfit-multilingual-black-back-small.jpg" large="data/pictures/slimfit-multilingual-black-back-large.jpg"/>
   </item>
-  <item type="slimfit" id="slimfit-multilingual-blue" oldprice="20.00" price="15.00" date="2019-12-07">
-    <!-- available size="M"    a="47.5" b="62"/ -->
+  <!-- type="slimfit" id="slimfit-multilingual-blue" oldprice="20.00" price="15.00" date="2019-12-07">
+    <available size="M"    a="47.5" b="62"/>
     <available size="L" a="48" b="65"/>
     <image small="data/pictures/slimfit-multilingual-blue-front-small.jpg" large="data/pictures/slimfit-multilingual-blue-front-large.jpg"/>
     <image small="data/pictures/slimfit-multilingual-blue-back-small.jpg" large="data/pictures/slimfit-multilingual-blue-back-large.jpg"/>
-  </item>
+  </item -->
   <item type="other" id="baby-bib-black" price="15.00" date="2019-12-07">
     <available size="#"/>
     <image small="data/pictures/baby-bib-black-small.jpg" large="data/pictures/baby-bib-black-large.jpg"/>

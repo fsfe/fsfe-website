@@ -97,6 +97,7 @@ RewriteRule ^drm.info(/.*)? https://drm.info$1 [R=301,L]
 # Redirect for registration
 # TODO please update the link for new registration form
 RewriteRule ^activities/yh4f/register https://share.fsfe.org/apps/forms/s/kQX233iKfwe3ZtgiHxwLZJNB [R=301,L]
+RewriteRule ^activities/yh4f/feedback https://share.fsfe.org/apps/forms/s/LBHwzSmaiyoX3Tmwo2qJgAki [R=301,L]
 
 # =============================================================================
 # MOVED PAGES

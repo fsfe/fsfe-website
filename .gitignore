@@ -18,6 +18,11 @@ fsfe.org/tags/.tags.??.xml
 global/data/modules/fsfe-activities-options.en.xml
 # Local build stuff
 output
+# Python venv
+.venv
+__pycache__
+#Nltk
+.nltk_data
 
 ## Status dir stuff
 status.fsfe.org/*/data*/*

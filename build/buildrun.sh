@@ -29,6 +29,10 @@ dir_maker() {
 
 # The actual build
 buildrun() {
+	echo "Setting up python deps!"
+	python3 -m venv "$basedir/.venv" || die "Failed so setup python venv!"
+	source "$basedir/.venv/bin/activate" || die "Failed to activate python venv!"
+	pip3 install -r "$basedir/requirements.txt" --quiet || die "Failed to install dependancies"
 	set -o pipefail
 
 	printf %s "$start_time" >"$(logname start_time)"
@@ -40,7 +44,7 @@ buildrun() {
 
 	{
 		echo "Starting phase 1" &&
-			make --silent --directory="$basedir" build_env="${build_env}" languages="$languages" 2>&1 &&
+			python3 "$basedir"/phase1.py "$languages" 2>&1 &&
 			echo "Finishing phase 1" ||
 			die "Error during phase 1"
 	} | t_logstatus phase_1 || exit 1

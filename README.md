@@ -79,18 +79,19 @@ Alterations to build scripts or the files used site-wide will result in near ful
 ### Native
 We can either install the required dependencies manually using our preferred package manager. If you are a nix use one can run `nix-shell` to enter a shell with the required build dependencies.
 
-The required binary names are 
+If installing manually, the required binary names are 
 ```
-realpath rsync xsltproc xmllint sed find egrep grep wc make tee date iconv wget shuf python3
+realpath rsync xsltproc xmllint sed find egrep grep wc make tee date iconv wget shuf python3 pip3
 ```
-The package names for Debian, are 
+The package names for Debian are 
 ```
-bash bash-completion coreutils diffutils findutils inotify-tools libxml2-utils libxslt make procps python3 rsync
+bash bash-completion coreutils diffutils findutils inotify-tools libxml2-utils libxslt make procps python3 python3-pip python3-venv rsync
 ```
+The python dependencies are installed as part of the build process. They can be found in `requirements.txt`.
 
 After getting the dependencies one way or another we can actually build and serve the pages.
 
-The pages can be built and served by running `./build.sh`. Try `--help` for more information. The simple web server used lacks the features of `apache` which used on the FSFE web servers. This is why no index is automatically selected form and directory and other behaviors.
+The pages can be built and served by running `./build.py`. Try `--help` for more information. The simple web server used lacks the features of `apache` which used on the FSFE web servers. This is why no index is automatically selected for each directory and other behaviors.
 
 ### Docker
 Simply running `docker compose run --service-ports build --serve` should build the webpages and make them available over localhost.

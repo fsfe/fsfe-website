@@ -14,10 +14,12 @@ make \
 libc-bin \
 wget \
 procps \
+node-less \
 python3 \
-python3-bs4
+python3-venv \
+python3-pip
 
 WORKDIR /fsfe-websites
-ENTRYPOINT ["bash", "./build.sh" ]
+ENTRYPOINT ["python3", "./build.py" ]
 
 

@@ -36,4 +36,4 @@ ARCH_SOURCES := $(foreach year,$(ARCH_YEARS),$(year)/index.sources)
 all: $(ARCH_SOURCES)
 $(ARCH_SOURCES): %.sources:
 	@echo "*   Creating $@"
-	@echo "fsfe.org/events/$(dir $@)event-*:[]\nfsfe.org/events/$(dir $@).event-*:[]\nfsfe.org/events/.localmenu:[]\n" > $@
+	@printf "fsfe.org/events/$(dir $@)event-*:[]\nfsfe.org/events/$(dir $@).event-*:[]\nfsfe.org/events/.localmenu:[]\n" > $@

@@ -1,0 +1,162 @@
+import datetime
+import fnmatch
+import logging
+import multiprocessing
+import re
+from pathlib import Path
+
+import lxml.etree as etree
+
+from build.lib import (
+    touch_if_newer_dep,
+    update_if_changed,
+)
+
+logger = logging.getLogger(__name__)
+
+
+def _update_for_base(
+    base: Path, all_xml: set[Path], nextyear: str, thisyear: str, lastyear: str
+) -> None:
+    """
+    Update the xmllist for a given base file
+    """
+    matching_files = set()
+    # If sources exist
+    if base.with_suffix(".sources").exists():
+        # Load every file that matches the pattern
+        # If a tag is included in the pattern, the file must contain that tag
+        with base.with_suffix(".sources").open(mode="r") as file:
+            for line in file:
+                pattern = (
+                    re.sub(r":\[.*\]$", "*", line)
+                    .replace("$nextyear", nextyear)
+                    .replace("$thisyear", thisyear)
+                    .replace("$lastyear", lastyear)
+                    .strip()
+                )
+                if len(pattern) <= 0:
+                    print("Pattern too short, continue!")
+                    continue
+                tag = (
+                    re.match(r":\[(.*)\]$", line).group().strip()
+                    if re.match(r":\[(.*)\]$", line)
+                    else ""
+                )
+                for line in filter(
+                    lambda line:
+                    # Matches glob pattern
+                    fnmatch.fnmatchcase(str(line), pattern)
+                    # contains tag if tag in pattern
+                    and (
+                        etree.parse(file).find(f"//tag[@key='{tag}']")
+                        if tag != ""
+                        else True
+                    )
+                    # Not just matching an empty line
+                    and len(str(line)) > 0,
+                    all_xml,
+                ):
+                    matching_files.add(str(line))
+
+    for file in Path("").glob(f"{base}.??.xhtml"):
+        xslt_root = etree.parse(file)
+        for module in xslt_root.xpath("//module"):
+            matching_files.add(f'global/data/modules/{module.get("id")}'.strip())
+    matching_files = sorted(matching_files)
+    update_if_changed(
+        Path(f"{base.parent}/.{base.name}.xmllist"), "\n".join(matching_files) + "\n"
+    )
+
+
+def _update_module_xmllists(languages: list[str]) -> None:
+    """
+    Update .xmllist files for .sources and .xhtml containing <module>s
+    """
+    logger.info("Updating XML lists")
+    # Store current dir
+    for site in map(
+        lambda path: str(path),
+        filter(lambda path: path.is_dir(), Path(".").glob("?*.??*")),
+    ):
+        logger.info(f"Updating xmllists for {site}")
+        # Get all the bases and stuff before multithreading the update bit
+        all_xml = set(
+            map(
+                lambda path: path.with_suffix("").with_suffix(""),
+                filter(
+                    lambda path: path.with_suffix("").suffix.removeprefix(".")
+                    in languages,
+                    Path(site).glob("**/*.*.xml"),
+                ),
+            )
+        )
+        source_bases = set(
+            map(
+                lambda path: path.with_suffix(""),
+                Path(site).glob("**/*.sources"),
+            )
+        )
+        module_bases = set(
+            map(
+                lambda path: path.with_suffix("").with_suffix(""),
+                filter(
+                    lambda path: path.with_suffix("").suffix.removeprefix(".")
+                    in languages
+                    and etree.parse(path).xpath("//module"),
+                    Path(site).glob("**/*.*.xhtml"),
+                ),
+            )
+        )
+        all_bases = source_bases | module_bases
+        nextyear = str(datetime.datetime.today().year + 1)
+        thisyear = str(datetime.datetime.today().year)
+        lastyear = str(datetime.datetime.today().year - 1)
+        with multiprocessing.Pool(multiprocessing.cpu_count()) as pool:
+            pool.starmap(
+                _update_for_base,
+                [(base, all_xml, nextyear, thisyear, lastyear) for base in all_bases],
+            )
+
+
+def _check_xmllist_deps(file: Path) -> None:
+    """
+    If any of the sources in an xmllist are newer than it, touch the xmllist
+    """
+    xmls = set()
+    with file.open(mode="r") as fileobj:
+        for line in fileobj:
+            for newfile in Path("").glob(line + ".??.xml"):
+                xmls.add(newfile)
+    touch_if_newer_dep(str(file), xmls)
+
+
+def _touch_xmllists_with_updated_deps(languages: list[str]) -> None:
+    """
+    Touch all .xmllist files where one of the contained files has changed
+    """
+    logger.info("Checking contents of XML lists")
+    with multiprocessing.Pool(multiprocessing.cpu_count()) as pool:
+        pool.map(_check_xmllist_deps, Path("").glob("./**/.*.xmllist"))
+
+
+def update_xmllists(languages: list[str]) -> None:
+    """
+    Update XML filelists (*.xmllist)
+
+     Creates/update the following files:
+
+    * <dir>/.<base>.xmllist for each <dir>/<base>.sources as well as for each
+      fsfe.org/tags/tagged-<tags>.en.xhtml. These files are used in phase 2 to include the
+      correct XML files when generating the HTML pages. It is taken care that
+      these files are only updated whenever their content actually changes, so
+      they can serve as a prerequisite in the phase 2 Makefile.
+
+    Changing or removing tags in XML files is also considered, in which case a
+    file is removed from the .xmllist files.
+
+    When a tag has been removed from the last XML file where it has been used,
+    the tagged-* are correctly deleted.
+    """
+    _update_module_xmllists(languages)
+    _touch_xmllists_with_updated_deps(languages)

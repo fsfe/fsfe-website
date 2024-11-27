@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='utf-8'?>
+<html>
+  <version>1</version>
+
+	<head>
+		<meta name="DC.Title" content="FSFE - pricetags form" />
+		<meta name="DC.Creator" content="Albert Dengg" />
+		<title>internal tools - name tags</title>
+		<link rel="stylesheet" href="internal.css"/>	
+	</head>
+	<body>
+
+		<h1>Price Tags</h1>
+
+		<form action="http://78.41.115.190/cgi-bin/pt" method="post" enctype="multipart/form-data">
+			<table>
+				<tr>
+					<td>
+						Product:
+					</td>
+					<td>
+						<input type="text" name="product" />
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Product additional info:
+					</td>
+					<td>
+						<input type="text" name="product2" />
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Price (including currency symbol):
+					</td>
+					<td>
+						<input type="text" name="price" />
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Additional information (like fair trade, ...):
+					</td>
+					<td>
+						<input type="text" name="info" />
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2">
+					<input type="submit" value="Send order" />
+					</td>
+				</tr>
+			</table>
+		</form>
+
+
+		<div id="footer">
+			Made by albert
+			<br />written by Albert 2014-01-26
+		</div>
+	</body>
+</html>

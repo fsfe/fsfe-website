@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<html>
+  <version>1</version>
+
+  <head>
+    <title>Prodotti</title>
+  </head>
+
+  <body class="toplevel">
+    <h1>Prodotti</h1>
+
+    <!-- module id="order-delay" //-->
+    <!-- module id="merch-sale" /> -->
+
+    <div class="toc float-right">
+      <p>Prodotti disponibili</p>
+      <ul>
+        <li><a href="#tshirt">Magliette</a></li>
+        <li><a href="#slimfit">Magliette slimfit</a></li>
+        <!-- li><a href="#hooded">Felpe con cappuccio</a></li -->
+        <li><a href="#socks">Calzini</a></li>
+        <!-- li><a href="#baby-clothes">Vestiti per bambini</a></li -->
+        <li><a href="#other">Altri prodotti</a></li>
+      </ul>
+    </div>
+
+    <p class="p-summary">
+      Mostra il tuo amore per il Software Libero usando e indossando i nostri prodotti.
+      I vestiti Software Libero sono un buon modo per far conoscere i nostri principi
+      nella zona in cui vivi, e inoltre ogni acquisto finanzia i progetti della FSFE.
+    </p>
+
+    <p>
+      Per ottenere informazioni dettagliate sulle dimensioni effettive degli abiti
+      posiziona il puntatore del mouse sui codici delle taglie (S, M, ecc...) oppure
+      consulta la <a href="size.html">tabella delle taglie</a>.
+    </p>
+
+    <div class="clearfix"></div>
+
+    <form action="/cgi-bin/weborder.pl" method="post" class="item-grid">
+      <h2 id="tshirt">Magliette</h2>
+
+      <dynamic-content type="tshirt"/>
+
+      <h2 id="slimfit">Magliette slimfit</h2>
+
+      <dynamic-content type="slimfit"/>
+
+      <!-- h2 id="hooded">Felpe con cappuccio</h2>
+
+      <dynamic-content type="hoodie"/ -->
+
+      <h2 id="socks">Calzini</h2>
+
+      <dynamic-content type="socks"/>
+
+      <!-- h2 id="baby-clothes">Vestiti per bambini</h2>
+
+      <dynamic-content type="baby-clothes"/ -->
+
+      <h2 id="other">Altri prodotti</h2>
+
+      <dynamic-content type="other"/>
+
+      <h2>Materiale promozionale</h2>
+
+      <p>
+        Visita la pagina del
+        <a href="/contribute/spreadtheword.html#promo-material">materiale informativo</a>
+        per consultare e richiedere volantini, adesivi e altro materiale.
+      </p>
+
+      <h2>Spedizione</h2>
+
+      <p>Si applicano le seguenti spese di spedizione:</p>
+      <ul>
+        <li>Spedizione in Germania: €5.00</li>
+        <li>Spedizione nel resto del mondo: €8.00</li>
+      </ul>
+
+      <h2>I tuoi dati</h2>
+
+      <div class="row form-group">
+        <label class="col-sm-2 control-label" for="name">Nome:</label>
+        <div class="col-sm-4">
+          <input class="form-control" id="name" name="name" type="text" />
+        </div>
+      </div>
+
+      <div class="row form-group">
+        <label class="col-sm-2 control-label" for="address">Indirizzo:</label>
+        <div class="col-sm-4">
+          <textarea class="form-control" rows="3" id="address" name="address" type="text" />
+        </div>
+      </div>
+
+      <div class="row form-group">
+        <label class="col-sm-2 control-label" for="name">Codice postale:</label>
+        <div class="col-sm-4">
+          <input class="form-control" id="zip" name="zip" type="text" />
+        </div>
+      </div>
+
+      <div class="row form-group">
+        <label class="col-sm-2 control-label" for="name">Città:</label>
+        <div class="col-sm-4">
+          <input class="form-control" id="city" name="city" type="text" />
+        </div>
+      </div>
+
+      <div class="row form-group">
+        <label class="col-sm-2 control-label" for="address">Paese:</label>
+        <div class="col-sm-4">
+          <country-list />
+        </div>
+      </div>
+
+      <div class="row form-group">
+        <label class="col-sm-2 control-label" for="email">Email:</label>
+        <div class="col-sm-4">
+          <input class="form-control" id="email" name="email" type="email" />
+        </div>
+      </div>
+
+      <div class="row form-group">
+        <label class="col-sm-2 control-label" for="phone">Telefono:</label>
+        <div class="col-sm-4">
+          <input class="form-control" id="phone" name="phone" type="text" />
+        </div>
+      </div>
+
+      <div class="row form-group">
+        <label class="col-sm-2 control-label" for="address">Note:</label>
+        <div class="col-sm-4">
+          <textarea class="form-control" rows="3" id="notes" name="notes" type="text" />
+        </div>
+      </div>
+
+      <p class="n">
+        Per favore non scrivere niente qui:
+        <input type="text" size="40" name="url"/>
+      </p>
+
+      <!-- Translators: Please change the value here to your language -->
+      <input type="hidden" name="language" value="it_IT"/>
+
+      <div class="row form-group">
+        <div class="col-sm-offset-2 col-sm-6">
+          <button type="submit" class="btn btn-primary">Confermo l'ordine</button>
+        </div>
+      </div>
+    </form>
+
+    <p>
+      È possibile pagare tramite bonifico bancario, PayPal, carta di credito o di debito.
+      Dopo l'invio dell'ordine riceverai le informazioni necessarie per effettuare il pagamento.
+    </p>
+  </body>
+  <description>Mostra il tuo amore per il Software Libero usando e indossando gli oggetti della FSFE.</description>
+
+  <translator>Stefano Fraccaro e Sebastiano Pistore</translator>
+  <image url="/graphics/tshirt-promo-800px.jpg" />
+</html>

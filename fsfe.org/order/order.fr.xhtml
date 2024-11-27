@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<html>
+  <version>1</version>
+
+  <head>
+    <title>Marchandise</title>
+  </head>
+
+  <body class="toplevel">
+    <h1>Marchandise</h1>
+
+    <!-- module id="order-delay" //-->
+    <!-- module id="merch-sale" /> -->
+
+    <div class="toc float-right">
+      <p>Marchandise disponible</p>
+      <ul>
+        <li><a href="#tshirt">T-shirts</a></li>
+        <li><a href="#slimfit">T-shirt cintré</a></li>
+        <!-- li><a href="#hooded">Sweat-shirts à capuche</a></li -->
+        <li><a href="#socks">Chaussettes</a></li>
+        <!-- li><a href="#baby-clothes">Vêtements pour bébé</a></li -->
+        <li><a href="#other">Autres articles</a></li>
+      </ul>
+    </div>
+
+    <p class="p-summary">
+      Montrez votre amour pour le Logiciel Libre en utilisant et en portant les éléments de la marque
+       ci-dessous. Les vêtements aux couleurs du Logiciel Libre sont un excellent moyen de sensibiliser
+       votre communauté locale et chaque vente permet de financer des projets critiques de la FSFE.
+    </p>
+
+    <p>
+      Pour obtenir des informations détaillées sur les dimensions réelles des différentes
+       taille des vêtements, placez le pointeur de la souris sur l’étiquette de taille ou
+       regardez le <a href="size.html">tableau des tailles</a>.
+    </p>
+
+    <div class="clearfix"></div>
+
+    <form action="/cgi-bin/weborder.pl" method="post" class="item-grid">
+      <h2 id="tshirt">T-Shirts</h2>
+
+      <dynamic-content type="tshirt"/>
+
+      <h2 id="slimfit">T-shirt cintré</h2>
+
+      <dynamic-content type="slimfit"/>
+
+      <!-- h2 id="hooded">Sweat-shirts à capuche</h2>
+
+      <dynamic-content type="hoodie"/ -->
+
+      <h2 id="socks">Chaussettes</h2>
+
+      <dynamic-content type="socks"/>
+
+      <!-- h2 id="baby-clothes">Vêtements pour bébé</h2>
+
+      <dynamic-content type="baby-clothes"/ -->
+
+      <h2 id="other">Autres articles</h2>
+
+      <dynamic-content type="other"/>
+
+      <h2>Matériels promotionnels</h2>
+
+      <p>
+        Vérifier notre
+        <a href="/contribute/spreadtheword.html#promo-material">page de commande pour matériels d'information</a>
+        pour commander des tracts, des autocollants et d'autres articles.
+      </p>
+
+      <h2>Expédition</h2>
+
+      <p>Les frais d'expédition suivant s'appliquent :</p>
+      <ul>
+        <li>Expédition vers l'Allemagne : 5.00€</li>
+        <li>Expédition en dehors de l'Allemagne: 8.00€</li>
+      </ul>
+
+      <h2>Vos informations</h2>
+
+      <div class="row form-group">
+        <label class="col-sm-2 control-label" for="name">Nom :</label>
+        <div class="col-sm-4">
+          <input class="form-control" id="name" name="name" type="text" />
+        </div>
+      </div>
+
+      <div class="row form-group">
+        <label class="col-sm-2 control-label" for="address">Adresse :</label>
+        <div class="col-sm-4">
+          <textarea class="form-control" rows="3" id="address" name="address" type="text" />
+        </div>
+      </div>
+
+      <div class="row form-group">
+        <label class="col-sm-2 control-label" for="name">Code postal :</label>
+        <div class="col-sm-4">
+          <input class="form-control" id="zip" name="zip" type="text" />
+        </div>
+      </div>
+
+      <div class="row form-group">
+        <label class="col-sm-2 control-label" for="name">Ville :</label>
+        <div class="col-sm-4">
+          <input class="form-control" id="city" name="city" type="text" />
+        </div>
+      </div>
+
+      <div class="row form-group">
+        <label class="col-sm-2 control-label" for="address">Pays :</label>
+        <div class="col-sm-4">
+          <country-list />
+        </div>
+      </div>
+
+      <div class="row form-group">
+        <label class="col-sm-2 control-label" for="email">Email :</label>
+        <div class="col-sm-4">
+          <input class="form-control" id="email" name="email" type="email" />
+        </div>
+      </div>
+
+      <div class="row form-group">
+        <label class="col-sm-2 control-label" for="phone">Téléphone :</label>
+        <div class="col-sm-4">
+          <input class="form-control" id="phone" name="phone" type="text" />
+        </div>
+      </div>
+
+      <div class="row form-group">
+        <label class="col-sm-2 control-label" for="address">Notes:</label>
+        <div class="col-sm-4">
+          <textarea class="form-control" rows="3" id="notes" name="notes" type="text" />
+        </div>
+      </div>
+
+      <p class="n">
+        Merci de ne rien renseigner ici :
+        <input type="text" size="40" name="url"/>
+      </p>
+
+      <!-- Translators: Please change the value here to your language -->
+      <input type="hidden" name="language" value="fr_FR"/>
+
+      <div class="row form-group">
+        <div class="col-sm-offset-2 col-sm-6">
+          <button type="submit" class="btn btn-primary">Commander les articles</button>
+        </div>
+      </div>
+    </form>
+
+    <p>Le paiement est possible par virement bancaire, PayPal et divers cartes de crédit et de
+       débit. Vous recevrez de plus amples informations lors de la soumission de votre commande.
+    </p>
+  </body>
+  <description>Show your love for Free Software by using and wearing the branded items the FSFE offers.</description>
+
+  <translator>Julien, OliBug</translator>
+
+  <image url="/graphics/tshirt-promo-800px.jpg" />
+</html>

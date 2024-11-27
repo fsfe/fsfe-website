@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  Please keep each list alphabetically ordered.  Emacs users want to set
+  sort-fold-case to true and run sort-lines on a region.  Vi+ users can
+  visually select the list and use the :sort command.
+
+  The date="..." should be filled with the last date when a donation from this
+  donor came in. It is important for the "current" thankgnus page.
+
+  Currently, the date="..." may only be set in a single xml file for the same
+  donor, so if you add a donor to a file of the new year, don't forget to
+  remove the date="..." in the old year's file.
+-->
+
+<donorset>
+  <version>1</version>
+
+  <gold>
+    <donor img="donors/google.png">Google</donor>
+    <donor img="donors/intel.png">Intel</donor>
+    <donor img="donors/linuxhotel.png">Linuxhotel Villa Vogelsang</donor>
+    <donor img="donors/redhat.png">Red Hat</donor>
+    <donor date="2023-12-20" mark="yes">Reinhard Wiesemann</donor>
+    <donor img="donors/siemens.png">Siemens</donor>
+  </gold>
+
+  <silver>
+    <donor img="donors/silver-adfinis.png">Adfinis</donor>
+    <donor img="donors/silver-avm.png">AVM</donor>
+    <donor date="2023-12-18" img="donors/silver-freiheit.png">freiheit.com technologies</donor>
+    <donor img="donors/silver-heinlein-support.png">Heinlein Support</donor>
+    <donor date="2023-01-30" img="donors/silver-hpe.png">HP Enterprise</donor>
+    <donor date="2023-12-29" img="donors/silver-intevation-new.png">Intevation GmbH</donor>
+    <donor date="2023-12-27" img="donors/silver-julian_rüth">Julian Rüth GmbH</donor>
+    <donor date="2023-12-21" img="donors/silver-keyfactor.png">Keyfactor<!-- Malin Ridelius --></donor>
+    <donor img="donors/silver-linuxfoundation.png">Linux Foundation</donor>
+    <donor date="2023-02-16">Luca Bonissi</donor>
+    <donor date="2023-02-03">Open Invention Network</donor>
+    <donor date="2023-10-13" img="donors/silver-otto-kekalainen.jpg">Otto Kekäläinen</donor>
+    <donor date="2023-12-05" img="donors/silver-publicplan.png">publicplan GmbH</donor>
+    <donor img="donors/silver-sysmocom.png">sysmocom - systems for mobile communications</donor>
+    <donor date="2023-03-07">Thomas Etter</donor>
+  </silver>
+
+  <bronze>
+    <donor date="2023-04-01">Andrew T. Wilson</donor>
+    <donor date="2023-12-31">Arthur Schreiber</donor>
+    <donor>Arvena Capital</donor>
+    <donor date="2023-12-22">ATIX Informationstechnologie und Consulting</donor>
+    <donor date="2023-11-28">Bayern Tourismus Marketing</donor>
+    <donor date="2023-02-20">Bird &amp; Bird</donor>
+    <donor>Björn Persson</donor>
+    <donor>Büchel Blech AG</donor>
+    <donor date="2023-09-24">Chalmers Doctoral Students Guild</donor>
+    <donor date="2023-04-23">Chihiro Software (-04)</donor>
+    <donor>Christian Wasserthal</donor>
+    <donor>ctrl.alt.coop</donor>
+    <donor date="2023-12-18">dyve</donor>
+    <donor date="2023-01-23">Florian Snow (-01)</donor>
+    <donor>Florian Westphal</donor>
+    <donor>foo.li systeme + software</donor>
+    <donor date="2023-12-04">Genossenschaft Infolink</donor>
+    <donor date="2023-02-09">GONICUS</donor>
+    <donor date="2023-12-13">Hannes Hase</donor>
+    <donor>Heinz-Dieter Böcker</donor>
+    <donor>Holger Kienle</donor>
+    <donor>Hostsharing eG</donor>
+    <donor>Ievgen Liubymkin</donor>
+    <donor>inmedias.it</donor>
+    <donor date="2023-05-31">inoio gmbh</donor>
+    <donor>Joachim Zobel</donor>
+    <donor date="2023-06-09">L² Transfinite Technologies asbl</donor>
+    <donor>LIHAS - LinuxHaus Stuttgart</donor><!-- Adrian Reyer -->
+    <donor date="2023-01-19">Marco van Hulten</donor>
+    <donor>Martin F. Krafft</donor>
+    <donor>Mateus Araujo Borges</donor>
+    <donor date="2023-12-13">Matteo Settenvini</donor>
+    <donor date="2023-08-24">Matthias Graf</donor>
+    <donor>Matthias Köslin</donor>
+    <donor date="2023-12-04">Michael Dittmer</donor>
+    <donor>Moritz Bunkus</donor>
+    <donor>Morten Lind</donor>
+    <donor>Neuhaus-IT</donor><!-- Till Neuhaus -->
+    <donor date="2023-07-27">Next Level Shit (-07)</donor><!-- Michael Czechowski -->
+    <donor date="2023-01-11">Omnis Cloud</donor>
+    <donor date="2023-12-27">Port 4949</donor><!-- Matthias Schmitz -->
+    <donor>scvalex</donor><!-- Alexandru Scvortov -->
+    <donor>Simon Josefsson</donor>
+    <donor date="2023-06-07">Stephan Kreutzer (-06)</donor>
+    <donor>Stichting Petities.nl</donor><!-- ReindeR Rustema -->
+    <donor date="2023-12-03">Syslinbit</donor>
+    <donor date="2023-03-14">Tegonal Genossenschaft</donor>
+    <donor date="2023-12-18">Timo Wagner</donor>
+    <donor>Thomas Doczkal</donor>
+    <donor date="2023-12-18">uib gmbh</donor>
+    <donor date="2023-12-21">Univention</donor>
+    <donor>Vassilis<!-- Vassilios --> Voreopoulos</donor>
+    <donor>von Heyden - Mößner Rechtsanwaltsgesellschaft mbH</donor>
+  </bronze>
+</donorset>

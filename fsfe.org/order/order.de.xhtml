@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<html>
+  <version>1</version>
+
+  <head>
+    <title>Fanartikel</title>
+  </head>
+
+  <body class="toplevel">
+    <h1>Fanartikel</h1>
+
+    <!-- module id="order-delay" //-->
+    <!-- module id="merch-sale" /> -->
+
+    <div class="toc float-right">
+      <p>Kategorien</p>
+      <ul>
+        <li><a href="#tshirt">T-Shirts</a></li>
+        <li><a href="#slimfit">Slimfit T-Shirts</a></li>
+        <!-- li><a href="#hooded">Kapuzenshirts</a></li -->
+        <li><a href="#socks">Socken</a></li>
+        <!-- li><a href="#baby-clothes">Babykleidung</a></li -->
+        <li><a href="#other">Andere Artikel</a></li>
+      </ul>
+    </div>
+
+    <p class="p-summary">
+      Zeigen Sie, dass Sie ein Fan von Freier Software sind, indem Sie die unten
+      gezeigten Fanartikel benutzen oder tragen. Diese Artikel sind eine
+      großartige Möglichkeit, um Freie Software in Ihrer Umgebung stärker ins
+      Bewusstsein zu bringen. Mit jedem Kauf unterstützen Sie wichtige
+      Projekte der FSFE.
+    </p>
+
+    <p>
+      Um die genauen Maße zu erhalten, bewegen Sie den Mauszeiger über die Größenangaben oder
+      sehen Sie in der <a href="size.html">Größentabelle</a> nach.
+    </p>
+
+    <div class="clearfix"></div>
+
+    <form action="/cgi-bin/weborder.pl" method="post" class="item-grid">
+      <h2 id="tshirt">T-Shirts</h2>
+
+      <dynamic-content type="tshirt"/>
+
+      <h2 id="slimfit">Slimfit T-Shirts</h2>
+
+      <dynamic-content type="slimfit"/>
+
+      <!-- h2 id="hooded">Kapuzenshirts</h2>
+
+      <dynamic-content type="hoodie"/ -->
+
+      <h2 id="socks">Socken</h2>
+
+      <dynamic-content type="socks"/>
+
+      <!-- h2 id="baby-clothes">Babykleidung</h2>
+
+      <dynamic-content type="baby-clothes"/ -->
+
+      <h2 id="other">Andere Artikel</h2>
+
+      <dynamic-content type="other"/>
+
+      <h2>Infomaterial</h2>
+
+      <p>
+        Auf unserer
+        <a href="/contribute/spreadtheword.html#promo-material">Informationsmaterial-Seite</a>
+        können Sie Broschüren, Sticker und anderes bestellen.
+      </p>
+
+      <h2>Versand</h2>
+
+      <p>Es gelten folgende Versandkosten:</p>
+      <ul>
+        <li>Versand innerhalb Deutschlands: €5.00</li>
+        <li>Weltweiter Versand: €8.00</li>
+        <li>Pick Up: €0.00</li>
+      </ul>
+
+      <h2>Ihre Daten</h2>
+
+      <div class="row form-group">
+        <label class="col-sm-2 control-label" for="name">Name:</label>
+        <div class="col-sm-4">
+          <input class="form-control" id="name" name="name" type="text" />
+        </div>
+      </div>
+
+      <div class="row form-group">
+        <label class="col-sm-2 control-label" for="address">Adresse:</label>
+        <div class="col-sm-4">
+          <textarea class="form-control" rows="3" id="address" name="address" type="text" />
+        </div>
+      </div>
+
+      <div class="row form-group">
+        <label class="col-sm-2 control-label" for="address">Postleitzahl:</label>
+        <div class="col-sm-4">
+          <input class="form-control" id="zip" name="zip" type="text" />
+        </div>
+      </div>
+
+      <div class="row form-group">
+        <label class="col-sm-2 control-label" for="address">Ort:</label>
+        <div class="col-sm-4">
+          <input class="form-control" id="city" name="city" type="text" />
+        </div>
+      </div>
+
+      <div class="row form-group">
+        <label class="col-sm-2 control-label" for="address">Land:</label>
+        <div class="col-sm-4">
+          <country-list />
+        </div>
+      </div>
+
+      <div class="row form-group">
+        <label class="col-sm-2 control-label" for="email">E-Mail:</label>
+        <div class="col-sm-4">
+          <input class="form-control" id="email" name="email" type="email" />
+        </div>
+      </div>
+
+      <div class="row form-group">
+        <label class="col-sm-2 control-label" for="phone">Telefon:</label>
+        <div class="col-sm-4">
+          <input class="form-control" id="phone" name="phone" type="text" />
+        </div>
+      </div>
+
+      <div class="row form-group">
+        <label class="col-sm-2 control-label" for="address">Notizen:</label>
+        <div class="col-sm-4">
+          <textarea class="form-control" rows="3" id="notes" name="notes" type="text" />
+        </div>
+      </div>
+
+      <p class="n">
+        Bitte hier nichts eingeben:
+        <input type="text" size="40" name="url"/>
+      </p>
+
+      <!-- Translators: Please change the value here to your language -->
+      <input type="hidden" name="language" value="de_DE"/>
+
+      <div class="row form-group">
+        <div class="col-sm-offset-2 col-sm-6">
+          <button type="submit" class="btn btn-primary">Artikel bestellen</button>
+        </div>
+      </div>
+    </form>
+
+    <p>
+      Die Bezahlung kann per Banküberweisung, PayPal oder mit verschiedenen
+      Kredit- und Debitkarten erfolgen. Sie erhalten weitere Informationen,
+      wenn Sie die Bestellung abgeschickt haben.
+    </p>
+  </body>
+  <description>Zeigen Sie, dass Sie ein Fan von Freier Software sind, indem Sie die Artikel benutzen und tragen, die von der FSFE angeboten werden.</description>
+
+  <image url="/graphics/tshirt-promo-800px.jpg" />
+</html>

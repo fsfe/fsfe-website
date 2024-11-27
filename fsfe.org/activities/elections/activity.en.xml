@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<activityset>
+  <version>1</version>
+
+  <activity id="elections" date="2009-09-01" status="active">
+    <title>Electoral Activities</title>
+    <description>
+      What could be a better time to ask politicians about their stance on Free 
+      Software and Open Standards than the run-up to an election? We believe we 
+      can and should raise these issues in all elections, European, national, 
+      regional and local. Depending on the electoral system and culture, we use
+       different strategies and tools.
+    </description>
+    <link href="/activities/elections/index.html" />
+    <image url="/graphics/logos/elections.png" />
+    <order priority="3" />
+    <tags>
+      <tag key="awareness" />
+      <tag key="policy" />
+    </tags>
+  </activity>
+</activityset>

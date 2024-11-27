@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  Please keep each list alphabetically ordered.  Emacs users want to set
+  sort-fold-case to true and run sort-lines on a region.  Vi+ users can
+  visually select the list and use the :sort command.
+
+  The date="..." should be filled with the last date when a donation from this
+  donor came in. It is important for the "current" thankgnus page.
+
+  Currently, the date="..." may only be set in a single xml file for the same
+  donor, so if you add a donor to a file of the new year, don't forget to
+  remove the date="..." in the old year's file.
+-->
+
+<donorset>
+  <version>1</version>
+
+  <gold>
+    <donor img="donors/google.png" mark="yes">Google</donor>
+    <donor img="donors/linuxhotel.png">Linuxhotel Villa Vogelsang</donor>
+    <donor img="donors/redhat.png">Red Hat</donor>
+  </gold>
+
+  <silver>
+    <donor img="donors/silver-arm.png">ARM</donor>
+    <donor img="donors/silver-libreoffice.jpg">Document Foundation</donor>
+    <donor img="donors/silver-freiheit.png">freiheit.com technologies</donor>
+    <donor img="donors/silver-heinlein-support.png">Heinlein Support GmbH</donor>
+    <donor img="donors/silver-intel.png">Intel</donor>
+    <donor img="donors/silver-intevation.png">Intevation GmbH</donor>
+    <donor img="donors/silver-kdab.png">KDAB Group</donor>
+    <donor img="donors/silver-linuxfoundation.png">Linux Foundation</donor>
+    <donor>René Genz</donor>
+  </silver>
+
+  <bronze>
+    <donor>Alexander Kahl</donor>
+    <donor>Berlin Linux User Group (BeLUG)</donor>
+    <donor>Bibliotek-Systemer As</donor>
+    <donor>Björn Persson</donor>
+    <donor date="2014-01-24">credativ GmbH</donor>
+    <donor date="2014-02-19">EuRuKo 2013 Athens</donor>
+    <donor date="2014-09-18">Fabian Fabian</donor>
+    <donor>foo.li systeme + software</donor>
+    <donor date="2014-12-02">godiug.net</donor>
+    <donor>imunixx GmbH</donor>
+    <donor>inmedias.it GmbH</donor>
+    <donor>Joachim Zobel</donor>
+    <donor>Johannes Krampf</donor>
+    <donor>LIHAS - LinuxHaus Stuttgart</donor>
+    <donor>Mario Lardieri</donor>
+    <donor>Martin F. Krafft</donor>
+    <donor>Martin Knoblauch (Knobisoft)</donor>
+    <donor date="2014-07-24">Martti van Blijswijk</donor>
+    <donor>Matthias Vorholzer</donor>
+    <donor date="2014-01-21">Rik Willemen</donor>
+    <donor>Roland Häder</donor>
+    <donor>Stephan Kreutzer</donor>
+    <donor>Ubilabs GmbH</donor>
+    <donor>Wolfgang Ocker</donor>
+  </bronze>
+</donorset>

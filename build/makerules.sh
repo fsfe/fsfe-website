@@ -2,13 +2,12 @@
 
 inc_makerules=true
 
-tree_maker(){
-  # walk through file tree and issue Make rules according to file type
-  input="$(realpath "$1")"
-  output="$(realpath "$2")"
-  languages="$(ls -xw0 "${basedir}/global/languages")"
+tree_maker() {
+	# walk through file tree and issue Make rules according to file type
+	input="$(realpath "$1")"
+	output="$(realpath "$2")"
 
-  cat <<EOF
+	cat <<EOF
 # -----------------------------------------------------------------------------
 # Makefile for FSFE website build, phase 2
 # -----------------------------------------------------------------------------
@@ -17,7 +16,7 @@ tree_maker(){
 .DELETE_ON_ERROR:
 .SECONDEXPANSION:
 PROCESSOR = "$basedir/build/process_file.sh"
-PROCFLAGS = --build-env "${build_env:-development}" --source "$basedir" --domain "$domain"
+PROCFLAGS = --build-env "${build_env}" --source "$basedir"
 INPUTDIR = $input
 OUTPUTDIR = $output
 STATUSDIR = $statusdir
@@ -55,15 +54,15 @@ XSL_DEP = \$(firstword \$(wildcard \$(INPUTDIR)/\$*.xsl) \$(INPUTDIR)/\$(dir \$*
 all: \$(HTML_DST_FILES)
 EOF
 
-  for lang in ${languages}; do
-    cat<<EOF
+	for lang in ${languages}; do
+		cat <<EOF
 \$(filter %.${lang}.html,\$(HTML_DST_FILES)): \$(OUTPUTDIR)/%.${lang}.html: \$(INPUTDIR)/%.*.xhtml \$\$(XMLLIST_DEP) \$\$(XSL_DEP) \$(INPUTDIR)/global/data/texts/.texts.${lang}.xml \$(INPUTDIR)/global/data/texts/texts.en.xml \$(INPUTDIR)/global/data/topbanner/.topbanner.${lang}.xml
 	echo "* Building \$*.${lang}.html"
 	\${PROCESSOR} \${PROCFLAGS} process_file "\$(INPUTDIR)/\$*.${lang}.xhtml" > "\$@"
 EOF
-  done
+	done
 
-  cat <<EOF
+	cat <<EOF
 
 # -----------------------------------------------------------------------------
 # Create index.* symlinks
@@ -90,15 +89,15 @@ INDEX_DST_LINKS := \$(foreach base,\$(INDEX_DST_DIRS),\$(foreach lang,\$(LANGUAG
 all: \$(INDEX_DST_LINKS)
 EOF
 
-  for lang in ${languages}; do
-    cat<<EOF
+	for lang in ${languages}; do
+		cat <<EOF
 \$(filter %/index.${lang}.html,\$(INDEX_DST_LINKS)): \$(OUTPUTDIR)/%/index.${lang}.html:
 	echo "* Creating symlink \$*/index.${lang}.html"
 	ln -sf "\$(notdir \$*).${lang}.html" "\$@"
 EOF
-  done
+	done
 
-  cat <<EOF
+	cat <<EOF
 
 # -----------------------------------------------------------------------------
 # Create symlinks from file.<lang>.html to file.html.<lang>
@@ -110,15 +109,15 @@ HTML_DST_LINKS := \$(foreach base,\$(HTML_DST_BASES) \$(addsuffix index,\$(INDEX
 all: \$(HTML_DST_LINKS)
 EOF
 
-  for lang in ${languages}; do
-    cat<<EOF
+	for lang in ${languages}; do
+		cat <<EOF
 \$(OUTPUTDIR)/%.html.${lang}:
 	echo "* Creating symlink \$*.html.${lang}"
 	ln -sf "\$(notdir \$*).${lang}.html" "\$@"
 EOF
-  done
+	done
 
-  cat <<EOF
+	cat <<EOF
 
 # -----------------------------------------------------------------------------
 # Build .rss files from .xhtml sources
@@ -142,15 +141,15 @@ RSS_DST_FILES := \$(foreach base,\$(RSS_DST_BASES),\$(foreach lang,\$(LANGUAGES)
 all: \$(RSS_DST_FILES)
 EOF
 
-  for lang in ${languages}; do
-    cat<<EOF
+	for lang in ${languages}; do
+		cat <<EOF
 \$(OUTPUTDIR)/%.${lang}.rss: \$(INPUTDIR)/%.*.xhtml \$\$(XMLLIST_DEP) \$(INPUTDIR)/%.rss.xsl \$(INPUTDIR)/global/data/texts/.texts.${lang}.xml \$(INPUTDIR)/global/data/texts/texts.en.xml
 	echo "* Building \$*.${lang}.rss"
 	\${PROCESSOR} \${PROCFLAGS} process_file "\$(INPUTDIR)/\$*.${lang}.xhtml" "\$(INPUTDIR)/\$*.rss.xsl" > "\$@"
 EOF
-  done
+	done
 
-  cat <<EOF
+	cat <<EOF
 
 # -----------------------------------------------------------------------------
 # Build .ics files from .xhtml sources
@@ -174,26 +173,23 @@ ICS_DST_FILES := \$(foreach base,\$(ICS_DST_BASES),\$(foreach lang,\$(LANGUAGES)
 all: \$(ICS_DST_FILES)
 EOF
 
-  for lang in ${languages}; do
-    cat<<EOF
+	for lang in ${languages}; do
+		cat <<EOF
 \$(OUTPUTDIR)/%.${lang}.ics: \$(INPUTDIR)/%.*.xhtml \$\$(XMLLIST_DEP) \$(INPUTDIR)/%.ics.xsl \$(INPUTDIR)/global/data/texts/.texts.${lang}.xml \$(INPUTDIR)/global/data/texts/texts.en.xml
 	echo "* Building \$*.${lang}.ics"
 	\${PROCESSOR} \${PROCFLAGS} process_file "\$(INPUTDIR)/\$*.${lang}.xhtml" "\$(INPUTDIR)/\$*.ics.xsl" > "\$@"
 EOF
-  done
+	done
 
-  cat <<EOF
+	cat <<EOF
 
 # -----------------------------------------------------------------------------
 # Copy images, docments etc
 # -----------------------------------------------------------------------------
 
 # All files which should just be copied over
-COPY_SRC_FILES := \$(shell find "\$(INPUTDIR)" -type f \
-  -not -path '\$(INPUTDIR)/.git/*' \
-  -not -path '\$(INPUTDIR)/build/*' \
-  -not -path '\$(INPUTDIR)/global/*' \
-  -not -path '\$(INPUTDIR)/tools/*' \
+COPY_SRC_FILES := \$(shell find -L "\$(INPUTDIR)" -type f \
+  -regex "\$(INPUTDIR)/[a-z\.]+\.[a-z]+/.*" \
   -not -name '.drone.yml' \
   -not -name '.gitignore' \
   -not -name 'README*' \
@@ -203,26 +199,16 @@ COPY_SRC_FILES := \$(shell find "\$(INPUTDIR)" -type f \
   -not -name '*.xhtml' \
   -not -name '*.xml' \
   -not -name '*.xsl' \
-)
+  -not -name '*.nix' \
+) \$(INPUTDIR)/fsfe.org/order/data/items.en.xml
 
 # The same as above, but moved to the output directory
 COPY_DST_FILES := \$(sort \$(patsubst \$(INPUTDIR)/%,\$(OUTPUTDIR)/%,\$(COPY_SRC_FILES)))
 
 all: \$(COPY_DST_FILES)
 \$(COPY_DST_FILES): \$(OUTPUTDIR)/%: \$(INPUTDIR)/%
-	echo "* Linking file \$*"
-	ln -sf "\$<" "\$@"
-
-# -----------------------------------------------------------------------------
-# Copy .xhtml files to "source" directory in target directory tree
-# -----------------------------------------------------------------------------
-
-SOURCE_DST_FILES := \$(sort \$(patsubst \$(INPUTDIR)/%,\$(OUTPUTDIR)/source/%,\$(HTML_SRC_FILES)))
-
-all: \$(SOURCE_DST_FILES)
-\$(SOURCE_DST_FILES): \$(OUTPUTDIR)/source/%: \$(INPUTDIR)/%
-	echo "* Linking source \$*"
-	ln -sf "\$<" "\$@"
+	echo "* Copying file \$*"
+	rsync -l "\$<" "\$@"
 
 # -----------------------------------------------------------------------------
 # Clean up excess files in target directory
@@ -237,7 +223,7 @@ clean:
 	\$(file >\$(STATUSDIR)/manifest)
 	\$(foreach filename,\$(ALL_DST),\$(file >>\$(STATUSDIR)/manifest,\$(filename)))
 	sort "\$(STATUSDIR)/manifest" > "\$(STATUSDIR)/manifest.sorted"
-	find -L "\$(OUTPUTDIR)" -type f \\
+	find -L "\$(OUTPUTDIR)" -type f -path "\$(STATUSDIR)" -prune \\
 	  | sort \\
 	  | diff - "\$(STATUSDIR)/manifest.sorted" \\
 	  | sed -rn 's;^< ;;p' \\

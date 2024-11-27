@@ -69,7 +69,7 @@ def process_file(filename: str):
         ]
         articles.append(
             {
-                "url": "https://fsfe.org/" + filename.replace("xhtml", "html"),
+                "url": "https://fsfe.org/" + filename.removeprefix("fsfe.org/").replace("xhtml", "html"),
                 "tags": " ".join(tags),
                 "title": file_parsed.title.text,
                 "teaser": " ".join(
@@ -98,7 +98,7 @@ p.join()
 end_time = time.time()
 logger.info("Indexation done in {} seconds!".format(int(end_time - start_time)))
 
-index_path = "search/index.js"
+index_path = "fsfe.org/search/index.js"
 # Make a JS file that can be directly loaded
 # TODO find an easy way to load local JSON file from JavaScript
 with open(index_path, "w", encoding="utf-8") as fh:

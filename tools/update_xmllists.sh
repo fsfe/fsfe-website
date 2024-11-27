@@ -1,19 +1,19 @@
 #!/usr/bin/env bash
 # -----------------------------------------------------------------------------
-# Update XML filelists (*.xmllist) and tag list pages (tags/tagged-*)
+# Update XML filelists (*.xmllist) and tag list pages (fsfe.org/tags/tagged-*)
 # -----------------------------------------------------------------------------
 # This script is called from the phase 1 Makefile and creates/updates the
 # following files:
 #
-# * tags/tagged-<tags>.en.xhtml for each tag used. Apart from being
+# * fsfe.org/tags/tagged-<tags>.en.xhtml for each tag used. Apart from being
 #   automatically created, these are regular source files for HTML pages, and
 #   in phase 2 are built into pages listing all news items and events for a
 #   tag.
 #
-# * tags/.tags.??.xml with a list of the tags used.
+# * fsfe.org/tags/.tags.??.xml with a list of the tags used.
 #
 # * <dir>/.<base>.xmllist for each <dir>/<base>.sources as well as for each
-#   tags/tagged-<tags>.en.xhtml. These files are used in phase 2 to include the
+#   fsfe.org/tags/tagged-<tags>.en.xhtml. These files are used in phase 2 to include the
 #   correct XML files when generating the HTML pages. It is taken care that
 #   these files are only updated whenever their content actually changes, so
 #   they can serve as a prerequisite in the phase 2 Makefile.
@@ -29,6 +29,7 @@ set -e
 set -o pipefail
 
 pid=$$
+languages="$1"
 
 nextyear=$(date --date="next year" +%Y)
 thisyear=$(date --date="this year" +%Y)
@@ -54,7 +55,7 @@ mkdir "${taglabels}"
 
 echo "* Generating tag maps"
 
-for xml_file in $(find * -name '*.??.xml' -not -path 'tags/*' | xargs grep -l '<tag' | sort); do
+for xml_file in $(find * -regex "[a-z.]+.[a-z]+/.*/*.\(${languages// /\\\|}\)\.xml" -not -path 'fsfe.org/tags/*' | xargs grep -l '<tag' | sort); do
   xsltproc "build/xslt/get_tags.xsl" "${xml_file}" | while read tag label; do
     # Add file to list of files by tag key
     echo "${xml_file%.??.xml}" >> "${tagmaps}/${tag}"
@@ -84,31 +85,31 @@ done
 # -----------------------------------------------------------------------------
 
 for tag in $(ls "${tagmaps}"); do
-  if ! cmp --quiet "${tagmaps}/${tag}" "tags/.tagged-${tag}.xmllist"; then
+  if ! cmp --quiet "${tagmaps}/${tag}" "fsfe.org/tags/.tagged-${tag}.xmllist"; then
     echo "*   Updating tag ${tag}"
-    sed "s,XXX_TAGNAME_XXX,${tag},g" "tags/tagged.en.xhtml"  \
-              > "tags/tagged-${tag}.en.xhtml"
-    cp "${tagmaps}/${tag}" "tags/.tagged-${tag}.xmllist"
+    sed "s,XXX_TAGNAME_XXX,${tag},g" "fsfe.org/tags/tagged.en.xhtml"  \
+              > "fsfe.org/tags/tagged-${tag}.en.xhtml"
+    cp "${tagmaps}/${tag}" "fsfe.org/tags/.tagged-${tag}.xmllist"
   fi
 done
 
-rm -f "tags/tagged-front-page.en.xhtml"         # We don't want that one
+rm -f "fsfe.org/tags/tagged-front-page.en.xhtml"         # We don't want that one
 
 # -----------------------------------------------------------------------------
 # Remove the files for tags which have been completely deleted
 # -----------------------------------------------------------------------------
 
-for tag in $(ls "tags" | sed -rn 's/tagged-(.*)\.en.xhtml/\1/p'); do
+for tag in $(ls "fsfe.org/tags" | sed -rn 's/tagged-(.*)\.en.xhtml/\1/p'); do
   if [ ! -f "${tagmaps}/${tag}" ]; then
-    echo "*   Deleting tags/tagged-${tag}.en.xhtml"
-    rm "tags/tagged-${tag}.en.xhtml"
+    echo "*   Deleting fsfe.org/tags/tagged-${tag}.en.xhtml"
+    rm "fsfe.org/tags/tagged-${tag}.en.xhtml"
   fi
 done
 
-for tag in $(ls -a "tags" | sed -rn 's/.tagged-(.*)\.xmllist/\1/p'); do
+for tag in $(ls -a "fsfe.org/tags" | sed -rn 's/.tagged-(.*)\.xmllist/\1/p'); do
   if [ ! -f "${tagmaps}/${tag}" ]; then
-    echo "*   Deleting tags/.tagged-${tag}.xmllist"
-    rm "tags/.tagged-${tag}.xmllist"
+    echo "*   Deleting fsfe.org/tags/.tagged-${tag}.xmllist"
+    rm "fsfe.org/tags/.tagged-${tag}.xmllist"
   fi
 done
 
@@ -124,7 +125,7 @@ declare -A filecount
 
 for section in "news" "events"; do
   for tag in $(ls "${tagmaps}"); do
-    filecount["${tag}:${section}"]=$(grep "^${section}/" "${tagmaps}/${tag}" | wc --lines || true)
+    filecount["${tag}:${section}"]=$(grep "^fsfe.org/${section}/" "${tagmaps}/${tag}" | wc --lines || true)
   done
 done
 
@@ -159,9 +160,9 @@ for language in $(ls ${taglabels}); do
     echo '</tagset>'
   } > ${taglist}
 
-  if ! cmp --quiet "${taglist}" "tags/.tags.${language}.xml"; then
-    echo "*   Updating tags/.tags.${language}.xml"
-    cp "${taglist}" "tags/.tags.${language}.xml"
+  if ! cmp --quiet "${taglist}" "fsfe.org/tags/.tags.${language}.xml"; then
+    echo "*   Updating fsfe.org/tags/.tags.${language}.xml"
+    cp "${taglist}" "fsfe.org/tags/.tags.${language}.xml"
   fi
 
   rm -f "${taglist}"
@@ -211,7 +212,7 @@ for base in ${all_bases}; do
 
         # We append || true so the script doesn't fail if grep finds nothing at all
         if [ -n "${tag}" ]; then
-          cat "tags/.tagged-${tag}.xmllist"
+          cat "fsfe.org/tags/.tagged-${tag}.xmllist"
         else
           echo "${all_xml}"
         fi | grep "^${pattern}\$" || true

@@ -1,17 +1,22 @@
-look/fsfe.min.css
-look/valentine.min.css
-events/????/index.??.xhtml
-events/????/index.sources
-events/????/index.xsl
-news/????/index.??.xhtml
-news/????/index.sources
-news/????/index.xsl
-news/*/.*.??.xml
+*/look/fsfe.min.css
+*/look/valentine.min.css
+fsfe.org/events/????/index.??.xhtml
+fsfe.org/events/????/index.sources
+fsfe.org/events/????/index.xsl
+fsfe.org/news/????/index.??.xhtml
+fsfe.org/news/????/index.sources
+fsfe.org/news/????/index.xsl
+fsfe.org/news/*/.*.??.xml
 global/data/texts/.texts.??.xml
 global/data/topbanner/.topbanner.??.xml
 .default.xsl
 .localmenu.*.xml
 .*.xmllist
-search/index.js
-tags/tagged-*.en.xhtml
-tags/.tags.??.xml
+fsfe.org/search/index.js
+fsfe.org/tags/tagged-*.en.xhtml
+fsfe.org/tags/.tags.??.xml
+# Local build stuff
+output
+
+## Status dir stuff
+status.fsfe.org/*/data*/*

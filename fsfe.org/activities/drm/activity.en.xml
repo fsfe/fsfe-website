@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<activityset>
+  <version>1</version>
+
+  <activity id="drm" date="2006-10-03" status="active">
+    <title>DRM.info</title>
+    <description>
+   DRM.info is a collaborative platform initiated and maintained by the FSFE to 
+   inform about the dangers and concerns of the Digital Restrictions Management. 
+   Contributors to DRM.info include digital freedom, consumer protection, net 
+   activism and library organisations. 
+    </description>
+    <link href="/activities/drm/drm.html" />
+    <order priority="2" />
+    <tags>
+      <tag key="awareness" />
+    </tags>
+  </activity>
+</activityset>

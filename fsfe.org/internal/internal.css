@@ -1,0 +1,40 @@
+/* Css specific to internal pages */
+
+.field-annotation {
+  background: #ddd;
+  padding: 0.5em;
+  margin: 1.5em 0.5em 0.5em 0;
+  border: 1px #bbb solid;
+}
+table td {
+  padding: 1px !important;
+}
+th {
+  text-align: center;
+}
+tr.descr {
+  font-style: italic;
+  font-size: small;
+}
+tr.descr td {
+  padding: 1px 4px !important;
+}
+tr.example {
+  font-style: italic;
+}
+table input.form-control,
+table textarea.form-control {
+  font-size: 12px;
+}
+.form-control {
+  padding: 3px 6px !important;
+}
+input[type="file"] {
+  width: 180px;
+}
+#content input[type="radio"] {
+  margin: 0 5px 0 15px;
+}
+label {
+  font-weight: normal;
+}

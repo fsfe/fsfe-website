@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<infoset>
+  <version>1</version>
+
+  <info id="fsfe-women-sticker">
+    <!-- Leave a tag like <printready> blank or erase it if you don't 
+    want to appear it -->
+    <!-- Translations for "Type", "Size" etc. can be found in 
+    /tools/texts-**.xml -->
+    <name>FSFE women sticker</name>
+    <description>
+      Welcome to join FSFE women team!
+    </description>
+    <type>Sticker</type>
+    <size>74mm x 74mm</size>
+    
+    <context><a href="https://lists.fsfe.org/postorius/lists/fsfe-women.lists.fsfe.org">FSFE women</a></context>
+    <languages>
+          <a href="https://download.fsfe.org/advocacy/promomaterial/FSFE/FSFEwomen/">English</a>
+    </languages>
+    <printed>
+      English
+    </printed>
+    <license><a href="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA 4.0</a></license>
+    <author>Markus Meier</author>
+    <source><a href="https://download.fsfe.org/advocacy/promomaterial/FSFE/FSFEwomen/">FSFE women sticker in download.fsfe.org</a></source> 
+    <printready></printready>
+  </info>
+
+</infoset>

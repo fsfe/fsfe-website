@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<html>
+  <version>1</version>
+
+  <head>
+    <title>Expense Request</title>
+		<link rel="stylesheet" href="internal.css"/>	
+  </head>
+
+  <body>
+    <h1>Expense Request</h1>
+
+    <form action="/cgi-bin/expense-request.pl" method="post">
+      <table>
+        <tr>
+          <td><p>Catch phrase:</p></td>
+          <td>
+            <input type="text" size="80" style="width:500px" name="catch_phrase"/>
+          </td>
+        </tr>
+        <tr>
+          <td><p>Who:</p></td>
+          <td>
+            <select name="who" size="1">
+              <option value="alex.sander">Alexander Sander</option>
+              <option value="anaghz">Ana Galán</option>
+              <option value="bonnie">Bonnie Mehring</option>
+              <option value="carmenbianca">Carmen Bianca Bakker</option>
+              <option value="dario">Dario Presutti</option>
+              <option value="epiric">Erika Pirić</option>
+              <option value="floriansnow">Florian Snow</option>
+              <option value="fi">Francesca Indorato</option>
+              <option value="gabriel.ku">Gabriel Ku Wei Bin</option>
+              <option value="repentinus">Heiki Lohmus</option>
+              <option value="hf">Henning Fehr</option>
+              <option value="jithendra">Jithendra Palepu</option>
+              <option value="jn">Johannes Näder</option>
+              <option value="lina.ceballos">Lina Ceballos</option>
+              <option value="lucas.lasota">Lucas Lasota</option>
+              <option value="marta">Marta Andreoli</option>
+              <option value="mk">Matthias Kirschner</option>
+              <option value="reinhard">Reinhard Müller</option>
+              <option value="tobiasd">Tobias Diekershoff</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td><p>What:</p></td>
+          <td>
+            <textarea cols="80" rows="5" style="width:500px" name="what"/>
+          </td>
+        </tr>
+        <tr>
+          <td><p>When:</p></td>
+          <td>
+            <input type="text" size="80" style="width:500px" name="when"/>
+          </td>
+        </tr>
+        <tr>
+          <td><p>Why (explained so a tax consultant can understand it):</p></td>
+          <td>
+            <textarea cols="80" rows="5" style="width:500px" name="why"/>
+          </td>
+        </tr>
+        <tr>
+          <td><p>Estimate (In Euro, numbers only please, ie. "10", not "Eur 10" or "10+2 Eur"):</p></td>
+          <td>
+            <input type="text" size="10" style="width:500px" name="estimate"/>
+          </td>
+        </tr>
+        <tr>
+          <td><p>Budget:</p></td>
+          <td>
+            <select name="budget" size="1">
+              <option value="PA-EVENTS">PA participation in non-internal events and meetings</option>
+              <option value="PA-MATERIAL">PA information material</option>
+              <option value="PA-CAMPAIGNS">PA specific campaigns</option>
+              <option value="PA-PODCAST">PA podcast</option>
+              <option value="LEGAL-EVENTS">LEGAL participation in non-internal events and meetings</option>
+              <option value="LEGAL-LLW">LEGAL workshop</option>
+              <option value="POLICY-EVENTS">POLICY participation in non-internal events and meetings</option>
+              <option value="POLICY-CAMPAIGNS">POLICY campaigns</option>
+              <option value="POLICY-OTHER">POLICY other costs</option>
+              <option value="NGI0-DISCOVERY">NGI0-Discovery EU project</option>
+              <option value="NGI0-PET">NGI0-PET EU project</option>
+              <option value="NGI0-COMMON">NGI0 EU project common costs</option>
+              <option value="ZOOOM-MEETINGS">ZOOOM EU project meetings</option>
+              <option value="ZOOOM-OTHER">ZOOOM EU project other costs</option>
+              <option value="MERCHANDISE-PURCHASE">MERCHANDISE purchase of goods</option>
+              <option value="MERCHANDISE-OTHER">MERCHANDISE packing, shipping, and other costs</option>
+              <option value="PAID-PERSONELL">PAID personell costs for all economic activities</option>
+              <option value="PAID-OTHER">PAID other costs for all economic activities</option>
+              <option value="INTERNAL-COORD">INTERNAL Coordination</option>
+              <option value="INTERNAL-GA">INTERNAL General Assembly</option>
+              <option value="INTERNAL-TECH">INTERNAL technical infrastructure</option>
+              <option value="INTERNAL-FUNDRAISING">INTERNAL fundraising</option>
+              <option value="PERSONELL-INTERN">PERSONELL Interns</option>
+              <option value="PERSONELL-BFD">PERSONELL Bundesfreiwilliger</option>
+              <option value="PERSONELL-KIRSCHNER">PERSONELL Matthias Kirschner</option>
+              <option value="PERSONELL-KU">PERSONELL Wei Bin Gabriel Ku</option>
+              <option value="PERSONELL-INDORATO">PERSONELL Francesca Indorato</option>
+              <option value="PERSONELL-LASOTA">PERSONELL Lucas Lasota</option>
+              <option value="PERSONELL-CEBALLOS">PERSONELL Lina Ceballos</option>
+              <option value="PERSONELL-WAGENER">PERSONELL Linda Wagener</option>
+              <option value="PERSONELL-MEHRING">PERSONELL Bonnie Mehring</option>
+              <option value="PERSONELL-SNOW">PERSONELL Florian Snow</option>
+              <option value="PERSONELL-GALAN">PERSONELL Ana Galán</option>
+              <option value="PERSONELL-NAEDER">PERSONELL Johannes Näder</option>
+              <option value="PERSONELL-DIEKERSHOFF">PERSONELL Tobias Diekershoff</option>
+              <option value="PERSONELL-PRESUTTI">PERSONELL Dario Presutti</option>
+              <option value="PERSONELL-FEHR">PERSONELL Henning Fehr</option>
+              <option value="PERSONELL-GORLAS">PERSONELL Michal Gorlas</option>
+              <option value="OFFICE-BERLIN">OFFICE Berlin</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td><p>Refund Contact:</p></td>
+          <td>
+            <input type="text" size="80" style="width:500px" name="refund"/>
+          </td>
+        </tr>
+      </table>
+
+      <center>
+        <input type="submit" value="Send Expense Request"/>
+      </center>
+    </form>
+  </body>
+</html>

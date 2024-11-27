@@ -205,7 +205,7 @@ for f in $files_all; do
   fileregex="(\.xhtml$|\.xml$|\.xsl$)"
   if matchfile "${f}" "${fileregex}"; then
     regex="(utf-8|us-ascii)"
-    if ! [[ $(file -b --mime-encoding "${f}") =~ $regex ]]; then
+    if ! [[ $(file -b --mime-encoding "$(realpath "${f}")") =~ $regex ]]; then
       RETURN_ENC=$((RETURN_ENC + 1))
       FILES_ENC="${FILES_ENC}|${f}"
     fi
@@ -259,7 +259,7 @@ for f in $files_all; do
   # Check absolute links to fsfe.org
   # ---------------------------------------------------------------------------
   fileregex="(\.xhtml$|\.xml$)"
-  exclude="^(drm.info|pdfreaders|global|cgi-bin|build|scripts)"
+  exclude="^(drm.info|pdfreaders|global|cgi-bin|build|scripts|events)"
   if matchfile "${f}" "${fileregex}" "${exclude}"; then
     if xmllint --xpath "//a/@href" "${f}" 2>/dev/null \
       | sed -E 's/([^\r\n]) (href=)/\1\n \2/g' \

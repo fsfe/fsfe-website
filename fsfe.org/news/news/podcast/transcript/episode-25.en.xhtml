@@ -1,0 +1,1005 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<html>
+ <version>3</version>
+<head>
+<title>Transcript SFP#25</title>
+</head>
+<body>
+  
+<h1>Transcript of SFP#25: MirageOS and OCaml with Hannes Mehnert and Matthias Kirschner</h1>
+
+<p><a href="/news/podcast/episode-25.html">Back to the episode SFP#25</a></p>
+<p>This is a transcript created with the Free Software tool Whisper. For more information and feedback reach out to <email mailto="yes">podcast@fsfe.org</email></p>
+
+<pre class="transcript">
+WEBVTT
+
+00:00.000 --> 00:04.640
+Before we start with the podcast, we would like to say thank you to all of you who support
+
+00:04.640 --> 00:07.740
+the FSFE's work of money.
+
+00:07.740 --> 00:12.760
+Working for software freedom and producing podcasts costs money.
+
+00:12.760 --> 00:18.200
+Please consider supporting us with our nation and the FSFE.org slash donate and in the
+
+00:18.200 --> 00:19.200
+show notes.
+
+00:30.000 --> 00:37.640
+Welcome to the software freedom podcast.
+
+00:37.640 --> 00:42.200
+This podcast is presented to you by the Free Software Foundation Europe, where a charity
+
+00:42.200 --> 00:44.440
+that empowers users to control technology.
+
+00:44.440 --> 00:49.440
+I'm Matthias Kirschner and our guest today is Hannes Mehnert.
+
+00:49.440 --> 00:54.360
+Hannes is a free software hacker working on various projects including Mirage OS, a
+
+00:54.360 --> 01:00.960
+Unicle Operating System and the co-author of the book on functional programming in JavaScript.
+
+01:00.960 --> 01:06.680
+Besides being a hacker, he's the co-author of another book on Injit Kucin and enjoys being
+
+01:06.680 --> 01:11.440
+a Verista and likes to travel and repair his recumbent bicycle.
+
+01:11.440 --> 01:12.640
+Hello Hannes.
+
+01:12.640 --> 01:14.160
+Hello Matthias.
+
+01:14.160 --> 01:24.320
+So you once wrote in your biography that you feel safe in a garbage collected environment.
+
+01:24.680 --> 01:30.520
+That directly reminded me of Ada from the book Ada and Sangaman who also lives in a
+
+01:30.520 --> 01:34.920
+junkyard and I can somehow think about what you might have met by that but I would like
+
+01:34.920 --> 01:38.160
+to ask you, where does that come from?
+
+01:38.160 --> 01:46.280
+Well, so I do programming since several years and it turns out that programming isn't
+
+01:46.280 --> 01:47.280
+really hard.
+
+01:47.280 --> 01:53.000
+I have to keep so many things around in my brain that I really feel much safer if I don't
+
+01:53.040 --> 01:56.520
+have to think about memory management.
+
+01:56.520 --> 02:04.680
+If just there's a algorithm that takes care of it and I know that in history there have
+
+02:04.680 --> 02:09.720
+been garbage collectors that were really poor in performance but nowadays it's really
+
+02:09.720 --> 02:11.440
+not an issue anymore.
+
+02:11.440 --> 02:17.680
+I can afford to pay the performance penalty of a garbage collector and just use it and
+
+02:17.680 --> 02:25.160
+be much faster and programming and much and do fewer mistakes, well, programming.
+
+02:25.160 --> 02:31.120
+So you didn't mean actually like a physical environment of where you are in which with
+
+02:31.120 --> 02:33.960
+garbage around you but a digital one.
+
+02:33.960 --> 02:34.960
+Yes.
+
+02:34.960 --> 02:35.960
+Okay.
+
+02:35.960 --> 02:45.680
+So let's get back then to how did you actually get involved in all of this and programming
+
+02:45.680 --> 02:46.960
+free software?
+
+02:47.600 --> 02:54.800
+In free software, well, I think I started with computers were attracted or I was attracted
+
+02:54.800 --> 03:02.520
+to computers and then I joined the case computer club and there I did a lot of not programming
+
+03:02.520 --> 03:09.920
+but really, yeah, exploitation of computer programs and I looked from the side of the
+
+03:10.000 --> 03:19.320
+security so how can you take it computer and how can you get over the security means of
+
+03:19.320 --> 03:26.560
+the computer and so that's why where I get fascinated by how do you actually develop software
+
+03:26.560 --> 03:33.360
+that is not that easy to exploit that is much nicer to do there.
+
+03:33.360 --> 03:40.360
+Then yeah, out of political reasons and so on, I was from the very beginning, very convinced
+
+03:40.360 --> 03:46.760
+that free software is what I want to do because my lifetime is also limited and I want to contribute
+
+03:46.760 --> 03:53.400
+something to society and I strongly believe that when I write code, I have so much fun
+
+03:53.400 --> 03:59.480
+that I really want others to be able to use and modify it and that's the reason why
+
+03:59.480 --> 04:08.640
+I do mostly open source of, I mean 99% of my time is spending on his spend on open source
+
+04:08.640 --> 04:10.280
+of it.
+
+04:10.280 --> 04:14.440
+And a large part of that is going into Mirage OS, right?
+
+04:14.440 --> 04:21.440
+Yes, into Mirage OS and the greater ecosystem of OCaml.
+
+04:21.440 --> 04:26.040
+Okay, I think we have to go back to OCaml as well later.
+
+04:26.040 --> 04:27.040
+Yeah, yeah.
+
+04:27.040 --> 04:32.400
+But first, I mean, a lot of our listeners will think, well, I mean, there's the Linux
+
+04:32.400 --> 04:39.040
+kernel and with new Linux, you have an operating system there, there is several BSDs.
+
+04:39.040 --> 04:43.320
+So why did you start a new operating system?
+
+04:43.320 --> 04:48.600
+So first of all, I didn't start it, but I only joined the project back then and nowadays
+
+04:48.600 --> 04:54.440
+I'm doing a lot of work in that, I think I'm one of the main authors nowadays.
+
+04:54.440 --> 04:56.720
+And why did we start it?
+
+04:56.720 --> 05:02.680
+Well, I think that in both Linux and BSDs and also other operating systems, you see that
+
+05:02.680 --> 05:05.920
+there's a lot of legacy from the 70s around.
+
+05:05.920 --> 05:13.520
+I mean, as in recent years, you have heard about floppy disk drivers that were broken and
+
+05:13.520 --> 05:21.280
+let to exploit in QMO, you have seen that there are so many layers on top of layers that
+
+05:21.280 --> 05:26.040
+you have millions of lines of code in the Linux kernel, also in the BSDs.
+
+05:26.040 --> 05:33.600
+Nobody is there to say, oh, we don't need that anymore, who needs a SCSI drivers anymore?
+
+05:33.600 --> 05:36.520
+Why don't they just remove it?
+
+05:36.520 --> 05:42.960
+And so then there was at a time, there was this whole virtualization coming up.
+
+05:42.960 --> 05:49.280
+So with Xen being a hypervisor and trying to run multiple operating systems at the same
+
+05:49.320 --> 05:58.440
+time on the same computer, which was also done by some people who then started MirageOS.
+
+05:58.440 --> 06:04.640
+So they already knew quite a lot of Xen and how you intake the Xen, and they then thought,
+
+06:04.640 --> 06:09.400
+oh, what is the minimal thing that we can put there that runs as a guest?
+
+06:09.400 --> 06:15.560
+So not as a hypervisor, to take care of the real devices, but something that is there
+
+06:15.560 --> 06:21.240
+as a guest operating system and just have virtualized interfaces like a network card, a block device,
+
+06:22.040 --> 06:27.320
+and then does one thing that is supposed to do.
+
+06:29.720 --> 06:39.080
+Okay, so maybe before we go into some of the other details, what is the main use case of Mirage
+
+06:39.160 --> 06:44.280
+at the moment in like, if you have some practical examples, where it is used?
+
+06:45.880 --> 06:51.640
+Yes, so I think there's a large variety, some websites are using it.
+
+06:52.360 --> 06:57.880
+Then we have a calendar server, so a cloud of server that is implemented using MirageOS,
+
+06:57.880 --> 07:03.640
+and running as a MirageOS communicator. We have a firewall, especially for XeoopsOS,
+
+07:03.640 --> 07:08.200
+which is an operating system that uses a lot of isolation.
+
+07:10.040 --> 07:14.600
+And we are currently working on a VPN service, so client and server.
+
+07:15.400 --> 07:22.280
+We have replacements for, or we will work later in this year also on a replacement for
+
+07:22.840 --> 07:30.840
+DNS mask, which is DNS and DHCP server. We have, there's a product that is in high assurance,
+
+07:31.640 --> 07:38.920
+in the high assurance sector, and is acting as a service that is just there.
+
+07:38.920 --> 07:43.400
+So it's all basically about network services.
+
+07:44.920 --> 07:51.400
+And the interesting part for me at least is to have a really small system,
+
+07:52.520 --> 07:58.520
+so to not have as Linux, the journal purpose system where you have user management and the file
+
+07:59.240 --> 08:06.120
+and the shell and all of that, but really to have something with this down to the minimal.
+
+08:07.320 --> 08:13.480
+You also said once that like perfection is achieved, not when there is nothing more to add,
+
+08:14.200 --> 08:19.720
+but when there is nothing left to take away. So that's from my understanding also one of the
+
+08:19.720 --> 08:26.040
+principles for MirageOS, how do you implement that in practice?
+
+08:28.600 --> 08:29.720
+By removing code.
+
+08:30.600 --> 08:35.480
+So MirageOS is actually getting smaller and smaller over the time?
+
+08:35.480 --> 08:42.680
+Yes, yes, yes. So I mean, some measurements are, for example, the Firewall 4 chipset.
+
+08:43.480 --> 08:51.400
+We started I think with years ago, so maybe seven or eight years ago, it was maybe six megabytes
+
+08:51.400 --> 08:56.840
+in size, and that is a full virtual machine image. So there is a full virtual machine that you can
+
+08:56.840 --> 09:07.240
+run on your, than on your cube system. And these days, the same thing. So it does basically the same
+
+09:07.240 --> 09:13.160
+thing, and even doesn't a bit better because it has more performance. It's now only three
+
+09:13.160 --> 09:21.640
+points, three megabytes in size. And the question is how did we get there? Well, we look at the
+
+09:21.720 --> 09:27.640
+dependencies. We look at what we are actually using, and then trying to get rid of, or we try to
+
+09:27.640 --> 09:33.960
+limit the scope. So we ask ourselves, how do we actually need that code? What does it do in here?
+
+09:36.040 --> 09:42.760
+And I mean, I could imagine that this is something which is for people contributing to
+
+09:42.760 --> 09:51.640
+mirage as it might, I mean, from my feeling, it could be less difficult to attract people to
+
+09:51.640 --> 09:57.880
+write something new and to add something, than to get people to help you to reduce and maintain
+
+09:57.880 --> 10:06.920
+it over a longer time that it's getting like less complicated and reduce the complexity there.
+
+10:06.920 --> 10:14.440
+How do you attract people to this? How in general, how do you work in your community with such a
+
+10:14.440 --> 10:23.320
+principle? Well, we are also eager to basically have more code and more functionality inside of
+
+10:23.320 --> 10:29.960
+mirage, but it is the case that every now and then we think about what the mirage tool and the
+
+10:29.960 --> 10:38.840
+whole thing, what should it do? And what are the dependencies? And usually we attract people
+
+10:38.840 --> 10:47.880
+by having this very simple approach to operating system to engineering operating systems so that
+
+10:47.880 --> 10:53.000
+people can join or people can come around and they can understand what are the different layers
+
+10:53.000 --> 11:02.040
+and how does it work from we receive an network packet at some point two years how the HDP server
+
+11:02.040 --> 11:08.840
+handles the request and they can get and read through that entire code base within a day or two.
+
+11:09.640 --> 11:18.200
+So it's really attractive to have just this small or this tiny code base in comparison to
+
+11:19.000 --> 11:26.440
+contemporary operating systems where it takes you very several days or months in order to
+
+11:27.400 --> 11:32.920
+understand, read and understand the code. And that also means that if you want to debug a specific
+
+11:32.920 --> 11:40.920
+issue, you can do it within weekend. So I could imagine that that's also a big advantage then
+
+11:40.920 --> 11:47.000
+when you teach how operating systems works. Is that also something where mirage or as used sometimes
+
+11:47.000 --> 11:57.960
+or that people explain how operating systems work? So it's the case that some people are working
+
+11:57.960 --> 12:03.880
+at academia. So like at University of Cambridge where mirage was also started as part of a research
+
+12:03.880 --> 12:13.320
+project and they at least taught some lessons on how to use mirage as it shows some principles
+
+12:13.400 --> 12:20.200
+on mirage. So yes, this is a short break for our own cause. Working for software freedom and
+
+12:20.200 --> 12:27.560
+producing podcasts costs money. Please consider supporting us with a donation on the fsf e.org
+
+12:27.560 --> 12:37.240
+slash donate and then the show notes about the principles. So I mean there's also I mentioned
+
+12:37.240 --> 12:43.960
+that in the introduction that mirage OS is a unique kernel operating system. And I mean back in
+
+12:43.960 --> 12:52.360
+the days, I also own some knu-hurt CDs and played a little bit around with that. But when we now have
+
+12:52.360 --> 12:58.840
+an expert here, can you explain like what is the difference between a unique kernel like mirage OS
+
+12:58.920 --> 13:02.200
+and like the Linux kernel, which is a monolithic kernel?
+
+13:04.600 --> 13:11.480
+Her approach is that we really want to have, for example, the firewall to only act as a firewall.
+
+13:12.120 --> 13:20.760
+So as I briefly mentioned, there's not user management involved. There's no shell access to the
+
+13:20.760 --> 13:26.760
+firewall because why would you need it? Firewall doesn't have a file system. It doesn't even have a
+
+13:26.760 --> 13:38.040
+scheduler. So it's actually a single process. So each unit can also highly tailor its system for
+
+13:38.680 --> 13:46.600
+the service or the thing it should do. So it's a special purpose operating system in contrast to,
+
+13:46.600 --> 13:51.720
+for example, Linux, which is a general purpose. So you can do everything with the Linux. You can
+
+13:52.680 --> 13:59.560
+start your web browser and so on. And on Mirage OS, it's basically you don't have that flexibility
+
+13:59.560 --> 14:08.040
+at runtime. But at compile time, you choose which parts and which libraries you actually need
+
+14:08.040 --> 14:15.080
+for the Unicorn. So it's a lot about, you develop a lot of libraries, which are, for example,
+
+14:15.080 --> 14:21.880
+security protocols, network protocols, and so on. Then the Unicorn itself is just stitching
+
+14:21.880 --> 14:28.680
+together the different library. And that's then also the part where with this modular approach,
+
+14:29.640 --> 14:35.640
+OCaml comes in which you mentioned before, right? Yes. So what is OCaml?
+
+14:37.000 --> 14:44.360
+OCaml is a functional programming language. So there's a lot of theory behind it,
+
+14:44.360 --> 14:49.320
+but it's basically functional programming that you can, that everything is a value. So you can
+
+14:50.360 --> 14:55.720
+program with higher order of entrance and so on. And a lot of it is also that you have a lot
+
+14:55.720 --> 15:04.840
+of immutable state. So you don't mutate your whatever, but you just continue to use a very pure
+
+15:04.840 --> 15:12.280
+approach to programming. So we will also have some, some listeners who are not programmers. And I
+
+15:12.280 --> 15:21.160
+also the time that I program also a long time ago. What I know that you are very, very careful
+
+15:21.160 --> 15:29.000
+on what languages, what programming languages you choose. How would you explain that to non-programmers,
+
+15:29.000 --> 15:36.840
+why this matters and why you choose this approach? So the question is what do you want to get from
+
+15:37.000 --> 15:40.920
+a program language? And there's on the one side, you can get a lot of
+
+15:42.520 --> 15:48.760
+dynamism like in JavaScript. You can just write and it works or you get a runtime in initial.
+
+15:48.760 --> 15:55.000
+JavaScript also you can do functional programming with. What you can do quite a lot where
+
+15:55.800 --> 16:03.000
+there are a lot of checks at compile time already where you verify that certain things are passed.
+
+16:03.880 --> 16:10.760
+So where you have so-called types, so information about the program at the compile time.
+
+16:11.800 --> 16:18.200
+And if you have a type system and the compiler checks that the types fit,
+
+16:18.920 --> 16:25.400
+then you don't run into certain issues at runtime because the compiler already
+
+16:26.040 --> 16:31.560
+verified or the compiler already validated that this is good to go.
+
+16:32.200 --> 16:38.280
+Because if you have the mathematical operation plus and you just say, oh, that is defined for
+
+16:38.280 --> 16:44.840
+numbers and you add two numbers to get, then that's fine. But if the compiler finds out, oh,
+
+16:44.840 --> 16:50.840
+here you have a string and a number. I don't know what to do with it. Then in a statically type
+
+16:50.840 --> 16:57.000
+language, you will get that compile time and error. And for example in JavaScript, the compiler
+
+16:57.240 --> 17:05.160
+is not really a compiler. So what you will get is something that the JavaScript implementation
+
+17:05.160 --> 17:11.320
+figured out on what to do with a string plus a number. And that is different from what it does
+
+17:11.320 --> 17:23.800
+when it gets a number plus a string. So I try to simplify that by like with the operating with the
+
+17:23.800 --> 17:30.440
+program in language you choose from your ratio as the there will be less guessing how you could
+
+17:30.440 --> 17:36.840
+have meant it. And it would rather say, well, no, that's the way how it is meant. And I will not
+
+17:36.840 --> 17:44.360
+try to guess. Thereby you will have to take more care about the state of when you program it.
+
+17:44.360 --> 17:50.680
+But on the other hand, there will be less security problems or other problems when the program
+
+17:50.680 --> 18:04.120
+actually runs. Yes. Okay. Good. Thank you. So I'm one one thing I also wanted to to understand with
+
+18:05.480 --> 18:14.840
+now working on on Mirage OS. I mean, a lot of free software projects, they also have this issue on
+
+18:14.840 --> 18:23.400
+how do you maintain and develop that sustainably? And one component and this is often how is the
+
+18:23.400 --> 18:31.480
+software financed? So how is that with Mirage OS? How do you find this to work on this? I mean,
+
+18:31.480 --> 18:36.920
+how many people in general are working on this at the moment? It's hard to tell how many people
+
+18:37.000 --> 18:44.840
+are actually working on that. I can tell you that I six years ago I started collecting with nowadays,
+
+18:44.840 --> 18:52.600
+we are three people and we work full time on Mirage OS. And we are financed on various pillars,
+
+18:52.600 --> 18:59.080
+one is donations so that we can accept donations. So we have we have something that we don't run
+
+18:59.080 --> 19:05.640
+ourselves, which is this nonprofit thingy that was run by other people and they just host us.
+
+19:06.600 --> 19:12.360
+So donations is something we get every now and then? Is that donations? Is that mainly
+
+19:12.360 --> 19:18.360
+individuals or are those more corporate donations that are? It depends. It depends.
+
+19:20.200 --> 19:28.760
+Then we apply for funding at the public sector. So in Germany, you have, for example,
+
+19:28.760 --> 19:34.680
+prototype fund where we received some money from then on the European level, you have since
+
+19:34.680 --> 19:43.480
+quite some years this NGI, this next generation internet initiative where we are pretty regularly
+
+19:43.480 --> 19:48.840
+applying for funding and also receiving funding from them. And then we also do commercial contracts.
+
+19:48.840 --> 19:56.440
+So sometimes some company or someone reaches out to us and asks us whether we can work for them.
+
+19:57.400 --> 20:03.160
+And we then basically agree on a daily rate and say, okay, well, we can work within the next
+
+20:03.160 --> 20:11.880
+half year, so on so many days. And we put all of that into our budget and then we take a look
+
+20:11.880 --> 20:18.520
+on how to do that. So obviously, commercial contracts are giving us more money.
+
+20:19.480 --> 20:26.440
+Yeah, yeah, yeah, yeah, daily rate. So sometimes it is that we do commercial project for two months
+
+20:26.440 --> 20:32.680
+and then the next three months we don't need to work for for money. So then we have three months
+
+20:32.680 --> 20:39.640
+basically of time that we can spend on maintaining. So do you also have this this issue then that
+
+20:40.280 --> 20:48.920
+the grants and the finances financing is mainly from the two pillars like the
+
+20:48.920 --> 20:55.080
+the grants and the commercial projects mainly for adding new features and less for maintenance work
+
+20:55.080 --> 21:03.400
+or are there also some that are actually saying like, please take time, reduce complexity, bring it
+
+21:03.960 --> 21:07.640
+back to your principles or how is that working?
+
+21:09.480 --> 21:15.080
+Usually it is about new features. But also when we work on new features, we take time on
+
+21:16.120 --> 21:22.120
+thinking about what do we actually need and how do we integrate it into the current ecosystem
+
+21:22.120 --> 21:29.320
+or into the current library system. And for example, for the VPN client, we got a grant from
+
+21:30.280 --> 21:37.080
+NGI, we are an Lnet and there was one of the milestones was then also performance work.
+
+21:37.080 --> 21:43.480
+And performance work is definitely something where we read through a lot of libraries and we also
+
+21:43.480 --> 21:48.040
+worked a lot of a lot on various different libraries doing basically maintenance
+
+21:49.080 --> 21:57.480
+because we needed to get rid of some indirections and yeah, in order to meet basically the performance
+
+21:57.560 --> 22:06.520
+goals. So we try to to also in these grants and so on to embed milestones like writing
+
+22:06.520 --> 22:15.320
+documentation and performance work and so on and also refactoring work to get to get
+
+22:15.320 --> 22:21.960
+yeah, to get the dots funded. For transparency reasons, the FSV is also involved in those NGI
+
+22:22.040 --> 22:28.760
+grants. We are part of the consortium to then provide support to those who get those grants
+
+22:28.760 --> 22:36.200
+in our case with legal and licensing topics when there are questions about that. But having said
+
+22:36.200 --> 22:43.800
+that, my impression is also that in the NGI program, it's there people understand that this is
+
+22:43.800 --> 22:50.360
+part of software development and a lot of other grants, it's often not something people like
+
+22:50.440 --> 22:56.680
+I don't pay for them to clean up their code. I want to have this feature. So I mean, that's a good
+
+22:57.560 --> 23:02.440
+really good part there with the with the NGI programs and to other people out there when you
+
+23:02.440 --> 23:08.360
+want to like to to get funding the NGI programs are definitely something to look into and see if
+
+23:08.360 --> 23:16.280
+you can also get funding through that. About the last pillar with this commercial
+
+23:16.840 --> 23:23.880
+contract, is it then something where a lot of them are also using Mirage in commercial products
+
+23:23.880 --> 23:30.840
+or commercial services? And that depends. So for one customer we did design and implementation
+
+23:30.840 --> 23:37.800
+of a broad type of this site sharing system. Other companies who reach out to us, they are more
+
+23:37.800 --> 23:44.200
+interested in our skills to develop OCaml code and network and security code in OCam.
+
+23:45.000 --> 23:53.560
+Usually it's also the case that we do it all open source. So we agree with the contractors
+
+23:53.560 --> 23:59.400
+that are with our contractors that we will publish the source code also on the open in the open
+
+23:59.400 --> 24:08.680
+source. So when you're looking into the future, what are your plans? What is your vision that you
+
+24:08.760 --> 24:16.360
+want to accomplish with Mirage OS? That's a great question. So I'm involved with Mirage OS since
+
+24:16.360 --> 24:23.080
+roughly 10 years. And back then when I started to work on that, I really wanted to get into network
+
+24:23.080 --> 24:28.920
+services and onion routing with Mirage OS that hasn't happened yet. But over the years, I also
+
+24:30.840 --> 24:37.480
+changed basically what I want to achieve. And currently my goal, my goal is really that I want to
+
+24:37.480 --> 24:43.720
+enable more people to run their own digital communication infrastructure. So like email,
+
+24:44.920 --> 24:56.200
+photo sharing, taking notes, whatever one not. And my goal there is, or the problem I see at the
+
+24:56.200 --> 25:03.880
+moment in the world is that a lot of the communication is centralized that very few multinational
+
+25:03.880 --> 25:11.320
+companies like hotlook from Microsoft, like Facebook, also with WhatsApp, and then also Google
+
+25:11.960 --> 25:22.040
+at Apple. And they are basically three or four or five big players who have a lot of data
+
+25:22.040 --> 25:28.520
+from all of the users. And similar to the FSE campaign of there's no cloud, there's only other
+
+25:28.520 --> 25:37.080
+people's computers. It is really my goal to make it easier to deploy and run the services on your own.
+
+25:37.080 --> 25:45.560
+Because also I, I, yeah, I'm involved with computer security since more than 20 years. And there I
+
+25:45.560 --> 25:52.440
+also figured that running your own mail server on Linux or previously machine is really complicated
+
+25:52.440 --> 25:57.320
+because you have to know so many things. You have to know about file systems permissions. You
+
+25:57.320 --> 26:03.160
+don't want to expose your private key material via some web server and so on. So it's really,
+
+26:03.160 --> 26:08.680
+really, really hard to get there. I mean, a lot of people have taken a lot of trainings and in doing
+
+26:08.680 --> 26:16.040
+that. But I think that all of that could be easier. And with Miratwares having this program,
+
+26:16.040 --> 26:23.240
+programming language, OK, we have a lot of safety, basically built in similar, similar language
+
+26:23.320 --> 26:33.960
+would be rust, but actually Miratwares predates rust a bit. So we are in Okamel. And yeah,
+
+26:33.960 --> 26:42.040
+I really want to get that hot off the door so that more people use it. And in, and a few years ago,
+
+26:42.040 --> 26:49.320
+we caught a rather large NGI grant to work on reputable binary builds. And that was a big
+
+26:49.320 --> 26:55.720
+achievement because previously we only had source code basically and said to the people,
+
+26:55.720 --> 27:01.800
+oh, compile your own Unicronon. And nowadays we have infrastructure and we actually do on a daily
+
+27:01.800 --> 27:09.320
+basis, compilations of Unicronons. And since each Unicronon uses a lot of libraries, like easily
+
+27:09.320 --> 27:15.880
+100 200 different libraries. And these libraries are developed independently. And they are pushed and
+
+27:15.880 --> 27:22.040
+released sometimes on weekly basis, sometimes on monthly basis. But we use this reproduce a
+
+27:22.040 --> 27:29.640
+building facility to build our Unicronons every day with the latest versions to see whether we
+
+27:29.640 --> 27:37.880
+have failures and also to see what actually affects our output. So now that you mentioned reputable
+
+27:37.880 --> 27:43.560
+builds, we need to quickly go into this. I think we explained it in one of the podcasts before,
+
+27:43.560 --> 27:50.520
+but so the idea with reproducible builds is that if you compiled a program that every time you
+
+27:50.520 --> 27:58.440
+compile it, that you can achieve the same binaries afterwards. So if you then publish the binaries
+
+27:58.440 --> 28:05.080
+that can run on on another platform, that you can say, this is actually coming from this source code
+
+28:05.800 --> 28:14.440
+and without any other additions from there, right? Yes. And the idea would then be for Mirage,
+
+28:14.440 --> 28:21.960
+I mean, what you can already do is you can run Mirage on another operating system to then provide
+
+28:21.960 --> 28:28.520
+like this calendar sharing with others. And the idea would then be that you add other services
+
+28:28.760 --> 28:34.760
+there like the thing you're working on with with websites to provide website or then with an
+
+28:34.760 --> 28:41.400
+email server that it's very easy for people to at home or with a small rented server without a lot
+
+28:41.400 --> 28:48.280
+of resources, they can run a lot of the infrastructure they need for daily life without depending on some
+
+28:48.280 --> 28:55.560
+large infrastructure provider or service providers. Yes. And also they can easily upgrade the
+
+28:55.560 --> 29:02.200
+single services very independently because this is basically just a aesthetically compiled virtual
+
+29:02.200 --> 29:07.720
+machine image. So you can just update it and try it out and if it doesn't work, you can just
+
+29:07.720 --> 29:14.680
+revert to the previous version. And I think what you what you briefly mentioned about this few resources,
+
+29:14.680 --> 29:22.120
+that is really the crucial bit. It is not only about security, but also about resource usage.
+
+29:22.120 --> 29:27.640
+So if you have a very small system, you have less attack surface, but at the same time,
+
+29:27.640 --> 29:32.840
+you have less code that is running, which means you actually use fewer resources.
+
+29:33.480 --> 29:40.920
+That's also one of the topics we also touched before about like sustainability in software
+
+29:40.920 --> 29:50.520
+development. And I mean, with running such a, yeah, minimalistic by design operating system,
+
+29:50.520 --> 29:57.320
+that also means that you need way less powerful machines to run this on. And I mean, can you,
+
+29:57.960 --> 30:03.240
+what hardware can you use to use Mirage on dislike with this calendar server?
+
+30:04.440 --> 30:09.960
+Well, obviously you're left up, but you can also do it on a Raspberry Pi. You can, I mean, even
+
+30:09.960 --> 30:16.120
+years ago, there was a person who ported Mirage was on an ESP32. So that's a small microcontroller
+
+30:16.120 --> 30:25.640
+that you can get for five years or so. And yet the variety is large. And the research user
+
+30:25.640 --> 30:33.720
+is really, really small. Also, that is also what the cubes community appreciates a lot about
+
+30:33.720 --> 30:43.240
+firewall, because it uses 10 times less memory than Linux with having the same, the same behavior
+
+30:43.320 --> 30:46.520
+or having the same thing that was actually doing.
+
+30:47.080 --> 30:52.520
+Actually, also the first time I heard about Mirage was that a cubes user told me about it and
+
+30:52.520 --> 30:57.000
+showed me like how cool this is that you can run this this firewall and it doesn't need a lot
+
+30:57.000 --> 31:03.720
+of resources, because I mean, usually when you use cubes where you have different, a lot of
+
+31:03.720 --> 31:09.720
+compartmentalization for your operating system, it takes a lot of resources for you. So you're
+
+31:09.720 --> 31:17.720
+very happy if one of those components is using less resources there. So and so by this design,
+
+31:17.720 --> 31:25.160
+it's also from your perspective, that's also the approach how you can achieve a decentralization
+
+31:25.160 --> 31:32.280
+without explosion of resources needed for this decentralization, right? Yeah.
+
+31:32.840 --> 31:42.520
+Okay. Then is there anything else you wanted to talk about from the technical perspectives
+
+31:42.520 --> 31:56.120
+with Mirage OS? I think maybe, yeah. So we talk quite a bit about cubes and Xen, and that was
+
+31:56.200 --> 32:03.000
+basically the initial days, but nowadays that also computers are getting a bit more modern
+
+32:03.000 --> 32:10.920
+and having these virtualization support in hardware and Linux having, for example, this KVM
+
+32:10.920 --> 32:19.080
+subsist. That is also something we support since seven or eight years. So we are not stuck with Xen
+
+32:19.160 --> 32:27.000
+We were using Xen in the beginning, but nowadays we moved a bit further and also support KVM
+
+32:27.800 --> 32:33.720
+and previously it's called VIVE and OpenBC. It's called VMM. So all these hardware features.
+
+32:35.880 --> 32:42.120
+So it's more like we try to be open for any operating system. And it is not a complete
+
+32:42.120 --> 32:48.920
+operating system. So I don't use it on my desktop, I don't use it for development, but I run it
+
+32:48.920 --> 32:56.760
+in order to have some network services. So I think that's something to make clear that it's not
+
+32:56.760 --> 33:04.040
+something you don't install Mirage OS on your mobile phone or on your laptop as the first operating
+
+33:04.040 --> 33:10.360
+system, but you started from within another operating system. Yes. While at the same time,
+
+33:10.360 --> 33:17.080
+for example, for the Raspberry Pi, we have a native port. So that means you can just run it
+
+33:17.080 --> 33:22.280
+directly on your Raspberry Pi. You don't have another operating system below it.
+
+33:23.480 --> 33:30.520
+Didn't know about that. Good that we clarified that. Before we go to our last question, then I have
+
+33:30.600 --> 33:39.960
+one other question because I wanted to know like how did you end up after you do all this
+
+33:39.960 --> 33:44.360
+programming and those technical things? How did you end up writing a book about Indian cuisine?
+
+33:45.320 --> 33:52.600
+It's actually a book about Indian cuisine and functional program. So there's a book. It's called
+
+33:52.760 --> 34:01.560
+Curry Book in German published by Oreli. We had, obviously, this idea that in functional programming,
+
+34:01.560 --> 34:10.200
+you have this mechanism called currying and curry and Indian cuisine and Indian curry that was
+
+34:10.200 --> 34:16.840
+just such a nice match that we had this idea to write a book about it. The Curry book
+
+34:16.840 --> 34:21.880
+have some recipes for Indian cuisine in there, but also teach people how to do functional
+
+34:21.880 --> 34:34.040
+programming in that book using JavaScript. That's okay. Now I get it. We actually did the
+
+34:34.040 --> 34:41.160
+analogy with recipes and programming. We also used that for a long time and I think that was
+
+34:41.160 --> 34:50.120
+first time I was on television at the results of us recording. I did some Pesto where I absolutely
+
+34:50.120 --> 34:58.680
+failed to do that and explained software while doing that. And with some of the readings,
+
+34:58.680 --> 35:04.360
+recently we did, we had one of our volunteers who came to those readings with an ice cream machine
+
+35:05.000 --> 35:13.240
+and then printed out recipes in programming, language programming style to show the children what
+
+35:13.240 --> 35:22.040
+is actually used to do the ice cream there. Good. Well, Hannes, I at least learned a lot during
+
+35:22.040 --> 35:31.240
+our conversation here again. The last question we always have is, as we are running the I love
+
+35:31.400 --> 35:39.400
+software day now for ages and on this day on the 14th of February, we encourage everyone to thank
+
+35:39.400 --> 35:45.640
+other people in our community for things they do for a software freedom. On the other hand,
+
+35:45.640 --> 35:50.440
+we also think about 14th of February that's one day of the year. So in this podcast, we do that
+
+35:50.440 --> 35:56.600
+every time. So now you have the chance to thank whoever you want for the things they do.
+
+35:57.560 --> 36:03.640
+Oh, that is a good question. So I'm really grateful, for example, for my development environment. So
+
+36:03.640 --> 36:10.440
+for all the people who work on EMAX, I'm really happy about that because that gives me a lot of
+
+36:10.440 --> 36:18.280
+productivity. Then I'm really happy about, yeah, the people doing freebies TV because I use free
+
+36:18.360 --> 36:27.480
+BST on both my laptop and my service. And it's just such a simplistic, nice way to go around.
+
+36:29.400 --> 36:33.720
+And apart from that, I mean, there are so many applications that I rely on on a daily basis.
+
+36:33.720 --> 36:42.040
+And it's just so amazing, like Firefox, like a mail client and all of that. And that's just
+
+36:42.040 --> 36:49.800
+impressive that it's available for free. For all the people who do work on compilers and so on,
+
+36:49.800 --> 36:53.560
+and on debuggers because without the user, I wouldn't be here.
+
+36:55.400 --> 37:01.000
+Then thank you very much, Hunters, for being with us today and all the best for your future
+
+37:01.000 --> 37:06.680
+development with Mirage and your other projects. Thank you very much. Thanks for having me here.
+
+37:07.320 --> 37:12.440
+This was the Software Freedom Podcast. If you liked this episode, please
+
+37:12.440 --> 37:19.800
+recommend it to your friends or colleagues. And also subscribe so you will not miss the next episode.
+
+37:19.800 --> 37:24.120
+This podcast is presented to you by the Free Software Foundation Europe. We are a charity
+
+37:24.120 --> 37:29.960
+that works on promoting Software Freedom. If you like our work, please support us with a donation.
+
+37:29.960 --> 37:42.040
+You find more information on the fsafi.org slash donate. Thank you very much. Bye-bye.
+
+</pre>
+
+<p><a href="/news/podcast/episode-25.html">Back to the episode SFP#25</a></p>
+
+</body>
+<sidebar promo="our-work">
+
+</sidebar>
+  
+</html> 

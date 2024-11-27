@@ -1,0 +1,1596 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<html>
+ <version>3</version>
+<head>
+<title>Transcript SFP#20</title>
+</head>
+<body>
+  
+<h1>Transcript of SFP#20: All about Device Neutrality with Lucas Lasota</h1>
+
+<p><a href="/news/podcast/episode-20.html">Back to the episode SFP#20</a></p>
+<p>This is a transcript created with the Free Software tool Whisper. For more information and feedback reach out to <email mailto="yes">podcast@fsfe.org</email></p>
+
+<pre class="transcript">
+WEBVTT
+
+00:00.000 --> 00:17.240
+Welcome to the Software Freedom Podcast.
+
+00:17.240 --> 00:21.680
+This podcast was presented to you by the Free Software Foundation Europe, the R Charity
+
+00:21.680 --> 00:24.800
+that it powers users to control technology.
+
+00:24.800 --> 00:29.760
+I'm Bonnie Merring and our guest for today's episode is Lukas Lasota.
+
+00:29.760 --> 00:34.480
+Lukas has a background in contract and technology law, and he's also teaching at the Humboldt
+
+00:34.480 --> 00:40.400
+University in the fields of civil IT and telecommunication law.
+
+00:40.400 --> 00:45.520
+Apart from this work at the university, Lukas also works for the FSFE as a senior project
+
+00:45.520 --> 00:46.520
+manager.
+
+00:46.520 --> 00:52.200
+At the FSFE, he focuses on several initiatives connecting law and technology.
+
+00:52.200 --> 00:57.080
+Among those, Lukas works for device neutrality and narrative freedom.
+
+00:57.080 --> 01:00.840
+For this episode, we will break down these topics and cover their technical background
+
+01:00.840 --> 01:03.240
+and their impact on society.
+
+01:03.240 --> 01:07.200
+Thank you so much for being here, Lukas, and welcome to the Software Freedom Podcast.
+
+01:07.200 --> 01:08.200
+Hi, Bonnie.
+
+01:08.200 --> 01:10.000
+It's my great pleasure to be here.
+
+01:10.000 --> 01:14.720
+Lukas, you also work for the FSFE, but where does your interest for free software comes
+
+01:14.720 --> 01:15.720
+from?
+
+01:15.720 --> 01:25.720
+Well, I'm a lawyer as a profession, and I always study different areas of law, copyright,
+
+01:25.720 --> 01:33.600
+patent law, and usually we take this for granted that the system works just on this direction,
+
+01:33.600 --> 01:39.280
+on this way, but the free software is truly a revolution on how copyright and patent
+
+01:39.280 --> 01:42.840
+law is in fact applied in society.
+
+01:42.840 --> 01:49.600
+So basically, copy left, for example, is a heck of the copyright system, and for me
+
+01:49.600 --> 01:56.640
+that was just a genius movement, and that's why I found the law, and I said, I need to take
+
+01:56.640 --> 01:58.240
+part on this.
+
+01:58.240 --> 02:05.080
+So you came to FSFE to a law point of view, so it was not a technical background.
+
+02:05.080 --> 02:12.320
+Like, you didn't think, oh, I need to have FSFE, so I can help to improve to software
+
+02:12.320 --> 02:15.880
+or other than able to use the software for anything that I want.
+
+02:15.880 --> 02:24.360
+It was more about how does free software and law interconnect, and the whole concept
+
+02:24.360 --> 02:26.160
+of copy left.
+
+02:26.160 --> 02:33.080
+Yes, and this is the beauty of the movement, right, because it puts together technical
+
+02:33.080 --> 02:41.360
+people, policy people, lot people all working for making software free, right?
+
+02:41.360 --> 02:48.360
+And that was the appealing part to me, that traditional institutions, legal institutions,
+
+02:48.360 --> 02:53.960
+legal instruments, were being interpreted and used in a completely different way in order
+
+02:53.960 --> 02:59.920
+to safeguard freedoms and not to restrict freedoms, and that was for me a game changer.
+
+02:59.920 --> 03:03.680
+Thank you for sharing this background, sir, Milukas.
+
+03:03.680 --> 03:07.080
+How and why did you join the FSFE?
+
+03:08.080 --> 03:17.240
+Yes, so after having this completed turnaround in my life, and I start thinking about what
+
+03:17.240 --> 03:25.680
+should I do now, I start researching about free software, and I wrote some legal articles
+
+03:25.680 --> 03:31.560
+on free software, and I started learning more, reading a lot.
+
+03:31.560 --> 03:36.680
+And in that term point, I said, perhaps I could also do it for a living.
+
+03:36.680 --> 03:39.920
+I could perhaps start working with it.
+
+03:39.920 --> 03:49.800
+And then in 2018, I saw that the FSFE was hiring, and I applied, and I was very proud
+
+03:49.800 --> 03:56.280
+and happy that they accepted me, and I have been working for the FSFE since 2019.
+
+03:56.280 --> 03:57.280
+That's quite a long time.
+
+03:57.280 --> 03:58.280
+Yes, it's amazing.
+
+03:59.280 --> 04:06.360
+During this whole time, what was the best thing that you can remember by working for the
+
+04:06.360 --> 04:09.800
+FSFE and connected to free software?
+
+04:09.800 --> 04:17.120
+Oh, this is a very hard question, because I have so much good moments, and I'm optimistic
+
+04:17.120 --> 04:24.520
+that I still have a lot of good moments, but I think that the community is a great part
+
+04:24.520 --> 04:25.520
+of it.
+
+04:26.240 --> 04:35.080
+Learning and with people that has a completely different view on things, it's really something
+
+04:35.080 --> 04:36.080
+different for me.
+
+04:36.080 --> 04:45.040
+I mean, I have learned so much in these four years that I say that perhaps I went again
+
+04:45.040 --> 04:49.960
+in the academy of life learning on how to control technology.
+
+04:49.960 --> 04:54.800
+So I think the learning process with the community has been the best aspect for me.
+
+04:54.960 --> 04:56.440
+I really like that, Lucas.
+
+04:56.440 --> 04:59.560
+Thank you so much for sharing this with me.
+
+04:59.560 --> 05:04.360
+So as we already established, you have been working for the FSFE now for quite a long
+
+05:04.360 --> 05:05.360
+time.
+
+05:05.360 --> 05:11.600
+During this time, what are the main areas you worked for, or the main focus you had,
+
+05:11.600 --> 05:13.760
+and did this change over the time?
+
+05:13.760 --> 05:14.760
+Right.
+
+05:14.760 --> 05:22.040
+So since my background as law, I've been working several activities in the legal and
+
+05:22.040 --> 05:24.040
+policy field.
+
+05:24.040 --> 05:32.680
+Together with my colleague, Gabriel, we facilitate, for example, the FSFE legal network, and
+
+05:32.680 --> 05:36.040
+we work also in several legal initiatives.
+
+05:36.040 --> 05:42.800
+One of my favorites, because I think this initiative can really change the landscape
+
+05:42.800 --> 05:47.760
+of the internet of the future, is the next generation internet.
+
+05:47.760 --> 05:56.320
+And we provide hundreds of software projects, help, and organize their license compliance.
+
+05:56.320 --> 06:04.320
+And for example, we help them implement our reuse specifications, and between other legal
+
+06:04.320 --> 06:05.320
+initiatives.
+
+06:05.320 --> 06:13.480
+In the policy side, I've been working mainly in helping people to control their own devices
+
+06:13.480 --> 06:15.560
+with the help of free software.
+
+06:15.560 --> 06:22.800
+In this regard, I've been spearheading the device neutrality initiative and the router-free
+
+06:22.800 --> 06:24.840
+to campaign.
+
+06:24.840 --> 06:30.120
+What is device neutrality, and what does this include?
+
+06:30.120 --> 06:35.520
+This is a fundamental concept, and to explain this, I would like to start with an example.
+
+06:35.520 --> 06:41.720
+Let's imagine that you have bought a smart phone, a shiny new smart phone, right?
+
+06:41.720 --> 06:46.800
+And you are thrilled to learn and discover all that your device can deliver.
+
+06:46.800 --> 06:52.320
+You want it to install apps, use camera, access the internet, run games, enjoy all that
+
+06:52.320 --> 06:54.480
+your equipment can perform.
+
+06:54.480 --> 07:01.000
+However, I think everybody who has bought his smartphones in the last years faced this
+
+07:01.000 --> 07:02.000
+problem.
+
+07:02.000 --> 07:07.720
+You begin to perceive that something is not quite correct, I would say, because in order
+
+07:07.720 --> 07:13.080
+to start your phone, you are prompted to create an online account for using this device.
+
+07:13.080 --> 07:14.480
+This is the first thing.
+
+07:14.480 --> 07:22.680
+Secondly, you start to perceive that you are limited in how you download or install new
+
+07:22.680 --> 07:25.520
+apps and programs.
+
+07:25.520 --> 07:32.040
+Perhaps you are allowed only to download new apps through the manufacturers or the vendor's
+
+07:32.040 --> 07:34.640
+app store or marketplace.
+
+07:34.640 --> 07:40.960
+Then you are forbidden to install 30-party software, or if you wanted to install different
+
+07:40.960 --> 07:47.360
+repository, for example, F-Droid, you are not allowed, and most weirdly, you are not
+
+07:47.360 --> 07:50.880
+allowed to remove pre-installed programs.
+
+07:50.880 --> 07:54.880
+And this is really a serious issue, right?
+
+07:54.880 --> 08:02.880
+Because you are not allowed to remove programs that are occupying the device memory, space,
+
+08:02.880 --> 08:08.520
+or training its battery, or even worse, it's proprietary and you don't know what the
+
+08:08.520 --> 08:10.440
+program is doing.
+
+08:10.440 --> 08:16.320
+So perhaps you wanted to change the operating system and you are not to do that.
+
+08:16.320 --> 08:23.840
+So basically, just to sum up, this sad example that I think every consumer today in digital
+
+08:23.840 --> 08:29.960
+markets are facing, although digital devices are ubiquitous today.
+
+08:29.960 --> 08:36.200
+The number of devices on which users cannot run free software is exponentially increasing,
+
+08:36.200 --> 08:41.560
+and the consequence is an increasing loss of control over user technology.
+
+08:41.560 --> 08:52.960
+So device neutrality aims to enable consumers and users, we, to bypass these restrictions
+
+08:52.960 --> 08:56.640
+and to use free software on devices.
+
+08:56.640 --> 08:59.800
+This is all the device neutrality is all about.
+
+08:59.800 --> 09:06.200
+So basically, the name stands for devices should be neutral?
+
+09:06.200 --> 09:13.720
+Right, so the concept of neutrality here, and this is not a concept that was invented
+
+09:13.720 --> 09:15.440
+by the FSFE.
+
+09:15.440 --> 09:21.600
+Device neutrality has been around for quite some time already in Europe, I, for example,
+
+09:21.600 --> 09:24.560
+already since 2013, 2014.
+
+09:24.560 --> 09:30.160
+There were already some movements in Italy to make this concept to reach a legislation,
+
+09:30.160 --> 09:36.400
+but unfortunately, it lost some momentum and track there, but also the academic sector
+
+09:36.400 --> 09:40.840
+has been working a lot in order to define in this.
+
+09:40.840 --> 09:47.080
+So basically, and the academic sector, there's a lot of studies in the last three years
+
+09:47.120 --> 09:55.000
+working on this, and they, they realize that manufacturers, for example,
+
+09:55.000 --> 10:01.200
+smartphones, manufacturers or vendors are even internet platforms.
+
+10:01.200 --> 10:12.680
+They control specifically, specific points in the device architecture or in the device
+
+10:12.680 --> 10:22.240
+infrastructure, that prohibits end users to perform the term functions of this device.
+
+10:22.240 --> 10:30.040
+For example, as we just said, it's not possible to install different app stores or repositories
+
+10:30.040 --> 10:37.600
+or it doesn't allow to, to uninstall, pre-installed applications.
+
+10:37.600 --> 10:42.480
+So basically, these manufacturers and these vendors are even internet platforms.
+
+10:42.480 --> 10:47.760
+They have a monopoly on the terms aspects of the device.
+
+10:47.760 --> 10:55.160
+And when they have this, this monopoly, they act as a gatekeeper.
+
+10:55.160 --> 11:02.120
+They have a weak gatekeeper function controlling these aspects, these elements of devices.
+
+11:02.120 --> 11:11.720
+And they can, I can put this, and they can discriminate, they can discriminate in what
+
+11:11.720 --> 11:18.400
+functions or what software you can install on uninstall or can run or not run in it.
+
+11:18.400 --> 11:26.080
+So the neutrality aspect here, the concept of neutrality is that, is to let users to run
+
+11:26.080 --> 11:32.280
+any software that they want in order to explore the functionality of the device.
+
+11:32.280 --> 11:41.000
+In fact, this sense, they should be neutral to what the device can do, okay?
+
+11:41.080 --> 11:48.120
+All right, so it should be my choice, what kind of software I install on the device,
+
+11:48.120 --> 11:51.320
+rather than the choice of the vendor.
+
+11:51.320 --> 12:00.080
+Right, of course, that when you buy a smartphone or a computer or a tablet or, you know,
+
+12:00.080 --> 12:05.040
+this kind of device is that we are using today, that usually I like to call,
+
+12:05.120 --> 12:12.760
+there are general purpose computers, right, that you can run software, we are kind of any free software,
+
+12:12.760 --> 12:13.840
+when you buy it.
+
+12:13.840 --> 12:22.520
+Well, there are consumers that want to have indeed software already running to it,
+
+12:22.520 --> 12:24.720
+that you can already start using it.
+
+12:24.720 --> 12:32.240
+Other users prefer to have only the device that they can install by themselves operating systems,
+
+12:32.240 --> 12:42.840
+they can, you know, adapt and to configure the device in ways that he or she wants,
+
+12:42.840 --> 12:45.760
+but it is a choice.
+
+12:45.760 --> 12:52.440
+Yes, so the device, since it's a general purpose computing, it has the capacity
+
+12:52.440 --> 12:58.960
+and this capacity to permit users to run the software that they want,
+
+12:58.960 --> 13:05.640
+especially when regards to free software, should be protected, should be safeguarded,
+
+13:05.640 --> 13:09.920
+and that's what we want with this initiative.
+
+13:09.920 --> 13:13.000
+All right, thank you so much for covering the basics of me.
+
+13:13.000 --> 13:21.760
+What would you say are the problems that users are facing if device neutrality is not a given standard?
+
+13:21.760 --> 13:30.720
+Right, so as I said, the manufacturers, the vendors, the internet platforms,
+
+13:30.720 --> 13:40.720
+the gatekeepers, this concept, they control crucial aspects of device operating systems,
+
+13:40.720 --> 13:45.880
+app stores, browsers, and perhaps even key online services.
+
+13:45.920 --> 13:51.080
+And in general terms, these gatekeepers, they achieve this control,
+
+13:51.080 --> 13:58.440
+they achieve this monopoly by a restricting software freedom.
+
+13:58.440 --> 14:03.040
+So gatekeepers limit or prevent users installing different operating systems,
+
+14:03.040 --> 14:08.440
+browsers that today is very important because we are using browsers more and more,
+
+14:08.480 --> 14:21.200
+we are spending more time in browser, using the internet and so gatekeepers,
+
+14:21.200 --> 14:28.480
+they restrict our ability to run free software, they restrict software freedom.
+
+14:28.480 --> 14:34.840
+But they also lock the device down, they hinder interoperability, for example,
+
+14:34.880 --> 14:42.400
+they exercise type control over APIs, they apply proprietary standards,
+
+14:42.400 --> 14:47.440
+they hamper functionalities and block access to drivers and hardware.
+
+14:47.440 --> 14:56.880
+And they also put end users and consumers inside silos, if we can say like this, if you will,
+
+14:56.880 --> 15:01.280
+and they increase switching costs of the devices.
+
+15:01.320 --> 15:07.200
+Gatekeepers keep users in these wallet gardens or in silos,
+
+15:07.200 --> 15:14.120
+they tie devices to online accounts, bundle app stores and hamper data portability,
+
+15:14.120 --> 15:18.320
+making it harder for users to switch software devices or event services.
+
+15:18.320 --> 15:25.640
+So basically these are the difficulties that consumers are facing with their devices nowadays.
+
+15:25.680 --> 15:31.240
+And how is the FSFE and especially you in this case, supporting device neutrality?
+
+15:32.920 --> 15:40.080
+Right, so first we need to understand the causes and we have been,
+
+15:40.080 --> 15:46.840
+yeah, as I said, using a lot of concepts that has been developed over the years
+
+15:46.840 --> 15:52.480
+by regulators, by the academic sector,
+
+15:52.480 --> 15:58.680
+by the free software community itself, because when we see today,
+
+15:58.680 --> 16:04.680
+there's a lot of free software alternatives that help users to have much,
+
+16:04.680 --> 16:07.120
+much more control over devices.
+
+16:07.120 --> 16:14.760
+For example, alternative app stores, alternative browsers, drivers and et cetera.
+
+16:14.760 --> 16:21.600
+And we had to adapt to the concept of device neutrality
+
+16:21.600 --> 16:26.600
+to and from the perspective of a free software.
+
+16:26.600 --> 16:31.560
+And we came out with demands when someone asks,
+
+16:31.560 --> 16:37.240
+so what the FSFE is asking for device neutrality?
+
+16:37.240 --> 16:42.680
+And in order to use is to regain control over devices,
+
+16:42.680 --> 16:49.360
+we think that device neutrality translates into a software freedom.
+
+16:49.400 --> 16:53.920
+Regaining control of devices requires safe guiding software freedom.
+
+16:53.920 --> 16:58.720
+Users should have the ability to install and uninstall any software,
+
+16:58.720 --> 17:02.000
+including operating systems and app stores.
+
+17:02.000 --> 17:07.400
+Gatekeepers should provide users the same access privileges
+
+17:07.400 --> 17:10.640
+to third party applications as to the pre-installed ones.
+
+17:10.640 --> 17:12.240
+So this is very important.
+
+17:12.240 --> 17:19.240
+But not only that, we are also against B lock-ins.
+
+17:19.240 --> 17:23.600
+We advocate for higher degrees of interoperability,
+
+17:23.600 --> 17:27.360
+why the implementation of open standards
+
+17:27.360 --> 17:31.680
+in the different aspects and dimensional of devices.
+
+17:31.680 --> 17:36.440
+And we promote easier access to APIs specifications
+
+17:36.440 --> 17:40.240
+and functionalities invoked by 30-parties apps.
+
+17:40.240 --> 17:47.160
+So, and we also the third point
+
+17:47.160 --> 17:50.440
+that composed our understanding of device neutrality
+
+17:50.440 --> 17:56.120
+is that end users should have control over data in their devices.
+
+17:56.120 --> 18:00.600
+So breaking monopolies over devices necessarily requires
+
+18:00.600 --> 18:04.800
+empowering users to control their own data on their equipment.
+
+18:07.000 --> 18:11.000
+That's why end users should be able to easily transfer personal data
+
+18:11.000 --> 18:15.280
+from apps operating systems and across devices.
+
+18:15.280 --> 18:24.520
+Most importantly for us, the formats of the standards
+
+18:24.520 --> 18:28.080
+that this data portability and this data interoperability
+
+18:28.080 --> 18:30.880
+should be, should abide, open standards
+
+18:30.880 --> 18:35.440
+and common interfaces for data transfer.
+
+18:35.440 --> 18:41.720
+However, all these demands, they are materialized
+
+18:41.760 --> 18:45.280
+in several initiatives that we have been running
+
+18:45.280 --> 18:47.800
+in the last years.
+
+18:47.800 --> 18:52.560
+For example, we engaged with European institutions
+
+18:52.560 --> 18:55.840
+in the legislative process of digital markets act.
+
+18:55.840 --> 18:59.480
+It's a very important legislation
+
+18:59.480 --> 19:01.600
+that entered in force last year.
+
+19:01.600 --> 19:06.000
+But we have been working with several decision makers
+
+19:06.000 --> 19:09.680
+and policy makers in order to promote
+
+19:09.680 --> 19:14.960
+device neutrality principles that I just mentioned in the law.
+
+19:14.960 --> 19:19.480
+And we were very happy to see that several of them
+
+19:19.480 --> 19:21.920
+were established in the law.
+
+19:21.920 --> 19:26.080
+So now we can say that device neutrality,
+
+19:26.080 --> 19:27.800
+at least in the legislative level,
+
+19:27.800 --> 19:30.360
+is already a reality in Europe.
+
+19:30.360 --> 19:35.320
+But we need to work further to implement this on practice.
+
+19:35.360 --> 19:40.600
+And this leads perhaps to one also a different activity
+
+19:40.600 --> 19:44.800
+that I've been working in the FSFE that is router freedom.
+
+19:44.800 --> 19:48.000
+And in this case, we now come to router freedom
+
+19:48.000 --> 19:52.640
+as this is the other campaign that you're working on.
+
+19:52.640 --> 19:54.400
+What is router freedom about?
+
+19:54.400 --> 19:58.920
+Could you quickly recap the connection to device neutrality
+
+19:58.920 --> 20:05.000
+for me and how router freedom came into life?
+
+20:05.000 --> 20:06.000
+Right.
+
+20:06.000 --> 20:12.080
+So as you mentioned, device neutrality is, although it's
+
+20:12.080 --> 20:15.680
+very simple to understand, the demands for it
+
+20:15.680 --> 20:19.800
+is just we require software freedom on devices.
+
+20:19.800 --> 20:24.920
+We advocate against locking, vendor locking
+
+20:24.920 --> 20:30.000
+in devices, and users should have control over data.
+
+20:30.000 --> 20:35.720
+These are very close, basic to the free software community.
+
+20:35.720 --> 20:39.920
+Because historically, that's what the community
+
+20:39.920 --> 20:42.160
+has allowed to do with free software.
+
+20:42.160 --> 20:43.560
+And free software power is usually
+
+20:43.560 --> 20:45.800
+to do this with devices, right?
+
+20:45.800 --> 20:51.400
+But the bigger the gatekeepers are,
+
+20:51.400 --> 20:55.560
+more control they have over the supply chain.
+
+20:55.560 --> 21:00.160
+And more control they have over those bottlenecks on devices.
+
+21:00.160 --> 21:03.240
+And that's why implementing device neutrality
+
+21:03.240 --> 21:05.760
+and practice is challenging.
+
+21:05.760 --> 21:09.120
+Because in the end, we have to challenge
+
+21:09.120 --> 21:12.960
+the economic and policy power of these very large
+
+21:12.960 --> 21:15.680
+and powerful companies.
+
+21:15.680 --> 21:22.120
+But router freedom is a very dedicated also initiative.
+
+21:22.120 --> 21:25.920
+Because it deals with a very basic level
+
+21:25.920 --> 21:28.040
+of device neutrality.
+
+21:28.040 --> 21:34.920
+We want that users and consumers have the right
+
+21:34.920 --> 21:40.160
+to choose their own devices when connecting to the internet.
+
+21:40.160 --> 21:40.960
+Period.
+
+21:40.960 --> 21:42.480
+That's very simple.
+
+21:42.480 --> 21:46.880
+So router freedom is that you should be able to choose
+
+21:46.880 --> 21:50.160
+your own router or modern.
+
+21:50.160 --> 21:53.400
+But even on this level of simplicity,
+
+21:53.400 --> 21:56.160
+at least conceptual simplicity, in Europe
+
+21:56.160 --> 22:00.080
+has been very hard to implement this.
+
+22:00.080 --> 22:03.560
+And router freedom has been running already for years.
+
+22:03.560 --> 22:06.120
+And we have been experimenting.
+
+22:06.120 --> 22:10.160
+And we have been engaging with policymakers, with regulators,
+
+22:10.160 --> 22:16.360
+in several levels, in the national level, in the European level,
+
+22:16.360 --> 22:21.520
+in order to make this a reality.
+
+22:21.520 --> 22:25.360
+We defend, we argue, and we advocate,
+
+22:25.360 --> 22:33.520
+that users should not be obliged to use only the router
+
+22:33.520 --> 22:37.320
+that the internet services provider gives them.
+
+22:37.320 --> 22:40.120
+And sometimes they give these routers to users,
+
+22:40.120 --> 22:43.480
+and they also charge for it.
+
+22:43.480 --> 22:48.400
+So they are making money twice with routers.
+
+22:48.400 --> 22:52.160
+And all that we want is that end users
+
+22:52.160 --> 22:55.760
+should have the ability to just buy their own routers
+
+22:55.760 --> 23:01.880
+and to run and to install free software on their routers.
+
+23:01.880 --> 23:06.120
+And because there are free software operating
+
+23:06.120 --> 23:10.160
+systems for routers, and that's all.
+
+23:10.160 --> 23:15.600
+And what perhaps someone can say, but is that important?
+
+23:15.600 --> 23:18.160
+Router is perhaps just this equipment
+
+23:18.160 --> 23:20.760
+that nobody cares is getting there,
+
+23:20.760 --> 23:25.280
+getting a little bit dusty in the corner of your room.
+
+23:25.280 --> 23:33.960
+But no, I would like to highlight that routers
+
+23:33.960 --> 23:38.680
+are very important piece of equipment.
+
+23:38.680 --> 23:40.520
+Let's put this way.
+
+23:40.520 --> 23:44.560
+Your whole internet traffic, encryption, backups,
+
+23:44.560 --> 23:47.400
+communication, shopping, writings, business
+
+23:47.400 --> 23:51.880
+interaction, and so on, are transferred over the internet
+
+23:51.880 --> 23:52.920
+through your router.
+
+23:52.920 --> 23:55.600
+So the router is your gateway to the internet.
+
+23:55.600 --> 24:00.520
+If your router is not free, your digital freedoms
+
+24:00.520 --> 24:02.440
+are like to be compromised.
+
+24:02.440 --> 24:05.760
+So that's why router freedom should be understood
+
+24:05.760 --> 24:08.440
+as quite important.
+
+24:08.440 --> 24:10.640
+And it affects everybody, because everybody
+
+24:10.640 --> 24:15.360
+or nearly everybody is using a router.
+
+24:15.360 --> 24:21.160
+And this is for, like, it affects a lot of people.
+
+24:21.160 --> 24:24.800
+And as you already said, it's quite,
+
+24:24.800 --> 24:27.560
+sometimes it's a bit hard to think about a router
+
+24:27.560 --> 24:31.840
+as something very important that you should run free software
+
+24:31.840 --> 24:35.560
+on it, because it is the device that
+
+24:35.560 --> 24:40.080
+channels all your communication.
+
+24:40.080 --> 24:42.160
+As I said, I completely agree with you,
+
+24:42.160 --> 24:44.960
+but that router freedom is not merely
+
+24:44.960 --> 24:46.880
+top for expect.
+
+24:46.880 --> 24:48.840
+It affects all of us.
+
+24:48.840 --> 24:52.880
+And the problem is, is that historically,
+
+24:52.880 --> 24:57.120
+internet services providers, they
+
+24:57.120 --> 25:01.280
+thought that the router would be an element
+
+25:01.280 --> 25:03.120
+of their own infrastructure.
+
+25:03.120 --> 25:06.640
+So it would be their equipment that they
+
+25:06.640 --> 25:09.240
+would put inside our own home.
+
+25:09.240 --> 25:15.760
+But it's not like this, because already in the 80s,
+
+25:15.760 --> 25:17.600
+this has changed.
+
+25:17.600 --> 25:24.280
+And as with telephones, already we saw in the history
+
+25:24.280 --> 25:27.440
+of the telecom sector, that telephones,
+
+25:27.440 --> 25:32.760
+they started to be understood as a private equipment.
+
+25:32.760 --> 25:37.320
+And people could change their own telephones that they wanted.
+
+25:37.320 --> 25:39.800
+And it's the same with routers.
+
+25:39.800 --> 25:43.920
+But I just wanted to point out that every time
+
+25:43.920 --> 25:48.960
+that new technology emerges, gatekeepers or telecom
+
+25:48.960 --> 25:52.720
+providers, they usually take a very restrictive approach
+
+25:52.720 --> 25:55.480
+to this, and they wanted to keep this equipment
+
+25:55.480 --> 25:59.600
+under their own control and not giving users control over it.
+
+25:59.600 --> 26:03.920
+So they always raise arguments of security,
+
+26:03.920 --> 26:07.480
+of integrity, of the network, and et cetera.
+
+26:07.480 --> 26:12.960
+But our experience has shown that the risks of end users
+
+26:12.960 --> 26:16.880
+using their own equipment to the public network
+
+26:16.880 --> 26:18.120
+is very, very low.
+
+26:18.120 --> 26:20.960
+It's very low.
+
+26:20.960 --> 26:26.000
+But the benefits for users having their own equipment
+
+26:26.000 --> 26:28.160
+is much greater.
+
+26:28.160 --> 26:34.880
+So basically, router freedom allows the router market
+
+26:34.880 --> 26:38.120
+to thrive, because with more competition,
+
+26:38.120 --> 26:41.760
+there are several types of routers that people can use
+
+26:41.760 --> 26:47.440
+and can adapt and can configure it to their own needs.
+
+26:47.440 --> 26:54.040
+So people can update the parentheses of the routers by their own,
+
+26:54.040 --> 26:56.600
+so avoiding security issues.
+
+26:56.600 --> 27:00.760
+So router freedom, in fact, benefits not only users,
+
+27:00.760 --> 27:03.600
+but benefit the entire digital ecosystem.
+
+27:03.600 --> 27:06.080
+It benefits the digital markets as well.
+
+27:06.080 --> 27:08.280
+So that's why with router freedoms,
+
+27:08.280 --> 27:13.120
+we invite internet service providers
+
+27:13.120 --> 27:18.360
+to take a more lax approach and to allow end users
+
+27:18.360 --> 27:20.840
+to use their own routers.
+
+27:20.840 --> 27:26.560
+But I would say that this has to be done through regulation.
+
+27:26.720 --> 27:30.520
+Because without regulation, the tendency
+
+27:30.520 --> 27:33.800
+is that ISPs, internet service providers,
+
+27:33.800 --> 27:36.920
+they take a very restrictive approach to this.
+
+27:36.920 --> 27:39.600
+We have been quite successful on this front.
+
+27:39.600 --> 27:45.600
+I must say, Bonnie, that on the regulatory front,
+
+27:45.600 --> 27:47.880
+we have been interacting and working
+
+27:47.880 --> 27:51.440
+with regulators all over Europe.
+
+27:51.440 --> 27:56.120
+And I'm happy to tell you that several countries
+
+27:56.120 --> 27:58.040
+already adopted router freedom.
+
+27:58.040 --> 28:03.040
+For example, Germany, the Netherlands, Finland,
+
+28:04.840 --> 28:09.000
+most recently, in last week, Greece
+
+28:09.000 --> 28:13.600
+has also started regulating router freedom.
+
+28:13.600 --> 28:17.400
+We have high hopes for Belgium, for example.
+
+28:17.400 --> 28:20.560
+So we have been monitoring the entire landscape
+
+28:20.560 --> 28:23.880
+and we have been working with regulators
+
+28:23.880 --> 28:29.840
+to tell them why router freedom is important,
+
+28:29.840 --> 28:32.360
+not only for end users' perspective,
+
+28:32.360 --> 28:35.960
+but for consumer protection, for competition,
+
+28:35.960 --> 28:38.160
+for sustainability, because users
+
+28:38.160 --> 28:40.280
+can use longer their own routers
+
+28:40.280 --> 28:44.240
+and not have to change device frequently.
+
+28:44.240 --> 28:46.280
+So these are mainly the arguments
+
+28:46.280 --> 28:49.520
+that we have been trying to bring to regulators.
+
+28:50.520 --> 28:53.200
+As you already mentioned,
+
+28:53.200 --> 28:57.480
+the status of router freedom is getting better and better.
+
+28:57.480 --> 29:00.840
+I hear that you also have a survey for this.
+
+29:01.960 --> 29:04.200
+Can you tell me a bit more about the survey
+
+29:04.200 --> 29:08.960
+and who can participate in it?
+
+29:08.960 --> 29:12.160
+What does it ask you for questions?
+
+29:12.160 --> 29:15.720
+Is it an expert survey or does everybody can take part?
+
+29:16.680 --> 29:17.520
+Right.
+
+29:17.520 --> 29:21.880
+So this survey has been running already for some time
+
+29:21.880 --> 29:26.880
+and our audience is quite broad.
+
+29:27.680 --> 29:29.520
+There is a question on the survey
+
+29:29.520 --> 29:31.360
+that you can do a self-assessment
+
+29:31.360 --> 29:34.080
+if you see yourself as an expert or not,
+
+29:34.080 --> 29:37.400
+but every opinion counts.
+
+29:37.400 --> 29:40.760
+Because one issue that we have been facing the last years
+
+29:40.760 --> 29:44.560
+is that even regulators, they don't have a clear picture
+
+29:44.560 --> 29:48.400
+of the problems that end users are facing with their own routers.
+
+29:48.400 --> 29:51.840
+And we wanted to change this raising empirical data
+
+29:51.840 --> 29:56.000
+to show them what kind of problems end users are facing
+
+29:56.000 --> 29:57.840
+with their own router.
+
+29:57.840 --> 30:02.840
+In 2016, a law on net neutrality was introduced in Europe
+
+30:06.600 --> 30:08.840
+and one of the articles of this law
+
+30:08.840 --> 30:11.160
+is saying that end users have the right
+
+30:11.160 --> 30:14.360
+to choose their own terminal equipment.
+
+30:14.360 --> 30:20.360
+And we have been working on this law to make this a reality.
+
+30:20.360 --> 30:23.720
+But the problem is with the teleconsector is that
+
+30:23.720 --> 30:25.120
+in order to implement this right,
+
+30:25.120 --> 30:27.160
+there is a lot of technical regulations
+
+30:27.160 --> 30:30.960
+that should be implemented by telecom regulators
+
+30:30.960 --> 30:37.560
+and sometimes they can take a relatively physical approach to this right.
+
+30:37.640 --> 30:43.720
+And we would like to avoid this showing them
+
+30:43.720 --> 30:48.160
+that there are violations of this very basic right.
+
+30:48.160 --> 30:50.440
+There's a violation of net neutrality
+
+30:50.440 --> 30:55.520
+when users are not being allowed to use their own routers.
+
+30:55.520 --> 31:01.320
+I'm happy to say that this survey is a success
+
+31:01.360 --> 31:07.640
+because more than 1,300 end users,
+
+31:07.640 --> 31:11.040
+so people all over Europe had took part on this
+
+31:11.040 --> 31:13.600
+and they have been related a lot of problems
+
+31:13.600 --> 31:16.080
+that they have been encountered.
+
+31:16.080 --> 31:21.440
+So this has been very helpful for us to trace
+
+31:21.440 --> 31:23.160
+and to map these problems.
+
+31:23.160 --> 31:27.680
+But we also ask them if they think that router freedom is important
+
+31:27.680 --> 31:33.760
+and it's quite nice to see that more than 90% of the respondents
+
+31:33.760 --> 31:36.680
+said that they think that router freedom is important.
+
+31:36.680 --> 31:38.600
+Router freedom is important for security.
+
+31:38.600 --> 31:42.040
+Router freedom is important for their old questions that we put there.
+
+31:42.040 --> 31:47.680
+And so yeah, these are the results of the survey
+
+31:47.680 --> 31:53.760
+that we are planning to publish in the coming weeks in the coming months.
+
+31:53.800 --> 31:57.560
+But are the next steps for router freedom?
+
+31:59.520 --> 32:06.520
+Right, so yes, it's not a given effect nowadays.
+
+32:06.840 --> 32:10.320
+So we have a lot of work in front of us
+
+32:10.320 --> 32:15.320
+and we will continue to work on this in the years to come.
+
+32:15.320 --> 32:23.320
+So a device neutrality, as I said, it became a reality just last year.
+
+32:23.680 --> 32:26.600
+And a legislative reality, I would say.
+
+32:26.600 --> 32:29.440
+But as I just mentioned with router freedom,
+
+32:29.440 --> 32:34.440
+there was a law in 2016 already grinned in this to end users.
+
+32:34.440 --> 32:39.680
+And in 2023, this is not a reality still in Europe, right?
+
+32:39.680 --> 32:44.240
+So it requires a lot of engagement of civil society actors.
+
+32:44.240 --> 32:47.120
+It requires a lot of work.
+
+32:47.120 --> 32:53.120
+And that's why I think that the type of efforts
+
+32:53.120 --> 32:59.200
+that we are making within the FSFE to make this reality,
+
+32:59.200 --> 33:03.440
+yeah, it's something that we need to keep doing
+
+33:03.440 --> 33:06.480
+and not to take that for granted.
+
+33:06.480 --> 33:12.720
+And is there anything that people can do to participate
+
+33:12.720 --> 33:16.520
+and to support router freedom or device neutrality?
+
+33:16.520 --> 33:18.520
+Absolutely, absolutely.
+
+33:18.680 --> 33:22.800
+So I'll start with router freedom.
+
+33:22.800 --> 33:26.560
+So router freedom, you can participate,
+
+33:26.560 --> 33:31.560
+taking part on our survey, the link is on our website.
+
+33:35.160 --> 33:36.400
+You can...
+
+33:36.400 --> 33:37.600
+And in the show notes.
+
+33:38.640 --> 33:44.640
+Yes, and help us understanding better the situation on our country.
+
+33:44.720 --> 33:47.560
+There are countries that we have a lot of information already,
+
+33:47.560 --> 33:52.000
+for example, in Germany, are in other countries
+
+33:52.000 --> 33:53.800
+where router freedom is a reality.
+
+33:53.800 --> 33:56.320
+But there is too room for improvement.
+
+33:56.320 --> 33:59.160
+So we really would like to see engagement from people
+
+33:59.160 --> 34:00.760
+from other countries as well.
+
+34:01.840 --> 34:06.160
+And you can talk to other people about it.
+
+34:06.160 --> 34:10.760
+You can, for example, if you know how to configure a router,
+
+34:10.760 --> 34:12.920
+if you know how to use a router,
+
+34:12.920 --> 34:16.320
+perhaps you can talk to your colleagues, to your friends,
+
+34:16.360 --> 34:20.880
+to your family, that perhaps they should update the router
+
+34:20.880 --> 34:25.880
+and to have a router that is perhaps more suitable to them.
+
+34:28.400 --> 34:32.840
+You can also support us, right?
+
+34:32.840 --> 34:36.320
+In our work, you can translate our texts.
+
+34:36.320 --> 34:38.320
+It's the same for device neutrality.
+
+34:38.320 --> 34:43.120
+So the situation with device neutrality
+
+34:43.120 --> 34:44.480
+is a little bit more complex
+
+34:44.480 --> 34:47.280
+because when you buy your smartphone,
+
+34:47.280 --> 34:51.200
+sometimes you are not allowed to do that.
+
+34:51.200 --> 34:55.360
+But if you have this ability
+
+34:55.360 --> 34:57.920
+with your device to install free software,
+
+34:57.920 --> 35:02.560
+please do so and help free software projects.
+
+35:02.560 --> 35:05.960
+Install FDroid on your smartphone, for example,
+
+35:05.960 --> 35:09.760
+use more free software on your devices.
+
+35:09.760 --> 35:12.360
+Install, try to install perhaps
+
+35:12.360 --> 35:15.800
+a free software operating system on your laptop,
+
+35:15.800 --> 35:18.640
+contribute to this project,
+
+35:18.640 --> 35:23.240
+in strength of the community, spread the word
+
+35:23.240 --> 35:25.760
+because we need to have a flourish
+
+35:25.760 --> 35:30.560
+and health community in order to make our rights a reality.
+
+35:30.560 --> 35:32.080
+Thank you so much, Lucas.
+
+35:33.320 --> 35:35.120
+Thank you. It was a pleasure to be here.
+
+35:35.120 --> 35:38.320
+And not yet quite done.
+
+35:38.320 --> 35:41.720
+The last question that I have for you is,
+
+35:41.720 --> 35:46.800
+you have all this connection with technology, society.
+
+35:46.800 --> 35:50.360
+You pointed out how people can participate.
+
+35:50.360 --> 35:53.160
+But what would be the software that you say,
+
+35:53.160 --> 35:54.920
+oh, the software is so awesome.
+
+35:54.920 --> 35:57.760
+My life would be different without the software.
+
+35:59.760 --> 36:01.560
+I love free software activities.
+
+36:01.560 --> 36:03.960
+One of my favorites within the FSFE.
+
+36:03.960 --> 36:07.960
+And if you check, perhaps my stars on social media
+
+36:07.960 --> 36:10.080
+on Macedon, you see that every year,
+
+36:10.080 --> 36:15.440
+I have a huge list of free software that I'm thinking
+
+36:15.440 --> 36:20.440
+because all of them makes our life easier, nicer,
+
+36:23.480 --> 36:27.160
+and it allows us indeed to control technology.
+
+36:27.160 --> 36:31.280
+I would be a little bit unfair in this opportunity
+
+36:31.280 --> 36:33.960
+that you're giving me here in this very important podcast.
+
+36:33.960 --> 36:37.160
+Just think just one software.
+
+36:37.200 --> 36:43.720
+Because, as I said, taking on a broader perspective,
+
+36:43.720 --> 36:45.440
+there is a lot of them.
+
+36:45.440 --> 36:50.440
+And there also in back end also software
+
+36:51.240 --> 36:54.720
+that allows this front end software to run, right?
+
+36:54.720 --> 36:58.360
+And there is this infrastructure software running on servers
+
+36:58.360 --> 37:02.800
+and in other elements that allows these applications
+
+37:02.800 --> 37:05.320
+that we are now using.
+
+37:05.320 --> 37:08.160
+And more and more that we are working with device neutrality,
+
+37:08.160 --> 37:13.160
+we see how important drivers and all of these frameworks
+
+37:13.720 --> 37:17.080
+are also very important in order to allow people
+
+37:17.080 --> 37:19.440
+to control technology.
+
+37:19.440 --> 37:23.200
+Therefore, I would like to thank generously
+
+37:23.200 --> 37:27.880
+all the free software developers who have been working hard.
+
+37:27.880 --> 37:31.480
+Sometimes without nobody saying taking
+
+37:31.480 --> 37:34.680
+or without financial contributions,
+
+37:34.720 --> 37:37.440
+but I just want to say that their work
+
+37:37.440 --> 37:40.360
+is very, very important for all of people
+
+37:41.360 --> 37:44.320
+that are trying to safeguard
+
+37:44.320 --> 37:47.400
+or to have better policies on for their digital rights.
+
+37:48.320 --> 37:49.160
+Thank you very much.
+
+37:49.160 --> 37:51.240
+This was a nice closing word.
+
+37:51.240 --> 37:54.880
+And also, as you already said, it's very important
+
+37:54.880 --> 37:59.560
+to say thank you to them and to show our gratitude,
+
+37:59.560 --> 38:03.240
+but to also sometimes support free software financially
+
+38:03.240 --> 38:06.280
+and to not take it for granted or others work on it.
+
+38:06.280 --> 38:09.080
+Yes, thank you very much for having me here.
+
+38:09.080 --> 38:10.840
+It was a glitch pleasure.
+
+38:10.840 --> 38:11.640
+Thank you, Lucas.
+
+38:11.640 --> 38:12.640
+Awesome to have you here.
+
+38:12.640 --> 38:14.160
+Thank you so much.
+
+38:14.160 --> 38:16.520
+This was the software freedom podcast.
+
+38:16.520 --> 38:18.640
+If you liked this episode, please recommend it
+
+38:18.640 --> 38:20.560
+to your friends and rate it.
+
+38:20.560 --> 38:24.240
+Also subscribe to make sure you will get the next episode.
+
+38:24.240 --> 38:25.960
+This podcast is presented to you
+
+38:25.960 --> 38:28.320
+by the Free Software Foundation Bureau.
+
+38:28.320 --> 38:32.160
+We are a charity that works on promoting software freedom.
+
+38:32.200 --> 38:33.600
+If you like our work,
+
+38:33.600 --> 38:36.680
+please consider supporting us with our donation.
+
+38:36.680 --> 38:40.800
+You find more information on the fsfe.org slash the nade.
+
+</pre>
+
+<p><a href="/news/podcast/episode-20.html">Back to the episode SFP#20</a></p>
+
+</body>
+<sidebar promo="our-work">
+
+</sidebar>
+  
+</html> 

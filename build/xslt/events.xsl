@@ -48,6 +48,16 @@
       <xsl:value-of select="@start"/>
     </xsl:variable>
 
+    <xsl:variable name="start_time">
+      <xsl:choose>
+        <xsl:when test="string-length($start) &gt; 10">
+          <xsl:value-of select="substring($start,12,5)"/>
+        </xsl:when>
+        <xsl:otherwise>
+        </xsl:otherwise>
+      </xsl:choose> 
+    </xsl:variable>
+
     <xsl:variable name="start_day">
       <xsl:value-of select="substring($start,9,2)"/>
     </xsl:variable>
@@ -61,6 +71,16 @@
 
     <xsl:variable name="end">
       <xsl:value-of select="@end"/>
+    </xsl:variable>
+
+    <xsl:variable name="end_time">
+      <xsl:choose>
+        <xsl:when test="string-length($end) &gt; 10">
+          <xsl:value-of select="substring($end,12,5)"/>
+        </xsl:when>
+        <xsl:otherwise>
+        </xsl:otherwise>
+      </xsl:choose> 
     </xsl:variable>
 
     <xsl:variable name="end_day">
@@ -81,12 +101,20 @@
     <!-- Compile the date -->
     <xsl:choose>
       <xsl:when test="$start != $end">
-          <xsl:value-of select="$start_day"/>
+          <xsl:if test="$start_time != $end_time">
+            <xsl:value-of select="$start_time"/>
+          </xsl:if>
+          <xsl:if test="$start_day != $end_day">
+            <xsl:value-of select="$start_day"/>
+          </xsl:if>
           <xsl:text> </xsl:text>
           <xsl:if test="$start_month != $end_month">
             <xsl:value-of select="$start_month"/>
           </xsl:if>
           <xsl:text> – </xsl:text>
+          <xsl:if test="$start_time != $end_time">
+            <xsl:value-of select="$end_time"/> UTC
+          </xsl:if>
           <xsl:value-of select="$end_day"/>
           <xsl:text> </xsl:text>
           <xsl:value-of select="$end_month"/>
@@ -156,7 +184,7 @@
     <xsl:element name="ul">
       <xsl:attribute name="class">event-list</xsl:attribute>
       <xsl:for-each select="/buildinfo/document/set/event[
-          translate(@end,'-','') &gt;= translate(/buildinfo/@date,'-','')
+          translate(substring(@end,1,10),'-','') &gt;= translate(/buildinfo/@date,'-','')
         ]">
         <xsl:sort select="@start"/>
         <xsl:if test="position() &lt;= $count">
@@ -192,7 +220,7 @@
 
     <!-- Build list -->
     <xsl:for-each select="/buildinfo/document/set/event[
-        translate(@end,'-','') &gt;= translate(/buildinfo/@date,'-','')
+        translate(substring(@end,1,10),'-','') &gt;= translate(/buildinfo/@date,'-','')
       ]">
       <xsl:sort select="@start"/>
       <xsl:if test="position() &lt;= $count">

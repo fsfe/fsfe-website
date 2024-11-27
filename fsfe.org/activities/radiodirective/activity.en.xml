@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<activityset>
+  <version>1</version>
+
+  <activity id="radiodirective" date="2016-03-01" status="active">
+    <title>Radio Lockdown Directive</title>
+    <description>
+      An EU regulation may make it impossible to install a custom piece of 
+      software on most radio devices like WiFi routers, smartphones, and 
+      embedded devices. It requires hardware manufacturers to implement a 
+      barrier that disallows users to install any software which has not been 
+      certified by them.
+    </description>
+    <link href="/activities/radiodirective/radiodirective.html" />
+    <image url="/graphics/logos/radiodirective.png" />
+    <order priority="3" highlight="no" />
+    <tags>
+      <tag key="policy" />
+    </tags>
+  </activity>
+</activityset>

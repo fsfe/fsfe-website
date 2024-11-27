@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<activityset>
+  <version>1</version>
+
+  <activity id="sfp" date="2019-19-12" status="active">
+    <title>Software Freedom Podcast</title>
+    <description>
+     Software users must be able to participate in the development and 
+     distribution of software in order to have a world where software does what 
+     software users want it to do. Software patents block this goal by adding 
+     legal and financial risks to software development and distribution, and by 
+     giving patent holders the legal power to completely prohibit software 
+     developers from using the patented ideas.      </description>
+    <link href="/news/podcast.html" />
+    <image url="/graphics/podcast-logo.png" />
+    <order priority="1" highlight="no" />
+    <tags>
+      <tag key="awareness" />
+        <tag key="hide" />
+    </tags>
+  </activity>
+</activityset>

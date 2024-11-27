@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<activityset>
+  <version>2</version>
+
+  <activity id="pdfreaders" date="2009-02-02" status="finished">
+    <title>PDFreaders</title>
+    <description>
+      The PDFreaders initiative aims to shine a spotlight on government 
+      organisations that promote proprietary PDF readers. With the help of 
+      activists across Europe, we have contacted these organisations and told 
+      them how they can improve their websites to respect our freedom. On 
+      <a href="https://pdfreaders.org">pdfreaders.org</a> 
+      we present Free Software PDF readers for all major operating systems.
+    </description>
+    <link href="/activities/pdfreaders/pdfreaders.html" />
+    <order priority="2" />
+    <tags>
+      <tag key="awareness" />
+      <tag key="policy" />
+    </tags>
+  </activity>
+</activityset>

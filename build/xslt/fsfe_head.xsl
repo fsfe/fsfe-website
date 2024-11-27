@@ -54,7 +54,7 @@
     </xsl:element>
 
     <xsl:choose>
-      <xsl:when test="$build-env = 'development'">
+      <xsl:when test="$build-env = 'development' and not(/buildinfo/document/@external)">
         <xsl:choose>
           <xsl:when test="$mode = 'valentine'">
             <xsl:element name="link">
@@ -103,15 +103,6 @@
       <xsl:attribute name="type">text/css</xsl:attribute>
     </xsl:element>
 
-    <xsl:if test="/buildinfo/@language='ar'">
-      <xsl:element name="link">
-        <xsl:attribute name="rel">stylesheet</xsl:attribute>
-        <xsl:attribute name="media">all</xsl:attribute>
-        <xsl:attribute name="href"><xsl:value-of select="$urlprefix"/>/look/rtl.css</xsl:attribute>
-        <xsl:attribute name="type">text/css</xsl:attribute>
-      </xsl:element>
-    </xsl:if>
-
     <xsl:element name="link">
       <xsl:attribute name="rel">icon</xsl:attribute>
       <xsl:attribute name="href">
@@ -148,7 +139,7 @@
         <xsl:attribute name="rel">alternate</xsl:attribute>
         <xsl:attribute name="hreflang"><xsl:value-of select="@id" /></xsl:attribute>
         <xsl:attribute name="lang"><xsl:value-of select="@id" /></xsl:attribute>
-        <xsl:attribute name="href"><xsl:value-of select="/buildinfo/@filename"/>.<xsl:value-of select="@id"/>.html</xsl:attribute>
+        <xsl:attribute name="href"><xsl:value-of select="/buildinfo/@fileurl"/>.<xsl:value-of select="@id"/>.html</xsl:attribute>
         <xsl:attribute name="title"><xsl:value-of select="."  disable-output-escaping="yes" /></xsl:attribute>
       </xsl:element>
     </xsl:for-each>
@@ -161,8 +152,8 @@
         <xsl:attribute name="name">author</xsl:attribute>
         <xsl:attribute name="content">
           <xsl:choose>
-            <xsl:when test="@id and document('../../about/people/people.en.xml')/personset/person[@id=$id]">
-              <xsl:value-of select="document('../../about/people/people.en.xml')/personset/person[@id=$id]/name" />
+            <xsl:when test="@id and document('../../fsfe.org/about/people/people.en.xml')/personset/person[@id=$id]">
+              <xsl:value-of select="document('../../fsfe.org/about/people/people.en.xml')/personset/person[@id=$id]/name" />
             </xsl:when>
             <xsl:otherwise>
               <xsl:value-of select="name" />
@@ -193,6 +184,12 @@
         </xsl:choose>
       </xsl:if>
     </xsl:variable>
+
+    <!-- Mastodon link to profile -->
+    <xsl:element name="meta">
+      <xsl:attribute name="name">fediverse:creator</xsl:attribute>
+      <xsl:attribute name="content">@fsfe@mastodon.social</xsl:attribute>
+    </xsl:element>
 
     <!-- Twitter cards -->
     <xsl:element name="meta">
@@ -268,7 +265,7 @@
     </xsl:element>
     <xsl:element name="meta">
       <xsl:attribute name="property">og:url</xsl:attribute>
-      <xsl:attribute name="content">https://fsfe.org<xsl:value-of select="/buildinfo/@filename"/>.html</xsl:attribute>
+      <xsl:attribute name="content">https://fsfe.org<xsl:value-of select="/buildinfo/@fileurl"/>.html</xsl:attribute>
     </xsl:element>
     <xsl:element name="meta">
       <xsl:attribute name="property">og:title</xsl:attribute>

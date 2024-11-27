@@ -13,7 +13,7 @@
       <xsl:attribute name="name">referrer</xsl:attribute>
       <xsl:attribute name="value">
         <xsl:text>https://fsfe.org</xsl:text>
-        <xsl:value-of select="/buildinfo/@filename"/>
+        <xsl:value-of select="/buildinfo/@fileurl"/>
         <xsl:text>.html</xsl:text>
       </xsl:attribute>
     </xsl:element>
@@ -24,7 +24,7 @@
     <xsl:element name="a">
       <xsl:attribute name="href">
         <xsl:text>https://my.fsfe.org/donate?referrer=https://fsfe.org</xsl:text>
-        <xsl:value-of select="/buildinfo/@filename"/>
+        <xsl:value-of select="/buildinfo/@fileurl"/>
         <xsl:text>.html</xsl:text>
       </xsl:attribute>
       <xsl:apply-templates select="@*|node()"/>

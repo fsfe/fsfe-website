@@ -13,7 +13,7 @@
     <!-- article URL -->
     <xsl:variable name="share-url">
       <xsl:text>https://fsfe.org</xsl:text>
-      <xsl:value-of select="/buildinfo/@filename"/>
+      <xsl:value-of select="/buildinfo/@url"/>
       <xsl:text>.html</xsl:text>
     </xsl:variable>
 

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  Please keep each list alphabetically ordered.  Emacs users want to set
+  sort-fold-case to true and run sort-lines on a region.  Vi+ users can
+  visually select the list and use the :sort command.
+
+  The date="..." should be filled with the last date when a donation from this
+  donor came in. It is important for the "current" thankgnus page.
+
+  Currently, the date="..." may only be set in a single xml file for the same
+  donor, so if you add a donor to a file of the new year, don't forget to
+  remove the date="..." in the old year's file.
+-->
+
+<donorset>
+  <version>1</version>
+
+  <gold>
+    <donor date="2022-01-18" img="donors/google.png" mark="yes">Google</donor>
+    <donor date="2022-07-26" img="donors/huawei.png">Huawei</donor>
+    <donor img="donors/linuxhotel.png">Linuxhotel Villa Vogelsang</donor>
+    <donor img="donors/openproject.png">OpenProject</donor>
+    <donor img="donors/redhat.png">Red Hat</donor>
+    <donor img="donors/siemens.png">Siemens</donor>
+    <donor>Reinhard Wiesemann</donor>
+  </gold>
+
+  <silver>
+    <donor img="donors/silver-adfinis.png">Adfinis</donor>
+    <donor img="donors/silver-avm.png">AVM</donor>
+    <donor date="2022-01-06" img="donors/silver-credativ.png">credativ</donor>
+    <donor img="donors/silver-freiheit.png">freiheit.com technologies</donor>
+    <donor img="donors/silver-heinlein-support.png">Heinlein Support</donor>
+    <donor date="2022-04-06" img="donors/silver-hp.png">HP</donor>
+    <donor img="donors/silver-hpe.png">HP Enterprise</donor>
+    <donor img="donors/silver-intel.png">Intel</donor>
+    <donor img="donors/silver-keyfactor.png">Keyfactor<!-- Malin Ridelius --></donor>
+    <donor date="2022-12-16" img="donors/silver-menzel.png">Menzel IT</donor>
+    <donor img="donors/silver-oin.jpg">Open Invention Network</donor>
+    <donor img="donors/silver-otto-kekalainen.jpg">Otto Kekäläinen</donor>
+    <donor img="donors/silver-publicplan.png">publicplan GmbH</donor>
+    <donor img="donors/silver-sysmocom.png">sysmocom - systems for mobile communications</donor>
+    <donor>Thomas Etter</donor>
+  </silver>
+
+  <bronze>
+    <donor>Andrew T. Wilson</donor>
+    <donor>Arthur Schreiber</donor>
+    <donor>Arvena Capital</donor>
+    <donor>Bayern Tourismus Marketing</donor>
+    <donor>Björn Persson</donor>
+    <donor>Büchel Blech AG</donor>
+    <donor>Chihiro Software</donor>
+    <donor>Christian Wasserthal</donor>
+    <donor>ctrl.alt.coop</donor>
+    <donor>Dr. Herbert Consult GmbH<!-- "GmbH" suffix explicitly requested --></donor>
+    <donor date="2022-10-28">Einon Bitit Oy</donor>
+    <donor>Florian Snow</donor>
+    <donor>Florian Westphal</donor>
+    <donor>foo.li systeme + software</donor>
+    <donor date="2022-12-06">Guido Bienhaus</donor>
+    <donor date="2022-12-30">Guido Maria Serra (whitehat.berlin)</donor>
+    <donor date="2022-01-03">Hans-Christian Esperer (-01)</donor>
+    <donor>Heinz-Dieter Böcker</donor>
+    <donor date="2022-03-26">Holger Kienle</donor>
+    <donor>Hostsharing eG</donor>
+    <donor>inmedias.it</donor>
+    <donor>ITOMIG GmbH</donor>
+    <donor>Joachim Zobel</donor>
+    <donor date="2022-12-30">Julien Furrer</donor>
+    <donor>LIHAS - LinuxHaus Stuttgart</donor><!-- Adrian Reyer -->
+    <donor>Martin F. Krafft</donor>
+    <donor>Mateus Araujo Borges</donor>
+    <donor>Matthias Köslin</donor>
+    <donor>Michael Dittmer</donor>
+    <donor date="2022-12-14">Michael Henzi</donor>
+    <donor>Moritz Bunkus</donor>
+    <donor>Morten Lind</donor>
+    <donor>Neuhaus-IT</donor><!-- Till Neuhaus -->
+    <donor date="2022-10-13">Netzint GmbH</donor>
+    <donor>Next Level Shit</donor><!-- Michael Czechowski -->
+    <donor date="2022-01-10">Peter van Eck</donor>
+    <donor date="2022-10-31">Pius Frick</donor>
+    <donor date="2022-11-28">Prograde AB</donor>
+    <donor>scvalex</donor><!-- Alexandru Scvortov -->
+    <donor date="2022-02-26">Sebastian Pipping</donor>
+    <donor>Simon Josefsson</donor>
+    <donor date="2022-02-07">Stefan Begerad</donor>
+    <donor>Stephan Kreutzer</donor>
+    <donor>Stichting Petities.nl (02-)</donor><!-- ReindeR Rustema -->
+    <donor>Syslinbit</donor>
+    <donor>Thomas Doczkal</donor>
+    <donor>Timo Wagner</donor>
+    <donor date="2022-02-04">TNG Technology Consulting GmbH</donor>
+    <donor>uib gmbh</donor>
+    <donor>Vassilis<!-- Vassilios --> Voreopoulos</donor>
+  </bronze>
+</donorset>

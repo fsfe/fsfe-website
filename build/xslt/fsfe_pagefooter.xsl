@@ -30,6 +30,7 @@
               </xsl:attribute>
               <xsl:element name="img">
                 <xsl:attribute name="src">
+                  <xsl:value-of select="$urlprefix"/>
                   <xsl:text>/graphics/services/mastodon.png</xsl:text>
                 </xsl:attribute>
                 <xsl:attribute name="alt">Mastodon</xsl:attribute>
@@ -42,6 +43,7 @@
               </xsl:attribute>
               <xsl:element name="img">
                 <xsl:attribute name="src">
+                  <xsl:value-of select="$urlprefix"/>
                   <xsl:text>/graphics/services/peertube.png</xsl:text>
                 </xsl:attribute>
                 <xsl:attribute name="alt">Peertube</xsl:attribute>
@@ -214,7 +216,7 @@
               <xsl:element name="a">
                 <xsl:attribute name="href">
                   <xsl:value-of select="$urlprefix"/>
-                  <xsl:value-of select="/buildinfo/@filename"/>
+                  <xsl:value-of select="/buildinfo/@fileurl"/>
                   <xsl:text>.en.html</xsl:text>
                 </xsl:attribute>
                 <xsl:call-template name="fsfe-gettext">

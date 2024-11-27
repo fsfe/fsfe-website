@@ -1,0 +1,1970 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<html>
+ <version>3</version>
+<head>
+<title>Transcript SFP#24</title>
+</head>
+<body>
+  
+<h1>Transcript of SFP#24: The status of Free Software with Karen Sandler and Alexander Sander</h1>
+
+<p><a href="/news/podcast/episode-24.html">Back to the episode SFP#24</a></p>
+<p>This is a transcript created with the Free Software tool Whisper. For more information and feedback reach out to <email mailto="yes">podcast@fsfe.org</email></p>
+
+<pre class="transcript">
+WEBVTT
+
+00:00.000 --> 00:19.000
+Welcome to the software freedom podcast.
+
+00:19.000 --> 00:21.800
+This podcast is brought to you by the Free Software Foundation Europe,
+
+00:21.800 --> 00:25.440
+we are a charity that empowers users to control technology.
+
+00:25.440 --> 00:28.880
+I'm Bonnie Merring and for this I love Free Software Day podcasts.
+
+00:28.880 --> 00:30.400
+I have two guests with me.
+
+00:30.400 --> 00:34.960
+I have Karen Sandlam from the Software Freedom Conservancy.
+
+00:34.960 --> 00:37.840
+And Karen brings an engineering and legal background,
+
+00:37.840 --> 00:43.200
+has been around for the software for ages, and also a personal interest.
+
+00:43.200 --> 00:45.720
+Bonnie just called me old, is it okay to interrupt her?
+
+00:45.720 --> 00:50.640
+Yeah, it's okay, I'm sorry.
+
+00:50.640 --> 00:53.480
+It's quite alright, that's what Free Software is about.
+
+00:53.480 --> 00:55.560
+It's about people who have been here for a long time
+
+00:55.560 --> 00:57.320
+and people who are newcomers.
+
+00:57.320 --> 01:05.640
+Karen brings an engineering and legal background, as well as a personal interest.
+
+01:05.640 --> 01:16.440
+Someone with an implemented pacemaker, she also has a real personal interest in it.
+
+01:16.440 --> 01:22.040
+And our second guest for this podcast for the I Love Free Software Day is Alexander Sander.
+
+01:22.120 --> 01:27.160
+Alex is also around for ages with the Free Software movement.
+
+01:27.160 --> 01:29.320
+You're old too.
+
+01:29.320 --> 01:34.120
+No, I just wanted to say it because I felt like this is a good equal level.
+
+01:34.120 --> 01:37.600
+Alex is way older than me.
+
+01:37.600 --> 01:42.280
+Our second guest for this I Love Free Software Day podcast is Alexander Sander.
+
+01:42.280 --> 01:45.360
+He's the FSEP Senior Policy Consultant.
+
+01:45.360 --> 01:49.280
+And Alex has been around with Free Software for a very long time.
+
+01:49.280 --> 01:52.880
+He's also since ever.
+
+01:52.880 --> 02:01.040
+Like when Free Software started in 1837, Alex Sander was here.
+
+02:01.040 --> 02:02.760
+Oh gosh.
+
+02:05.160 --> 02:07.200
+Okay, I think we have to start again.
+
+02:07.200 --> 02:09.520
+No, that's not right.
+
+02:09.520 --> 02:10.680
+Sitting next to me.
+
+02:10.680 --> 02:12.760
+Okay, I won't say anything about it.
+
+02:12.760 --> 02:14.280
+Long time on.
+
+02:14.280 --> 02:25.600
+All right, thank you, too, for joining me here for the Software Freedom podcast.
+
+02:25.600 --> 02:29.040
+And yeah, thank you so much for making the time at FOSSTEM.
+
+02:29.040 --> 02:30.840
+We're currently at FOSSTEM, actually.
+
+02:30.840 --> 02:32.560
+I found a really quiet room here.
+
+02:32.560 --> 02:34.000
+I can't believe that I managed.
+
+02:34.000 --> 02:35.000
+That's true.
+
+02:35.000 --> 02:36.000
+It's a very cool room.
+
+02:36.000 --> 02:37.280
+I can't believe you did this, either.
+
+02:37.280 --> 02:43.760
+I apologize to everybody that I have a little bit of a cold, so you heard that in my voice.
+
+02:44.480 --> 02:47.360
+You're also organizing a death room here, right?
+
+02:47.360 --> 02:48.360
+That's true.
+
+02:48.360 --> 02:52.520
+It will happen basically after the podcast, so we can't tell you how it was.
+
+02:52.520 --> 02:55.160
+No, we're going to run straight there from here.
+
+02:55.160 --> 03:00.240
+But you can definitely read on our websites afterwards how it was and can see the recordings
+
+03:00.240 --> 03:04.560
+because we will have also awesome recordings, and by that we can also follow in the death
+
+03:04.560 --> 03:07.200
+room, even if you're not around.
+
+03:07.200 --> 03:11.640
+And unfortunately, we just got a half day for this year's FOSSTEM, but still I think
+
+03:11.640 --> 03:13.840
+we got a very interesting program.
+
+03:13.840 --> 03:17.000
+Freddie, I was thinking, fortunately, we have only a half day.
+
+03:17.000 --> 03:23.000
+I mean, it's a very interesting program, but we've basically, it's a very busy FOSSTEM.
+
+03:23.000 --> 03:26.480
+I did a keynote this morning about outreach.
+
+03:26.480 --> 03:32.400
+Bradley has a keynote, a main track talk this afternoon, and then we have the legal death
+
+03:32.400 --> 03:33.960
+room, and there's just tons going on.
+
+03:33.960 --> 03:39.680
+And I know you're super, we had a hard time finding the schedule for this because of how
+
+03:39.680 --> 03:40.680
+busy everybody was.
+
+03:40.720 --> 03:41.720
+Yeah.
+
+03:41.720 --> 03:42.720
+Oh, no.
+
+03:42.720 --> 03:46.720
+I mean, it's always this like between the years coming up with the agenda, but I mean,
+
+03:46.720 --> 03:52.240
+we are now kind of used to it as we, it's not the first time, but still it's, yeah,
+
+03:52.240 --> 03:53.240
+it's always challenging.
+
+03:53.240 --> 03:58.840
+And I think we have like small changes until the last minute, but still.
+
+03:58.840 --> 04:01.280
+I think it's been very like, I think the program's really strong.
+
+04:01.280 --> 04:07.200
+We got more strong applications than we have in a lot of years, so it's a shame we can't
+
+04:07.240 --> 04:12.200
+have all of them, but I think in future years, we'll have, we'll be able to have some of
+
+04:12.200 --> 04:13.200
+that programming.
+
+04:13.200 --> 04:14.200
+So it's all good.
+
+04:14.200 --> 04:19.040
+Is there a talk you really would recommend to go there or?
+
+04:19.040 --> 04:24.800
+I mean, for me, it's important to like follow the debates around the whole liability and
+
+04:24.800 --> 04:33.200
+AI act debates we had, but also on interoperability that kept me and Lina busy for a very long
+
+04:33.200 --> 04:34.200
+time.
+
+04:34.200 --> 04:35.200
+So I think we'll.
+
+04:35.200 --> 04:36.200
+That's why I'm so old.
+
+04:36.200 --> 04:39.080
+I think we'll be covering it in the hot topics in the dev room.
+
+04:39.080 --> 04:43.400
+I think that's probably the, like if you were to pick one thing, it will probably cover
+
+04:43.400 --> 04:48.840
+like an overview of all of the talks that, like all of the topics that are really like
+
+04:48.840 --> 04:49.840
+current.
+
+04:49.840 --> 04:50.840
+Yeah.
+
+04:50.840 --> 04:51.840
+All right.
+
+04:51.840 --> 04:53.640
+This brings me basically to our topic.
+
+04:53.640 --> 04:58.600
+As you mentioned, liability, AI act, it's a very broad topic, so it's about the status
+
+04:58.600 --> 05:02.000
+of what a current situation of free software in the Western world.
+
+05:02.000 --> 05:08.960
+I know it has a Western world point of view with you from the USA and Alex basically from
+
+05:08.960 --> 05:10.460
+Europe.
+
+05:10.460 --> 05:18.320
+So last year, this is how I came up with the idea actually last year, you mentioned to me,
+
+05:18.320 --> 05:23.640
+you had the feeling that something was happening that free software is getting stronger and
+
+05:23.640 --> 05:25.800
+that it's more widely accepted.
+
+05:25.800 --> 05:31.880
+And this was shortly after Elon Musk took over ex formerly known as Twitter.
+
+05:32.760 --> 05:33.760
+That's how they presented now.
+
+05:33.760 --> 05:34.760
+Is there a connection?
+
+05:34.760 --> 05:35.760
+No.
+
+05:35.760 --> 05:40.960
+And a lot of people moved to Amsterdam and you really had the feeling that something
+
+05:40.960 --> 05:43.040
+was happening, right?
+
+05:43.040 --> 05:47.640
+Is it still like that or how would you say the last year has gone from Europe?
+
+05:47.640 --> 05:48.640
+I mean, absolutely.
+
+05:48.640 --> 05:55.800
+I mean, like free software is, it's a long-term issue and so our movement is constantly in
+
+05:55.800 --> 06:00.200
+a state of like highs and lows and it's like that forever and we just have to like stay
+
+06:00.200 --> 06:05.280
+focused and really think long-term because software freedom is something that is like,
+
+06:05.280 --> 06:10.880
+you know, not just this year, not just next year, but we have to think in terms of decades
+
+06:10.880 --> 06:16.120
+and even a century, like we have to be laying the groundwork and I do find that I'm still
+
+06:16.120 --> 06:21.600
+in a place of optimism when it comes to like the feeling like things are changing.
+
+06:21.600 --> 06:27.840
+I think seeing how that move to Amsterdam was not just an isolated blip, the people
+
+06:27.840 --> 06:34.760
+have continued to move and more than that, there's just this ever-growing belief that
+
+06:34.760 --> 06:39.880
+there's a problem with relying on big tech solutions and ordinary people are willing
+
+06:39.880 --> 06:45.160
+to suddenly say, oh, you know, I guess that Facebook thing isn't so good.
+
+06:45.160 --> 06:49.200
+Oh, yeah, I know that Apple has a lot of control over my computing.
+
+06:49.200 --> 06:51.240
+I don't know if I feel like comfortable about it.
+
+06:51.240 --> 06:54.560
+You know, I remember when you were talking about this weird thing about controlling my
+
+06:54.560 --> 06:59.320
+software years ago, Karen, like, I really see that there's a point to that.
+
+06:59.320 --> 07:02.280
+I don't know if you've been seeing the same thing.
+
+07:02.280 --> 07:10.400
+I mean, I'm also seeing it on a wider level when it comes to government implementing open
+
+07:10.400 --> 07:14.520
+source of free software solutions and it's interesting to see that they connected to
+
+07:14.520 --> 07:20.320
+serenity and we have a very huge debate about digital serenity and part of this is like
+
+07:20.320 --> 07:24.960
+hosting the data under your control, but also we talk about free software.
+
+07:24.960 --> 07:28.440
+And that's super interesting to see that governments like connect this debate and also
+
+07:28.440 --> 07:34.240
+won't like what we as an individual won't have like control access, transparency.
+
+07:34.240 --> 07:38.640
+That's obviously also something that governments are looking for these days and that's also
+
+07:38.640 --> 07:42.840
+something I just mentioned in the beginning with the Interoperability Europe Act or the
+
+07:42.840 --> 07:46.880
+discussion about interoperability in general and that's also something we have on our legal
+
+07:46.920 --> 07:49.640
+death room with Matthias Stömer from Switzerland.
+
+07:49.640 --> 07:54.680
+So it's the procurement of free software done by governments and they also see that
+
+07:54.680 --> 07:58.400
+interoperability is very important for them and that they can only achieve it if they
+
+07:58.400 --> 08:02.200
+have access to the source code and if they can change it.
+
+08:02.200 --> 08:06.120
+If they have access to free software, like if they use free software.
+
+08:06.120 --> 08:10.400
+I think what's upon a time in the free software world, we used to talk about like really talk
+
+08:10.400 --> 08:14.080
+about the issue from a real developer perspective that developers should have the right and
+
+08:14.120 --> 08:20.080
+I think that's still the case, you know, and that's the like the kernel for which this
+
+08:20.080 --> 08:21.640
+movement started.
+
+08:21.640 --> 08:25.720
+But what we're now starting to talk about is more like collective action and whether
+
+08:25.720 --> 08:30.360
+that's through governments, through nonprofits or through other kinds of mechanisms, having
+
+08:30.360 --> 08:34.600
+that ability so that technical and non-technical people can act at concert to have appreciable
+
+08:34.600 --> 08:36.400
+control over their technology.
+
+08:36.400 --> 08:40.960
+Like we're seeing that conversation for the first time and for the first time, I feel
+
+08:40.960 --> 08:47.800
+like we're able to start proposing really big solutions instead of small, you know,
+
+08:47.800 --> 08:49.520
+tiny move-the-needle solutions.
+
+08:49.520 --> 08:50.640
+So I don't know.
+
+08:50.640 --> 08:52.120
+Do you have an example?
+
+08:52.120 --> 08:54.320
+Um, no.
+
+08:54.320 --> 08:56.000
+Why would I have an example?
+
+08:56.000 --> 08:57.960
+No, I would say from the US perspective.
+
+08:57.960 --> 09:01.720
+Well, just to meet the counter to what Alex was saying, the US, it's more about seeing
+
+09:01.720 --> 09:06.760
+right to repair legislation popping up everywhere across the United States, not everywhere.
+
+09:06.760 --> 09:09.720
+But in quite a few prominent jurisdictions.
+
+09:09.760 --> 09:15.200
+And so people are sort of saying, you know, it's a part of our culture that we should
+
+09:15.200 --> 09:17.400
+be able to repair the technology we rely on.
+
+09:17.400 --> 09:23.560
+I mean, you know, you both are a European base, but as you may know from the like the
+
+09:23.560 --> 09:26.920
+reputation of Americans, what's more American than repairing your car?
+
+09:26.920 --> 09:31.240
+And when your car is all software, how are you going to repair your car?
+
+09:31.240 --> 09:36.160
+And so Americans are sort of starting to wake up to that and like, you know, the I fix it
+
+09:36.160 --> 09:40.200
+folks and the right to repair folks, they're done a really good job of starting to propose
+
+09:40.200 --> 09:41.360
+all this legislation.
+
+09:41.360 --> 09:45.040
+And we've been excited to be a part of the like software right to repair and helping
+
+09:45.040 --> 09:50.640
+them to understand how, you know, well, John Deere, like John Deere tractors, they, you
+
+09:50.640 --> 09:53.000
+know, they have copy-lefted software in them.
+
+09:53.000 --> 09:54.840
+And that means that there are software rights.
+
+09:54.840 --> 10:00.640
+And so the linking that software right to the hardware right to repair, I think is starting
+
+10:00.640 --> 10:04.160
+to happen in a lot of places and I'm really gratified to see it.
+
+10:04.160 --> 10:08.120
+This was also a focus of your work last year, right?
+
+10:08.120 --> 10:09.120
+The right to repair.
+
+10:09.120 --> 10:15.160
+It was like a, you were very focused on this as well with the DMCA, I think it's called.
+
+10:15.160 --> 10:16.160
+Yeah.
+
+10:16.160 --> 10:17.160
+Yeah.
+
+10:17.160 --> 10:18.160
+Yeah.
+
+10:18.160 --> 10:20.520
+But it has been around for ages now.
+
+10:20.520 --> 10:22.160
+It's the worst.
+
+10:22.160 --> 10:23.160
+Did something happen there?
+
+10:23.160 --> 10:28.000
+Was it like in the last year, did you have the feeling that you actually with this broader
+
+10:28.000 --> 10:30.640
+alliance that you formed could move something?
+
+10:30.640 --> 10:33.880
+Well, I does feel that way because, you know, we're sort of fed up.
+
+10:33.880 --> 10:38.280
+So the way that it's worked in the United States is that the digital millennium, the
+
+10:38.280 --> 10:44.280
+DMCA, the Digital Millennium Copyright Act, prevents folks from like circumventing technological
+
+10:44.280 --> 10:46.640
+protection measures, basically DRM.
+
+10:46.640 --> 10:52.440
+So it's a crime to try to circumvent those technological protection measures.
+
+10:52.440 --> 10:54.000
+And that's really awful.
+
+10:54.000 --> 10:58.160
+And so what the, what they copyrighted, what they did in the legislation is they established
+
+10:58.160 --> 10:59.320
+this every three years.
+
+10:59.320 --> 11:03.840
+There's this triennial exemption period where you can say, no, no, no, no, no.
+
+11:03.840 --> 11:08.880
+I need an exemption for being able to circumvent myself because I have these important causes.
+
+11:08.880 --> 11:14.760
+And so independently, a lot of groups over the years have been submitting for their exemptions.
+
+11:14.760 --> 11:19.560
+We at Software Freedom Conservancy applied for router, exemptions for routers, for smart
+
+11:19.560 --> 11:26.000
+TVs in order to be able to determine if somebody is violating your copyrights and violating
+
+11:26.000 --> 11:27.000
+the GPL.
+
+11:27.000 --> 11:32.300
+And, and I've been involved with the medical devices once so that you could circumvent technological
+
+11:32.300 --> 11:33.300
+protection measures.
+
+11:33.300 --> 11:34.940
+But, and that's been pretty successful.
+
+11:34.940 --> 11:39.980
+The Copyright Office has granted those permissions, but those only go so far as you be able to
+
+11:39.980 --> 11:43.820
+circumvent yourself, like do that work yourself.
+
+11:43.820 --> 11:50.540
+It is still absolutely illegal under any circumstances to talk about it and explain and teach to others,
+
+11:50.540 --> 11:51.540
+which is absurd.
+
+11:51.540 --> 11:55.580
+And so one of the things that happened this year is that our coalition of right to repair
+
+11:55.580 --> 12:02.180
+groups came together and we wrote an amicus brief, basically saying that it's unconstitutional
+
+12:02.180 --> 12:03.060
+in the United States.
+
+12:03.060 --> 12:08.060
+It violates free speech to not, you know, so we haven't seen any results on that yet.
+
+12:08.060 --> 12:11.700
+It's just, we just filed it in December, you're saying it was.
+
+12:11.700 --> 12:12.860
+I think so.
+
+12:12.860 --> 12:16.940
+But what was cool about that was that like it really was coming out of the people who
+
+12:16.940 --> 12:18.940
+are more focused on hardware.
+
+12:18.940 --> 12:24.740
+And yet they included my medical devices story in the, like, like prominently in the brief,
+
+12:24.740 --> 12:29.420
+just to explain as a, and used our examples for why this, why the software right to repair
+
+12:29.420 --> 12:30.500
+is so critical.
+
+12:30.500 --> 12:34.820
+So, you know, I don't know, have we seen any real result yet?
+
+12:34.820 --> 12:36.300
+It's hard to say.
+
+12:36.300 --> 12:41.140
+But like the fact that we're working more in concert and that the folks that we're advocating
+
+12:41.140 --> 12:45.380
+to a more receptive to it, means that we're really onto something good and I'm hoping
+
+12:45.380 --> 12:47.100
+that we're really see some results.
+
+12:47.100 --> 12:51.820
+I would say in the next year, but I think that's overly optimistic in the next few years.
+
+12:51.820 --> 12:52.820
+But how is this working out?
+
+12:52.820 --> 12:58.900
+It's like, it sounds like that you managed it to, to like connect different communities.
+
+12:58.900 --> 13:02.460
+So in Germany, for example, we have this movement called bits and boimers, which is
+
+13:02.460 --> 13:07.220
+basically bits and trees that we tried to bring in climate and digital right activists
+
+13:07.220 --> 13:09.540
+in one room and discuss basically these topics.
+
+13:09.540 --> 13:10.940
+Is it the same for you?
+
+13:10.940 --> 13:11.940
+That's really cool.
+
+13:11.940 --> 13:12.940
+Yeah.
+
+13:12.940 --> 13:15.500
+What kind of communities are discussing these topics in the US?
+
+13:15.500 --> 13:16.500
+Yeah.
+
+13:16.500 --> 13:20.300
+I mean, it's so I have to give my colleague Denver, a lot of Denver Gigerich, a lot of
+
+13:20.300 --> 13:24.740
+credit because he's basically been helping to bring these, these organizations together.
+
+13:24.740 --> 13:30.620
+And so he participates in monthly calls with, with mostly like hardware focused organizations,
+
+13:30.620 --> 13:33.180
+but there is a variety of organizations that participate.
+
+13:33.180 --> 13:37.940
+Some of them have a real environmental viewpoint because the right to repair really resonates
+
+13:37.940 --> 13:41.420
+with your desire to not put more equipment in landfills, right?
+
+13:41.420 --> 13:45.100
+If you could replace the software and if you could repair it, then there's a real environmental
+
+13:45.100 --> 13:47.820
+impact if you could scale that.
+
+13:47.820 --> 13:51.340
+So yeah, I mean, I think we're seeing something similar.
+
+13:51.340 --> 13:58.300
+I think we also discussed on the, during the SFS con in Bolzano, the blue angel, I think
+
+13:58.300 --> 14:01.540
+called a logo to put on the software.
+
+14:01.540 --> 14:07.260
+And that's, I think it's also interesting this discussion we also have in Europe to,
+
+14:07.260 --> 14:12.420
+to combine climate and, and software basically and to discuss basically if you can see the
+
+14:12.420 --> 14:16.980
+source code, you can make it more efficient and but that's can safeguard resources and
+
+14:16.980 --> 14:20.500
+also as you don't have to reinvent the wheel over and over again, right?
+
+14:20.660 --> 14:22.620
+So this is, I mean, we can also save energy with this.
+
+14:22.620 --> 14:27.900
+So I also think it's a debate which will keep us busy for the next decades as well.
+
+14:27.900 --> 14:30.100
+Well, so Bonnie asked me about my optimism, right?
+
+14:30.100 --> 14:33.820
+Like whether I'm still as optimistic as I was last year.
+
+14:34.820 --> 14:38.700
+No, but I was going to ask you like what your feeling is about all the legislation that's
+
+14:38.700 --> 14:42.180
+been coming down in Europe and, you know, like what's your perspective on it?
+
+14:42.180 --> 14:46.260
+How do you feel about it now that like every, everything is finalizing, right?
+
+14:46.700 --> 14:50.900
+Oh, before that, could you also mention all those legislation that are coming?
+
+14:50.900 --> 14:53.700
+Because I think otherwise we will get a bit lost.
+
+14:53.700 --> 14:56.900
+There are a lot of acts currently happening and files.
+
+14:57.180 --> 14:58.300
+Yeah, that's pretty true.
+
+14:58.300 --> 15:03.500
+So basically what we, what we are discussing or what we had discussed in Europe for the
+
+15:03.500 --> 15:13.260
+last basically years is how can we exempt free software from legislation when we want
+
+15:13.260 --> 15:17.220
+to like put the burden on those earning money with it.
+
+15:17.220 --> 15:24.860
+So and, but at the same time making sure we don't over-regulate and by thus we want to
+
+15:24.860 --> 15:26.580
+safeguard free software development.
+
+15:26.580 --> 15:30.540
+That's basically what we are trying to achieve in this legislation and what worked out quite
+
+15:30.540 --> 15:31.220
+well, I'd say.
+
+15:31.700 --> 15:34.340
+And the files have been called Cyber Resilience Act.
+
+15:34.980 --> 15:41.540
+Basically we discussed to put a CE label on software with this file and in this case for
+
+15:41.580 --> 15:45.660
+cybersecurity, then we are talking about the product liability directive.
+
+15:45.660 --> 15:47.220
+This is pretty much the same idea.
+
+15:47.220 --> 15:53.260
+So we want to put a CE label on software and the third file, which was discussed, which
+
+15:53.260 --> 15:55.780
+is going in this direction was the AI Act.
+
+15:55.820 --> 16:02.900
+We also want to have a CE label for AI, but ultimately the AI Act also talked about
+
+16:02.900 --> 16:05.300
+language models and high risk models and stuff like this.
+
+16:05.300 --> 16:10.300
+So there have been the Cyber Resilience Act and AI Act have been like topic wise a bit
+
+16:10.300 --> 16:14.140
+different, but in general we were talking about putting a CE label on software.
+
+16:14.140 --> 16:15.740
+So that's basically what we discussed.
+
+16:15.740 --> 16:20.780
+And I think I can understand the idea from a European perspective.
+
+16:20.780 --> 16:25.300
+So everything that comes to the European market needs to have this label and we had
+
+16:25.300 --> 16:29.980
+good experience, especially when we talked about toys, for example, that we can make
+
+16:29.980 --> 16:37.940
+sure that we save our children from products that might don't follow like the product
+
+16:37.980 --> 16:38.940
+rules we had in place.
+
+16:39.260 --> 16:44.260
+And that was the idea basically by lawmakers to have safe software.
+
+16:44.260 --> 16:49.380
+No, let's not discuss how useful.
+
+16:49.740 --> 16:53.660
+Yeah, no, it's a totally different topic, but that's the general take on this.
+
+16:53.660 --> 16:53.980
+Exactly.
+
+16:53.980 --> 16:57.180
+That was the general aim with this legislation.
+
+16:57.180 --> 17:05.020
+And what we tried to do is that the legislator came up with a wording set like we want to
+
+17:05.020 --> 17:07.940
+put things into service or put on to market.
+
+17:07.940 --> 17:12.620
+That was like from the one wording and the other one was talking about commercial activity.
+
+17:13.340 --> 17:18.420
+And it's super difficult to like go with these terms when we talk about free software.
+
+17:18.420 --> 17:20.580
+So just think about foundations, for example.
+
+17:20.580 --> 17:26.220
+So they definitely have like a revenue, but is this then a commercial activity in terms
+
+17:26.220 --> 17:31.780
+of like do you contribute to like the social good and then you are liable for this because
+
+17:31.780 --> 17:37.660
+you are just like, yeah, I'm giving people a difficult situation also.
+
+17:38.140 --> 17:39.580
+Definitely, definitely it was.
+
+17:39.580 --> 17:46.060
+And but I do believe like with the discussion we had, we also managed it to explain free
+
+17:46.060 --> 17:48.180
+software and not to decision makers in the last year.
+
+17:48.180 --> 17:53.300
+And it also helped a lot to make them understand how the whole ecosystem looks like and how
+
+17:53.300 --> 17:54.060
+it's working.
+
+17:54.060 --> 17:58.860
+And they are also now coming to foster them, for example, and want to run into people and
+
+17:58.860 --> 17:59.700
+learn more about it.
+
+17:59.700 --> 18:03.460
+So and that's also a good result of people from the European Commission, from the European
+
+18:03.460 --> 18:07.740
+Parliament and the council are going to a conference like the foster to learn more about
+
+18:07.740 --> 18:08.740
+what they are regulating.
+
+18:09.060 --> 18:15.100
+And I think that's something we should also encourage and like look that we not only talk
+
+18:15.100 --> 18:21.140
+to us, but that we also like do outreach activities and try to explain free software
+
+18:21.140 --> 18:24.380
+to people that are not so much aware about these topics.
+
+18:24.380 --> 18:28.260
+And I do believe that this worked out very, very well with this discussion we had in the
+
+18:28.260 --> 18:28.740
+last year.
+
+18:28.940 --> 18:29.820
+So you're optimistic.
+
+18:30.300 --> 18:31.980
+Yeah, that was now my question as well.
+
+18:31.980 --> 18:34.100
+So how is your optimism feel now?
+
+18:37.020 --> 18:43.100
+I mean, I was quite optimistic already, I think last year that so because the thing is we had
+
+18:43.100 --> 18:47.220
+it already in the Commission already proposed the exemption, which is good.
+
+18:47.220 --> 18:52.460
+So the exemption itself was not good, but they already had in mind that they have to
+
+18:52.460 --> 18:54.260
+regulate it somehow differently.
+
+18:54.260 --> 18:55.980
+And that that was a good starting point.
+
+18:56.980 --> 19:00.500
+And not everything was super nice and shiny.
+
+19:00.500 --> 19:03.500
+And I do believe we also have to clean up the mess a bit.
+
+19:04.100 --> 19:09.860
+So to say in the next month, I think it's also good that we are going for a next term so
+
+19:09.860 --> 19:14.580
+that everything renews a bit, also in the institutions, but also maybe we have the time
+
+19:14.580 --> 19:23.940
+to reflect a bit in our movement, how we should like jump into future debates and how
+
+19:23.940 --> 19:27.580
+we maybe could better collaborate also as community.
+
+19:28.580 --> 19:33.860
+This is definitely something where we need to invest some time to discuss all of this.
+
+19:33.860 --> 19:40.580
+But in general, I'd say we can all be quite happy what we achieved in total.
+
+19:40.580 --> 19:41.340
+It's not perfect.
+
+19:41.340 --> 19:42.260
+It's far from perfect.
+
+19:42.780 --> 19:47.420
+Also, it's absolutely not fully clear how it will look like in reality.
+
+19:47.420 --> 19:52.540
+I mean, it's always the case with legislation that you will not fully know how it will like
+
+19:52.540 --> 19:54.020
+then look in five years.
+
+19:54.020 --> 19:55.860
+And maybe we need to adapt the rules then.
+
+19:56.580 --> 20:03.060
+So we definitely need to monitor a lot of guidelines or delegated acts.
+
+20:03.380 --> 20:09.260
+So basically to say decisions that have to be taken in the future by the European Commission,
+
+20:09.260 --> 20:11.780
+for example, and this is definitely something we need to monitor.
+
+20:12.420 --> 20:18.180
+But in general, what we have now and also what we discussed is something we can reuse
+
+20:18.180 --> 20:21.500
+for future debates and we can build on the wording we have.
+
+20:21.540 --> 20:22.540
+And that's something good.
+
+20:23.300 --> 20:29.340
+So you would say there in the last year, Christopher made a step forward because now
+
+20:29.340 --> 20:37.980
+it's more widely known and there is some groundwork done again and we can continue from here.
+
+20:37.980 --> 20:47.420
+I do believe when you look on this governmental level, then I'd say it pretty much started
+
+20:47.460 --> 20:54.300
+with these corona tracing apps when governments understood in practice how cross-border collaboration
+
+20:54.300 --> 21:00.860
+looks like and how you can do this procurement of basically free software, which is super easy
+
+21:00.860 --> 21:08.140
+because you just take it from, in this case, Germany and do a translation and then you
+
+21:08.140 --> 21:10.500
+can have a cross-border app and use it everywhere.
+
+21:10.500 --> 21:14.500
+And this is a moment where governments understood, oh, this is really cool and we want to have
+
+21:14.500 --> 21:15.500
+this as well.
+
+21:15.500 --> 21:19.620
+Then the debate about digital sovereignty that also contributes to this.
+
+21:19.620 --> 21:24.380
+We have governments procuring more and more free software, thus we have also more and
+
+21:24.380 --> 21:26.260
+more best practice examples.
+
+21:26.260 --> 21:31.540
+And we had this debate around liability and the AI Act and also with the large language
+
+21:31.540 --> 21:37.460
+models we talked a lot about free software and that helped that people better understand
+
+21:37.460 --> 21:38.460
+free software.
+
+21:38.460 --> 21:41.140
+And this, I think, also leads to better regulation.
+
+21:41.300 --> 21:47.380
+It's way better if you know what you are regulating than if you are doing it by, I'm not fully
+
+21:47.380 --> 21:48.780
+sure, but I'm going to regulate.
+
+21:48.780 --> 21:49.780
+Yeah.
+
+21:49.780 --> 21:55.500
+I mean, lest everything sound like sunshine and roses, I would say that in the pandemic,
+
+21:55.500 --> 22:02.420
+it was really disappointing how many proprietary solutions were settled on widely by big sections
+
+22:02.420 --> 22:03.420
+of society.
+
+22:04.180 --> 22:13.660
+In the United States, the software used for COVID tracking and other things was proprietary.
+
+22:13.660 --> 22:19.340
+There were a lot of disappointing developments, but nonetheless, I still, I agree with you
+
+22:19.340 --> 22:20.340
+otherwise.
+
+22:20.340 --> 22:24.420
+I mean, I think we continue to push things forward and we're always working for that
+
+22:24.420 --> 22:25.420
+next opportunity.
+
+22:25.420 --> 22:30.820
+Bradley, who I work with, Bradley Kuhn who works with me at Software Freedom Conservancy
+
+22:30.860 --> 22:35.100
+says, we're working for Software Freedom in 300 years.
+
+22:35.100 --> 22:40.980
+We're laying the groundwork now so that later people could come back and they have the ideological
+
+22:40.980 --> 22:45.060
+underpinnings and they have a map and they can look at the failures and they can look
+
+22:45.060 --> 22:47.900
+at how things unraveled and they could rebuild in a sensible way.
+
+22:47.900 --> 22:53.100
+I don't know that I'm willing to give up on Software Freedom in my lifetime, but it's
+
+22:53.100 --> 22:55.420
+very difficult to live only in Software Freedom now.
+
+22:55.420 --> 23:01.700
+It's impossible if you have to do things for yourself like book of flight.
+
+23:01.700 --> 23:03.100
+It's very difficult to do.
+
+23:03.100 --> 23:08.580
+I think we have to be sanguine about the challenges that we are facing, which are considerable,
+
+23:08.580 --> 23:14.140
+but the opportunities to present these issues as ones that are societal issues and to get
+
+23:14.140 --> 23:18.980
+legislators and other public-facing people to care about it is so much greater than it
+
+23:18.980 --> 23:19.980
+was before.
+
+23:20.340 --> 23:26.940
+And also, there is a good best practice example now in the USA with, or let me check the name,
+
+23:26.940 --> 23:35.860
+I noted it down, the National, the Center for Medical, Medicaid and Medicare Services
+
+23:35.860 --> 23:39.780
+has been launching the first open source program office.
+
+23:39.780 --> 23:40.780
+Yeah.
+
+23:40.780 --> 23:44.620
+I was pretty amazed by reading this, I was like, oh my God, I never thought this would
+
+23:44.620 --> 23:45.620
+be happening.
+
+23:46.260 --> 23:49.100
+I was like, aren't they?
+
+23:49.100 --> 23:50.100
+I'm sure.
+
+23:50.100 --> 23:57.060
+So I had to double check, I was reading two or three different newspapers about it.
+
+23:57.060 --> 24:01.900
+I think the person who is involved with that has been long involved in the free software
+
+24:01.900 --> 24:02.900
+world.
+
+24:02.900 --> 24:03.900
+Yeah, that's what she said.
+
+24:03.900 --> 24:04.900
+Yeah, yeah.
+
+24:04.900 --> 24:05.900
+So that's really cool.
+
+24:05.900 --> 24:10.700
+I mean, it just shows that when we bring people in and get them up to speed, they go
+
+24:10.700 --> 24:13.220
+elsewhere and do really cool stuff.
+
+24:13.220 --> 24:20.380
+I mean, I want to be optimistic, but this desire to create OSPOs everywhere is very
+
+24:20.380 --> 24:24.780
+well-intentioned, but I have to say that a lot of times it doesn't actually result in
+
+24:24.780 --> 24:25.780
+more free software.
+
+24:25.780 --> 24:33.060
+It results in offices and conversations about that basically wind up having institutions
+
+24:33.060 --> 24:36.100
+use the stuff they were going to use anyway.
+
+24:36.100 --> 24:39.700
+But I'd like to see that, I mean, they're baby steps, right?
+
+24:39.700 --> 24:44.300
+There have been good collaboration that have come from some OSPOs and I don't know if every
+
+24:44.300 --> 24:50.100
+single thing needs to have an OSPO, but everything could because there's free software in everything
+
+24:50.100 --> 24:55.740
+somehow, somewhere, even if it's not copy left, so it doesn't really give you rights,
+
+24:55.740 --> 25:01.380
+even if it's fragmented and proprietorized, even if it's exploitative.
+
+25:01.380 --> 25:02.380
+Yeah.
+
+25:02.380 --> 25:08.980
+But we also have this movement in Europe that we see more OSPOs everywhere and also do have
+
+25:08.980 --> 25:14.020
+the feeling that it's not really contributing to more free software, but more chats about.
+
+25:14.020 --> 25:20.740
+No, but I also do believe in particular when we talk about administrations, for example,
+
+25:20.740 --> 25:25.140
+I'm not sure if this is the best approach to first set up an OSPO.
+
+25:25.140 --> 25:30.460
+I think it's more important to work on the mindset and if you have a proper mindset,
+
+25:30.460 --> 25:33.660
+you don't need the OSPO and the other way around.
+
+25:33.660 --> 25:35.540
+Completely agree.
+
+25:35.620 --> 25:40.700
+I sometimes, it's not often, but I sometimes have the feeling it also goes in the direction
+
+25:40.700 --> 25:45.580
+of having a thick leaf, basically, and you can then just say, look, I have OSPO, talk
+
+25:45.580 --> 25:48.260
+to these people and I don't have to care anymore.
+
+25:48.260 --> 25:56.220
+And so we also need to see where this development goes, but I'm also not the biggest fan of
+
+25:56.220 --> 26:02.220
+these OSPOs and I really don't see the actual need in every case where they set up an OSPO,
+
+26:02.220 --> 26:03.220
+to be honest.
+
+26:03.220 --> 26:04.220
+Yeah.
+
+26:04.540 --> 26:05.540
+All right.
+
+26:05.540 --> 26:11.580
+So you're quite looking forward into the future and how can people actually participate
+
+26:11.580 --> 26:18.420
+in this and how can people help bring this, help with the movement and help to make this.
+
+26:18.420 --> 26:21.940
+On the one hand, we have to safeguard what we have.
+
+26:21.940 --> 26:22.940
+That's for sure.
+
+26:22.940 --> 26:31.300
+But also, I mean, as Kevin also said, maybe it sounded a bit too nice, but what I just
+
+26:31.380 --> 26:37.420
+said, it's not everything is just super mind-blowing or something good in Europe when you talk
+
+26:37.420 --> 26:38.420
+about free software.
+
+26:38.420 --> 26:42.980
+So, I mean, we also, for example, still run our campaign, public money, public code,
+
+26:42.980 --> 26:44.740
+and this is still needed.
+
+26:44.740 --> 26:50.340
+So we are very far away from the point where every administration is using free software
+
+26:50.340 --> 26:53.980
+or that they are even only procuring for software.
+
+26:53.980 --> 26:59.540
+So just recently in Germany, the budget have been cut for free software and billions of
+
+26:59.580 --> 27:02.340
+euro have been spent to procure oracle, for example.
+
+27:02.340 --> 27:04.980
+So there's still a lot to do.
+
+27:04.980 --> 27:09.500
+And in this regard, for example, you can help us by signing this campaign.
+
+27:09.500 --> 27:16.300
+I think it's very important that we show that a lot of people like demand with us that
+
+27:16.300 --> 27:19.860
+every administration should procure free software.
+
+27:19.860 --> 27:24.900
+And all what you can also do is, and this works out quite well, is to go to your local
+
+27:24.940 --> 27:27.100
+administration and talk to them and convince them.
+
+27:27.100 --> 27:30.260
+And we have dedicated materials for this.
+
+27:30.260 --> 27:34.780
+We have a brochure made for decision makers for local administrations, which you can download
+
+27:34.780 --> 27:36.020
+or order on our website.
+
+27:36.020 --> 27:38.500
+And you can use it to convince your local administration.
+
+27:38.500 --> 27:43.260
+And we have seen, for example, volunteers who managed to convince a whole parliament
+
+27:43.260 --> 27:48.220
+to sign our campaign, the Parliament of Asturias in Spain, where Hackspace worked for like
+
+27:48.220 --> 27:52.740
+pretty much like one, one and a half year to convince the parliament to sign this campaign.
+
+27:52.740 --> 27:54.500
+And I think that's awesome work.
+
+27:54.500 --> 28:00.860
+And this also shows how you can, as a volunteer on a regional and local level, make a huge
+
+28:00.860 --> 28:01.340
+change.
+
+28:01.340 --> 28:07.180
+And that's something I think you can still do where you can learn from best practices.
+
+28:07.180 --> 28:10.860
+You can see that it works out and where you can make a change.
+
+28:10.860 --> 28:16.820
+And this, for example, definitely something where you can not only help us as FSFE, but
+
+28:16.820 --> 28:18.740
+basically the whole movement.
+
+28:18.740 --> 28:21.620
+And we also do have other campaigns.
+
+28:21.660 --> 28:30.860
+So if you are young, for example, I think that's some body, very, very old stars between
+
+28:30.860 --> 28:36.820
+14 and 18, for example, we are running a use hacking for freedom contest.
+
+28:36.820 --> 28:42.100
+And that's also something where we are looking for, for, yeah, basically, free software
+
+28:42.100 --> 28:44.260
+contributions from, from teenagers.
+
+28:44.260 --> 28:47.580
+And we have seen some pretty cool projects in the last two years.
+
+28:47.980 --> 28:54.220
+And that's also something where you can take part and contribute to the movement, basically.
+
+28:54.740 --> 28:59.300
+And I mean, we have other campaigns like on router freedom, basically device
+
+28:59.300 --> 29:00.900
+neutrality is a topic we cover.
+
+29:01.300 --> 29:03.900
+And there are so many activities you can join.
+
+29:03.900 --> 29:11.340
+And we have a dedicated part on our website where you can like click and join.
+
+29:11.340 --> 29:16.780
+And you can also help Bonnie, for example, with translations, which is also heavily
+
+29:16.780 --> 29:20.500
+needed, because I do believe that translation plays also an important role when we
+
+29:20.500 --> 29:24.580
+talk about Europe and like the distribution of news.
+
+29:25.420 --> 29:26.660
+Yeah, no, it's true.
+
+29:26.660 --> 29:31.500
+Like with translations, you always make information available to people who do not
+
+29:31.500 --> 29:32.140
+speak English.
+
+29:33.140 --> 29:34.940
+And so thank you, Alex.
+
+29:36.020 --> 29:40.060
+Karen, for you, from your side, what's funny, I was going to give a similar, like
+
+29:40.180 --> 29:43.100
+think globally act locally kind of answer.
+
+29:43.980 --> 29:49.020
+You know, like, it's, I always say, it's never a bad time to talk about software
+
+29:49.020 --> 29:52.540
+freedom, like talk about software freedom in the doctor's office.
+
+29:53.940 --> 30:00.540
+The grocery store, my relatives, and, you know, like, it's, it's, it's having a
+
+30:00.540 --> 30:05.580
+network of people that are like you people listening that talking to the folks that
+
+30:05.580 --> 30:10.820
+you know, not in a like preachy kind of like, like you've got to listen to the
+
+30:10.820 --> 30:12.180
+thing I'm talking about.
+
+30:12.180 --> 30:15.980
+And if you don't understand, you're a bad person, but more like, have you thought
+
+30:15.980 --> 30:16.500
+about this?
+
+30:16.500 --> 30:17.260
+And it's really cool.
+
+30:17.260 --> 30:18.580
+And this is what I care about.
+
+30:18.580 --> 30:19.940
+And have you thought about it?
+
+30:19.940 --> 30:22.180
+And like, you know, we really could do things differently.
+
+30:22.180 --> 30:26.180
+Like there are gentle conversations that you could consistently have that make a
+
+30:26.180 --> 30:30.380
+huge difference, even if you're not going to, you know, your local legislature,
+
+30:30.380 --> 30:31.620
+which I recommend that you do.
+
+30:31.860 --> 30:33.580
+But like that's a lot for some people.
+
+30:33.580 --> 30:36.700
+It's enough for you to just persistently talk about it.
+
+30:36.940 --> 30:41.660
+I am that annoying person at like parent teacher meetings who raises my hand and
+
+30:41.660 --> 30:45.860
+say, says, do we really need to be using Google accounts for that?
+
+30:45.860 --> 30:47.500
+Like Google services for this?
+
+30:47.500 --> 30:52.300
+Because, you know, like, you know, or, or Zoom is like a really problematic
+
+30:52.300 --> 30:55.580
+technology, just want to like take a second and like, maybe think about if we
+
+30:55.580 --> 30:56.620
+could do something better.
+
+30:56.900 --> 31:00.420
+And we're at the point where I was saying where people respond to that.
+
+31:00.660 --> 31:04.980
+So, you know, and then I think if you want to act really locally, you could take
+
+31:04.980 --> 31:07.900
+a look at the things that you buy.
+
+31:08.540 --> 31:13.740
+And if there's copy left at software in your devices with anything embedded,
+
+31:14.020 --> 31:19.140
+then you can, you can ask for that source code, check and see if there's an
+
+31:19.140 --> 31:22.100
+offer for source and ask the company for the source.
+
+31:22.140 --> 31:26.580
+Like the more people that do it, the more companies get the message that
+
+31:26.700 --> 31:29.380
+following the rules and providing the source code is important.
+
+31:29.660 --> 31:33.620
+And then, you know, like we're working on ways by the time this is released,
+
+31:33.620 --> 31:37.860
+we'll have launched a website called, called use the source where people can
+
+31:37.860 --> 31:41.820
+come and if you get a source candidate from requesting source code, you can put
+
+31:41.820 --> 31:46.620
+it up there and analyze it, see if it's like a compliance and then work together.
+
+31:46.620 --> 31:50.060
+If there's something you want to fix or if there's something that, you know, if
+
+31:50.060 --> 31:54.420
+there's, if there's some kind of way that we could use the source code to make
+
+31:54.420 --> 31:59.260
+our, our equipment better, like that's a, a place that we could start.
+
+31:59.420 --> 32:00.740
+So I'm really excited about that.
+
+32:00.740 --> 32:02.900
+And I think that's actually launching today at Fossam.
+
+32:03.380 --> 32:04.020
+Wow.
+
+32:05.020 --> 32:06.260
+That sounds pretty nice.
+
+32:06.660 --> 32:11.980
+Um, if something is happening, like if some, if they don't respond correctly,
+
+32:12.020 --> 32:13.140
+is there any help?
+
+32:14.140 --> 32:14.780
+Yeah, I mean, so
+
+32:14.780 --> 32:17.020
+If you could offer from the Freedom Conservancy.
+
+32:17.100 --> 32:21.020
+So what I'm really excited about this is that this is like a way for ordinary
+
+32:21.020 --> 32:24.860
+people to learn how to check whether source code is in compliance.
+
+32:25.100 --> 32:28.580
+And so it's a forum where people can teach each other and talk to each other.
+
+32:28.900 --> 32:33.100
+And, um, we at Software Freedom Conservancy, we hold all of these skills.
+
+32:33.100 --> 32:34.700
+There are a few people that are around.
+
+32:34.700 --> 32:38.260
+Some people work, help with the FSFE with us once in a while, but like really
+
+32:38.260 --> 32:41.740
+we've got the, like the, the shop of people, like all the people who used to
+
+32:41.740 --> 32:44.740
+work at the Free Software Foundation doing it and now working for us.
+
+32:44.900 --> 32:50.540
+And it's wrong for us to just have that knowledge in-house and, you know, not
+
+32:50.540 --> 32:51.140
+share it.
+
+32:51.180 --> 32:55.700
+And so this is like a real effort to bring GPL compliance checking into the
+
+32:55.700 --> 32:58.500
+public and anyone can learn it and you can all check it.
+
+32:58.620 --> 33:01.100
+Like, so, so that's the idea about it.
+
+33:01.460 --> 33:04.420
+As far as companies are concerned, like, will we help them?
+
+33:04.620 --> 33:05.660
+You know, it's really interesting.
+
+33:05.660 --> 33:09.300
+We decided that what we're going to do is we're going to give, we're going to
+
+33:09.300 --> 33:12.700
+let companies register with our website.
+
+33:13.300 --> 33:18.060
+And if they register with Use the Source, if somebody wants to post a source
+
+33:18.060 --> 33:23.580
+candidate for a company's products, then we will notify the company if they
+
+33:23.580 --> 33:27.900
+registered with us and they'll have seven days to, like, double check whether
+
+33:27.900 --> 33:31.220
+or not that's like a source candidate they want there.
+
+33:31.540 --> 33:36.780
+And so, like, to begin a dialogue and then folks could, you know, like, you
+
+33:36.780 --> 33:40.780
+know, there, these are source candidates that have been published so or been
+
+33:40.780 --> 33:41.540
+sent around.
+
+33:41.540 --> 33:45.500
+So the company should stand behind them, but it's a further way to engage
+
+33:45.500 --> 33:47.820
+those companies so that we could see more compliance in the long run.
+
+33:47.820 --> 33:52.740
+And our lawsuits in the United States are really focused on establishing a
+
+33:52.780 --> 33:56.020
+third party right to be able to get your source code.
+
+33:56.300 --> 33:59.420
+And so that's what we've been really focused on because while it's important
+
+33:59.420 --> 34:02.940
+that the folks that write the software that have the copyrights are able to
+
+34:02.940 --> 34:08.140
+license the code in a way that's shared, ultimately, if that doesn't result in
+
+34:08.140 --> 34:12.460
+downstream people getting the source code and, like, being able to modify it,
+
+34:12.460 --> 34:14.500
+then it doesn't really stand for very much.
+
+34:14.540 --> 34:18.180
+So I'm excited to see we recently had a decision.
+
+34:18.900 --> 34:25.100
+It's just a procedural decision, but the judge in our Visio case wrote very,
+
+34:25.100 --> 34:30.100
+very strongly saying that there are third party rights with respect to enforcement.
+
+34:30.100 --> 34:33.380
+So I'm really excited about that and we'll see it all kind of fits together.
+
+34:33.380 --> 34:37.740
+So ask, ask for your, ask for your source, everybody, exercise your offer.
+
+34:39.820 --> 34:45.380
+I take this as a good word for my last and final question.
+
+34:46.020 --> 34:48.100
+You all know I love Free Software Day on this day.
+
+34:48.100 --> 34:50.820
+We say thank you to all the contributors for free software.
+
+34:51.540 --> 34:54.260
+And I would like to hear from you.
+
+34:54.260 --> 34:58.500
+Is there a, is there a project or a contributor that you would like to say
+
+34:58.500 --> 35:02.700
+thank you to? If there is someone who pops into your mind.
+
+35:02.700 --> 35:04.780
+I know Alex Free Software Games.
+
+35:04.780 --> 35:06.780
+Alex loves Free Software Games.
+
+35:06.780 --> 35:07.780
+I have a new one.
+
+35:07.780 --> 35:08.780
+I have a new one.
+
+35:08.780 --> 35:09.780
+I'm sorry.
+
+35:09.780 --> 35:11.780
+OK, don't know what I hear.
+
+35:12.180 --> 35:14.620
+I was in the conference last year in Valencia
+
+35:14.620 --> 35:18.260
+and that was a community of coin collectors.
+
+35:18.260 --> 35:23.180
+And these coin collectors are using a free software tool that brings them together.
+
+35:23.740 --> 35:26.340
+And I learned a lot about collecting coins,
+
+35:27.420 --> 35:29.380
+but even more about this awesome tool.
+
+35:29.380 --> 35:34.300
+And that's, I think, something it's, it's a tool made by, I think, a few people.
+
+35:35.300 --> 35:37.060
+And it's called DelDao.
+
+35:37.060 --> 35:41.900
+And it's basically, yeah, out there to bring together these,
+
+35:41.900 --> 35:46.100
+these communities collecting coins, but also there's a university in New York
+
+35:46.100 --> 35:53.140
+and the professor is using the tool to collect some historic data about interviews she made.
+
+35:53.140 --> 35:59.940
+And so you can also see how the tool is like growing with the needs of the community.
+
+35:59.940 --> 36:04.260
+And it's, it was just like lovely to see how they interacted for two days
+
+36:04.700 --> 36:10.420
+in order to come together around a tool which was created by two people, basically.
+
+36:10.420 --> 36:14.660
+And that was just lovely to see and basically exactly this
+
+36:14.660 --> 36:17.580
+while of this free software community so much.
+
+36:17.580 --> 36:21.220
+So that was just an outstanding moment and a lovely conference.
+
+36:21.220 --> 36:24.140
+And that's why I want to mention them here in this podcast and want to thank them,
+
+36:24.460 --> 36:27.060
+even if I'm not using the tool.
+
+36:27.060 --> 36:28.740
+No coin collector.
+
+36:28.740 --> 36:30.340
+I'm not a coin collector.
+
+36:30.340 --> 36:31.500
+But it sounds really nice.
+
+36:31.500 --> 36:35.460
+I think this is the spirit of free software that we need this community spirit.
+
+36:35.460 --> 36:39.700
+And this we are here together and let's start this movement.
+
+36:39.940 --> 36:40.580
+Absolutely.
+
+36:41.460 --> 36:42.500
+Karen, you're thank you.
+
+36:42.500 --> 36:44.580
+I have two things that I'm going to say.
+
+36:44.580 --> 36:46.260
+I think I hope that's okay.
+
+36:46.260 --> 36:47.860
+The first one is you, Bonnie.
+
+36:47.860 --> 36:48.740
+Oh my God, no.
+
+36:48.740 --> 36:50.340
+Oh, I know, I know.
+
+36:50.340 --> 36:54.500
+It is because you bring so much enthusiasm to these conversations.
+
+36:54.500 --> 36:58.100
+And like, I have to say, like I've talked to you more over the last year
+
+36:58.100 --> 37:03.620
+and like every time I talk to you, I'm so impressed with how committed to software freedom you are
+
+37:03.620 --> 37:09.540
+and how you're able to drive the conversation in ways that make it a lot more impactful and effective.
+
+37:09.620 --> 37:10.820
+So thank you.
+
+37:10.820 --> 37:12.180
+I really appreciate you.
+
+37:12.180 --> 37:12.820
+Thank you.
+
+37:12.820 --> 37:13.620
+That's really nice.
+
+37:13.620 --> 37:17.140
+But lest I seem like I'm trying to butter up the host of this podcast.
+
+37:18.660 --> 37:21.460
+The second thing that popped into my head is a little premature
+
+37:21.460 --> 37:23.940
+because I haven't actually used it yet, but I'm really excited.
+
+37:23.940 --> 37:25.140
+I'm so excited to that.
+
+37:25.700 --> 37:31.940
+It's valetudo because I bought, I've always wanted a robot vacuum.
+
+37:31.940 --> 37:35.140
+And it's all part of our devices are really problematic.
+
+37:35.140 --> 37:36.260
+They're super problematic.
+
+37:37.140 --> 37:40.180
+Like they're, and valetudo doesn't solve all the problems,
+
+37:40.180 --> 37:44.020
+but it does at least allow you, it is free software and it allows you
+
+37:44.020 --> 37:47.220
+to not have your robot vacuum centralized.
+
+37:47.220 --> 37:52.500
+And you can limit, you can basically replace a good amount of the software with free software.
+
+37:52.500 --> 37:56.740
+And I'm super excited to be able to try out a robot vacuum in my house.
+
+37:57.860 --> 37:59.780
+I'm also super excited for this.
+
+37:59.780 --> 38:00.820
+I'll have to report back.
+
+38:00.820 --> 38:05.460
+And you know, I'm also going to have to like figure out if the robot vacuum,
+
+38:05.460 --> 38:09.140
+when I get it, I have to figure out, like, you know, if there's an offer for source,
+
+38:09.140 --> 38:13.300
+like how badly the vacuum is in violation and like, you know,
+
+38:13.300 --> 38:17.940
+whether or not we really should be having access to the, you know, like, but,
+
+38:17.940 --> 38:21.460
+but nonetheless, I think this is, this is a really cool project.
+
+38:21.460 --> 38:22.980
+And I'm very excited to try.
+
+38:29.140 --> 38:30.180
+All right.
+
+38:30.180 --> 38:32.100
+Thank you too for being here.
+
+38:32.100 --> 38:35.380
+Thank you for talking about free software with me and the current status.
+
+38:35.380 --> 38:41.060
+I know it's a broad topic, but I still have the feeling that we're getting closer
+
+38:41.620 --> 38:44.420
+to software freedom, even if it's in us 300 years.
+
+38:44.420 --> 38:46.100
+I don't believe that, to be honest.
+
+38:46.100 --> 38:47.220
+I don't believe that at all.
+
+38:47.220 --> 38:48.180
+I don't either.
+
+38:48.180 --> 38:50.180
+I'm more positive about this.
+
+38:50.180 --> 38:52.260
+I would say there's so much happening.
+
+38:52.260 --> 38:53.460
+There's so much going on.
+
+38:53.460 --> 38:59.220
+And especially with, I have to feeling like over the past year, you talk to so many MPs
+
+38:59.860 --> 39:03.940
+and it's like crazy how many of them are listening and how many of them
+
+39:03.940 --> 39:10.180
+actually understood free software, even if they are not like changing it in this moment.
+
+39:10.180 --> 39:13.380
+It is a groundwork and it's happening.
+
+39:13.380 --> 39:19.540
+And also every time I research free software in the US, it's like,
+
+39:19.540 --> 39:24.020
+I do have the feeling that it's also, yeah, I really have the feeling that
+
+39:24.020 --> 39:25.140
+there is a lot of optimism.
+
+39:25.380 --> 39:31.780
+The FCC reached out to us to ask us to participate in a panel to get information from us.
+
+39:31.780 --> 39:32.580
+And that was public.
+
+39:32.580 --> 39:36.900
+And then the FCC submitted that panel to the copyright office without even,
+
+39:37.460 --> 39:40.180
+like as part of their own process.
+
+39:40.180 --> 39:41.060
+And that was very exciting.
+
+39:41.060 --> 39:43.300
+We submitted our own comments to the copyright office.
+
+39:43.300 --> 39:45.300
+We submitted our own comments to NIST.
+
+39:45.300 --> 39:48.100
+So we're trying to be active in all of those forums,
+
+39:48.100 --> 39:53.300
+but to see the interest coming from the agencies before we even were reaching out to them is great.
+
+39:55.140 --> 39:59.140
+Optimism, it's happening and we can all participate.
+
+39:59.940 --> 40:01.860
+So this is the most important thing.
+
+40:01.860 --> 40:03.860
+So thank you too for being here.
+
+40:03.860 --> 40:06.420
+And with this, I will release you to your death room.
+
+40:10.020 --> 40:13.140
+This will happen quite soon as far as I hear.
+
+40:15.700 --> 40:17.540
+This was the Software Freedom podcast.
+
+40:17.540 --> 40:20.900
+This podcast is brought to you by the Free Software Foundation Europe.
+
+40:20.900 --> 40:24.500
+We are a charity that empowers users to control technology.
+
+40:24.500 --> 40:28.500
+If you like this podcast, please recommend it to your friends and rate it.
+
+40:28.500 --> 40:33.860
+You can also support us with that donation under fse.org slash donate.
+
+40:34.820 --> 40:45.860
+Bye bye.
+</pre>
+
+<p><a href="/news/podcast/episode-24.html">Back to the episode SFP#24</a></p>
+
+</body>
+<sidebar promo="our-work">
+
+</sidebar>
+  
+</html> 

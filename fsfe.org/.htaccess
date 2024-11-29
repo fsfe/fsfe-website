@@ -58,6 +58,10 @@ RewriteRule ^women(/.*)?$ https://wiki.fsfe.org/Teams/Women [R=301,L]
 RewriteRule ^standards(.*) /freesoftware/standards$1 [R=301,L]
 RewriteRule ^education(.*) /freesoftware/education$1 [R=301,L]
 
+# Translators
+RewriteRule ^translators/weblate https://hosted.weblate.org/projects/fsfe [R=301,L]
+RewriteRule ^translators(.*) /contribute/translators/translators.html [R=301,L]
+
 # =============================================================================
 # CAMPAIGN/TOPIC-SPECIFIC REDIRECTS
 # =============================================================================

@@ -58,6 +58,10 @@ RewriteRule ^women(/.*)?$ https://wiki.fsfe.org/Teams/Women [R=301,L]
 RewriteRule ^standards(.*) /freesoftware/standards$1 [R=301,L]
 RewriteRule ^education(.*) /freesoftware/education$1 [R=301,L]
 
+# Translators
+RewriteRule ^translators/weblate https://hosted.weblate.org/projects/fsfe [R=301,L]
+RewriteRule ^translators(.*) /contribute/translators/translators.html [R=301,L]
+
 # =============================================================================
 # CAMPAIGN/TOPIC-SPECIFIC REDIRECTS
 # =============================================================================
@@ -70,6 +74,7 @@ RewriteRule ^news/podcast-opus.rss$ /news/podcast-opus.en.rss [L,R=301]
 # ILoveFS
 # TODO for new news-item: update links for latest news-item
 RewriteRule ^news/latest-news$ /news/2024/news-20240610-01.html [R=301,L]
+RewriteRule ^activities/ilovefs/toolkit$  https://download.fsfe.org/campaigns/ilovefs/toolkit/ [R=301,L]
 
 # TODO each year: update links for latest report
 RewriteRule ^activities/ilovefs/latest-report$ /activities/ilovefs/report/report_2024.html [R=301,L]
@@ -98,6 +103,7 @@ RewriteRule ^drm.info(/.*)? https://drm.info$1 [R=301,L]
 # TODO please update the link for new registration form
 RewriteRule ^activities/yh4f/register https://share.fsfe.org/apps/forms/s/kQX233iKfwe3ZtgiHxwLZJNB [R=301,L]
 RewriteRule ^activities/yh4f/feedback https://share.fsfe.org/apps/forms/s/LBHwzSmaiyoX3Tmwo2qJgAki [R=301,L]
+RewriteRule ^activities/yh4f/mediakit https://download.fsfe.org/YH4F/Youth%20Hacking%204%20Freedom%20-%202025.pdf [R=301,L]
 
 # =============================================================================
 # MOVED PAGES

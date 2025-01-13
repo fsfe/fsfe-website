@@ -75,6 +75,7 @@ RewriteRule ^news/podcast-opus.rss$ /news/podcast-opus.en.rss [L,R=301]
 # TODO for new news-item: update links for latest news-item
 RewriteRule ^news/latest-news$ /news/2024/news-20240610-01.html [R=301,L]
 RewriteRule ^activities/ilovefs/toolkit$  https://download.fsfe.org/campaigns/ilovefs/toolkit/ [R=301,L]
+RewriteRule ^activities/ilovefs/registration-nuernberg$ https://share.fsfe.org/apps/forms/s/nRZagsoMmjTcc9rkZp5NZqze [R=301,L]
 
 # TODO each year: update links for latest report
 RewriteRule ^activities/ilovefs/latest-report$ /activities/ilovefs/report/report_2024.html [R=301,L]

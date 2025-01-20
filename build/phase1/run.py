@@ -7,7 +7,16 @@
 # directory tree and does not touch the target directory tree at all.
 # -----------------------------------------------------------------------------
 import logging
-from os import environ
+
+from .global_symlinks import global_symlinks
+from .index_website import index_websites
+from .prepare_subdirectories import prepare_subdirectories
+from .update_css import update_css
+from .update_defaultxsls import update_defaultxsls
+from .update_localmenus import update_localmenus
+from .update_stylesheets import update_stylesheets
+from .update_tags import update_tags
+from .update_xmllists import update_xmllists
 
 logger = logging.getLogger(__name__)
 
@@ -16,33 +25,7 @@ def phase1_run(languages: list[str]):
     """
     Run all the necessary sub functions for phase1.
     """
-    # If in test mode
-    if environ.get("TEST", "FALSE") == "TRUE":
-        logger.info("Testing mode, typechecking enabled")
-        from typeguard import install_import_hook
-
-        # Must be above imports
-        install_import_hook("build.phase1.global_symlinks")
-        install_import_hook("build.phase1.index_website")
-        install_import_hook("build.phase1.prepare_subdirectories")
-        install_import_hook("build.phase1.update_css")
-        install_import_hook("build.phase1.update_defaultxsls")
-        install_import_hook("build.phase1.update_localmenus")
-        install_import_hook("build.phase1.update_stylesheets")
-        install_import_hook("build.phase1.update_tags")
-        install_import_hook("build.phase1.update_xmllists")
-        install_import_hook("build.phase1.update_xmllists")
-        install_import_hook("build.phase1.update_xmllists")
-
-    from build.phase1.global_symlinks import global_symlinks
-    from build.phase1.index_website import index_websites
-    from build.phase1.prepare_subdirectories import prepare_subdirectories
-    from build.phase1.update_css import update_css
-    from build.phase1.update_defaultxsls import update_defaultxsls
-    from build.phase1.update_localmenus import update_localmenus
-    from build.phase1.update_stylesheets import update_stylesheets
-    from build.phase1.update_tags import update_tags
-    from build.phase1.update_xmllists import update_xmllists
+    logger.info("Starting Phase 1")
 
     # -----------------------------------------------------------------------------
     # Build search index

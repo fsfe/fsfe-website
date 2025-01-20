@@ -131,7 +131,7 @@ def update_tags(languages: list[str]) -> None:
             tags_by_lang[lang] = sort_dict(tags_by_lang[lang])
 
         # Now we have the necessary data, begin
-        logger.info("Removing files for removed tags")
+        logger.debug("Removing files for removed tags")
         tagfiles_to_delete = filter(
             lambda path: not any([(tag in str(path)) for tag in files_by_tag]),
             list(Path(f"{site}/tags/").glob("tagged-*.en.xhtml"))
@@ -140,14 +140,14 @@ def update_tags(languages: list[str]) -> None:
         with multiprocessing.Pool(multiprocessing.cpu_count()) as pool:
             pool.map(delete_file, tagfiles_to_delete)
 
-        logger.info("Updating tag pages")
+        logger.debug("Updating tag pages")
         with multiprocessing.Pool(multiprocessing.cpu_count()) as pool:
             pool.starmap(
                 _update_tag_pages,
                 [(site, tag) for tag in files_by_tag],
             )
 
-        logger.info("Updating tag lists")
+        logger.debug("Updating tag lists")
         with multiprocessing.Pool(multiprocessing.cpu_count()) as pool:
             pool.starmap(
                 update_if_changed,
@@ -163,7 +163,7 @@ def update_tags(languages: list[str]) -> None:
                 ],
             )
 
-        logger.info("Updating tag sets")
+        logger.debug("Updating tag sets")
         # Get count of files with each tag in each section
         filecount = {}
         for section in ["news", "events"]:

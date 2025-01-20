@@ -1,4 +1,4 @@
-FROM debian:bookworm-slim
+FROM ghcr.io/astral-sh/uv:debian-slim
 RUN apt update
 # Install required packages
 RUN apt install --yes \
@@ -14,12 +14,11 @@ make \
 libc-bin \
 wget \
 procps \
-node-less \
-python3 \
-python3-venv \
-python3-pip
+golang-go \
+node-less
 
 WORKDIR /fsfe-websites
-ENTRYPOINT ["python3", "./build.py" ]
+# Run using uv directly, as the shebang gets confused
+ENTRYPOINT [ "uv", "run", "./build.py" ]
 
 

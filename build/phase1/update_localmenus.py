@@ -26,7 +26,7 @@ def _write_localmenus(
     )
     for lang in languages:
         file = Path(dir).joinpath(f".localmenu.{lang}.xml")
-        logger.info(f"Creating {file}")
+        logger.debug(f"Creating {file}")
         file.write_text(
             textwrap.dedent("""\
                         <?xml version="1.0"?>
@@ -83,7 +83,7 @@ def update_localmenus(languages: list[str]) -> None:
     for file in filter(
         lambda path: etree.parse(path).xpath("//localmenu")
         and "-template" not in str(path),
-        Path(".").glob("**/*.??.xhtml"),
+        Path(".").glob("*?.?*/**/*.??.xhtml"),
     ):
         xslt_root = etree.parse(file)
         dir = xslt_root.xpath("//localmenu/@dir")

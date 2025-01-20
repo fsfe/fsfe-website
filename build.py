@@ -66,17 +66,11 @@ if __name__ == "__main__":
         help="Directory to store status reports in.",
         type=Path,
     )
-    # parser.add_argument(
-    #     "--stage",
-    #     dest="stage",
-    #     help="Perform a dry run, not altering anything on the server, but printing messages as though it is.",
-    #     action="store_true",
-    # )
     parser.add_argument(
-        "--stage-dir",
-        dest="stage_dir",
-        help="Directory to store build status updates in",
-        type=Path,
+        "--stage",
+        dest="stage",
+        help="Force the use of an internal staging directory.",
+        action="store_true",
     )
     parser.add_argument(
         "--test",
@@ -106,7 +100,7 @@ if __name__ == "__main__":
         sys.exit(1)
     if not args.status_dir:
         args.status_dir = (
-            f'{args.target.removesuffix("/")}/status.fsfe.org/fsfe.org/data'
+            f"{args.target.removesuffix('/')}/status.fsfe.org/fsfe.org/data"
         )
     logger.debug(f"Args: {args}")
     to_run = (
@@ -116,11 +110,11 @@ if __name__ == "__main__":
             args.target,
         ]
         + (
-            [
-                "--stage-dir",
-                str(args.stage_dir),
-            ]
-            if args.stage_dir
+            ["--stage", "./output/stage"]
+            if args.stage
+            or "@" in args.target
+            or ":" in args.target
+            or "," in args.target
             else []
         )
         + (

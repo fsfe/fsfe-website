@@ -62,10 +62,11 @@ def _update_for_base(
     for file in Path("").glob(f"{base}.??.xhtml"):
         xslt_root = etree.parse(file)
         for module in xslt_root.xpath("//module"):
-            matching_files.add(f'global/data/modules/{module.get("id")}'.strip())
+            matching_files.add(f"global/data/modules/{module.get('id')}".strip())
     matching_files = sorted(matching_files)
     update_if_changed(
-        Path(f"{base.parent}/.{base.name}.xmllist"), "\n".join(matching_files) + "\n"
+        Path(f"{base.parent}/.{base.name}.xmllist"),
+        ("\n".join(matching_files) + "\n") if matching_files else "",
     )
 
 
@@ -128,7 +129,7 @@ def _check_xmllist_deps(file: Path) -> None:
         for line in fileobj:
             for newfile in Path("").glob(line + ".??.xml"):
                 xmls.add(newfile)
-    touch_if_newer_dep(str(file), xmls)
+    touch_if_newer_dep(file, list(xmls))
 
 
 def _touch_xmllists_with_updated_deps(languages: list[str]) -> None:
@@ -136,8 +137,10 @@ def _touch_xmllists_with_updated_deps(languages: list[str]) -> None:
     Touch all .xmllist files where one of the contained files has changed
     """
     logger.info("Checking contents of XML lists")
-    with multiprocessing.Pool(multiprocessing.cpu_count()) as pool:
-        pool.map(_check_xmllist_deps, Path("").glob("./**/.*.xmllist"))
+    # with multiprocessing.Pool(multiprocessing.cpu_count()) as pool:
+    #     pool.map(_check_xmllist_deps, Path("").glob("./**/.*.xmllist"))
+    for file in Path("").glob("./**/.*.xmllist"):
+        _check_xmllist_deps(file)
 
 
 def update_xmllists(languages: list[str]) -> None:

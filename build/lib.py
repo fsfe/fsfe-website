@@ -37,7 +37,7 @@ def update_if_changed(path: Path, content: str) -> None:
     write content to the file.
     """
     if not path.exists() or path.read_text() != content:
-        logger.info(f"Updating {path}")
+        logger.debug(f"Updating {path}")
         path.write_text(content)
 
 
@@ -58,5 +58,5 @@ def delete_file(file: Path) -> None:
     """
     Delete given file using pathlib
     """
-    logger.info(f"Removing file {file}")
+    logger.debug(f"Removing file {file}")
     file.unlink()

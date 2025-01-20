@@ -17,14 +17,17 @@ pkgs.mkShell {
     libxml2
     iconv
     wget
-    # Python needed for various scripts
-    # Python deps handled through requirements.txt
+    # We use uv to run scripts
+    # We still install python using nix to avoid issues with dynamic linked pythons from up
     python312
-    python312Packages.pip
-    # Needed only for non dev builds. IE --build-env "fsfe.org" or such
+    uv
+    # For less compilation
     lessc
     # Needed for translation status script
     perl
   ];
-  shellHook = '''';
+  shellHook = ''
+  # Force uv to use the nix python instead of installing its own
+  UV_SYSTEM_PYTHON=true    
+  '';
 }

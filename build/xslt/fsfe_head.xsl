@@ -54,45 +54,21 @@
     </xsl:element>
 
     <xsl:choose>
-      <xsl:when test="$build-env = 'development' and not(/buildinfo/document/@external)">
-        <xsl:choose>
-          <xsl:when test="$mode = 'valentine'">
-            <xsl:element name="link">
-              <xsl:attribute name="rel">stylesheet/less</xsl:attribute>
-              <xsl:attribute name="media">all</xsl:attribute>
-              <xsl:attribute name="href"><xsl:value-of select="$urlprefix"/>/look/valentine.less</xsl:attribute>
-              <xsl:attribute name="type">text/css</xsl:attribute>
-            </xsl:element>
-          </xsl:when>
-          <xsl:otherwise><!-- not valentine -->
-            <xsl:element name="link">
-              <xsl:attribute name="rel">stylesheet/less</xsl:attribute>
-              <xsl:attribute name="media">all</xsl:attribute>
-              <xsl:attribute name="href"><xsl:value-of select="$urlprefix"/>/look/fsfe.less</xsl:attribute>
-              <xsl:attribute name="type">text/css</xsl:attribute>
-            </xsl:element>
-          </xsl:otherwise>
-        </xsl:choose>
+      <xsl:when test="$mode = 'valentine'">
+        <xsl:element name="link">
+          <xsl:attribute name="rel">stylesheet</xsl:attribute>
+          <xsl:attribute name="media">all</xsl:attribute>
+          <xsl:attribute name="href"><xsl:value-of select="$urlprefix"/>/look/valentine.min.css</xsl:attribute>
+          <xsl:attribute name="type">text/css</xsl:attribute>
+        </xsl:element>
       </xsl:when>
-      <xsl:otherwise><!-- not development -->
-        <xsl:choose>
-          <xsl:when test="$mode = 'valentine'">
-            <xsl:element name="link">
-              <xsl:attribute name="rel">stylesheet</xsl:attribute>
-              <xsl:attribute name="media">all</xsl:attribute>
-              <xsl:attribute name="href"><xsl:value-of select="$urlprefix"/>/look/valentine.min.css</xsl:attribute>
-              <xsl:attribute name="type">text/css</xsl:attribute>
-            </xsl:element>
-          </xsl:when>
-          <xsl:otherwise><!-- not valentine -->
-            <xsl:element name="link">
-              <xsl:attribute name="rel">stylesheet</xsl:attribute>
-              <xsl:attribute name="media">all</xsl:attribute>
-              <xsl:attribute name="href"><xsl:value-of select="$urlprefix"/>/look/fsfe.min.css?20230215</xsl:attribute>
-              <xsl:attribute name="type">text/css</xsl:attribute>
-            </xsl:element>
-          </xsl:otherwise>
-        </xsl:choose>
+      <xsl:otherwise><!-- not valentine -->
+        <xsl:element name="link">
+          <xsl:attribute name="rel">stylesheet</xsl:attribute>
+          <xsl:attribute name="media">all</xsl:attribute>
+          <xsl:attribute name="href"><xsl:value-of select="$urlprefix"/>/look/fsfe.min.css?20230215</xsl:attribute>
+          <xsl:attribute name="type">text/css</xsl:attribute>
+        </xsl:element>
       </xsl:otherwise>
     </xsl:choose>
 

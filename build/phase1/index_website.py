@@ -45,7 +45,7 @@ def _process_file(file: Path, stopwords: set[str]) -> dict:
         filter(lambda tag: tag.get("key") != "front-page", xslt_root.xpath("//tag")),
     )
     return {
-        "url": f'/{file.with_suffix(".html")}',
+        "url": f"/{file.with_suffix('.html')}",
         "tags": " ".join(tags),
         "title": xslt_root.xpath("//html//title")[0].text
         if xslt_root.xpath("//html//title")

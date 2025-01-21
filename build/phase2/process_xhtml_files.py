@@ -1,7 +1,7 @@
 import logging
 import multiprocessing
-from pathlib import Path
 import subprocess
+from pathlib import Path
 
 logger = logging.getLogger(__name__)
 
@@ -13,37 +13,39 @@ def _process_dir(languages: list[str], target: Path, dir: Path) -> None:
         for lang in languages:
             source_file = basename.with_suffix(f".{lang}.xhtml")
             target_file = target.joinpath(source_file).with_suffix(".html")
-            if not target.exists() or any(
+            conds = (
                 [
-                    (file is None or file.stat().st_mtime > target.stat().st_mtime)
+                    (
+                        file.exists()
+                        and file.stat().st_mtime > target_file.stat().st_mtime
+                    )
                     for file in [
                         (
                             source_file
                             if source_file.exists()
                             else basename.with_suffix(".en.xhtml")
-                            if basename.with_suffix(".en.xhtml").exists()
-                            else None
                         ),
                         (
                             basename.with_suffix(".xsl")
-                            if basename.parent.joinpath(
-                                f".{basename.stem}.xsl"
-                            ).exists()
+                            if basename.with_suffix(".xsl").exists()
                             else basename.parent.joinpath(".default.xsl")
                         ),
-                        (
-                            target_file.with_suffix("").with_suffix(".xmllist")
-                            if target_file.with_suffix("")
-                            .with_suffix(".xmllist")
-                            .exists()
-                            else None
-                        ),
+                        target_file.with_suffix("").with_suffix(".xmllist"),
                         Path(f"global/data/texts/.texts.{lang}.xml"),
                         Path(f"global/data/topbanner/.topbanner.{lang}.xml"),
                         Path("global/data/texts/texts.en.xml"),
                     ]
                 ]
+                if target_file.exists()
+                else ["No targ file"]
+            )
+            logger.debug(conds)
+            if not target_file.exists() or any(
+                # If any source file is newer than the file to be generated
+                # If the file does not exist to
+                conds
             ):
+                logger.debug(f"Building {target_file}")
                 result = subprocess.run(
                     [
                         "build/process_file.sh",
@@ -62,7 +64,7 @@ def _process_dir(languages: list[str], target: Path, dir: Path) -> None:
 
 def process_xhtml_files(languages: list[str], target: Path) -> None:
     """
-    Create the generated xhtml files from xml sources
+    Build .html files from .xhtml sources
     """
     logger.info("Processing xhtml files")
 

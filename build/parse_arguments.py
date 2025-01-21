@@ -41,9 +41,10 @@ def parse_arguments() -> argparse.Namespace:
         "--languages",
         dest="languages",
         help="Languages to build website in.",
-        type=lambda input: input.split(",")
-        if input
-        else list(map(lambda path: path.name, Path(".").glob("global/languages/??"))),
+        default=list(
+            map(lambda path: path.name, Path(".").glob("global/languages/??"))
+        ),
+        type=lambda input: input.split(","),
     )
     # parser.add_argument(
     #     "--status",

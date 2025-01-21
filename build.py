@@ -21,7 +21,6 @@ import subprocess
 import sys
 from pathlib import Path
 
-
 from build.full import full
 from build.parse_arguments import parse_arguments
 from build.phase1.run import phase1_run
@@ -45,20 +44,14 @@ def main(args: argparse.Namespace):
     if args.update:
         update()
 
-    languages = (
-        args.languages.split(",")
-        if args.languages is not None
-        else list(map(lambda path: path.name, Path("global/languages").glob("??")))
-    )
-
     working_target = Path(
         "./output/stage"
         if args.stage or "@" in args.target or ":" in args.target or "," in args.target
         else args.target
     )
 
-    phase1_run(languages)
-    phase2_run(languages, working_target)
+    phase1_run(args.languages)
+    phase2_run(args.languages, working_target)
 
     to_run = (
         [
@@ -85,7 +78,7 @@ def main(args: argparse.Namespace):
         + (
             [
                 "--languages",
-                args.languages,
+                ",".join(args.languages),
             ]
             if args.languages
             else []

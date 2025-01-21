@@ -14,6 +14,9 @@ def _do_symlinking(target: Path) -> None:
 
 
 def create_index_symlinks(target: Path) -> None:
+    """
+    Create index.* symlinks
+    """
     logger.info("Creating index symlinks")
     with multiprocessing.Pool(multiprocessing.cpu_count()) as pool:
         pool.map(

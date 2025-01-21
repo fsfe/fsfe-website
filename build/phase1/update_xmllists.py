@@ -137,10 +137,8 @@ def _touch_xmllists_with_updated_deps(languages: list[str]) -> None:
     Touch all .xmllist files where one of the contained files has changed
     """
     logger.info("Checking contents of XML lists")
-    # with multiprocessing.Pool(multiprocessing.cpu_count()) as pool:
-    #     pool.map(_check_xmllist_deps, Path("").glob("./**/.*.xmllist"))
-    for file in Path("").glob("./**/.*.xmllist"):
-        _check_xmllist_deps(file)
+    with multiprocessing.Pool(multiprocessing.cpu_count()) as pool:
+        pool.map(_check_xmllist_deps, Path("").glob("./**/.*.xmllist"))
 
 
 def update_xmllists(languages: list[str]) -> None:

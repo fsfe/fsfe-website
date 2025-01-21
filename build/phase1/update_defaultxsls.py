@@ -29,7 +29,9 @@ def update_defaultxsls() -> None:
     logger.info("Updating default xsl's")
 
     # Get a set of all directories containing .xhtml source files
-    directories = set(map(lambda path: path.parent, Path(".").glob("*?.?*/**/*.*.xhtml")))
+    directories = set(
+        map(lambda path: path.parent, Path(".").glob("*?.?*/**/*.*.xhtml"))
+    )
 
     # Do all directories asynchronously
     with multiprocessing.Pool(multiprocessing.cpu_count()) as pool:

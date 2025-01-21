@@ -25,6 +25,8 @@ pkgs.mkShell {
     lessc
     # Needed for translation status script
     perl
+    # For checking python
+    ruff
   ];
   shellHook = ''
   # Force uv to use the nix python instead of installing its own

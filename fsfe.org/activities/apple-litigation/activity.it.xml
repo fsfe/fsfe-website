@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<activityset>
+  <version>1</version>
+
+  <activity id="devices" date="2024-10-18" status="active">
+    <title>DMA: Contenzioso contro Apple</title>
+    <description>
+      La FSFE sta intervenendo per salvaguardare il Software Libero in un caso giudiziario chiave che coinvolge Apple e la Commissione Europea.
+      Apple sta cercando di evitare gli obblighi derivanti dal Digital Markets Act (DMA).
+      La FSFE cerca di responsabilizzare Apple in base al DMA in modo favorevole agli sviluppatori.
+    </description>
+    <link href="/activities/apple-litigation/apple-litigation.html" />
+    <image url="/graphics/logos/applelitigation-logo.png" />
+    <order priority="5" highlight="yes" />
+    <tags>
+      <tag key="policy" />
+    </tags>
+  </activity>
+</activityset>

@@ -12,6 +12,7 @@
 
 # This will be overwritten in the command line running this Makefile.
 build_env = development
+languages = none
 
 # -----------------------------------------------------------------------------
 # Build search index
@@ -68,7 +69,7 @@ SUBDIRS := $(shell find . -regex "./[a-z\.]+\.[a-z]+/.*/Makefile" | xargs dirnam
 all: $(SUBDIRS)
 $(SUBDIRS): .FORCE
 	echo "* Preparing subdirectory $@"
-	$(MAKE) --silent --directory=$@
+	$(MAKE) --silent --directory=$@ languages="$(languages)"
 
 # -----------------------------------------------------------------------------
 # Create XML symlinks
@@ -82,9 +83,7 @@ $(SUBDIRS): .FORCE
 # otherwise. This symlinks make sure that phase 2 can easily use the right file
 # for each language, also as a prerequisite in the Makefile.
 
-LANGUAGES := $(shell ls -xw0 global/languages)
-
-TEXTS_LINKS := $(foreach lang,$(LANGUAGES),global/data/texts/.texts.$(lang).xml)
+TEXTS_LINKS := $(foreach lang,$(languages),global/data/texts/.texts.$(lang).xml)
 
 all: $(TEXTS_LINKS)
 global/data/texts/.texts.%.xml: .FORCE
@@ -94,7 +93,7 @@ global/data/texts/.texts.%.xml: .FORCE
 	  ln -sf texts.en.xml $@; \
 	fi
 
-TOPBANNER_LINKS := $(foreach lang,$(LANGUAGES),global/data/topbanner/.topbanner.$(lang).xml)
+TOPBANNER_LINKS := $(foreach lang,$(languages),global/data/topbanner/.topbanner.$(lang).xml)
 
 all: $(TOPBANNER_LINKS)
 global/data/topbanner/.topbanner.%.xml: .FORCE
@@ -134,7 +133,7 @@ default_xsl:
 .PHONY: localmenus
 all: localmenus
 localmenus: $(SUBDIRS)
-	tools/update_localmenus.sh
+	tools/update_localmenus.sh "$(languages)"
 
 # -----------------------------------------------------------------------------
 # Update XML filelists
@@ -155,4 +154,4 @@ localmenus: $(SUBDIRS)
 .PHONY: xmllists
 all: xmllists
 xmllists: $(SUBDIRS)
-	tools/update_xmllists.sh
+	tools/update_xmllists.sh "$(languages)"

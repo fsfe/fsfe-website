@@ -51,7 +51,8 @@ my $form = "      <!-- payment parameters -->\n" .
 # -----------------------------------------------------------------------------
 
 print "Content-type: text/html\n\n";
-open TEMPLATE, "/srv/www/html/global/order/tmpl-thankyou." . $lang . ".html";
+open TEMPLATE,
+  $ENV{"DOCUMENT_ROOT"} . "/order/tmpl-thankyou." . $lang . ".html";
 while (<TEMPLATE>) {
   s/:AMOUNT:/$amount_f/g;
   s/:REFERENCE:/$reference/g;

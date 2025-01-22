@@ -38,12 +38,10 @@ my %names = (
   "gabriel.ku" => "Gabriel Ku Wei Bin",
   "hf" => "Henning Fehr",
   "jn" => "Johannes Näder",
-  "lina.ceballos" => "Lina Ceballos",
   "linus" => "Linus Sehn",
   "lucas.lasota" => "Lucas Lasota",
   "marta" => "Marta Andreoli",
   "mk" => "Matthias Kirschner",
-  "jithendra" => "Jithendra Palepu",
   "reinhard" => "Reinhard Müller",
   "tobiasd" => "Tobias Diekershoff",
 );

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<activityset>
+  <version>1</version>
+
+  <activity id="devices" date="2024-10-18" status="active">
+    <title>DMA: Apple Litigation</title>
+    <description>
+      The FSFE is intervening to safeguard Free Software in a key court case involving Apple and the European Commission.
+      Apple is trying to avoid obligations derived from the Digital Markets Act (DMA).
+      The FSFE seeks to hold Apple accountable under the DMA in a developer-friendly way.
+    </description>
+    <link href="/activities/apple-litigation/apple-litigation.html" />
+    <image url="/graphics/logos/applelitigation-logo.png" />
+    <order priority="5" highlight="yes" />
+    <tags>
+      <tag key="policy" />
+    </tags>
+  </activity>
+</activityset>

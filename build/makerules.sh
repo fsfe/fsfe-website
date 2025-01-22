@@ -2,13 +2,12 @@
 
 inc_makerules=true
 
-tree_maker(){
-  # walk through file tree and issue Make rules according to file type
-  input="$(realpath "$1")"
-  output="$(realpath "$2")"
-  languages="$(ls -xw0 "${basedir}/global/languages")"
+tree_maker() {
+	# walk through file tree and issue Make rules according to file type
+	input="$(realpath "$1")"
+	output="$(realpath "$2")"
 
-  cat <<EOF
+	cat <<EOF
 # -----------------------------------------------------------------------------
 # Makefile for FSFE website build, phase 2
 # -----------------------------------------------------------------------------
@@ -17,7 +16,7 @@ tree_maker(){
 .DELETE_ON_ERROR:
 .SECONDEXPANSION:
 PROCESSOR = "$basedir/build/process_file.sh"
-PROCFLAGS = --build-env "${build_env:-development}" --source "$basedir" --domain "$domain"
+PROCFLAGS = --build-env "${build_env}" --source "$basedir"
 INPUTDIR = $input
 OUTPUTDIR = $output
 STATUSDIR = $statusdir
@@ -55,15 +54,15 @@ XSL_DEP = \$(firstword \$(wildcard \$(INPUTDIR)/\$*.xsl) \$(INPUTDIR)/\$(dir \$*
 all: \$(HTML_DST_FILES)
 EOF
 
-  for lang in ${languages}; do
-    cat<<EOF
+	for lang in ${languages}; do
+		cat <<EOF
 \$(filter %.${lang}.html,\$(HTML_DST_FILES)): \$(OUTPUTDIR)/%.${lang}.html: \$(INPUTDIR)/%.*.xhtml \$\$(XMLLIST_DEP) \$\$(XSL_DEP) \$(INPUTDIR)/global/data/texts/.texts.${lang}.xml \$(INPUTDIR)/global/data/texts/texts.en.xml \$(INPUTDIR)/global/data/topbanner/.topbanner.${lang}.xml
 	echo "* Building \$*.${lang}.html"
 	\${PROCESSOR} \${PROCFLAGS} process_file "\$(INPUTDIR)/\$*.${lang}.xhtml" > "\$@"
 EOF
-  done
+	done
 
-  cat <<EOF
+	cat <<EOF
 
 # -----------------------------------------------------------------------------
 # Create index.* symlinks
@@ -90,15 +89,15 @@ INDEX_DST_LINKS := \$(foreach base,\$(INDEX_DST_DIRS),\$(foreach lang,\$(LANGUAG
 all: \$(INDEX_DST_LINKS)
 EOF
 
-  for lang in ${languages}; do
-    cat<<EOF
+	for lang in ${languages}; do
+		cat <<EOF
 \$(filter %/index.${lang}.html,\$(INDEX_DST_LINKS)): \$(OUTPUTDIR)/%/index.${lang}.html:
 	echo "* Creating symlink \$*/index.${lang}.html"
 	ln -sf "\$(notdir \$*).${lang}.html" "\$@"
 EOF
-  done
+	done
 
-  cat <<EOF
+	cat <<EOF
 
 # -----------------------------------------------------------------------------
 # Create symlinks from file.<lang>.html to file.html.<lang>
@@ -110,15 +109,15 @@ HTML_DST_LINKS := \$(foreach base,\$(HTML_DST_BASES) \$(addsuffix index,\$(INDEX
 all: \$(HTML_DST_LINKS)
 EOF
 
-  for lang in ${languages}; do
-    cat<<EOF
+	for lang in ${languages}; do
+		cat <<EOF
 \$(OUTPUTDIR)/%.html.${lang}:
 	echo "* Creating symlink \$*.html.${lang}"
 	ln -sf "\$(notdir \$*).${lang}.html" "\$@"
 EOF
-  done
+	done
 
-  cat <<EOF
+	cat <<EOF
 
 # -----------------------------------------------------------------------------
 # Build .rss files from .xhtml sources
@@ -142,15 +141,15 @@ RSS_DST_FILES := \$(foreach base,\$(RSS_DST_BASES),\$(foreach lang,\$(LANGUAGES)
 all: \$(RSS_DST_FILES)
 EOF
 
-  for lang in ${languages}; do
-    cat<<EOF
+	for lang in ${languages}; do
+		cat <<EOF
 \$(OUTPUTDIR)/%.${lang}.rss: \$(INPUTDIR)/%.*.xhtml \$\$(XMLLIST_DEP) \$(INPUTDIR)/%.rss.xsl \$(INPUTDIR)/global/data/texts/.texts.${lang}.xml \$(INPUTDIR)/global/data/texts/texts.en.xml
 	echo "* Building \$*.${lang}.rss"
 	\${PROCESSOR} \${PROCFLAGS} process_file "\$(INPUTDIR)/\$*.${lang}.xhtml" "\$(INPUTDIR)/\$*.rss.xsl" > "\$@"
 EOF
-  done
+	done
 
-  cat <<EOF
+	cat <<EOF
 
 # -----------------------------------------------------------------------------
 # Build .ics files from .xhtml sources
@@ -174,15 +173,15 @@ ICS_DST_FILES := \$(foreach base,\$(ICS_DST_BASES),\$(foreach lang,\$(LANGUAGES)
 all: \$(ICS_DST_FILES)
 EOF
 
-  for lang in ${languages}; do
-    cat<<EOF
+	for lang in ${languages}; do
+		cat <<EOF
 \$(OUTPUTDIR)/%.${lang}.ics: \$(INPUTDIR)/%.*.xhtml \$\$(XMLLIST_DEP) \$(INPUTDIR)/%.ics.xsl \$(INPUTDIR)/global/data/texts/.texts.${lang}.xml \$(INPUTDIR)/global/data/texts/texts.en.xml
 	echo "* Building \$*.${lang}.ics"
 	\${PROCESSOR} \${PROCFLAGS} process_file "\$(INPUTDIR)/\$*.${lang}.xhtml" "\$(INPUTDIR)/\$*.ics.xsl" > "\$@"
 EOF
-  done
+	done
 
-  cat <<EOF
+	cat <<EOF
 
 # -----------------------------------------------------------------------------
 # Copy images, docments etc

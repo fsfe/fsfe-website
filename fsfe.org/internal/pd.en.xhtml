@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <html>
-  <version>1</version>
+  <version>2</version>
 
   <head>
     <title>Per Diem / VKP statement</title>
@@ -72,19 +72,12 @@
       </div>
 
       <div class="row form-group">
-        <label class="col-sm-3">ER number for this trip:</label>
-        <div class="col-sm-4">
-          <input type="text" name="er" class="form-control" pattern="(^\?$|^er\.[\d]{4}-[\d]{2}-[\d]{2}\.[\d.-]+)" placeholder="er.2020-..." required="required" />
-        </div>
-        <div class="col-sm-5 small">
-          (Enter <strong>?</strong> if you do not have it)
-        </div>
-      </div>
-
-      <div class="row form-group">
-        <label class="col-sm-3">Catchphrase of ER:</label>
-        <div class="col-sm-4">
-          <input type="text" name="catch" class="form-control" required="required" />
+        <label class="col-sm-3">Activity:</label>
+        <div class="col-sm-9">
+          <select  class="form-control col-sm-9" id="activity" size="1" required="required">
+            <option></option>
+            <module id="fsfe-activities-options" />
+          </select>
         </div>
       </div>
 

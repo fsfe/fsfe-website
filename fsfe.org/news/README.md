@@ -1,12 +1,12 @@
-Adding news
+# Adding news
 ===========
 
 There are two ways to add news to the web pages:
 
-**1**
+## 1
 Add an xml file with the following structure in the appropriate
 directory.
-
+```xml
 <?xml version="1.0" encoding="UTF-8"?> (you can choose an other encoding)
 
 <newsset>
@@ -18,25 +18,27 @@ directory.
     <link>link</link>
   </news>
 </newsset>
+```
 
 
 Put this file in the directory /news/this_year/
 There's a naming convention for these xml files:
 
+```
   'news-'newsdate'-'counter'.'language_part'.xml'
-
+```
 (eg: the English version of the first news file on the 4th November of
 2008 should be named news-20081104-01.en.xml and the file should go in
 the /news/2008/ directory)
 
-**2**
+## 2
 Add an xhtml file in the appropriate directory.
 
 Write an ordinary xhtml file. Add the newsdate="date" attribute in the
 xhtml tag. The first <p> element will be copied into the xml file.
 
 (eg:
-
+```xhtml
 <?xml versio ...
 
 <html newsdate="2008-10-07" link="link" >  (link attribute is optional)
@@ -54,7 +56,7 @@ xhtml tag. The first <p> element will be copied into the xml file.
 ....
 
 </html>
-
+```
 The link in the generated xml file will default to the original
 page. If you want it to link to another page then you can use the
 link attribute in the html tag.

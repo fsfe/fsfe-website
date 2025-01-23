@@ -19,7 +19,7 @@ pkgs.mkShell {
     wget
     # We use uv to run scripts
     # We still install python using nix to avoid issues with dynamic linked pythons from up
-    python312
+    python3 # Just use the latest python 3
     uv
     # For less compilation
     lessc

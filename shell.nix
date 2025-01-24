@@ -29,7 +29,7 @@ pkgs.mkShell {
     ruff
   ];
   shellHook = ''
-  # Force uv to use the nix python instead of installing its own
-  UV_SYSTEM_PYTHON=true    
+    # Force uv to use the nix python instead of installing its own
+    UV_SYSTEM_PYTHON=true    
   '';
 }

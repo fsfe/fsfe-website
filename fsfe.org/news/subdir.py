@@ -50,11 +50,10 @@ def _gen_xml_files(working_dir: Path, file: Path):
     )
 
 
-def run(languages: list[str]) -> None:
+def run(languages: list[str], working_dir: Path) -> None:
     """
     preparation for news subdirectory
     """
-    working_dir = Path(__file__).parent
     with multiprocessing.Pool(multiprocessing.cpu_count()) as pool:
         years = list(sorted(working_dir.glob("[0-9][0-9][0-9][0-9]")))
         # Copy news archive template to each of the years

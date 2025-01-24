@@ -11,9 +11,12 @@ def _process_stylesheet(languages: list[str], target: Path, source_xsl: Path) ->
     base_file = source_xsl.with_suffix("").with_suffix("")
     destination_base = target.joinpath(base_file)
     for lang in languages:
-        target_file = destination_base.with_suffix(f".{lang}{source_xsl.suffix}")
+        target_file = destination_base.with_suffix(
+            f".{lang}{source_xsl.with_suffix('').suffix}"
+        )
         source_xhtml = base_file.with_suffix(f".{lang}.xhtml")
-        conds = (
+        if not target_file.exists() or any(
+            # If any source file is newer than the file to be generated
             [
                 (file.exists() and file.stat().st_mtime > target_file.stat().st_mtime)
                 for file in [
@@ -22,23 +25,11 @@ def _process_stylesheet(languages: list[str], target: Path, source_xsl: Path) ->
                         if source_xhtml.exists()
                         else base_file.with_suffix(".en.xhtml")
                     ),
-                    (
-                        base_file.with_suffix(".xsl")
-                        if base_file.with_suffix(".xsl").exists()
-                        else base_file.parent.joinpath(".default.xsl")
-                    ),
+                    source_xsl,
                     Path(f"global/data/texts/.texts.{lang}.xml"),
                     Path("global/data/texts/texts.en.xml"),
                 ]
             ]
-            if target_file.exists()
-            else ["No targ file"]
-        )
-        logger.debug(conds)
-        if not target_file.exists() or any(
-            # If any source file is newer than the file to be generated
-            # If the file does not exist to
-            conds
         ):
             logger.debug(f"Building {target_file}")
             result = subprocess.run(

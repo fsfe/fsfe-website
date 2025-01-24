@@ -13,4 +13,80 @@
       <xsl:with-param name="subset" select="'yh4f'"/>
     </xsl:call-template>
   </xsl:template>
+
+  <!-- "Videobox" (provisional name) with YH4F/related talks -->
+  <xsl:template match="talks">
+    <style>
+    #yh4f-slideshow-caption {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      align-items: baseline;
+    }
+
+    #yh4f-iframe {
+      position: absolute;
+      inset: 0px;
+      min-height: 480px;
+      width: 100%;
+    }
+
+    #yh4f-figure {
+      width: 85vw;
+    }
+
+    #yh4f-iframe-container {
+      width: 100%;
+      min-height: 480px;
+    }
+    </style>
+
+    <figure id="yh4f-figure">
+      <div>
+        <div id="yh4f-iframe-container">
+          <iframe id="yh4f-iframe" src="https://media.fsfe.org/videos/embed/0dbe49c1-bd7d-44ca-bb97-1b922b3e110e" frameborder="0" allowfullscreen="" sandbox="allow-same-origin allow-scripts allow-popups allow-forms" />
+        </div>
+      </div>
+      <figcaption id="yh4f-slideshow-caption">
+        <button onclick="prevVideo();">←</button>
+        <a id="yh4f-title" href="https://media.fsfe.org/w/2GqZexjuYceajrbo7B8Sc1">Youth Hacking 4 Freedom</a>
+        <button onclick="nextVideo();">→</button>
+      </figcaption>
+    </figure>
+
+    <script type="text/javascript">
+      /* &lt;![CDATA[ */
+      var videos = [
+      <xsl:for-each select="/buildinfo/document/set/talk">
+        {
+          title: "<xsl:value-of select="title"/>",
+          iframe_url: "<xsl:value-of select="iframe-url"/>",
+          external_url: "<xsl:value-of select="external-url"/>",
+        },
+      </xsl:for-each>
+      ];
+
+      <![CDATA[
+      var index = Math.floor(Math.random()*videos.length);
+
+      function nextVideo() {
+        index = (index+1)%videos.length;
+        updateVideo();
+      }
+
+      function prevVideo() {
+        index = (index-1+videos.length)%videos.length;
+        updateVideo();
+      }
+
+      function updateVideo() {
+        $('#yh4f-iframe').attr("src", videos[index]['iframe_url']);
+        $('#yh4f-title').attr("href", videos[index]['external_url']);
+        $('#yh4f-title').text(videos[index]['title']);
+      }
+      ]]>
+
+      /* ]]&gt; */
+    </script>
+  </xsl:template>
 </xsl:stylesheet>

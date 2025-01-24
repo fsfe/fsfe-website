@@ -10,14 +10,17 @@ def prepare_subdirectories(languages: list[str]) -> None:
     Find any makefiles in subdirectories and run them
     """
     logger.info("Preparing Subdirectories")
-    for subdir_script in Path("").glob("?*.?*/**/subdir.py"):
-        logger.info(f"Preparing subdirectory {subdir_script.parent}")
-        sys.path.append(str(subdir_script.parent.resolve()))
+    for subdir_path in map(
+        lambda path: path.parent, Path("").glob("?*.?*/**/subdir.py")
+    ):
+        logger.info(f"Preparing subdir_pathectory {subdir_path}")
+        sys.path.append(str(subdir_path.resolve()))
         import subdir
-        subdir.run(languages)
+
+        subdir.run(languages, subdir_path)
         # Remove its path from where things can be imported
-        sys.path.remove(str(subdir_script.parent.resolve()))
+        sys.path.remove(str(subdir_path.resolve()))
         # Remove it from loaded modules
-        sys.modules.pop('subdir')
+        sys.modules.pop("subdir")
         # prevent us from accessing it again
         del subdir

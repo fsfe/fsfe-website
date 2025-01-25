@@ -4,6 +4,8 @@ import subprocess
 import sys
 from pathlib import Path
 
+from .process_file import process_file
+
 logger = logging.getLogger(__name__)
 
 
@@ -32,25 +34,27 @@ def _process_stylesheet(languages: list[str], target: Path, source_xsl: Path) ->
             ]
         ):
             logger.debug(f"Building {target_file}")
-            result = subprocess.run(
-                [
-                    "build/process_file.sh",
-                    "--build-env",
-                    "development",
-                    "--source",
-                    "./",
-                    "process_file",
-                    source_xhtml,
-                    source_xsl,
-                ],
-                capture_output=True,
-            )
-            if result.returncode == 1:
-                logger.critical("Processing rss failed, exiting!")
-                logger.critical(result.stderr)
-                sys.exit(1)
+            # result = subprocess.run(
+            #     [
+            #         "build/process_file.sh",
+            #         "--build-env",
+            #         "development",
+            #         "--source",
+            #         "./",
+            #         "process_file",
+            #         source_xhtml,
+            #         source_xsl,
+            #     ],
+            #     capture_output=True,
+            # )
+            # if result.returncode == 1:
+            #     logger.critical("Processing rss failed, exiting!")
+            #     logger.critical(result.stderr)
+            #     sys.exit(1)
+            result = process_file(source_xhtml, source_xsl)
             target_file.parent.mkdir(parents=True, exist_ok=True)
-            target_file.write_bytes(result.stdout)
+            # target_file.write_bytes(result.stdout)
+            target_file.write_text(result)
 
 
 def build_rss_ics_files(languages: list[str], target: Path) -> None:

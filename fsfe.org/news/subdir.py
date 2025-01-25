@@ -40,7 +40,8 @@ def _gen_xml_files(working_dir: Path, file: Path):
     xslt_tree = etree.parse(working_dir.joinpath("xhtml2xml.xsl"))
     transform = etree.XSLT(xslt_tree)
     result = transform(
-        etree.parse(file), link=f"'/news/{file.with_suffix('').with_suffix('.html')}'"
+        etree.parse(file),
+        link=f"'/news/{file.with_suffix('').with_suffix('.html').relative_to(file.parent.parent)}'",
     )
     update_if_changed(
         file.parent.joinpath(

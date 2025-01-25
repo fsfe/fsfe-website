@@ -53,42 +53,6 @@ def main(args: argparse.Namespace):
     phase1_run(args.languages)
     phase2_run(args.languages, working_target)
 
-    to_run = (
-        [
-            "./build/build_main.sh",
-            "build_run",
-            args.target,
-        ]
-        + (
-            ["--stage", "./output/stage"]
-            if args.stage
-            or "@" in args.target
-            or ":" in args.target
-            or "," in args.target
-            else []
-        )
-        + (
-            [
-                "--status-dir",
-                str(args.status_dir),
-            ]
-            if args.status_dir
-            else []
-        )
-        + (
-            [
-                "--languages",
-                ",".join(args.languages),
-            ]
-            if args.languages
-            else []
-        )
-    )
-    logger.debug(f"Subprocess command: {to_run}")
-    build = subprocess.run(to_run)
-    if build.returncode == 1:
-        logger.critical("Build process has failed, Exiting!")
-        sys.exit(1)
     if args.serve:
         serve_websites(args.target, 2000, 100)
 

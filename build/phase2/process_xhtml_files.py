@@ -1,18 +1,22 @@
 import logging
 import multiprocessing
-import subprocess
 from pathlib import Path
+
+from .process_file import process_file
 
 logger = logging.getLogger(__name__)
 
 
 def _process_dir(languages: list[str], target: Path, dir: Path) -> None:
-    for basename in set(
-        map(lambda path: path.with_suffix("").with_suffix(""), dir.glob("*.??.xhtml"))
-    ):
+    for basename in set(map(lambda path: path.with_suffix(""), dir.glob("*.??.xhtml"))):
         for lang in languages:
             source_file = basename.with_suffix(f".{lang}.xhtml")
             target_file = target.joinpath(source_file).with_suffix(".html")
+            processor = (
+                basename.with_suffix(".xsl")
+                if basename.with_suffix(".xsl").exists()
+                else basename.parent.joinpath(".default.xsl")
+            )
             conds = (
                 [
                     (
@@ -25,11 +29,7 @@ def _process_dir(languages: list[str], target: Path, dir: Path) -> None:
                             if source_file.exists()
                             else basename.with_suffix(".en.xhtml")
                         ),
-                        (
-                            basename.with_suffix(".xsl")
-                            if basename.with_suffix(".xsl").exists()
-                            else basename.parent.joinpath(".default.xsl")
-                        ),
+                        processor,
                         target_file.with_suffix("").with_suffix(".xmllist"),
                         Path(f"global/data/texts/.texts.{lang}.xml"),
                         Path(f"global/data/topbanner/.topbanner.{lang}.xml"),
@@ -46,20 +46,23 @@ def _process_dir(languages: list[str], target: Path, dir: Path) -> None:
                 conds
             ):
                 logger.debug(f"Building {target_file}")
-                result = subprocess.run(
-                    [
-                        "build/process_file.sh",
-                        "--build-env",
-                        "development",
-                        "--source",
-                        "./",
-                        "process_file",
-                        source_file,
-                    ],
-                    capture_output=True,
-                )
+                # result = subprocess.run(
+                #     [
+                #         "build/process_file.sh",
+                #         "--build-env",
+                #         "development",
+                #         "--source",
+                #         "./",
+                #         "process_file",
+                #         source_file,
+                #         processor,
+                #     ],
+                #     capture_output=True,
+                # )
+                result = process_file(source_file, processor)
                 target_file.parent.mkdir(parents=True, exist_ok=True)
-                target_file.write_bytes(result.stdout)
+                # target_file.write_bytes(result.stdout)
+                target_file.write_text(result)
 
 
 def process_xhtml_files(languages: list[str], target: Path) -> None:
@@ -68,13 +71,15 @@ def process_xhtml_files(languages: list[str], target: Path) -> None:
     """
     logger.info("Processing xhtml files")
 
-    with multiprocessing.Pool(multiprocessing.cpu_count()) as pool:
-        pool.starmap(
-            _process_dir,
-            [
-                (languages, target, dir)
-                for dir in set(
-                    map(lambda path: path.parent, Path("").glob("*?.?*/**/*.*.xhtml"))
-                )
-            ],
-        )
+    for dir in set(map(lambda path: path.parent, Path("").glob("*?.?*/**/*.*.xhtml"))):
+        _process_dir(languages, target, dir)
+    # with multiprocessing.Pool(multiprocessing.cpu_count()) as pool:
+    #     pool.starmap(
+    #         _process_dir,
+    #         [
+    #             (languages, target, dir)
+    #             for dir in set(
+    #                 map(lambda path: path.parent, Path("").glob("*?.?*/**/*.*.xhtml"))
+    #             )
+    #         ],
+    #     )

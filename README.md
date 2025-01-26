@@ -81,14 +81,12 @@ We can either install the required dependencies manually using our preferred pac
 
 If installing manually, the required binary names are 
 ```
-realpath rsync xsltproc xmllint sed find egrep grep wc make tee date iconv wget shuf python3 pip3
+uv
 ```
-The package names for Debian are 
+Also needed are the libraries
 ```
-bash bash-completion coreutils diffutils findutils inotify-tools libxml2-utils libxslt make procps python3 python3-pip python3-venv rsync
+libxml2 libxslt 
 ```
-The python dependencies are installed as part of the build process. They can be found in `requirements.txt`.
-
 After getting the dependencies one way or another we can actually build and serve the pages.
 
 The pages can be built and served by running `./build.py`. Try `--help` for more information. The simple web server used lacks the features of `apache` which used on the FSFE web servers. This is why no index is automatically selected for each directory and other behaviors.
@@ -96,10 +94,6 @@ The pages can be built and served by running `./build.py`. Try `--help` for more
 ### Docker
 Simply running `docker compose run --service-ports build --serve` should build the webpages and make them available over localhost.
 Some more explanation: we are essentially just using docker as a way to provide dependencies and then running the build script. All flags after `build` are passed to `build.sh`. The `service-ports` flag is required to open ports from the container for serving the output, not needed if not using the `--serve` flag of the build script.
-
-Please note that files generated during the build process using docker are owned by root. This does not cause issues unless you with to manually alter the output or switch to native building instead of docker.
-
-If you wish to switch to native building after using docker, you must use `sudo git clean -fdx` to remove the files generated using docker.
 
 ## Testing
 While most small changes can be tested adequately by building locally some larger changes, particularly ones relating to the order pages, event registration and other forms may require more integrated testing. This can be achieved using the `test` branch. This branch is built and served in the same way as the main site, [fsfe.org](https://fsfe.org). The built version of the `test` branch may be viewed at [test.fsfe.org](https://test.fsfe.org).

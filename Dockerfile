@@ -1,24 +1,21 @@
-FROM ghcr.io/astral-sh/uv:debian-slim
-RUN apt update
+FROM fedora:latest
 # Install required packages
-RUN apt install --yes \
-bash \
-coreutils \
+RUN dnf install -y \
 rsync \
-xsltproc \
-libxml2-utils \
-sed \
-findutils \
-grep \
-make \
-libc-bin \
-wget \
-procps \
-golang-go \
-node-less
+libxslt \
+libxml2 \
+golang \
+python3 \
+python3-pip \
+nodejs-less
 
-WORKDIR /fsfe-websites
-# Run using uv directly, as the shebang gets confused
-ENTRYPOINT [ "uv", "run", "./build.py" ]
+# Copy the local repo
+COPY . /website-source/
+RUN pip install -r /website-source/requirements.txt --root-user-action=ignore
+
+WORKDIR /website-source
+
+ENTRYPOINT [ "bash", "./entrypoint.sh" ]
+CMD [ "--target", "/website-cached/result" ]
 
 

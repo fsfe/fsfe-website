@@ -6,21 +6,11 @@
 }:
 pkgs.mkShell {
   nativeBuildInputs = with pkgs; [
-    # Needed for standard build
-    coreutils
-    findutils
-    gnused
-    gnugrep
-    gnumake
-    rsync
+    # The main required tool python
+    python3
+    # needed by lxml
     libxslt
     libxml2
-    iconv
-    wget
-    # We use uv to run scripts
-    # We still install python using nix to avoid issues with dynamic linked pythons from up
-    python3 # Just use the latest python 3
-    uv
     # For less compilation
     lessc
     # Needed for translation status script
@@ -29,7 +19,8 @@ pkgs.mkShell {
     ruff
   ];
   shellHook = ''
-    # Force uv to use the nix python instead of installing its own
-    UV_SYSTEM_PYTHON=true    
+    python -m venv .venv
+    source .venv/bin/activate
+    pip install -r requirements.txt
   '';
 }

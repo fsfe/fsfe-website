@@ -13,6 +13,8 @@ pkgs.mkShell {
     libxml2
     # For less compilation
     lessc
+    # Needed for git clean in full rebuilds
+    git
     # Needed for translation status script
     perl
     # For checking python

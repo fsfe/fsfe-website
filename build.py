@@ -10,7 +10,6 @@ from build.parse_arguments import parse_arguments
 from build.phase1.run import phase1_run
 from build.phase2.run import phase2_run
 from build.serve_websites import serve_websites
-from build.update import update
 
 logger = logging.getLogger(__name__)
 
@@ -25,8 +24,6 @@ def main(args: argparse.Namespace):
 
     if args.full:
         full()
-    if args.update:
-        update()
 
     working_target = Path(
         "./output/stage"

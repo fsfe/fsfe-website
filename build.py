@@ -1,24 +1,8 @@
-#!/usr/bin/env -S uv run
-
-# /// script
-# dependencies = [
-# # XML parser
-# "lxml==5.3.0",
-# # For getting english language names of languages from two letter codes.
-# "python-iso639==2024.10.22",
-# # For stopwords for the search index
-# "nltk==3.9.1",
-# # For minification html, css and js
-# "tdewolff-minify==2.20.37",
-# ]
-# ///
-
+#!/usr/bin/env python3
 
 import argparse
 import logging
 import os
-import subprocess
-import sys
 from pathlib import Path
 
 from build.full import full

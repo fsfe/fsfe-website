@@ -32,12 +32,6 @@ def parse_arguments() -> argparse.Namespace:
         action="store_true",
     )
     parser.add_argument(
-        "--update",
-        dest="update",
-        help="Update the repo as part of the build.",
-        action="store_true",
-    )
-    parser.add_argument(
         "--languages",
         dest="languages",
         help="Languages to build website in.",

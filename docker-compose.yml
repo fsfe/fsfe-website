@@ -12,4 +12,6 @@ services:
       - 2400:2400
       - 2500:2500
     volumes:
-      - ./:/fsfe-websites
+      - website-cached:/website-cached
+volumes:
+  website-cached:

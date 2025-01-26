@@ -7,6 +7,7 @@ libxml2 \
 golang \
 python3 \
 python3-pip \
+git \
 nodejs-less
 
 # Copy the local repo

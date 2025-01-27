@@ -2,7 +2,7 @@ import logging
 import multiprocessing
 from pathlib import Path
 
-from .process_file import process_file
+from build.process_file import process_file
 
 logger = logging.getLogger(__name__)
 
@@ -46,22 +46,8 @@ def _process_dir(languages: list[str], target: Path, dir: Path) -> None:
                 conds
             ):
                 logger.debug(f"Building {target_file}")
-                # result = subprocess.run(
-                #     [
-                #         "build/process_file.sh",
-                #         "--build-env",
-                #         "development",
-                #         "--source",
-                #         "./",
-                #         "process_file",
-                #         source_file,
-                #         processor,
-                #     ],
-                #     capture_output=True,
-                # )
                 result = process_file(source_file, processor)
                 target_file.parent.mkdir(parents=True, exist_ok=True)
-                # target_file.write_bytes(result.stdout)
                 target_file.write_text(result)
 
 
@@ -71,15 +57,13 @@ def process_xhtml_files(languages: list[str], target: Path) -> None:
     """
     logger.info("Processing xhtml files")
 
-    for dir in set(map(lambda path: path.parent, Path("").glob("*?.?*/**/*.*.xhtml"))):
-        _process_dir(languages, target, dir)
-    # with multiprocessing.Pool(multiprocessing.cpu_count()) as pool:
-    #     pool.starmap(
-    #         _process_dir,
-    #         [
-    #             (languages, target, dir)
-    #             for dir in set(
-    #                 map(lambda path: path.parent, Path("").glob("*?.?*/**/*.*.xhtml"))
-    #             )
-    #         ],
-    #     )
+    with multiprocessing.Pool(multiprocessing.cpu_count()) as pool:
+        pool.starmap(
+            _process_dir,
+            [
+                (languages, target, dir)
+                for dir in set(
+                    map(lambda path: path.parent, Path("").glob("*?.?*/**/*.*.xhtml"))
+                )
+            ],
+        )

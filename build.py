@@ -10,6 +10,7 @@ from build.parse_arguments import parse_arguments
 from build.phase1.run import phase1_run
 from build.phase2.run import phase2_run
 from build.serve_websites import serve_websites
+from build.stage_to_target import stage_to_target
 
 logger = logging.getLogger(__name__)
 
@@ -25,17 +26,19 @@ def main(args: argparse.Namespace):
     if args.full:
         full()
 
-    working_target = Path(
-        "./output/stage"
-        if args.stage or "@" in args.target or ":" in args.target or "," in args.target
-        else args.target
+    stage_required = any(
+        [args.stage, "@" in args.target, ":" in args.target, "," in args.target]
     )
+    working_target = Path("./output/stage" if stage_required else args.target)
 
     phase1_run(args.languages)
     phase2_run(args.languages, working_target)
 
+    if stage_required:
+        stage_to_target(working_target, args.target)
+
     if args.serve:
-        serve_websites(args.target, 2000, 100)
+        serve_websites(working_target, 2000, 100)
 
 
 if __name__ == "__main__":

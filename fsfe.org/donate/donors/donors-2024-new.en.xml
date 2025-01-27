@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  Please keep each list alphabetically ordered.  Emacs users want to set
+  sort-fold-case to true and run sort-lines on a region.  Vi+ users can
+  visually select the list and use the :sort command.
+
+  The date="..." should be filled with the last date when a donation from this
+  donor came in. It is important for the "current" thankgnus page.
+
+  Currently, the date="..." may only be set in a single xml file for the same
+  donor, so if you add a donor to a file of the new year, don't forget to
+  remove the date="..." in the old year's file.
+-->
+
+<donorset>
+  <version>1</version>
+
+  <category1>
+    <donor date="2024-11-22" img="donors/google.png" mark="yes">Google</donor>
+    <donor img="donors/linuxhotel.png">Linuxhotel Villa Vogelsang</donor>
+    <donor date="2024-07-08" img="donors/microsoft.png">Microsoft</donor>
+    <donor date="2024-11-12" img="donors/qualcomm.png">Qualcomm</donor>
+    <donor date="2024-09-13" img="donors/redhat.png">Red Hat</donor>
+    <donor date="2024-12-20" mark="yes">Reinhard Wiesemann</donor>
+    <donor date="2024-08-05" img="donors/siemens.png">Siemens</donor>
+  </category1>
+
+  <category2>
+    <donor date="2024-10-10" img="donors/silver-adfinis.png">Adfinis</donor>
+    <donor date="2024-07-25" img="donors/silver-avm.png">AVM</donor>
+    <donor date="2024-06-07" img="donors/silver-collabora.png">Collabora Productivity</donor>
+    <donor date="2024-06-11" img="donors/silver-libreoffice.jpg">Document Foundation</donor>
+    <donor date="2024-12-19" img="donors/silver-freiheit.png">freiheit.com technologies</donor>
+    <donor date="2024-12-03" img="donors/silver-heinlein-support.png">Heinlein Support</donor>
+    <donor date="2024-04-11" img="donors/silver-intel.png">Intel</donor>
+    <donor img="donors/silver-intevation-new.png">Intevation GmbH</donor>
+    <donor date="2024-06-17">Lars Hohl a.k.a. derPUPE</donor>
+    <donor date="2024-08-02" img="donors/silver-linagora.png">LINAGORA</donor>
+    <donor date="2024-07-17" img="donors/silver-linuxfoundation.png">Linux Foundation</donor>
+    <donor date="2024-06-10" img="donors/silver-nextcloud.png">Nextcloud</donor>
+    <donor date="2024-12-04" img="donors/silver-oin.jpg">Open Invention Network</donor>
+    <donor date="2024-05-16" img="donors/silver-openproject.png">OpenProject</donor>
+    <donor date="2024-12-13" img="donors/silver-proxmox.png">Proxmox</donor>
+    <donor date="2024-05-10" img="donors/silver-volvo.jpg">Volvo Cars</donor>
+    <donor date="2024-10-08" img="donors/silver-wmde.png">Wikimedia Deutschland</donor>
+    <donor date="2024-07-16" img="donors/silver-xwiki.png">XWiki / CryptPad Team</donor>
+  </category2>
+
+  <category3>
+    <donor date="2024-12-29">Arthur Schreiber</donor>
+    <donor date="2024-04-08">Büchel Blech AG</donor>
+    <donor date="2024-07-09">David Heinemeier Hansson</donor>
+    <donor date="2024-12-20">dyve</donor>
+    <donor date="2024-07-01">Ganten Investitions GmbH</donor>
+    <donor date="2024-10-29">Heinz-Dieter Böcker</donor>
+    <donor date="2024-08-13">Heuking Kühn Lüer Wojtek</donor>
+    <donor date="2024-03-26">Holger Kienle</donor>
+    <donor>Hostsharing eG</donor>
+    <donor>inmedias.it</donor>
+    <donor date="2024-12-29">ITOMIG GmbH</donor>
+    <donor date="2024-02-15">J. R. Haigh</donor>
+    <donor date="2024-07-17">Kommunikationsnetz Franken</donor>
+    <donor>LIHAS - LinuxHaus Stuttgart</donor><!-- Adrian Reyer -->
+    <donor date="2024-09-29">Martin F. Krafft</donor>
+    <donor date="2024-12-01">Matteo Settenvini</donor>
+    <donor date="2024-12-27">Menzel IT</donor>
+    <donor date="2024-12-30">Pablo González Otero</donor>
+    <donor date="2024-07-16">PROSA: Forbundet af it-professionelle</donor>
+    <donor date="2024-05-27">SUSE Open Source Community Citizens (OSCC)</donor>
+    <donor>sysmocom - systems for mobile communications</donor>
+    <donor date="2024-12-19">Timo Wagner</donor>
+    <donor date="2024-12-17">Univention</donor>
+    <donor date="2024-11-19">Vassilis<!-- Vassilios --> Voreopoulos</donor>
+    <donor date="2024-12-30">Wolfram Sang</donor>
+  </category3>
+</donorset>

@@ -1,4 +1,5 @@
 import logging
+import sys
 from pathlib import Path
 
 logger = logging.getLogger(__name__)
@@ -60,3 +61,19 @@ def delete_file(file: Path) -> None:
     """
     logger.debug(f"Removing file {file}")
     file.unlink()
+
+
+def lang_from_filename(file: Path) -> str:
+    """
+    Get the lang code from a file, where the filename is of format
+    <name>.XX.<ending>, with xx being the lang code.
+    """
+    lang = file.with_suffix("").suffix.removeprefix(".")
+    # Lang codes should be the iso 631 2 letter codes, but sometimes we use "nolang" to srop a file being built
+    if len(lang) != 2 and lang != "nolang":
+        logger.critical(
+            f"Language {lang} from file {file} not of correct length, exiting"
+        )
+        sys.exit(1)
+    else:
+        return lang

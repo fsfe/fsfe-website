@@ -5,6 +5,8 @@ from pathlib import Path
 
 import lxml.etree as etree
 
+from build.lib import lang_from_filename
+
 logger = logging.getLogger(__name__)
 
 
@@ -67,17 +69,13 @@ def _list_langs(file: Path) -> str:
         list(
             map(
                 lambda path: (
-                    f'<tr id="{path.with_suffix("").suffix.removeprefix(".")}">'
+                    f'<tr id="{lang_from_filename(path)}">'
                     + (
-                        Path(
-                            f"global/languages/{path.with_suffix('').suffix.removeprefix('.')}"
-                        )
+                        Path(f"global/languages/{lang_from_filename(path)}")
                         .read_text()
                         .strip()
-                        if Path(
-                            f"global/languages/{path.with_suffix('').suffix.removeprefix('.')}"
-                        ).exists()
-                        else path.with_suffix("").suffix.removeprefix(".")
+                        if Path(f"global/languages/{lang_from_filename(path)}").exists()
+                        else lang_from_filename(path)
                     )
                     + "</tr>"
                 ),
@@ -95,7 +93,7 @@ def _auto_sources(action_file: Path) -> str:
     attribute to first element included from each file
     """
     work_str = ""
-    lang = action_file.with_suffix("").suffix.removeprefix(".")
+    lang = lang_from_filename(action_file)
     list_file = action_file.with_stem(
         f".{action_file.with_suffix('').stem}"
     ).with_suffix(".xmllist")
@@ -121,7 +119,7 @@ def _build_xmlstream(infile: Path):
     """
     logger.debug(f"infile: {infile}")
     shortname = infile.with_suffix("")
-    lang = infile.with_suffix("").suffix.removeprefix(".")
+    lang = lang_from_filename(infile)
     logger.debug(
         f"formed glob: {
             infile.parent.joinpath(
@@ -223,7 +221,7 @@ def process_file(infile: Path, processor: Path) -> str:
     Process a given file using the correct xsl sheet
     """
     logger.debug(f"Processing {infile}")
-    lang = infile.with_suffix("").suffix.removeprefix(".")
+    lang = lang_from_filename(infile)
     xmlstream = _build_xmlstream(infile)
     xslt_tree = etree.parse(processor.resolve())
     transform = etree.XSLT(xslt_tree)

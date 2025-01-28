@@ -43,7 +43,6 @@
     <form action="/cgi-bin/perdiem.php" method="post">
       <!-- Define default settings and rates. Currently Germany -->
       <input type="hidden" name="defaults" value="€/0.2/0.4/0.4" />
-      <input type="hidden" name="category" value="6664 - Per diem" />
 
       <h2>1. Set general options</h2>
 
@@ -58,7 +57,7 @@
       <div class="row form-group">
         <label class="col-sm-3">Activity:</label>
         <div class="col-sm-9">
-          <select class="form-control col-sm-9" id="activity" size="1" required="required">
+          <select class="form-control col-sm-9" name="activity" id="activity" size="1" required="required">
             <option></option>
             <module id="fsfe-activities-options" />
           </select>

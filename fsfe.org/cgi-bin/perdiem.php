@@ -22,15 +22,18 @@ require 'PHPMailer/PHPMailer.php';
 require 'PHPMailer/SMTP.php';
 
 $html = ''; // create empty variable
-$csv = array(array("Employee name", "Date", "Amount (EUR)", "Recipient name", "ER number", "Catchphrase", "Receipt number", "Remarks")); // create array for CSV
+$csv = array(array("Employee name", "Date", "Amount (EUR)", "Recipient name", "Activity Tag", "Activity Text", "Category ID", "Category Text", "Description", "Receipt number", "Remarks")); // create array for CSV
 $csvfile = tmpfile();
 $csvfile_path = stream_get_meta_data($csvfile)['uri'];
 $reimb_total = 0;   // total reimbursement for early calculation
 
 $who = isset($_POST["who"]) ? $_POST["who"] : false;
 $activity = isset($_POST["activity"]) ? $_POST["activity"] : false;
-$category = isset($_POST["category"]) ? $_POST["category"] : false;
-$desciption = isset($_POST["description"]) ? $_POST["description"] : false;
+$activity_tag = explode(":", $activity)[0];
+$activity_text = explode(":", $activity)[1];
+$category_id = "6664";
+$category_text = "Per diem";
+$description = isset($_POST["description"]) ? $_POST["description"] : false;
 $extra = isset($_POST["extra"]) ? $_POST["extra"] : false;
 $mailopt = isset($_POST["mailopt"]) ? $_POST["mailopt"] : false;
 $defaults = isset($_POST["defaults"]) ? $_POST["defaults"] : false;
@@ -136,7 +139,10 @@ $html .= "<p>This per diem statement is made by <strong>$who_verbose</strong>.</
     <th>Date</th>
     <th>Amount</th>
     <th>Recipient</th>
-    <th>Activity</th>
+    <th>Activity Tag</th>
+    <th>Activity Text</th>
+    <th>Category Id</th>
+    <th>Category Text</th>
     <th>Description</th>
     <th>Receipt Name</th>
     <th>Remarks</th>
@@ -243,14 +249,17 @@ foreach ($use as $d => $day) {  // calculate for each day
       <td>$date[$d]</td>
       <td>$reimb_day[$d]</td>
       <td></td>
-      <td>$activity</td>
+      <td>$activity_tag</td>
+      <td>$activity_text</td>
+      <td>$category_id</td>
+      <td>$category_text</td>
       <td>$description</td>
-      <td>per diem</td>
+      <td></td>
       <td>$remarks[$d]</td>
     </tr>";
 
     // CSV for this receipt
-    $csv[$key] = array($who_verbose, $date[$d], $reimb_day[$d], "", $activity, $description, $category, $remarks[$d]);
+    $csv[$key] = array($who_verbose, $date[$d], $reimb_day[$d], "", $activity_tag, $activity_text, $category_id, $category_text, $description, "", $remarks[$d]);
 
   } // if day is used
 } // foreach

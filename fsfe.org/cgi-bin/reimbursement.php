@@ -166,10 +166,10 @@ foreach ($entry as $key => $date) {  // run over each row
   $receipt_size = $_FILES["receipt"]["size"][$key];
   $key1 = $key + 1;
   $receipt_no = sprintf('%02d', $key1);
-  $activity_tag = explode(":", $activity)[0];
-  $activity_text = explode(":", $activity)[1];
+  $activity_tag[$key] = explode(":", $activity)[0];
+  $activity_text[$key] = explode(":", $activity)[1];
   $category_id[$key] = explode(":", $category)[0];
-  $category_text[$key] = explode(":", $category)[0];
+  $category_text[$key] = explode(":", $category)[1];
 
   // Sanity checks for receipt: upload, size, mime type
   if (! $receipt_tmp) {

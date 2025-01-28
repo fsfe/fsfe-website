@@ -40,16 +40,10 @@ def parse_arguments() -> argparse.Namespace:
         ),
         type=lambda input: input.split(","),
     )
-    # parser.add_argument(
-    #     "--status",
-    #     dest="status",
-    #     help="Store status reports.",
-    #     action="store_true",
-    # )
     parser.add_argument(
-        "--status-dir",
-        dest="status_dir",
-        help="Directory to store status reports in.",
+        "--translation-status-dir",
+        dest="translation_status_dir",
+        help="Directory to store translation status reports in.",
         type=Path,
     )
     parser.add_argument(
@@ -65,8 +59,4 @@ def parse_arguments() -> argparse.Namespace:
         action="store_true",
     )
     args = parser.parse_args()
-    if not args.status_dir:
-        args.status_dir = (
-            f"{args.target.removesuffix('/')}/status.fsfe.org/fsfe.org/data"
-        )
     return args

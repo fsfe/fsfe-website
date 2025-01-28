@@ -172,7 +172,7 @@ def _build_xmlstream(infile: Path):
 		<buildinfo
 		  date="{date}"
 		  original="{original_lang}"
-		  filename="{shortname.with_suffix("")}"
+		  filename="/{str(shortname.with_suffix("")).removeprefix("/")}"
 		  fileurl="/{shortname.relative_to(shortname.parts[0]).with_suffix("")}"
 		  dirname="/{shortname.parent}/"
 		  language="{lang}"

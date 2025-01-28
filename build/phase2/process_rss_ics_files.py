@@ -2,13 +2,14 @@ import logging
 import multiprocessing
 from pathlib import Path
 
+from build.lib import get_basepath
 from build.process_file import process_file
 
 logger = logging.getLogger(__name__)
 
 
 def _process_stylesheet(languages: list[str], target: Path, source_xsl: Path) -> None:
-    base_file = source_xsl.with_suffix("").with_suffix("")
+    base_file = get_basepath(source_xsl)
     destination_base = target.joinpath(base_file)
     for lang in languages:
         target_file = destination_base.with_suffix(

@@ -8,6 +8,7 @@ import lxml.etree as etree
 
 from build.lib import (
     delete_file,
+    get_basepath,
     keys_exists,
     lang_from_filename,
     sort_dict,
@@ -114,7 +115,7 @@ def update_tags(languages: list[str]) -> None:
                 # Load into the dicts
                 if key not in files_by_tag:
                     files_by_tag[key] = set()
-                files_by_tag[key].add(file.with_suffix("").with_suffix(""))
+                files_by_tag[key].add(get_basepath(file))
                 lang = lang_from_filename(file)
                 if lang not in tags_by_lang:
                     tags_by_lang[lang] = {}

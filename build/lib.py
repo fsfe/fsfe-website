@@ -77,3 +77,17 @@ def lang_from_filename(file: Path) -> str:
         sys.exit(1)
     else:
         return lang
+
+
+def get_basepath(file: Path) -> Path:
+    """
+    Return the file with the last two suffixes removed
+    """
+    return file.with_suffix("").with_suffix("")
+
+
+def get_basename(file: Path) -> str:
+    """
+    Return the name of the file with the last two suffixes removed
+    """
+    return file.with_suffix("").with_suffix("").name

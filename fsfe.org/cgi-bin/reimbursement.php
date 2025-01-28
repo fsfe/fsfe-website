@@ -123,8 +123,11 @@ $html .= "<p>This <strong>$type_verbose</strong> is made by <strong>$who_verbose
     <th>Date</th>
     <th>Amount</th>
     <th>Recipient</th>
-    <th>Activity</th>
-    <th>Category</th>
+    <th>Activity Tag</th>
+    <th>Activity Text</th>
+    <th>Category ID</th>
+    <th>Category Text</th>
+    <th></th>
     <th>Receipt Name</th>
     <th>Remarks</th>
   </tr>";

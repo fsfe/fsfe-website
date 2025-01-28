@@ -1,5 +1,6 @@
 import logging
 import subprocess
+import sys
 from pathlib import Path
 
 import minify
@@ -38,6 +39,10 @@ def update_css() -> None:
                     # Get output as str instead of bytes
                     universal_newlines=True,
                 )
+                if result.returncode != 0:
+                    logger.critical("Less compilation failed with error")
+                    logger.critical(result.stderr)
+                    sys.exit(1)
                 update_if_changed(
                     folder.joinpath(name + ".min.css"),
                     minify.string("text/css", result.stdout),

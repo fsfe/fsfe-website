@@ -5,7 +5,7 @@ from pathlib import Path
 
 import lxml.etree as etree
 
-from build.lib import lang_from_filename
+from build.lib import get_basename, lang_from_filename
 
 logger = logging.getLogger(__name__)
 
@@ -37,7 +37,7 @@ def _include_xml(file: Path) -> str:
             root.remove(elem)
         # Iterate over all elements in root node, add a filename attribute and then append the string to work_str
         for parent in root.iter(tag=etree.Element):
-            parent.set("filename", file.with_suffix("").with_suffix("").name)
+            parent.set("filename", get_basename(file))
             work_str += etree.tostring(parent, encoding="utf-8").decode("utf-8")
 
     return work_str
@@ -79,9 +79,7 @@ def _list_langs(file: Path) -> str:
                     )
                     + "</tr>"
                 ),
-                file.parent.glob(
-                    f"{file.with_suffix('').with_suffix('').name}.??{file.suffix}"
-                ),
+                file.parent.glob(f"{get_basename(file)}.??{file.suffix}"),
             )
         )
     )
@@ -122,17 +120,13 @@ def _build_xmlstream(infile: Path):
     lang = lang_from_filename(infile)
     logger.debug(
         f"formed glob: {
-            infile.parent.joinpath(
-                f'{infile.with_suffix("").with_suffix("").name}.??{infile.suffix}'
-            )
+            infile.parent.joinpath(f'{get_basename(infile)}.??{infile.suffix}')
         }"
     )
     logger.debug(
         f"file lang list: {
             list(
-                infile.parent.glob(
-                    f'{infile.with_suffix("").with_suffix("").name}.??{infile.suffix}'
-                ),
+                infile.parent.glob(f'{get_basename(infile)}.??{infile.suffix}'),
             )
         }"
     )
@@ -140,9 +134,7 @@ def _build_xmlstream(infile: Path):
         "en"
         if infile.with_suffix("").with_suffix(f".en{infile.suffix}").exists()
         else sorted(
-            infile.parent.glob(
-                f"{infile.with_suffix('').with_suffix('').name}.??{infile.suffix}"
-            ),
+            infile.parent.glob(f"{get_basename(infile)}.??{infile.suffix}"),
             key=_get_version,
             reverse=True,
         )[0]

@@ -3,6 +3,7 @@ import multiprocessing
 from pathlib import Path
 
 logger = logging.getLogger(__name__)
+from build.lib import get_basename
 
 
 def _do_symlinking(target: Path) -> None:
@@ -22,8 +23,7 @@ def create_index_symlinks(target: Path) -> None:
         pool.map(
             _do_symlinking,
             filter(
-                lambda path: path.with_suffix("").with_suffix("").name
-                == path.parent.name,
+                lambda path: get_basename(path) == path.parent.name,
                 target.glob("**/*.??.html"),
             ),
         )

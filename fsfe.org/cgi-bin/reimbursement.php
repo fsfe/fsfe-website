@@ -211,14 +211,14 @@ foreach ($entry as $key => $date) {  // run over each row
     <td>$activity_tag[$key]</td>
     <td>$activity_text[$key]</td>
     <td>$category_id[$key]</td>
-    <td>$cytegory_text[$key]</td>
+    <td>$category_text[$key]</td>
     <td></td>
     <td>$receipt_name</td>
     <td>$remarks[$key]</td>
   </tr>";
 
   // CSV for this receipt
-  $csv[$receipt_no] = array($who_verbose, $date, $amount[$key], $recipient[$key], $activity_tag[$key], $activity_text[$key], $category_id[$key], $categpry_text[$key], "", $receipt_no, $remarks[$key]);
+  $csv[$receipt_no] = array($who_verbose, $date, $amount[$key], $recipient[$key], $activity_tag[$key], $activity_text[$key], $category_id[$key], $category_text[$key], "", $receipt_no, $remarks[$key]);
 
   // Add receipt as email attachment
   $email->addAttachment($receipt_dest[$key], basename($receipt_dest[$key]));

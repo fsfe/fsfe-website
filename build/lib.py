@@ -2,6 +2,8 @@ import logging
 import sys
 from pathlib import Path
 
+import lxml.etree as etree
+
 logger = logging.getLogger(__name__)
 
 
@@ -77,6 +79,20 @@ def lang_from_filename(file: Path) -> str:
         sys.exit(1)
     else:
         return lang
+
+
+def get_version(file: Path) -> int:
+    """
+    Get the version tag of an xhtml|xml file
+    """
+    xslt_tree = etree.parse(Path("build/xslt/get_version.xsl"))
+    transform = etree.XSLT(xslt_tree)
+    result = transform(etree.parse(file))
+    result = str(result).strip()
+    if result == "":
+        result = str(0)
+    logger.debug(f"Got version: {result}")
+    return int(result)
 
 
 def get_basepath(file: Path) -> Path:

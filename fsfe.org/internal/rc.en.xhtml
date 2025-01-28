@@ -22,32 +22,14 @@
       selecting the correct type (Reimbursement Claim or Credit Card).
     </p>
 
-    <form action="/cgi-bin/reimbursement.php" method="post" enctype="multipart/form-data">
+    <form id="rcform" action="/cgi-bin/reimbursement.php" method="post" enctype="multipart/form-data">
       <h2>1. Set general options</h2>
 
       <div class="form-group form-inline">
         <label class="col-sm-3">Employee:</label>
         <select class="form-control col-sm-9" name="who" size="1" required="required">
           <option />
-          <option value="Alexander Sander|alex.sander">Alexander Sander</option>
-          <option value="Ana Galan|anaghz">Ana Galán</option>
-          <option value="Bonnie Mehring|bonnie">Bonnie Mehring</option>
-          <option value="Carmen Bianca Bakker|carmenbianca">Carmen Bianca Bakker</option>
-          <option value="Dario Presutti|dario">Dario Presutti</option>
-          <option value="Erik Albers|eal">Erik Albers</option>
-          <option value="Erika Pirić|epiric">Erika Pirić</option>
-          <option value="Florian Snow|floriansnow">Florian Snow</option>
-          <option value="Francesca Indorato|fi">Francesca Indorato</option>
-          <option value="Gabriel Ku Wei Bin|gabriel.ku">Gabriel Ku Wei Bin</option>
-          <option value="Heiki Lõhmus|repentinus">Heiki Lõhmus</option>
-          <option value="Henning Fehr|hf">Henning Fehr</option>
-          <option value="Johannes Näder|jn">Johannes Näder</option>
-          <option value="Linus Sehn|linus">Linus Sehn</option>
-          <option value="Lucas Lasota|lucas.lasota">Lucas Lasota</option>
-          <option value="Max Mehl|max.mehl">Max Mehl</option>
-          <option value="Matthias Kirschner|mk">Matthias Kirschner</option>
-          <option value="Reinhard Müller|reinhard">Reinhard Müller</option>
-          <option value="Tobias Diekershoff|tobiasd">Tobias Diekershoff</option>
+          <module id="fsfe-employee-options" />
         </select>
       </div>
 
@@ -77,8 +59,8 @@
             <select class="form-control" name="rc_year">
               <option value="2022">2022</option>
               <option value="2023">2023</option>
-              <option value="2024" selected="selected">2024</option>
-              <option value="2025">2025</option>
+              <option value="2024">2024</option>
+              <option value="2025" selected="selected">2025</option>
             </select>
           </label>
         </div>
@@ -99,8 +81,8 @@
             <select class="form-control" name="cc_year">
               <option value="2022">2022</option>
               <option value="2023">2023</option>
-              <option value="2024" selected="selected">2024</option>
-              <option value="2025">2025</option>
+              <option value="2024">2024</option>
+              <option value="2025" selected="selected">2025</option>
             </select>
           </label>
         </div>
@@ -114,6 +96,7 @@
           <th>Amount</th>
           <th>Recipient</th>
           <th>Activity</th>
+          <th>Category</th>
           <th>Description</th>
           <th>Receipt Scan</th>
           <th>Rows</th>
@@ -124,6 +107,7 @@
           <td>In EUR. Format: 123,00</td>
           <td></td>
           <td>What activity was this part of</td>
+          <td>What category is the expense</td>
           <td>What specifically was paid for. <strong>-</strong> if equal to catchphrase</td>
           <td>Upload receipt as PDF, max. 2MB each</td>
           <td>Add a new row, or delete one</td>
@@ -134,6 +118,7 @@
           <td>12,34</td>
           <td>Berlin Bus Company</td>
           <td>Select the activity</td>
+          <td>Select fitting category or "other"</td>
           <td>Bus ticket from Berlin to New York</td>
           <td>e.g. busticket.pdf</td>
           <td></td>
@@ -143,7 +128,8 @@
           <td>Example 2: 17.04.2021</td>
           <td>67,89</td>
           <td>ACME</td>
-          <td>Select the activity</td>
+          <td></td>
+          <td></td>
           <td>USB adapter for external keyboard</td>
           <td>e.g. acme-adapter.pdf</td>
           <td></td>
@@ -154,8 +140,15 @@
           <td><input type="text" name="amount[]" class="form-control" pattern="-?\d{0,5},\d{2}" placeholder="12,34" required="required" /></td>
           <td><input type="text" name="recipient[]" class="form-control" required="required" /></td>
           <td><select class="form-control col-sm-3" id="activity" size="1" required="required">
-            <option></option>
             <module id="fsfe-activities-options" />
+          </select></td>
+          <td><select class="form-control col-sm-3" id="category" size="1">
+            <option value="???? - Other / I don't know">Other / I don't know</option>
+            <option value="6660: Travel costs - hotel">Travel costs - hotel</option>
+            <option value="6663: Travel costs - transport">Travel costs - transport</option>
+            <option value="6710: Packaging material">Packaging material</option>
+            <option value="6800: Postage">Postage</option>
+            <option value="6815: Office material">Office material</option>
           </select></td>
           <td><input type="text" name="remarks[]" class="form-control" required="required" /></td>
           <td><input type="file" name="receipt[]" class="form-control" required="required" /></td>

@@ -22,8 +22,8 @@ $cc_year = isset($_POST["cc_year"]) ? $_POST["cc_year"] : false;
 $entry = isset($_POST["entry"]) ? $_POST["entry"] : false; // will become $date in loop
 $amount = isset($_POST["amount"]) ? $_POST["amount"] : false;
 $recipient = isset($_POST["recipient"]) ? $_POST["recipient"] : false;
-$er = isset($_POST["er"]) ? $_POST["er"] : false;
-$catch = isset($_POST["catch"]) ? $_POST["catch"] : false;
+$activity = isset($_POST["activity"]) ? $_POST["activity"] : false;
+$category = isset($_POST["category"]) ? $_POST["category"] : false;
 $receipt = isset($_POST["receipt"]) ? $_POST["receipt"] : false;
 $remarks = isset($_POST["remarks"]) ? $_POST["remarks"] : false;
 $extra = isset($_POST["extra"]) ? $_POST["extra"] : false;
@@ -123,8 +123,8 @@ $html .= "<p>This <strong>$type_verbose</strong> is made by <strong>$who_verbose
     <th>Date</th>
     <th>Amount</th>
     <th>Recipient</th>
-    <th>ER number</th>
-    <th>Catchphrase</th>
+    <th>Activity</th>
+    <th>Category</th>
     <th>Receipt Name</th>
     <th>Remarks</th>
   </tr>";
@@ -145,7 +145,8 @@ $email->Port    = 25;
 $email->SetFrom($who . "@fsfe.org", $who_verbose);
 $email->Subject     = "$type_verbose for $type_date by $who_verbose";
 if ($mailopt === "normal") {
-  $email->addAddress("finance@lists.fsfe.org");
+  //$email->addAddress("finance@lists.fsfe.org");
+  $email->addAddress("tobiasd@fsfe.org");
 }
 $email->addAddress($who . "@fsfe.org");
 
@@ -203,14 +204,14 @@ foreach ($entry as $key => $date) {  // run over each row
     <td>$date</td>
     <td>$amount[$key]</td>
     <td>$recipient[$key]</td>
-    <td>$er[$key]</td>
-    <td>$catch[$key]</td>
+    <td>$activity[$key]</td>
+    <td>$category[$key]</td>
     <td>$receipt_name</td>
     <td>$remarks[$key]</td>
   </tr>";
 
   // CSV for this receipt
-  $csv[$receipt_no] = array($who_verbose, $date, $amount[$key], $recipient[$key], $er[$key], $catch[$key], $receipt_no, $remarks[$key]);
+  $csv[$receipt_no] = array($who_verbose, $date, $amount[$key], $recipient[$key], $activity[$key], $category[$key], $receipt_no, $remarks[$key]);
 
   // Add receipt as email attachment
   $email->addAttachment($receipt_dest[$key], basename($receipt_dest[$key]));

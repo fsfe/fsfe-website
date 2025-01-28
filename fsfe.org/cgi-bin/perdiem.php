@@ -28,8 +28,9 @@ $csvfile_path = stream_get_meta_data($csvfile)['uri'];
 $reimb_total = 0;   // total reimbursement for early calculation
 
 $who = isset($_POST["who"]) ? $_POST["who"] : false;
-$er = isset($_POST["er"]) ? $_POST["er"] : false;
-$catch = isset($_POST["catch"]) ? $_POST["catch"] : false;
+$activity = isset($_POST["activity"]) ? $_POST["activity"] : false;
+$category = isset($_POST["category"]) ? $_POST["category"] : false;
+$desciption = isset($_POST["description"]) ? $_POST["description"] : false;
 $extra = isset($_POST["extra"]) ? $_POST["extra"] : false;
 $mailopt = isset($_POST["mailopt"]) ? $_POST["mailopt"] : false;
 $defaults = isset($_POST["defaults"]) ? $_POST["defaults"] : false;
@@ -135,8 +136,8 @@ $html .= "<p>This per diem statement is made by <strong>$who_verbose</strong>.</
     <th>Date</th>
     <th>Amount</th>
     <th>Recipient</th>
-    <th>ER number</th>
-    <th>Catchphrase</th>
+    <th>Activity</th>
+    <th>Description</th>
     <th>Receipt Name</th>
     <th>Remarks</th>
   </tr>";
@@ -157,7 +158,8 @@ $email->Port    = 25;
 $email->SetFrom($who . "@fsfe.org", $who_verbose);
 $email->Subject     = "per diem statement by $who_verbose for $catch";
 if ($mailopt === "normal") {
-  $email->addAddress("finance@lists.fsfe.org");
+  //$email->addAddress("finance@lists.fsfe.org");
+  $email->addAddress("tobiasd@fsfe.org");
 }
 $email->addAddress($who . "@fsfe.org");
 
@@ -241,14 +243,14 @@ foreach ($use as $d => $day) {  // calculate for each day
       <td>$date[$d]</td>
       <td>$reimb_day[$d]</td>
       <td></td>
-      <td>$er</td>
-      <td>$catch</td>
+      <td>$activity</td>
+      <td>$description</td>
       <td>per diem</td>
       <td>$remarks[$d]</td>
     </tr>";
 
     // CSV for this receipt
-    $csv[$key] = array($who_verbose, $date[$d], $reimb_day[$d], "", $er, $catch, "per diem", $remarks[$d]);
+    $csv[$key] = array($who_verbose, $date[$d], $reimb_day[$d], "", $activity, $description, $category, $remarks[$d]);
 
   } // if day is used
 } // foreach
@@ -257,7 +259,7 @@ foreach ($use as $d => $day) {  // calculate for each day
 foreach ($csv as $fields) {
   fputcsv($csvfile, $fields, ';', '"', '"');
 }
-$email->addAttachment($csvfile_path, filter_filename("perdiem" ."-". $who ."-". $er ."-". $catch . ".csv"));
+$email->addAttachment($csvfile_path, filter_filename("perdiem" ."-". $who ."-". $activity ."-". $category . ".csv"));
 
 // Prepare email body
 $email_body = "Hi,

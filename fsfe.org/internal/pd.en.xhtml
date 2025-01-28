@@ -43,6 +43,7 @@
     <form action="/cgi-bin/perdiem.php" method="post">
       <!-- Define default settings and rates. Currently Germany -->
       <input type="hidden" name="defaults" value="€/0.2/0.4/0.4" />
+      <input type="hidden" name="category" value="6664 - Per diem" />
 
       <h2>1. Set general options</h2>
 
@@ -50,34 +51,24 @@
         <label class="col-sm-3">Employee:</label>
         <select class="form-control col-sm-9" name="who" size="1" required="required">
           <option />
-          <option value="Alexander Sander|alex.sander">Alexander Sander</option>
-          <option value="Ana Galan|anaghz">Ana Galán</option>
-          <option value="Bonnie Mehring|bonnie">Bonnie Mehring</option>
-          <option value="Carmen Bianca Bakker|carmenbianca">Carmen Bianca Bakker</option>
-          <option value="Dario Presutti|dario">Dario Presutti</option>
-          <option value="Erik Albers|eal">Erik Albers</option>
-          <option value="Erika Pirić|epiric">Erika Pirić</option>
-          <option value="Florian Snow|floriansnow">Florian Snow</option>
-          <option value="Francesca Indorato|fi">Francesca Indorato</option>
-          <option value="Gabriel Ku Wei Bin|gabriel.ku">Gabriel Ku Wei Bin</option>
-          <option value="Henning Fehr|hf">Henning Fehr</option>
-          <option value="Johannes Näder|jn">Johannes Näder</option>
-          <option value="Linus Sehn|linus">Linus Sehn</option>
-          <option value="Lucas Lasota|lucas.lasota">Lucas Lasota</option>
-          <option value="Max Mehl|max.mehl">Max Mehl</option>
-          <option value="Matthias Kirschner|mk">Matthias Kirschner</option>
-          <option value="Reinhard Müller|reinhard">Reinhard Müller</option>
-          <option value="Tobias Diekershoff|tobiasd">Tobias Diekershoff</option>
+          <module id="fsfe-employee-options" />
         </select>
       </div>
 
       <div class="row form-group">
         <label class="col-sm-3">Activity:</label>
         <div class="col-sm-9">
-          <select  class="form-control col-sm-9" id="activity" size="1" required="required">
+          <select class="form-control col-sm-9" id="activity" size="1" required="required">
             <option></option>
             <module id="fsfe-activities-options" />
           </select>
+        </div>
+      </div>
+
+      <div class="row form-group">
+        <label class="col-sm-3" label-for="description">Description (optional):</label>
+        <div class="col-sm-9">
+          <input type="text" id="description" name="description" class="form-control" />
         </div>
       </div>
 

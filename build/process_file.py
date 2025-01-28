@@ -5,19 +5,9 @@ from pathlib import Path
 
 import lxml.etree as etree
 
-from build.lib import get_basename, lang_from_filename
+from build.lib import get_basename, get_version, lang_from_filename
 
 logger = logging.getLogger(__name__)
-
-
-def _get_version(file: Path) -> int:
-    """
-    Get the version tag of an xhtml|xml file
-    """
-    xslt_tree = etree.parse(Path("build/xslt/get_version.xsl"))
-    transform = etree.XSLT(xslt_tree)
-    result = transform(etree.parse(file))
-    return int(result)
 
 
 def _include_xml(file: Path) -> str:
@@ -36,7 +26,10 @@ def _include_xml(file: Path) -> str:
         for elem in root.xpath("version"):
             root.remove(elem)
         # Iterate over all elements in root node, add a filename attribute and then append the string to work_str
-        for parent in root.iter(tag=etree.Element):
+        # By default root.iter delves into all sub elements. Use the filter to remove them
+        for parent in filter(
+            lambda elem: elem.getparent() == root, root.iter(tag=etree.Element)
+        ):
             parent.set("filename", get_basename(file))
             work_str += etree.tostring(parent, encoding="utf-8").decode("utf-8")
 
@@ -85,13 +78,12 @@ def _list_langs(file: Path) -> str:
     )
 
 
-def _auto_sources(action_file: Path) -> str:
+def _auto_sources(action_file: Path, lang: str) -> str:
     """
     import elements from source files, add file name
     attribute to first element included from each file
     """
     work_str = ""
-    lang = lang_from_filename(action_file)
     list_file = action_file.with_stem(
         f".{action_file.with_suffix('').stem}"
     ).with_suffix(".xmllist")
@@ -135,7 +127,7 @@ def _build_xmlstream(infile: Path):
         if infile.with_suffix("").with_suffix(f".en{infile.suffix}").exists()
         else sorted(
             infile.parent.glob(f"{get_basename(infile)}.??{infile.suffix}"),
-            key=_get_version,
+            key=get_version,
             reverse=True,
         )[0]
         .with_suffix("")
@@ -150,10 +142,10 @@ def _build_xmlstream(infile: Path):
 
     if infile.exists():
         action_lang = lang
-        original_version = _get_version(
+        original_version = get_version(
             shortname.with_suffix(f".{original_lang}{infile.suffix}")
         )
-        lang_version = _get_version(shortname.with_suffix(f".{lang}{infile.suffix}"))
+        lang_version = get_version(shortname.with_suffix(f".{lang}{infile.suffix}"))
         translation_state = (
             "up-to-date"
             if (original_version <= lang_version)
@@ -168,7 +160,7 @@ def _build_xmlstream(infile: Path):
     action_file = shortname.with_suffix(f".{action_lang}{infile.suffix}")
     logger.debug(f"action_file: {action_file}")
 
-    return f"""
+    result_str = f"""
 		<buildinfo
 		  date="{date}"
 		  original="{original_lang}"
@@ -198,7 +190,7 @@ def _build_xmlstream(infile: Path):
 		  {_get_attributes(action_file)}
 		>
 		  <set>
-		    {_auto_sources(action_file)}
+		    {_auto_sources(action_file, lang)} 
 		  </set>
 
 		  {_include_xml(action_file)}
@@ -206,6 +198,7 @@ def _build_xmlstream(infile: Path):
 
 		</buildinfo>
         """
+    return result_str
 
 
 def process_file(infile: Path, processor: Path) -> str:

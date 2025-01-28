@@ -38,7 +38,7 @@ def _update_for_base(
                     .strip()
                 )
                 if len(pattern) <= 0:
-                    print("Pattern too short, continue!")
+                    logger.debug("Pattern too short, continue!")
                     continue
                 tag = (
                     re.match(r":\[(.*)\]$", line).group().strip()

@@ -5,6 +5,8 @@ from pathlib import Path
 
 import lxml.etree as etree
 
+from build.lib import get_basepath
+
 logger = logging.getLogger(__name__)
 
 
@@ -18,7 +20,7 @@ def _write_localmenus(
         list(
             set(
                 map(
-                    lambda filter_file: filter_file.with_suffix("").with_suffix(""),
+                    lambda filter_file: get_basepath(filter_file),
                     files_by_dir[dir],
                 )
             )

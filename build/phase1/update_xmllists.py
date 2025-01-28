@@ -7,7 +7,12 @@ from pathlib import Path
 
 import lxml.etree as etree
 
-from build.lib import lang_from_filename, touch_if_newer_dep, update_if_changed
+from build.lib import (
+    get_basepath,
+    lang_from_filename,
+    touch_if_newer_dep,
+    update_if_changed,
+)
 
 logger = logging.getLogger(__name__)
 
@@ -81,7 +86,7 @@ def _update_module_xmllists(languages: list[str]) -> None:
         # Get all the bases and stuff before multithreading the update bit
         all_xml = set(
             map(
-                lambda path: path.with_suffix("").with_suffix(""),
+                lambda path: get_basepath(path),
                 filter(
                     lambda path: lang_from_filename(path) in languages,
                     Path(site).glob("**/*.*.xml"),
@@ -96,7 +101,7 @@ def _update_module_xmllists(languages: list[str]) -> None:
         )
         module_bases = set(
             map(
-                lambda path: path.with_suffix("").with_suffix(""),
+                lambda path: get_basepath(path),
                 filter(
                     lambda path: lang_from_filename(path) in languages
                     and etree.parse(path).xpath("//module"),

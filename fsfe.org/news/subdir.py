@@ -5,7 +5,7 @@ from textwrap import dedent
 
 import lxml.etree as etree
 
-from build.lib import update_if_changed
+from build.lib import lang_from_filename, update_if_changed
 
 logger = logging.getLogger(__name__)
 
@@ -71,8 +71,7 @@ def run(languages: list[str], working_dir: Path) -> None:
             [
                 (working_dir, file)
                 for file in filter(
-                    lambda path: path.with_suffix("").suffix.removeprefix(".")
-                    in languages
+                    lambda path: lang_from_filename(path) in languages
                     and etree.parse(path).xpath("//html[@newsdate]"),
                     working_dir.glob("*/*.??.xhtml"),
                 )

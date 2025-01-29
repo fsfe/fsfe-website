@@ -146,10 +146,10 @@ $email->Port    = 25;
 //$email->Password   = 'fsfe_pass';
 //$email->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
 $email->SetFrom($who . "@fsfe.org", $who_verbose);
-$email->Subject     = "$type_verbose for $type_date by $who_verbose";
+$email->CharSet = "UTF-8";
+$email->Subject     = "=?UTF-8?B?" . base64_encode("$type_verbose for $type_date by $who_verbose") . "?=";
 if ($mailopt === "normal") {
-  //$email->addAddress("finance@lists.fsfe.org");
-  $email->addAddress("tobiasd@fsfe.org");
+  $email->addAddress("finance@lists.fsfe.org");
 }
 $email->addAddress($who . "@fsfe.org");
 

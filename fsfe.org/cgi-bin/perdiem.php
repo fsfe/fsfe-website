@@ -167,7 +167,7 @@ if ($mailopt === "normal") {
   //$email->addAddress("finance@lists.fsfe.org");
   $email->addAddress("tobiasd@fsfe.org");
 }
-$email->addAddress($who . "@fsfe.org");
+//$email->addAddress($who . "@fsfe.org");
 
 
 foreach ($use as $d => $day) {  // calculate for each day

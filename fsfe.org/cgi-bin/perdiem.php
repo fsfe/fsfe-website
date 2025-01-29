@@ -162,7 +162,7 @@ $email->Port    = 25;
 //$email->Password   = 'fsfe_pass';
 //$email->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
 $email->SetFrom($who . "@fsfe.org", $who_verbose);
-$email->Subject     = "per diem statement by $who_verbose for $category_text";
+$email->Subject     = "=?UTF-8?B?" . base64_encode(per diem statement by $who_verbose for $category_text") . "?=";
 if ($mailopt === "normal") {
   //$email->addAddress("finance@lists.fsfe.org");
   $email->addAddress("tobiasd@fsfe.org");
@@ -268,13 +268,13 @@ foreach ($use as $d => $day) {  // calculate for each day
 foreach ($csv as $fields) {
   fputcsv($csvfile, $fields, ';', '"', '"');
 }
-$email->addAttachment($csvfile_path, filter_filename("perdiem" ."-". $who ."-". $activity ."-". $category . ".csv"));
+$email->addAttachment($csvfile_path, filter_filename("perdiem" ."-". $who ."-". $activity_tag ."-". $description . ".csv"));
 
 // Prepare email body
 $email_body = "Hi,
 
 This is a per diem statement by $who_verbose for
-$activity_tag ($category_text),
+$activity_tag ($activity_text),
 sent via <https://fsfe.org/internal/pd>.
 
 Please find the expenses attached.";
@@ -284,7 +284,7 @@ $reimb_total = number_format($reimb_total, 2, ',', '');
 
 // Finalise output table
 $html .= "<tr><td><strong>Total:</strong></td><td><strong>$reimb_total $currency</strong></td>";
-$html .= "<td colspan='5'></td></tr>";
+$html .= "<td colspan='8'></td></tr>";
 $html .= "</table>";
 if ($extra) {
   $html .= "<p>Extra remarks: <br />$extra</p>";

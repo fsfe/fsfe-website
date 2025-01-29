@@ -162,7 +162,7 @@ $email->Port    = 25;
 //$email->Password   = 'fsfe_pass';
 //$email->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
 $email->SetFrom($who . "@fsfe.org", $who_verbose);
-$email->Subject     = "per diem statement by $who_verbose for $catch";
+$email->Subject     = "per diem statement by $who_verbose for $category_text";
 if ($mailopt === "normal") {
   //$email->addAddress("finance@lists.fsfe.org");
   $email->addAddress("tobiasd@fsfe.org");
@@ -274,7 +274,7 @@ $email->addAttachment($csvfile_path, filter_filename("perdiem" ."-". $who ."-". 
 $email_body = "Hi,
 
 This is a per diem statement by $who_verbose for
-$catch (ER: $er),
+$activity_tag ($category_text),
 sent via <https://fsfe.org/internal/pd>.
 
 Please find the expenses attached.";

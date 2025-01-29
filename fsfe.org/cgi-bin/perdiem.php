@@ -165,10 +165,9 @@ $email->SetFrom($who . "@fsfe.org", $who_verbose);
 $email->CharSet = "UTF-8";
 $email->Subject     = "=?UTF-8?B?" . base64_encode("per diem statement by $who_verbose for $activity_text") . "?=";
 if ($mailopt === "normal") {
-  //$email->addAddress("finance@lists.fsfe.org");
-  $email->addAddress("tobiasd@fsfe.org");
+  $email->addAddress("finance@lists.fsfe.org");
 }
-//$email->addAddress($who . "@fsfe.org");
+$email->addAddress($who . "@fsfe.org");
 
 
 foreach ($use as $d => $day) {  // calculate for each day

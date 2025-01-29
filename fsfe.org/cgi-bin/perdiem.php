@@ -248,7 +248,7 @@ foreach ($use as $d => $day) {  // calculate for each day
     <tr>
       <td>$date[$d]</td>
       <td>$reimb_day[$d]</td>
-      <td></td>
+      <td>$who_verbose</td>
       <td>$activity_tag</td>
       <td>$activity_text</td>
       <td>$category_id</td>
@@ -259,7 +259,7 @@ foreach ($use as $d => $day) {  // calculate for each day
     </tr>";
 
     // CSV for this receipt
-    $csv[$key] = array($who_verbose, $date[$d], $reimb_day[$d], "", $activity_tag, $activity_text, $category_id, $category_text, $description, "", $remarks[$d]);
+    $csv[$key] = array($who_verbose, $date[$d], $reimb_day[$d], $who_verbose, $activity_tag, $activity_text, $category_id, $category_text, $description, "", $remarks[$d]);
 
   } // if day is used
 } // foreach

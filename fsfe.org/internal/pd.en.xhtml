@@ -40,7 +40,7 @@
       know whether a certain day counts as half/travel or full day.
     </p>
 
-    <form action="/cgi-bin/perdiem.php" method="post">
+    <form action="/cgi-bin/perdiem.php" method="post" enctype="multipart/form-data" accept-charset="utf-8">
       <!-- Define default settings and rates. Currently Germany -->
       <input type="hidden" name="defaults" value="€/0.2/0.4/0.4" />
 
@@ -48,10 +48,12 @@
 
       <div class="row form-group form-inline">
         <label class="col-sm-3">Employee:</label>
-        <select class="form-control col-sm-9" name="who" size="1" required="required">
-          <option />
-          <module id="fsfe-employee-options" />
-        </select>
+        <div class="col-sm-9">
+          <select class="form-control col-sm-9" name="who" size="1" required="required">
+            <option />
+            <module id="fsfe-employee-options" />
+          </select>
+        </div>
       </div>
 
       <div class="row form-group">

@@ -22,14 +22,18 @@ require 'PHPMailer/PHPMailer.php';
 require 'PHPMailer/SMTP.php';
 
 $html = ''; // create empty variable
-$csv = array(array("Employee name", "Date", "Amount (EUR)", "Recipient name", "ER number", "Catchphrase", "Receipt number", "Remarks")); // create array for CSV
+$csv = array(array("Employee name", "Date", "Amount (EUR)", "Recipient name", "Activity Tag", "Activity Text", "Category ID", "Category Text", "Description", "Receipt number", "Remarks")); // create array for CSV
 $csvfile = tmpfile();
 $csvfile_path = stream_get_meta_data($csvfile)['uri'];
 $reimb_total = 0;   // total reimbursement for early calculation
 
 $who = isset($_POST["who"]) ? $_POST["who"] : false;
-$er = isset($_POST["er"]) ? $_POST["er"] : false;
-$catch = isset($_POST["catch"]) ? $_POST["catch"] : false;
+$activity = isset($_POST["activity"]) ? $_POST["activity"] : false;
+$activity_tag = explode(":", $activity)[0];
+$activity_text = explode(":", $activity)[1];
+$category_id = "6664";
+$category_text = "Per diem";
+$description = isset($_POST["description"]) ? $_POST["description"] : false;
 $extra = isset($_POST["extra"]) ? $_POST["extra"] : false;
 $mailopt = isset($_POST["mailopt"]) ? $_POST["mailopt"] : false;
 $defaults = isset($_POST["defaults"]) ? $_POST["defaults"] : false;
@@ -135,8 +139,11 @@ $html .= "<p>This per diem statement is made by <strong>$who_verbose</strong>.</
     <th>Date</th>
     <th>Amount</th>
     <th>Recipient</th>
-    <th>ER number</th>
-    <th>Catchphrase</th>
+    <th>Activity Tag</th>
+    <th>Activity Text</th>
+    <th>Category Id</th>
+    <th>Category Text</th>
+    <th>Description</th>
     <th>Receipt Name</th>
     <th>Remarks</th>
   </tr>";
@@ -155,7 +162,8 @@ $email->Port    = 25;
 //$email->Password   = 'fsfe_pass';
 //$email->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
 $email->SetFrom($who . "@fsfe.org", $who_verbose);
-$email->Subject     = "per diem statement by $who_verbose for $catch";
+$email->CharSet = "UTF-8";
+$email->Subject     = "=?UTF-8?B?" . base64_encode("per diem statement by $who_verbose for $activity_text") . "?=";
 if ($mailopt === "normal") {
   $email->addAddress("finance@lists.fsfe.org");
 }
@@ -240,15 +248,18 @@ foreach ($use as $d => $day) {  // calculate for each day
     <tr>
       <td>$date[$d]</td>
       <td>$reimb_day[$d]</td>
+      <td>$who_verbose</td>
+      <td>$activity_tag</td>
+      <td>$activity_text</td>
+      <td>$category_id</td>
+      <td>$category_text</td>
+      <td>$description</td>
       <td></td>
-      <td>$er</td>
-      <td>$catch</td>
-      <td>per diem</td>
       <td>$remarks[$d]</td>
     </tr>";
 
     // CSV for this receipt
-    $csv[$key] = array($who_verbose, $date[$d], $reimb_day[$d], "", $er, $catch, "per diem", $remarks[$d]);
+    $csv[$key] = array($who_verbose, $date[$d], $reimb_day[$d], $who_verbose, $activity_tag, $activity_text, $category_id, $category_text, $description, "", $remarks[$d]);
 
   } // if day is used
 } // foreach
@@ -257,13 +268,13 @@ foreach ($use as $d => $day) {  // calculate for each day
 foreach ($csv as $fields) {
   fputcsv($csvfile, $fields, ';', '"', '"');
 }
-$email->addAttachment($csvfile_path, filter_filename("perdiem" ."-". $who ."-". $er ."-". $catch . ".csv"));
+$email->addAttachment($csvfile_path, filter_filename("perdiem" ."-". $who ."-". $activity_tag ."-". $description . ".csv"));
 
 // Prepare email body
 $email_body = "Hi,
 
 This is a per diem statement by $who_verbose for
-$catch (ER: $er),
+$activity_tag ($activity_text),
 sent via <https://fsfe.org/internal/pd>.
 
 Please find the expenses attached.";
@@ -273,7 +284,7 @@ $reimb_total = number_format($reimb_total, 2, ',', '');
 
 // Finalise output table
 $html .= "<tr><td><strong>Total:</strong></td><td><strong>$reimb_total $currency</strong></td>";
-$html .= "<td colspan='5'></td></tr>";
+$html .= "<td colspan='8'></td></tr>";
 $html .= "</table>";
 if ($extra) {
   $html .= "<p>Extra remarks: <br />$extra</p>";

@@ -9,7 +9,7 @@ require 'PHPMailer/PHPMailer.php';
 require 'PHPMailer/SMTP.php';
 
 $html = ''; // create empty variable
-$csv = array(array("Employee name", "Date", "Amount (EUR)", "Recipient name", "ER number", "Catchphrase", "Receipt number", "Remarks")); // create array for CSV
+$csv = array(array("Employee name", "Date", "Amount (EUR)", "Recipient name", "Activity Tag", "Activity Text", "Category ID", "Category Text", "Description", "", "Receipt number", "Remarks")); // create array for CSV
 $csvfile = tmpfile();
 $csvfile_path = stream_get_meta_data($csvfile)['uri'];
 
@@ -22,10 +22,10 @@ $cc_year = isset($_POST["cc_year"]) ? $_POST["cc_year"] : false;
 $entry = isset($_POST["entry"]) ? $_POST["entry"] : false; // will become $date in loop
 $amount = isset($_POST["amount"]) ? $_POST["amount"] : false;
 $recipient = isset($_POST["recipient"]) ? $_POST["recipient"] : false;
-$er = isset($_POST["er"]) ? $_POST["er"] : false;
-$catch = isset($_POST["catch"]) ? $_POST["catch"] : false;
+$activity = isset($_POST["activity"]) ? $_POST["activity"] : false;
+$category = isset($_POST["category"]) ? $_POST["category"] : false;
 $receipt = isset($_POST["receipt"]) ? $_POST["receipt"] : false;
-$remarks = isset($_POST["remarks"]) ? $_POST["remarks"] : false;
+$description = isset($_POST["description"]) ? $_POST["description"] : false;
 $extra = isset($_POST["extra"]) ? $_POST["extra"] : false;
 $mailopt = isset($_POST["mailopt"]) ? $_POST["mailopt"] : false;
 
@@ -123,10 +123,14 @@ $html .= "<p>This <strong>$type_verbose</strong> is made by <strong>$who_verbose
     <th>Date</th>
     <th>Amount</th>
     <th>Recipient</th>
-    <th>ER number</th>
-    <th>Catchphrase</th>
+    <th>Activity Tag</th>
+    <th>Activity Text</th>
+    <th>Category ID</th>
+    <th>Category Text</th>
+    <th>Description</th>
+    <th></th>
     <th>Receipt Name</th>
-    <th>Remarks</th>
+    <th></th>
   </tr>";
 
 // Prepare email
@@ -143,7 +147,8 @@ $email->Port    = 25;
 //$email->Password   = 'fsfe_pass';
 //$email->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
 $email->SetFrom($who . "@fsfe.org", $who_verbose);
-$email->Subject     = "$type_verbose for $type_date by $who_verbose";
+$email->CharSet = "UTF-8";
+$email->Subject     = "=?UTF-8?B?" . base64_encode("$type_verbose for $type_date by $who_verbose") . "?=";
 if ($mailopt === "normal") {
   $email->addAddress("finance@lists.fsfe.org");
 }
@@ -165,6 +170,10 @@ foreach ($entry as $key => $date) {  // run over each row
   $receipt_size = $_FILES["receipt"]["size"][$key];
   $key1 = $key + 1;
   $receipt_no = sprintf('%02d', $key1);
+  $activity_tag[$key] = explode(":", $activity)[0];
+  $activity_text[$key] = explode(":", $activity)[1];
+  $category_id[$key] = explode(":", $category)[0];
+  $category_text[$key] = explode(":", $category)[1];
 
   // Sanity checks for receipt: upload, size, mime type
   if (! $receipt_tmp) {
@@ -180,7 +189,7 @@ foreach ($entry as $key => $date) {  // run over each row
 
   // Set name and temporary destination for attached receipt
   $receipt_ext = pathinfo($receipt_name)['extension'];
-  $receipt_rename = filter_filename($type_date ."-". $type ."-". $who ."-receipt-". $receipt_no ."-". $er[$key] .".". "$receipt_ext");
+  $receipt_rename = filter_filename($type_date ."-". $type ."-". $who ."-receipt-". $receipt_no ."-". $activity_tag .".". "$receipt_ext");
   $receipt_dest[$key] = "/tmp/" . $receipt_rename;
 
   // Try to move file to temporary destination
@@ -193,8 +202,8 @@ foreach ($entry as $key => $date) {  // run over each row
   }
 
   // Remove "-" when remark empty
-  if ($remarks[$key] === "-") {
-    $remarks[$key] = "";
+  if ($description[$key] === "-") {
+    $description[$key] = "";
   }
 
   // HTML output for this receipt
@@ -203,14 +212,19 @@ foreach ($entry as $key => $date) {  // run over each row
     <td>$date</td>
     <td>$amount[$key]</td>
     <td>$recipient[$key]</td>
-    <td>$er[$key]</td>
-    <td>$catch[$key]</td>
+    <td>$activity_tag[$key]</td>
+    <td>$activity_text[$key]</td>
+    <td>$category_id[$key]</td>
+    <td>$category_text[$key]</td>
+    <td>$description[$key]</td>
     <td>$receipt_name</td>
-    <td>$remarks[$key]</td>
+    <td></td>
+    <td></td>
   </tr>";
 
+
   // CSV for this receipt
-  $csv[$receipt_no] = array($who_verbose, $date, $amount[$key], $recipient[$key], $er[$key], $catch[$key], $receipt_no, $remarks[$key]);
+  $csv[$receipt_no] = array($who_verbose, $date, $amount[$key], $recipient[$key], $activity_tag[$key], $activity_text[$key], $category_id[$key], $category_text[$key], $description[$key], "", $receipt_no, "");
 
   // Add receipt as email attachment
   $email->addAttachment($receipt_dest[$key], basename($receipt_dest[$key]));

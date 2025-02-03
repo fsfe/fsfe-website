@@ -38,3 +38,18 @@ input[type="file"] {
 label {
   font-weight: normal;
 }
+
+#category {
+  width: auto !important;
+  padding: inherit !important;
+  background: none !important;
+  margin-top: 0px !important;
+}
+#content input[type="radio"] {
+  margin: 0 0 0 -20px;
+}
+
+#description-help {
+  font-size: 0.8em;
+  color: #616161be;
+}

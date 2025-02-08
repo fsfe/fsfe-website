@@ -39,12 +39,12 @@ steps:
       - docker ps && echo "tampered with"
       - docker compose down
       - docker compose pull --ignore-buildable --include-deps
-      - docker compose -p fsfe-website run --build --service-ports build --translation-status-dir "./status.fsfe.org/translations/data" --target "$TARGET" --serve
-    # when:
-    #   branch:
-    #     - test
-    #   event:
-    #     - deployment
+      - docker compose -p fsfe-website run --build build --translation-status-dir "./status.fsfe.org/translations/data" --target "$TARGET"
+    when:
+      branch:
+        - test
+      event:
+        - deployment
 
 trigger:
   branch:

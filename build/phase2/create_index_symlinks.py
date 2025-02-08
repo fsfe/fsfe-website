@@ -2,8 +2,9 @@ import logging
 import multiprocessing
 from pathlib import Path
 
-logger = logging.getLogger(__name__)
 from build.lib import get_basename
+
+logger = logging.getLogger(__name__)
 
 
 def _do_symlinking(target: Path) -> None:

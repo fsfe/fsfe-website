@@ -7,7 +7,11 @@ clone:
   depth: 150
 
 steps:
-  - name: checks
+  - name: check-python
+    image: ghcr.io/astral-sh/ruff:latest 
+    command: [ "check", "." ]
+
+  - name: check-custom
     image: debian:bookworm
     commands:
       - apt update
@@ -20,6 +24,28 @@ steps:
       # Check syntax for all files as a safety net
       - find . -type f \( -iname "*.xhtml" -o -iname "*.xml" -o -iname "*.xsl" \) -exec xmllint --noout {} +
 
+  - name: deploy-test
+    image: docker:27.4.1
+    environment:
+      # Environment variables necessary for rootless Docker
+      XDG_RUNTIME_DIR: "/run/user/1001"
+      DOCKER_HOST: "unix:///run/user/1001/docker.sock"
+      TARGET: "../result"
+    volumes:
+      # Mounting Docker socket of rootless docker user
+      - name: dockersock
+        path: /run/user/1001/docker.sock
+    commands:
+      - docker ps && echo "tampered with"
+      - docker compose down
+      - docker compose pull --ignore-buildable --include-deps
+      - docker compose -p fsfe-website run --build --service-ports build --translation-status-dir "./status.fsfe.org/translations/data" --target "$TARGET" --serve
+    # when:
+    #   branch:
+    #     - test
+    #   event:
+    #     - deployment
+
 trigger:
   branch:
     - master
@@ -27,6 +53,15 @@ trigger:
   event:
     - push
     - pull_request
+
+node:
+  cont1: plutex
+
+volumes:
+  # Define Docker socket of rootless docker user
+  - name: dockersock
+    host:
+      path: /run/user/1001/docker.sock
 ---
 kind: signature
 hmac: 4c0dd0f272458d12234c72f66c4d420069591cac83819644df3c03a280102ded

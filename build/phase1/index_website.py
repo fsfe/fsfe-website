@@ -47,9 +47,11 @@ def _process_file(file: Path, stopwords: set[str]) -> dict:
     return {
         "url": f"/{file.with_suffix('.html')}",
         "tags": " ".join(tags),
-        "title": xslt_root.xpath("//html//title")[0].text
-        if xslt_root.xpath("//html//title")
-        else "",
+        "title": (
+            xslt_root.xpath("//html//title")[0].text
+            if xslt_root.xpath("//html//title")
+            else ""
+        ),
         "teaser": " ".join(
             w
             for w in _find_teaser(xslt_root).strip().split(" ")
@@ -57,9 +59,11 @@ def _process_file(file: Path, stopwords: set[str]) -> dict:
         ),
         "type": "news" if "news/" in str(file) else "page",
         # Get the date of the file if it has one
-        "date": xslt_root.xpath("//news[@newsdate]").get("newsdate")
-        if xslt_root.xpath("//news[@newsdate]")
-        else None,
+        "date": (
+            xslt_root.xpath("//news[@newsdate]").get("newsdate")
+            if xslt_root.xpath("//news[@newsdate]")
+            else None
+        ),
     }
 
 
@@ -89,18 +93,20 @@ def index_websites(languages: list[str]) -> None:
                 map(
                     lambda file: (
                         file,
-                        set(
-                            nltk_stopwords.words(
-                                iso639.Language.from_part1(
-                                    file.suffixes[0].removeprefix(".")
-                                ).name.lower()
+                        (
+                            set(
+                                nltk_stopwords.words(
+                                    iso639.Language.from_part1(
+                                        file.suffixes[0].removeprefix(".")
+                                    ).name.lower()
+                                )
                             )
-                        )
-                        if iso639.Language.from_part1(
-                            file.suffixes[0].removeprefix(".")
-                        ).name.lower()
-                        in nltk_stopwords.fileids()
-                        else set(),
+                            if iso639.Language.from_part1(
+                                file.suffixes[0].removeprefix(".")
+                            ).name.lower()
+                            in nltk_stopwords.fileids()
+                            else set()
+                        ),
                     ),
                     filter(
                         lambda file: file.suffixes[0].removeprefix(".") in languages,

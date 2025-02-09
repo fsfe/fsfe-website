@@ -46,18 +46,24 @@ def _generate_translation_data(lang: str, priority: int, file: Path) -> dict:
     original_url = (
         f"https://webpreview.fsfe.org?uri=/{page.relative_to(page.parts[0])}.en.html"
         if ext == "xhtml"
-        else f"https://git.fsfe.org/FSFE/fsfe-website/src/branch/master/{page}.en.xml"
-        if ext == "xml"
-        else "#"
+        else (
+            f"https://git.fsfe.org/FSFE/fsfe-website/src/branch/master/{page}.en.xml"
+            if ext == "xml"
+            else "#"
+        )
     )
     translation_url = (
         "#"
         if not working_file.exists()
-        else f"https://webpreview.fsfe.org?uri=/{page.relative_to(page.parts[0])}.{lang}.html"
-        if ext == "xhtml"
-        else f"https://git.fsfe.org/FSFE/fsfe-website/src/branch/master/{page}.{lang}.xml"
-        if ext == "xml"
-        else "#"
+        else (
+            f"https://webpreview.fsfe.org?uri=/{page.relative_to(page.parts[0])}.{lang}.html"
+            if ext == "xhtml"
+            else (
+                f"https://git.fsfe.org/FSFE/fsfe-website/src/branch/master/{page}.{lang}.xml"
+                if ext == "xml"
+                else "#"
+            )
+        )
     )
 
     return (
@@ -142,9 +148,11 @@ def _create_translation_file(
         page,
         "missing-texts",
         en=str(get_version(en_texts_file)),
-        curr_lang=str(get_version(lang_texts_file))
-        if lang_texts_file.exists()
-        else "No texts File!",
+        curr_lang=(
+            str(get_version(lang_texts_file))
+            if lang_texts_file.exists()
+            else "No texts File!"
+        ),
         url=f"https://git.fsfe.org/FSFE/fsfe-website/src/branch/master/{lang_texts_file}",
         filepath=str(lang_texts_file),
     )
@@ -162,12 +170,10 @@ def _create_translation_file(
 
 def run(languages: list[str], working_dir: Path) -> None:
     """
-    Build translation-status xmls for languages where the translation status has changed. Xmls are placed in target_folder, and only languages are processed.
+    Build translation-status xmls for languages where the translation status has changed. Xmls are placed in target_dir, and only languages are processed.
     """
-    target_folder = working_dir.joinpath("data/")
-    logger.debug(
-        f"Building index of status of translations into folder {target_folder}"
-    )
+    target_dir = working_dir.joinpath("data/")
+    logger.debug(f"Building index of status of translations into dir {target_dir}")
 
     result = subprocess.run(
         ["git", "rev-parse", "--show-toplevel"],
@@ -254,16 +260,16 @@ def run(languages: list[str], working_dir: Path) -> None:
                 )
 
         # sadly single treaded, as only one file being operated on
-        _create_overview(target_folder, files_by_lang_by_prio)
+        _create_overview(target_dir, files_by_lang_by_prio)
 
         for data in [
-            (target_folder, lang, files_by_lang_by_prio[lang])
+            (target_dir, lang, files_by_lang_by_prio[lang])
             for lang in files_by_lang_by_prio
         ]:
             pool.starmap(
                 _create_translation_file,
                 [
-                    (target_folder, lang, files_by_lang_by_prio[lang])
+                    (target_dir, lang, files_by_lang_by_prio[lang])
                     for lang in files_by_lang_by_prio
                 ],
             )

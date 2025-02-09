@@ -10,25 +10,27 @@ from build.lib import lang_from_filename, update_if_changed
 logger = logging.getLogger(__name__)
 
 
-def _gen_archive_index(working_dir: Path, languages: list[str], folder: Path):
-    logger.debug(f"Operating on folder {folder}")
+def _gen_archive_index(working_dir: Path, languages: list[str], dir: Path):
+    logger.debug(f"Operating on dir {dir}")
     for lang in languages:
         logger.debug(f"Operating on lang {lang}")
         template = working_dir.joinpath(f"archive-template.{lang}.xhtml")
         if template.exists():
             logger.debug("Template Exists!")
             content = template.read_text()
-            content = content.replace(":YYYY:", folder.name)
-            folder.joinpath(f"index.{lang}.xhtml").write_text(content)
+            content = content.replace(":YYYY:", dir.name)
+            dir.joinpath(f"index.{lang}.xhtml").write_text(content)
 
 
-def _gen_index_sources(folder: Path):
-    folder.joinpath("index.sources").write_text(
-        dedent(f"""\
-                {folder}/news-*:[]
-                {folder}/.news-*:[]
-                {folder.parent}/.localmenu:[]
-            """)
+def _gen_index_sources(dir: Path):
+    dir.joinpath("index.sources").write_text(
+        dedent(
+            f"""\
+                {dir}/news-*:[]
+                {dir}/.news-*:[]
+                {dir.parent}/.localmenu:[]
+            """
+        )
     )
 
 
@@ -60,7 +62,7 @@ def run(languages: list[str], working_dir: Path) -> None:
         # Copy news archive template to each of the years
         pool.starmap(
             _gen_archive_index,
-            [(working_dir, languages, folder) for folder in years[:-2]],
+            [(working_dir, languages, dir) for dir in years[:-2]],
         )
         logger.debug("Finished Archiving")
         # Generate index.sources for every year

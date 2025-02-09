@@ -37,28 +37,36 @@ def _update_tag_sets(
     """
     Update the .tags.??.xml tagset xmls for a given tag
     """
-    taglist = textwrap.dedent("""\
+    taglist = textwrap.dedent(
+        """\
             <?xml version="1.0" encoding="UTF-8"?>
     
             <tagset>
-           """)
+           """
+    )
     for section in ["news", "events"]:
         for tag in files_by_tag:
             count = filecount[section][tag]
             label = (
                 tags_by_lang[lang][tag]
                 if keys_exists(tags_by_lang, lang, tag) and tags_by_lang[lang][tag]
-                else tags_by_lang["en"][tag]
-                if keys_exists(tags_by_lang, "en", tag) and tags_by_lang["en"][tag]
-                else tag
+                else (
+                    tags_by_lang["en"][tag]
+                    if keys_exists(tags_by_lang, "en", tag) and tags_by_lang["en"][tag]
+                    else tag
+                )
             )
             if count > 0:
-                taglist = taglist + textwrap.dedent(f"""\
+                taglist = taglist + textwrap.dedent(
+                    f"""\
                     <tag section="{section}" key="{tag}" count="{count}">{label}</tag>
-                       """)
-    taglist = taglist + textwrap.dedent("""\
+                       """
+                )
+    taglist = taglist + textwrap.dedent(
+        """\
             </tagset>
-           """)
+           """
+    )
     update_if_changed(Path(f"{site}/tags/.tags.{lang}.xml"), taglist)
 
 

@@ -41,12 +41,6 @@ def parse_arguments() -> argparse.Namespace:
         type=lambda input: input.split(","),
     )
     parser.add_argument(
-        "--translation-status-dir",
-        dest="translation_status_dir",
-        help="Directory to store translation status reports in.",
-        type=Path,
-    )
-    parser.add_argument(
         "--stage",
         dest="stage",
         help="Force the use of an internal staging directory.",

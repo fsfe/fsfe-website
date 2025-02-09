@@ -39,7 +39,7 @@ steps:
       - docker ps && echo "tampered with"
       - docker compose down
       - docker compose pull --ignore-buildable --include-deps
-      - docker compose -p fsfe-website run --build build --translation-status-dir "./status.fsfe.org/translations/data" --target "$TARGET"
+      - docker compose -p fsfe-website run --build build --target "$TARGET"
     when:
       branch:
         - test

@@ -30,20 +30,24 @@ def _write_localmenus(
         file = Path(dir).joinpath(f".localmenu.{lang}.xml")
         logger.debug(f"Creating {file}")
         file.write_text(
-            textwrap.dedent("""\
+            textwrap.dedent(
+                """\
                         <?xml version="1.0"?>
 
                         <feed>
-                       """)
+                       """
+            )
         )
         with file.open("a") as working_file:
             for base_file in base_files:
                 tmpfile = (
                     base_file.with_suffix(f".{lang}").with_suffix(".xhtml")
                     if base_file.with_suffix(f".{lang}").with_suffix(".xhtml").exists()
-                    else base_file.with_suffix(".en.xhtml")
-                    if base_file.with_suffix(".en.xhtml").exists()
-                    else None
+                    else (
+                        base_file.with_suffix(".en.xhtml")
+                        if base_file.with_suffix(".en.xhtml").exists()
+                        else None
+                    )
                 )
                 if not tmpfile:
                     continue
@@ -68,10 +72,12 @@ def _write_localmenus(
                     )
 
             working_file.write(
-                textwrap.dedent("""\
+                textwrap.dedent(
+                    """\
                         \n
                         </feed>
-                       """)
+                       """
+                )
             )
 
 

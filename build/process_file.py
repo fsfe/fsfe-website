@@ -149,9 +149,11 @@ def _build_xmlstream(infile: Path):
         translation_state = (
             "up-to-date"
             if (original_version <= lang_version)
-            else "very-outdated"
-            if (original_version - 3 >= lang_version)
-            else "outdated"
+            else (
+                "very-outdated"
+                if (original_version - 3 >= lang_version)
+                else "outdated"
+            )
         )
     else:
         action_lang = original_lang

@@ -17,15 +17,15 @@ def update_css() -> None:
     Then minify it, and place it in the expected location for the build process.
     """
     logger.info("Updating css")
-    for folder in Path("").glob("?*.?*/look"):
+    for dir in Path("").glob("?*.?*/look"):
         for name in ["fsfe", "valentine"]:
-            if folder.joinpath(name + ".less").exists() and (
-                not folder.joinpath(name + ".min.css").exists()
+            if dir.joinpath(name + ".less").exists() and (
+                not dir.joinpath(name + ".min.css").exists()
                 or any(
                     [
                         path.stat().st_mtime
-                        > folder.joinpath(name + ".min.css").stat().st_mtime
-                        for path in folder.glob("**/*.less")
+                        > dir.joinpath(name + ".min.css").stat().st_mtime
+                        for path in dir.glob("**/*.less")
                     ]
                 )
             ):
@@ -33,7 +33,7 @@ def update_css() -> None:
                 result = subprocess.run(
                     [
                         "lessc",
-                        str(folder.joinpath(name + ".less")),
+                        str(dir.joinpath(name + ".less")),
                     ],
                     capture_output=True,
                     # Get output as str instead of bytes
@@ -44,6 +44,6 @@ def update_css() -> None:
                     logger.critical(result.stderr)
                     sys.exit(1)
                 update_if_changed(
-                    folder.joinpath(name + ".min.css"),
+                    dir.joinpath(name + ".min.css"),
                     minify.string("text/css", result.stdout),
                 )

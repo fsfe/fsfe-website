@@ -11,7 +11,7 @@ logger = logging.getLogger(__name__)
 def _run_webserver(path: str, port: int) -> None:
     """
     Given a path as a string and a port it will
-    serve that folder on that localhost:port for forever.
+    serve that dir on that localhost:port for forever.
     """
     os.chdir(path)
     Handler = http.server.CGIHTTPRequestHandler

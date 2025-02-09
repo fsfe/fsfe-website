@@ -13,7 +13,7 @@ def prepare_subdirectories(languages: list[str]) -> None:
     for subdir_path in map(
         lambda path: path.parent, Path("").glob("?*.?*/**/subdir.py")
     ):
-        logger.info(f"Preparing subdir_pathectory {subdir_path}")
+        logger.info(f"Preparing subdirectory {subdir_path}")
         sys.path.append(str(subdir_path.resolve()))
         import subdir
 

@@ -11,7 +11,6 @@ from build.phase1.run import phase1_run
 from build.phase2.run import phase2_run
 from build.serve_websites import serve_websites
 from build.stage_to_target import stage_to_target
-from build.translations import translations
 
 logger = logging.getLogger(__name__)
 
@@ -26,10 +25,6 @@ def main(args: argparse.Namespace):
 
     if args.full:
         full()
-
-    # This generates translation status only for fsfe.org, and relies on a very hardcoded list of priorities.
-    if args.translation_status_dir is not None:
-        translations(args.translation_status_dir, args.languages)
 
     stage_required = any(
         [args.stage, "@" in args.target, ":" in args.target, "," in args.target]

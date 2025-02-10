@@ -16,30 +16,6 @@
 
   <!-- "Videobox" (provisional name) with YH4F/related talks -->
   <xsl:template match="talks">
-    <style>
-    #yh4f-slideshow-caption {
-      display: flex;
-      justify-content: space-between;
-      gap: 1rem;
-      align-items: baseline;
-    }
-
-    #yh4f-iframe {
-      position: absolute;
-      inset: 0px;
-      min-height: 480px;
-      width: 100%;
-    }
-
-    #yh4f-figure {
-      width: 85vw;
-    }
-
-    #yh4f-iframe-container {
-      width: 100%;
-      min-height: 480px;
-    }
-    </style>
 
     <figure id="yh4f-figure">
       <div>

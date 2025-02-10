@@ -11,12 +11,12 @@ def _do_symlinking(target: Path) -> None:
         source.symlink_to(target.relative_to(source.parent))
 
 
-def create_language_symlinks(target: Path) -> None:
+def create_language_symlinks(processes: int, target: Path) -> None:
     """
     Create symlinks from file.<lang>.html to file.html.<lang>
     """
     logger.info("Creating language symlinks")
-    with multiprocessing.Pool(multiprocessing.cpu_count()) as pool:
+    with multiprocessing.Pool(processes) as pool:
         pool.map(
             _do_symlinking,
             target.glob("**/*.??.html"),

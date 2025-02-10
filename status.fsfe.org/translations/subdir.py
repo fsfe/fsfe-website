@@ -168,7 +168,7 @@ def _create_translation_file(
     update_if_changed(work_file, result_str)
 
 
-def run(languages: list[str], working_dir: Path) -> None:
+def run(languages: list[str], processes: int, working_dir: Path) -> None:
     """
     Build translation-status xmls for languages where the translation status has changed. Xmls are placed in target_dir, and only languages are processed.
     """
@@ -198,7 +198,7 @@ def run(languages: list[str], working_dir: Path) -> None:
         logger.critical(result.stderr)
         sys.exit(1)
 
-    with multiprocessing.Pool(multiprocessing.cpu_count()) as pool:
+    with multiprocessing.Pool(processes) as pool:
         pool.map(
             _update_mtime,
             filter(
@@ -241,7 +241,7 @@ def run(languages: list[str], working_dir: Path) -> None:
             )
         )
 
-    with multiprocessing.Pool(multiprocessing.cpu_count()) as pool:
+    with multiprocessing.Pool(processes) as pool:
         files_by_lang_by_prio = {}
         for lang in languages:
             files_by_lang_by_prio[lang] = {}

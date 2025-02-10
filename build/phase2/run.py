@@ -13,13 +13,13 @@ from .process_xhtml_files import process_xhtml_files
 logger = logging.getLogger(__name__)
 
 
-def phase2_run(languages: list[str], target: Path):
+def phase2_run(languages: list[str], processes: int, target: Path):
     """
     Run all the necessary sub functions for phase2.
     """
     logger.info("Starting Phase 2")
-    process_xhtml_files(languages, target)
-    create_index_symlinks(target)
-    create_language_symlinks(target)
-    process_rss_ics_files(languages, target)
-    copy_files(target)
+    process_xhtml_files(languages, processes, target)
+    create_index_symlinks(processes, target)
+    create_language_symlinks(processes, target)
+    process_rss_ics_files(languages, processes, target)
+    copy_files(processes, target)

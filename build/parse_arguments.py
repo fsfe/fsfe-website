@@ -1,4 +1,5 @@
 import argparse
+import multiprocessing
 from pathlib import Path
 
 
@@ -30,6 +31,13 @@ def parse_arguments() -> argparse.Namespace:
         dest="full",
         help="Force a full rebuild of all webpages.",
         action="store_true",
+    )
+    parser.add_argument(
+        "--processes",
+        dest="processes",
+        help="Number of processes to use when building the website",
+        type=int,
+        default=multiprocessing.cpu_count(),
     )
     parser.add_argument(
         "--languages",

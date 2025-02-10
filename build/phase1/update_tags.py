@@ -70,7 +70,7 @@ def _update_tag_sets(
     update_if_changed(Path(f"{site}/tags/.tags.{lang}.xml"), taglist)
 
 
-def update_tags(languages: list[str]) -> None:
+def update_tags(languages: list[str], processes: int) -> None:
     """
     Update Tag pages, xmllists and xmls
 
@@ -147,18 +147,18 @@ def update_tags(languages: list[str]) -> None:
             list(Path(f"{site}/tags/").glob("tagged-*.en.xhtml"))
             + list(Path(f"{site}/tags/").glob(".tagged-*.xmllist")),
         )
-        with multiprocessing.Pool(multiprocessing.cpu_count()) as pool:
+        with multiprocessing.Pool(processes) as pool:
             pool.map(delete_file, tagfiles_to_delete)
 
         logger.debug("Updating tag pages")
-        with multiprocessing.Pool(multiprocessing.cpu_count()) as pool:
+        with multiprocessing.Pool(processes) as pool:
             pool.starmap(
                 _update_tag_pages,
                 [(site, tag) for tag in files_by_tag],
             )
 
         logger.debug("Updating tag lists")
-        with multiprocessing.Pool(multiprocessing.cpu_count()) as pool:
+        with multiprocessing.Pool(processes) as pool:
             pool.starmap(
                 update_if_changed,
                 [
@@ -187,7 +187,7 @@ def update_tags(languages: list[str]) -> None:
                         )
                     )
                 )
-        with multiprocessing.Pool(multiprocessing.cpu_count()) as pool:
+        with multiprocessing.Pool(processes) as pool:
             pool.starmap(
                 _update_tag_sets,
                 [

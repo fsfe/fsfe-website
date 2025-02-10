@@ -72,7 +72,7 @@ def _update_for_base(
     )
 
 
-def _update_module_xmllists(languages: list[str]) -> None:
+def _update_module_xmllists(languages: list[str], processes: int) -> None:
     """
     Update .xmllist files for .sources and .xhtml containing <module>s
     """
@@ -113,7 +113,7 @@ def _update_module_xmllists(languages: list[str]) -> None:
         nextyear = str(datetime.datetime.today().year + 1)
         thisyear = str(datetime.datetime.today().year)
         lastyear = str(datetime.datetime.today().year - 1)
-        with multiprocessing.Pool(multiprocessing.cpu_count()) as pool:
+        with multiprocessing.Pool(processes) as pool:
             pool.starmap(
                 _update_for_base,
                 [(base, all_xml, nextyear, thisyear, lastyear) for base in all_bases],
@@ -132,16 +132,16 @@ def _check_xmllist_deps(file: Path) -> None:
     touch_if_newer_dep(file, list(xmls))
 
 
-def _touch_xmllists_with_updated_deps(languages: list[str]) -> None:
+def _touch_xmllists_with_updated_deps(languages: list[str], processes: int) -> None:
     """
     Touch all .xmllist files where one of the contained files has changed
     """
     logger.info("Checking contents of XML lists")
-    with multiprocessing.Pool(multiprocessing.cpu_count()) as pool:
+    with multiprocessing.Pool(processes) as pool:
         pool.map(_check_xmllist_deps, Path("").glob("./**/.*.xmllist"))
 
 
-def update_xmllists(languages: list[str]) -> None:
+def update_xmllists(languages: list[str], processes: int) -> None:
     """
     Update XML filelists (*.xmllist)
 
@@ -159,5 +159,5 @@ def update_xmllists(languages: list[str]) -> None:
     When a tag has been removed from the last XML file where it has been used,
     the tagged-* are correctly deleted.
     """
-    _update_module_xmllists(languages)
-    _touch_xmllists_with_updated_deps(languages)
+    _update_module_xmllists(languages, processes)
+    _touch_xmllists_with_updated_deps(languages, processes)

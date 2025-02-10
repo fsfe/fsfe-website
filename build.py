@@ -31,8 +31,8 @@ def main(args: argparse.Namespace):
     )
     working_target = Path("./output/stage" if stage_required else args.target)
 
-    phase1_run(args.languages)
-    phase2_run(args.languages, working_target)
+    phase1_run(args.languages, args.processes)
+    phase2_run(args.languages, args.processes, working_target)
 
     if stage_required:
         stage_to_target(working_target, args.target)

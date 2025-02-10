@@ -106,6 +106,11 @@ RewriteRule ^activities/yh4f/register https://share.fsfe.org/apps/forms/s/kQX233
 RewriteRule ^activities/yh4f/feedback https://share.fsfe.org/apps/forms/s/LBHwzSmaiyoX3Tmwo2qJgAki [R=301,L]
 RewriteRule ^activities/yh4f/mediakit https://download.fsfe.org/YH4F/Youth_Hacking_4_Freedom_2025.pdf [R=301,L]
 
+# Current ThankGNUs page
+# TODO each year: update redirect to current page
+RewriteRule ^donate/thankgnus$ /donate/thankgnus-2025 [R=303,L]
+RewriteRule ^donate/thankgnus\.(.*)$ /donate/thankgnus-2025.$1 [R=303,L]
+
 # =============================================================================
 # MOVED PAGES
 # =============================================================================

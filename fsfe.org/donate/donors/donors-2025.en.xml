@@ -17,17 +17,17 @@
   <version>1</version>
 
   <category1>
-    <donor date="2025-12-31" amount="1500" img="donors/linuxhotel.png">Linuxhotel Villa Vogelsang</donor>
+    <donor img="donors/linuxhotel.png" amount="3000" since="2001">Linuxhotel Villa Vogelsang</donor>
   </category1>
 
   <category2>
-    <donor date="2025-12-31" img="donors/silver-intevation-new.png">Intevation GmbH</donor>
+    <donor since="2009" img="donors/silver-intevation-new.png">Intevation GmbH</donor>
   </category2>
 
   <category3>
-    <donor date="2025-12-31">Hostsharing eG</donor>
-    <donor date="2025-12-31">inmedias.it</donor>
-    <donor date="2025-12-31">LIHAS - LinuxHaus Stuttgart</donor><!-- Adrian Reyer -->
-    <donor date="2025-12-31">sysmocom - systems for mobile communications</donor>
+    <donor>Hostsharing eG</donor>
+    <donor>inmedias.it</donor>
+    <donor>LIHAS - LinuxHaus Stuttgart</donor><!-- Adrian Reyer -->
+    <donor>sysmocom - systems for mobile communications</donor>
   </category3>
 </donorset>

@@ -16,7 +16,7 @@
         </img>
         <figcaption>
             <xsl:value-of select="caption"/>
-            <xsl:if test="not(normalize-space(source)='')"> @ <xsl:value-of select="source"/></xsl:if>
+            <xsl:if test="not(normalize-space(author)='')"> (by <xsl:value-of select="author"/>)</xsl:if>
         </figcaption>
       </figure>
     </xsl:for-each>

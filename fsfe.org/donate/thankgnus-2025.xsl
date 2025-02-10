@@ -16,19 +16,21 @@
                 <xsl:element name="img">
                   <xsl:attribute name="src"><xsl:value-of select="@img"/></xsl:attribute>
                   <xsl:attribute name="alt"><xsl:value-of select="node()"/></xsl:attribute>
+                  <xsl:attribute name="title"><xsl:value-of select="node()"/></xsl:attribute>
                 </xsl:element>
               </xsl:element>
               <xsl:element name="td">
-                <xsl:value-of select="node()"/>
+                <xsl:value-of select="@amount"/>&#160;€
               </xsl:element>
               <xsl:element name="td">
-                <xsl:if test="@mark">
+                <xsl:if test="@since">
                   <xsl:element name="span">
-                    <xsl:attribute name="style">color:red</xsl:attribute>
-                    <xsl:text>*</xsl:text>
+                    <xsl:attribute name="class">label label-primary</xsl:attribute>
+                    <xsl:value-of select="/buildinfo/document/text[id='since']"/>
+                    <xsl:text>&#160;</xsl:text>
+                    <xsl:value-of select="@since"/>
                   </xsl:element>
                 </xsl:if>
-                <xsl:value-of select="@amount"/>&#160;€
               </xsl:element>
             </xsl:element>
           </xsl:for-each>
@@ -43,10 +45,18 @@
                 <xsl:element name="img">
                   <xsl:attribute name="src"><xsl:value-of select="@img"/></xsl:attribute>
                   <xsl:attribute name="alt"><xsl:value-of select="node()"/></xsl:attribute>
+                  <xsl:attribute name="title"><xsl:value-of select="node()"/></xsl:attribute>
                 </xsl:element>
               </xsl:element>
               <xsl:element name="td">
-                <xsl:value-of select="node()"/>
+                <xsl:if test="@since">
+                  <xsl:element name="span">
+                    <xsl:attribute name="class">label label-primary</xsl:attribute>
+                    <xsl:value-of select="/buildinfo/document/text[id='since']"/>
+                    <xsl:text>&#160;</xsl:text>
+                    <xsl:value-of select="@since"/>
+                  </xsl:element>
+                </xsl:if>
               </xsl:element>
             </xsl:element>
           </xsl:for-each>
@@ -64,4 +74,3 @@
     </xsl:choose>
   </xsl:template>
 </xsl:stylesheet>
-

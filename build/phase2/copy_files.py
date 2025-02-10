@@ -16,12 +16,12 @@ def _copy_file(target: Path, source_file: Path) -> None:
         target_file.write_bytes(source_file.read_bytes())
 
 
-def copy_files(target: Path) -> None:
+def copy_files(processes: int, target: Path) -> None:
     """
     Copy images, docments etc
     """
     logger.info("Copying over media and misc files")
-    with multiprocessing.Pool(multiprocessing.cpu_count()) as pool:
+    with multiprocessing.Pool(processes) as pool:
         pool.starmap(
             _copy_file,
             [
@@ -45,30 +45,3 @@ def copy_files(target: Path) -> None:
                 )
             ],
         )
-
-
-# # Copy images, docments etc
-# # -----------------------------------------------------------------------------
-
-# # All files which should just be copied over
-# COPY_SRC_FILES := \$(shell find -L "\$(INPUTDIR)" -type f \
-#   -regex "\$(INPUTDIR)/[a-z\.]+\.[a-z]+/.*" \
-#   -not -name '.drone.yml' \
-#   -not -name '.gitignore' \
-#   -not -name 'README*' \
-#   -not -name 'Makefile' \
-#   -not -name '*.sources' \
-#   -not -name "*.xmllist" \
-#   -not -name '*.xhtml' \
-#   -not -name '*.xml' \
-#   -not -name '*.xsl' \
-#   -not -name '*.nix' \
-# ) \$(INPUTDIR)/fsfe.org/order/data/items.en.xml
-
-# # The same as above, but moved to the output directory
-# COPY_DST_FILES := \$(sort \$(patsubst \$(INPUTDIR)/%,\$(OUTPUTDIR)/%,\$(COPY_SRC_FILES)))
-
-# all: \$(COPY_DST_FILES)
-# \$(COPY_DST_FILES): \$(OUTPUTDIR)/%: \$(INPUTDIR)/%
-# 	echo "* Copying file \$*"
-# 	rsync -l "\$<" "\$@"

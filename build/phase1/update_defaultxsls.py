@@ -18,7 +18,7 @@ def _do_symlinking(directory: Path) -> None:
         )
 
 
-def update_defaultxsls() -> None:
+def update_defaultxsls(processes: int) -> None:
     """
     Place a .default.xsl into each directory containing source files for
     HTML pages (*.xhtml). These .default.xsl are symlinks to the first
@@ -34,5 +34,5 @@ def update_defaultxsls() -> None:
     )
 
     # Do all directories asynchronously
-    with multiprocessing.Pool(multiprocessing.cpu_count()) as pool:
+    with multiprocessing.Pool(processes) as pool:
         pool.map(_do_symlinking, directories)

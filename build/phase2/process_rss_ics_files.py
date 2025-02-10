@@ -38,12 +38,12 @@ def _process_stylesheet(languages: list[str], target: Path, source_xsl: Path) ->
             target_file.write_text(result)
 
 
-def process_rss_ics_files(languages: list[str], target: Path) -> None:
+def process_rss_ics_files(languages: list[str], processes: int, target: Path) -> None:
     """
     Build .rss files from .xhtml sources
     """
     logger.info("Processing rss files")
-    with multiprocessing.Pool(multiprocessing.cpu_count()) as pool:
+    with multiprocessing.Pool(processes) as pool:
         pool.starmap(
             _process_stylesheet,
             [
@@ -52,7 +52,7 @@ def process_rss_ics_files(languages: list[str], target: Path) -> None:
             ],
         )
     logger.info("Processing ics files")
-    with multiprocessing.Pool(multiprocessing.cpu_count()) as pool:
+    with multiprocessing.Pool(processes) as pool:
         pool.starmap(
             _process_stylesheet,
             [

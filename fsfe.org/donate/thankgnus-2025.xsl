@@ -26,7 +26,7 @@
                 <xsl:if test="@since">
                   <xsl:element name="span">
                     <xsl:attribute name="class">label label-primary</xsl:attribute>
-                    <xsl:value-of select="/buildinfo/document/text[id='since']"/>
+                    <xsl:value-of select="/buildinfo/document/text[@id='since']"/>
                     <xsl:text>&#160;</xsl:text>
                     <xsl:value-of select="@since"/>
                   </xsl:element>
@@ -52,7 +52,7 @@
                 <xsl:if test="@since">
                   <xsl:element name="span">
                     <xsl:attribute name="class">label label-primary</xsl:attribute>
-                    <xsl:value-of select="/buildinfo/document/text[id='since']"/>
+                    <xsl:value-of select="/buildinfo/document/text[@id='since']"/>
                     <xsl:text>&#160;</xsl:text>
                     <xsl:value-of select="@since"/>
                   </xsl:element>

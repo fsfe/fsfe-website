@@ -17,7 +17,7 @@ def phase2_run(languages: list[str], processes: int, target: Path):
     """
     Run all the necessary sub functions for phase2.
     """
-    logger.info("Starting Phase 2")
+    logger.info("Starting Phase 2 - Generating output")
     process_xhtml_files(languages, processes, target)
     create_index_symlinks(processes, target)
     create_language_symlinks(processes, target)

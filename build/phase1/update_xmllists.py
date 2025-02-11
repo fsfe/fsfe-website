@@ -7,7 +7,7 @@ from pathlib import Path
 
 import lxml.etree as etree
 
-from build.lib import (
+from build.lib.misc import (
     get_basepath,
     lang_from_filename,
     touch_if_newer_dep,

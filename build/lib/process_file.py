@@ -5,7 +5,7 @@ from pathlib import Path
 
 import lxml.etree as etree
 
-from build.lib import get_basename, get_version, lang_from_filename
+from build.lib.misc import get_basename, get_version, lang_from_filename
 
 logger = logging.getLogger(__name__)
 

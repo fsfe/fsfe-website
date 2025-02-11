@@ -5,7 +5,7 @@ from textwrap import dedent
 
 import lxml.etree as etree
 
-from build.lib import lang_from_filename, update_if_changed
+from build.lib.misc import lang_from_filename, update_if_changed
 
 logger = logging.getLogger(__name__)
 

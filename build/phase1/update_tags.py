@@ -6,7 +6,7 @@ from xml.sax.saxutils import escape
 
 import lxml.etree as etree
 
-from build.lib import (
+from build.lib.misc import (
     delete_file,
     get_basepath,
     keys_exists,

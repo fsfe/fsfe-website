@@ -31,5 +31,5 @@ def serve_websites(serve_dir: str, base_port: int, increment_number: int) -> Non
         port = base_port + (increment_number * dirs.index(dir))
         logging.info(f"{dir.name} served at http://127.0.0.1:{port}")
         serves.append((str(dir), port))
-    with multiprocessing.Pool(len(dirs)) as pool:
+    with multiprocessing.Pool(len(serves)) as pool:
         pool.starmap(_run_webserver, serves)

@@ -7,6 +7,7 @@
 # directory tree and does not touch the target directory tree at all.
 # -----------------------------------------------------------------------------
 import logging
+import multiprocessing
 
 from .global_symlinks import global_symlinks
 from .index_website import index_websites
@@ -21,7 +22,7 @@ from .update_xmllists import update_xmllists
 logger = logging.getLogger(__name__)
 
 
-def phase1_run(languages: list[str], processes: int):
+def phase1_run(languages: list[str],processes:int, pool:multiprocessing.Pool):
     """
     Run all the necessary sub functions for phase1.
     """
@@ -34,7 +35,7 @@ def phase1_run(languages: list[str], processes: int):
     # This step runs a Python tool that creates an index of all news and
     # articles. It extracts titles, teaser, tags, dates and potentially more.
     # The result will be fed into a JS file.
-    index_websites(languages, processes)
+    index_websites(languages, pool)
     # -----------------------------------------------------------------------------
     # Update CSS files
     # -----------------------------------------------------------------------------
@@ -55,7 +56,7 @@ def phase1_run(languages: list[str], processes: int):
     # and events directories, the XSL files, if updated, will be copied for the
     # per-year archives.
 
-    update_stylesheets(processes)
+    update_stylesheets(pool)
     # -----------------------------------------------------------------------------
     # Dive into subdirectories
     # -----------------------------------------------------------------------------
@@ -73,7 +74,7 @@ def phase1_run(languages: list[str], processes: int):
     # the beginning of the filename, if present, and to the English version
     # otherwise. This symlinks make sure that phase 2 can easily use the right file
     # for each language, also as a prerequisite in the Makefile.
-    global_symlinks(languages, processes)
+    global_symlinks(languages, pool)
 
     # -----------------------------------------------------------------------------
     # Create XSL symlinks
@@ -85,14 +86,14 @@ def phase1_run(languages: list[str], processes: int):
     # determine which XSL script should be used to build a HTML page from a source
     # file.
 
-    update_defaultxsls(processes)
+    update_defaultxsls(pool)
     # -----------------------------------------------------------------------------
     # Update local menus
     # -----------------------------------------------------------------------------
 
     # After this step, all .localmenu.??.xml files will be up to date.
 
-    update_localmenus(languages, processes)
+    update_localmenus(languages, pool)
     # -----------------------------------------------------------------------------
     # Update tags
     # -----------------------------------------------------------------------------
@@ -103,7 +104,7 @@ def phase1_run(languages: list[str], processes: int):
     #   in phase 2 are built into pages listing all news items and events for a
     #   tag.
     # * tags/.tags.??.xml with a list of the tags used.
-    update_tags(languages, processes)
+    update_tags(languages, pool)
     # -----------------------------------------------------------------------------
     # Update XML filelists
     # -----------------------------------------------------------------------------
@@ -114,4 +115,4 @@ def phase1_run(languages: list[str], processes: int):
     #   correct XML files when generating the HTML pages. It is taken care that
     #   these files are only updated whenever their content actually changes, so
     #   they can serve as a prerequisite in the phase 2 Makefile.
-    update_xmllists(languages, processes)
+    update_xmllists(languages, pool)

@@ -10,7 +10,6 @@ This repository contains the source files of [fsfe.org](https://fsfe.org), pdfre
 * [Translate](#translate)
 * [Build](#build)
 
-
 ## Technical information
 
 Our web team has compiled some information about technology used for this website on the [Information for Webmasters](https://fsfe.org/contribute/web/) page.
@@ -99,7 +98,6 @@ Some more explanation: we are essentially just using docker as a way to provide 
 Please note that files generated during the build process using docker are owned by root. This does not cause issues unless you with to manually alter the output or switch to native building instead of docker.
 
 If you wish to switch to native building after using docker, you must use `sudo git clean -fdx` to remove the files generated using docker.
-
 
 ## Testing
 While most small changes can be tested adequately by building locally some larger changes, particularly ones relating to the order pages, event registration and other forms may require more integrated testing. This can be achieved using the `test` branch. This branch is built and served in the same way as the main site, [fsfe.org](https://fsfe.org). The built version of the `test` branch may be viewed at [test.fsfe.org](https://test.fsfe.org).

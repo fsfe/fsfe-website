@@ -17,13 +17,15 @@ def _process_dir(languages: list[str], target: Path, dir: Path) -> None:
                 if basename.with_suffix(".xsl").exists()
                 else basename.parent.joinpath(".default.xsl")
             )
-            conds = (
-                [
-                    (
+            if not target_file.exists() or any(
+                # If any source file is newer than the file to be generated
+                # If the file does not exist to
+                map(
+                    lambda file: (
                         file.exists()
                         and file.stat().st_mtime > target_file.stat().st_mtime
-                    )
-                    for file in [
+                    ),
+                    [
                         (
                             source_file
                             if source_file.exists()
@@ -34,16 +36,8 @@ def _process_dir(languages: list[str], target: Path, dir: Path) -> None:
                         Path(f"global/data/texts/.texts.{lang}.xml"),
                         Path(f"global/data/topbanner/.topbanner.{lang}.xml"),
                         Path("global/data/texts/texts.en.xml"),
-                    ]
-                ]
-                if target_file.exists()
-                else ["No targ file"]
-            )
-            logger.debug(conds)
-            if not target_file.exists() or any(
-                # If any source file is newer than the file to be generated
-                # If the file does not exist to
-                conds
+                    ],
+                )
             ):
                 logger.debug(f"Building {target_file}")
                 result = process_file(source_file, processor)
@@ -51,18 +45,18 @@ def _process_dir(languages: list[str], target: Path, dir: Path) -> None:
                 target_file.write_text(result)
 
 
-def process_xhtml_files(languages: list[str], pool:multiprocessing.Pool, target: Path) -> None:
+def process_xhtml_files(
+    languages: list[str], pool: multiprocessing.Pool, target: Path
+) -> None:
     """
     Build .html files from .xhtml sources
     """
     logger.info("Processing xhtml files")
 
     pool.starmap(
-            _process_dir,
-            [
-                (languages, target, dir)
-                for dir in set(
-                    map(lambda path: path.parent, Path("").glob("*?.?*/**/*.*.xhtml"))
-                )
-            ],
-        )
+        _process_dir,
+        map(
+            lambda dir: (languages, target, dir),
+            set(map(lambda path: path.parent, Path("").glob("*?.?*/**/*.*.xhtml"))),
+        ),
+    )

@@ -18,7 +18,7 @@ def _do_symlinking(directory: Path) -> None:
         )
 
 
-def update_defaultxsls(pool:multiprocessing.Pool) -> None:
+def update_defaultxsls(pool: multiprocessing.Pool) -> None:
     """
     Place a .default.xsl into each directory containing source files for
     HTML pages (*.xhtml). These .default.xsl are symlinks to the first

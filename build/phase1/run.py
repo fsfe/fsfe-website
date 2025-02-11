@@ -22,7 +22,7 @@ from .update_xmllists import update_xmllists
 logger = logging.getLogger(__name__)
 
 
-def phase1_run(languages: list[str],processes:int, pool:multiprocessing.Pool):
+def phase1_run(languages: list[str], processes: int, pool: multiprocessing.Pool):
     """
     Run all the necessary sub functions for phase1.
     """

@@ -88,34 +88,30 @@ def index_websites(languages: list[str], pool: multiprocessing.Pool) -> None:
         # The first element of each tuple is the file and the second is a set of stopwords for that language
         # Use iso639 to get the english name of the language from the two letter iso639-1 code we use to mark files.
         # Then if that language has stopwords from nltk, use those stopwords.
-        files_with_stopwords = sorted(
-            list(
-                map(
-                    lambda file: (
-                        file,
-                        (
-                            set(
-                                nltk_stopwords.words(
-                                    iso639.Language.from_part1(
-                                        file.suffixes[0].removeprefix(".")
-                                    ).name.lower()
-                                )
-                            )
-                            if iso639.Language.from_part1(
+        files_with_stopwords = map(
+            lambda file: (
+                file,
+                (
+                    set(
+                        nltk_stopwords.words(
+                            iso639.Language.from_part1(
                                 file.suffixes[0].removeprefix(".")
                             ).name.lower()
-                            in nltk_stopwords.fileids()
-                            else set()
-                        ),
-                    ),
-                    filter(
-                        lambda file: file.suffixes[0].removeprefix(".") in languages,
-                        Path(site).glob("**/*.??.xhtml"),
-                    ),
-                )
+                        )
+                    )
+                    if iso639.Language.from_part1(
+                        file.suffixes[0].removeprefix(".")
+                    ).name.lower()
+                    in nltk_stopwords.fileids()
+                    else set()
+                ),
             ),
-            key=lambda tuple: tuple[0],
+            filter(
+                lambda file: file.suffixes[0].removeprefix(".") in languages,
+                Path(site).glob("**/*.??.xhtml"),
+            ),
         )
+
         articles = pool.starmap(_process_file, files_with_stopwords)
 
         update_if_changed(

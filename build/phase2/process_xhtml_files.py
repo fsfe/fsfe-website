@@ -51,14 +51,13 @@ def _process_dir(languages: list[str], target: Path, dir: Path) -> None:
                 target_file.write_text(result)
 
 
-def process_xhtml_files(languages: list[str], processes: int, target: Path) -> None:
+def process_xhtml_files(languages: list[str], pool:multiprocessing.Pool, target: Path) -> None:
     """
     Build .html files from .xhtml sources
     """
     logger.info("Processing xhtml files")
 
-    with multiprocessing.Pool(processes) as pool:
-        pool.starmap(
+    pool.starmap(
             _process_dir,
             [
                 (languages, target, dir)

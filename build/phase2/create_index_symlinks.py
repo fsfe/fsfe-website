@@ -15,13 +15,12 @@ def _do_symlinking(target: Path) -> None:
         source.symlink_to(target.relative_to(source.parent))
 
 
-def create_index_symlinks(processes: int, target: Path) -> None:
+def create_index_symlinks(pool:multiprocessing.Pool, target: Path) -> None:
     """
     Create index.* symlinks
     """
     logger.info("Creating index symlinks")
-    with multiprocessing.Pool(processes) as pool:
-        pool.map(
+    pool.map(
             _do_symlinking,
             filter(
                 lambda path: get_basename(path) == path.parent.name,

@@ -16,13 +16,12 @@ def _copy_file(target: Path, source_file: Path) -> None:
         target_file.write_bytes(source_file.read_bytes())
 
 
-def copy_files(processes: int, target: Path) -> None:
+def copy_files(pool:multiprocessing.Pool, target: Path) -> None:
     """
     Copy images, docments etc
     """
     logger.info("Copying over media and misc files")
-    with multiprocessing.Pool(processes) as pool:
-        pool.starmap(
+    pool.starmap(
             _copy_file,
             [
                 (target, file)

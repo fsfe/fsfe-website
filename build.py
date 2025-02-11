@@ -2,9 +2,9 @@
 
 import argparse
 import logging
+import multiprocessing
 import os
 from pathlib import Path
-import multiprocessing
 
 from build.phase0.full import full
 from build.phase1.run import phase1_run
@@ -13,6 +13,7 @@ from build.phase3.serve_websites import serve_websites
 from build.phase3.stage_to_target import stage_to_target
 
 logger = logging.getLogger(__name__)
+
 
 def parse_arguments() -> argparse.Namespace:
     """
@@ -82,18 +83,20 @@ def main(args: argparse.Namespace):
         level=args.log_level,
     )
     logger.debug(args)
-    
-    logger.info("Starting phase 0 - Conditional Setup")
-    if args.full:
-        full()
 
-    stage_required = any(
-        [args.stage, "@" in args.target, ":" in args.target, "," in args.target]
-    )
-    working_target = Path("./output/stage" if stage_required else args.target)
+    with multiprocessing.Pool(args.processes) as pool:
+        logger.info("Starting phase 0 - Conditional Setup")
+        if args.full:
+            full()
 
-    phase1_run(args.languages, args.processes)
-    phase2_run(args.languages, args.processes, working_target)
+        stage_required = any(
+            [args.stage, "@" in args.target, ":" in args.target, "," in args.target]
+        )
+        working_target = Path("./output/stage" if stage_required else args.target)
+
+        # Processes needed only for subdir stuff
+        phase1_run(args.languages, args.processes, pool)
+        phase2_run(args.languages, pool, working_target)
 
     logger.info("Starting Phase 3 - Conditional Finishing")
     if stage_required:

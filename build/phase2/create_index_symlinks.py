@@ -2,7 +2,7 @@ import logging
 import multiprocessing
 from pathlib import Path
 
-from build.lib import get_basename
+from build.lib.misc import get_basename
 
 logger = logging.getLogger(__name__)
 

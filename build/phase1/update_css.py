@@ -5,7 +5,7 @@ from pathlib import Path
 
 import minify
 
-from build.lib import update_if_changed
+from build.lib.misc import update_if_changed
 
 logger = logging.getLogger(__name__)
 

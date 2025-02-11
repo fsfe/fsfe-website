@@ -4,15 +4,75 @@ import argparse
 import logging
 import os
 from pathlib import Path
+import multiprocessing
 
-from build.full import full
-from build.parse_arguments import parse_arguments
+from build.phase0.full import full
 from build.phase1.run import phase1_run
 from build.phase2.run import phase2_run
-from build.serve_websites import serve_websites
-from build.stage_to_target import stage_to_target
+from build.phase3.serve_websites import serve_websites
+from build.phase3.stage_to_target import stage_to_target
 
 logger = logging.getLogger(__name__)
+
+def parse_arguments() -> argparse.Namespace:
+    """
+    Parse the arguments of the website build process
+
+    """
+    parser = argparse.ArgumentParser(
+        description="Python script to handle building of the fsfe webpage"
+    )
+    parser.add_argument(
+        "--target",
+        dest="target",
+        help="Directory to build websites into.",
+        type=str,
+        default="./output/final",
+    )
+    parser.add_argument(
+        "--log-level",
+        dest="log_level",
+        type=str,
+        default="INFO",
+        choices=["DEBUG", "INFO", "WARNING", "ERROR", "CRITICAL"],
+        help="Set the logging level (default: INFO)",
+    )
+    parser.add_argument(
+        "--full",
+        dest="full",
+        help="Force a full rebuild of all webpages.",
+        action="store_true",
+    )
+    parser.add_argument(
+        "--processes",
+        dest="processes",
+        help="Number of processes to use when building the website",
+        type=int,
+        default=multiprocessing.cpu_count(),
+    )
+    parser.add_argument(
+        "--languages",
+        dest="languages",
+        help="Languages to build website in.",
+        default=list(
+            map(lambda path: path.name, Path(".").glob("global/languages/??"))
+        ),
+        type=lambda input: input.split(","),
+    )
+    parser.add_argument(
+        "--stage",
+        dest="stage",
+        help="Force the use of an internal staging directory.",
+        action="store_true",
+    )
+    parser.add_argument(
+        "--serve",
+        dest="serve",
+        help="Serve the webpages after rebuild",
+        action="store_true",
+    )
+    args = parser.parse_args()
+    return args
 
 
 def main(args: argparse.Namespace):
@@ -22,7 +82,8 @@ def main(args: argparse.Namespace):
         level=args.log_level,
     )
     logger.debug(args)
-
+    
+    logger.info("Starting phase 0 - Conditional Setup")
     if args.full:
         full()
 
@@ -34,6 +95,7 @@ def main(args: argparse.Namespace):
     phase1_run(args.languages, args.processes)
     phase2_run(args.languages, args.processes, working_target)
 
+    logger.info("Starting Phase 3 - Conditional Finishing")
     if stage_required:
         stage_to_target(working_target, args.target)
 

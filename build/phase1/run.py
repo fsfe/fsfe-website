@@ -25,7 +25,7 @@ def phase1_run(languages: list[str], processes: int):
     """
     Run all the necessary sub functions for phase1.
     """
-    logger.info("Starting Phase 1")
+    logger.info("Starting Phase 1 - Setup")
 
     # -----------------------------------------------------------------------------
     # Build search index

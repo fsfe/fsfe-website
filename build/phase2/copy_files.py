@@ -16,31 +16,31 @@ def _copy_file(target: Path, source_file: Path) -> None:
         target_file.write_bytes(source_file.read_bytes())
 
 
-def copy_files(pool:multiprocessing.Pool, target: Path) -> None:
+def copy_files(pool: multiprocessing.Pool, target: Path) -> None:
     """
     Copy images, docments etc
     """
     logger.info("Copying over media and misc files")
     pool.starmap(
-            _copy_file,
-            [
-                (target, file)
-                for file in filter(
-                    lambda path: path.is_file()
-                    and path.suffix
-                    not in [
-                        ".md",
-                        ".yml",
-                        ".gitignore",
-                        ".sources",
-                        ".xmllist",
-                        ".xhtml",
-                        ".xsl",
-                        ".xml",
-                        ".less",
-                    ]
-                    and path.name not in ["Makefile"],
-                    Path("").glob("*?.?*/**/*?.*"),
-                )
-            ],
-        )
+        _copy_file,
+        map(
+            lambda file: (target, file),
+            filter(
+                lambda path: path.is_file()
+                and path.suffix
+                not in [
+                    ".md",
+                    ".yml",
+                    ".gitignore",
+                    ".sources",
+                    ".xmllist",
+                    ".xhtml",
+                    ".xsl",
+                    ".xml",
+                    ".less",
+                ]
+                and path.name not in ["Makefile"],
+                Path("").glob("*?.?*/**/*?.*"),
+            ),
+        ),
+    )

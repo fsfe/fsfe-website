@@ -72,7 +72,7 @@ def _update_for_base(
     )
 
 
-def _update_module_xmllists(languages: list[str], pool:multiprocessing.Pool) -> None:
+def _update_module_xmllists(languages: list[str], pool: multiprocessing.Pool) -> None:
     """
     Update .xmllist files for .sources and .xhtml containing <module>s
     """
@@ -114,9 +114,9 @@ def _update_module_xmllists(languages: list[str], pool:multiprocessing.Pool) -> 
         thisyear = str(datetime.datetime.today().year)
         lastyear = str(datetime.datetime.today().year - 1)
         pool.starmap(
-                _update_for_base,
-                [(base, all_xml, nextyear, thisyear, lastyear) for base in all_bases],
-            )
+            _update_for_base,
+            map(lambda base: (base, all_xml, nextyear, thisyear, lastyear), all_bases),
+        )
 
 
 def _check_xmllist_deps(file: Path) -> None:
@@ -131,7 +131,9 @@ def _check_xmllist_deps(file: Path) -> None:
     touch_if_newer_dep(file, list(xmls))
 
 
-def _touch_xmllists_with_updated_deps(languages: list[str], pool:multiprocessing.Pool) -> None:
+def _touch_xmllists_with_updated_deps(
+    languages: list[str], pool: multiprocessing.Pool
+) -> None:
     """
     Touch all .xmllist files where one of the contained files has changed
     """
@@ -139,7 +141,7 @@ def _touch_xmllists_with_updated_deps(languages: list[str], pool:multiprocessing
     pool.map(_check_xmllist_deps, Path("").glob("./**/.*.xmllist"))
 
 
-def update_xmllists(languages: list[str], pool:multiprocessing.Pool) -> None:
+def update_xmllists(languages: list[str], pool: multiprocessing.Pool) -> None:
     """
     Update XML filelists (*.xmllist)
 

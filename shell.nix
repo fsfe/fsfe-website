@@ -19,6 +19,8 @@ pkgs.mkShell {
     perl
     # For checking python
     ruff
+    # Formatter
+    black
   ];
   shellHook = ''
     python -m venv .venv

@@ -3,6 +3,7 @@
 # -----------------------------------------------------------------------------
 import logging
 from pathlib import Path
+import multiprocessing
 
 from .copy_files import copy_files
 from .create_index_symlinks import create_index_symlinks
@@ -13,13 +14,13 @@ from .process_xhtml_files import process_xhtml_files
 logger = logging.getLogger(__name__)
 
 
-def phase2_run(languages: list[str], processes: int, target: Path):
+def phase2_run(languages: list[str], pool:multiprocessing.Pool, target: Path):
     """
     Run all the necessary sub functions for phase2.
     """
     logger.info("Starting Phase 2 - Generating output")
-    process_xhtml_files(languages, processes, target)
-    create_index_symlinks(processes, target)
-    create_language_symlinks(processes, target)
-    process_rss_ics_files(languages, processes, target)
-    copy_files(processes, target)
+    process_xhtml_files(languages, pool, target)
+    create_index_symlinks(pool, target)
+    create_language_symlinks(pool, target)
+    process_rss_ics_files(languages, pool, target)
+    copy_files(pool, target)

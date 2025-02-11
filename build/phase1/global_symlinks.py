@@ -20,7 +20,7 @@ def _do_symlinking(type: str, lang: str) -> None:
         source.symlink_to(target.relative_to(source.parent))
 
 
-def global_symlinks(languages: list[str], processes: int) -> None:
+def global_symlinks(languages: list[str], pool:multiprocessing.Pool) -> None:
     """
     After this step, the following symlinks will exist:
     * global/data/texts/.texts.<lang>.xml for each language
@@ -32,5 +32,4 @@ def global_symlinks(languages: list[str], processes: int) -> None:
     """
     logger.info("Creating global symlinks")
     types = ["texts", "topbanner"]
-    with multiprocessing.Pool(processes) as pool:
-        pool.starmap(_do_symlinking, product(types, languages))
+    pool.starmap(_do_symlinking, product(types, languages))

@@ -70,7 +70,7 @@ def _update_tag_sets(
     update_if_changed(Path(f"{site}/tags/.tags.{lang}.xml"), taglist)
 
 
-def update_tags(languages: list[str], processes: int) -> None:
+def update_tags(languages: list[str], pool: multiprocessing.Pool) -> None:
     """
     Update Tag pages, xmllists and xmls
 
@@ -147,31 +147,25 @@ def update_tags(languages: list[str], processes: int) -> None:
             list(Path(f"{site}/tags/").glob("tagged-*.en.xhtml"))
             + list(Path(f"{site}/tags/").glob(".tagged-*.xmllist")),
         )
-        with multiprocessing.Pool(processes) as pool:
-            pool.map(delete_file, tagfiles_to_delete)
+        pool.map(delete_file, tagfiles_to_delete)
 
         logger.debug("Updating tag pages")
-        with multiprocessing.Pool(processes) as pool:
-            pool.starmap(
-                _update_tag_pages,
-                [(site, tag) for tag in files_by_tag],
-            )
+        pool.starmap(
+            _update_tag_pages,
+            [(site, tag) for tag in files_by_tag],
+        )
 
         logger.debug("Updating tag lists")
-        with multiprocessing.Pool(processes) as pool:
-            pool.starmap(
-                update_if_changed,
-                [
-                    (
-                        Path(f"{site}/tags/.tagged-{tag}.xmllist"),
-                        (
-                            "\n".join(map(lambda file: str(file), files_by_tag[tag]))
-                            + "\n"
-                        ),
-                    )
-                    for tag in files_by_tag
-                ],
-            )
+        pool.starmap(
+            update_if_changed,
+            [
+                (
+                    Path(f"{site}/tags/.tagged-{tag}.xmllist"),
+                    ("\n".join(map(lambda file: str(file), files_by_tag[tag])) + "\n"),
+                )
+                for tag in files_by_tag
+            ],
+        )
 
         logger.debug("Updating tag sets")
         # Get count of files with each tag in each section
@@ -187,11 +181,10 @@ def update_tags(languages: list[str], processes: int) -> None:
                         )
                     )
                 )
-        with multiprocessing.Pool(processes) as pool:
-            pool.starmap(
-                _update_tag_sets,
-                [
-                    (site, lang, filecount, files_by_tag, tags_by_lang)
-                    for lang in [lang for lang in tags_by_lang if lang in languages]
-                ],
-            )
+        pool.starmap(
+            _update_tag_sets,
+            [
+                (site, lang, filecount, files_by_tag, tags_by_lang)
+                for lang in [lang for lang in tags_by_lang if lang in languages]
+            ],
+        )

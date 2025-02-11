@@ -81,7 +81,7 @@ def _write_localmenus(
             )
 
 
-def update_localmenus(languages: list[str], processes: int) -> None:
+def update_localmenus(languages: list[str], pool:multiprocessing.Pool) -> None:
     """
     Update all the .localmenu.*.xml files containing the local menus.
     """
@@ -118,7 +118,6 @@ def update_localmenus(languages: list[str], processes: int) -> None:
         ),
         files_by_dir,
     )
-    with multiprocessing.Pool(processes) as pool:
-        pool.starmap(
-            _write_localmenus, [(dir, files_by_dir, languages) for dir in dirs]
-        )
+    pool.starmap(
+        _write_localmenus, [(dir, files_by_dir, languages) for dir in dirs]
+    )

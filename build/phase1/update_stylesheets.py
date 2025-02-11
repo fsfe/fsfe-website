@@ -27,7 +27,7 @@ def _update_sheet(file: Path) -> None:
     touch_if_newer_dep(file, imports)
 
 
-def update_stylesheets(processes: int) -> None:
+def update_stylesheets(pool: multiprocessing.Pool) -> None:
     """
     This script is called from the phase 1 Makefile and touches all XSL files
     which depend on another XSL file that has changed since the last build run.
@@ -37,11 +37,10 @@ def update_stylesheets(processes: int) -> None:
     """
     logger.info("Updating XSL stylesheets")
     banned = re.compile(r"(\.venv/.*)|(.*\.default\.xsl$)")
-    with multiprocessing.Pool(processes) as pool:
-        pool.map(
-            _update_sheet,
-            filter(
-                lambda file: re.match(banned, str(file)) is None,
-                Path(".").glob("**/*.xsl"),
-            ),
-        )
+    pool.map(
+        _update_sheet,
+        filter(
+            lambda file: re.match(banned, str(file)) is None,
+            Path(".").glob("**/*.xsl"),
+        ),
+    )

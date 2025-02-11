@@ -67,7 +67,7 @@ def _process_file(file: Path, stopwords: set[str]) -> dict:
     }
 
 
-def index_websites(languages: list[str], processes: int) -> None:
+def index_websites(languages: list[str], pool: multiprocessing.Pool) -> None:
     """
     Generate a search index for all sites that have a search/search.js file
     """
@@ -116,8 +116,7 @@ def index_websites(languages: list[str], processes: int) -> None:
             ),
             key=lambda tuple: tuple[0],
         )
-        with multiprocessing.Pool(processes) as pool:
-            articles = pool.starmap(_process_file, files_with_stopwords)
+        articles = pool.starmap(_process_file, files_with_stopwords)
 
         update_if_changed(
             Path(f"{site}/search/index.js"),

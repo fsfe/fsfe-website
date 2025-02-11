@@ -15,15 +15,15 @@ def _do_symlinking(target: Path) -> None:
         source.symlink_to(target.relative_to(source.parent))
 
 
-def create_index_symlinks(pool:multiprocessing.Pool, target: Path) -> None:
+def create_index_symlinks(pool: multiprocessing.Pool, target: Path) -> None:
     """
     Create index.* symlinks
     """
     logger.info("Creating index symlinks")
     pool.map(
-            _do_symlinking,
-            filter(
-                lambda path: get_basename(path) == path.parent.name,
-                target.glob("**/*.??.html"),
-            ),
-        )
+        _do_symlinking,
+        filter(
+            lambda path: get_basename(path) == path.parent.name,
+            target.glob("**/*.??.html"),
+        ),
+    )

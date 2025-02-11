@@ -183,8 +183,8 @@ def update_tags(languages: list[str], pool: multiprocessing.Pool) -> None:
                 )
         pool.starmap(
             _update_tag_sets,
-            [
-                (site, lang, filecount, files_by_tag, tags_by_lang)
-                for lang in [lang for lang in tags_by_lang if lang in languages]
-            ],
+            map(
+                lambda lang: (site, lang, filecount, files_by_tag, tags_by_lang),
+                filter(lambda lang: lang in languages, tags_by_lang.keys()),
+            ),
         )

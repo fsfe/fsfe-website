@@ -18,9 +18,11 @@ def _process_stylesheet(languages: list[str], target: Path, source_xsl: Path) ->
         source_xhtml = base_file.with_suffix(f".{lang}.xhtml")
         if not target_file.exists() or any(
             # If any source file is newer than the file to be generated
-            [
-                (file.exists() and file.stat().st_mtime > target_file.stat().st_mtime)
-                for file in [
+            map(
+                lambda file: (
+                    file.exists() and file.stat().st_mtime > target_file.stat().st_mtime
+                ),
+                [
                     (
                         source_xhtml
                         if source_xhtml.exists()
@@ -29,8 +31,8 @@ def _process_stylesheet(languages: list[str], target: Path, source_xsl: Path) ->
                     source_xsl,
                     Path(f"global/data/texts/.texts.{lang}.xml"),
                     Path("global/data/texts/texts.en.xml"),
-                ]
-            ]
+                ],
+            )
         ):
             logger.debug(f"Building {target_file}")
             result = process_file(source_xhtml, source_xsl)
@@ -38,23 +40,25 @@ def _process_stylesheet(languages: list[str], target: Path, source_xsl: Path) ->
             target_file.write_text(result)
 
 
-def process_rss_ics_files(languages: list[str], pool:multiprocessing.Pool, target: Path) -> None:
+def process_rss_ics_files(
+    languages: list[str], pool: multiprocessing.Pool, target: Path
+) -> None:
     """
     Build .rss files from .xhtml sources
     """
     logger.info("Processing rss files")
     pool.starmap(
-            _process_stylesheet,
-            [
-                (languages, target, source_xsl)
-                for source_xsl in Path("").glob("*?.?*/**/*.rss.xsl")
-            ],
-        )
+        _process_stylesheet,
+        map(
+            lambda source_xsl: (languages, target, source_xsl),
+            Path("").glob("*?.?*/**/*.rss.xsl"),
+        ),
+    )
     logger.info("Processing ics files")
     pool.starmap(
-            _process_stylesheet,
-            [
-                (languages, target, source_xsl)
-                for source_xsl in Path("").glob("*?.?*/**/*.ics.xsl")
-            ],
-        )
+        _process_stylesheet,
+        map(
+            lambda source_xsl: (languages, target, source_xsl),
+            Path("").glob("*?.?*/**/*.ics.xsl"),
+        ),
+    )

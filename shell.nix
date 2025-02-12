@@ -4,6 +4,10 @@
     overlays = [ ];
   },
 }:
+let
+  treefmt-nixSrc = builtins.fetchTarball "https://github.com/numtide/treefmt-nix/archive/refs/heads/master.tar.gz";
+  treefmt-nix = import treefmt-nixSrc;
+in
 pkgs.mkShell {
   nativeBuildInputs = with pkgs; [
     # The main required tool python
@@ -17,10 +21,26 @@ pkgs.mkShell {
     git
     # Needed for translation status script
     perl
-    # For checking python
-    ruff
     # Formatter
-    black
+    (treefmt-nix.mkWrapper pkgs {
+      # Used to find the project root
+      projectRootFile = "shell.nix";
+      enableDefaultExcludes = true;
+      programs = {
+        ruff-check.enable = true;
+        ruff-format.enable = true;
+        nixfmt.enable = true;
+      };
+      settings = {
+        global = {
+          on-unmatched = "debug";
+          excludes = [
+            ".nltk_data"
+            ".venv"
+          ];
+        };
+      };
+    })
   ];
   shellHook = ''
     python -m venv .venv

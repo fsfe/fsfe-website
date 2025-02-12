@@ -2,13 +2,11 @@ import datetime
 import logging
 import multiprocessing
 import os
-import subprocess
-import sys
 from pathlib import Path
 
 import lxml.etree as etree
 
-from build.lib.misc import get_basepath, get_version, update_if_changed
+from build.lib.misc import get_basepath, get_version, run_command, update_if_changed
 
 logger = logging.getLogger(__name__)
 
@@ -17,17 +15,8 @@ def _update_mtime(
     file: Path,
 ) -> None:
     logger.debug(f"Updating mtime of {file}")
-    result = subprocess.run(
-        ["git", "log", '--pretty="%ct"', "-1", file],
-        capture_output=True,
-        # Get output as str instead of bytes
-        universal_newlines=True,
-    )
-    if result.returncode != 0:
-        logger.critical("Git log failed with error")
-        logger.critical(result.stderr.strip())
-        sys.exit(1)
-    time = int(result.stdout.strip(' \n"'))
+    result = run_command(["git", "log", '--pretty="%ct"', "-1", file])
+    time = int(result.strip('"'))
     os.utime(file, (time, time))
 
 
@@ -175,28 +164,14 @@ def run(languages: list[str], processes: int, working_dir: Path) -> None:
     target_dir = working_dir.joinpath("data/")
     logger.debug(f"Building index of status of translations into dir {target_dir}")
 
-    result = subprocess.run(
+    result = run_command(
         ["git", "rev-parse", "--show-toplevel"],
-        capture_output=True,
-        # Get output as str instead of bytes
-        universal_newlines=True,
     )
-    if result.returncode != 0:
-        logger.critical("Git rev parse failed with error")
-        logger.critical(result.stderr.strip())
-        sys.exit(1)
 
     # List files separated by a null bytes
-    result = subprocess.run(
-        ["git", "ls-files", "-z", result.stdout.strip()],
-        capture_output=True,
-        # Get output as str instead of bytes
-        universal_newlines=True,
+    result = run_command(
+        ["git", "ls-files", "-z", result],
     )
-    if result.returncode != 0:
-        logger.critical("Git ls-files failed with error")
-        logger.critical(result.stderr)
-        sys.exit(1)
 
     with multiprocessing.Pool(processes) as pool:
         pool.map(
@@ -204,7 +179,7 @@ def run(languages: list[str], processes: int, working_dir: Path) -> None:
             filter(
                 lambda path: path.suffix in [".xhtml", ".xml"],
                 # Split on null bytes, strip and then parse into path
-                map(lambda line: Path(line.strip()), result.stdout.split("\x00")),
+                map(lambda line: Path(line.strip()), result.split("\x00")),
             ),
         )
 

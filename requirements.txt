@@ -1,7 +1,7 @@
 # XML parser
-lxml==5.3.0
+lxml==5.3.1
 # For getting english language names of languages from two letter codes.
-python-iso639==2024.10.22
+python-iso639==2025.2.8
 # For stopwords for the search index
 nltk==3.9.1
 # For minification html css and js

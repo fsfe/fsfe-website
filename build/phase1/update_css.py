@@ -1,11 +1,9 @@
 import logging
-import subprocess
-import sys
 from pathlib import Path
 
 import minify
 
-from build.lib.misc import update_if_changed
+from build.lib.misc import run_command, update_if_changed
 
 logger = logging.getLogger(__name__)
 
@@ -30,20 +28,13 @@ def update_css() -> None:
                 )
             ):
                 logger.info(f"Compiling {name}.less")
-                result = subprocess.run(
+                result = run_command(
                     [
                         "lessc",
                         str(dir.joinpath(name + ".less")),
                     ],
-                    capture_output=True,
-                    # Get output as str instead of bytes
-                    universal_newlines=True,
                 )
-                if result.returncode != 0:
-                    logger.critical("Less compilation failed with error")
-                    logger.critical(result.stderr)
-                    sys.exit(1)
                 update_if_changed(
                     dir.joinpath(name + ".min.css"),
-                    minify.string("text/css", result.stdout),
+                    minify.string("text/css", result),
                 )

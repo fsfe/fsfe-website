@@ -1,33 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!--
-  Please keep each list alphabetically ordered.  Emacs users want to set
-  sort-fold-case to true and run sort-lines on a region.  Vi+ users can
-  visually select the list and use the :sort command.
-
-  The date="..." should be filled with the last date when a donation from this
-  donor came in. It is important for the "current" thankgnus page.
-
-  Currently, the date="..." may only be set in a single xml file for the same
-  donor, so if you add a donor to a file of the new year, don't forget to
-  remove the date="..." in the old year's file.
--->
-
 <donorset>
   <version>1</version>
 
+  <!--
+    The "since" attribute is set for all donors which have donated in at least
+    4 calendar years in a row. A pause of one calendar year is ok.
+  -->
+
   <category1>
-    <donor img="donors/linuxhotel.png" amount="3000" since="2001">Linuxhotel Villa Vogelsang</donor>
+    <!-- 1,500 per month or 18,000 in this year -->
+    <!-- Sorted by amount, with large image (width x height ca. 15.000) -->
+    <donor img="donors/linuxhotel.png" amount="18,000" since="2001">Linuxhotel Villa Vogelsang</donor>
   </category1>
 
   <category2>
-    <donor since="2009" img="donors/silver-intevation-new.png">Intevation GmbH</donor>
+    <!-- 300 per month or 3,600 in this year -->
+    <!-- Sorted by name, with smaller image (width x height ca. 5.000) -->
+    <donor img="donors/silver-intevation-new.png" since="2009">Intevation GmbH</donor>
+    <donor img="donors/silver-siemens.png" since="2015">Siemens</donor>
   </category2>
 
   <category3>
-    <donor>Hostsharing eG (Supporter since 2003)</donor>
-    <donor>inmedias.it</donor>
+    <!-- 60 per month or 720 in this year -->
+    <!-- Sorted by name, no image -->
+    <donor>foundata</donor>
+    <donor since="2014">Thomas Etter</donor>
+    <donor since="2003">Hostsharing eG</donor>
+    <donor since="2004">inmedias.it</donor>
     <donor since="2009">LIHAS - LinuxHaus Stuttgart</donor><!-- Adrian Reyer -->
-    <donor>sysmocom - systems for mobile communications</donor>
+    <donor>Linux Foundation</donor>
+    <donor since="2016">sysmocom - systems for mobile communications</donor>
   </category3>
 </donorset>

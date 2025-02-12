@@ -21,6 +21,9 @@ pkgs.mkShell {
     git
     # Needed for translation status script
     perl
+    # Needed for compiling minifiers
+    libffi
+    go
     # Formatter
     (treefmt-nix.mkWrapper pkgs {
       # Used to find the project root

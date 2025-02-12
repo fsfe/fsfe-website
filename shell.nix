@@ -19,8 +19,6 @@ pkgs.mkShell {
     lessc
     # Needed for git clean in full rebuilds
     git
-    # Needed for translation status script
-    perl
     # Needed for compiling minifiers
     libffi
     go

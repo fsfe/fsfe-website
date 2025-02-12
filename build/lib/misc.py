@@ -1,4 +1,5 @@
 import logging
+import subprocess
 import sys
 from pathlib import Path
 
@@ -79,6 +80,20 @@ def lang_from_filename(file: Path) -> str:
         sys.exit(1)
     else:
         return lang
+
+
+def run_command(commands: list) -> str:
+    result = subprocess.run(
+        commands,
+        capture_output=True,
+        # Get output as str instead of bytes
+        universal_newlines=True,
+    )
+    if result.returncode != 0:
+        logger.critical(f"Command {commands} failed with error")
+        logger.critical(result.stderr.strip())
+        sys.exit(1)
+    return result.stdout.strip()
 
 
 def get_version(file: Path) -> int:

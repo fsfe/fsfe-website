@@ -1,6 +1,6 @@
 import logging
-import subprocess
-import sys
+
+from build.lib.misc import run_command
 
 logger = logging.getLogger(__name__)
 
@@ -13,7 +13,7 @@ def stage_to_target(stagedir: str, targets: str) -> None:
     logger.info("Rsyncing from stage dir to target dir(s)")
     for target in targets.split(","):
         logger.debug(f"Rsyncing to {target}")
-        result = subprocess.run(
+        run_command(
             [
                 "rsync",
                 "-av",
@@ -21,11 +21,5 @@ def stage_to_target(stagedir: str, targets: str) -> None:
                 "--del",
                 str(stagedir) + "/",
                 target,
-            ],
-            capture_output=True,
-            universal_newlines=True,
+            ]
         )
-        if result.returncode != 0:
-            logger.critical("Rsyncing failed with message:")
-            logger.critical(result.stderr)
-            sys.exit(1)

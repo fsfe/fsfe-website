@@ -104,4 +104,3 @@ While most small changes can be tested adequately by building locally some large
 
 ## Status Viewing
 The status of builds of [fsfe.org](https://fsfe.org) and [test.fsfe.org](https://test.fsfe.org) can be viewed at [status.fsfe.org](https://status.fsfe.org)
-

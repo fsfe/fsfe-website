@@ -30,7 +30,7 @@ steps:
       # Environment variables necessary for rootless Docker
       XDG_RUNTIME_DIR: "/run/user/1001"
       DOCKER_HOST: "unix:///run/user/1001/docker.sock"
-      TARGET: "../result"
+      TARGET: "www@bunsen.fsfeurope.org:test.fsfe.org/global/,www@noddack.fsfeurope.org:test.fsfe.org/global/,www@gahn.fsfeurope.org:test.fsfe.org/global/"
       SSH_KEY_1:
         from_secret: key1
       SSH_KEY_2:
@@ -72,6 +72,6 @@ volumes:
       path: /run/user/1001/docker.sock
 ---
 kind: signature
-hmac: 4c0dd0f272458d12234c72f66c4d420069591cac83819644df3c03a280102ded
+hmac: ff3dfdceeedbe7fb1f0ff5ad6a06fd4bea9cffa8a066fb2fb13eae0017184b51
 
 ...

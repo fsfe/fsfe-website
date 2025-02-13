@@ -24,10 +24,13 @@ RUN if [ "$SSH_KEY_3" != "none" ]; then ssh-agent sh -c 'ssh-add - < "${SSH_KEY_
 RUN if [ "$SSH_KEY_4" != "none" ]; then ssh-agent sh -c 'ssh-add - < "${SSH_KEY_4}"'; echo "VAR LOADED"; else echo "NO VAR"; fi
 
 
-# Copy the local repo
-COPY . /website-source/
+# Copy the requirements
+# Done in a seperate step for optimal docker caching
+COPY ./requirements.txt /website-source/requirements.txt
 RUN pip install -r /website-source/requirements.txt --root-user-action=ignore
 
+# Copy everything else
+COPY . /website-source/
 WORKDIR /website-source
 
 ENTRYPOINT [ "bash", "./entrypoint.sh" ]

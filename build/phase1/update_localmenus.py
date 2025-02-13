@@ -1,6 +1,5 @@
 import logging
 import multiprocessing
-import textwrap
 from pathlib import Path
 
 import lxml.etree as etree
@@ -16,69 +15,60 @@ def _write_localmenus(
     """
     Write localmenus for a given directory
     """
-    base_files = sorted(
-        list(
-            set(
-                map(
-                    lambda filter_file: get_basepath(filter_file),
-                    files_by_dir[dir],
-                )
-            )
+    # Set of files with no langcode or xhtml extension
+    base_files = set(
+        map(
+            lambda filter_file: get_basepath(filter_file),
+            files_by_dir[dir],
         )
     )
     for lang in languages:
         file = Path(dir).joinpath(f".localmenu.{lang}.xml")
         logger.debug(f"Creating {file}")
-        file.write_text(
-            textwrap.dedent(
-                """\
-                        <?xml version="1.0"?>
+        page = etree.Element("feed")
 
-                        <feed>
-                       """
-            )
-        )
-        with file.open("a") as working_file:
-            for base_file in base_files:
-                tmpfile = (
-                    base_file.with_suffix(f".{lang}").with_suffix(".xhtml")
-                    if base_file.with_suffix(f".{lang}").with_suffix(".xhtml").exists()
-                    else (
-                        base_file.with_suffix(".en.xhtml")
-                        if base_file.with_suffix(".en.xhtml").exists()
-                        else None
-                    )
-                )
-                if not tmpfile:
-                    continue
-                xslt_root = etree.parse(tmpfile)
-                for localmenu in xslt_root.xpath("//localmenu"):
-                    working_file.write(
-                        '\n<localmenuitem set="'
-                        + (
-                            str(localmenu.xpath("./@set")[0])
-                            if localmenu.xpath("./@set") != []
-                            else "default"
-                        )
-                        + '" id="'
-                        + (
-                            str(localmenu.xpath("./@id")[0])
-                            if localmenu.xpath("./@id") != []
-                            else "default"
-                        )
-                        + f'" link="/{Path(*Path(base_file).parts[1:])}.html">'
-                        + localmenu.text
-                        + "</localmenuitem>"
-                    )
+        # Add the subelements
+        version = etree.SubElement(page, "version")
+        version.text = "1"
 
-            working_file.write(
-                textwrap.dedent(
-                    """\
-                        \n
-                        </feed>
-                       """
-                )
-            )
+        for source_file in filter(
+            lambda path: path is not None,
+            map(
+                lambda base_file: base_file.with_suffix(f".{lang}.xhtml")
+                if base_file.with_suffix(f".{lang}.xhtml").exists()
+                else (
+                    base_file.with_suffix(".en.xhtml")
+                    if base_file.with_suffix(".en.xhtml").exists()
+                    else None
+                ),
+                base_files,
+            ),
+        ):
+            for localmenu in etree.parse(source_file).xpath("//localmenu"):
+                etree.SubElement(
+                    page,
+                    "localmenuitem",
+                    set=(
+                        str(localmenu.xpath("./@set")[0])
+                        if localmenu.xpath("./@set") != []
+                        else "default"
+                    ),
+                    id=(
+                        str(localmenu.xpath("./@id")[0])
+                        if localmenu.xpath("./@id") != []
+                        else "default"
+                    ),
+                    link=(
+                        "/"
+                        + str(
+                            source_file.with_suffix(".html").relative_to(
+                                source_file.parents[0]
+                            )
+                        )
+                    ),
+                ).text = localmenu.text
+
+        page.getroottree().write(file, xml_declaration=True, encoding="utf-8")
 
 
 def update_localmenus(languages: list[str], pool: multiprocessing.Pool) -> None:
@@ -89,16 +79,16 @@ def update_localmenus(languages: list[str], pool: multiprocessing.Pool) -> None:
     # Get a dict of all source files containing local menus
     files_by_dir = {}
     for file in filter(
-        lambda path: etree.parse(path).xpath("//localmenu")
-        and "-template" not in str(path),
+        lambda path: "-template" not in str(path),
         Path(".").glob("*?.?*/**/*.??.xhtml"),
     ):
         xslt_root = etree.parse(file)
-        dir = xslt_root.xpath("//localmenu/@dir")
-        dir = dir[0] if dir else str(file.parent.relative_to(Path(".")))
-        if dir not in files_by_dir:
-            files_by_dir[dir] = set()
-        files_by_dir[dir].add(file)
+        if xslt_root.xpath("//localmenu"):
+            dir = xslt_root.xpath("//localmenu/@dir")
+            dir = dir[0] if dir else str(file.parent.relative_to(Path(".")))
+            if dir not in files_by_dir:
+                files_by_dir[dir] = set()
+            files_by_dir[dir].add(file)
     for dir in files_by_dir:
         files_by_dir[dir] = sorted(list(files_by_dir[dir]))
 
@@ -106,14 +96,16 @@ def update_localmenus(languages: list[str], pool: multiprocessing.Pool) -> None:
     dirs = filter(
         lambda dir: (
             any(
-                (
-                    (not Path(dir).joinpath(".localmenu.en.xml").exists())
-                    or (
-                        file.stat().st_mtime
-                        > Path(dir).joinpath(".localmenu.en.xml").stat().st_mtime
-                    )
+                map(
+                    lambda file: (
+                        (not Path(dir).joinpath(".localmenu.en.xml").exists())
+                        or (
+                            file.stat().st_mtime
+                            > Path(dir).joinpath(".localmenu.en.xml").stat().st_mtime
+                        )
+                    ),
+                    files_by_dir[dir],
                 )
-                for file in files_by_dir[dir]
             )
         ),
         files_by_dir,

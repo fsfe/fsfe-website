@@ -59,7 +59,7 @@
     <image small="data/pictures/tshirt-nocloud-petrol-front-small.jpg" large="data/pictures/tshirt-nocloud-petrol-front-large.jpg"/>
     <image small="data/pictures/tshirt-nocloud-petrol-back-small.jpg" large="data/pictures/tshirt-nocloud-petrol-back-large.jpg"/>
   </item>
-  <item type="hoodie" id="hoodie-fourfreedoms-38c3-blue" price="60.00" date="2024-10-08">
+  <!--item type="hoodie" id="hoodie-fourfreedoms-38c3-blue" price="60.00" date="2024-10-08">
     <available size="XS" a="49" b="68"/>
     <available size="S" a="52" b="70"/>
     <available size="M" a="55.5" b="72"/>
@@ -69,8 +69,8 @@
     <available size="3XL" a="70" b="79"/>
     <available size="4XL" a="74" b="80"/>
     <image small="data/pictures/hoodie-fourfreedoms-38c3-blue-back-small.png" large="data/pictures/hoodie-fourfreedoms-38c3-blue-back-large.png"/>
-  </item>
-  <item type="hoodie" id="hoodie-fourfreedoms-38c3-black" price="60.00" date="2024-10-08">
+  </item //-->
+  <!-- item type="hoodie" id="hoodie-fourfreedoms-38c3-black" price="60.00" date="2024-10-08">
     <available size="XS" a="49" b="68"/>
     <available size="S" a="52" b="70"/>
     <available size="M" a="55.5" b="72"/>
@@ -80,8 +80,8 @@
     <available size="3XL" a="70" b="79"/>
     <available size="4XL" a="74" b="80"/>
     <image small="data/pictures/hoodie-fourfreedoms-38c3-black-back-small.png" large="data/pictures/hoodie-fourfreedoms-38c3-black-back-large.png"/>
-  </item>
-  <item type="hoodie" id="hoodie-fourfreedoms-fosdem-blue" price="60.00" date="2024-10-08">
+  </item //-->
+  <!-- item type="hoodie" id="hoodie-fourfreedoms-fosdem-blue" price="60.00" date="2024-10-08">
     <available size="XS" a="49" b="68"/>
     <available size="S" a="52" b="70"/>
     <available size="M" a="55.5" b="72"/>
@@ -91,8 +91,8 @@
     <available size="3XL" a="70" b="79"/>
     <available size="4XL" a="74" b="80"/>
     <image small="data/pictures/hoodie-fourfreedoms-38c3-blue-back-small.png" large="data/pictures/hoodie-fourfreedoms-38c3-blue-back-large.png"/>
-  </item>
-  <item type="hoodie" id="hoodie-fourfreedoms-fosdem-black" price="60.00" date="2024-10-08">
+  </item //-->
+  <!-- item type="hoodie" id="hoodie-fourfreedoms-fosdem-black" price="60.00" date="2024-10-08">
     <available size="XS" a="49" b="68"/>
     <available size="S" a="52" b="70"/>
     <available size="M" a="55.5" b="72"/>
@@ -102,7 +102,7 @@
     <available size="3XL" a="70" b="79"/>
     <available size="4XL" a="74" b="80"/>
     <image small="data/pictures/hoodie-fourfreedoms-38c3-black-back-small.png" large="data/pictures/hoodie-fourfreedoms-38c3-black-back-large.png"/>
-  </item>
+  </item //-->
   <item type="socks" id="socks-ilovefs" price="15.00" date="2024-01-12">
     <image small="data/pictures/socks-ilovefs-small.jpg" large="data/pictures/socks-ilovefs-large.jpg"/>
     <available size="#"/>
@@ -124,21 +124,21 @@
       small="data/pictures/pin-fsfe-white-small.jpg"
       large="data/pictures/pin-fsfe-white-large.jpg"/>
   </item -->
-  <item type="other" id="magnetpin-fsfe-white" price="5.00" date="2019-11-22">
+  <!-- item type="other" id="magnetpin-fsfe-white" price="5.00" date="2019-11-22">
     <available size="#"/>
     <image small="data/pictures/pin-fsfe-white-small.jpg" large="data/pictures/pin-fsfe-white-large.jpg"/>
-  </item>
-  <item type="tshirt" id="tshirt-multilingual-black" price="20.00" date="2019-12-07">
+  </item  //-->
+  <!-- item type="tshirt" id="tshirt-multilingual-black" price="20.00" date="2019-12-07">
     <available size="M" a="50" b="70"/>
     <image small="data/pictures/tshirt-multilingual-black-front-small.jpg" large="data/pictures/tshirt-multilingual-black-front-large.jpg"/>
     <image small="data/pictures/tshirt-multilingual-black-back-small.jpg" large="data/pictures/tshirt-multilingual-black-back-large.jpg"/>
-  </item>
-  <item type="slimfit" id="slimfit-multilingual-black" oldprice="20.00" price="15.00" date="2019-12-07">
+  </item //-->
+  <!-- item type="slimfit" id="slimfit-multilingual-black" oldprice="20.00" price="15.00" date="2019-12-07">
     <available size="L" a="48" b="65"/>
     <available size="XL" a="53.5" b="66"/>
     <image small="data/pictures/slimfit-multilingual-black-front-small.jpg" large="data/pictures/slimfit-multilingual-black-front-large.jpg"/>
     <image small="data/pictures/slimfit-multilingual-black-back-small.jpg" large="data/pictures/slimfit-multilingual-black-back-large.jpg"/>
-  </item>
+  </item //-->
   <!-- type="slimfit" id="slimfit-multilingual-blue" oldprice="20.00" price="15.00" date="2019-12-07">
     <available size="M"    a="47.5" b="62"/>
     <available size="L" a="48" b="65"/>

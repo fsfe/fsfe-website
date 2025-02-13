@@ -26,12 +26,9 @@ def _include_xml(file: Path) -> str:
         for elem in root.xpath("version"):
             root.remove(elem)
         # Iterate over all elements in root node, add a filename attribute and then append the string to work_str
-        # By default root.iter delves into all sub elements. Use the filter to remove them
-        for parent in filter(
-            lambda elem: elem.getparent() == root, root.iter(tag=etree.Element)
-        ):
-            parent.set("filename", get_basename(file))
-            work_str += etree.tostring(parent, encoding="utf-8").decode("utf-8")
+        for elem in root.xpath("*"):
+            elem.set("filename", get_basename(file))
+            work_str += etree.tostring(elem, encoding="utf-8").decode("utf-8")
 
     return work_str
 

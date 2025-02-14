@@ -183,40 +183,39 @@ def run(languages: list[str], processes: int, working_dir: Path) -> None:
             ),
         )
 
-    # Generate our file lists by priority
-    # Super hardcoded unfortunately
-    files_by_prio = dict()
-    files_by_prio[1] = list(Path("fsfe.org/").glob("index.en.xhtml")) + list(
-        Path("fsfe.org/freesoftware/").glob("freesoftware.en.xhtml")
-    )
-    files_by_prio[2] = list(Path("fsfe.org/activities/").glob("*/activity.en.xml"))
-    files_by_prio[3] = (
-        list(Path("fsfe.org/activities/").glob("*.en.xhtml"))
-        + list(Path("fsfe.org/activities/").glob("*.en.xml"))
-        + list(Path("fsfe.org/freesoftware/").glob("*.en.xhtml"))
-        + list(Path("fsfe.org/freesoftware/").glob("*.en.xml"))
-    )
-    files_by_prio[4] = (
-        list(Path("fsfe.org/order/").glob("*.en.xml"))
-        + list(Path("fsfe.org/order/").glob("*.en.xhtml"))
-        + list(Path("fsfe.org/contribute/").glob("*.en.xml"))
-        + list(Path("fsfe.org/contribute/").glob("*.en.xhtml"))
-    )
-    files_by_prio[5] = list(Path("fsfe.org/order/").glob("**/*.en.xml")) + list(
-        Path("fsfe.org/order/").glob("**/*.en.xhtml")
-    )
-
-    for priority in sorted(files_by_prio.keys(), reverse=True):
-        files_by_prio[priority] = list(
-            filter(
-                lambda path: not any(
-                    [(path in files_by_prio[prio]) for prio in range(1, priority)]
-                ),
-                files_by_prio[priority],
-            )
+        # Generate our file lists by priority
+        # Super hardcoded unfortunately
+        files_by_prio = dict()
+        files_by_prio[1] = list(Path("fsfe.org/").glob("index.en.xhtml")) + list(
+            Path("fsfe.org/freesoftware/").glob("freesoftware.en.xhtml")
+        )
+        files_by_prio[2] = list(Path("fsfe.org/activities/").glob("*/activity.en.xml"))
+        files_by_prio[3] = (
+            list(Path("fsfe.org/activities/").glob("*.en.xhtml"))
+            + list(Path("fsfe.org/activities/").glob("*.en.xml"))
+            + list(Path("fsfe.org/freesoftware/").glob("*.en.xhtml"))
+            + list(Path("fsfe.org/freesoftware/").glob("*.en.xml"))
+        )
+        files_by_prio[4] = (
+            list(Path("fsfe.org/order/").glob("*.en.xml"))
+            + list(Path("fsfe.org/order/").glob("*.en.xhtml"))
+            + list(Path("fsfe.org/contribute/").glob("*.en.xml"))
+            + list(Path("fsfe.org/contribute/").glob("*.en.xhtml"))
+        )
+        files_by_prio[5] = list(Path("fsfe.org/order/").glob("**/*.en.xml")) + list(
+            Path("fsfe.org/order/").glob("**/*.en.xhtml")
         )
 
-    with multiprocessing.Pool(processes) as pool:
+        for priority in sorted(files_by_prio.keys(), reverse=True):
+            files_by_prio[priority] = list(
+                filter(
+                    lambda path: not any(
+                        [(path in files_by_prio[prio]) for prio in range(1, priority)]
+                    ),
+                    files_by_prio[priority],
+                )
+            )
+
         files_by_lang_by_prio = {}
         for lang in languages:
             files_by_lang_by_prio[lang] = {}

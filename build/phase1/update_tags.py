@@ -1,13 +1,11 @@
 import logging
 import multiprocessing
-import textwrap
 from pathlib import Path
 from xml.sax.saxutils import escape
 
 import lxml.etree as etree
 
 from build.lib.misc import (
-    delete_file,
     get_basepath,
     keys_exists,
     lang_from_filename,
@@ -18,13 +16,16 @@ from build.lib.misc import (
 logger = logging.getLogger(__name__)
 
 
-def _update_tag_pages(site: Path, tag: str) -> None:
+def _update_tag_pages(site: Path, tag: str, languages: list[str]) -> None:
     """
     Update the xhtml pages and xmllists for a given tag
     """
-    taggedfile = Path(f"{site}/tags/tagged.en.xhtml")
-    content = taggedfile.read_text().replace("XXX_TAGNAME_XXX", tag)
-    update_if_changed(taggedfile, content)
+    for lang in languages:
+        tagfile_source = Path(f"{site}/tags/tagged.{lang}.xhtml")
+        if tagfile_source.exists():
+            taggedfile = Path(f"{site}/tags/tagged-{tag}.{lang}.xhtml")
+            content = tagfile_source.read_text().replace("XXX_TAGNAME_XXX", tag)
+            update_if_changed(taggedfile, content)
 
 
 def _update_tag_sets(
@@ -37,37 +38,32 @@ def _update_tag_sets(
     """
     Update the .tags.??.xml tagset xmls for a given tag
     """
-    taglist = textwrap.dedent(
-        """\
-            <?xml version="1.0" encoding="UTF-8"?>
-    
-            <tagset>
-           """
-    )
+    # Add uout toplevel element
+    page = etree.Element("tagset")
+
+    # Add the subelements
+    version = etree.SubElement(page, "version")
+    version.text = "1"
     for section in ["news", "events"]:
         for tag in files_by_tag:
             count = filecount[section][tag]
             label = (
                 tags_by_lang[lang][tag]
-                if keys_exists(tags_by_lang, lang, tag) and tags_by_lang[lang][tag]
-                else (
-                    tags_by_lang["en"][tag]
-                    if keys_exists(tags_by_lang, "en", tag) and tags_by_lang["en"][tag]
-                    else tag
-                )
+                if keys_exists(tags_by_lang, lang, tag)
+                and tags_by_lang[lang][tag] is not None
+                else tags_by_lang["en"][tag]
+                if keys_exists(tags_by_lang, "en", tag)
+                and tags_by_lang["en"][tag] is not None
+                else tag
             )
             if count > 0:
-                taglist = taglist + textwrap.dedent(
-                    f"""\
-                    <tag section="{section}" key="{tag}" count="{count}">{label}</tag>
-                       """
-                )
-    taglist = taglist + textwrap.dedent(
-        """\
-            </tagset>
-           """
+                etree.SubElement(
+                    page, "tag", section=section, key=tag, count=str(count)
+                ).text = label
+    update_if_changed(
+        Path(f"{site}/tags/.tags.{lang}.xml"),
+        etree.tostring(page, encoding="utf-8").decode("utf-8"),
     )
-    update_if_changed(Path(f"{site}/tags/.tags.{lang}.xml"), taglist)
 
 
 def update_tags(languages: list[str], pool: multiprocessing.Pool) -> None:
@@ -101,13 +97,10 @@ def update_tags(languages: list[str], pool: multiprocessing.Pool) -> None:
         for file in filter(
             lambda file:
             # Not in tags dir of a site
-            site.joinpath("tags") not in file.parents
-            # Has a tag element
-            and etree.parse(file).xpath("//tag"),
+            site.joinpath("tags") not in file.parents,
             site.glob("**/*.xml"),
         ):
-            xslt_root = etree.parse(file)
-            for tag in xslt_root.xpath("//tag"):
+            for tag in etree.parse(file).xpath("//tag"):
                 # Get the key attribute, and filter out some invalid chars
                 key = (
                     tag.get("key")
@@ -117,9 +110,10 @@ def update_tags(languages: list[str], pool: multiprocessing.Pool) -> None:
                     .strip()
                 )
                 # Get the label, and strip it.
-                label = str(
+                label = (
                     escape(tag.text.strip()) if tag.text and tag.text.strip() else None
                 )
+
                 # Load into the dicts
                 if key not in files_by_tag:
                     files_by_tag[key] = set()
@@ -140,31 +134,22 @@ def update_tags(languages: list[str], pool: multiprocessing.Pool) -> None:
         for lang in tags_by_lang:
             tags_by_lang[lang] = sort_dict(tags_by_lang[lang])
 
-        # Now we have the necessary data, begin
-        logger.debug("Removing files for removed tags")
-        tagfiles_to_delete = filter(
-            lambda path: not any([(tag in str(path)) for tag in files_by_tag]),
-            list(Path(f"{site}/tags/").glob("tagged-*.en.xhtml"))
-            + list(Path(f"{site}/tags/").glob(".tagged-*.xmllist")),
-        )
-        pool.map(delete_file, tagfiles_to_delete)
-
         logger.debug("Updating tag pages")
         pool.starmap(
             _update_tag_pages,
-            [(site, tag) for tag in files_by_tag],
+            map(lambda tag: (site, tag, languages), files_by_tag.keys()),
         )
 
         logger.debug("Updating tag lists")
         pool.starmap(
             update_if_changed,
-            [
-                (
+            map(
+                lambda tag: (
                     Path(f"{site}/tags/.tagged-{tag}.xmllist"),
                     ("\n".join(map(lambda file: str(file), files_by_tag[tag])) + "\n"),
-                )
-                for tag in files_by_tag
-            ],
+                ),
+                files_by_tag.keys(),
+            ),
         )
 
         logger.debug("Updating tag sets")

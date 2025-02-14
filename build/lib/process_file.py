@@ -224,7 +224,7 @@ def process_file(infile: Path, processor: Path) -> str:
     # Change links from foo/bar.html into foo/bar.xx.html
     # Same for .rss and .ics links
     result = re.sub(
-        r"""href\s*=\s*("|')(/?[^:>]+/[^:/]+\.)(html|rss|ics)(#[^>]*)?\1""",
+        r"""href\s*=\s*("|')(/?[^:>]+/[^:/.]+\.)(html|rss|ics)(#[^>]*)?\1""",
         rf"""href=\1\2{lang}.\3\4\1""",
         result,
         flags=re.MULTILINE | re.IGNORECASE,

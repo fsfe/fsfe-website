@@ -98,9 +98,9 @@ def main(args: argparse.Namespace):
         phase1_run(args.languages, args.processes, pool)
         phase2_run(args.languages, pool, working_target)
 
-    logger.info("Starting Phase 3 - Conditional Finishing")
-    if stage_required:
-        stage_to_target(working_target, args.target)
+        logger.info("Starting Phase 3 - Conditional Finishing")
+        if stage_required:
+            stage_to_target(working_target, args.target, pool)
 
     if args.serve:
         serve_websites(working_target, 2000, 100)

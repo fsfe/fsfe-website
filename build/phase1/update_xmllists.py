@@ -78,10 +78,7 @@ def _update_module_xmllists(languages: list[str], pool: multiprocessing.Pool) ->
     """
     logger.info("Updating XML lists")
     # Store current dir
-    for site in map(
-        lambda path: str(path),
-        filter(lambda path: path.is_dir(), Path(".").glob("?*.??*")),
-    ):
+    for site in filter(lambda path: path.is_dir(), Path(".").glob("?*.??*")):
         logger.info(f"Updating xmllists for {site}")
         # Get all the bases and stuff before multithreading the update bit
         all_xml = set(
@@ -89,14 +86,14 @@ def _update_module_xmllists(languages: list[str], pool: multiprocessing.Pool) ->
                 lambda path: get_basepath(path),
                 filter(
                     lambda path: lang_from_filename(path) in languages,
-                    Path(site).glob("**/*.*.xml"),
+                    site.glob("**/*.*.xml"),
                 ),
             )
         )
         source_bases = set(
             map(
                 lambda path: path.with_suffix(""),
-                Path(site).glob("**/*.sources"),
+                site.glob("**/*.sources"),
             )
         )
         module_bases = set(
@@ -105,7 +102,7 @@ def _update_module_xmllists(languages: list[str], pool: multiprocessing.Pool) ->
                 filter(
                     lambda path: lang_from_filename(path) in languages
                     and etree.parse(path).xpath("//module"),
-                    Path(site).glob("**/*.*.xhtml"),
+                    site.glob("**/*.*.xhtml"),
                 ),
             )
         )

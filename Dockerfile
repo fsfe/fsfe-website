@@ -34,6 +34,5 @@ COPY . /website-source/
 WORKDIR /website-source
 
 ENTRYPOINT [ "bash", "./entrypoint.sh" ]
-CMD [ "--target", "/website-cached/result" ]
 
 

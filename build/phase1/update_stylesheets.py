@@ -16,8 +16,7 @@ def _update_sheet(file: Path) -> None:
     """
     xslt_root = etree.parse(file)
     imports = map(
-        lambda imp: Path(file)
-        .parent.joinpath(imp.get("href"))
+        lambda imp: file.parent.joinpath(imp.get("href"))
         .resolve()
         .relative_to(Path(".").resolve()),
         xslt_root.xpath(

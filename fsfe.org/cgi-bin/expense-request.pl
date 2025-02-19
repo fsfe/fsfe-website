@@ -32,7 +32,6 @@ my %names = (
   "carmenbianca" => "Carmen Bianca Bakker",
   "dario" => "Dario Presutti",
   "eal" => "Erik Albers",
-  "epiric" => "Erika Pirić",
   "fi" => "Francesca Indorato",
   "floriansnow" => "Florian Snow",
   "gabriel.ku" => "Gabriel Ku Wei Bin",
@@ -43,6 +42,7 @@ my %names = (
   "marta" => "Marta Andreoli",
   "mk" => "Matthias Kirschner",
   "reinhard" => "Reinhard Müller",
+  "sofiaritz" => "Sofía Aritz",
   "tobiasd" => "Tobias Diekershoff",
 );
 

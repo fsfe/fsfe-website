@@ -22,7 +22,7 @@
         </xsl:attribute>
         <xsl:attribute name="type">audio/mp3</xsl:attribute>
       </xsl:element>
-      <xsl:text>Your browser dows not support the audio element.</xsl:text>
+      <xsl:text>Your browser does not support the audio element.</xsl:text>
     </xsl:element>
     
 

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<infoset>
+  <version>1</version>
+
+  <info id="deviceneutrality-sticker">
+    <!-- Leave a tag like <printready> blank or erase it if you don't 
+    want to appear it -->
+    <!-- Translations for "Type", "Size" etc. can be found in 
+    /tools/texts-**.xml -->
+    <name>Device Neutrality - Sticker</name>
+    <description>
+      A sticker to state that taking control of our digital devices is a matter of freedom
+    </description>
+    <type>Sticker</type>
+    <size>50 x 50 mm</size>
+    <context><a href="/activities/deviceneutrality">I love Free Software campaign</a></context>
+    <languages>
+      <a href="https://download.fsfe.org/advocacy/promomaterial/DeviceNeutrality/DeviceNeutrality_sticker/DeviceNeutrality_sticker.pdf">English</a>
+    </languages>
+    <printed>
+      English
+    </printed>
+    <license><a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a></license>
+    <author>Thomas Klefisch</author>
+    <source><a href="https://download.fsfe.org/advocacy/promomaterial/DeviceNeutrality/DeviceNeutrality_poster/">deviceneutrality-sticker* in download.fsfe.org</a></source> 
+    <printready></printready>
+  </info>
+
+</infoset>

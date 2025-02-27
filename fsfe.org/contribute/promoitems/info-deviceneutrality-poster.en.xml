@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<infoset>
+  <version>1</version>
+
+  <info id="deviceneutrality-poster">
+    <!-- Leave a tag like <printready> blank or erase it if you don't 
+    want to appear it -->
+    <!-- Translations for "Type", "Size" etc. can be found in 
+    /tools/texts-**.xml -->
+    <name>Device Neutrality - Poster</name>
+    <description>
+      The poster of our <a href="/activities/deviceneutrality/">Device Neutrality campaign</a>. A double size poster with informaton about the importance of Device Neutrality and why users should not be lock - in. 
+    </description>
+    <type>Poster (folded for delivery)</type>
+    <size>A1 (594 x 841 mm)</size>
+    <context><a href="/activities/deviceneutrality">Device Neutrality campaign</a></context>
+    <languages>
+      <a href="https://download.fsfe.org/advocacy/promomaterial/DeviceNeutrality/DeviceNeutrality_poster/DeviceNeutrality_poster.pdf">English</a>
+    </languages>
+    <printed>
+      English
+    </printed>
+    <license><a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a></license>
+    <author>Thomas Klefisch</author>
+    <source><a href="https://download.fsfe.org/advocacy/promomaterial/DeviceNeutrality/DeviceNeutrality_poster/">deviceneutrality-poster* in download.fsfe.org</a></source> 
+    <printready></printready>
+  </info>
+
+</infoset>

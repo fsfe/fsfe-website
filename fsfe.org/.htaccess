@@ -77,7 +77,7 @@ RewriteRule ^news/latest-news$ /news/2024/news-20240610-01.html [R=301,L]
 RewriteRule ^activities/ilovefs/toolkit$  https://download.fsfe.org/campaigns/ilovefs/toolkit/ [R=301,L]
 
 # TODO each year: update links for latest report
-RewriteRule ^activities/ilovefs/latest-report$ /activities/ilovefs/report/report_2025.html [R=301,L]
+RewriteRule ^activities/ilovefs/latest-report$ /activities/ilovefs/report/report_2025.html [R=307,L]
 RewriteRule ^activities/ilovefs/latest-podcast$ /news/podcast/episode-30.html [R=301,L]
 
 # Redirect from old locations

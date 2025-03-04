@@ -13,7 +13,9 @@ This repository contains the source files of [fsfe.org](https://fsfe.org), pdfre
 
 ## Technical information
 
-Our web team has compiled some information about technology used for this website on the [Information for Webmasters](https://fsfe.org/contribute/web/) page.
+Our web team has compiled some information about technology used for this website on the [Information for Webmasters](https://fsfe.org/contribute/web/) page. This is mainly focused on page content.
+
+For information on how the build process works see [docs subfolder](./docs/overview.md)
 
 ## Structure
 

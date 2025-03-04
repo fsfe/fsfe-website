@@ -25,22 +25,28 @@ def copy_files(pool: multiprocessing.Pool, target: Path) -> None:
         _copy_file,
         map(
             lambda file: (target, file),
-            filter(
-                lambda path: path.is_file()
-                and path.suffix
-                not in [
-                    ".md",
-                    ".yml",
-                    ".gitignore",
-                    ".sources",
-                    ".xmllist",
-                    ".xhtml",
-                    ".xsl",
-                    ".xml",
-                    ".less",
-                ]
-                and path.name not in ["Makefile"],
-                Path("").glob("*?.?*/**/*?.*"),
-            ),
+            list(
+                filter(
+                    lambda path: path.is_file()
+                    and path.suffix
+                    not in [
+                        ".md",
+                        ".yml",
+                        ".gitignore",
+                        ".sources",
+                        ".xmllist",
+                        ".xhtml",
+                        ".xsl",
+                        ".xml",
+                        ".less",
+                        ".py",
+                        ".pyc",
+                    ]
+                    and path.name not in ["Makefile"],
+                    Path("").glob("*?.?*/**/*?.*"),
+                )
+            )
+            # Special case hard code pass over orde items xml required by cgi script
+            + list(Path("").glob("*?.?*/order/data/items.en.xml")),
         ),
     )

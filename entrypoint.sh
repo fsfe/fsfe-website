@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+set -euo pipefail
 # Ran by dockerfile as entrypoint
 # Ran from the volume of the website source mounted at /website-source
 
@@ -7,9 +8,7 @@
 rsync -az --delete --checksum --filter=':- .gitignore' ./ /website-cached/source
 
 # Change to source repo
-cd /website-cached/source || exit 1
+cd /website-cached/source
 
 # run build script expaning all args passed to this script
 python3 ./build.py "$@"
-
-

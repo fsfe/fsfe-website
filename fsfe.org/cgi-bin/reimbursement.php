@@ -128,7 +128,6 @@ $html .= "<p>This <strong>$type_verbose</strong> is made by <strong>$who_verbose
     <th>Category ID</th>
     <th>Category Text</th>
     <th>Description</th>
-    <th></th>
     <th>Receipt Name</th>
     <th></th>
   </tr>";
@@ -170,10 +169,10 @@ foreach ($entry as $key => $date) {  // run over each row
   $receipt_size = $_FILES["receipt"]["size"][$key];
   $key1 = $key + 1;
   $receipt_no = sprintf('%02d', $key1);
-  $activity_tag[$key] = explode(":", $activity)[0];
-  $activity_text[$key] = explode(":", $activity)[1];
-  $category_id[$key] = explode(":", $category)[0];
-  $category_text[$key] = explode(":", $category)[1];
+  $activity_tag[$key] = explode("||", $activity[$key])[0];
+  $activity_text[$key] = explode("||", $activity[$key])[1];
+  $category_id[$key] = explode(":", $category[$key])[0];
+  $category_text[$key] = explode(":", $category[$key])[1];
 
   // Sanity checks for receipt: upload, size, mime type
   if (! $receipt_tmp) {
@@ -189,7 +188,7 @@ foreach ($entry as $key => $date) {  // run over each row
 
   // Set name and temporary destination for attached receipt
   $receipt_ext = pathinfo($receipt_name)['extension'];
-  $receipt_rename = filter_filename($type_date ."-". $type ."-". $who ."-receipt-". $receipt_no ."-". $activity_tag .".". "$receipt_ext");
+  $receipt_rename = filter_filename($type_date ."-". $type ."-". $who ."-receipt-". $receipt_no ."-". $activity_tag[$key] .".". "$receipt_ext");
   $receipt_dest[$key] = "/tmp/" . $receipt_rename;
 
   // Try to move file to temporary destination
@@ -220,7 +219,6 @@ foreach ($entry as $key => $date) {  // run over each row
     <td>$receipt_name</td>
     <td></td>
   </tr>";
-
 
   // CSV for this receipt
   $csv[$receipt_no] = array($who_verbose, $date, $amount[$key], $recipient[$key], $activity_tag[$key], $activity_text[$key], $category_id[$key], $category_text[$key], $description[$key], $receipt_no, "");

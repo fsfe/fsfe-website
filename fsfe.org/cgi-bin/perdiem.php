@@ -268,7 +268,7 @@ foreach ($use as $d => $day) {  // calculate for each day
 foreach ($csv as $fields) {
   fputcsv($csvfile, $fields, ';', '"', '"');
 }
-$email->addAttachment($csvfile_path, filter_filename("perdiem" ."-". $who ."-". $activity_tag ."-". $description . ".csv"));
+$email->addAttachment($csvfile_path, filter_filename($date[$d]."-"."pd" ."-". $who ."-". $activity_tag ."-". $description . ".csv"));
 
 // Prepare email body
 $email_body = "Hi,

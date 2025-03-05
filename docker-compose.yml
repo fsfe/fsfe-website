@@ -12,10 +12,8 @@ services:
       - 2400:2400
       - 2500:2500
     environment:
-      - SSH_KEY_1=${SSH_KEY_1:-none}
-      - SSH_KEY_2=${SSH_KEY_2:-none}
-      - SSH_KEY_3=${SSH_KEY_3:-none}
-      - SSH_KEY_4=${SSH_KEY_4:-none}
+      - KEY_PRIVATE=${KEY_PRIVATE:-none}
+      - KEY_PASSWORD=${KEY_PASSWORD:-none}
     volumes:
       - website-cached:/website-cached
 volumes:

@@ -107,18 +107,12 @@ def _build_xmlstream(infile: Path):
     logger.debug(f"infile: {infile}")
     shortname = infile.with_suffix("")
     lang = lang_from_filename(infile)
-    logger.debug(
-        f"formed glob: {
-            infile.parent.joinpath(f'{get_basename(infile)}.??{infile.suffix}')
-        }"
+    glob = infile.parent.joinpath(f"{get_basename(infile)}.??{infile.suffix}")
+    logger.debug(f"formed glob: {glob}")
+    lang_lst = list(
+        infile.parent.glob(f"{get_basename(infile)}.??{infile.suffix}"),
     )
-    logger.debug(
-        f"file lang list: {
-            list(
-                infile.parent.glob(f'{get_basename(infile)}.??{infile.suffix}'),
-            )
-        }"
-    )
+    logger.debug(f"file lang list: {lang_lst}")
     original_lang = (
         "en"
         if infile.with_suffix("").with_suffix(f".en{infile.suffix}").exists()

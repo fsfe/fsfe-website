@@ -46,10 +46,10 @@ steps:
       - docker compose -p fsfe-website run --build build --target "$TARGET"
     when:
       branch:
-        - test
+      - test
       event:
-        - deployment
-
+        exclude:
+        - pull_request
 trigger:
   branch:
     - master

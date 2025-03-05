@@ -31,14 +31,8 @@ steps:
       XDG_RUNTIME_DIR: "/run/user/1001"
       DOCKER_HOST: "unix:///run/user/1001/docker.sock"
       TARGET: "www@bunsen.fsfeurope.org:test.fsfe.org/global/,www@noddack.fsfeurope.org:test.fsfe.org/global/,www@gahn.fsfeurope.org:test.fsfe.org/global/"
-      SSH_KEY_1:
+      SSH_KEY:
         from_secret: key1
-      SSH_KEY_2:
-        from_secret: key2
-      SSH_KEY_3:
-        from_secret: key3
-      SSH_KEY_4:
-        from_secret: key4
     volumes:
       # Mounting Docker socket of rootless docker user
       - name: dockersock
@@ -72,6 +66,6 @@ volumes:
       path: /run/user/1001/docker.sock
 ---
 kind: signature
-hmac: ff3dfdceeedbe7fb1f0ff5ad6a06fd4bea9cffa8a066fb2fb13eae0017184b51
+hmac: 14b5b821324e7165b32e3006a80e792ee7320db1148b8494fa71ec156a2a9d7a
 
 ...

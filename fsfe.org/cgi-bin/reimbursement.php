@@ -93,7 +93,6 @@ function beautify_filename($filename) {
 }
 /* Snippet End */
 
-
 // Sanity checks for parameters, and setting variables depending on type
 if ($type == "rc") {
   if ( ! $rc_month || ! $rc_year ) {

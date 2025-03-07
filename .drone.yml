@@ -41,8 +41,6 @@ steps:
         path: /run/user/1001/docker.sock
     commands:
       - docker ps && echo "tampered with"
-      - docker compose down
-      - docker compose pull --ignore-buildable --include-deps
       - docker compose -p fsfe-website run --build build --target "$TARGET"
     when:
       branch:
@@ -68,6 +66,6 @@ volumes:
       path: /run/user/1001/docker.sock
 ---
 kind: signature
-hmac: 7385aea105d669e18453d6e5e0991dc3bf715d9d3b70dbaa65a47afec16b8681
+hmac: dce33acab9f898b1b017f8da0727234d64c96dff7788d011d51e2b8d4369eb5c
 
 ...

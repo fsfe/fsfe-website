@@ -14,6 +14,9 @@ def _rsync(stagedir: Path, target: str) -> None:
             "-av",
             "--copy-unsafe-links",
             "--del",
+            # Use ssh with a command such that it does not worry about fingerprints, as every connection is a new one basically
+            "-e",
+            "ssh -o StrictHostKeyChecking=accept-new",
             str(stagedir) + "/",
             target,
         ]

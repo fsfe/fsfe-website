@@ -1,4 +1,5 @@
 FROM debian:latest
+
 # Install deps
 RUN apt update
 RUN apt install -y \
@@ -11,13 +12,9 @@ python3-venv \
 python3-pip \
 git \
 node-less \
-openssh-client
+openssh-client \
+expect
 
-# SSH Private keys
-ARG KEY_PRIVATE
-ARG KEY_PASSWORD
-
-RUN if [ "$KEY_PRIVATE" != "none" ]; then echo "$KEY_PRIVATE" | openssl rsa -passin pass:$KEY_PASSWORD | ssh-add - ; echo "VAR LOADED"; else echo "NO VAR"; fi
 
 # Setup venv
 ENV VIRTUAL_ENV=/opt/venv

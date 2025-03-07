@@ -1,6 +1,6 @@
 #!/usr/bin/env expect
 
-set timeout 10
+set timeout 20
 
 set cmd [lrange $argv 1 end]
 set password [lindex $argv 0]

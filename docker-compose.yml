@@ -11,10 +11,15 @@ services:
       - 2300:2300
       - 2400:2400
       - 2500:2500
-    environment:
-      - KEY_PRIVATE=${KEY_PRIVATE:-none}
-      - KEY_PASSWORD=${KEY_PASSWORD:-none}
+    secrets:
+      - KEY_PRIVATE
+      - KEY_PASSWORD
     volumes:
       - website-cached:/website-cached
 volumes:
   website-cached:
+secrets:
+  KEY_PRIVATE:
+    environment: KEY_PRIVATE
+  KEY_PASSWORD:
+    environment: KEY_PASSWORD

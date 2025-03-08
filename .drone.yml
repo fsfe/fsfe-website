@@ -41,7 +41,7 @@ steps:
         path: /run/user/1001/docker.sock
     commands:
       - docker ps && echo "tampered with"
-      - docker compose -p fsfe-website run --build build --target "$TARGET"
+      - docker compose -p fsfe-website run --remove-orphans --build build --target "$TARGET"
     when:
       branch:
       - test

@@ -5,12 +5,27 @@ set -euo pipefail
 
 # Load sshkeys
 if [ -f /run/secrets/KEY_PRIVATE ]; then
-	# Tighten permissions to keep ssh-add happy
-	chmod 400 /run/secrets/KEY_*
 	# Start ssh-agent
 	eval "$(ssh-agent)"
+
+	# Create config file with required keys
+	mkdir -p ~/.ssh
+	echo "AddKeysToAgent yes" > ~/.ssh/config
+	# Tighten permissions to keep ssh-add happy
+	chmod 400 /run/secrets/KEY_*
+	PASSWORD="$(cat "/run/secrets/KEY_PASSWORD")"
+	PRIVATE="$(cat "/run/secrets/KEY_PRIVATE")"
+	# Really should be able to just read from the private path, but for some reason ssh-add fails when using the actual path
+	# But works when you cat the path into another file and then load it
+	# Or cat the file and pipe it in through stdin
+	# Piping stdin to an expect command is quite complex, so we just make and remove a temporary key file.
+	# Absolutely bizarre, and not quite ideal security wise
+	echo "$PRIVATE" >/tmp/key
+	chmod 600 /tmp/key
+
 	# Use our wrapper expect script to handle interactive input
-	./exp.sh "$(cat "/run/secrets/KEY_PASSWORD")" ssh-add "/run/secrets/KEY_PRIVATE"
+	./exp.exp "$PASSWORD" ssh-add "/tmp/key"
+	rm /tmp/key
 	echo "SSH Key Loaded"
 else
 	echo "Secret not defined!"

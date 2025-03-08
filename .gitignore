@@ -28,4 +28,7 @@ __pycache__
 status.fsfe.org/*/data*/*
 
 # Secrets
+# docker compose
 .env
+# drone
+secrets.txt

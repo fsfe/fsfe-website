@@ -14,4 +14,6 @@ It also generates the paths for global texts files, for storing commonly used st
 
 It does a few other things, as well, for an exhaustive list please examine the codebase.
 
-After phase 1 is complete we can be reasonably sure that dependencies for phase 2 etc are in place, and with timestamps that phase2 can depend on to be useful
+After phase 1 is complete we can be reasonably sure that dependencies for phase 2 etc are in place, and with timestamps that phase2 can depend on to be useful.
+
+And now, [phase2](./phase2.md)

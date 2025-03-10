@@ -15,3 +15,5 @@ It will
 9. Copies over any static files that are needed, like images, PDFs etc.
 
 After phase 2 is over we have a copy of all sites built. If the site was not staged then it is in the target directory if it was staged, then it is in the staging directory.
+
+And now, [phase3](./phase3.md)

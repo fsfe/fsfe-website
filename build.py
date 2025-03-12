@@ -26,7 +26,7 @@ def parse_arguments() -> argparse.Namespace:
     parser.add_argument(
         "--target",
         dest="target",
-        help="Directory to build websites into.",
+        help="Final dirs for websites to be build to. Can be a single path, or a comma separated list of valid rsync targets. Supports custom rsynx extension for specifying ports for ssh targets, name@host:path?port.",
         type=str,
         default="./output/final",
     )

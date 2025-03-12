@@ -58,7 +58,7 @@ trigger:
     - pull_request
 
 node:
-  cont1: noris
+  cont2: noris
 
 volumes:
   # Define Docker socket of rootless docker user
@@ -67,6 +67,6 @@ volumes:
       path: /run/user/1001/docker.sock
 ---
 kind: signature
-hmac: bab274690eb3db274ad233efa007cf993250b1e42e5c5593d20b536d688c8084
+hmac: 3603190ca39d5c40ceb70998239a593bb47d95610608495c72f486e9d3d53788
 
 ...

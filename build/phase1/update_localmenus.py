@@ -59,8 +59,7 @@ def _write_localmenus(
                         else "default"
                     ),
                     link=(
-                        "/"
-                        + str(
+                        str(
                             source_file.with_suffix(".html").relative_to(
                                 source_file.parents[0]
                             )

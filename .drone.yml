@@ -30,7 +30,8 @@ steps:
       # Environment variables necessary for rootless Docker
       XDG_RUNTIME_DIR: "/run/user/1001"
       DOCKER_HOST: "unix:///run/user/1001/docker.sock"
-      TARGET: "www@bunsen.fsfeurope.org:test.fsfe.org/global/,www@noddack.fsfeurope.org:test.fsfe.org/global/,www@gahn.fsfeurope.org:test.fsfe.org/global/"
+      # Target bunsen directly, and use ipv4 proxies for noddack and gahn, as ipv6 broken.
+      TARGET: "www@bunsen.fsfeurope.org:test.fsfe.org/global/,www@proxy.noris.fsfeurope.org:test.fsfe.org/global/?10322,www@proxy.plutex.fsfeurope.org:test.fsfe.org/global/?10322"
       KEY_PRIVATE:
         from_secret: KEY_PRIVATE
       KEY_PASSWORD:
@@ -66,6 +67,6 @@ volumes:
       path: /run/user/1001/docker.sock
 ---
 kind: signature
-hmac: 1c5cd6ed1e6d75b7dbc5c886d1aba6688cbf20033be8186a082d263e307c6406
+hmac: 16fa2a60159fb896236389eb030281ad110055699aae7d1830a3024f87c9aa7a
 
 ...

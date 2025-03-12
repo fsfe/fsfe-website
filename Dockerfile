@@ -2,7 +2,7 @@ FROM debian:latest
 
 # Install deps
 RUN apt update
-RUN apt install -y \
+RUN apt install --yes --no-install-recommends \
 rsync \
 libxslt1.1 \
 libxml2 \

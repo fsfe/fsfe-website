@@ -16,7 +16,7 @@ steps:
     commands:
       - apt update
       # Install required packages
-      - apt install --yes coreutils sed grep libxml2-utils git findutils perl-base file mediainfo curl
+      - apt install --yes --no-install-recommends coreutils sed grep libxml2-utils git findutils perl-base file mediainfo curl
       # Check whether non-EN news item would appear on front-page
       - bash tools/check-non-en-frontpage.sh news
       # Run pre-commit checks

@@ -3,8 +3,6 @@ services:
     build: .
     image: fsfe-websites
     container_name: fsfe-websites
-    networks:
-      - fsfe-websites_network
     ports:
       - 2000:2000
       - 2100:2100
@@ -24,9 +22,3 @@ secrets:
     environment: KEY_PRIVATE
   KEY_PASSWORD:
     environment: KEY_PASSWORD
-networks:
- fsfe-websites_network:
-   enable_ipv6: true
-   ipam:
-     config:
-       - subnet: 2001:db8::/64

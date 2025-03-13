@@ -51,6 +51,9 @@ def process_xhtml_files(
     """
     Build .html files from .xhtml sources
     """
+    # TODO
+    # It should be possible to upgrade this and process_rss_ics files such that only one functions is needed
+    # Also for performance it would be better to iterate by processor xls, and parse it only once and pass the xsl object to called function.
     logger.info("Processing xhtml files")
 
     pool.starmap(

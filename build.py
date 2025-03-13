@@ -86,6 +86,8 @@ def main(args: argparse.Namespace):
 
     with multiprocessing.Pool(args.processes) as pool:
         logger.info("Starting phase 0 - Conditional Setup")
+
+        # TODO Should also be triggered whenever any build python file is changed
         if args.full:
             full()
 

@@ -168,6 +168,9 @@ def run(languages: list[str], processes: int, working_dir: Path) -> None:
         ["git", "rev-parse", "--show-toplevel"],
     )
 
+    # TODO
+    # Run generating all this stuff only if some xhtml|xml files have been changed
+
     # List files separated by a null bytes
     result = run_command(
         ["git", "ls-files", "-z", result],

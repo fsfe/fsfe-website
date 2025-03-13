@@ -29,8 +29,7 @@ def _rsync(stagedir: Path, target: str, port: int) -> None:
 
 def stage_to_target(stagedir: Path, targets: str, pool: multiprocessing.Pool) -> None:
     """
-    Git clean the repo to remove all cached artifacts
-    Excluded the root .venv repo, as removing it mid build breaks the build, obviously
+    Use a multithreaded rsync to copy the stage dir to all targets.
     """
     logger.info("Rsyncing from stage dir to target dir(s)")
     pool.starmap(

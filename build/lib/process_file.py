@@ -104,6 +104,10 @@ def _build_xmlstream(infile: Path):
     the expected shortname and language flag indicate
     a single xhtml page to be built
     """
+    # TODO
+    # Ideally this would use lxml to construct an object instead of string templating.
+    # Should be a little faster, and also guarantees that its valid xml
+
     logger.debug(f"infile: {infile}")
     shortname = infile.with_suffix("")
     lang = lang_from_filename(infile)
@@ -206,6 +210,11 @@ def process_file(infile: Path, processor: Path) -> str:
     result = str(transform(etree.XML(xmlstream)))
     # And now a bunch of regexes to fix some links.
     # xx is the language code in all comments
+
+    # TODO
+    # Probably a faster way to do this
+    # Maybe iterating though all a tags with lxml?
+    # Once buildxmlstream generates an xml object that should be faster.
 
     # Remove https://fsfe.org (or https://test.fsfe.org) from the start of all
     result = re.sub(

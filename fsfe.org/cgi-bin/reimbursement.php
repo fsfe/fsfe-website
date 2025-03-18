@@ -9,7 +9,7 @@ require 'PHPMailer/PHPMailer.php';
 require 'PHPMailer/SMTP.php';
 
 $html = ''; // create empty variable
-$csv = array(array("Employee name", "Date", "Amount (EUR)", "Recipient name", "Activity Tag", "Activity Text", "Category ID", "Category Text", "Description", "Receipt number", "Remarks")); // create array for CSV
+$csv = array(array("Employee number", "Employee name", "Date", "Amount (EUR)", "Recipient name", "Activity Tag", "Activity Text", "Category ID", "Category Text", "Description", "Receipt number", "Remarks")); // create array for CSV
 $csvfile = tmpfile();
 $csvfile_path = stream_get_meta_data($csvfile)['uri'];
 
@@ -34,6 +34,7 @@ $receipt_dest = [];
 
 // Separate employee name parameters
 $who_verbose = explode('|', $who)[0];
+$who_empnumber = explode('|', $who)[2];
 $who = explode('|', $who)[1];
 
 
@@ -220,7 +221,7 @@ foreach ($entry as $key => $date) {  // run over each row
   </tr>";
 
   // CSV for this receipt
-  $csv[$receipt_no] = array($who_verbose, $date, $amount[$key], $recipient[$key], $activity_tag[$key], $activity_text[$key], $category_id[$key], $category_text[$key], $description[$key], $receipt_no, "");
+  $csv[$receipt_no] = array($who_empnumber, $who_verbose, $date, $amount[$key], $recipient[$key], $activity_tag[$key], $activity_text[$key], $category_id[$key], $category_text[$key], $description[$key], $receipt_no, "");
 
   // Add receipt as email attachment
   $email->addAttachment($receipt_dest[$key], basename($receipt_dest[$key]));

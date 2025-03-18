@@ -22,7 +22,7 @@ require 'PHPMailer/PHPMailer.php';
 require 'PHPMailer/SMTP.php';
 
 $html = ''; // create empty variable
-$csv = array(array("Employee name", "Date", "Amount (EUR)", "Recipient name", "Activity Tag", "Activity Text", "Category ID", "Category Text", "Description", "Receipt number", "Remarks")); // create array for CSV
+$csv = array(array("Employee number", "Employee name", "Date", "Amount (EUR)", "Recipient name", "Activity Tag", "Activity Text", "Category ID", "Category Text", "Description", "Receipt number", "Remarks")); // create array for CSV
 $csvfile = tmpfile();
 $csvfile_path = stream_get_meta_data($csvfile)['uri'];
 $reimb_total = 0;   // total reimbursement for early calculation
@@ -47,6 +47,7 @@ $dinner = isset($_POST["dinner"]) ? $_POST["dinner"] : false;
 
 // Separate employee name parameters
 $who_verbose = explode('|', $who)[0];
+$who_empnumber = explode('|', $who)[2];
 $who = explode('|', $who)[1];
 
 // FUNCTIONS
@@ -259,7 +260,7 @@ foreach ($use as $d => $day) {  // calculate for each day
     </tr>";
 
     // CSV for this receipt
-    $csv[$key] = array($who_verbose, $date[$d], $reimb_day[$d], $who_verbose, $activity_tag, $activity_text, $category_id, $category_text, $description, "", $remarks[$d]);
+    $csv[$key] = array($who_empnumber, $who_verbose, $date[$d], $reimb_day[$d], $who_verbose, $activity_tag, $activity_text, $category_id, $category_text, $description, "", $remarks[$d]);
 
   } // if day is used
 } // foreach

@@ -63,7 +63,7 @@ RewriteRule ^translators/weblate$ https://hosted.weblate.org/projects/fsfe [R=30
 RewriteRule ^translators(.*) /contribute/translators/translators.html [R=301,L]
 
 # Apple Litigation
-RewriteRule ^/activities/apple-litigation/confidentialrequest$ https://curia.europa.eu/juris/document/document.jsf?text=&docid=295904&pageIndex=0&doclang=en&mode=req&dir=&occ=first&part=1&cid=13488140f [R=307,L]
+RewriteRule "^/activities/apple-litigation/confidentialrequest$" "https://curia.europa.eu/juris/document/document.jsf?text=&docid=295904&pageIndex=0&doclang=en&mode=req&dir=&occ=first&part=1&cid=13488140f" [R=307,L]
 
 # =============================================================================
 # CAMPAIGN/TOPIC-SPECIFIC REDIRECTS

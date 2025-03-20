@@ -59,12 +59,16 @@ RewriteRule ^standards(.*) /freesoftware/standards$1 [R=301,L]
 RewriteRule ^education(.*) /freesoftware/education$1 [R=301,L]
 
 # Translators
-RewriteRule ^translators/weblate https://hosted.weblate.org/projects/fsfe [R=301,L]
+RewriteRule ^translators/weblate$ https://hosted.weblate.org/projects/fsfe [R=301,L]
 RewriteRule ^translators(.*) /contribute/translators/translators.html [R=301,L]
+
+# Apple Litigation
+RewriteRule ^/activities/apple-litigation/confidentialrequest$ https://curia.europa.eu/juris/document/document.jsf?text=&docid=295904&pageIndex=0&doclang=en&mode=req&dir=&occ=first&part=1&cid=13488140f [R=307,L]
 
 # =============================================================================
 # CAMPAIGN/TOPIC-SPECIFIC REDIRECTS
 # =============================================================================
+
 
 # Podcast
 RewriteRule ^news/podcast/?$ /news/podcast.html [R=301,L]

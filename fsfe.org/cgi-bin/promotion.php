@@ -37,7 +37,7 @@ function relay_donation($orderID)
   $lang = substr($language, 0, 2);
 
   $PSPID = "40F00871";
-  $TP = "https://fsfe.org/donate/tmpl-concardis.$lang.html";
+  $TP = "payment-without-bank.html";
   $acceptURL = "https://fsfe.org/donate/thankyou.$lang.html";
   $cancelURL = "https://fsfe.org/donate/cancel.$lang.html";
 

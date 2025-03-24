@@ -388,7 +388,7 @@ my $shastring =
   . "ORDERID=$reference$passphrase"
   . "PMLISTTYPE=2$passphrase"
   . "PSPID=40F00871$passphrase"
-  . "TP=https://fsfe.org/order/tmpl-concardis.$lang.html$passphrase";
+  . "TP=payment-with-bank.html$passphrase";
 my $shasum = uc sha1_hex($shastring);
 my $form =
     "      <!-- payment parameters -->\n"
@@ -400,7 +400,7 @@ my $form =
   . "      <input type=\"hidden\" name=\"CN\"           value=\"$name\"/>\n"
   . "      <input type=\"hidden\" name=\"EMAIL\"        value=\"$email\"/>\n"
   . "      <!-- interface template -->\n"
-  . "      <input type=\"hidden\" name=\"TP\"           value=\"https://fsfe.org/order/tmpl-concardis.$lang.html\"/>\n"
+  . "      <input type=\"hidden\" name=\"TP\"           value=\"payment-with-bank.html\"/>\n"
   . "      <input type=\"hidden\" name=\"PMListType\"   value=\"2\"/>\n"
   . "      <!-- post-payment redirection -->\n"
   . "      <input type=\"hidden\" name=\"accepturl\"    value=\"https://fsfe.org/order/thankyou.$lang.html\"/>\n"

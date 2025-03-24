@@ -29,8 +29,8 @@ $reimb_total = 0;   // total reimbursement for early calculation
 
 $who = isset($_POST["who"]) ? $_POST["who"] : false;
 $activity = isset($_POST["activity"]) ? $_POST["activity"] : false;
-$activity_tag = explode(":", $activity)[0];
-$activity_text = explode(":", $activity)[1];
+$activity_tag = explode("||", $activity)[0];
+$activity_text = explode("||", $activity)[1];
 $category_id = "66640";
 $category_text = "Per diem";
 $description = isset($_POST["description"]) ? $_POST["description"] : false;

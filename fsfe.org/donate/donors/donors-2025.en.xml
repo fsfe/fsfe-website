@@ -5,9 +5,9 @@
 
   <!--
     The "since" attribute is set for all donors which have donated in at least
-    4 calendar years in a row. A pause of one calendar year is ok.
-    Monthly supporters are listed with the amount for the full year, even if
-    the year is still ongoing.
+    4 calendar years in a row - even if previous donations were lower than the
+    current category. A pause of one calendar year is ok. Monthly supporters are
+    listed with the amount for the full year, even if the year is still ongoing.
   -->
 
   <category1>
@@ -32,6 +32,7 @@
     <!-- Sorted by name, no image -->
     <donor>foundata</donor>
     <donor since="2014">Thomas Etter</donor>
+    <donor since="2016">Holger Kienle</donor>
     <donor since="2003">Hostsharing eG</donor>
     <donor since="2004">inmedias.it</donor>
     <donor since="2009">LIHAS - LinuxHaus Stuttgart</donor><!-- Adrian Reyer -->

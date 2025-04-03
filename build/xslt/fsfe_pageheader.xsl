@@ -11,6 +11,7 @@
 
         <xsl:element name="a">
           <xsl:attribute name="id">logo</xsl:attribute>
+          <xsl:attribute name="aria-label">FSFE Logo</xsl:attribute>
           <xsl:attribute name="href"><xsl:value-of select="$urlprefix"/>/</xsl:attribute>
           <xsl:element name="span">
             <xsl:call-template name="fsfe-gettext">
@@ -181,6 +182,7 @@
                       <xsl:element name="button">
                         <xsl:attribute name="class">btn btn-primary</xsl:attribute>
                         <xsl:attribute name="type">submit</xsl:attribute>
+                        <xsl:attribute name="aria-label">Search</xsl:attribute>
                         <xsl:element name="i">
                           <xsl:attribute name="class">fa fa-search</xsl:attribute>
                         </xsl:element>

@@ -1,4 +1,5 @@
-# SPDX-FileCopyrightText: 2020 Free Software Foundation Europe e.V. <https://fsfe.org>
+# SPDX-FileCopyrightText: Free Software Foundation Europe e.V. <https://fsfe.org>
+#
 # SPDX-License-Identifier: GPL-3.0-or-later
 
 # Build an index for the search engine based on the article titles and tags

@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html newsdate="2025-04-07">
+<version>1</version>
+
+<head>
+    <title>Restrictions on our Freedom to Study Software: A Legal Case Study from Poland</title>
+</head>
+
+<body>
+
+<h1>Restrictions on our Freedom to Study Software: A Legal Case Study from Poland</h1>
+
+<p>Software is a major component of modern life, affecting large parts of 
+our lives. When software is embedded in vehicles, the ability to control 
+our digital technology becomes even more important in the name of public 
+safety. Despite that, a recent court case in Poland highlights how the 
+law, and legal processes, can sometimes work against that.</p>
+
+<figure>
+<img src="https://pics.fsfe.org/uploads/medium/18/c5/30bb9e42d90253a80bd581cf2176.jpg"
+  alt="A NEWAG train in a train station"/>
+<figcaption>A NEWAG train. CC BY-SA 3.0 - <a 
+href="https://commons.wikimedia.org/wiki/File:31WE-005_Impuls(1)_Trako13.jpg 
+">Travelarz</a></figcaption>
+</figure>
+
+<h3>The Incident At The Center of the Court Case</h3>
+<p>Back in 2022, a number of locomotives made by the Polish train
+manufacturer Newag were experiencing technical difficulties and were
+unable to start, thus rendering them in need of maintenance. The Polish
+railway company operating those specific locomotives sent them to the
+rail yard SPS for repairs (instead of directly to Newag), who in turn
+found that software issues were responsible for preventing the trains
+from operating normally. When SPS was unable to resolve the software
+issues, one of their engineers reached out to the Dragon Sector team for
+help, after finding out about them online.</p>
+
+
+<div>
+<blockquote>
+<p>The three main parties of the case:</p>
+<ol>
+<li><a href="https://www.newag.pl/">Newag S.A.</a> (“Newag”), a Polish
+train manufacturer;</li>
+<li><a href="https://serwispojazdowszynowych.pl/">Serwis Pojazdów
+Szynowych</a> (“SPS”), a third party providing rail maintenance and
+repair services; and </li>
+<li><a href="https://dragonsector.pl/">Dragon Sector</a>, a team of
+security researchers and ethical hackers</li>
+</ol>
+</blockquote>
+</div>
+
+<p>Dragon Sector then conducted a cybersecurity assessment of the trains
+in question, and were able to identify the problem. According to them,
+the issue arose due to “locks” placed on the computer systems operating
+on the problematic locomotives, which they were able to “unlock” in the
+affected trains. Dragon Sector alleged that these locks made the systems
+on the trains cease to function properly when they were geo-located to
+have entered third party rail yards not approved by Newag, as was the
+case when they were delivered to SPS for repairs. </p>
+<p>In response, Newag denied these allegations, and countered that they were a smear campaign
+against the company by their competitors, despite Dragon Sector’s
+conclusions being <a
+href="https://www.nakolei.pl/interpelacja-wiplera-dotyczaca-newag-s-a-raporty-techniczne-dragon-sector-ministerstwo-uwaza-za-wiarygodne/">deemed
+trustworthy</a> by the <a href="https://cert.pl/">Computer Emergency
+Response Team of Poland</a>, also known as CERT Polska. Newag further
+stated that they believed that the computer systems were unlawfully
+accessed by Dragon Sector, and the trains must be taken out of service
+as Newag could no longer guarantee their safe operation. In response,
+Dragon Sector stated that while they had identified vulnerabilities in
+the train systems, they had refrained from making any unauthorized
+changes to the software or compromising the functionality of the
+trains.</p>
+<h3>The Case in the Polish Courts</h3>
+<p>The dispute eventually went to trial in August 2024 in the district
+court of Warsaw, when Newag brought a suit copyright infringement
+against both SPS and Dragon Sector, as well as an allegation of
+defamation. Surprisingly, despite what Newag had alleged pre-trial, they
+officially conceded at trial that Dragon Sector did not modify the
+software on the affected trains in question. The lawsuit nevertheless
+proceeded on the basis of Dragon Sector’s alleged unauthorized access
+and analysis of Newag’s software.</p>
+<p>This case is important as it highlights issues that go beyond a
+simple copyright dispute. In closely examining Dragon Sector’s actions,
+any decision by the court will also have to comment on the role of
+cybersecurity research and investigation activities in identifying,
+reverse engineering, and reporting security issues, as well as how all
+of this can be done in a responsible and legal manner. Depending on the
+outcome of the case, this may have a chilling effect on communities who
+play critical roles in cybersecurity, as well as on the exercise of the
+<a
+href="/freesoftware/freesoftware.html#freedoms">Freedom
+to Study</a>.</p>
+<h3>Criminalization of Unauthorized Access To Computer
+Systems</h3>
+<p>Software is so entrenched in daily life, and affects our lives far
+beyond just our engagement with our digital gadgets. In this specific
+court case, it affects the functionality of public transportation, and
+even potentially the safety of Newag’s trains and the passengers who
+ride in them. It is therefore reasonable for the public at large to have
+some expectation of transparency in how the software controlling these
+trains functions, so that vulnerabilities can be quickly discovered and
+rectified. Restricting the freedom to study and improve the code to a
+closed off proprietary ecosystem not only limits the number of people
+who are able to identify such vulnerabilities to a select group, but
+also makes unauthorized entry the only option for those who are
+motivated to fully understand how the software works.</p>
+<p>In the EU, unauthorized access of computer systems is classified as a
+criminal offense, as seen in <a
+href="https://eur-lex.europa.eu/eli/dir/2013/40/oj/eng">Directive
+2013/40/EU</a> (Directive 2013/40/EU of the European Parliament and of
+the Council of 12 August 2013 on attacks against information systems and
+replacing Council Framework Decision 2005/222/JHA) (the
+“Directive”).</p>
+<p>The broad and general rules regarding cybercrime and unauthorized
+access to computer and data systems are largely set out in this
+Directive, which specifically states in its Article 3 that EU member
+states shall ensure within their jurisdictions that intentional access
+to “the whole or to any part of an information system” is to be
+“punishable as a criminal offense, where committed by infringing a
+security measure”.</p>
+<p>Because the rules in the Directive specifically places “unauthorized
+access” as one of the criteria for cybercrime, it effectively provides
+some allowance for so-called “ethical hacking” activity.</p>
+
+<blockquote>
+<p> Generally speaking, ethical hacking is an authorized attempt to gain
+unauthorized access to a computer system, by using the strategies of
+malicious attackers. As with any concept, the exact definition will vary
+among communities. Nevertheless, the many definitions of ethical hacking
+tend to have a number of things in common:</p>
+
+<ol>
+<li>The actions of ethical hackers are authorized;</li>
+<li>The maintainers of the computer systems targeted by ethical hackers
+are aware of such actions being undertaken; and</li>
+<li>Vulnerabilities are identified by ethical hackers with the intention
+of fixing them.</li>
+</ol>
+</blockquote>
+
+<p>Ethical hacking is used to help owners of computer systems identify
+security vulnerabilities before any malicious actors has the opportunity
+to exploit them. An ethical hacker is therefore usually engaged through
+an agreement with the maintainer of the computer system, and must abide
+by the guidelines laid out in the terms of their engagement. </p>
+<p>The rules in the Directive are broad and general in nature in order
+to give EU member states some flexibility in the exact kind of
+legislation that they adopt. Legislation in each EU member state can
+therefore contain gray areas or loopholes that allow even certain types
+of ethical hacking to be viewed as criminal activity, as laws may be
+drafted too broadly, or without sufficient nuance to take into account
+all types of digital activity, despite the guidances provided by the
+Directive. It is therefore imperative that anyone seeking to help
+maintainers find security vulnerabilities in their computer systems
+check the relevant laws in their jurisdiction to determine the limits of
+what they legally can and cannot do. This holds true even in non-EU
+jurisdictions.</p>
+<p>For example, the German criminal code (<a
+href="https://www.gesetze-im-internet.de/englisch_stgb/englisch_stgb.html">Strafgesetzbuch
+</a>– the “StGB”) has a very general and broad definition of what
+constitutes an illegal access to a computer or data system. Under
+Section 202a of the StGB, unauthorized access to data is criminalized,
+regardless of intent, and even when such access is done so for
+beneficial purposes. This section of the StGBn in particular exposes
+those who are looking to find cybersecurity vulnerabilities in computer
+systems to a risk of criminal liability should they disclose security
+flaws. </p>
+<h3>EU States Adopting Looser Restrictions</h3>
+<p>Nevertheless, some EU member states are considering or have already
+instituted legislation to support not only ethical hacking activities
+(where authorization for finding access to the computer system is
+granted), but also for certain types of cybersecurity research and
+investigation that are conducted in good faith, despite not having the
+authorization of the owner or maintainer of the computer system in
+question.</p>
+<p>For example, the Federal Ministry of Justice in Germany is currently
+proposing amending Section 202a of the StGB to <a
+href="https://thecyberexpress.com/germany-drafts-law-to-shield-ethical-hackers/">allow
+conditions of security research to be exempt from criminal penalty</a>.
+Specifically, the Ministry is proposing adding provisions to Section
+202a that would specify additional conditions under which security
+research is deemed to be statutorily “authorized” and therefore exempt
+from criminal penalties. In the eyes of the Ministry, this would remove
+the risk of criminal liability for those who engage in such security
+research activity, thereby reducing unchecked security vulnerabilities
+in sectors that can affect public safety.</p>
+<p>Such loosening of restrictions to accommodate cybersecurity research
+can also be seen more robustly in Belgium. In February 2023, a
+whistleblower law (<a
+href="https://www.ejustice.just.fgov.be/mopdf/2022/12/15_1.pdf">Klokkenluiderswet</a>)
+entered into force to allow a natural or legal person (which would
+include entities such as a Dragon Sector-type collective) to investigate
+the computer systems of any Belgian organization for vulnerabilities,
+even if the organization in question has not consented. Such activity is
+however only legal under the Klokkenluiderswet if <a
+href="https://www.law.kuleuven.be/citip/blog/belgium-legalises-ethical-hacking-a-threat-or-an-opportunity-for-cybersecurity/">four
+conditions are all met</a>:</p>
+<ol type="1">
+<li>The person investigating the computer system cannot have the intent
+to cause harm or to obtain illegitimate benefits from their
+activities;</li>
+<li>Any uncovered cybersecurity vulnerability must be reported as soon
+as possible to the <a href="https://ccb.belgium.be/">Center for Cyber
+Security Belgium</a> (the “CCB”);</li>
+<li>The activity must not go further than what is necessary and
+proportionate to what is required to uncover a vulnerability; and</li>
+<li>Any information about vulnerabilities uncovered as a result of the
+investigation shall not be disclosed to the broader public without the
+consent of the CCB. </li>
+</ol>
+<h3>The Big Picture Impact on Software Freedom</h3>
+<p>This suit brought by Newag highlights why our <a
+href="/freesoftware/freesoftware.html#freedoms">software
+freedoms</a> are so important. The Freedom to Study carries so much
+significance in ensuring transparency and accountability in computer
+systems that affect our daily life, including in public transportation.
+A good faith attempt to identify and/or resolve a software problem with
+real world implications should not be met with harsh punitive actions,
+such as the threat of criminal sanctions, or lawsuits on the basis of
+copyright violation. That Dragon Sector (and to a lesser extent SPS) are
+being sued for unauthorized entry to the computer systems of the faulty
+locomotives shows that it is important for legal systems to:</p>
+<ol>
+<li>have clear legal indications about the limits of what can be done,
+by whom, and under what circumstances, when investigating faults or
+vulnerabilities in computer systems; and</li>
+<li>allow for people to investigate cybersecurity issues in good faith,
+rather than punishing them (either through criminal law or
+lawsuits).</li>
+</ol>
+<p>Lawsuits are never an easy process for any person to go through, even
+if they are in the right, and have a very good chance of winning the
+suit. They require the parties involved to put in time, effort, and
+monetary resources, and they additionally create emotional stress,
+especially for those for whom such resources are more limited. The
+maintainer of a small project is going to experience much more worry
+about legal fees, time spent fighting a case, and the possibility and
+consequences of losing, than a multi-national corporation.</p>
+<p>In this particular lawsuit, Dragon Sector (and SPS) has to consume
+time and monetary resources, and also endure a great deal of uncertainty
+to contest Newag’s claims. This in turn generates opportunity costs for
+all parties involved, in places where those resources could have been
+better spent. As a party with a more limited pool of resources, Dragon
+Sector’s opportunity costs can be said to affect them
+disproportionately, even if they ultimately prevail in court. This can
+be seen to be even more egregious when considering the concession by
+Newag that Dragon Sector did not modify the software operating on the
+affected trains, and that the lawsuit was based only on the unauthorized
+access and study of the software.</p>
+<p>Because of these factors, this lawsuit may have a chilling effect on
+cybersecurity research and investigation, as well as negative impacts on
+our broader freedoms to study and to improve. While it is important to
+enact proportional penalties on cybercrime, the law has to be balanced
+enough to distinguish between those who act in good faith, and those who
+do not. </p>
+<p>Indeed, as we have seen in the case of Belgium, this legal balancing
+is something that is possible to accomplish in EU member states, at
+least in written law. Adopting the Belgian Klokkenluiderswet-style
+provisions can help to promote transparency and support for the software
+freedom to study, and a less punitive environment for cybersecurity
+research. Had such provisions been available under Polish law, it is
+possible that this lawsuit could have been avoided entirely, by removing
+the legal basis for Newag’s claims.</p>
+<p>For these reasons, it will be interesting to see on which side the
+verdict lands in this case.</p>
+
+<h3>Resources for Disclosure of Cybersecurity Vulnerabilities</h3>
+<p>In the meantime, the <a href="https://www.enisa.europa.eu/">European
+Union Agency for Cybersecurity</a> (“ENISA”) has recognized the
+importance of identifying cybersecurity vulnerabilities, and of EU
+member states to support these efforts in their domestic laws. To that
+end, they have prepared a <a 
+href="https://www.enisa.europa.eu/publications/coordinated-vulnerability-disclosure-policies-in-the-eu">report
+compiling and analysing the policies around what they call “Coordinated
+Vulnerability Disclosure”</a> (or “CVD”) in the EU. In this context, CVD
+refers to the process by which cybersecurity researchers and
+investigators work together and share information. Additionally, ENISA
+has prepared a <a href="https://www.enisa.europa.eu/publications/vulnerability-disclosure">guidance
+document on good practices to follow</a> when participating in
+vulnerability investigation and disclosure. </p>
+<p>These are valuable resources to look further into the existing
+frameworks in EU jurisdictions, when dealing with questions of
+cybersecurity research and investigative activities.</p>
+<p>If you have a legal or licensing question related to Free Software
+that is not covered here or in any of our other resources, you can
+consider asking our <a href="/activities/licence-questions/licence-questions.html#lqteam">License
+Questions team</a> by sending them an email at <a 
+href="mailto:licence-questions@fsfe.org">licence-questions@fsfe.org</a>.
+</p>
+
+</body>
+	
+	<sidebar promo="our-work">
+	<cite>This publication is part of the FSFE’s
+Legal Column aimed at offering basic legal guidance on various issues
+related to Free Software. Please note that this article does not
+constitute legal advice. If you have a legal or licensing question
+related to Free Software that is not covered here or in any of our other
+resources, you can consider asking our License Questions team by sending
+them an email at <email>licence-questions@fsfe.org</email>.</cite>
+</sidebar>
+	
+
+<tags>
+<tag key="community">Community</tag>
+<tag key="front-page"/>
+<tag key="legal">Legal</tag>
+<tag key="licensing">Licensing</tag>
+<tag key="legal-corner">Legal Corner</tag>
+<tag key="highlights">highlights</tag>
+</tags>
+		
+<discussion href="https://mastodon.social/deck/@fsfe/"/>  
+
+<image url="https://pics.fsfe.org/uploads/medium/18/c5/30bb9e42d90253a80bd581cf2176.jpg"
+  alt="A NEWAG train in a train station"/>
+ 	  
+</html>
+

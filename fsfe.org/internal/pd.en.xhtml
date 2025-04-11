@@ -240,7 +240,7 @@
       var activity = document.getElementById("activity")
       activity.onchange = function(event) {
         var theEvent = event.target.options[event.target.selectedIndex].dataset.event;
-        if (theEvent) { document.getElementById('event').value=theEvent; }
+        if (theEvent) { document.getElementById('event').value=theEvent; } else { document.getElementById('event').value=""; } 
       }
     </script>
     

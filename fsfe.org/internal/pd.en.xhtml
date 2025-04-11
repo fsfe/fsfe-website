@@ -67,11 +67,11 @@
       </div>
 
       <div class="row form-group">
-        <label class="col-sm-3" label-for="description">Description (optional):</label>
+        <label class="col-sm-3" label-for="event">Event:</label>
         <div class="col-sm-9">
-          <input type="text" id="description" name="description" class="form-control" />
+          <input type="text" id="event" name="event" class="form-control" required="required" />
         </div>
-        <div id="description-help" class="col-sm-offset-3 col-sm-9">
+        <div id="event-help" class="col-sm-offset-3 col-sm-9">
           Leave blank for activities with only one trip (e.g. FOSDEM, SFSCON).
           For activities involving more than one trip (e.g. multiple meetings),
           please describe the trip in detail.
@@ -236,7 +236,14 @@
       <button type="submit" class="btn btn-primary">Submit per diem report</button>
 
     </form>
-
+    <script>
+      var activity = document.getElementById("activity")
+      activity.onchange = function(event) {
+        var theEvent = event.target.options[event.target.selectedIndex].dataset.event;
+        if (theEvent) { document.getElementById('event').value=theEvent; } else { document.getElementById('event').value=""; } 
+      }
+    </script>
+    
   </body>
 
 

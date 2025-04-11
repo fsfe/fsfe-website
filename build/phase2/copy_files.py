@@ -47,7 +47,7 @@ def copy_files(pool: multiprocessing.Pool, target: Path) -> None:
                         ".pyc",
                     ]
                     and path.name not in ["Makefile"],
-                    Path("").glob("*?.?*/**/*?.*"),
+                    Path("").glob("*?.?*/**/*"),
                 )
             )
             # Special case hard code pass over orde items xml required by cgi script

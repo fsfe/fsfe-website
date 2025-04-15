@@ -6,3 +6,5 @@ python-iso639==2025.2.18
 nltk==3.9.1
 # For minification html css and js
 tdewolff-minify==2.20.37
+# For HTTP requests
+requests==2.32.3

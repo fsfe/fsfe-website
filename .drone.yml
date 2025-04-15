@@ -36,6 +36,8 @@ steps:
         from_secret: KEY_PRIVATE
       KEY_PASSWORD:
         from_secret: KEY_PASSWORD
+      GIT_TOKEN:
+        from_secret: BUILD_TOKEN
     volumes:
       # Mounting Docker socket of rootless docker user
       - name: dockersock

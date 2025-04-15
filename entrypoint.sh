@@ -15,6 +15,8 @@ if [ -f /run/secrets/KEY_PRIVATE ]; then
 	chmod 400 /run/secrets/KEY_*
 	PASSWORD="$(cat "/run/secrets/KEY_PASSWORD")"
 	PRIVATE="$(cat "/run/secrets/KEY_PRIVATE")"
+	
+	GIT_TOKEN="$(cat "/run/secrets/GIT_TOKEN")"
 	# Really should be able to just read from the private path, but for some reason ssh-add fails when using the actual path
 	# But works when you cat the path into another file and then load it
 	# Or cat the file and pipe it in through stdin

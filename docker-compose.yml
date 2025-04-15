@@ -13,6 +13,7 @@ services:
     secrets:
       - KEY_PRIVATE
       - KEY_PASSWORD
+      - GIT_TOKEN
     volumes:
       - website-cached:/website-cached
 volumes:
@@ -22,3 +23,5 @@ secrets:
     environment: KEY_PRIVATE
   KEY_PASSWORD:
     environment: KEY_PASSWORD
+  GIT_TOKEN:
+    environment: GIT_TOKEN

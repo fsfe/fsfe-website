@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <html>
-  <version>2</version>
+  <version>3</version>
 
   <head>
     <title>Per Diem / VKP statement</title>
@@ -69,7 +69,7 @@
       <div class="row form-group">
         <label class="col-sm-3" label-for="event">Event:</label>
         <div class="col-sm-9">
-          <input type="text" id="event" name="event" class="form-control" required="required" />
+          <input type="text" id="event" name="event" class="form-control" required="required" onchange="document.getElementById('event').dataset.manualedit=1"/>
         </div>
         <div id="event-help" class="col-sm-offset-3 col-sm-9">
           Leave blank for activities with only one trip (e.g. FOSDEM, SFSCON).
@@ -240,7 +240,17 @@
       var activity = document.getElementById("activity")
       activity.onchange = function(event) {
         var theEvent = event.target.options[event.target.selectedIndex].dataset.event;
-        if (theEvent) { document.getElementById('event').value=theEvent; } else { document.getElementById('event').value=""; } 
+        var eventManually = document.getElementById('event').dataset.manualedit;
+        console.log(eventManually, eventManually=="1")
+        if (theEvent) { 
+          if (eventManually!=="1") {
+            document.getElementById('event').value=theEvent;
+          }
+        } else {
+          if (eventManually!=="1") {
+            document.getElementById('event').value="";
+          }
+        } 
       }
     </script>
     

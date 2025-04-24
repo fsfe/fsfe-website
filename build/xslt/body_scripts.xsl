@@ -5,12 +5,6 @@
   <xsl:template name="body_scripts">
     <script src="{$urlprefix}/scripts/bootstrap-3.0.3.custom.js"></script>
 
-    <xsl:if test="$build-env = 'development'">
-      <xsl:element name="script">
-        <xsl:attribute name="src"><xsl:value-of select="$urlprefix"/>/scripts/less.min.js</xsl:attribute>
-      </xsl:element>
-
-    </xsl:if>
   </xsl:template>
 
 </xsl:stylesheet>

@@ -7,12 +7,16 @@ clone:
   depth: 150
 
 steps:
-  - name: checks
+  - name: check-python
+    image: ghcr.io/astral-sh/ruff:latest 
+    command: [ "check", "." ]
+
+  - name: check-custom
     image: debian:bookworm
     commands:
       - apt update
       # Install required packages
-      - apt install --yes coreutils sed grep libxml2-utils git findutils perl-base file mediainfo curl
+      - apt install --yes --no-install-recommends coreutils sed grep libxml2-utils git findutils perl-base file mediainfo curl
       # Check whether non-EN news item would appear on front-page
       - bash tools/check-non-en-frontpage.sh news
       # Run pre-commit checks
@@ -20,6 +24,61 @@ steps:
       # Check syntax for all files as a safety net
       - find . -type f \( -iname "*.xhtml" -o -iname "*.xml" -o -iname "*.xsl" \) -exec xmllint --noout {} +
 
+  - name: deploy-master
+    image: docker:27.4.1
+    environment:
+      # Environment variables necessary for rootless Docker
+      XDG_RUNTIME_DIR: "/run/user/1001"
+      DOCKER_HOST: "unix:///run/user/1001/docker.sock"
+      # Target bunsen directly, and use ipv4 proxies for noddack and gahn, as ipv6 broken.
+      TARGET: "www@bunsen.fsfeurope.org:fsfe.org/global/,www@proxy.noris.fsfeurope.org:fsfe.org/global/?10322,www@proxy.plutex.fsfeurope.org:fsfe.org/global/?10322"
+      KEY_PRIVATE:
+        from_secret: KEY_PRIVATE
+      KEY_PASSWORD:
+        from_secret: KEY_PASSWORD
+      GIT_TOKEN:
+        from_secret: BUILD_TOKEN
+    volumes:
+      # Mounting Docker socket of rootless docker user
+      - name: dockersock
+        path: /run/user/1001/docker.sock
+    commands:
+      - docker ps && echo "tampered with"
+      - docker compose -p fsfe-website run --remove-orphans --build build --target "$TARGET"
+    when:
+      branch:
+      - master
+      event:
+        exclude:
+        - pull_request
+
+  - name: deploy-test
+    image: docker:27.4.1
+    environment:
+      # Environment variables necessary for rootless Docker
+      XDG_RUNTIME_DIR: "/run/user/1001"
+      DOCKER_HOST: "unix:///run/user/1001/docker.sock"
+      # Target bunsen directly, and use ipv4 proxies for noddack and gahn, as ipv6 broken.
+      TARGET: "www@bunsen.fsfeurope.org:test.fsfe.org/global/,www@proxy.noris.fsfeurope.org:test.fsfe.org/global/?10322,www@proxy.plutex.fsfeurope.org:test.fsfe.org/global/?10322"
+      KEY_PRIVATE:
+        from_secret: KEY_PRIVATE
+      KEY_PASSWORD:
+        from_secret: KEY_PASSWORD
+      GIT_TOKEN:
+        from_secret: BUILD_TOKEN
+    volumes:
+      # Mounting Docker socket of rootless docker user
+      - name: dockersock
+        path: /run/user/1001/docker.sock
+    commands:
+      - docker ps && echo "tampered with"
+      - docker compose -p fsfe-website run --remove-orphans --build build --target "$TARGET"
+    when:
+      branch:
+      - test
+      event:
+        exclude:
+        - pull_request
 trigger:
   branch:
     - master
@@ -27,8 +86,17 @@ trigger:
   event:
     - push
     - pull_request
+
+node:
+  cont2: noris
+
+volumes:
+  # Define Docker socket of rootless docker user
+  - name: dockersock
+    host:
+      path: /run/user/1001/docker.sock
 ---
 kind: signature
-hmac: 4c0dd0f272458d12234c72f66c4d420069591cac83819644df3c03a280102ded
+hmac: 3603190ca39d5c40ceb70998239a593bb47d95610608495c72f486e9d3d53788
 
 ...

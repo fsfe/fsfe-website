@@ -1,0 +1,12 @@
+#!/usr/bin/env expect
+
+set timeout 20
+
+set cmd [lrange $argv 1 end]
+set password [lindex $argv 0]
+
+eval spawn $cmd
+expect "Enter passphrase*:"
+send "$password\r"
+lassign [wait] pid spawn_id os_error actual_exit_code
+interact

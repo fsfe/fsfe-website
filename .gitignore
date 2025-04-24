@@ -13,11 +13,22 @@ global/data/topbanner/.topbanner.??.xml
 .localmenu.*.xml
 .*.xmllist
 fsfe.org/search/index.js
-fsfe.org/tags/tagged-*.en.xhtml
+fsfe.org/tags/tagged-*.??.xhtml
 fsfe.org/tags/.tags.??.xml
 global/data/modules/fsfe-activities-options.en.xml
 # Local build stuff
 output
+# Python venv
+.venv
+__pycache__
+#Nltk
+.nltk_data
 
 ## Status dir stuff
 status.fsfe.org/*/data*/*
+
+# Secrets
+# docker compose
+.env
+# drone
+secrets.txt

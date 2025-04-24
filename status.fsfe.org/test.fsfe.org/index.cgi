@@ -1,1 +1,0 @@
-../fsfe.org/index.cgi

@@ -1,0 +1,10 @@
+# XML parser
+lxml==5.3.2
+# For getting english language names of languages from two letter codes.
+python-iso639==2025.2.18
+# For stopwords for the search index
+nltk==3.9.1
+# For minification html css and js
+tdewolff-minify==2.20.37
+# For HTTP requests
+requests==2.32.3

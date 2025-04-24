@@ -36,6 +36,7 @@
       </table>
     </details>
   </xsl:template>
+
   <xsl:template match="translation-status">
     <xsl:if test="/buildinfo/@language != 'en'">
       <div class="translation-status">
@@ -61,31 +62,31 @@
               <xsl:for-each select="file">
                 <tr>
                   <td>
-                    <xsl:value-of select="page"/>
+                    <xsl:value-of select="@page"/>
                   </td>
                   <td>
-                    <xsl:value-of select="original_date"/>
+                    <xsl:value-of select="@original_date"/>
                   </td>
                   <td>
                     <a>
                       <xsl:attribute name="href">
-                        <xsl:value-of select="original_url"/>
+                        <xsl:value-of select="@original_url"/>
                       </xsl:attribute>
-                      <xsl:value-of select="original_version"/>
+                      <xsl:value-of select="@original_version"/>
                     </a>
                   </td>
                   <td>
                     <xsl:choose>
-                      <xsl:when test="translation_url != '#'">
+                      <xsl:when test="@translation_url != '#'">
                         <a>
                           <xsl:attribute name="href">
-                            <xsl:value-of select="translation_url"/>
+                            <xsl:value-of select="@translation_url"/>
                           </xsl:attribute>
-                          <xsl:value-of select="translation_version"/>
+                          <xsl:value-of select="@translation_version"/>
                         </a>
                       </xsl:when>
                       <xsl:otherwise>
-                        <xsl:value-of select="translation_version"/>
+                        <xsl:value-of select="@translation_version"/>
                       </xsl:otherwise>
                     </xsl:choose>
                   </td>
@@ -95,26 +96,27 @@
           </details>
         </xsl:for-each>
         <xsl:for-each select="/buildinfo/document/set/missing-texts">
-          <xsl:variable name="max-length" select="max-length"/>
           <h3>
             <xsl:text>Missing texts in </xsl:text>
             <a>
               <xsl:attribute name="href">
-                <xsl:value-of select="url"/>
+                <xsl:value-of select="@url"/>
               </xsl:attribute>
-              <xsl:value-of select="filename"/>
+              <xsl:value-of select="@filepath"/>
             </a>
           </h3>
+          <h4>
+            <xsl:text>English language texts version: </xsl:text>
+            <xsl:value-of select="@en"/>
+            <br/>
+            <xsl:text>Current language language texts version: </xsl:text>
+            <xsl:value-of select="@curr_lang"/>
+          </h4>
           <details>
             <summary>Show</summary>
-            <div style="display: flex; flex-wrap: wrap;">
+            <div style="display: flex; flex-wrap: wrap; align-items: stretch; align-content: stretch; justify-content: space-evenly; gap: 10px;">
               <xsl:for-each select="text">
                 <div>
-                  <xsl:attribute name="style">
-                    <xsl:text>width: </xsl:text>
-                    <xsl:value-of select="$max-length"/>
-                    <xsl:text>;</xsl:text>
-                  </xsl:attribute>
                   <xsl:value-of select="current()"/>
                 </div>
               </xsl:for-each>
@@ -124,4 +126,5 @@
       </div>
     </xsl:if>
   </xsl:template>
+
 </xsl:stylesheet>

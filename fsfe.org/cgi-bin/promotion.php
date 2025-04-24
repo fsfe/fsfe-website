@@ -99,6 +99,7 @@ if (
   empty($_POST['lastname'])    ||
   empty($_POST['mail'])        ||
   stripos($_POST['mail'], 'example') ||
+  stripos($_POST['mail'], '@@') ||
   empty($_POST['street'])      ||
   empty($_POST['zip'])         ||
   empty($_POST['city'])        ||

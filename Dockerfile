@@ -29,6 +29,6 @@ RUN pip install -r /website-source/requirements.txt
 COPY . /website-source/
 WORKDIR /website-source
 
-ENTRYPOINT [ "bash", "./entrypoint.sh" ]
+ENTRYPOINT [ "bash", "./entrypoint.sh", "--full" ]
 
 

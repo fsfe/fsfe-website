@@ -127,7 +127,7 @@ def _check_xmllist_deps(file: Path) -> None:
     xmls = set()
     with file.open(mode="r") as fileobj:
         for line in fileobj:
-            for newfile in Path("").glob(line + ".??.xml"):
+            for newfile in Path("").glob(line.strip() + ".??.xml"):
                 xmls.add(newfile)
     touch_if_newer_dep(file, list(xmls))
 

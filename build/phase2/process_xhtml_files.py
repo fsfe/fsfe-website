@@ -36,7 +36,11 @@ def _process_dir(languages: list[str], target: Path, dir: Path) -> None:
                             else basename.with_suffix(".en.xhtml")
                         ),
                         processor,
-                        target_file.with_suffix("").with_suffix(".xmllist"),
+                        (
+                            source_file.parent.joinpath(
+                                "." + basename.name
+                            ).with_suffix(".xmllist")
+                        ),
                         Path(f"global/data/texts/.texts.{lang}.xml"),
                         Path(f"global/data/topbanner/.topbanner.{lang}.xml"),
                         Path("global/data/texts/texts.en.xml"),

@@ -8,7 +8,7 @@ from pathlib import Path
 
 import lxml.etree as etree
 
-from build.lib.misc import get_basepath
+from build.lib.misc import get_basepath, update_if_changed
 
 logger = logging.getLogger(__name__)
 
@@ -71,7 +71,10 @@ def _write_localmenus(
                     ),
                 ).text = localmenu.text
 
-        page.getroottree().write(file, xml_declaration=True, encoding="utf-8")
+        update_if_changed(
+            file,
+            etree.tostring(page, encoding="utf-8").decode("utf-8"),
+        )
 
 
 def update_localmenus(languages: list[str], pool: multiprocessing.Pool) -> None:

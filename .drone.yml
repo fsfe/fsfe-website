@@ -38,6 +38,8 @@ steps:
         from_secret: KEY_PASSWORD
       GIT_TOKEN:
         from_secret: BUILD_TOKEN
+      VOLUME:
+        website-cached-master
     volumes:
       # Mounting Docker socket of rootless docker user
       - name: dockersock

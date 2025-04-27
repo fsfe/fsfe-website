@@ -15,9 +15,10 @@ services:
       - KEY_PASSWORD
       - GIT_TOKEN
     volumes:
-      - website-cached:/website-cached
+      - ${VOLUME:-website-cached}:/website-cached
 volumes:
   website-cached:
+  website-cached-master:
 secrets:
   KEY_PRIVATE:
     environment: KEY_PRIVATE

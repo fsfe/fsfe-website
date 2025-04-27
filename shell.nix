@@ -42,6 +42,10 @@ pkgs.mkShell {
         };
       };
     })
+    # Packages for git hooks
+    mediainfo
+    perl
+    file
   ];
   shellHook = ''
     export PIP_DISABLE_PIP_VERSION_CHECK=1;

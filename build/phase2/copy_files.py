@@ -4,6 +4,7 @@
 
 import logging
 import multiprocessing
+import shutil
 from pathlib import Path
 
 logger = logging.getLogger(__name__)
@@ -18,6 +19,8 @@ def _copy_file(target: Path, source_file: Path) -> None:
         logger.debug(f"Copying {source_file} to {target_file}")
         target_file.parent.mkdir(parents=True, exist_ok=True)
         target_file.write_bytes(source_file.read_bytes())
+        # preserve file modes
+        shutil.copymode(source_file, target_file)
 
 
 def copy_files(pool: multiprocessing.Pool, target: Path) -> None:

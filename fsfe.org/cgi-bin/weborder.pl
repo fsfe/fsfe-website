@@ -94,7 +94,7 @@ if ( !$email ) {
 }
 if ( !$email =~ /^([a-zA-Z][\w\])\@([a-zA-Z0-9.-]+)\.([a-zA-Z]+)/ ) {
     print "Content-type: text/html\n\n";
-    print "<p>Coult not validate your email address</p>\n"
+    print "<p>Coult not validate your email address</p>\n";
     print "<p>Please check your email address!</p>\n";
     exit;
 }

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html newsdate="2025-04-29">
+	<version>1</version>
+	
+	<head>
+		<title>Simplifying FSFE translation process: integrating LibreTranslate</title>
+	</head>
+	
+	<body>
+	
+	
+	
+<h1>Simplifying FSFE translation process: integrating LibreTranslate</h1>
+
+<p>
+A new release of the Webpreview tool is here! This is our in-house Free 
+Software preview tool for FSFE webpages. It supports our amazing 
+volunteers in translating, and checking website content. Our latest 
+update integrates LibreTranslate, providing a helpful starting point to 
+speed up the translation process.
+</p>
+
+<figure> <img 
+src="https://pics.fsfe.org/uploads/medium/d4/33/afa35bb07588d9c9e0522d5e4b5d.png" 
+alt="Screenshot of the webpreview interface with a page titled FSFE's Mission loaded"/> 
+</figure>
+
+<p>
+As an European charity promoting the use of Free Software as well as the 
+importance of software freedom. One of our ways of reaching the Free 
+Software community, and the society in general, is by offering our 
+website and documents in several languages – translated by native 
+speakers.
+</p>
+<p>This hard work is mainly done by our hard-working volunteers and
+where the <a
+href="/contribute/translators/translators.html">Translation
+Team</a> come into play: our diverse and international groups of
+volunteers proofread and translate our content into many European
+languages. Warmly kudos to all of them!</p>
+<p>One of the most useful tools that our translators are using is <a
+href="https://git.fsfe.org/fsfe-system-hackers/webpreview">Webpreview</a>.
+This Free Software tool is provided by the FSFE and created by our
+Deputy Coordinator of the Translation Team, Luca Bonissi. Webpreview
+helps our translators to share their proposed changes to our mailing
+list, preview how their changes might look on our website, have a live
+editor while translating and much more. Indeed, Webpreview is not only a
+tool for translators but for the rest of the team as it allows staffers
+to check out how a page or news item will look like before putting it
+online.</p>
+<h2 id="libretranslate-and-webpreview">LibreTranslate and
+Webpreview</h2>
+<p><a href="https://github.com/LibreTranslate">LibreTranslate</a> is a
+Free Software project that provides a Machine Translation API, based on
+the <a href="https://github.com/argosopentech/argos-translate">Argos
+Translate</a> library. The biggest addition in this release is its
+integration into Webpreview, which currently allows you to create a
+draft translation in six languages: English, Spanish, French, German,
+Italian, Portuguese - more will be coming soon!</p>
+
+<figure><iframe title="LibreTranslate with
+Webpreview tool" width="560" height="315"
+src="https://media.fsfe.org/videos/embed/qJhVHJ6tfQCVqVyjYaA5wQ?loop=1&amp;autoplay=1&amp;title=0"
+frameborder="0" allowfullscreen="" sandbox="allow-same-origin
+allow-scripts allow-popups
+allow-forms"></iframe><figcaption>Sneak preview of
+LibreTranslate in Webperview,
+CC-BY-SA</figcaption></figure>
+
+<p><em></em></p>
+<p>You just need to choose in which language you need the text to be
+translated into and the machine gives you a first draft. Of course,
+every translation still goes through the care and insight of our
+dedicated volunteers, who proofread and check it making suggestions and
+taking the extra step that a machine cannot do.</p>
+<p>Thanks to its simple API, we were able to easily <a 
+href="https://git.fsfe.org/fsfe-system-hackers/webpreview/commit/6e7bdaccdb001672093ee3c2096adc38b6248054">integrate 
+LibreTranslate into the codebase</a>.</p>
+<p>By using the existing command system of Webpreview, we added an
+<code>autotranslate</code> command. This command translates
+chunks of text using the LibreTranslate API.</p>
+<p>Here is how it works:</p>
+<ol type="1">
+<li>When any webpage is loaded, it’s broken down into a tree-like
+structure made of elements (e.g. paragraphs, headers, links). This
+structure is called the DOM, and it lets us programmatically find and
+change parts of the page.</li>
+<li>The client walks through the DOM and looks for text elements like
+paragraphs, quotes, and the like
+(<code>Node.TEXT_NODE</code>).</li>
+<li>The text extracted from these elements is sent to LibreTranslate
+through Webpreview for translation.</li>
+<li>The content of these elements is replaced with their translated
+version and becomes visible to the translator.</li>
+</ol>
+<p>This design sends excerpts of text to LibreTranslate, which may lack
+some context from the overall page. One future improvement might be to
+consider sending the whole page using the built-in HTML format in the
+LibreTranslate API, which could potentially improve translation
+quality.</p>
+<h2 id="markdown-support">Markdown support</h2>
+<p>Webpreview now supports Markdown, allowing for easier content
+creation without having to deal with <a 
+href="https://git.fsfe.org/FSFE/fsfe-website/src/branch/master/fsfe.org/news/2025/news-20250103-01.en.xhtml">XHTML
+pages</a>. This feature is powered by the <a 
+href="https://github.com/sparksuite/simplemde-markdown-editor">SimpleMDE</a>
+Markdown editor, some <a href="https://jekyllrb.com/docs/front-matter/">frontmatter</a> parsing,
+and basic templating.</p>
+<p>The underlying code for these changes is <a 
+href="https://git.fsfe.org/fsfe-system-hackers/webpreview/pulls/167">available 
+to the public</a> under a Free Software license.</p>
+<p>Interested in helping grow the FSFE community? Consider joining our
+<a href="/contribute/translators/translators.html">translation
+team</a> to help make our content accessible in more languages!</p>
+
+</body>
+
+<tags>
+    <tag key="front-page"/>
+		<tag key="community">Community</tag>
+		<tag key="translations">Translators team</tag>
+</tags>
+				
+<discussion href="https://mastodon.social/@fsfe/"/>  
+
+<image url="https://pics.fsfe.org/uploads/medium/d4/33/afa35bb07588d9c9e0522d5e4b5d.png" alt="Screenshot of the webpreview interface with a page titled FSFE's Mission loaded"/> 
+	
+</html>

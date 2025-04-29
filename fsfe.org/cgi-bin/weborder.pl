@@ -92,6 +92,12 @@ if ( !$email ) {
     print "<p>Please enter your email address!</p>\n";
     exit;
 }
+if ( !$email =~ /^([a-zA-Z][\w\])\@([a-zA-Z0-9.-]+)\.([a-zA-Z]+)/ ) {
+    print "Content-type: text/html\n\n";
+    print "<p>Coult not validate your email address</p>\n"
+    print "<p>Please check your email address!</p>\n";
+    exit;
+}
 
 my $items_file = $ENV{"DOCUMENT_ROOT"} . "order/data/items.en.xml";
 my $items = XML::LibXML->load_xml(location => $items_file);

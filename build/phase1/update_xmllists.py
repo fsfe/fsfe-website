@@ -35,7 +35,7 @@ def _update_for_base(
         with base.with_suffix(".sources").open(mode="r") as file:
             for line in file:
                 pattern = (
-                    re.sub(r":\[.*\]$", "*", line)
+                    re.sub(r"(\*)?:\[.*\]$", "*", line)
                     .replace("$nextyear", nextyear)
                     .replace("$thisyear", thisyear)
                     .replace("$lastyear", lastyear)
@@ -90,7 +90,8 @@ def _update_module_xmllists(languages: list[str], pool: multiprocessing.Pool) ->
                 lambda path: get_basepath(path),
                 filter(
                     lambda path: lang_from_filename(path) in languages,
-                    site.glob("**/*.*.xml"),
+                    list(site.glob("**/*.*.xml"))
+                    + list(Path("global/").glob("**/*.*.xml")),
                 ),
             )
         )

@@ -86,9 +86,10 @@ trigger:
     - master
     - test
   event:
-    - push
-    - pull_request
+    - cron
     - custom
+    - pull_request
+    - push
 
 node:
   cont2: noris
@@ -100,6 +101,6 @@ volumes:
       path: /run/user/1001/docker.sock
 ---
 kind: signature
-hmac: 0cb85193b8009cfc67af21e5c1adc193124352efb02675e979eb9248bd14dd03
+hmac: a9c6ebe599084250d533bc58f7566895a7b85f8f6547005a2560a9f9dc1eaa93
 
 ...

@@ -46,7 +46,7 @@ steps:
         path: /run/user/1001/docker.sock
     commands:
       - docker ps && echo "tampered with"
-      - docker compose -p fsfe-website run --remove-orphans --build build --target "$TARGET"
+      - docker compose -p fsfe-website run --remove-orphans --build build --target "$TARGET" $EXTRA_FLAGS
     when:
       branch:
       - master
@@ -74,7 +74,7 @@ steps:
         path: /run/user/1001/docker.sock
     commands:
       - docker ps && echo "tampered with"
-      - docker compose -p fsfe-website run --remove-orphans --build build --target "$TARGET"
+      - docker compose -p fsfe-website run --remove-orphans --build build --target "$TARGET" $EXTRA_FLAGS
     when:
       branch:
       - test
@@ -88,6 +88,7 @@ trigger:
   event:
     - push
     - pull_request
+    - custom
 
 node:
   cont2: noris
@@ -99,6 +100,6 @@ volumes:
       path: /run/user/1001/docker.sock
 ---
 kind: signature
-hmac: 0115784b2d1b2d16f81a4e93325a83f7a60daef0b31835251e6956e137bb8254
+hmac: 0cb85193b8009cfc67af21e5c1adc193124352efb02675e979eb9248bd14dd03
 
 ...

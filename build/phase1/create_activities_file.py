@@ -7,16 +7,18 @@ import logging
 import os
 import requests
 from pathlib import Path
+import lxml.etree as etree
 from urllib.parse import urlparse
+
+from build.lib.misc import update_if_changed
 
 logger = logging.getLogger(__name__)
 
-raw_url = urlparse(
-    "https://git.fsfe.org/FSFE/activities/raw/branch/master/activities.csv"
-)
 
-
-def create_activities_file():
+def create_activities_file() -> None:
+    raw_url = urlparse(
+        "https://git.fsfe.org/FSFE/activities/raw/branch/master/activities.csv"
+    )
     git_token = os.environ.get("GIT_TOKEN")
     if git_token is None:
         logger.warn("GIT_TOKEN is not set, skipping generation of activities file")
@@ -30,7 +32,13 @@ def create_activities_file():
         raise Exception("Failed to retrieve activities file")
 
     activities_csv = csv.reader(r.text.split("\n")[1:], delimiter="\t")
-    activities = ""
+
+    page = etree.Element("data")
+    # Add a version tag
+    version = etree.SubElement(page, "version")
+    version.text = "1"
+    # add a module element to hold activities
+    module = etree.SubElement(page, "module")
 
     for row in activities_csv:
         if len(row) == 0:
@@ -40,26 +48,12 @@ def create_activities_file():
         description = row[1]
         event = row[2]
 
-        activities += f'    <option value="{tag}||{description}"'
+        option = etree.SubElement(module, "option", value=f"{tag}||{description}")
         if event:
-            activities += f' data-event="{event}"'
+            option.attrib["data-event"] = event
+        option.text = f"{tag} ({description})"
 
-        activities += ">"
-        activities += f"{tag} ({description})"
-        activities += "</option>\n"
-
-    content = f"""<?xml version="1.0" encoding="UTF-8"?>
-
-<data>
-    <version>1</version>
-
-    <module>
-    {activities}
-    </module>
-</data>"""
-
-    activities_path = Path("global/data/modules/fsfe-activities-options.en.xml")
-    with open(activities_path, "w") as f:
-        f.write(content)
-
-    logger.info(f"Wrote activity file to {str(activities_path)}")
+    update_if_changed(
+        Path("global/data/modules/fsfe-activities-options.en.xml"),
+        etree.tostring(page, encoding="utf-8").decode("utf-8"),
+    )

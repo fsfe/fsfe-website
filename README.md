@@ -1,6 +1,5 @@
 # FSFE Website
 
-
 This repository contains the source files of [fsfe.org](https://fsfe.org), pdfreaders.org, freeyourandroid.org, ilovefs.org, drm.info, and test.fsfe.org.
 
 ## Table of Contents
@@ -15,7 +14,9 @@ This repository contains the source files of [fsfe.org](https://fsfe.org), pdfre
 
 Our web team has compiled some information about technology used for this website on the [Information for Webmasters](https://fsfe.org/contribute/web/) page. This is mainly focused on page content.
 
-For information on how the build process works see [docs subfolder](./docs/overview.md)
+For information on how the build process works see [docs subfolder](./docs/overview.md). For more information on contributing to the buid process, please see the [contributor docs](./docs/contributing.md) for some useful tips.
+
+Some tips for management can be found in the [management docs](./docs/management.md)
 
 ## Structure
 
@@ -75,7 +76,7 @@ You can see the current status of translation progress of fsfe.org at [status.fs
 
 ## Build
 
-There are two ways to build and develop the directory locally. Initial builds of the webpages may take ~40 minutes, but subsequent builds should be much faster. Using the `--languages` flag to avoid building all supported languages can make this much faster. See ./build/README.md for more information.
+There are two ways to build and develop the directory locally. Initial builds of the webpages may take ~12 minutes, but subsequent builds should be much faster. Using the `--languages` flag to avoid building all supported languages can make this much faster. Run `./build.py --help` for more information.
 
 Alterations to build scripts or the files used site-wide will result in near full rebuilds.
 
@@ -112,9 +113,29 @@ The pages can be built and served by running `./build.py`. Try `--help` for more
 Simply running `docker compose run --service-ports build --serve` should build the webpages and make them available over localhost.
 Some more explanation: we are essentially just using docker as a way to provide dependencies and then running the build script. All flags after `build` are passed to `build.py`. The `service-ports` flag is required to open ports from the container for serving the output, not needed if not using the `--serve` flag of the build script.
 
+## Githooks
+
+The repo contains some highly recommended githooks that one should enable. They check for several kinds of common issues. They are also run in CI, so enabling them locally speeds the development feedback loop.
+
+One can enable them locally using
+
+```sh
+rm ./.git/hooks -r # remove git's sample hooks
+ln -s ../tools/githooks/ .git/hooks # link our hooks to the right dir
+```
+
+The hooks have some extra dependencies, namely
+
+```
+  git xmllint sed file grep bash perl mediainfo curl mktemp
+```
+
+The provided `nix-shell` includes the needed packages. Otherwise, they can be installed manually.
+
 ## Testing
 
 While most small changes can be tested adequately by building locally some larger changes, particularly ones relating to the order pages, event registration and other forms may require more integrated testing. This can be achieved using the `test` branch. This branch is built and served in the same way as the main site, [fsfe.org](https://fsfe.org). The built version of the `test` branch may be viewed at [test.fsfe.org](https://test.fsfe.org).
 
 ## Status Viewing
+
 The status of builds of [fsfe.org](https://fsfe.org) and [test.fsfe.org](https://test.fsfe.org) can be viewed at [status.fsfe.org](https://status.fsfe.org)

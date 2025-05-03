@@ -16,6 +16,7 @@ logger = logging.getLogger(__name__)
 
 
 def create_activities_file() -> None:
+    logger.info("Creating activities file")
     raw_url = urlparse(
         "https://git.fsfe.org/FSFE/activities/raw/branch/master/activities.csv"
     )

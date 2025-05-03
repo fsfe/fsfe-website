@@ -110,7 +110,25 @@ The pages can be built and served by running `./build.py`. Try `--help` for more
 
 ### Docker
 
-Simply running `docker compose run --service-ports build --serve` should build the webpages and make them available over localhost.
+The docker build process is in some ways designed for deployment. This means that it expects some environment variables to be set to function. Namely, it will try and load ssh credentials and git credentials, and docker does not support providing default values to these.
+
+So, to stub out this functionality, please set the environment variables
+`KEY_PRIVATE KEY_PASSWORD GIT_TOKEN` to equal `none` when running docker. One can set them for the shell session, an example in bash is seen below.
+
+```
+export KEY_PRIVATE=none;
+export KEY_PASSWORD=none;
+export GIT_TOKEN=none;
+```
+One can then run Docker commands like `docker compose ...`.
+
+Alternatively one can prefix the Docker commands with the required variables, like so
+```
+KEY_PRIVATE=none KEY_PASSWORD=none GIT_TOKEN=none docker compose
+```
+Once your preferred method has been chosen, simply running `docker compose run --service-ports build --serve` should build the webpages and make them available over localhost.
+
+
 Some more explanation: we are essentially just using docker as a way to provide dependencies and then running the build script. All flags after `build` are passed to `build.py`. The `service-ports` flag is required to open ports from the container for serving the output, not needed if not using the `--serve` flag of the build script.
 
 ## Githooks

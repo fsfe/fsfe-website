@@ -4,13 +4,14 @@ set -euo pipefail
 # Ran from the volume of the website source mounted at /website-source
 
 # Load sshkeys
-if [ -f /run/secrets/KEY_PRIVATE ]; then
+if [ -f /run/secrets/KEY_PRIVATE ] && [ "$(cat /run/secrets/KEY_PRIVATE)" != "none" ]; then
+
 	# Start ssh-agent
 	eval "$(ssh-agent)"
 
 	# Create config file with required keys
 	mkdir -p ~/.ssh
-	echo "AddKeysToAgent yes" > ~/.ssh/config
+	echo "AddKeysToAgent yes" >~/.ssh/config
 	# Tighten permissions to keep ssh-add happy
 	chmod 400 /run/secrets/KEY_*
 	PASSWORD="$(cat "/run/secrets/KEY_PASSWORD")"
@@ -31,7 +32,7 @@ else
 	echo "Secret not defined!"
 fi
 
-if [ -f /run/secrets/GIT_TOKEN ]; then
+if [ -f /run/secrets/GIT_TOKEN ] && [ "$(cat /run/secrets/GIT_TOKEN)" != "none" ]; then
 	export GIT_TOKEN="$(cat "/run/secrets/GIT_TOKEN")"
 fi
 

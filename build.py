@@ -34,10 +34,15 @@ def parse_arguments() -> argparse.Namespace:
         description="Python script to handle building of the fsfe webpage"
     )
     parser.add_argument(
-        "--target",
-        help="Final dirs for websites to be build to. Can be a single path, or a comma separated list of valid rsync targets. Supports custom rsynx extension for specifying ports for ssh targets, name@host:path?port.",
-        type=str,
-        default="./output/final",
+        "--full",
+        help="Force a full rebuild of all webpages.",
+        action="store_true",
+    )
+    parser.add_argument(
+        "--languages",
+        help="Languages to build website in.",
+        default=[],
+        type=lambda input: input.split(","),
     )
     parser.add_argument(
         "--log-level",
@@ -47,21 +52,15 @@ def parse_arguments() -> argparse.Namespace:
         help="Set the logging level (default: INFO)",
     )
     parser.add_argument(
-        "--full",
-        help="Force a full rebuild of all webpages.",
-        action="store_true",
-    )
-    parser.add_argument(
         "--processes",
         help="Number of processes to use when building the website",
         type=int,
         default=multiprocessing.cpu_count(),
     )
     parser.add_argument(
-        "--languages",
-        help="Languages to build website in.",
-        default=[],
-        type=lambda input: input.split(","),
+        "--serve",
+        help="Serve the webpages after rebuild",
+        action="store_true",
     )
     parser.add_argument(
         "--sites",
@@ -75,9 +74,10 @@ def parse_arguments() -> argparse.Namespace:
         action="store_true",
     )
     parser.add_argument(
-        "--serve",
-        help="Serve the webpages after rebuild",
-        action="store_true",
+        "--target",
+        help="Final dirs for websites to be build to. Can be a single path, or a comma separated list of valid rsync targets. Supports custom rsynx extension for specifying ports for ssh targets, name@host:path?port.",
+        type=str,
+        default="./output/final",
     )
     args = parser.parse_args()
     return args

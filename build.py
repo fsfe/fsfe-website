@@ -107,7 +107,7 @@ def main(args: argparse.Namespace):
         # Each of these symlinks will point to the corresponding file without a dot at
         # the beginning of the filename, if present, and to the English version
         # otherwise. This symlinks make sure that phase 2 can easily use the right file
-        # for each language, also as a prerequisite in the Makefile.
+        # for each language
         global_symlinks(
             args.languages
             if args.languages
@@ -122,7 +122,6 @@ def main(args: argparse.Namespace):
         )
         working_target = Path("./output/stage" if stage_required else args.target)
         # the two middle phases are unconditional, and run on a per site basis
-        #
         for site in args.sites:
             logger.info(f"Processing {site}")
             if not site.exists():

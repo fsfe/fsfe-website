@@ -48,11 +48,15 @@ def _run_process(
         target_file.write_text(result)
 
 
-def _process_dir(languages: list[str], target: Path, dir: Path) -> None:
+def _process_dir(
+    source_dir: Path, languages: list[str], target: Path, dir: Path
+) -> None:
     for basename in set(map(lambda path: path.with_suffix(""), dir.glob("*.??.xhtml"))):
         for lang in languages:
             source_file = basename.with_suffix(f".{lang}.xhtml")
-            target_file = target.joinpath(source_file).with_suffix(".html")
+            target_file = target.joinpath(
+                source_file.relative_to(source_dir)
+            ).with_suffix(".html")
             processor = (
                 basename.with_suffix(".xsl")
                 if basename.with_suffix(".xsl").exists()
@@ -61,9 +65,11 @@ def _process_dir(languages: list[str], target: Path, dir: Path) -> None:
             _run_process(target_file, processor, source_file, basename, lang)
 
 
-def _process_stylesheet(languages: list[str], target: Path, processor: Path) -> None:
+def _process_stylesheet(
+    source_dir: Path, languages: list[str], target: Path, processor: Path
+) -> None:
     basename = get_basepath(processor)
-    destination_base = target.joinpath(basename)
+    destination_base = target.joinpath(basename.relative_to(source_dir))
     for lang in languages:
         target_file = destination_base.with_suffix(
             f".{lang}{processor.with_suffix('').suffix}"
@@ -73,7 +79,7 @@ def _process_stylesheet(languages: list[str], target: Path, processor: Path) -> 
 
 
 def process_files(
-    languages: list[str], pool: multiprocessing.Pool, target: Path
+    source_dir: Path, languages: list[str], pool: multiprocessing.Pool, target: Path
 ) -> None:
     """
     Build .html, .rss and .ics files from .xhtml sources
@@ -84,23 +90,23 @@ def process_files(
     pool.starmap(
         _process_dir,
         map(
-            lambda dir: (languages, target, dir),
-            set(map(lambda path: path.parent, Path("").glob("*?.?*/**/*.*.xhtml"))),
+            lambda dir: (source_dir, languages, target, dir),
+            set(map(lambda path: path.parent, source_dir.glob("**/*.*.xhtml"))),
         ),
     )
     logger.info("Processing rss files")
     pool.starmap(
         _process_stylesheet,
         map(
-            lambda processor: (languages, target, processor),
-            Path("").glob("*?.?*/**/*.rss.xsl"),
+            lambda processor: (source_dir, languages, target, processor),
+            source_dir.glob("**/*.rss.xsl"),
         ),
     )
     logger.info("Processing ics files")
     pool.starmap(
         _process_stylesheet,
         map(
-            lambda processor: (languages, target, processor),
-            Path("").glob("*?.?*/**/*.ics.xsl"),
+            lambda processor: (source_dir, languages, target, processor),
+            source_dir.glob("**/*.ics.xsl"),
         ),
     )

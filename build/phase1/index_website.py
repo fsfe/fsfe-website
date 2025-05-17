@@ -68,7 +68,9 @@ def _process_file(file: Path, stopwords: set[str]) -> dict:
     }
 
 
-def index_websites(languages: list[str], pool: multiprocessing.Pool) -> None:
+def index_websites(
+    source_dir: Path, languages: list[str], pool: multiprocessing.Pool
+) -> None:
     """
     Generate a search index for all sites that have a search/search.js file
     """
@@ -78,11 +80,8 @@ def index_websites(languages: list[str], pool: multiprocessing.Pool) -> None:
     nltk.data.path = [nltkdir] + nltk.data.path
     nltk.download("stopwords", download_dir=nltkdir, quiet=True)
     # Iterate over sites
-    for site in filter(
-        lambda path: path.joinpath("search/search.js").exists(),
-        Path(".").glob("?*.??*"),
-    ):
-        logger.debug(f"Indexing {site}")
+    if source_dir.joinpath("search/search.js").exists():
+        logger.debug(f"Indexing {source_dir}")
 
         # Get all xhtml files in languages to be processed
         # Create a list of tuples
@@ -109,13 +108,13 @@ def index_websites(languages: list[str], pool: multiprocessing.Pool) -> None:
             ),
             filter(
                 lambda file: file.suffixes[0].removeprefix(".") in languages,
-                Path(site).glob("**/*.??.xhtml"),
+                source_dir.glob("**/*.??.xhtml"),
             ),
         )
 
         articles = pool.starmap(_process_file, files_with_stopwords)
 
         update_if_changed(
-            Path(f"{site}/search/index.js"),
+            source_dir.joinpath("search/index.js"),
             "var pages = " + json.dumps(articles, ensure_ascii=False),
         )

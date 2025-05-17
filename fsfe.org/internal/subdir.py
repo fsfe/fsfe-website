@@ -15,7 +15,10 @@ from build.lib.misc import update_if_changed
 logger = logging.getLogger(__name__)
 
 
-def create_activities_file() -> None:
+def run(languages: list[str], processes: int, working_dir: Path) -> None:
+    """
+    Internal subdir preparation
+    """
     logger.info("Creating activities file")
     raw_url = urlparse(
         "https://git.fsfe.org/FSFE/activities/raw/branch/master/activities.csv"
@@ -55,6 +58,6 @@ def create_activities_file() -> None:
         option.text = f"{tag} ({description})"
 
     update_if_changed(
-        Path("global/data/modules/fsfe-activities-options.en.xml"),
+        working_dir.joinpath("fsfe-activities-options.en.xml"),
         etree.tostring(page, encoding="utf-8").decode("utf-8"),
     )

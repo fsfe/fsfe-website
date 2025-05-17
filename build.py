@@ -35,14 +35,12 @@ def parse_arguments() -> argparse.Namespace:
     )
     parser.add_argument(
         "--target",
-        dest="target",
         help="Final dirs for websites to be build to. Can be a single path, or a comma separated list of valid rsync targets. Supports custom rsynx extension for specifying ports for ssh targets, name@host:path?port.",
         type=str,
         default="./output/final",
     )
     parser.add_argument(
         "--log-level",
-        dest="log_level",
         type=str,
         default="INFO",
         choices=["DEBUG", "INFO", "WARNING", "ERROR", "CRITICAL"],
@@ -50,40 +48,34 @@ def parse_arguments() -> argparse.Namespace:
     )
     parser.add_argument(
         "--full",
-        dest="full",
         help="Force a full rebuild of all webpages.",
         action="store_true",
     )
     parser.add_argument(
         "--processes",
-        dest="processes",
         help="Number of processes to use when building the website",
         type=int,
         default=multiprocessing.cpu_count(),
     )
     parser.add_argument(
         "--languages",
-        dest="languages",
         help="Languages to build website in.",
         default=[],
         type=lambda input: input.split(","),
     )
     parser.add_argument(
         "--sites",
-        dest="sites",
         help="What site directories to build",
         default=list(filter(lambda path: path.is_dir(), Path().glob("?*.??*"))),
         type=lambda input: list(map(lambda site: Path(site), input.split(","))),
     )
     parser.add_argument(
         "--stage",
-        dest="stage",
         help="Force the use of an internal staging directory.",
         action="store_true",
     )
     parser.add_argument(
         "--serve",
-        dest="serve",
         help="Serve the webpages after rebuild",
         action="store_true",
     )

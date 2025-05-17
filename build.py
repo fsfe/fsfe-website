@@ -8,6 +8,7 @@ import argparse
 import logging
 import multiprocessing
 import os
+import sys
 from pathlib import Path
 
 from build.lib.misc import lang_from_filename
@@ -68,6 +69,13 @@ def parse_arguments() -> argparse.Namespace:
         type=lambda input: input.split(","),
     )
     parser.add_argument(
+        "--sites",
+        dest="sites",
+        help="What site directories to build",
+        default=list(filter(lambda path: path.is_dir(), Path().glob("?*.??*"))),
+        type=lambda input: list(map(lambda site: Path(site), input.split(","))),
+    )
+    parser.add_argument(
         "--stage",
         dest="stage",
         help="Force the use of an internal staging directory.",
@@ -123,8 +131,11 @@ def main(args: argparse.Namespace):
         working_target = Path("./output/stage" if stage_required else args.target)
         # the two middle phases are unconditional, and run on a per site basis
         #
-        for site in filter(lambda path: path.is_dir(), Path().glob("?*.??*")):
+        for site in args.sites:
             logger.info(f"Processing {site}")
+            if not site.exists():
+                logger.critical(f"Site {site} does not exist, exiting")
+                sys.exit(1)
             languages = (
                 args.languages
                 if args.languages

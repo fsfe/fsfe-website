@@ -25,9 +25,9 @@ def _update_tag_pages(site: Path, tag: str, languages: list[str]) -> None:
     Update the xhtml pages and xmllists for a given tag
     """
     for lang in languages:
-        tagfile_source = Path(f"{site}/tags/tagged.{lang}.xhtml")
+        tagfile_source = site.joinpath(f"tags/tagged.{lang}.xhtml")
         if tagfile_source.exists():
-            taggedfile = Path(f"{site}/tags/tagged-{tag}.{lang}.xhtml")
+            taggedfile = site.joinpath(f"tags/tagged-{tag}.{lang}.xhtml")
             content = tagfile_source.read_text().replace("XXX_TAGNAME_XXX", tag)
             update_if_changed(taggedfile, content)
 
@@ -65,12 +65,14 @@ def _update_tag_sets(
                     page, "tag", section=section, key=tag, count=str(count)
                 ).text = label
     update_if_changed(
-        Path(f"{site}/tags/.tags.{lang}.xml"),
+        site.joinpath(f"tags/.tags.{lang}.xml"),
         etree.tostring(page, encoding="utf-8").decode("utf-8"),
     )
 
 
-def update_tags(languages: list[str], pool: multiprocessing.Pool) -> None:
+def update_tags(
+    source_dir: Path, languages: list[str], pool: multiprocessing.Pool
+) -> None:
     """
     Update Tag pages, xmllists and xmls
 
@@ -89,20 +91,17 @@ def update_tags(languages: list[str], pool: multiprocessing.Pool) -> None:
     When a tag has been removed from the last XML file where it has been used,
     the tagged-* are correctly deleted.
     """
-    for site in filter(
-        lambda path: path.joinpath("tags").exists(),
-        Path(".").glob("?*.??*"),
-    ):
-        logger.info(f"Updating tags for {site}")
+    if source_dir.joinpath("tags").exists():
+        logger.info(f"Updating tags for {source_dir}")
         # Create a complete and current map of which tag is used in which files
         files_by_tag = {}
         tags_by_lang = {}
         # Fill out files_by_tag and tags_by_lang
         for file in filter(
             lambda file:
-            # Not in tags dir of a site
-            site.joinpath("tags") not in file.parents,
-            site.glob("**/*.xml"),
+            # Not in tags dir of a source_dir
+            source_dir.joinpath("tags") not in file.parents,
+            source_dir.glob("**/*.xml"),
         ):
             for tag in etree.parse(file).xpath("//tag"):
                 # Get the key attribute, and filter out some invalid chars
@@ -141,7 +140,7 @@ def update_tags(languages: list[str], pool: multiprocessing.Pool) -> None:
         logger.debug("Updating tag pages")
         pool.starmap(
             _update_tag_pages,
-            map(lambda tag: (site, tag, languages), files_by_tag.keys()),
+            map(lambda tag: (source_dir, tag, languages), files_by_tag.keys()),
         )
 
         logger.debug("Updating tag lists")
@@ -149,7 +148,7 @@ def update_tags(languages: list[str], pool: multiprocessing.Pool) -> None:
             update_if_changed,
             map(
                 lambda tag: (
-                    Path(f"{site}/tags/.tagged-{tag}.xmllist"),
+                    Path(f"{source_dir}/tags/.tagged-{tag}.xmllist"),
                     ("\n".join(map(lambda file: str(file), files_by_tag[tag])) + "\n"),
                 ),
                 files_by_tag.keys(),
@@ -173,7 +172,7 @@ def update_tags(languages: list[str], pool: multiprocessing.Pool) -> None:
         pool.starmap(
             _update_tag_sets,
             map(
-                lambda lang: (site, lang, filecount, files_by_tag, tags_by_lang),
+                lambda lang: (source_dir, lang, filecount, files_by_tag, tags_by_lang),
                 filter(lambda lang: lang in languages, tags_by_lang.keys()),
             ),
         )

@@ -10,9 +10,14 @@ import multiprocessing
 import os
 from pathlib import Path
 
+from build.lib.misc import lang_from_filename
+
 from build.phase0.full import full
+from build.phase0.global_symlinks import global_symlinks
+
 from build.phase1.run import phase1_run
 from build.phase2.run import phase2_run
+
 from build.phase3.serve_websites import serve_websites
 from build.phase3.stage_to_target import stage_to_target
 
@@ -59,9 +64,7 @@ def parse_arguments() -> argparse.Namespace:
         "--languages",
         dest="languages",
         help="Languages to build website in.",
-        default=list(
-            map(lambda path: path.name, Path(".").glob("global/languages/??"))
-        ),
+        default=[],
         type=lambda input: input.split(","),
     )
     parser.add_argument(
@@ -89,22 +92,56 @@ def main(args: argparse.Namespace):
     logger.debug(args)
 
     with multiprocessing.Pool(args.processes) as pool:
-        logger.info("Starting phase 0 - Conditional Setup")
+        logger.info("Starting phase 0 - Global Conditional Setup")
 
         # TODO Should also be triggered whenever any build python file is changed
         if args.full:
             full()
+        # -----------------------------------------------------------------------------
+        # Create XML symlinks
+        # -----------------------------------------------------------------------------
+
+        # After this step, the following symlinks will exist:
+        # * global/data/texts/.texts.<lang>.xml for each language
+        # * global/data/topbanner/.topbanner.<lang>.xml for each language
+        # Each of these symlinks will point to the corresponding file without a dot at
+        # the beginning of the filename, if present, and to the English version
+        # otherwise. This symlinks make sure that phase 2 can easily use the right file
+        # for each language, also as a prerequisite in the Makefile.
+        global_symlinks(
+            args.languages
+            if args.languages
+            else list(
+                map(lambda path: path.name, Path(".").glob("global/languages/??"))
+            ),
+            pool,
+        )
 
         stage_required = any(
             [args.stage, "@" in args.target, ":" in args.target, "," in args.target]
         )
         working_target = Path("./output/stage" if stage_required else args.target)
+        # the two middle phases are unconditional, and run on a per site basis
+        #
+        for site in filter(lambda path: path.is_dir(), Path().glob("?*.??*")):
+            logger.info(f"Processing {site}")
+            languages = (
+                args.languages
+                if args.languages
+                else list(
+                    set(
+                        map(
+                            lambda path: lang_from_filename(path),
+                            site.glob("**/*.*.xhtml"),
+                        )
+                    )
+                )
+            )
+            # Processes needed only for subdir stuff
+            phase1_run(site, languages, args.processes, pool)
+            phase2_run(site, languages, pool, working_target.joinpath(site))
 
-        # Processes needed only for subdir stuff
-        phase1_run(args.languages, args.processes, pool)
-        phase2_run(args.languages, pool, working_target)
-
-        logger.info("Starting Phase 3 - Conditional Finishing")
+        logger.info("Starting Phase 3 - Global Conditional Finishing")
         if stage_required:
             stage_to_target(working_target, args.target, pool)
 

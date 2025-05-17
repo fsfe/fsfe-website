@@ -12,14 +12,17 @@ from build.lib.misc import run_command, update_if_changed
 logger = logging.getLogger(__name__)
 
 
-def update_css() -> None:
+def update_css(
+    source_dir: Path,
+) -> None:
     """
     If any less files have been changed, update the css.
     Compile less found at website/look/(fsfe.less|valentine.less)
     Then minify it, and place it in the expected location for the build process.
     """
     logger.info("Updating css")
-    for dir in Path("").glob("?*.?*/look"):
+    dir = source_dir.joinpath("look")
+    if dir.exists():
         for name in ["fsfe", "valentine"]:
             if dir.joinpath(name + ".less").exists() and (
                 not dir.joinpath(name + ".min.css").exists()

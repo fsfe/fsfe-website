@@ -13,7 +13,7 @@ def prepare_subdirectories(
     source_dir: Path, languages: list[str], processes: int
 ) -> None:
     """
-    Find any makefiles in subdirectories and run them
+    Find any subdir scripts in subdirectories and run them
     """
     logger.info("Preparing Subdirectories")
     for subdir_path in map(lambda path: path.parent, source_dir.glob("**/subdir.py")):

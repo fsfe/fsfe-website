@@ -15,6 +15,7 @@ from build.lib.misc import lang_from_filename
 
 from build.phase0.full import full
 from build.phase0.global_symlinks import global_symlinks
+from build.phase0.prepare_early_subdirectories import prepare_early_subdirectories
 
 from build.phase1.run import phase1_run
 from build.phase2.run import phase2_run
@@ -115,6 +116,13 @@ def main(args: argparse.Namespace):
                 map(lambda path: path.name, Path(".").glob("global/languages/??"))
             ),
             pool,
+        )
+
+        # Early subdirs
+        # for subdir actions that need to be performed very early in the build process. Do not get access to languages to be built in, and other benefits of being ran later.
+        prepare_early_subdirectories(
+            Path(),
+            args.processes,
         )
 
         stage_required = any(

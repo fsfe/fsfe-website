@@ -1,21 +1,8 @@
-*/look/fsfe.min.css
-*/look/valentine.min.css
-fsfe.org/events/????/index.??.xhtml
-fsfe.org/events/????/index.sources
-fsfe.org/events/????/index.xsl
-fsfe.org/news/????/index.??.xhtml
-fsfe.org/news/????/index.sources
-fsfe.org/news/????/index.xsl
-fsfe.org/news/*/.*.??.xml
 global/data/texts/.texts.??.xml
 global/data/topbanner/.topbanner.??.xml
 .default.xsl
 .localmenu.*.xml
 .*.xmllist
-fsfe.org/search/index.js
-fsfe.org/tags/tagged-*.??.xhtml
-fsfe.org/tags/.tags.??.xml
-global/data/modules/fsfe-activities-options.en.xml
 # Local build stuff
 output
 # Python venv
@@ -23,9 +10,6 @@ output
 __pycache__
 #Nltk
 .nltk_data
-
-## Status dir stuff
-status.fsfe.org/*/data*/*
 
 # Secrets
 # docker compose

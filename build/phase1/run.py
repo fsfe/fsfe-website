@@ -13,7 +13,6 @@
 import logging
 import multiprocessing
 
-from .create_activities_file import create_activities_file
 from .global_symlinks import global_symlinks
 from .index_website import index_websites
 from .prepare_subdirectories import prepare_subdirectories
@@ -32,11 +31,6 @@ def phase1_run(languages: list[str], processes: int, pool: multiprocessing.Pool)
     Run all the necessary sub functions for phase1.
     """
     logger.info("Starting Phase 1 - Setup")
-
-    # -----------------------------------------------------------------------------
-    # Create XML activities file
-    # -----------------------------------------------------------------------------
-    create_activities_file()
 
     # -----------------------------------------------------------------------------
     # Build search index

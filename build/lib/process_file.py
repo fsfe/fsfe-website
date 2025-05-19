@@ -68,8 +68,6 @@ def _list_langs(file: Path) -> str:
                         Path(f"global/languages/{lang_from_filename(path)}")
                         .read_text()
                         .strip()
-                        if Path(f"global/languages/{lang_from_filename(path)}").exists()
-                        else lang_from_filename(path)
                     )
                     + "</tr>"
                 ),

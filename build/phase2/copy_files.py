@@ -10,8 +10,8 @@ from pathlib import Path
 logger = logging.getLogger(__name__)
 
 
-def _copy_file(target: Path, source_file: Path) -> None:
-    target_file = target.joinpath(source_file)
+def _copy_file(target: Path, source_dir: Path, source_file: Path) -> None:
+    target_file = target.joinpath(source_file.relative_to(source_dir))
     if (
         not target_file.exists()
         or source_file.stat().st_mtime > target_file.stat().st_mtime
@@ -23,7 +23,7 @@ def _copy_file(target: Path, source_file: Path) -> None:
         shutil.copymode(source_file, target_file)
 
 
-def copy_files(pool: multiprocessing.Pool, target: Path) -> None:
+def copy_files(source_dir: Path, pool: multiprocessing.Pool, target: Path) -> None:
     """
     Copy images, docments etc
     """
@@ -31,7 +31,7 @@ def copy_files(pool: multiprocessing.Pool, target: Path) -> None:
     pool.starmap(
         _copy_file,
         map(
-            lambda file: (target, file),
+            lambda file: (target, source_dir, file),
             list(
                 filter(
                     lambda path: path.is_file()
@@ -50,10 +50,10 @@ def copy_files(pool: multiprocessing.Pool, target: Path) -> None:
                         ".pyc",
                     ]
                     and path.name not in ["Makefile"],
-                    Path("").glob("*?.?*/**/*"),
+                    source_dir.glob("**/*"),
                 )
             )
             # Special case hard code pass over orde items xml required by cgi script
-            + list(Path("").glob("*?.?*/order/data/items.en.xml")),
+            + list(source_dir.glob("order/data/items.en.xml")),
         ),
     )

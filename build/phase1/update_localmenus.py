@@ -77,7 +77,9 @@ def _write_localmenus(
         )
 
 
-def update_localmenus(languages: list[str], pool: multiprocessing.Pool) -> None:
+def update_localmenus(
+    source_dir: Path, languages: list[str], pool: multiprocessing.Pool
+) -> None:
     """
     Update all the .localmenu.*.xml files containing the local menus.
     """
@@ -86,7 +88,7 @@ def update_localmenus(languages: list[str], pool: multiprocessing.Pool) -> None:
     files_by_dir = {}
     for file in filter(
         lambda path: "-template" not in str(path),
-        Path(".").glob("*?.?*/**/*.??.xhtml"),
+        source_dir.glob("**/*.??.xhtml"),
     ):
         xslt_root = etree.parse(file)
         if xslt_root.xpath("//localmenu"):

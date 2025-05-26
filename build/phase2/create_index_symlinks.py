@@ -19,7 +19,9 @@ def _do_symlinking(target: Path) -> None:
         source.symlink_to(target.relative_to(source.parent))
 
 
-def create_index_symlinks(pool: multiprocessing.Pool, target: Path) -> None:
+def create_index_symlinks(
+    source_dir: Path, pool: multiprocessing.Pool, target: Path
+) -> None:
     """
     Create index.* symlinks
     """

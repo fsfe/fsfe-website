@@ -9,14 +9,14 @@ from pathlib import Path
 logger = logging.getLogger(__name__)
 
 
-def prepare_subdirectories(languages: list[str], processes: int) -> None:
+def prepare_subdirectories(
+    source_dir: Path, languages: list[str], processes: int
+) -> None:
     """
-    Find any makefiles in subdirectories and run them
+    Find any subdir scripts in subdirectories and run them
     """
     logger.info("Preparing Subdirectories")
-    for subdir_path in map(
-        lambda path: path.parent, Path("").glob("?*.?*/**/subdir.py")
-    ):
+    for subdir_path in map(lambda path: path.parent, source_dir.glob("**/subdir.py")):
         logger.info(f"Preparing subdirectory {subdir_path}")
         sys.path.append(str(subdir_path.resolve()))
         import subdir

@@ -29,6 +29,10 @@ For details on the phases and exact implementation please examine the codebase
 
 The build process can be conceptually divided into four phases: Phases 0-3
 
+Phases 0 and 3 contain steps that may or not be performed based on passed arguments. They also act over all sites at once.
+
+Phases 1 and 2 always run all steps inside them, and are run on a per-site basis.
+
 ### [phase0](./phase0.md)
 
 ### [phase1](./phase1.md)

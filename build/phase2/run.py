@@ -17,12 +17,14 @@ from .process_files import process_files
 logger = logging.getLogger(__name__)
 
 
-def phase2_run(languages: list[str], pool: multiprocessing.Pool, target: Path):
+def phase2_run(
+    source_dir: Path, languages: list[str], pool: multiprocessing.Pool, target: Path
+):
     """
     Run all the necessary sub functions for phase2.
     """
     logger.info("Starting Phase 2 - Generating output")
-    process_files(languages, pool, target)
-    create_index_symlinks(pool, target)
-    create_language_symlinks(pool, target)
-    copy_files(pool, target)
+    process_files(source_dir, languages, pool, target)
+    create_index_symlinks(source_dir, pool, target)
+    create_language_symlinks(source_dir, pool, target)
+    copy_files(source_dir, pool, target)

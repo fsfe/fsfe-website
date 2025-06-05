@@ -55,15 +55,18 @@ def _update_for_base(
                     # Matches glob pattern
                     fnmatch.fnmatchcase(str(xml_file), pattern)
                     # contains tag if tag in pattern
-                    and any(
-                        map(
-                            lambda xml_file_with_ending: etree.parse(
-                                xml_file_with_ending
-                            ).find(f"//tag[@key='{tag}']")
-                            if tag != ""
-                            else True,
-                            xml_file.glob("*.xml"),
+                    and (
+                        any(
+                            map(
+                                lambda xml_file_with_ending: etree.parse(
+                                    xml_file_with_ending
+                                ).find(f".//tag[@key='{tag}']")
+                                is not None,
+                                xml_file.parent.glob(f"{xml_file.name}.*.xml"),
+                            )
                         )
+                        if tag != ""
+                        else True
                     )
                     # Not just matching an empty xml_file
                     and len(str(xml_file)) > 0,

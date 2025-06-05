@@ -45,25 +45,34 @@ def _update_for_base(
                     logger.debug("Pattern too short, continue!")
                     continue
                 tag = (
-                    re.match(r":\[(.*)\]$", line).group().strip()
-                    if re.match(r":\[(.*)\]$", line)
+                    re.search(r":\[(.*)\]", line).group(1).strip()
+                    if re.search(r":\[(.*)\]", line) is not None
                     else ""
                 )
-                for line in filter(
-                    lambda line:
+
+                for xml_file in filter(
+                    lambda xml_file:
                     # Matches glob pattern
-                    fnmatch.fnmatchcase(str(line), pattern)
+                    fnmatch.fnmatchcase(str(xml_file), pattern)
                     # contains tag if tag in pattern
                     and (
-                        etree.parse(file).find(f"//tag[@key='{tag}']")
+                        any(
+                            map(
+                                lambda xml_file_with_ending: etree.parse(
+                                    xml_file_with_ending
+                                ).find(f".//tag[@key='{tag}']")
+                                is not None,
+                                xml_file.parent.glob(f"{xml_file.name}.*.xml"),
+                            )
+                        )
                         if tag != ""
                         else True
                     )
-                    # Not just matching an empty line
-                    and len(str(line)) > 0,
+                    # Not just matching an empty xml_file
+                    and len(str(xml_file)) > 0,
                     all_xml,
                 ):
-                    matching_files.add(str(line))
+                    matching_files.add(str(xml_file))
 
     for file in Path("").glob(f"{base}.??.xhtml"):
         xslt_root = etree.parse(file)

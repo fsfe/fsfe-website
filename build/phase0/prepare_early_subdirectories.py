@@ -13,7 +13,7 @@ def prepare_early_subdirectories(source_dir: Path, processes: int) -> None:
     """
     Find any early subdir scripts in subdirectories and run them
     """
-    logger.info("Preparing Early Subdirectories")
+    logger.info(f"Preparing Early Subdirectories for site {source_dir}")
     for subdir_path in map(
         lambda path: path.parent, source_dir.glob("**/early_subdir.py")
     ):

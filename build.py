@@ -120,10 +120,11 @@ def main(args: argparse.Namespace):
 
         # Early subdirs
         # for subdir actions that need to be performed very early in the build process. Do not get access to languages to be built in, and other benefits of being ran later.
-        prepare_early_subdirectories(
-            Path(),
-            args.processes,
-        )
+        for site in args.sites:
+            prepare_early_subdirectories(
+                site,
+                args.processes,
+            )
 
         stage_required = any(
             [args.stage, "@" in args.target, ":" in args.target, "," in args.target]

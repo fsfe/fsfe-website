@@ -44,4 +44,4 @@ rsync -rlpgoDz --delete --checksum --filter=':- .gitignore' ./ /website-cached/s
 cd /website-cached/source
 
 # run build script expaning all args passed to this script
-python3 ./build.py "$@"
+uv run --reinstall-package build build "$@"

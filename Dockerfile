@@ -1,33 +1,30 @@
 FROM debian:latest
 
+COPY --from=ghcr.io/astral-sh/uv:latest /uv /uvx /bin/
+
 # Install deps
-RUN apt update
-RUN apt install --yes --no-install-recommends \
+RUN apt-get update && apt-get install --yes --no-install-recommends \
 rsync \
 libxslt1.1 \
 libxml2 \
-golang \
-python3 \
-python3-venv \
-python3-pip \
 git \
 node-less \
 openssh-client \
+ca-certificates \
 expect
 
+# Set uv project env, to persist stuff moving dirs 
+ENV UV_PROJECT_ENVIRONMENT=/root/.cache/uv/venv
+# Set the workdir
+WORKDIR /website-source
 
-# Setup venv
-ENV VIRTUAL_ENV=/opt/venv
-RUN python3 -m venv $VIRTUAL_ENV
-ENV PATH="$VIRTUAL_ENV/bin:$PATH"
-# Copy the requirements
+# Copy the pyproject and build deps
 # Done in a seperate step for optimal docker caching
-COPY ./requirements.txt /website-source/requirements.txt
-RUN pip install -r /website-source/requirements.txt
+COPY ./pyproject.toml .
+RUN uv sync --no-install-package build
 
 # Copy everything else
-COPY . /website-source/
-WORKDIR /website-source
+COPY . .
 
 ENTRYPOINT [ "bash", "./entrypoint.sh" ]
 

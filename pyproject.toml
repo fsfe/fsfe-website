@@ -1,0 +1,35 @@
+[project]
+name = "build"
+version = "0.0.0"
+description = "Python tooling to build the fsfe websites"
+readme = "README.md"
+# Pinned to 3.12 as a known working version, that also has a prebuild wheel for tdewolff-minify
+requires-python = "==3.12.*"
+dependencies = [
+  # XML parser
+  "lxml==5.3.2",
+  # For getting english language names of languages from two letter codes.
+  "python-iso639==2025.2.18",
+  # For stopwords for the search index
+  "nltk==3.9.1",
+  # For minification html css and js
+  "tdewolff-minify==2.20.37",
+  # For HTTP requests
+  "requests==2.32.3",
+]
+
+[project.scripts]
+build = "build:main"
+
+[dependency-groups]
+dev = [
+  "ruff"
+]
+[build-system]
+requires = ["uv_build"]
+build-backend = "uv_build"
+
+[tool.uv.build-backend]
+module-name = "build"
+module-root = ""
+

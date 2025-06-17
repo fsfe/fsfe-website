@@ -7,21 +7,20 @@
 import argparse
 import logging
 import multiprocessing
-import os
 import sys
 from pathlib import Path
 
-from build.lib.misc import lang_from_filename
+from .lib.misc import lang_from_filename
 
-from build.phase0.full import full
-from build.phase0.global_symlinks import global_symlinks
-from build.phase0.prepare_early_subdirectories import prepare_early_subdirectories
+from .phase0.full import full
+from .phase0.global_symlinks import global_symlinks
+from .phase0.prepare_early_subdirectories import prepare_early_subdirectories
 
-from build.phase1.run import phase1_run
-from build.phase2.run import phase2_run
+from .phase1.run import phase1_run
+from .phase2.run import phase2_run
 
-from build.phase3.serve_websites import serve_websites
-from build.phase3.stage_to_target import stage_to_target
+from .phase3.serve_websites import serve_websites
+from .phase3.stage_to_target import stage_to_target
 
 logger = logging.getLogger(__name__)
 
@@ -84,7 +83,11 @@ def parse_arguments() -> argparse.Namespace:
     return args
 
 
-def main(args: argparse.Namespace):
+def main():
+    """
+    Main process of the website builder
+    """
+    args = parse_arguments()
     logging.basicConfig(
         format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
         datefmt="%Y-%m-%d %H:%M:%S",
@@ -158,13 +161,3 @@ def main(args: argparse.Namespace):
 
     if args.serve:
         serve_websites(working_target, 2000, 100)
-
-
-if __name__ == "__main__":
-    """
-    Main process of the website builder
-    """
-    # Change to the dir the script is in.
-    os.chdir(os.path.dirname(__file__))
-    args = parse_arguments()
-    main(args)

@@ -5,9 +5,10 @@ global/data/topbanner/.topbanner.??.xml
 .*.xmllist
 # Local build stuff
 output
-# Python venv
+# Python stuff
 .venv
 __pycache__
+uv.lock
 #Nltk
 .nltk_data
 

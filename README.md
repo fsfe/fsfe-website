@@ -82,12 +82,12 @@ Alterations to build scripts or the files used site-wide will result in near ful
 
 ### Native
 
-We can either install the required dependencies manually using our preferred package manager. If you are a nix use one can run `nix-shell` to enter a shell with the required build dependencies, with the python `virtualenv` already installed and activated.
+We can either install the required dependencies manually using our preferred package manager. If you are a nix use one can run `nix-shell` to enter a shell with the required build dependencies.
 
 If installing manually, the required binary names are
 
 ```
-python3 pip
+uv
 ```
 
 Also needed are the libraries
@@ -96,17 +96,9 @@ Also needed are the libraries
 libxml2 libxslt
 ```
 
-Then, we must activate a Python virtual env and install the python dependencies.
+As we are using [UV](https://docs.astral.sh/uv/) we can just run the build process directly, and let it handle deps.
 
-```
-python -m venv .venv
-source .venv/bin/activate
-pip install -r requirements.txt
-```
-
-After getting the dependencies one way or another we can actually build and serve the pages.
-
-The pages can be built and served by running `./build.py`. Try `--help` for more information. The simple web server used lacks the features of `apache` which used on the FSFE web servers. This is why no index is automatically selected for each directory and other behaviours.
+The pages can be built and served by running `uv run build`. Try `--help` for more information. The simple web server used lacks the features of `apache` which used on the FSFE web servers. This is why no index is automatically selected for each directory and other behaviours.
 
 ### Docker
 
@@ -129,7 +121,7 @@ KEY_PRIVATE=none KEY_PASSWORD=none GIT_TOKEN=none docker compose
 Once your preferred method has been chosen, simply running `docker compose run --service-ports build --serve` should build the webpages and make them available over localhost.
 
 
-Some more explanation: we are essentially just using docker as a way to provide dependencies and then running the build script. All flags after `build` are passed to `build.py`. The `service-ports` flag is required to open ports from the container for serving the output, not needed if not using the `--serve` flag of the build script.
+Some more explanation: we are essentially just using docker as a way to provide dependencies and then running the build script. All flags after `build` are passed to the `build` cli. The `service-ports` flag is required to open ports from the container for serving the output, not needed if not using the `--serve` flag of the build script.
 
 ## Githooks
 

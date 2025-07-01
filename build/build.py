@@ -121,14 +121,6 @@ def main():
             pool,
         )
 
-        # Early subdirs
-        # for subdir actions that need to be performed very early in the build process. Do not get access to languages to be built in, and other benefits of being ran later.
-        for site in args.sites:
-            prepare_early_subdirectories(
-                site,
-                args.processes,
-            )
-
         stage_required = any(
             [args.stage, "@" in args.target, ":" in args.target, "," in args.target]
         )
@@ -139,6 +131,12 @@ def main():
             if not site.exists():
                 logger.critical(f"Site {site} does not exist, exiting")
                 sys.exit(1)
+            # Early subdirs
+            # for subdir actions that need to be performed very early in the build process. Do not get access to languages to be built in, and other benefits of being ran later.
+            prepare_early_subdirectories(
+                site,
+                args.processes,
+            )
             languages = (
                 args.languages
                 if args.languages

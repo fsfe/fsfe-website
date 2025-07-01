@@ -31,7 +31,7 @@ if ($function2 ne "") {
  $function .= ", $function2";
 }
 
-if ($radioaddress eq "Berlin") { $address = "Schönhauser Allee 6/7, 10119 Berlin, Germany"; }
+if ($radioaddress eq "Berlin") { $address = "Revaler Straße 19, 10245 Berlin, Germany"; }
 if ($radioaddress eq "other") {  $address = "$otheraddress"; }
 
 if ($delivery eq "") {

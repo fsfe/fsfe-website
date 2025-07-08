@@ -95,9 +95,9 @@
           <input type="radio" name="dest" value="44/66" /> Sweden
         </label>
         <label class="radio-inline">
-          <input type="radio" name="dest" value="other" /> Other
+          <input type="radio" name="dest" value="other" id="destOther" /> Other
         </label>
-        <input type="text" name="dest_other" placeholder="14/28" />
+        <input type="text" name="dest_other" placeholder="14/28" onchange="document.getElementById('destOther').checked='checked'" />
         <p>(Other: per diem travel/full (e.g. "14/28" for Germany -> Germany). <a href="https://www.bundesfinanzministerium.de/Content/DE/Downloads/BMF_Schreiben/Steuerarten/Lohnsteuer/2024-12-02-steuerliche-behandlung-reisekosten-2025.pdf?__blob=publicationFile&amp;v=12">(See the different rates per country.)</a> [PDF]</p>
       </div>
 

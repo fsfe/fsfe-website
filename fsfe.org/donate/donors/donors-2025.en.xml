@@ -6,8 +6,9 @@
   <!--
     The "since" attribute is set for all donors which have donated in at least
     4 calendar years in a row - even if previous donations were lower than the
-    current category. A pause of one calendar year is ok. Monthly supporters are
-    listed with the amount for the full year, even if the year is still ongoing.
+    current category. A pause of one calendar year is ok and may happen more
+    than once in the donor's career. Monthly supporters are listed with the
+    amount for the full year, even if the year is still ongoing.
   -->
 
   <category1>
@@ -26,6 +27,7 @@
     <donor img="donors/silver-github.png">GitHub</donor>
     <donor img="donors/silver-heinlein-support.png" since="2014">Heinlein Support</donor>
     <donor img="donors/silver-intevation-new.png" since="2009">Intevation GmbH</donor>
+    <donor img="donors/silver-openproject.png" since="2019">OpenProject</donor>
     <donor img="donors/silver-siemens.png" since="2015">Siemens</donor>
     <donor>Y Combinator</donor>
   </category2>

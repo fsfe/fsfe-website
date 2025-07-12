@@ -9,6 +9,8 @@ from pathlib import Path
 from build.lib.misc import get_basepath
 from build.lib.process_file import process_file
 
+from lxml import etree
+
 logger = logging.getLogger(__name__)
 
 
@@ -45,7 +47,7 @@ def _run_process(
         logger.debug(f"Building {target_file}")
         result = process_file(source_file, processor)
         target_file.parent.mkdir(parents=True, exist_ok=True)
-        target_file.write_text(result)
+        result.write_output(target_file)
 
 
 def _process_dir(

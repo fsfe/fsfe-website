@@ -14,13 +14,14 @@ from build.lib.misc import get_basename, get_version, lang_from_filename
 logger = logging.getLogger(__name__)
 
 
-def _get_xml(file: Path) -> etree.Element:
+def _get_xmls(file: Path) -> etree.Element:
     """
     include second level elements of a given XML file
     this emulates the behaviour of the original
     build script which wasn't able to load top
     level elements from any file
     """
+    elements = []
     if file.exists():
         tree = etree.parse(file)
         root = tree.getroot()
@@ -28,8 +29,11 @@ def _get_xml(file: Path) -> etree.Element:
         # to this element instead of the actual content element.
         for elem in root.xpath("version"):
             root.remove(elem)
+        for elem in root.xpath("*"):
+            elem.set("filename", get_basename(file))
+            elements.append(elem)
         # and then we return the element
-        return root
+    return elements
 
 
 def _get_attributes(file: Path) -> dict:
@@ -39,7 +43,8 @@ def _get_attributes(file: Path) -> dict:
     """
     tree = etree.parse(file)
     root = tree.getroot()
-    return root.attrib
+    attributes = root.items()
+    return dict(attributes)
 
 
 def _get_trlist(file: Path) -> etree.Element:
@@ -76,17 +81,17 @@ def _get_set(action_file: Path, lang: str) -> etree.Element:
                     if path.with_suffix(f".{lang}.xml").exists()
                     else path.with_suffix(".en.xml")
                 )
-                doc_set.append(_get_xml(path_xml))
+                doc_set.extend(_get_xmls(path_xml))
 
     return doc_set
 
 
 def _get_document(action_lang: str, action_file: Path, lang: str) -> etree.Element:
     document = etree.Element(
-        "document", language=action_lang, *_get_attributes(action_file)
+        "document", language=action_lang, **_get_attributes(action_file)
     )
     document.append(_get_set(action_file, lang))
-    document.append(_get_xml(action_file))
+    document.extend(_get_xmls(action_file))
     return document
 
 
@@ -96,10 +101,6 @@ def _build_xmlstream(infile: Path):
     the expected shortname and language flag indicate
     a single xhtml page to be built
     """
-    # TODO
-    # Ideally this would use lxml to construct an object instead of string templating.
-    # Should be a little faster, and also guarantees that its valid xml
-
     logger.debug(f"infile: {infile}")
     shortname = infile.with_suffix("")
     lang = lang_from_filename(infile)
@@ -162,14 +163,13 @@ def _build_xmlstream(infile: Path):
     # Add the subelements
     page.append(_get_trlist(infile))
 
-    page.append(_get_xml(topbanner_xml))
+    page.extend(_get_xmls(topbanner_xml))
 
-    page.append(_get_xml(Path("global/data/texts/texts.en.xml")))
+    page.extend(_get_xmls(Path("global/data/texts/texts.en.xml")))
 
-    page.append(_get_xml(texts_xml))
+    page.extend(_get_xmls(texts_xml))
 
     page.append(_get_document(action_lang, action_file, lang))
-    print(etree.tostring(page))
     return page
 
 
@@ -182,38 +182,35 @@ def process_file(infile: Path, processor: Path) -> str:
     xmlstream = _build_xmlstream(infile)
     xslt_tree = etree.parse(processor.resolve())
     transform = etree.XSLT(xslt_tree)
-    result = str(transform(xmlstream))
+    result = transform(xmlstream)
     # And now a bunch of regexes to fix some links.
     # xx is the language code in all comments
-
-    # TODO
-    # Probably a faster way to do this
-    # Maybe iterating though all a tags with lxml?
-    # Once buildxmlstream generates an xml object that should be faster.
-
-    # Remove https://fsfe.org (or https://test.fsfe.org) from the start of all
-    result = re.sub(
-        r"""href\s*=\s*("|')(https?://(test\.)?fsfe\.org)([^>])\1""",
-        r"""href=\1\3\1""",
-        result,
-        flags=re.MULTILINE | re.IGNORECASE,
-    )
-    # Change links from /foo/bar.html into /foo/bar.xx.html
-    # Change links from foo/bar.html into foo/bar.xx.html
-    # Same for .rss and .ics links
-    result = re.sub(
-        r"""href\s*=\s*("|')(/?([^:>]+/)?[^:/.]+\.)(html|rss|ics)(#[^>]*)?\1""",
-        rf"""href=\1\2{lang}.\4\5\1""",
-        result,
-        flags=re.MULTILINE | re.IGNORECASE,
-    )
-    # Change links from /foo/bar/ into /foo/bar/index.xx.html
-    # Change links from foo/bar/ into foo/bar/index.xx.html
-    result = re.sub(
-        r"""href\s*=\s*("|')(/?[^:>]+/)\1""",
-        rf"""href=\1\2index.{lang}.html\1""",
-        result,
-        flags=re.MULTILINE | re.IGNORECASE,
-    )
-
+    try: 
+        for href in result.xpath("//href"):
+            # Remove https://fsfe.org (or https://test.fsfe.org) from the start of all links
+            href.text = re.sub(
+                r"""(https?://(test\.)?fsfe\.org)([^>])""",
+                r"""\2""",
+                href.txt,
+                flags=re.MULTILINE | re.IGNORECASE,
+            )
+            # Change links from /foo/bar.html into /foo/bar.xx.html
+            # Change links from foo/bar.html into foo/bar.xx.html
+            # Same for .rss and .ics links
+            href.text = re.sub(
+                r"""(/?([^:>]+/)?[^:/.]+\.)(html|rss|ics)(#[^>]*)?""",
+                rf"""\1{lang}.\3\4""",
+                href.text,
+                flags=re.MULTILINE | re.IGNORECASE,
+            )
+            # Change links from /foo/bar/ into /foo/bar/index.xx.html
+            # Change links from foo/bar/ into foo/bar/index.xx.html
+            href.text = re.sub(
+                r"""(/?[^:>]+/)""",
+                rf"""\1index.{lang}.html""",
+                href.text,
+                flags=re.MULTILINE | re.IGNORECASE,
+            )
+    except AssertionError: 
+        logger.debug(f"Output generated for file {infile} is not valid xml")
     return result

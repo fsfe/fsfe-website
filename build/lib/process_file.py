@@ -14,14 +14,13 @@ from build.lib.misc import get_basename, get_version, lang_from_filename
 logger = logging.getLogger(__name__)
 
 
-def _include_xml(file: Path) -> str:
+def _get_xml(file: Path) -> etree.Element:
     """
     include second level elements of a given XML file
     this emulates the behaviour of the original
     build script which wasn't able to load top
     level elements from any file
     """
-    work_str = ""
     if file.exists():
         tree = etree.parse(file)
         root = tree.getroot()
@@ -29,76 +28,66 @@ def _include_xml(file: Path) -> str:
         # to this element instead of the actual content element.
         for elem in root.xpath("version"):
             root.remove(elem)
-        # Iterate over all elements in root node, add a filename attribute and
-        # then append the string to work_str
-        for elem in root.xpath("*"):
-            elem.set("filename", get_basename(file))
-            work_str += etree.tostring(elem, encoding="utf-8").decode("utf-8")
-
-    return work_str
+        # and then we return the element
+        return root
 
 
-def _get_attributes(file: Path) -> str:
+def _get_attributes(file: Path) -> dict:
     """
     get attributes of top level element in a given
     XHTML file
     """
-    work_str = ""
     tree = etree.parse(file)
     root = tree.getroot()
-    attributes = root.attrib
-    for attrib in attributes:
-        work_str += f'{attrib}="{attributes[attrib]}"\n'
-
-    return work_str
+    return root.attrib
 
 
-def _list_langs(file: Path) -> str:
+def _get_trlist(file: Path) -> etree.Element:
     """
     list all languages a file exists in by globbing up
     the shortname (i.e. file path with file ending omitted)
     output is readily formatted for inclusion
     in xml stream
     """
-    return "\n".join(
-        list(
-            map(
-                lambda path: (
-                    f'<tr id="{lang_from_filename(path)}">'
-                    + (
-                        Path(f"global/languages/{lang_from_filename(path)}")
-                        .read_text()
-                        .strip()
-                    )
-                    + "</tr>"
-                ),
-                file.parent.glob(f"{get_basename(file)}.??{file.suffix}"),
-            )
+    trlist = etree.Element("trlist")
+    for path in file.parent.glob(f"{get_basename(file)}.??{file.suffix}"):
+        tr = etree.SubElement(trlist, "tr", id=lang_from_filename(path))
+        tr.text = (
+            Path(f"global/languages/{lang_from_filename(path)}").read_text().strip()
         )
-    )
+    return trlist
 
 
-def _auto_sources(action_file: Path, lang: str) -> str:
+def _get_set(action_file: Path, lang: str) -> etree.Element:
     """
     import elements from source files, add file name
     attribute to first element included from each file
     """
-    work_str = ""
+    doc_set = etree.Element("set")
     list_file = action_file.with_stem(
         f".{action_file.with_suffix('').stem}"
     ).with_suffix(".xmllist")
 
     if list_file.exists():
         with list_file.open("r") as file:
-            for path in map(lambda line: Path(line.strip()), file):
+            for index, path in enumerate(map(lambda line: Path(line.strip()), file)):
                 path_xml = (
                     path.with_suffix(f".{lang}.xml")
                     if path.with_suffix(f".{lang}.xml").exists()
                     else path.with_suffix(".en.xml")
                 )
-                work_str += _include_xml(path_xml)
+                doc_set.append(_get_xml(path_xml))
 
-    return work_str
+    return doc_set
+
+
+def _get_document(action_lang: str, action_file: Path, lang: str) -> etree.Element:
+    document = etree.Element(
+        "document", language=action_lang, *_get_attributes(action_file)
+    )
+    document.append(_get_set(action_file, lang))
+    document.append(_get_xml(action_file))
+    return document
 
 
 def _build_xmlstream(infile: Path):
@@ -134,7 +123,6 @@ def _build_xmlstream(infile: Path):
     topbanner_xml = Path(f"global/data/topbanner/.topbanner.{lang}.xml")
     texts_xml = Path(f"global/data/texts/.texts.{lang}.xml")
     date = str(datetime.now().date())
-    # time = str(datetime.now().time())
     action_lang = ""
     translation_state = ""
 
@@ -159,41 +147,30 @@ def _build_xmlstream(infile: Path):
 
     action_file = shortname.with_suffix(f".{action_lang}{infile.suffix}")
     logger.debug(f"action_file: {action_file}")
+    # Create the root element
+    page = etree.Element(
+        "buildinfo",
+        date=date,
+        original=original_lang,
+        filename=f"/{str(shortname.with_suffix('')).removeprefix('/')}",
+        fileurl=f"/{shortname.relative_to(shortname.parts[0]).with_suffix('')}",
+        dirname=f"/{shortname.parent}/",
+        language=lang,
+        translation_state=translation_state,
+    )
 
-    result_str = f"""
-    <buildinfo
-        date="{date}"
-        original="{original_lang}"
-        filename="/{str(shortname.with_suffix("")).removeprefix("/")}"
-        fileurl="/{shortname.relative_to(shortname.parts[0]).with_suffix("")}"
-        dirname="/{shortname.parent}/"
-        language="{lang}"
-        translation_state="{translation_state}"
-    >
-        <trlist>
-            {_list_langs(infile)}
-        </trlist>
-        <topbanner>
-            {_include_xml(topbanner_xml)}
-        </topbanner>
-        <textsetbackup>
-            {_include_xml(Path("global/data/texts/texts.en.xml"))}
-        </textsetbackup>
-        <textset>
-            {_include_xml(texts_xml)}
-        </textset>
-        <document
-            language="{action_lang}"
-            {_get_attributes(action_file)}
-        >
-            <set>
-            {_auto_sources(action_file, lang)}
-            </set>
-            {_include_xml(action_file)}
-        </document>
-    </buildinfo>
-    """
-    return result_str
+    # Add the subelements
+    page.append(_get_trlist(infile))
+
+    page.append(_get_xml(topbanner_xml))
+
+    page.append(_get_xml(Path("global/data/texts/texts.en.xml")))
+
+    page.append(_get_xml(texts_xml))
+
+    page.append(_get_document(action_lang, action_file, lang))
+    print(etree.tostring(page))
+    return page
 
 
 def process_file(infile: Path, processor: Path) -> str:
@@ -205,7 +182,7 @@ def process_file(infile: Path, processor: Path) -> str:
     xmlstream = _build_xmlstream(infile)
     xslt_tree = etree.parse(processor.resolve())
     transform = etree.XSLT(xslt_tree)
-    result = str(transform(etree.XML(xmlstream)))
+    result = str(transform(xmlstream))
     # And now a bunch of regexes to fix some links.
     # xx is the language code in all comments
 

@@ -50,5 +50,7 @@ pkgs.mkShell {
   ];
   shellHook = ''
     export UV_SYSTEM_PYTHON=true
+    uv venv
+    source .venv/bin/activate
   '';
 }

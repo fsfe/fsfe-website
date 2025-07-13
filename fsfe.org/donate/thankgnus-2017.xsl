@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
-<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
-  <xsl:import href="../fsfe.xsl" />
-
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
+  <xsl:import href="../fsfe.xsl"/>
   <!-- Fill dynamic content -->
   <xsl:template match="dynamic-content">
-    <xsl:variable name="group"><xsl:value-of select="@group"/></xsl:variable>
+    <xsl:variable name="group">
+      <xsl:value-of select="@group"/>
+    </xsl:variable>
     <xsl:choose>
       <xsl:when test="$group='gold'">
         <xsl:element name="table">
@@ -14,8 +14,12 @@
             <xsl:element name="tr">
               <xsl:element name="td">
                 <xsl:element name="img">
-                  <xsl:attribute name="src"><xsl:value-of select="@img"/></xsl:attribute>
-                  <xsl:attribute name="alt"><xsl:value-of select="node()"/></xsl:attribute>
+                  <xsl:attribute name="src">
+                    <xsl:value-of select="@img"/>
+                  </xsl:attribute>
+                  <xsl:attribute name="alt">
+                    <xsl:value-of select="node()"/>
+                  </xsl:attribute>
                 </xsl:element>
               </xsl:element>
               <xsl:element name="td">
@@ -38,8 +42,12 @@
             <xsl:element name="tr">
               <xsl:element name="td">
                 <xsl:element name="img">
-                  <xsl:attribute name="src"><xsl:value-of select="@img"/></xsl:attribute>
-                  <xsl:attribute name="alt"><xsl:value-of select="node()"/></xsl:attribute>
+                  <xsl:attribute name="src">
+                    <xsl:value-of select="@img"/>
+                  </xsl:attribute>
+                  <xsl:attribute name="alt">
+                    <xsl:value-of select="node()"/>
+                  </xsl:attribute>
                 </xsl:element>
               </xsl:element>
               <xsl:element name="td">
@@ -61,4 +69,3 @@
     </xsl:choose>
   </xsl:template>
 </xsl:stylesheet>
-

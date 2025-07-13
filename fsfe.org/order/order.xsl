@@ -1,24 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
-<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
-  <xsl:import href="../fsfe.xsl" />
-  <xsl:import href="../../build/xslt/countries.xsl" />
-
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
+  <xsl:import href="../fsfe.xsl"/>
+  <xsl:import href="../../build/xslt/countries.xsl"/>
   <!-- Fill dynamic content -->
   <xsl:template match="dynamic-content">
-    <xsl:variable name="type"><xsl:value-of select="@type"/></xsl:variable>
-
+    <xsl:variable name="type">
+      <xsl:value-of select="@type"/>
+    </xsl:variable>
     <xsl:element name="table">
       <xsl:attribute name="class">merchandise</xsl:attribute>
-
       <xsl:for-each select="/buildinfo/document/set/item[@type=$type]">
         <xsl:sort select="@date" order="descending"/>
-        <xsl:variable name="id"><xsl:value-of select="@id"/></xsl:variable>
-        <xsl:variable name="price"><xsl:value-of select="@price"/></xsl:variable>
-
+        <xsl:variable name="id">
+          <xsl:value-of select="@id"/>
+        </xsl:variable>
+        <xsl:variable name="price">
+          <xsl:value-of select="@price"/>
+        </xsl:variable>
         <xsl:element name="tr">
-          <xsl:attribute name="id"><xsl:value-of select="$id"/></xsl:attribute>
-
+          <xsl:attribute name="id">
+            <xsl:value-of select="$id"/>
+          </xsl:attribute>
           <!-- Image -->
           <xsl:element name="td">
             <xsl:attribute name="class">image</xsl:attribute>
@@ -36,11 +38,9 @@
               </xsl:element>
             </xsl:for-each>
           </xsl:element>
-
           <!-- Name and description -->
           <xsl:element name="td">
             <xsl:attribute name="class">description</xsl:attribute>
-
             <xsl:element name="h3">
               <xsl:value-of select="/buildinfo/document/set/info[@id=$id]/name"/>
               <xsl:text> (</xsl:text>
@@ -65,22 +65,18 @@
               </xsl:choose>
               <xsl:text>)</xsl:text>
             </xsl:element>
-
-            <xsl:apply-templates
-              select="/buildinfo/document/set/info[@id=$id]/description/node()"/>
+            <xsl:apply-templates select="/buildinfo/document/set/info[@id=$id]/description/node()"/>
           </xsl:element>
-
           <!-- Order quantity -->
           <xsl:element name="td">
             <xsl:attribute name="class">quantity</xsl:attribute>
             <xsl:for-each select="available">
               <xsl:element name="p">
-
                 <!-- Label, possibly with tooltip -->
                 <xsl:choose>
                   <xsl:when test="$type='other'">
                     <xsl:value-of select="@size"/>
-                    <xsl:text>:&#160;</xsl:text>
+                    <xsl:text>: </xsl:text>
                   </xsl:when>
                   <xsl:otherwise>
                     <xsl:element name="span">
@@ -98,25 +94,24 @@
                           </xsl:attribute>
                         </xsl:element>
                         <xsl:element name="br"/>
-                        <xsl:text>a&#160;=&#160;</xsl:text>
+                        <xsl:text>a = </xsl:text>
                         <xsl:value-of select="@a"/>
-                        <xsl:text>&#160;cm</xsl:text>
+                        <xsl:text> cm</xsl:text>
                         <xsl:element name="br"/>
-                        <xsl:text>b&#160;=&#160;</xsl:text>
+                        <xsl:text>b = </xsl:text>
                         <xsl:value-of select="@b"/>
-                        <xsl:text>&#160;cm</xsl:text>
+                        <xsl:text> cm</xsl:text>
                         <xsl:if test="$type='hooded'">
                           <xsl:element name="br"/>
-                          <xsl:text>c&#160;=&#160;</xsl:text>
+                          <xsl:text>c = </xsl:text>
                           <xsl:value-of select="@c"/>
-                          <xsl:text>&#160;cm</xsl:text>
+                          <xsl:text> cm</xsl:text>
                         </xsl:if>
                       </xsl:element>
-                      <xsl:text>&#160;</xsl:text>
+                      <xsl:text> </xsl:text>
                     </xsl:element>
                   </xsl:otherwise>
                 </xsl:choose>
-
                 <!-- Real input for quantity -->
                 <xsl:element name="input">
                   <xsl:attribute name="type">number</xsl:attribute>
@@ -131,12 +126,10 @@
               </xsl:element>
             </xsl:for-each>
           </xsl:element>
-
         </xsl:element>
       </xsl:for-each>
     </xsl:element>
   </xsl:template>
-
   <!-- Dropdown list of countries requiring a choice -->
   <xsl:template match="country-list">
     <xsl:call-template name="country-list">
@@ -144,5 +137,4 @@
       <xsl:with-param name="required" select="'yes'"/>
     </xsl:call-template>
   </xsl:template>
-
 </xsl:stylesheet>

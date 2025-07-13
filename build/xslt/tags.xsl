@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <!-- ====================================================================== -->
 <!-- Display a list of tags (below a news item or event entry)              -->
 <!-- ====================================================================== -->
-
-<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
   <xsl:template match="tags">
     <xsl:element name="ul">
       <xsl:attribute name="class">tags</xsl:attribute>
@@ -27,9 +25,12 @@
                 <xsl:value-of select="@key"/>
               </xsl:otherwise>
             </xsl:choose>
-          </xsl:element><!-- a -->
-        </xsl:element><!-- li -->
+          </xsl:element>
+          <!-- a -->
+        </xsl:element>
+        <!-- li -->
       </xsl:for-each>
-    </xsl:element><!-- ul -->
+    </xsl:element>
+    <!-- ul -->
   </xsl:template>
 </xsl:stylesheet>

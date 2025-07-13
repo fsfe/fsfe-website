@@ -181,7 +181,7 @@ def process_file(infile: Path, processor: Path) -> str:
     """
     logger.debug(f"Processing {infile}")
     lang = lang_from_filename(infile)
-    parser = etree.XMLParser(remove_blank_text=True)
+    parser = etree.XMLParser(remove_blank_text=True, remove_comments=True)
     xmlstream = _build_xmlstream(infile, parser)
     xslt_tree = etree.parse(processor.resolve(), parser)
     transform = etree.XSLT(xslt_tree)

@@ -185,32 +185,46 @@ def process_file(infile: Path, processor: Path) -> str:
     result = transform(xmlstream)
     # And now a bunch of regexes to fix some links.
     # xx is the language code in all comments
-    try: 
-        for href in result.xpath("//href"):
+    try:
+        for linkelem in result.xpath("//*[@href]"):
+            # remove any spurious whitespace
+            linkelem.set(
+                "href",
+                linkelem.get("href").strip(),
+            )
             # Remove https://fsfe.org (or https://test.fsfe.org) from the start of all links
-            href.text = re.sub(
-                r"""(https?://(test\.)?fsfe\.org)([^>])""",
-                r"""\2""",
-                href.txt,
-                flags=re.MULTILINE | re.IGNORECASE,
+            linkelem.set(
+                "href",
+                re.sub(
+                    r"""(https?://(test\.)?fsfe\.org)""",
+                    "",
+                    linkelem.get("href"),
+                    flags=re.IGNORECASE,
+                ),
             )
             # Change links from /foo/bar.html into /foo/bar.xx.html
             # Change links from foo/bar.html into foo/bar.xx.html
             # Same for .rss and .ics links
-            href.text = re.sub(
-                r"""(/?([^:>]+/)?[^:/.]+\.)(html|rss|ics)(#[^>]*)?""",
-                rf"""\1{lang}.\3\4""",
-                href.text,
-                flags=re.MULTILINE | re.IGNORECASE,
+            linkelem.set(
+                "href",
+                re.sub(
+                    r"""(/?([^:>]+/)?[^:/.]{3,}\.)(html|rss|ics)""",
+                    rf"""\1{lang}.\3""",
+                    linkelem.get("href"),
+                    flags=re.IGNORECASE,
+                ),
             )
             # Change links from /foo/bar/ into /foo/bar/index.xx.html
             # Change links from foo/bar/ into foo/bar/index.xx.html
-            href.text = re.sub(
-                r"""(/?[^:>]+/)""",
-                rf"""\1index.{lang}.html""",
-                href.text,
-                flags=re.MULTILINE | re.IGNORECASE,
+            linkelem.set(
+                "href",
+                re.sub(
+                    r"""(/?[^:>]+/)""",
+                    rf"""\1index.{lang}.html""",
+                    linkelem.get("href"),
+                    flags=re.IGNORECASE,
+                ),
             )
-    except AssertionError: 
+    except AssertionError:
         logger.debug(f"Output generated for file {infile} is not valid xml")
     return result

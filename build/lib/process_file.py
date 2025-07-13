@@ -14,7 +14,7 @@ from build.lib.misc import get_basename, get_version, lang_from_filename
 logger = logging.getLogger(__name__)
 
 
-def _get_xmls(file: Path) -> etree.Element:
+def _get_xmls(file: Path, parser: etree.XMLParser) -> etree.Element:
     """
     include second level elements of a given XML file
     this emulates the behaviour of the original
@@ -23,7 +23,7 @@ def _get_xmls(file: Path) -> etree.Element:
     """
     elements = []
     if file.exists():
-        tree = etree.parse(file)
+        tree = etree.parse(file, parser)
         root = tree.getroot()
         # Remove <version> because the filename attribute would otherwise be added
         # to this element instead of the actual content element.
@@ -63,7 +63,7 @@ def _get_trlist(file: Path) -> etree.Element:
     return trlist
 
 
-def _get_set(action_file: Path, lang: str) -> etree.Element:
+def _get_set(action_file: Path, lang: str, parser: etree.XMLParser) -> etree.Element:
     """
     import elements from source files, add file name
     attribute to first element included from each file
@@ -81,21 +81,23 @@ def _get_set(action_file: Path, lang: str) -> etree.Element:
                     if path.with_suffix(f".{lang}.xml").exists()
                     else path.with_suffix(".en.xml")
                 )
-                doc_set.extend(_get_xmls(path_xml))
+                doc_set.extend(_get_xmls(path_xml, parser))
 
     return doc_set
 
 
-def _get_document(action_lang: str, action_file: Path, lang: str) -> etree.Element:
+def _get_document(
+    action_lang: str, action_file: Path, lang: str, parser: etree.XMLParser
+) -> etree.Element:
     document = etree.Element(
         "document", language=action_lang, **_get_attributes(action_file)
     )
-    document.append(_get_set(action_file, lang))
-    document.extend(_get_xmls(action_file))
+    document.append(_get_set(action_file, lang, parser))
+    document.extend(_get_xmls(action_file, parser))
     return document
 
 
-def _build_xmlstream(infile: Path):
+def _build_xmlstream(infile: Path, parser: etree.XMLParser) -> etree.Element:
     """
     assemble the xml stream for feeding into xsltproc
     the expected shortname and language flag indicate
@@ -163,13 +165,13 @@ def _build_xmlstream(infile: Path):
     # Add the subelements
     page.append(_get_trlist(infile))
 
-    page.extend(_get_xmls(topbanner_xml))
+    page.extend(_get_xmls(topbanner_xml, parser))
 
-    page.extend(_get_xmls(Path("global/data/texts/texts.en.xml")))
+    page.extend(_get_xmls(Path("global/data/texts/texts.en.xml"), parser))
 
-    page.extend(_get_xmls(texts_xml))
+    page.extend(_get_xmls(texts_xml, parser))
 
-    page.append(_get_document(action_lang, action_file, lang))
+    page.append(_get_document(action_lang, action_file, lang, parser))
     return page
 
 
@@ -179,8 +181,9 @@ def process_file(infile: Path, processor: Path) -> str:
     """
     logger.debug(f"Processing {infile}")
     lang = lang_from_filename(infile)
-    xmlstream = _build_xmlstream(infile)
-    xslt_tree = etree.parse(processor.resolve())
+    parser = etree.XMLParser(remove_blank_text=True)
+    xmlstream = _build_xmlstream(infile, parser)
+    xslt_tree = etree.parse(processor.resolve(), parser)
     transform = etree.XSLT(xslt_tree)
     result = transform(xmlstream)
     # And now a bunch of regexes to fix some links.

@@ -14,7 +14,7 @@
 
   <xsl:import href="../../build/xslt/gettext.xsl" />
 
-  <xsl:output method="xml" encoding="utf-8" indent="yes"/>
+  <xsl:output method="xml" encoding="utf-8"/>
 
   <!-- ====== -->
   <!-- Months -->

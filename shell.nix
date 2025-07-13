@@ -12,7 +12,10 @@ pkgs.mkShell {
   nativeBuildInputs = with pkgs; [
     # For getting python deps
     uv
+    # Need to use a nix python to prevent ssl certs issues
     python312
+    # use a nix ruff to prevent linked executable issues
+    ruff
     # needed by lxml
     libxslt
     libxml2

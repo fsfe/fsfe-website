@@ -5,10 +5,11 @@
 import csv
 import logging
 import os
-import requests
 from pathlib import Path
-import lxml.etree as etree
 from urllib.parse import urlparse
+
+import lxml.etree as etree
+import requests
 
 from build.lib.misc import update_if_changed
 

@@ -21,16 +21,16 @@ def update_css(
     Then minify it, and place it in the expected location for the build process.
     """
     logger.info("Updating css")
-    dir = source_dir.joinpath("look")
-    if dir.exists():
+    directory = source_dir.joinpath("look")
+    if directory.exists():
         for name in ["fsfe", "valentine"]:
-            if dir.joinpath(name + ".less").exists() and (
-                not dir.joinpath(name + ".min.css").exists()
+            if directory.joinpath(name + ".less").exists() and (
+                not directory.joinpath(name + ".min.css").exists()
                 or any(
                     map(
                         lambda path: path.stat().st_mtime
-                        > dir.joinpath(name + ".min.css").stat().st_mtime,
-                        dir.glob("**/*.less"),
+                        > directory.joinpath(name + ".min.css").stat().st_mtime,
+                        directory.glob("**/*.less"),
                     )
                 )
             ):
@@ -38,10 +38,10 @@ def update_css(
                 result = run_command(
                     [
                         "lessc",
-                        str(dir.joinpath(name + ".less")),
+                        str(directory.joinpath(name + ".less")),
                     ],
                 )
                 update_if_changed(
-                    dir.joinpath(name + ".min.css"),
+                    directory.joinpath(name + ".min.css"),
                     minify.string("text/css", result),
                 )

@@ -18,9 +18,9 @@ def _run_webserver(path: str, port: int) -> None:
     serve that dir on that localhost:port for forever.
     """
     os.chdir(path)
-    Handler = http.server.CGIHTTPRequestHandler
+    handler = http.server.CGIHTTPRequestHandler
 
-    with socketserver.TCPServer(("", port), Handler) as httpd:
+    with socketserver.TCPServer(("", port), handler) as httpd:
         httpd.serve_forever()
 
 
@@ -31,9 +31,9 @@ def serve_websites(serve_dir: str, base_port: int, increment_number: int) -> Non
     """
     dirs = sorted(list(filter(lambda path: path.is_dir(), Path(serve_dir).iterdir())))
     serves = []
-    for dir in dirs:
-        port = base_port + (increment_number * dirs.index(dir))
-        logging.info(f"{dir.name} served at http://127.0.0.1:{port}")
-        serves.append((str(dir), port))
+    for index, directory in enumerate(dirs):
+        port = base_port + (increment_number * index)
+        logging.info(f"{directory.name} served at http://127.0.0.1:{port}")
+        serves.append((str(directory), port))
     with multiprocessing.Pool(len(serves)) as pool:
         pool.starmap(_run_webserver, serves)

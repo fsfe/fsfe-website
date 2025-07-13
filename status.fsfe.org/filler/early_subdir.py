@@ -37,7 +37,8 @@ def _create_index(
 
 def run(processes: int, working_dir: Path) -> None:
     """
-    Place filler indices to encourgae the site to ensure that status pages for all langs are build.
+    Place filler indices to encourage the site to
+    ensure that status pages for all langs are build.
     """
 
     with multiprocessing.Pool(processes) as pool:

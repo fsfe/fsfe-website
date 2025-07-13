@@ -30,11 +30,11 @@ def keys_exists(element: dict, *keys: str) -> bool:
     return True
 
 
-def sort_dict(dict: dict) -> dict:
+def sort_dict(in_dict: dict) -> dict:
     """
     Sort dict by keys
     """
-    return {key: val for key, val in sorted(dict.items(), key=lambda ele: ele[0])}
+    return {key: val for key, val in sorted(in_dict.items(), key=lambda ele: ele[0])}
 
 
 def update_if_changed(path: Path, content: str) -> None:
@@ -76,7 +76,8 @@ def lang_from_filename(file: Path) -> str:
     <name>.XX.<ending>, with xx being the lang code.
     """
     lang = file.with_suffix("").suffix.removeprefix(".")
-    # Lang codes should be the iso 631 2 letter codes, but sometimes we use "nolang" to srop a file being built
+    # Lang codes should be the iso 631 2 letter codes,
+    # but sometimes we use "nolang" to srop a file being built
     if len(lang) != 2 and lang != "nolang":
         logger.critical(
             f"Language {lang} from file {file} not of correct length, exiting"
@@ -91,7 +92,7 @@ def run_command(commands: list) -> str:
         commands,
         capture_output=True,
         # Get output as str instead of bytes
-        universal_newlines=True,
+        text=True,
     )
     if result.returncode != 0:
         logger.critical(f"Command {commands} failed with error")

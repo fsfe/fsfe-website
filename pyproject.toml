@@ -33,3 +33,17 @@ build-backend = "uv_build"
 module-name = "build"
 module-root = ""
 
+[tool.ruff.lint]
+select = [
+    "A",  # prevent using keywords that clobber python builtins
+    "B",  # bugbear: security warnings
+    "E",  # pycodestyle
+    "F",  # pyflakes
+    "I", # ordered import
+    "ISC",  # implicit string concatenation
+    "N", # pep 8 naming
+    "RUF",  # the ruff developer's own rules
+    "UP",  # alert you when better syntax is available in your python version
+    "W", # pycodestyle warnings
+    "Q", # flake 8 quotes
+ ]

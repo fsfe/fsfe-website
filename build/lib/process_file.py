@@ -29,7 +29,8 @@ def _include_xml(file: Path) -> str:
         # to this element instead of the actual content element.
         for elem in root.xpath("version"):
             root.remove(elem)
-        # Iterate over all elements in root node, add a filename attribute and then append the string to work_str
+        # Iterate over all elements in root node, add a filename attribute and
+        # then append the string to work_str
         for elem in root.xpath("*"):
             elem.set("filename", get_basename(file))
             work_str += etree.tostring(elem, encoding="utf-8").decode("utf-8")
@@ -160,43 +161,38 @@ def _build_xmlstream(infile: Path):
     logger.debug(f"action_file: {action_file}")
 
     result_str = f"""
-		<buildinfo
-		  date="{date}"
-		  original="{original_lang}"
-		  filename="/{str(shortname.with_suffix("")).removeprefix("/")}"
-		  fileurl="/{shortname.relative_to(shortname.parts[0]).with_suffix("")}"
-		  dirname="/{shortname.parent}/"
-		  language="{lang}"
-		  translation_state="{translation_state}"
-		>
-
-		<trlist>
-		  {_list_langs(infile)}
-		</trlist>
-
-		<topbanner>
-		{_include_xml(topbanner_xml)}
-		</topbanner>
-		<textsetbackup>
-		{_include_xml(Path("global/data/texts/texts.en.xml"))}
-		</textsetbackup>
-		<textset>
-		{_include_xml(texts_xml)}
-		</textset>
-
-		<document
-		  language="{action_lang}"
-		  {_get_attributes(action_file)}
-		>
-		  <set>
-		    {_auto_sources(action_file, lang)} 
-		  </set>
-
-		  {_include_xml(action_file)}
-		</document>
-
-		</buildinfo>
-        """
+    <buildinfo
+        date="{date}"
+        original="{original_lang}"
+        filename="/{str(shortname.with_suffix("")).removeprefix("/")}"
+        fileurl="/{shortname.relative_to(shortname.parts[0]).with_suffix("")}"
+        dirname="/{shortname.parent}/"
+        language="{lang}"
+        translation_state="{translation_state}"
+    >
+        <trlist>
+            {_list_langs(infile)}
+        </trlist>
+        <topbanner>
+            {_include_xml(topbanner_xml)}
+        </topbanner>
+        <textsetbackup>
+            {_include_xml(Path("global/data/texts/texts.en.xml"))}
+        </textsetbackup>
+        <textset>
+            {_include_xml(texts_xml)}
+        </textset>
+        <document
+            language="{action_lang}"
+            {_get_attributes(action_file)}
+        >
+            <set>
+            {_auto_sources(action_file, lang)}
+            </set>
+            {_include_xml(action_file)}
+        </document>
+    </buildinfo>
+    """
     return result_str
 
 

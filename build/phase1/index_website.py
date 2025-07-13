@@ -77,7 +77,7 @@ def index_websites(
     logger.info("Creating search indexes")
     # Download all stopwords
     nltkdir = "./.nltk_data"
-    nltk.data.path = [nltkdir] + nltk.data.path
+    nltk.data.path = [nltkdir, *nltk.data.path]
     nltk.download("stopwords", download_dir=nltkdir, quiet=True)
     # Iterate over sites
     if source_dir.joinpath("search/search.js").exists():
@@ -85,8 +85,10 @@ def index_websites(
 
         # Get all xhtml files in languages to be processed
         # Create a list of tuples
-        # The first element of each tuple is the file and the second is a set of stopwords for that language
-        # Use iso639 to get the english name of the language from the two letter iso639-1 code we use to mark files.
+        # The first element of each tuple is the file and
+        # the second is a set of stopwords for that language
+        # Use iso639 to get the english name of the language
+        # from the two letter iso639-1 code we use to mark files.
         # Then if that language has stopwords from nltk, use those stopwords.
         files_with_stopwords = map(
             lambda file: (

@@ -109,7 +109,8 @@ def phase1_run(
 
     # After this step, the following files will be up to date:
     # * <dir>/.<base>.xmllist for each <dir>/<base>.sources as well as for each
-    #   $site/tags/tagged-<tags>.en.xhtml. These files are used in phase 2 to include the
+    #   $site/tags/tagged-<tags>.en.xhtml.
+    #   These files are used in phase 2 to include the
     #   correct XML files when generating the HTML pages. It is taken care that
     #   these files are only updated whenever their content actually changes, so
     #   they can serve as a prerequisite in the phase 2 Makefile.

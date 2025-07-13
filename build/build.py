@@ -9,16 +9,14 @@ import logging
 import multiprocessing
 import sys
 from pathlib import Path
+from textwrap import dedent
 
 from .lib.misc import lang_from_filename
-
 from .phase0.full import full
 from .phase0.global_symlinks import global_symlinks
 from .phase0.prepare_early_subdirectories import prepare_early_subdirectories
-
 from .phase1.run import phase1_run
 from .phase2.run import phase2_run
-
 from .phase3.serve_websites import serve_websites
 from .phase3.stage_to_target import stage_to_target
 
@@ -42,7 +40,7 @@ def parse_arguments() -> argparse.Namespace:
         "--languages",
         help="Languages to build website in.",
         default=[],
-        type=lambda input: input.split(","),
+        type=lambda langs: langs.split(","),
     )
     parser.add_argument(
         "--log-level",
@@ -66,7 +64,7 @@ def parse_arguments() -> argparse.Namespace:
         "--sites",
         help="What site directories to build",
         default=list(filter(lambda path: path.is_dir(), Path().glob("?*.??*"))),
-        type=lambda input: list(map(lambda site: Path(site), input.split(","))),
+        type=lambda sites: list(map(lambda site: Path(site), sites.split(","))),
     )
     parser.add_argument(
         "--stage",
@@ -75,7 +73,12 @@ def parse_arguments() -> argparse.Namespace:
     )
     parser.add_argument(
         "--target",
-        help="Final dirs for websites to be build to. Can be a single path, or a comma separated list of valid rsync targets. Supports custom rsynx extension for specifying ports for ssh targets, name@host:path?port.",
+        help=dedent("""\
+        Final dirs for websites to be build to.
+        Can be a single path, or a comma separated list of valid rsync targets.
+        Supports custom rsynx extension for specifying ports for ssh targets,
+        name@host:path?port.
+        """),
         type=str,
         default="./output/final",
     )
@@ -132,7 +135,10 @@ def main():
                 logger.critical(f"Site {site} does not exist, exiting")
                 sys.exit(1)
             # Early subdirs
-            # for subdir actions that need to be performed very early in the build process. Do not get access to languages to be built in, and other benefits of being ran later.
+            # for subdir actions that need to be performed
+            # very early in the build process.
+            # Do not get access to languages to be built in,
+            # and other benefits of being ran later.
             prepare_early_subdirectories(
                 site,
                 args.processes,

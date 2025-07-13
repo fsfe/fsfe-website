@@ -14,25 +14,25 @@ from build.lib.misc import lang_from_filename, update_if_changed
 logger = logging.getLogger(__name__)
 
 
-def _gen_archive_index(working_dir: Path, languages: list[str], dir: Path):
-    logger.debug(f"Operating on dir {dir}")
+def _gen_archive_index(working_dir: Path, languages: list[str], directory: Path):
+    logger.debug(f"Operating on dir {directory}")
     for lang in languages:
         logger.debug(f"Operating on lang {lang}")
         template = working_dir.joinpath(f"archive-template.{lang}.xhtml")
         if template.exists():
             logger.debug("Template Exists!")
             content = template.read_text()
-            content = content.replace(":YYYY:", dir.name)
-            dir.joinpath(f"index.{lang}.xhtml").write_text(content)
+            content = content.replace(":YYYY:", directory.name)
+            directory.joinpath(f"index.{lang}.xhtml").write_text(content)
 
 
-def _gen_index_sources(dir: Path):
-    dir.joinpath("index.sources").write_text(
+def _gen_index_sources(directory: Path):
+    directory.joinpath("index.sources").write_text(
         dedent(
             f"""\
-                {dir}/news-*:[]
-                {dir}/.news-*:[]
-                {dir.parent}/.localmenu:[]
+                {directory}/news-*:[]
+                {directory}/.news-*:[]
+                {directory.parent}/.localmenu:[]
             """
         )
     )
@@ -40,7 +40,10 @@ def _gen_index_sources(dir: Path):
 
 def _gen_xml_files(working_dir: Path, file: Path):
     logger.debug(f"Transforming {file}")
-    # Would be more efficient to pass this to the function, but this causes a pickling error, and  the faq seems to indicate passing around these objects between threads causes issues
+    # Would be more efficient to pass this to the function,
+    # but this causes a pickling error,
+    # and  the faq seems to indicate passing around these objects
+    # between threads causes issues
     # https://lxml.de/5.0/FAQ.html
     # So I guess we just have to take the performance hit.
     xslt_tree = etree.parse(working_dir.joinpath("xhtml2xml.xsl"))
@@ -66,7 +69,7 @@ def run(languages: list[str], processes: int, working_dir: Path) -> None:
         # Copy news archive template to each of the years
         pool.starmap(
             _gen_archive_index,
-            [(working_dir, languages, dir) for dir in years[:-2]],
+            [(working_dir, languages, directory) for directory in years[:-2]],
         )
         logger.debug("Finished Archiving")
         # Generate index.sources for every year

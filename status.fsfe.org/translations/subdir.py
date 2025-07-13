@@ -149,7 +149,7 @@ def _create_translation_file(
         url=f"https://git.fsfe.org/FSFE/fsfe-website/src/branch/master/{lang_texts_file}",
         filepath=str(lang_texts_file),
     )
-    for missing_text in filter(lambda id: id not in lang_texts, en_texts):
+    for missing_text in filter(lambda text_id: text_id not in lang_texts, en_texts):
         text_elem = etree.SubElement(missing_texts_elem, "text")
         text_elem.text = missing_text
 
@@ -163,7 +163,8 @@ def _create_translation_file(
 
 def run(languages: list[str], processes: int, working_dir: Path) -> None:
     """
-    Build translation-status xmls for languages where the translation status has changed. Xmls are placed in target_dir, and only languages are processed.
+    Build translation-status xmls for languages where the status has changed.
+    Xmls are placed in target_dir, and only languages are processed.
     """
     target_dir = working_dir.joinpath("data/")
     logger.debug(f"Building index of status of translations into dir {target_dir}")
@@ -243,14 +244,10 @@ def run(languages: list[str], processes: int, working_dir: Path) -> None:
         # sadly single treaded, as only one file being operated on
         _create_overview(target_dir, files_by_lang_by_prio)
 
-        for data in [
-            (target_dir, lang, files_by_lang_by_prio[lang])
-            for lang in files_by_lang_by_prio
-        ]:
-            pool.starmap(
-                _create_translation_file,
-                [
-                    (target_dir, lang, files_by_lang_by_prio[lang])
-                    for lang in files_by_lang_by_prio
-                ],
-            )
+        pool.starmap(
+            _create_translation_file,
+            [
+                (target_dir, lang, files_by_lang_by_prio[lang])
+                for lang in files_by_lang_by_prio
+            ],
+        )

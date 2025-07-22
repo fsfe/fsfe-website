@@ -10,7 +10,8 @@
                 xmlns:content="http://purl.org/rss/1.0/modules/content/"
                 xmlns:atom="http://www.w3.org/2005/Atom"
                 xmlns:psc="http://podlove.org/simple-chapters"
-                xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">
+                xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd"
+                xmlns:podcast="https://podcastindex.org/namespace/1.0">
 
   <xsl:import href="../../build/xslt/gettext.xsl" />
 

@@ -179,7 +179,7 @@
         <itunes:image href="https://fsfe.org/graphics/podcast-logo.png" />
         <itunes:summary>The regular podcast about Free Software and ongoing activities hosted by the FSFE</itunes:summary>
         <itunes:subtitle>The monthly podcast about Free Software</itunes:subtitle>
-        <itunes:block>false</itunes:block>
+        <itunes:block>no</itunes:block>
         <itunes:explicit>false</itunes:explicit>
 
 
@@ -279,7 +279,7 @@
             <!-- PODCAST specific information (item) -->
             <itunes:author>Free Software Foundation Europe (FSFE)</itunes:author>
             <itunes:explicit>false</itunes:explicit>
-            <itunes:block>false</itunes:block>
+            <itunes:block>no</itunes:block>
             <itunes:episodeType>
               <xsl:choose>
                 <xsl:when test="podcast/type != ''">

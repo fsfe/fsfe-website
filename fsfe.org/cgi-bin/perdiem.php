@@ -146,7 +146,6 @@ $html .= "<p>This per diem statement is made by <strong>$who_verbose</strong>.</
     <th>Category Text</th>
     <th>Event</th>
     <th>Description</th>
-    <th>Receipt Name</th>
   </tr>";
 
 // Prepare email
@@ -256,7 +255,6 @@ foreach ($use as $d => $day) {  // calculate for each day
       <td>$category_text</td>
       <td>$event</td>
       <td>$remarks[$d]</td>
-      <td></td>
     </tr>";
 
     // CSV for this receipt

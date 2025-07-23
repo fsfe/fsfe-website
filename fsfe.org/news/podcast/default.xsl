@@ -7,6 +7,7 @@
   <xsl:template match="audio-player">
     <xsl:element name="audio">
       <xsl:attribute name="controls" />
+      <xsl:attribute name="preload">none</xsl:attribute>
       <xsl:attribute name="style">width:100%;</xsl:attribute>
       <!-- OPUS -->
       <xsl:element name="source">

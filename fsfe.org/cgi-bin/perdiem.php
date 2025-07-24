@@ -22,7 +22,7 @@ require 'PHPMailer/PHPMailer.php';
 require 'PHPMailer/SMTP.php';
 
 $html = ''; // create empty variable
-$csv = array(array("Employee number", "Employee name", "Date", "Amount (EUR)", "Recipient name", "Activity Tag", "Activity Text", "Category ID", "Category Text", "Description", "Receipt number", "Remarks")); // create array for CSV
+$csv = array(array("Employee number", "Employee name", "Date", "Amount (EUR)", "Recipient name", "Activity Tag", "Activity Text", "Category ID", "Category Text", "Event", "Description", "Receipt number")); // create array for CSV
 $csvfile = tmpfile();
 $csvfile_path = stream_get_meta_data($csvfile)['uri'];
 $reimb_total = 0;   // total reimbursement for early calculation
@@ -33,7 +33,7 @@ $activity_tag = explode("||", $activity)[0];
 $activity_text = explode("||", $activity)[1];
 $category_id = "66640";
 $category_text = "Per diem";
-$description = isset($_POST["description"]) ? $_POST["description"] : false;
+$event = isset($_POST["event"]) ? $_POST["event"] : false;
 $extra = isset($_POST["extra"]) ? $_POST["extra"] : false;
 $mailopt = isset($_POST["mailopt"]) ? $_POST["mailopt"] : false;
 $defaults = isset($_POST["defaults"]) ? $_POST["defaults"] : false;
@@ -144,9 +144,8 @@ $html .= "<p>This per diem statement is made by <strong>$who_verbose</strong>.</
     <th>Activity Text</th>
     <th>Category Id</th>
     <th>Category Text</th>
+    <th>Event</th>
     <th>Description</th>
-    <th>Receipt Name</th>
-    <th>Remarks</th>
   </tr>";
 
 // Prepare email
@@ -254,13 +253,12 @@ foreach ($use as $d => $day) {  // calculate for each day
       <td>$activity_text</td>
       <td>$category_id</td>
       <td>$category_text</td>
-      <td>$description</td>
-      <td></td>
+      <td>$event</td>
       <td>$remarks[$d]</td>
     </tr>";
 
     // CSV for this receipt
-    $csv[$key] = array($who_empnumber, $who_verbose, $date[$d], $reimb_day[$d], $who_verbose, $activity_tag, $activity_text, $category_id, $category_text, $description, "", $remarks[$d]);
+    $csv[$key] = array($who_empnumber, $who_verbose, $date[$d], $reimb_day[$d], $who_verbose, $activity_tag, $activity_text, $category_id, $category_text, $event, $remarks[$d], "");
 
   } // if day is used
 } // foreach
@@ -269,7 +267,7 @@ foreach ($use as $d => $day) {  // calculate for each day
 foreach ($csv as $fields) {
   fputcsv($csvfile, $fields, ';', '"', '"');
 }
-$email->addAttachment($csvfile_path, filter_filename($date[$d]."-"."pd" ."-". $who ."-". $activity_tag ."-". $description . ".csv"));
+$email->addAttachment($csvfile_path, filter_filename($date[$d]."-"."pd" ."-". $who ."-". $activity_tag ."-". $event . ".csv"));
 
 // Prepare email body
 $email_body = "Hi,

@@ -2,6 +2,23 @@
 <feed>
   <version>1</version>
 
+  <!--
+  Fields of the quotes
+
+  quote.id      this must be set and match the used one in the filename
+                e.g.: in 1000-abcde.en the 1000 defines the sorting order
+                and abcde is the id; en then the localized version of
+                the quote
+  quote.image   may be set to the URL of the image of the person. The image
+                should be squared
+  name          the name of the person and maybe the profession
+  text          the text of the quote
+  read          if there is a longer interview text read should be set
+  read.link     the URL of the interview text
+  watch         if there is a interview video available watch should be set
+  watch.link    the URL of the video
+  -->
+
   <quote
       id="mostad"
       image="https://pics.fsfe.org/uploads/small/5347f7767a39148cae42224243d77383.jpg">

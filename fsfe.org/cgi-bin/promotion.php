@@ -139,6 +139,10 @@ $msg_to_staff .= "{$_POST['street']}\n" .
 # Default or custom package?
 if ($_POST['packagetype'] == 'default') {
   $msg_to_staff .= "Default package: Something from everything listed here, depending on size, language selection and availability.\n";
+} else if ($_POST['packagetype'] == 'basicsticker') {
+  $msg_to_staff .= "Small package with stickers.\n";
+} else if ($_POST['packagetype'] == 'basicpostcard') {
+  $msg_to_staff .= "Small package with stickers and postcards.\n";
 } else {
   $msg_to_staff .= "Custom package:\n" .
     "{$_POST['specifics']}\n";

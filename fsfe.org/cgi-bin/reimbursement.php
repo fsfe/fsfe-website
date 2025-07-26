@@ -225,7 +225,7 @@ foreach ($entry as $key => $date) {  // run over each row
   </tr>";
 
   // CSV for this receipt
-  $csv[$receipt_no] = array($who_empnumber, $who_verbose, $date, $amount[$key], $recipient[$key], $activity_tag[$key], $activity_text[$key], $category_id[$key], $category_text[$key], $event[$key] $description[$key], $receipt_no, "");
+  $csv[$receipt_no] = array($who_empnumber, $who_verbose, $date, $amount[$key], $recipient[$key], $activity_tag[$key], $activity_text[$key], $category_id[$key], $category_text[$key], $event[$key], $description[$key], $receipt_no, "");
 
   // Add receipt as email attachment
   $email->addAttachment($receipt_dest[$key], basename($receipt_dest[$key]));

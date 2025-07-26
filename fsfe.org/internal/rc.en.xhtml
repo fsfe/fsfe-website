@@ -103,6 +103,7 @@
           <th>Recipient</th>
           <th>Activity</th>
           <th>Category</th>
+          <th>Event</th>
           <th>Description</th>
           <th>Receipt Scan</th>
           <th>Rows</th>
@@ -114,6 +115,7 @@
           <td></td>
           <td>What activity was this part of</td>
           <td>What category is the expense</td>
+          <td>Which event was attended</td>
           <td>What specifically was paid for</td>
           <td>Upload receipt as PDF, max. 2MB each</td>
           <td>Add a new row, or delete one</td>
@@ -125,6 +127,7 @@
           <td>Berlin Bus Company</td>
           <td>Select the activity</td>
           <td>Select fitting category or "other"</td>
+          <td>Enter the event you attended</td>
           <td>Bus ticket from Berlin to New York</td>
           <td>e.g. busticket.pdf</td>
           <td></td>
@@ -136,6 +139,7 @@
           <td>ACME</td>
           <td></td>
           <td></td>
+          <td>ACMECon 2024</td>
           <td>USB adapter for external keyboard</td>
           <td>e.g. acme-adapter.pdf</td>
           <td></td>
@@ -171,6 +175,7 @@
             <option value="66600:Travel costs - hotel">Travel costs - hotel</option>
             <option value="66630:Travel costs - transport">Travel costs - transport</option>
           </select></td>
+          <td><input type="text" name="event[]" class="form-control" /></td>
           <td><input type="text" name="description[]" class="form-control" required="required" /></td>
           <td><input type="file" name="receipt[]" class="form-control" required="required" /></td>
           <td><input type="button" class="AddNewRow btn btn-primary" value="+ 1 row" /></td>

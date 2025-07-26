@@ -9,7 +9,7 @@ require 'PHPMailer/PHPMailer.php';
 require 'PHPMailer/SMTP.php';
 
 $html = ''; // create empty variable
-$csv = array(array("Employee number", "Employee name", "Date", "Amount (EUR)", "Recipient name", "Activity Tag", "Activity Text", "Category ID", "Category Text", "Description", "Receipt number", "Remarks")); // create array for CSV
+$csv = array(array("Employee number", "Employee name", "Date", "Amount (EUR)", "Recipient name", "Activity Tag", "Activity Text", "Category ID", "Category Text", "Event", "Description", "Receipt number", "Remarks")); // create array for CSV
 $csvfile = tmpfile();
 $csvfile_path = stream_get_meta_data($csvfile)['uri'];
 
@@ -26,6 +26,7 @@ $activity = isset($_POST["activity"]) ? $_POST["activity"] : false;
 $category = isset($_POST["category"]) ? $_POST["category"] : false;
 $receipt = isset($_POST["receipt"]) ? $_POST["receipt"] : false;
 $description = isset($_POST["description"]) ? $_POST["description"] : false;
+$event = isset($_POST["event"]) ? $_POST["event"] : false;
 $extra = isset($_POST["extra"]) ? $_POST["extra"] : false;
 $mailopt = isset($_POST["mailopt"]) ? $_POST["mailopt"] : false;
 
@@ -127,6 +128,7 @@ $html .= "<p>This <strong>$type_verbose</strong> is made by <strong>$who_verbose
     <th>Activity Text</th>
     <th>Category ID</th>
     <th>Category Text</th>
+    <th>Event</th>
     <th>Description</th>
     <th>Receipt Name</th>
     <th></th>
@@ -173,6 +175,7 @@ foreach ($entry as $key => $date) {  // run over each row
   $activity_text[$key] = explode("||", $activity[$key])[1];
   $category_id[$key] = explode(":", $category[$key])[0];
   $category_text[$key] = explode(":", $category[$key])[1];
+  $event[$key] = $event[$key];
 
   // Sanity checks for receipt: upload, size, mime type
   if (! $receipt_tmp) {
@@ -215,13 +218,14 @@ foreach ($entry as $key => $date) {  // run over each row
     <td>$activity_text[$key]</td>
     <td>$category_id[$key]</td>
     <td>$category_text[$key]</td>
+    <td>$event[$key]</td>
     <td>$description[$key]</td>
     <td>$receipt_name</td>
     <td></td>
   </tr>";
 
   // CSV for this receipt
-  $csv[$receipt_no] = array($who_empnumber, $who_verbose, $date, $amount[$key], $recipient[$key], $activity_tag[$key], $activity_text[$key], $category_id[$key], $category_text[$key], $description[$key], $receipt_no, "");
+  $csv[$receipt_no] = array($who_empnumber, $who_verbose, $date, $amount[$key], $recipient[$key], $activity_tag[$key], $activity_text[$key], $category_id[$key], $category_text[$key], $event[$key] $description[$key], $receipt_no, "");
 
   // Add receipt as email attachment
   $email->addAttachment($receipt_dest[$key], basename($receipt_dest[$key]));

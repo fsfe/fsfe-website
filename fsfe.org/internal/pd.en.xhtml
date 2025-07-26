@@ -59,7 +59,7 @@
       <div class="row form-group">
         <label class="col-sm-3">Activity:</label>
         <div class="col-sm-9">
-          <select class="form-control col-sm-9" name="activity" id="activity" size="1" required="required" onChange="the_event = document.getElementById('activity').options[ document.getElementById('activity').selectedIndex ].dataset.event; document.getElementById('event').value = the_event || '';">
+          <select class="form-control col-sm-9" name="activity" id="activity" size="1" required="required" onChange="the_event = document.getElementById('activity').options[ document.getElementById('activity').selectedIndex ].dataset.event || ''; document.getElementById('event').value = the_event;">
             <option />
             <module id="fsfe-activities-options" />
           </select>

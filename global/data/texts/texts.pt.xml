@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <data>
   <version>2</version>
-
-
-<!-- ALL STATIC TEXTS -->
-
+  <!-- ALL STATIC TEXTS -->
   <!-- Spreadtheword page -->
   <text id="stw-type">Tipo</text>
   <text id="stw-size">Tamanho</text>
@@ -20,15 +17,13 @@
   <text id="stw-source-tooltip">Podem ser transferidos os ficheiros fonte deste item de promoção para o modificar ou traduzir. Pedimos que a licença seja respeitada.</text>
   <text id="stw-printready">Ficheiros prontos a imprimir</text>
   <text id="stw-printready-tooltip">Estes são os ficheiros que usamos na nossa impressora; incluem vazamento e outras definições específicas de impressão. Os ficheiros podem ser muito grandes (~5-25MB).</text>
-
   <!-- Basic texts -->
-  <text id="fsfe">FSFE</text> <!-- only change this for non-latin character sets -->
-  <text id="fsfeurope">Free Software Foundation&#160;Europe</text>
+  <text id="fsfe">FSFE</text>
+  <!-- only change this for non-latin character sets -->
+  <text id="fsfeurope">Free Software Foundation Europe</text>
   <text id="fsfnetwork">
     A FSFE tem <a href="/about/fsfnetwork.html">organizações irmãs</a> na <a href="//www.fsf.org/">América do Norte</a>, na <a href="http://fsf.org.in/">Índia</a> e na <a href="http://www.fsfla.org/">América Latina</a>.
   </text>
-
-
   <!-- Footer -->
   <text id="translator1a">Agradecemos a </text>
   <text id="translator1b"> por esta tradução. </text>
@@ -41,14 +36,12 @@
     meio, desde que esta nota seja mantida.
   </text>
   <text id="js-licences">Licenças de JavaScript</text>
-
-
   <!-- Warning info boxes -->
   <text id="outdated-1">
     Esta tradução pode estar desactualizada, por alteração do
-  </text><!-- followed by "translator3b" -->
-  <text id="outdated-2">
-     <a href="/contribute/translators/translators.html">Pedimos ajuda para a
+  </text>
+  <!-- followed by "translator3b" -->
+  <text id="outdated-2"><a href="/contribute/translators/translators.html">Pedimos ajuda para a
      tradução</a> desta e de outras páginas de fsfe.org, para que as pessoas possam ler
 	a nossa mensagem nas suas próprias línguas.
   </text>
@@ -57,20 +50,14 @@
 	tradução</a> desta e de outras páginas de fsfe.org, para que as pessoas possam ler
 	a nossa mensagem nas suas próprias línguas.
   </text>
-    <text id="under-construction">
-    <strong>Aviso: </strong>Esta página está em construção. Pedimos que <strong>não seja divulgada</strong> e que não seja iniciada a tradução, visto que o conteúdo pode ser alterado.
+  <text id="under-construction"><strong>Aviso: </strong>Esta página está em construção. Pedimos que <strong>não seja divulgada</strong> e que não seja iniciada a tradução, visto que o conteúdo pode ser alterado.
   </text>
-    <text id="project-complete">Este projecto terminou com êxito. Estas páginas são mantidas aqui para efeitos de arquivo.  </text>
-
-
+  <text id="project-complete">Este projecto terminou com êxito. Estas páginas são mantidas aqui para efeitos de arquivo.  </text>
   <!-- Menu, Navigation, Buttons -->
   <text id="fsfe/about">Sobre</text>
-
-
   <text id="fsfe/activities">Actividades</text>
   <text id="fsfe/help">Participar</text>
   <text id="fsfe/press">Imprensa</text>
-
   <text id="support/become">Tornar-se apoiante</text>
   <text id="fellowship/login">Acesso</text>
   <text id="news/news">Últimas notícias</text>
@@ -80,16 +67,10 @@
   <text id="news/planet">Blogues planet</text>
   <text id="fs/basics">Fundamentos do Software Livre</text>
   <text id="community/discuss">Conversas sobre Software Livre</text>
-
-
-
   <text id="learn-more">Saber mais</text>
-
   <text id="newsletter">Boletim</text>
   <text id="podcast">Emissão</text>
-
   <text id="go-to">Ir para:</text>
-
   <text id="yourname">O seu nome</text>
   <text id="subscribe">Receber</text>
   <text id="email">endereço electrónico</text>
@@ -98,20 +79,12 @@
   <text id="pages">Páginas</text>
   <text id="receive-newsletter">Receber o boletim mensal da FSFE</text>
   <text id="subscribe-newsletter">Receber o boletim</text>
-
-
-
-
   <text id="contact">Contacto</text>
   <text id="team">Equipa</text>
-
-
-
   <text id="change-lang">Mudar de Idioma</text>
   <text id="menu">Menu</text>
   <text id="content">Conteúdo</text>
   <text id="page-info">Informação da página</text>
-
   <text id="go-top">Ir para o início</text>
   <text id="source">Código-fonte</text>
   <text id="contact-us">Contacte-nos</text>
@@ -124,8 +97,6 @@
   <text id="tags">Etiquetas (Tags)</text>
   <text id="discuss-article">Discutir isto</text>
   <text id="finished">Concluído</text>
-
-
   <!-- Article metadata -->
   <text id="author">Autor</text>
   <text id="writtenby">Escrito por</text>
@@ -133,20 +104,14 @@
   <text id="revision">actualizado em</text>
   <text id="download">Transferir</text>
   <text id="and">e</text>
-
-
   <!-- Petitions -->
   <text id="osig">Organizações</text>
   <text id="isig">Indivíduos</text>
   <text id="bsig">Empresas</text>
-
-
   <!-- News and event feeds -->
   <text id="related-news">Notícias Relacionadas</text>
   <text id="related-events">Eventos Relacionados</text>
   <text id="related-all">Todos os eventos e notícias relacionados</text>
-
-
   <!-- Sidebars -->
   <text id="our-work">O nosso trabalho</text>
   <text id="our-work-intro">
@@ -168,19 +133,12 @@
       expressão, a liberdade de imprensa e a privacidade.
     </p>
   </text>
-
-
   <!-- Motivational texts for fellowship, support or donations -->
-
-
-
-
   <text id="support">Apoie a FSFE</text>
   <text id="show-support">Mostre o seu apoio!</text>
   <text id="show-support-paragraph">A FSFE precisa de apoio para que a sua voz seja ouvida! Todos os cliques contam!</text>
   <text id="support-fsfe">Eu apoio a FSFE!</text>
   <text id="support-paragraph">A liberdade na sociedade da informação precisa da sua contribuição financeira.</text>
-
   <text id="donate">Doar</text>
   <text id="donate-paragraph">
     A Free Software Foundation Europe é uma organização sem fins lucrativos não-governamental.
@@ -191,33 +149,25 @@
     força e autonomia. Permitem-nos continuar a trabalhar pelo Software Livre
     quando necessário e a ser uma voz independente.
   </text>
-
   <!-- pdfreaders.org -->
   <text id="pdfreaders-head-readers">Os Leitores</text>
   <text id="pdfreaders-head-standards">Normas abertas</text>
   <text id="pdfreaders-head-graphics">Grafismo</text>
   <text id="pdfreaders-head-about">Sobre</text>
   <text id="pdfreaders-body-platforms">Plataformas:</text>
-
   <!-- Share and support buttons -->
   <text id="share-head">Partilhar e apoiar</text>
   <text id="share-page">Partilhar esta página no</text>
   <text id="share-microdonation">Fazer um micro-donativo via</text>
   <text id="share-warning">Alguns serviços podem não respeitar Software Livre e ser intrusivos em termos de privacidade.</text>
-
   <!-- Sponsoring buttons -->
   <text id="donation-buttons">Botões</text>
-
-
-
-
   <text id="size/huge">gigante</text>
   <text id="size/large">grande</text>
   <text id="size/medium">médio</text>
   <text id="size/small">pequeno</text>
   <text id="background/white">Fundo branco</text>
   <text id="background/transparent">Fundo transparente</text>
-
   <!-- Search function -->
   <text id="search">Buscar</text>
   <text id="search/placeholder">Termos a buscar...</text>

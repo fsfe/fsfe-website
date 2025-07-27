@@ -1,19 +1,22 @@
+<?xml version="1.0"?>
 <readers>
   <version>1</version>
-
-   <reader priority="30">
-  <name>Okular</name>
-  <logo>okular.png</logo>
-  <homepage>http://okular.kde.org/</homepage>
-  <license>GPL</license>
-  <platform><name>GNU/Linux</name><installer>http://okular.kde.org/download.php</installer></platform>
-  <language>en</language>
-  <language>fr</language>
-  <language>de</language>
-
-<description>
-Программа просмотра документов проекта KDE показывает также
-PostScript, DOC, ODT и другие форматы. Она хорошо интегрирована
-с браузерами KDE Konqueror и Rekonq.
+  <reader priority="30">
+    <name>Okular</name>
+    <logo>okular.png</logo>
+    <homepage>http://okular.kde.org/</homepage>
+    <license>GPL</license>
+    <platform>
+      <name>GNU/Linux</name>
+      <installer>http://okular.kde.org/download.php</installer>
+    </platform>
+    <language>en</language>
+    <language>fr</language>
+    <language>de</language>
+    <description>
+&#x41F;&#x440;&#x43E;&#x433;&#x440;&#x430;&#x43C;&#x43C;&#x430; &#x43F;&#x440;&#x43E;&#x441;&#x43C;&#x43E;&#x442;&#x440;&#x430; &#x434;&#x43E;&#x43A;&#x443;&#x43C;&#x435;&#x43D;&#x442;&#x43E;&#x432; &#x43F;&#x440;&#x43E;&#x435;&#x43A;&#x442;&#x430; KDE &#x43F;&#x43E;&#x43A;&#x430;&#x437;&#x44B;&#x432;&#x430;&#x435;&#x442; &#x442;&#x430;&#x43A;&#x436;&#x435;
+PostScript, DOC, ODT &#x438; &#x434;&#x440;&#x443;&#x433;&#x438;&#x435; &#x444;&#x43E;&#x440;&#x43C;&#x430;&#x442;&#x44B;. &#x41E;&#x43D;&#x430; &#x445;&#x43E;&#x440;&#x43E;&#x448;&#x43E; &#x438;&#x43D;&#x442;&#x435;&#x433;&#x440;&#x438;&#x440;&#x43E;&#x432;&#x430;&#x43D;&#x430;
+&#x441;&#xA0;&#x431;&#x440;&#x430;&#x443;&#x437;&#x435;&#x440;&#x430;&#x43C;&#x438; KDE Konqueror &#x438; Rekonq.
 </description>
-</reader> </readers>
+  </reader>
+</readers>

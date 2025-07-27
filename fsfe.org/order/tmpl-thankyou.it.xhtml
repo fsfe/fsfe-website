@@ -1,39 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <html>
   <version>1</version>
-
   <head>
     <title>Grazie per l'ordine!</title>
   </head>
-
   <body>
     <p id="category" class="p-category">
       <a href="/order/order.html">Prodotti</a>
     </p>
-
     <h1>Grazie per l'ordine!</h1>
-
     <p class="p-summary">
       Il prezzo totale del tuo ordine è <strong>€:AMOUNT:</strong>.
     </p>
-
     <p>
       Puoi pagare online con diverse carte di credito, di debito oppure tramite
       PayPal.
     </p>
-
     <form action="https://secure.payengine.de/ncol/prod/orderstandard_utf8.asp" method="post" class="thankyou">
 :FORM:
       <!-- translators: please also translate the term "Pay online", it will
            show on the button. -->
       <input type="submit" name="submit" value="Paga online"/>
     </form>
-
     <p>
       Se invece preferisci pagare tramite bonifico bancario, queste sono le coordinate e la causale:
     </p>
-
     <p>
       Beneficiario: Free Software Foundation Europe e.V.<br/>
       Indirizzo beneficiario: Revaler Straße 19, 10245 Berlin, Germany<br/>
@@ -44,7 +35,6 @@
       Causale: :REFERENCE:
     </p>
   </body>
-
   <followup>join</followup>
 </html>
 <!--

@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <data>
   <version>2</version>
-
-
-<!-- ALL STATIC TEXTS -->
-
+  <!-- ALL STATIC TEXTS -->
   <!-- Spreadtheword page -->
   <text id="stw-type">Tipo</text>
   <text id="stw-size">Tamaño</text>
@@ -20,15 +17,13 @@
   <text id="stw-source-tooltip">Puede descargar los ficheros de código fuente de esta promoción para modificarlos y traducirlos. Por favor respete su licencia.</text>
   <text id="stw-printready">Ficheros preparados para imprimir</text>
   <text id="stw-printready-tooltip">Estos son los fichero que mandamos a nuestra impresora, incluyendo el sangrado y otras configuraciones específicas de la impresora. Estos fichero pueden ser grandes (~5-25MB).</text>
-
   <!-- Basic texts -->
-  <text id="fsfe">FSFE</text> <!-- only change this for non-latin character sets -->
+  <text id="fsfe">FSFE</text>
+  <!-- only change this for non-latin character sets -->
   <text id="fsfeurope">Free Software Foundation Europe</text>
   <text id="fsfnetwork">
     La FSFE tiene <a href="/about/fsfnetwork.html">organizaciones hermanas</a> en <a href="http://www.fsf.org/">América del Norte</a>, <a href="http://www.fsf.org.in/">India</a> y <a href="http://www.fsfla.org/">América Latina</a>.
   </text>
-
-
   <!-- Footer -->
   <text id="translator1a">Agradecemos a </text>
   <text id="translator1b"> la traducción de esta página. </text>
@@ -41,12 +36,11 @@
       en cualquier medio, siempre que se incluya este aviso.
   </text>
   <text id="js-licences">Licencias JavaScript</text>
-
-  
   <!-- Warning info boxes -->
   <text id="outdated-1">
     Esta página puede estar desactualizada con respecto a la
-  </text><!-- followed by "translator3b" -->
+  </text>
+  <!-- followed by "translator3b" -->
   <text id="outdated-2">
      Por favor, consulte<a href="/contribute/translators/translators.html">esta página</a>
      para informarse
@@ -57,20 +51,14 @@
 	</a> para informarse de cómo puede ayudar con las traducciones
 	y hacer otras contribuciones.
   </text>
-    <text id="under-construction">
-    <strong>Aviso: </strong>Esta página está en construcción. Por favor <strong>no la difunda</strong> o intente traducirla, pues su contenido está sujeto a cambios.
+  <text id="under-construction"><strong>Aviso: </strong>Esta página está en construcción. Por favor <strong>no la difunda</strong> o intente traducirla, pues su contenido está sujeto a cambios.
   </text>
-    <text id="project-complete">Este proyecto ha terminado con éxito. Estas páginas se mantienen a efectos de archivo.  </text>
-
-
+  <text id="project-complete">Este proyecto ha terminado con éxito. Estas páginas se mantienen a efectos de archivo.  </text>
   <!-- Menu, Navigation, Buttons -->
   <text id="fsfe/about">Acerca de</text>
-
-  
   <text id="fsfe/activities">Actividades</text>
   <text id="fsfe/help">Colabora</text>
   <text id="fsfe/press">Prensa</text>
-
   <text id="support/become">Hazte socio</text>
   <text id="fellowship/login">Iniciar sesión</text>
   <text id="news/news">Últimas noticias</text>
@@ -80,16 +68,10 @@
   <text id="news/planet">Planeta de blogs</text>
   <text id="fs/basics">Lo básico sobre Software Libre</text>
   <text id="community/discuss">Discusiones sobre Software Libre</text>
-
-
-
   <text id="learn-more">Saber más</text>
-
   <text id="newsletter">Boletín de noticias</text>
   <text id="podcast">Podcast</text>
-
   <text id="go-to">Ir a</text>
-  
   <text id="yourname">Tu Nombre</text>
   <text id="subscribe">Suscribirse</text>
   <text id="email">dirección de correo electrónico</text>
@@ -99,20 +81,12 @@
   <text id="receive-newsletter">Suscribirse al boletín de noticias mensual de la FSFE</text>
   <text id="subscribe-newsletter">Suscribirse al boletín de noticias</text>
   <text id="subscribe-newsletter-text">Suscríbete a nuestras actualizaciones por email. Nuestros expertos te informan sobre las noticias de actualidad, eventos, actividades y cómo puedes contribuir.</text>
-
-
-
-
   <text id="contact">Contactar</text>
   <text id="team">Equipo</text>
-
-
-  
   <text id="change-lang">Cambiar idioma</text>
   <text id="menu">Menú</text>
   <text id="content">Contenido</text>
   <text id="page-info">Información de la página</text>
-
   <text id="go-top">Ir al principio</text>
   <text id="source">Código fuente</text>
   <text id="contact-us">Contactar</text>
@@ -125,8 +99,6 @@
   <text id="tags">Etiquetas</text>
   <text id="discuss-article">Discutir esto</text>
   <text id="finished">Terminado</text>
-
-  
   <!-- Article metadata -->
   <text id="author">Autor</text>
   <text id="writtenby">Redactado por</text>
@@ -134,56 +106,44 @@
   <text id="revision">actualizado el</text>
   <text id="download">Descargar</text>
   <text id="and">y</text>
-
-
   <!-- Petitions -->
   <text id="osig">Organizaciones</text>
   <text id="isig">Individuos</text>
   <text id="bsig">Empresas</text>
-
-
   <!-- News and event feeds -->
   <text id="related-news">Noticias relacionadas</text>
   <text id="related-events">Eventos relacionados</text>
   <text id="related-all">Todas las noticias y eventos relacionadas</text>
-
-  
   <!-- Sidebars -->
   <text id="our-work">Nuestro trabajo</text>
-  <text id="our-work-intro"><p>Como organización no gubernamental sin ánimo de lucro,
+  <text id="our-work-intro">
+    <p>Como organización no gubernamental sin ánimo de lucro,
 Free Software Foundatioon Europe trabaja para crear conciencia general y apoyo al
 Software Libre y los Estándares Abiertos en la política, las empresas, las leyes y la sociedad
 en su conjunto.</p>
-</text>
+  </text>
   <text id="about-fsfe">Acerca de la FSFE</text>
   <text id="about-fsfe-intro">
-      <p>
+    <p>
         La Free Software Foundation Europe se dedica a promocionar el Software Libre
         y trabajar por la <strong>libertad</strong> en la
 sociedad digital emergente.
       </p>
-      <p>
+    <p>
         El acceso al software determina quién puede participar en una sociedad digital.
         Las libertades de <a href="/freesoftware/freesoftware.html">usar, estudiar, compartir
         y mejorar</a> el software permiten una participación <strong>equitativa</strong>,
         y son extremadamente importantes.
     </p>
   </text>
-
-
   <!-- Motivational texts for fellowship, support or donations -->
-
-
-
-
   <text id="support">Apoyar a la FSFE</text>
   <text id="show-support">¡Muestre su apoyo!</text>
   <text id="show-support-paragraph">¡La FSFE necesita su apoyo para que se oiga su voz! ¡Cada apoyo cuenta!</text>
   <text id="support-fsfe">¡Yo apoyo a la FSFE!</text>
   <text id="support-paragraph">La libertad en la sociedad de la información necesita tu contribución financiera.</text>
-
- <text id="donate">Donar</text>
- <text id="donate-paragraph">
+  <text id="donate">Donar</text>
+  <text id="donate-paragraph">
     La Free Software Foundation Europe es una organización no gubernamental sin ánimo de lucro. 
     <a href="/about/ourwork.html">Nuestro trabajo</a> es posible gracias a
     posible gracias a una comunidad de
@@ -192,33 +152,25 @@ sociedad digital emergente.
     fuerza y autonomía. Nos permiten seguir trabajando por el Software Libre
     donde sea necesario y ser una voz independiente.
  </text>
- 
   <!-- pdfreaders.org -->
   <text id="pdfreaders-head-readers">Los Lectores</text>
   <text id="pdfreaders-head-standards">Estándares Abiertos</text>
   <text id="pdfreaders-head-graphics">Gráficos</text>
   <text id="pdfreaders-head-about">Acerca de</text>
   <text id="pdfreaders-body-platforms">Plataformas:</text>
-
   <!-- Share and support buttons -->
   <text id="share-head">Compartir y apoyar</text>
   <text id="share-page">Compartir esta página en</text>
   <text id="share-microdonation">Dar un micro-donativo vía</text>
   <text id="share-warning">Algunos servicios pueden ser poco amigables con el Software Libre y hacer peligrar su privacidad.</text>
-
   <!-- Sponsoring buttons -->
   <text id="donation-buttons">Botones</text>
-
-
-
-
   <text id="size/huge">enorme</text>
   <text id="size/large">grande</text>
   <text id="size/medium">mediana</text>
   <text id="size/small">pequeña</text>
   <text id="background/white">Fondo blanco</text>
   <text id="background/transparent">Fondo transparente</text>
-
   <!-- Search function -->
   <text id="search">Buscar</text>
   <text id="search/placeholder">Buscar términos...</text>

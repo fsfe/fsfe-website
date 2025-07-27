@@ -1,38 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <html>
   <version>1</version>
-
   <head>
     <title>Vielen Dank für Ihre Bestellung!</title>
   </head>
-
   <body>
     <p id="category" class="p-category">
       <a href="/order/order.html">Fanartikel</a>
     </p>
-
     <h1>Vielen Dank für Ihre Bestellung!</h1>
-
     <p class="p-summary">
       Der Gesamtpreis Ihrer Bestellung beträgt <strong>€:AMOUNT:</strong>.
     </p>
-
     <p>
       Sie können jetzt online mit verschiedenen Kredit- und Debitkarten oder
       mit PayPal bezahlen.
     </p>
-
     <form action="https://secure.payengine.de/ncol/prod/orderstandard_utf8.asp" method="post" class="thankyou">
 :FORM:
       <input type="submit" name="submit" value="Online bezahlen"/>
     </form>
-
     <p>
       Falls Sie eine Bezahlung per Überweisung bevorzugen, verwenden Sie bitte
       folgende Daten:
     </p>
-
     <p>
       Empfänger: Free Software Foundation Europe e.V.<br/>
       Adresse: Revaler Straße 19, 10245 Berlin, Deutschland<br/>
@@ -43,7 +34,6 @@
       Verwendungszweck: :REFERENCE:
     </p>
   </body>
-
   <followup>join</followup>
 </html>
 <!--

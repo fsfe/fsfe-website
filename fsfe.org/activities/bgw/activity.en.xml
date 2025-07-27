@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <activityset>
   <version>1</version>
-
   <activity id="bgw" date="2003-02-17" status="finished">
     <title>Brave GNU World</title>
     <description>
@@ -13,10 +11,10 @@
       languages, making it probably the most widely distributed monthly column 
       in the world. 
     </description>
-    <link href="/activities/bgw/bgw.html" />
-    <order priority="1" />
+    <link href="/activities/bgw/bgw.html"/>
+    <order priority="1"/>
     <tags>
-      <tag key="awareness" />
+      <tag key="awareness"/>
     </tags>
   </activity>
 </activityset>

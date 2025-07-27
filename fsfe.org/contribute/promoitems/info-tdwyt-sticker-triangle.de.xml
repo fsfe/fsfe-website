@@ -1,7 +1,6 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <infoset>
   <version>1</version>
-
   <info id="tdwyt-sticker-triangle">
     <!-- Leave a tag like <printready> blank or erase it if you don't 
     want to appear it -->
@@ -15,15 +14,16 @@
     <size>7,4 x 5,2 cm</size>
     <context>They Dont Want You.To</context>
     <languages>
-		<a href="https://download.fsfe.org/advocacy/promomaterial/TDWYT/warning-triangle-translated-pre-print.pdf">Mehrsprachig</a>
+      <a href="https://download.fsfe.org/advocacy/promomaterial/TDWYT/warning-triangle-translated-pre-print.pdf">Mehrsprachig</a>
     </languages>
     <printed>
-		<a href="https://download.fsfe.org/advocacy/promomaterial/TDWYT/warning-triangle-translated-pre-print.pdf">Mehrsprachig</a>
+      <a href="https://download.fsfe.org/advocacy/promomaterial/TDWYT/warning-triangle-translated-pre-print.pdf">Mehrsprachig</a>
     </printed>
     <license>CC-BY-SA 4.0</license>
     <author>Free Software Foundation Europe</author>
-    <source><a href="https://download.fsfe.org/advocacy/promomaterial/TDWYT/sticker_not_included_warning_extended.svg">Mehrsprachig</a></source> 
-    <printready></printready>
+    <source>
+      <a href="https://download.fsfe.org/advocacy/promomaterial/TDWYT/sticker_not_included_warning_extended.svg">Mehrsprachig</a>
+    </source>
+    <printready/>
   </info>
-
 </infoset>

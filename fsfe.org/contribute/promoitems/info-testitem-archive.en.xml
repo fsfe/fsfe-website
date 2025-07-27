@@ -1,7 +1,6 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <infoset>
   <version>1</version>
-
   <info id="testitem-archive">
     <!-- Leave a tag like <printready> blank or erase it if you don't 
     want to appear it -->
@@ -13,17 +12,20 @@
     </description>
     <type>Poster</type>
     <size>2mm x 2mm</size>
-    <languages>
-      <a href="/index.html">Language 1</a>, <a href="https://test.fsfe.org">Language 2</a>, <a href="/index.html">Language 3</a>
+    <languages><a href="/index.html">Language 1</a>, <a href="https://test.fsfe.org">Language 2</a>, <a href="/index.html">Language 3</a>
     </languages>
-    <printed>
-      <a href="/index.html">Language 1</a>, <a href="https://test.fsfe.org">Language 2</a>
+    <printed><a href="/index.html">Language 1</a>, <a href="https://test.fsfe.org">Language 2</a>
     </printed>
-    <context><a href="/index.html">Nothing</a></context>
-    <source><a href="/index.html">English (SVG)</a></source> 
-    <printready><a href="/index.html">English (PDF)</a></printready>
+    <context>
+      <a href="/index.html">Nothing</a>
+    </context>
+    <source>
+      <a href="/index.html">English (SVG)</a>
+    </source>
+    <printready>
+      <a href="/index.html">English (PDF)</a>
+    </printready>
     <license>CC BY-SA 3.0</license>
     <author>Chief Inkscape</author>
   </info>
-
 </infoset>

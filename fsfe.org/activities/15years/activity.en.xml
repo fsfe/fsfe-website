@@ -1,8 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-
+<?xml version="1.0" encoding="UTF-8"?>
 <activityset>
   <version>1</version>
-
   <activity id="15years" date="2016-04-28" status="finished">
     <title>15 Years Anniversary</title>
     <description>
@@ -11,11 +9,11 @@
       veritable apocalypse for small and medium sized tech companies, and set 
       groundbreaking legal precedents for the whole of the EU.
     </description>
-    <link href="/activities/15years/15years.html" />
-    <order priority="1" />
+    <link href="/activities/15years/15years.html"/>
+    <order priority="1"/>
     <tags>
-      <tag key="awareness" />
-      <tag key= "hide" />
+      <tag key="awareness"/>
+      <tag key="hide"/>
     </tags>
   </activity>
 </activityset>

@@ -3,8 +3,8 @@
 <itemset>
   <version>1</version>
   <!-- <item type="other" id="magnet-nocloud-white" oldprice="4.00" price="2.00" date="2018-10-01"> -->
-    <!-- <available size="#"/> -->
-    <!-- <image small="data/pictures/magnet-nocloud-white-small.jpg" large="data/pictures/magnet-nocloud-white-large.jpg"/> -->
+  <!-- <available size="#"/> -->
+  <!-- <image small="data/pictures/magnet-nocloud-white-small.jpg" large="data/pictures/magnet-nocloud-white-large.jpg"/> -->
   <!-- </item> -->
   <item type="other" id="magnet-nocloud-blue" price="4.00" date="2018-10-01">
     <available size="#"/>
@@ -37,11 +37,11 @@
       large="data/pictures/tshirt-nocloud-black-back-large.jpg"/>
   </item -->
   <item type="tshirt" id="tshirt-hacking-4-freedom" price="25.00" date="2024-01-12">
-    <available size="XS"  a="48" b="68"/>
-    <available size="S"   a="50" b="70"/>
-    <available size="M"   a="53" b="70"/>
-    <available size="L"   a="57" b="72"/>
-    <available size="XL"  a="55" b="75"/>
+    <available size="XS" a="48" b="68"/>
+    <available size="S" a="50" b="70"/>
+    <available size="M" a="53" b="70"/>
+    <available size="L" a="57" b="72"/>
+    <available size="XL" a="55" b="75"/>
     <available size="XXL" a="57" b="77"/>
     <available size="3XL" a="65" b="79"/>
     <available size="4XL" a="70" b="82"/>
@@ -145,7 +145,7 @@
     <image small="data/pictures/slimfit-multilingual-blue-front-small.jpg" large="data/pictures/slimfit-multilingual-blue-front-large.jpg"/>
     <image small="data/pictures/slimfit-multilingual-blue-back-small.jpg" large="data/pictures/slimfit-multilingual-blue-back-large.jpg"/>
   </item -->
-<!--  <item type="other" id="baby-bib-black" price="15.00" date="2019-12-07">
+  <!--  <item type="other" id="baby-bib-black" price="15.00" date="2019-12-07">
     <available size="#"/>
     <image small="data/pictures/baby-bib-black-small.jpg" large="data/pictures/baby-bib-black-large.jpg"/>
   </item> //-->

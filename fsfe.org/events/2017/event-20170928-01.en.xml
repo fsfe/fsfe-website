@@ -1,28 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <eventset>
   <version>1</version>
-
-   
-	<event start="2017-09-28" end="2017-09-29"> 
- 
-		<title>The FSFE at the Copycamp in Warsaw, Poland</title> 
- 
-		<body> 
-			<p>Polina Malaja, our policy analyst and legal coordinator, gives a talk at CopyCamp in Warsaw, Poland, about the implications of the current EU Copyright Directive proposal for the collaborative software environment, and our campaign Save Code Share. Carmen Bakker and Erik Da Silva, current interns at the FSFE, give a talk about our Public Money Public Code campaign</p> 
-		</body> 
- 
-		<link>https://copycamp.pl/en/info/program/</link> 
- 
-
-		<tags>
-			<tag key="pl">Poland</tag>
-			<tag key="savecodeshare">SaveCodeShare</tag>
-			<tag key="talk">Talk</tag>
-			<tag key="pmpc">Public Money? Public Code!</tag>
-			<tag key="front-page"/>
-		</tags>
-
- 
-	</event> 
-</eventset> 
+  <event start="2017-09-28" end="2017-09-29">
+    <title>The FSFE at the Copycamp in Warsaw, Poland</title>
+    <body>
+      <p>Polina Malaja, our policy analyst and legal coordinator, gives a talk at CopyCamp in Warsaw, Poland, about the implications of the current EU Copyright Directive proposal for the collaborative software environment, and our campaign Save Code Share. Carmen Bakker and Erik Da Silva, current interns at the FSFE, give a talk about our Public Money Public Code campaign</p>
+    </body>
+    <link>https://copycamp.pl/en/info/program/</link>
+    <tags>
+      <tag key="pl">Poland</tag>
+      <tag key="savecodeshare">SaveCodeShare</tag>
+      <tag key="talk">Talk</tag>
+      <tag key="pmpc">Public Money? Public Code!</tag>
+      <tag key="front-page"/>
+    </tags>
+  </event>
+</eventset>

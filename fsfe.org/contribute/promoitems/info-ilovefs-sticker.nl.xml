@@ -1,7 +1,6 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <infoset>
   <version>1</version>
-
   <info id="ilovefs-sticker">
     <!-- Leave a tag like <printready> blank or erase it if you don't 
     want to appear it -->
@@ -13,7 +12,9 @@
     </description>
     <type>Sticker</type>
     <size>9 x 5 cm</size>
-    <context><a href="/activities/ilovefs/">I love Free Software-campagne</a></context>
+    <context>
+      <a href="/activities/ilovefs/">I love Free Software-campagne</a>
+    </context>
     <languages>
       <a href="https://download.fsfe.org/advocacy/promomaterial/IloveFS/IloveFS-sticker/ilovefs-sticker.en.pdf">Engels</a>
     </languages>
@@ -22,8 +23,9 @@
     </printed>
     <license>CC0</license>
     <author>Markus Meier</author>
-    <source><a href="https://download.fsfe.org/advocacy/promomaterial/IloveFS/IloveFS-sticker/">ilovefs-sticker* in download.fsfe.org</a></source> 
-    <printready></printready>
+    <source>
+      <a href="https://download.fsfe.org/advocacy/promomaterial/IloveFS/IloveFS-sticker/">ilovefs-sticker* in download.fsfe.org</a>
+    </source>
+    <printready/>
   </info>
-
 </infoset>

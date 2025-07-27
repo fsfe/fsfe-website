@@ -1,7 +1,6 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <infoset>
   <version>1</version>
-
   <info id="ilovefs-balloon">
     <!-- Leave a tag like <printready> blank or erase it if you don't 
     want to appear it -->
@@ -12,13 +11,16 @@
         Deel deze ballonnen uit op conferenties en feesten of versier uw lokale hackerspace! De ballonnen zijn aan beide kanten bedrukt.
     </description>
     <type>Ballon</type>
-    <context><a href="/activities/ilovefs">I love Free Software campagne</a></context>
+    <context>
+      <a href="/activities/ilovefs">I love Free Software campagne</a>
+    </context>
     <printed>
       Engels
     </printed>
-    <license><a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a></license>
+    <license>
+      <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a>
+    </license>
     <author>Markus Meier</author>
-    <printready></printready>
+    <printready/>
   </info>
-
 </infoset>

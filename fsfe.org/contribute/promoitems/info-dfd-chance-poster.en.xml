@@ -1,7 +1,6 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <infoset>
   <version>1</version>
-
   <info id="dfd-chance-poster">
     <!-- Leave a tag like <printready> blank or erase it if you don't 
     want to appear it -->
@@ -14,17 +13,21 @@
     </description>
     <type>Poster</type>
     <size>A2 (420 x 594 mm), A3 (297 x 420 mm)</size>
-    <context><a href="http://www.documentfreedom.org/">Document Freedom Day</a></context>
-    <languages>
-      <a href="https://download.fsfe.org/advocacy/promomaterial/DFD/dfd-robots-poster-a2.pdf" title="Open Standards make sense">A2 - Front in English - Back Multilingual</a>, <a href="https://download.fsfe.org/advocacy/promomaterial/DFD/dfd-robots-poster-a3.pdf" title="Open Standards make sense">A3 - Front in English - Back Multilingual</a>
+    <context>
+      <a href="http://www.documentfreedom.org/">Document Freedom Day</a>
+    </context>
+    <languages><a href="https://download.fsfe.org/advocacy/promomaterial/DFD/dfd-robots-poster-a2.pdf" title="Open Standards make sense">A2 - Front in English - Back Multilingual</a>, <a href="https://download.fsfe.org/advocacy/promomaterial/DFD/dfd-robots-poster-a3.pdf" title="Open Standards make sense">A3 - Front in English - Back Multilingual</a>
     </languages>
     <printed>
       A3 &amp; A2; one side English, other side multi-lingual.
     </printed>
-    <license><a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></license>
+    <license>
+      <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>
+    </license>
     <author>FSFE</author>
-    <source><a href="https://download.fsfe.org/advocacy/promomaterial/DFD/">dfd-robots-poster* in download.fsfe.org</a></source> 
-    <printready></printready>
+    <source>
+      <a href="https://download.fsfe.org/advocacy/promomaterial/DFD/">dfd-robots-poster* in download.fsfe.org</a>
+    </source>
+    <printready/>
   </info>
-
 </infoset>

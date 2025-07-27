@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <!--
   Please keep each list alphabetically ordered.  Emacs users want to set
   sort-fold-case to true and run sort-lines on a region.  Vi+ users can
@@ -12,10 +11,8 @@
   donor, so if you add a donor to a file of the new year, don't forget to
   remove the date="..." in the old year's file.
 -->
-
 <donorset>
   <version>1</version>
-
   <gold>
     <donor img="donors/google.png">Google</donor>
     <donor img="donors/intel.png">Intel</donor>
@@ -24,7 +21,6 @@
     <donor mark="yes">Reinhard Wiesemann</donor>
     <donor img="donors/siemens.png">Siemens</donor>
   </gold>
-
   <silver>
     <donor img="donors/silver-adfinis.png">Adfinis</donor>
     <donor img="donors/silver-avm.png">AVM</donor>
@@ -42,7 +38,6 @@
     <donor img="donors/silver-sysmocom.png">sysmocom - systems for mobile communications</donor>
     <donor date="2023-03-07">Thomas Etter</donor>
   </silver>
-
   <bronze>
     <donor date="2023-04-01">Andrew T. Wilson</donor>
     <donor>Arthur Schreiber</donor>
@@ -71,7 +66,8 @@
     <donor date="2023-05-31">inoio gmbh</donor>
     <donor>Joachim Zobel</donor>
     <donor date="2023-06-09">L² Transfinite Technologies asbl</donor>
-    <donor>LIHAS - LinuxHaus Stuttgart</donor><!-- Adrian Reyer -->
+    <donor>LIHAS - LinuxHaus Stuttgart</donor>
+    <!-- Adrian Reyer -->
     <donor date="2023-01-19">Marco van Hulten</donor>
     <donor>Martin F. Krafft</donor>
     <donor>Mateus Araujo Borges</donor>
@@ -81,14 +77,19 @@
     <donor date="2023-12-04">Michael Dittmer</donor>
     <donor>Moritz Bunkus</donor>
     <donor>Morten Lind</donor>
-    <donor>Neuhaus-IT</donor><!-- Till Neuhaus -->
-    <donor date="2023-07-27">Next Level Shit (-07)</donor><!-- Michael Czechowski -->
+    <donor>Neuhaus-IT</donor>
+    <!-- Till Neuhaus -->
+    <donor date="2023-07-27">Next Level Shit (-07)</donor>
+    <!-- Michael Czechowski -->
     <donor date="2023-01-11">Omnis Cloud</donor>
-    <donor>Port 4949</donor><!-- Matthias Schmitz -->
-    <donor>scvalex</donor><!-- Alexandru Scvortov -->
+    <donor>Port 4949</donor>
+    <!-- Matthias Schmitz -->
+    <donor>scvalex</donor>
+    <!-- Alexandru Scvortov -->
     <donor>Simon Josefsson</donor>
     <donor date="2023-06-07">Stephan Kreutzer (-06)</donor>
-    <donor>Stichting Petities.nl</donor><!-- ReindeR Rustema -->
+    <donor>Stichting Petities.nl</donor>
+    <!-- ReindeR Rustema -->
     <donor date="2023-12-03">Syslinbit</donor>
     <donor date="2023-03-14">Tegonal Genossenschaft</donor>
     <donor>Timo Wagner</donor>

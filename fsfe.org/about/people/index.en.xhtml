@@ -1,68 +1,56 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <!-- To add avatar images or members, edit the file: /about/people/people.en.xml -->
 <html>
   <version>3</version>
-
   <head>
     <title>About Free Software Foundation Europe - Team</title>
-    <script src="/scripts/filter-teams.js" />
+    <script src="/scripts/filter-teams.js"/>
   </head>
-
   <body>
-    <p id="category"><a href="/about/">About</a></p>
+    <p id="category">
+      <a href="/about/">About</a>
+    </p>
     <h1>The FSFE Team</h1>
-
     <p>
       These people are working for and with the FSFE on a regular basis,
       so they have been given permanent responsibilities and authorities for
       certain areas.
     </p>
-
     <div id="show-people">
-        <h2 id="council">Executive Council</h2>
-        <p>
+      <h2 id="council">Executive Council</h2>
+      <p>
           The Executive Council is responsible for larger budgeting questions and the
           implementation of strategic guidelines.
         </p>
-
-        <council-members />
-
-        <h2 id="core">Central teams</h2>
-        <p>
+      <council-members/>
+      <h2 id="core">Central teams</h2>
+      <p>
           Here you can find people working on day to day tasks of the
           organisation on a voluntary or paid basis around core issues, as well
           as the members of the <a href="/about/legal/legal.html">legal
           association</a>. You can either see everyone working in these groups,
           or see a selection.
         </p>
-
-        <div class="filter-teams">
-          <label class="radio-inline">
-            <input name="filter-teams" type="radio" onclick="selectAllTeams()" checked="" />All
+      <div class="filter-teams">
+        <label class="radio-inline"><input name="filter-teams" type="radio" onclick="selectAllTeams()" checked=""/>All
           </label>
-          <label class="radio-inline">
-            <input name="filter-teams" type="radio" onclick="selectTeam('core')" />European Core Team
+        <label class="radio-inline"><input name="filter-teams" type="radio" onclick="selectTeam('core')"/>European Core Team
           </label>
-          <label class="radio-inline">
-            <input name="filter-teams" type="radio" onclick="selectTeam('ga')" />General Assembly
+        <label class="radio-inline"><input name="filter-teams" type="radio" onclick="selectTeam('ga')"/>General Assembly
           </label>
-          <label class="radio-inline">
-            <input name="filter-teams" type="radio" onclick="selectTeam('employee')" />Employees/Contractors
+        <label class="radio-inline"><input name="filter-teams" type="radio" onclick="selectTeam('employee')"/>Employees/Contractors
           </label>
-        </div>
-        <noscript>
-          <div class="alert alert-warning" role="alert">This feature requires our <a href="/about/js-licences.html">Free Software JavaScript</a> to be activated.</div>
-        </noscript>
-
-        <core-members />
-
-        <h2>Local Teams</h2>
-        <p>Are you looking for a local contact to get active, or just to learn
+      </div>
+      <noscript>
+        <div class="alert alert-warning" role="alert">This feature requires our <a href="/about/js-licences.html">Free Software JavaScript</a> to be activated.</div>
+      </noscript>
+      <core-members/>
+      <h2>Local Teams</h2>
+      <p>Are you looking for a local contact to get active, or just to learn
         more about Free Software and the FSFE? In more and more European cities,
         local FSFE groups form to make a difference. To see if there is already
         a group in your area, please visit our
         <a href="/about/groups.html">local groups overview</a>.</p>
-
     </div>
   </body>
   <followup>join</followup>

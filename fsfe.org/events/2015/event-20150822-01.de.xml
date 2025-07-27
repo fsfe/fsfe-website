@@ -1,26 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <eventset>
   <version>1</version>
-
-   
-	<event start="2015-08-22" end="2015-08-23"> 
- 
-		<title>FrOSCon 10 in St. Augustin, Deutschland</title> 
- 
-		<body> 
-			<p>FrOSCon ist eine Freie Software Konferenz, veranstaltet vom Fachbereich Informatik der Hochschule Bonn-Rhein-Sieg mit Hilfe der LUUSA und des FrOSCon e.V. Geboten wird ein spannendes Programm mit Vorträgen und Workshops für Besucher aller Altersklassen, die Freie Software nutzen, kennenlernen wollen oder selbst entwickeln. Die FSFE wird mit einem Stand vor Ort sein und freut sich über interessierte Besucher. </p> 
-		</body> 
- 
-		<link>http://www.froscon.de/</link> 
- 
-
-		<tags>
-			<tag key="de">Deutschland</tag>
-			<tag key="infobooth">Informationsstand</tag>
-			<tag key="front-page"/>
-		</tags>
-
- 
-	</event> 
-</eventset> 
+  <event start="2015-08-22" end="2015-08-23">
+    <title>FrOSCon 10 in St. Augustin, Deutschland</title>
+    <body>
+      <p>FrOSCon ist eine Freie Software Konferenz, veranstaltet vom Fachbereich Informatik der Hochschule Bonn-Rhein-Sieg mit Hilfe der LUUSA und des FrOSCon e.V. Geboten wird ein spannendes Programm mit Vorträgen und Workshops für Besucher aller Altersklassen, die Freie Software nutzen, kennenlernen wollen oder selbst entwickeln. Die FSFE wird mit einem Stand vor Ort sein und freut sich über interessierte Besucher. </p>
+    </body>
+    <link>http://www.froscon.de/</link>
+    <tags>
+      <tag key="de">Deutschland</tag>
+      <tag key="infobooth">Informationsstand</tag>
+      <tag key="front-page"/>
+    </tags>
+  </event>
+</eventset>

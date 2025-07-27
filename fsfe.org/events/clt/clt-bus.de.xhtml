@@ -1,96 +1,82 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-
+<?xml version="1.0" encoding="UTF-8"?>
 <html>
   <version>1</version>
-
   <head>
     <title>Chemnitzer LinuxTag - Bus reservierung</title>
-    <link href="/style/grid.css" rel="stylesheet" />
+    <link href="/style/grid.css" rel="stylesheet"/>
   </head>
-
   <body>
-  
     <h1>
       CLT 2012
       <br/>
       Reservierung für den Bus nach Chemnitz
     </h1>
-
     <p>
     Anmeldungen möglich bis <b>10.03.2012</b>.
     </p>
-
     <p>
     Wenn Du im Bus von Düsseldorf, Essen, Soest oder Haaren nach Chemnitz (via Essen, Soest und Haaren) mitfahren möchtest, dann melde Dich bitte über nachstehendes Formular an.</p>
-
     <p>
     Die erhobenen Daten werden nicht weitergegeben. 
     Sie werden für die Kontaktaufnahme im Rahmen der Busfahrt genutzt. 
     Wir werden Deinen Namen und Deine E-Mail-Adresse jedoch speichern, um Dich ggf. im nächsten Jahr über den Bus zu den CLT 2013 zu informieren.
     </p>
-
     <p>
     Die Busfahrt kostet hin und zurück <b>70,- €</b> pro Person.
     </p>
-
     <form action="/cgi-bin/clt-bus.pl" method="post">
-    <table>
-      <tbody><tr>
-        <td>
+      <table>
+        <tbody>
+          <tr>
+            <td>
           Vorname
-          <br /><small>Pflichtangabe</small>
+          <br/><small>Pflichtangabe</small>
         </td>
-        <td>
-          <input size="35" name="first_name" type="text"/>
-        </td>
-      </tr>
-
-      <tr>
-        <td>
+            <td>
+              <input size="35" name="first_name" type="text"/>
+            </td>
+          </tr>
+          <tr>
+            <td>
           Nachname
-          <br /><small>Pflichtangabe</small>
+          <br/><small>Pflichtangabe</small>
         </td>
-        <td>
-          <input size="35" name="family_name" type="text"/>
-        </td>
-      </tr>
-      
-      <tr>
-        <td>
+            <td>
+              <input size="35" name="family_name" type="text"/>
+            </td>
+          </tr>
+          <tr>
+            <td>
           Fellowship Nr.
         </td>
-        <td>
-          <input size="5" name="fellowship_no" type="text"/>
-        </td>
-      </tr>
-
-      <tr>
-        <td>
+            <td>
+              <input size="5" name="fellowship_no" type="text"/>
+            </td>
+          </tr>
+          <tr>
+            <td>
           Mobilfunknummer
-          <br /><small>Pflichtangabe</small>
+          <br/><small>Pflichtangabe</small>
         </td>
-        <td>
-          <input size="35" name="tel_gsm" type="text"/>
-        </td>
-      </tr>
-
-      <tr>
-        <td>
+            <td>
+              <input size="35" name="tel_gsm" type="text"/>
+            </td>
+          </tr>
+          <tr>
+            <td>
           E-Mail-Adresse
-          <br /><small>Pflichtangabe</small>
+          <br/><small>Pflichtangabe</small>
         </td>
-        <td>
-          <input size="35" name="email" type="text"/>
-        </td>
-      </tr>
-
-      <tr>
-        <td>
+            <td>
+              <input size="35" name="email" type="text"/>
+            </td>
+          </tr>
+          <tr>
+            <td>
           Einstiegsort:
-          <br /><small>Pflichtangabe</small>
+          <br/><small>Pflichtangabe</small>
         </td>
-        <td>
-          <input name="station" value="Duesseldorf-Staufenplatz" type="radio" checked="checked"/>
+            <td><input name="station" value="Duesseldorf-Staufenplatz" type="radio" checked="checked"/>
             Düsseldorf, Staufenplatz<a href="http://www.openstreetmap.org/?mlat=51.24268&amp;mlon=6.82947&amp;zoom=16&amp;layers=M" target="_blank">(Karte bei OpenStreetMap)</a>
           <br/>
           <input name="station" value="Duesseldorf-FSFE" type="radio"/>
@@ -106,37 +92,32 @@
             Haaren, P&amp;R-Parkplatz Bürener Straße/B480 <a href="http://www.openstreetmap.org/?mlat=51.562108&amp;mlon=8.715476&amp;zoom=15&amp;layers=M" target="_blank">(Karte bei OpenStreetMap)</a>
           <br/>
         </td>
-      </tr>
-
-      <tr>
-        <td>
+          </tr>
+          <tr>
+            <td>
           Ich brauche eine Rechnung für meine Firma. <em>Vollständige</em> Rechnungsadresse:
         </td>
-        <td>
-          <textarea cols="35" rows="5" name="invoice_address"></textarea>
-        </td>
-      </tr>
-
-      <tr>
-        <td colspan="2">
+            <td>
+              <textarea cols="35" rows="5" name="invoice_address"/>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2">
           Fragen? Anregungen? Kommentare?
           <br/>
-          <textarea cols="60" rows="5" name="comment"></textarea>
+          <textarea cols="60" rows="5" name="comment"/>
         </td>
-      </tr>
-    </tbody></table>
-    <input name="send" value="Daten absenden" type="submit"/>
+          </tr>
+        </tbody>
+      </table>
+      <input name="send" value="Daten absenden" type="submit"/>
     </form>
-
     <h3>Wie geht es weiter?</h3>
-
     <p>
     Du erhältst eine E-Mail mit den Zahlungsinformationen. 
     Sobald der Geldeingang verbucht ist, gilt Deine Anmeldung als bestätigt.
     </p>
-    
   </body>
-
 </html>
 <!--
 Local Variables: ***

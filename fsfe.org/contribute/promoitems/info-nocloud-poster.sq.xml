@@ -1,7 +1,6 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <infoset>
   <version>1</version>
-
   <info id="nocloud-poster">
     <!-- Leave a tag like <printready> blank or erase it if you don't 
     want to appear it -->
@@ -13,17 +12,18 @@
     </description>
     <type>Afishe</type>
     <size>A2 (42 x 59,4 cm)</size>
-    <context></context>
+    <context/>
     <languages>
-		<a href="https://download.fsfe.org/advocacy/promomaterial/NoCloud/NoCloud-poster/thereisnocloud-poster-A2.en.pdf">Anglisht</a>
+      <a href="https://download.fsfe.org/advocacy/promomaterial/NoCloud/NoCloud-poster/thereisnocloud-poster-A2.en.pdf">Anglisht</a>
     </languages>
     <printed>
       Anglisht
     </printed>
     <license>CC-BY-SA</license>
     <author>Markus Meier</author>
-    <source><a href="https://download.fsfe.org/advocacy/promomaterial/NoCloud/NoCloud-poster/">nocloud-poster* in download.fsfe.org</a></source> 
-    <printready></printready>
+    <source>
+      <a href="https://download.fsfe.org/advocacy/promomaterial/NoCloud/NoCloud-poster/">nocloud-poster* in download.fsfe.org</a>
+    </source>
+    <printready/>
   </info>
-
 </infoset>

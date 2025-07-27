@@ -1,7 +1,6 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <infoset>
   <version>1</version>
-
   <info id="ilovefs-flyer">
     <!-- Leave a tag like <printready> blank or erase it if you don't 
     want to appear it -->
@@ -13,7 +12,9 @@
     </description>
     <type>Informatievel</type>
     <size>A7 (7,4 x 10,5 cm)</size>
-    <context><a href="/activities/ilovefs/">I love Free Software</a></context>
+    <context>
+      <a href="/activities/ilovefs/">I love Free Software</a>
+    </context>
     <languages>
       <a href="https://download.fsfe.org/advocacy/promomaterial/IloveFS/IloveFS-flyer/ilovefs-flyer-A7.en.pdf">Engels</a>
     </languages>
@@ -22,8 +23,9 @@
     </printed>
     <license>CC0</license>
     <author>Markus Meier</author>
-    <source><a href="https://download.fsfe.org/advocacy/promomaterial/IloveFS/IloveFS-flyer/">ilovefs-flyer* in download.fsfe.org</a></source> 
-    <printready></printready>
+    <source>
+      <a href="https://download.fsfe.org/advocacy/promomaterial/IloveFS/IloveFS-flyer/">ilovefs-flyer* in download.fsfe.org</a>
+    </source>
+    <printready/>
   </info>
-
 </infoset>

@@ -1,35 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<data>
-  <version>1</version>
-
-
-<!-- ALL STATIC TEXTS -->
-
-  <!-- Spreadtheword page -->
-  <text id="stw-type">Typ</text>
-  <text id="stw-size">Wymiary</text>
-  <text id="stw-context">Kontekst</text>
-  <text id="stw-printed"><a href="#how-to-order">Zamów</a> w języku</text>
-  <text id="stw-printed-tooltip">Możesz zamówić darmowe wydruki korzystając z formularza.</text>
-  <text id="stw-languages">Dostępne w formatach</text>
-  <text id="stw-languages-tooltip">Jeśli chcesz rozsyłać nasze materiały online, śmiało ściągnij je w dowolnym, interesującym Cię, języku.</text>
-  <text id="stw-license">Licencja</text>
-  <text id="stw-author">Autor</text>
-  <text id="stw-year">Rok</text>
-  <text id="stw-source">Pliki źródłowe</text>
-  <text id="stw-source-tooltip">Możesz pobrać pliki źródłowe materiałów promocyjnych aby je modyfikować bądź tłumaczyć. Proszę, zważ jednak na ich licencję.</text>
-  <text id="stw-printready">Pliki gotowe do druku</text>
-  <text id="stw-printready-tooltip">Pliki które wysyłamy do druku, włącznie z zadrukiem i innymi specyficznymi ustawieniami dla drukarki. Te pliki mogą być bardzo duże (~5-25MB).</text>
-
-  <!-- Basic texts -->
-  <text id="fsfeurope">Free Software Foundation Europe</text>
-  <text id="fsfnetwork">
+<data><version>1</version><!-- ALL STATIC TEXTS --><!-- Spreadtheword page --><text id="stw-type">Typ</text><text id="stw-size">Wymiary</text><text id="stw-context">Kontekst</text><text id="stw-printed"><a href="#how-to-order">Zamów</a> w języku</text><text id="stw-printed-tooltip">Możesz zamówić darmowe wydruki korzystając z formularza.</text><text id="stw-languages">Dostępne w formatach</text><text id="stw-languages-tooltip">Jeśli chcesz rozsyłać nasze materiały online, śmiało ściągnij je w dowolnym, interesującym Cię, języku.</text><text id="stw-license">Licencja</text><text id="stw-author">Autor</text><text id="stw-year">Rok</text><text id="stw-source">Pliki źródłowe</text><text id="stw-source-tooltip">Możesz pobrać pliki źródłowe materiałów promocyjnych aby je modyfikować bądź tłumaczyć. Proszę, zważ jednak na ich licencję.</text><text id="stw-printready">Pliki gotowe do druku</text><text id="stw-printready-tooltip">Pliki które wysyłamy do druku, włącznie z zadrukiem i innymi specyficznymi ustawieniami dla drukarki. Te pliki mogą być bardzo duże (~5-25MB).</text><!-- Basic texts --><text id="fsfeurope">Free Software Foundation Europe</text><text id="fsfnetwork">
     FSFE ma <a href="/about/fsfnetwork.html">organizacje bliźniacze</a> w <a href="//www.fsf.org/">Ameryce Północnej</a>, <a href="http://fsf.org.in/">Indiach</a> oraz <a href="http://www.fsfla.org/">Ameryce Południowej</a>.
-  </text>
-
-
-  <!-- Footer -->
-  <text id="translator1a">Autorem tłumaczenia jest </text>;
+  </text><!-- Footer --><text id="translator1a">Autorem tłumaczenia jest </text>;
   <text id="translator1b">, dziękujemy za to nieoficjalne tłumaczenie. </text>
   <text id="translator2">Ten dokument to nieoficjalne tłumaczenie.</text>
   <text id="translator3a">Prosimy odwołać się do </text>
@@ -55,8 +27,7 @@
 	dowiesz się, jak można
 	pomóc w tłumaczeniu lub w inny sposób.
   </text>
-    <text id="under-construction">
-    <strong>Uwaga: </strong>Ta strona jest dopiero tworzona. Proszę <strong>nie udostępniaj jej</strong> ani nie staraj sie jej tłumaczyć - jej zawartość może ulec zmianie.
+    <text id="under-construction"><strong>Uwaga: </strong>Ta strona jest dopiero tworzona. Proszę <strong>nie udostępniaj jej</strong> ani nie staraj sie jej tłumaczyć - jej zawartość może ulec zmianie.
   </text>
     <text id="project-complete">Ten projekt już się pomyślnie zakończył. Strony są utrzymywane celem archiwizacji.  </text>
 
@@ -137,25 +108,20 @@
 
   <!-- Sidebars -->
   <text id="our-work">Nasza praca</text>
-  <text id="our-work-intro">
-    <p>Jako organizacja pozarządowa, non-profit, Free Software Foundation Europe skupia swoje działanie
+  <text id="our-work-intro"><p>Jako organizacja pozarządowa, non-profit, Free Software Foundation Europe skupia swoje działanie
     na stworzenie ogólnego zrozumienia istoty Wolnego Oprogramowania, wsparcia dla niego i Otwartych
-    Standardów w polityce, biznesie, prawie i społeczeństwie w ogóle.</p>
-  </text>
+    Standardów w polityce, biznesie, prawie i społeczeństwie w ogóle.</p></text>
   <text id="about-fsfe">O FSFE</text>
-  <text id="about-fsfe-intro">
-    <p>
+  <text id="about-fsfe-intro"><p>
       Free Software Foundation Europe jest organizacją charytatywną, która walczy o prawa użytkowników w 
     kontrolowaniu technologii.
-    </p>
-    <p>
+    </p><p>
       Oprogramowanie jest ściśle powiązane z każdym aspektem naszego życia. To ważne, aby technologia nas
     wspomagała, a nie ograniczała. Wolne Oprogramowanie daje każdemu prawo do użytkowania, wglądu,
     dopasowania do siebie i dzielenia się oprogramowaniem (w zmienionej wersji). Takie przywileje
     pozwalają zachować inne fundamentalne prawa jak prawo wolności głosu, wolności
     prasy i prywatności.
-    </p>
-  </text>
+    </p></text>
 
 
   <!-- Motivational texts for fellowship, support or donations -->

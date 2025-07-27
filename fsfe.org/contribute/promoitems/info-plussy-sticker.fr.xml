@@ -1,35 +1,31 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <infoset>
   <version>1</version>
-
   <info id="plussy-sticker">
     <!-- Leave a tag like <printready> blank or erase it if you don't 
     want to appear it -->
     <!-- Translations for "Type", "Size" etc. can be found in 
     /tools/texts-**.xml -->
     <name>Autocollant Plussy</name>
-
     <description>
 		Les Autocollants Plussy classiques, le symbole de notre communauté. Avec un fond transparent, cet autocollant s'intègre dans n'importe quel environnement - et pas seulement sur les ordinateurs portables.
     </description>
-
     <type>Autocollant</type>
     <size>Grand (74 x 74 mm) et petit (52 x 52 mm)</size>
-    <context><a href="https://my.fsfe.org/donate">Rejoignez la FSFE</a></context> 
-    <context></context>
-    <languages>
-      <a href="https://download.fsfe.org/advocacy/promomaterial/FSFE/PlussySticker/FSFE-plussy_72x72_v2.sla">SLA</a>, <a href="https://download.fsfe.org/advocacy/promomaterial/FSFE/PlussySticker/FSFE-plussy.png">PNG</a>, <a href="https://download.fsfe.org/advocacy/promomaterial/FSFE/PlussySticker/FSFE-plussy_72x72_v2.pdf">PDF</a>, <a href="https://download.fsfe.org/advocacy/promomaterial/FSFE/PlussySticker/FSFE-plussy.svg">SVG</a>
+    <context>
+      <a href="https://my.fsfe.org/donate">Rejoignez la FSFE</a>
+    </context>
+    <context/>
+    <languages><a href="https://download.fsfe.org/advocacy/promomaterial/FSFE/PlussySticker/FSFE-plussy_72x72_v2.sla">SLA</a>, <a href="https://download.fsfe.org/advocacy/promomaterial/FSFE/PlussySticker/FSFE-plussy.png">PNG</a>, <a href="https://download.fsfe.org/advocacy/promomaterial/FSFE/PlussySticker/FSFE-plussy_72x72_v2.pdf">PDF</a>, <a href="https://download.fsfe.org/advocacy/promomaterial/FSFE/PlussySticker/FSFE-plussy.svg">SVG</a>
     </languages>
     <printed>
       Universel
     </printed>
     <license>Le logo de la Fellowship (et ses variantes) peut être utilisé pour faire de publicité sur la communauté de la FSFE ou pour n'importe quelles activitées liées aux Logiciels Libres par des membres de la communauté de la FSFE. Toutefois, si vous n'avez pas de mandat de la FSFE, nous vous demandons de ne pas donner l'impression que vous parlez de manière officielle pour la FSFE, de sorte à ne pas donner l'impression que la FSFE approuve ce que vous faites.</license>
-    
-
     <author>Free Software Foundation Europe</author>
     <source>
-        <a href="https://download.fsfe.org/advocacy/promomaterial/FSFE/PlussySticker/" title="Plussy sticker sources">Plussy* in download.fsfe.org</a></source> 
-    <printready></printready>
+      <a href="https://download.fsfe.org/advocacy/promomaterial/FSFE/PlussySticker/" title="Plussy sticker sources">Plussy* in download.fsfe.org</a>
+    </source>
+    <printready/>
   </info>
-
 </infoset>

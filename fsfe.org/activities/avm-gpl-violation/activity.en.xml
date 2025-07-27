@@ -1,8 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-
+<?xml version="1.0" encoding="UTF-8"?>
 <activityset>
   <version>1</version>
-
   <activity id="avm-gpl-violation" date="2010-01-01" status="finished">
     <title>AVM GPL violation</title>
     <description>
@@ -14,10 +12,10 @@
       this licence can be freely modified and installed, even if it is supplied 
       as part of the firmware of an embedded device. 
     </description>
-    <link href="/activities/avm-gpl-violation/avm-gpl-violation.html" />
-    <order priority="1" />
+    <link href="/activities/avm-gpl-violation/avm-gpl-violation.html"/>
+    <order priority="1"/>
     <tags>
-      <tag key="legal" />
+      <tag key="legal"/>
     </tags>
   </activity>
 </activityset>

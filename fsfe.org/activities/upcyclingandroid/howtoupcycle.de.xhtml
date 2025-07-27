@@ -1,158 +1,91 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-
+<?xml version="1.0" encoding="UTF-8"?>
 <html>
-<version>2</version>
-
-<head>
-  <title>Upcycling Android - Wie du dein Handy upcyceln kannst</title>
-</head>
-
-<body class="toplevel upcycling-android">
-
-
-  <div class="color-box background fullwidth top" data-color="android-blue">
-    <div class="fullwidth-content">
-      <div class="android-logo">
-        <a href="/activities/upcyclingandroid/">
-          <img id="head" src="/graphics/upcycling-android-head.png" />
-          <img id="text" src="/graphics/upcycling-android-text.png" />
-        </a>
-      </div>
-      <p>
+  <version>2</version>
+  <head>
+    <title>Upcycling Android - Wie du dein Handy upcyceln kannst</title>
+  </head>
+  <body class="toplevel upcycling-android">
+    <div class="color-box background fullwidth top" data-color="android-blue">
+      <div class="fullwidth-content">
+        <div class="android-logo">
+          <a href="/activities/upcyclingandroid/">
+            <img id="head" src="/graphics/upcycling-android-head.png"/>
+            <img id="text" src="/graphics/upcycling-android-text.png"/>
+          </a>
+        </div>
+        <p>
         Wie du dein Telefon selbst upcyceln kannst.
       </p>
+      </div>
     </div>
- </div>
-
-
-  <h2 class="painted">Warum "Upcycling"?</h2>
-
-  <p>Du hast ein Android-Telefon, für das du keine Updates mehr bekommst? Du stehst damit vor dem Dilemma, entweder ein neues Telefon zu kaufen oder ein veraltetes Gerät weiter zu benutzen? Auf dieser Seite erfährst du, <strong>wie du ein Freie-Software-Betriebssystem auf deinem Telefon installieren und nutzen kannst</strong>. Das hilft dir dabei dein Gerät wieder auf dem neuesten Stand zu halten.</p>
-
-  <p>Die Installation eines Freie-Software-Betriebssystems bedeutet, dass du in der Regel mehr Kontrolle darüber hast, wie lange du dein Gerät nutzen kannst. Außerdem bringt es eine Menge anderer Vorteile mit sich. <strong>Freie Software gibt dir die volle Kontrolle über dein Gerät</strong>, du kannst endlich all die Apps deinstallieren, die du vorher nicht deinstallieren konntest, und du profitierst von einem erweiterten Datenschutz - um nur einige Beispiele zu nennen.</p>
-
-  
-
-  <figure>
-    <img src="https://pics.fsfe.org/uploads/medium/2bfdce1e6c07874bf551ef0115f6dc57.png" alt="Dies ist ein Screenshot aus dem UA-Kampagnenvideo, der alle Vorteile des Telefonflashens in einem zeigt" />
-    <figcaption>Mach mit! Hilf der Umwelt, spare Geld und nutze Freie Software als Werkzeug für Selbstbestimmung, gegen Verschwendung und Obsoleszenz.</figcaption>
-  </figure>
-
-  <p>Bitte beachte: Sei erstmal vorsichtig, wenn du neu auf dem Gebiet bist und zum ersten Mal ein neues Betriebssystem auf deinem Gerät installierst! Überstürze nichts. Einige Schritte könnten kompliziert sein. Nimm dir die Zeit, um zu verstehen, was du tust. Triff die notwendigen Vorbereitungen und recherchiere im Voraus, was eventuell speziell für dein Gerät zu beachten ist. Und denke daran, dass du nicht allein bist! Es gibt jede Menge Informationen und Hilfe von verschiedenen Communities. Online und offline. Dabei kann es sich sowohl um Communities handeln, die sich mit ganz bestimmten Betriebssystemen beschäftigen, oder um Communities, die sich mit dem flashen von Telefonen im Allgemeinen beschäftigen. Viele Menschen holen sich auch gerne Hilfe bei einer lokalen Freie-Software-User-Gruppe oder einem Repair Café. Außerdem bieten wir <a href="/activities/upcyclingandroid/workshops.html">Workshops</a> an, um dir dabei zu helfen. </p>
-
-  <h2 class="painted">Wie funktioniert es?</h2>
-
-  <p>Um die volle Kontrolle über dein Gerät zurückzugewinnen und dessen Nutzungsdauer zu verlängern, kannst du ein Freie-Software-Betriebssystem installieren. Das Installieren eines Betriebssystems auf einem Android-Gerät wird "flashen" genannt. Du kannst dir aussuchen ein <a href="#gnulinux">komplettes GNU/Linux System</a> zu installieren oder ein alternatives Freie-Software-Betriebssystem welches auf dem ursprünglichen Android-Betriebssystem basiert, ein sogenanntes <a href="#customrom">"Custom-ROM"</a>.</p>
-
-  <h3 id="gnulinux">Über GNU/Linux-Systeme</h3>
-
-  <p>Bei GNU/Linux-Betriebssystemen steht Nutzerfreiheit üblicherweise an erster Stelle, ihre Entwicklung ist zudem völlig abgetrennt von dem von Google dominierten Android-Ökosystem. Und noch besser, die Codeentwicklung hängt auch von keinem anderen einzelnen Unternehmen ab: GNU/Linux-Systeme werden auf transparente Weise von großen Gemeinschaften auf der ganzen Welt gemeinsam entwickelt, ohne dass dabei ein einzelner Akteur die gesamte Kontrolle inne hätte. Code-Änderungen können von Menschen auf der ganzen Welt vorgeschlagen werden, und jede davon akzeptierte Änderung ist für alle direkt sichtbar. Viele Entwicklerinnen und Entwickler bemühen sich innerhalb dieses Ökosystems die Abwärtskompatibilität von Änderungen zu garantieren. Weshalb, wenn du ein GNU/Linux-Betriebssystem verwendest, du üblicherweise von einer langjährigen Unterstützung des Betriebssystems profitierst.</p>
-
-  <p>Wenn du dich für ein GNU/Linux-System für dein Telefon entscheidest, werden einige verfügbare Apps anders sein als Du es vielleicht bisher gewohnt bist. Das könnte sich allerdings in Zukunft ändern, da immer mehr GNU/Linux-basierte Betriebssysteme auf den Markt kommen. Du kannst dir auch mit <a href="https://waydro.id/">Software von Drittanbietern behelfen</a>, um native Android-Apps auf GNU/Linux-Systemen zum laufen zu bekommen oder umgekehrt. Doch je mehr Android-Apps Du auf diese Weise überbrückst und in deinem sonst freien GNU/Linux-Betriebssystem verwendest, desto mehr leidest Du wieder unter den Einschränkungen aus der Android-Welt. Das Festhalten an nativen GNU/Linux-Apps auf deinem System wiederum bedeutet üblicherweise, von der Verwendung Freier Software und offener Standards zu profitieren. Und da mehr und mehr GNU/Linux-Systeme auf Mobiltelefonen in Erscheinung treten, werden die zugehörigen Märkte und Entwicklungen voraussichtlich weiter wachsen.</p>
-
-  <h4>Auswahl eines GNU/Linux-Systems</h4>
-
-  <p>Zu den bekannteren Namen gehören <a href="https://postmarketos.org/">Postmarket OS</a>, <a href="https://plasma-mobile.org/">Plasma Mobile </a>, <a href="https://ubuntu-touch.io/">Ubuntu Touch</a> und <a href="https://www.pureos.net/">PureOS</a >. Und wenn Du Spaß an Abwechslung und Experimentieren hast, stehen Dir noch viele weitere Möglichkeiten offen. Das PinePhone-Wiki zum Beispiel <a href="https://wiki.pine64.org/wiki/PinePhone_Software_Releases">listet derzeit 21 verschiedene verfügbare Freie Software-Betriebssysteme</a> auf, die auf dem PinePhone ausgeführt werden können. Und eine wachsende Zahl von Unternehmen bietet inzwischen vorinstallierte GNU/Linux-Systeme auf ausgewählten Telefonen an, einschließlich einer genau zugeschnittenen App-Umgebung. </p>
-
-  <p>Da die Entwicklung in diesem Bereich schnell voranschreitet, können wir keinen Support anbieten oder eine offizielle Liste möglicher Lösungen führen. Stattdessen bieten wir unserer Community eine <a href="https://wiki.fsfe.org/Activities/Android/OtherInitiatives">Wiki-Seite</a> an, um Informationen zu Betriebssystemen und vorinstallierten Telefonen jenseits von Android zu sammeln und sich auszutauschen.</p>
-
-  <h3 id="customrom">Über Custom-ROMs</h3> 
-
-  <p>Jedes Mal, wenn eine neue Android-Version veröffentlicht wird, gibt es mehrere Unternehmen und Communities, die den Release-Code nutzen und ihn in modifizierten Versionen als Custom-ROM neu veröffentlichen. Das ist möglich, weil große Teile des Android-Betriebssystems - mit Ausnahme von Drittanbieter-Apps, der G-Suite und einigen Kernbibliotheken - bereits Freie Software sind. In der Praxis bieten diese Custom-ROMs in der Regel ein komplettes Android-Erlebnis, jedoch ohne die Abhängigkeiten zu Google oder der proprietären Software anderer Unternehmen. Und ohne weitere proprietäre Apps von Drittanbietern, die du beim Kauf eines neuen Telefons vielleicht schon vorinstalliert hast. Das bedeutet, dass diese Custom-Roms meist weniger Ressourcen benötigen und dadurch schneller und flüssiger laufen.</p>
-
-  <h4>Auswahl eines Custom-ROMs</h4>
-
-  <p>Es gibt es viele verschiedene Custom-ROMs zur Auswahl. Einige von ihnen sind näher am ursprünglichen Android, andere sind weiter davon entfernt. Manche enthalten mehr Freie-Software-Komponenten oder vorinstallierte Apps als andere. Bei einigen liegt der Schwerpunkt auf Sicherheit, bei anderen auf Benutzerfreundlichkeit, bei wieder anderen auf Modularität. Die Anzahl der Custom ROMs, aus denen du wählen kannst, kann am Anfang verwirrend sein. Aber am Ende wird die Auswahl durch dein Telefonmodell und die Art des gewünschten Systems begrenzt, so dass sie sich auf eine überschaubare Anzahl reduziert.</p>
-  
-  <p>Um nur ein paar prominente Beispiele zu nennen, die zugleich eine große Bandbreite aufzeigen: <a href="https://calyxos.org/get/">CalyxOS</a> hat einen Schwerpunkt auf Sicherheit und kommt mit verifiziertem Boot. <a href="https://lineageos.org/">LineageOS</a> konzentriert sich darauf, auf so vielen Geräten wie möglich lauffähig zu sein und <a href="https://replicant.us/">Replicant</a> legt den Schwerpunkt auf Freiheit, indem es 100% Freie Software anbietet, einschließlich der Treiber. </p>
-
-  <h3>Kontroversen um das Flashen von Telefonen</h3>
-
-  <p>Einige Telefone sind leichter zu upcyceln als andere. Das liegt daran, dass manche Hersteller es dir künstlich schwer machen, dein Handy zu upcyceln. Zum Beispiel indem sie dir eine <a href="https://drm.info">Digitale Rechteminderung</a> auferlegen. Oft ist es ihnen lieber, wenn du ein neues Handy kaufst, anstatt dein altes zu erneuern. Viele Hersteller wollen dich deshalb auch dadurch davon abhalten, dein Telefon zu flashen, indem sie behaupten, dass du deine Gewährleistung verlierst. <a href="/activities/upcyclingandroid/is-flashing-legal.html">Nach der Analyse der Rechtsexperten der FSFE</a> ist das jedoch so nicht vertretbar.</p>
-
-  <p>Um ein Freies-Software-Betriebssystem auf deinem Telefon flashen zu können, musst du manchmal zunächst den Bootloader deines Geräts entsperren. Der Bootloader ist eine unterliegende Softwareebene, auf der du das Betriebssystem installierst. Bei manchen Handys ist es einfach, den Bootloader zu entsperren, bei anderen nicht. Manche Betriebssysteme können ohne Entsperrung des Bootloaders installiert werden, andere nicht. Bitte beachte, dass wir dir bei diesem Prozess keine Online- oder Fernhilfe anbieten können. Aber du bist herzlich eingeladen, an einem unserer <a href="/activities/upcyclingandroid/workshops.html">Workshops</a> teilzunehmen. </p>
-
-  
-
-  <p>Manchmal kommt du aus Gründen tatsächlich nicht drumherum mal ein neues Telefon zu kaufen.  Dann ist es ratsam, dein Handy auch danach auszuwählen, ob es sich für ein späteres Upcycling eignet. Du machst es dir nicht nur leichter, sondern unterstützt mit deiner Wahl auch gleich die weitere Produktion offener Telefone. Es gibt bereits auch einige Telefone, auf denen ein GNU/Linux-System oder ein Custom-ROM vorinstalliert ist. Das ist natürlich die einfachste Option. Sie nimmt dir die ganze Last ab und bietet dir ein benutzerfreundliches Erlebnis. </p> 
-
-
-
-
-  <h2 class="painted">Entdecke die Welt der Freien Software</h2>
-
-  <p><strong>Freie Software ist das, was den Großteil unserer digitalen Infrastruktur und unserer Geräte betreibt.</strong> Das Internet baut auf den Innovationen und der Zugänglichkeit Freier Software. Und in den letzten zehn Jahren wurde Freie Software auch auf deinem Telefon immer wichtiger und verfügbarer.</p>
-
-
-   <figure>
-    <img src="https://pics.fsfe.org/uploads/medium/02fd306457bc64d885a52caa79db10e0.png" alt="Dies ist ein Screenshot aus dem UA-Kampagnenvideo, der Freie Software zeigt" />
-  </figure>
-
-
-  <p><strong>Freie Software bringt viele Vorteile mit sich.</strong> Freie Software ist frei verfügbar und kann von jeder und jedem zu jeder Zeit verwendet, verstanden, verbreitet und verbessert werden. Sie unterliegt keinen Beschränkungen. Das ist eine der Haupteigenschaften Freier Software. Diese trägt in der Praxis auch dazu bei, die Nutzungsdauer von elektronischen Geräten zu verlängern - <a href="/freesoftware/sustainability/sustainability.html#hardware-production-and-usage-times">wie in unserer Studie beschrieben</a>. Und Freie Software ist auch gut für deine Privatsphäre. Sie hilft dir, die Kontrolle über deine Daten zu behalten. Und sie hilft auch dabei, Elektroschrott zu reduzieren und Telefone zu recyceln.</p>
-
-  <p>Nach dem Upcycling deines Telefons und der Installation eines Freie-Software-Betriebssystems hast du die Möglichkeit, nicht-Freie Software manuell auf dem Telefon nach zu installieren, was allerdings wiederum deine Freiheit wieder einschränken und deine Privatsphäre beeinträchtigen könnte. Das gilt für GNU/Linux-System genauso wie für Custom-ROMs. Im zweiten Fall könntest Du auf deinem Custom-ROM selbst die ursprünglich ausgelieferte Google-Software und die Google-Bibliotheken erneut installieren. Aber das musst du nicht! <strong>Behalte die Kontrolle über deine Software und Daten und nutze dein Telefon mit so vielen Freie-Software-Apps wie möglich.</strong> Für viele Nutzende ist das Upcycling ihres Telefons nur der Anfang einer langen Reise in eine Welt voller Freier Software. </p>
-
-  <p><strong>Jede proprietäre App, die du durch eine Freie Software ersetzen kannst, ist ein wichtiger Schritt</strong> in Richtung einer nachhaltigeren digitalen Gesellschaft. Jede Freie-Software-App, die du herunterlädst und installierst, lockt auf der anderen Seite Entwicklerinnen und Entwickler an, mehr Ressourcen in die Weiterentwicklung dieser freien App zu investieren. Und jede proprietäre App, die durch eine Freie-Software-App ersetzt wird, ist ein Schritt aus dem Dilemma der Software-Obsoleszenz - wie in unserer Studie <a href="/freesoftware/sustainability/sustainability.html">Zur Nachhaltigkeit Freier Software</a> dargelegt.</p>
-
-  <p>In GNU/Linux-System kannst du mit Leichtigkeit <strong>die ganze Welt der Freien Software auf deinem Telefon</strong> über das integrierte Software Repository entdecken. Im Falle von Custom-ROMs beginnt deine Reise mit einem Freie-Software-App-Store namens <strong>F-Droid</strong> und einem Ersatz für die proprietären Google-Bibliotheken namens <strong>MicroG</strong>. Wenn du auf der Suche nach unterhaltsamen und nützlichen Apps bist, kannst du dich im <a href="https://f-droid.org/packages/">F-Droid Store</a> inspirieren lassen oder dich auf kuratierten Drittanbieterkatalogen wie zum Beispiel <a href="https://fossdroid.com/">Fossdroid</a> oder <a href="https://droid-break.info/">Droid-Break</a> umsehen.</p>
-
-
-
-
-<div class="icon-grid">
-
+    <h2 class="painted">Warum "Upcycling"?</h2>
+    <p>Du hast ein Android-Telefon, für das du keine Updates mehr bekommst? Du stehst damit vor dem Dilemma, entweder ein neues Telefon zu kaufen oder ein veraltetes Gerät weiter zu benutzen? Auf dieser Seite erfährst du, <strong>wie du ein Freie-Software-Betriebssystem auf deinem Telefon installieren und nutzen kannst</strong>. Das hilft dir dabei dein Gerät wieder auf dem neuesten Stand zu halten.</p>
+    <p>Die Installation eines Freie-Software-Betriebssystems bedeutet, dass du in der Regel mehr Kontrolle darüber hast, wie lange du dein Gerät nutzen kannst. Außerdem bringt es eine Menge anderer Vorteile mit sich. <strong>Freie Software gibt dir die volle Kontrolle über dein Gerät</strong>, du kannst endlich all die Apps deinstallieren, die du vorher nicht deinstallieren konntest, und du profitierst von einem erweiterten Datenschutz - um nur einige Beispiele zu nennen.</p>
+    <figure>
+      <img src="https://pics.fsfe.org/uploads/medium/2bfdce1e6c07874bf551ef0115f6dc57.png" alt="Dies ist ein Screenshot aus dem UA-Kampagnenvideo, der alle Vorteile des Telefonflashens in einem zeigt"/>
+      <figcaption>Mach mit! Hilf der Umwelt, spare Geld und nutze Freie Software als Werkzeug für Selbstbestimmung, gegen Verschwendung und Obsoleszenz.</figcaption>
+    </figure>
+    <p>Bitte beachte: Sei erstmal vorsichtig, wenn du neu auf dem Gebiet bist und zum ersten Mal ein neues Betriebssystem auf deinem Gerät installierst! Überstürze nichts. Einige Schritte könnten kompliziert sein. Nimm dir die Zeit, um zu verstehen, was du tust. Triff die notwendigen Vorbereitungen und recherchiere im Voraus, was eventuell speziell für dein Gerät zu beachten ist. Und denke daran, dass du nicht allein bist! Es gibt jede Menge Informationen und Hilfe von verschiedenen Communities. Online und offline. Dabei kann es sich sowohl um Communities handeln, die sich mit ganz bestimmten Betriebssystemen beschäftigen, oder um Communities, die sich mit dem flashen von Telefonen im Allgemeinen beschäftigen. Viele Menschen holen sich auch gerne Hilfe bei einer lokalen Freie-Software-User-Gruppe oder einem Repair Café. Außerdem bieten wir <a href="/activities/upcyclingandroid/workshops.html">Workshops</a> an, um dir dabei zu helfen. </p>
+    <h2 class="painted">Wie funktioniert es?</h2>
+    <p>Um die volle Kontrolle über dein Gerät zurückzugewinnen und dessen Nutzungsdauer zu verlängern, kannst du ein Freie-Software-Betriebssystem installieren. Das Installieren eines Betriebssystems auf einem Android-Gerät wird "flashen" genannt. Du kannst dir aussuchen ein <a href="#gnulinux">komplettes GNU/Linux System</a> zu installieren oder ein alternatives Freie-Software-Betriebssystem welches auf dem ursprünglichen Android-Betriebssystem basiert, ein sogenanntes <a href="#customrom">"Custom-ROM"</a>.</p>
+    <h3 id="gnulinux">Über GNU/Linux-Systeme</h3>
+    <p>Bei GNU/Linux-Betriebssystemen steht Nutzerfreiheit üblicherweise an erster Stelle, ihre Entwicklung ist zudem völlig abgetrennt von dem von Google dominierten Android-Ökosystem. Und noch besser, die Codeentwicklung hängt auch von keinem anderen einzelnen Unternehmen ab: GNU/Linux-Systeme werden auf transparente Weise von großen Gemeinschaften auf der ganzen Welt gemeinsam entwickelt, ohne dass dabei ein einzelner Akteur die gesamte Kontrolle inne hätte. Code-Änderungen können von Menschen auf der ganzen Welt vorgeschlagen werden, und jede davon akzeptierte Änderung ist für alle direkt sichtbar. Viele Entwicklerinnen und Entwickler bemühen sich innerhalb dieses Ökosystems die Abwärtskompatibilität von Änderungen zu garantieren. Weshalb, wenn du ein GNU/Linux-Betriebssystem verwendest, du üblicherweise von einer langjährigen Unterstützung des Betriebssystems profitierst.</p>
+    <p>Wenn du dich für ein GNU/Linux-System für dein Telefon entscheidest, werden einige verfügbare Apps anders sein als Du es vielleicht bisher gewohnt bist. Das könnte sich allerdings in Zukunft ändern, da immer mehr GNU/Linux-basierte Betriebssysteme auf den Markt kommen. Du kannst dir auch mit <a href="https://waydro.id/">Software von Drittanbietern behelfen</a>, um native Android-Apps auf GNU/Linux-Systemen zum laufen zu bekommen oder umgekehrt. Doch je mehr Android-Apps Du auf diese Weise überbrückst und in deinem sonst freien GNU/Linux-Betriebssystem verwendest, desto mehr leidest Du wieder unter den Einschränkungen aus der Android-Welt. Das Festhalten an nativen GNU/Linux-Apps auf deinem System wiederum bedeutet üblicherweise, von der Verwendung Freier Software und offener Standards zu profitieren. Und da mehr und mehr GNU/Linux-Systeme auf Mobiltelefonen in Erscheinung treten, werden die zugehörigen Märkte und Entwicklungen voraussichtlich weiter wachsen.</p>
+    <h4>Auswahl eines GNU/Linux-Systems</h4>
+    <p>Zu den bekannteren Namen gehören <a href="https://postmarketos.org/">Postmarket OS</a>, <a href="https://plasma-mobile.org/">Plasma Mobile </a>, <a href="https://ubuntu-touch.io/">Ubuntu Touch</a> und <a href="https://www.pureos.net/">PureOS</a>. Und wenn Du Spaß an Abwechslung und Experimentieren hast, stehen Dir noch viele weitere Möglichkeiten offen. Das PinePhone-Wiki zum Beispiel <a href="https://wiki.pine64.org/wiki/PinePhone_Software_Releases">listet derzeit 21 verschiedene verfügbare Freie Software-Betriebssysteme</a> auf, die auf dem PinePhone ausgeführt werden können. Und eine wachsende Zahl von Unternehmen bietet inzwischen vorinstallierte GNU/Linux-Systeme auf ausgewählten Telefonen an, einschließlich einer genau zugeschnittenen App-Umgebung. </p>
+    <p>Da die Entwicklung in diesem Bereich schnell voranschreitet, können wir keinen Support anbieten oder eine offizielle Liste möglicher Lösungen führen. Stattdessen bieten wir unserer Community eine <a href="https://wiki.fsfe.org/Activities/Android/OtherInitiatives">Wiki-Seite</a> an, um Informationen zu Betriebssystemen und vorinstallierten Telefonen jenseits von Android zu sammeln und sich auszutauschen.</p>
+    <h3 id="customrom">Über Custom-ROMs</h3>
+    <p>Jedes Mal, wenn eine neue Android-Version veröffentlicht wird, gibt es mehrere Unternehmen und Communities, die den Release-Code nutzen und ihn in modifizierten Versionen als Custom-ROM neu veröffentlichen. Das ist möglich, weil große Teile des Android-Betriebssystems - mit Ausnahme von Drittanbieter-Apps, der G-Suite und einigen Kernbibliotheken - bereits Freie Software sind. In der Praxis bieten diese Custom-ROMs in der Regel ein komplettes Android-Erlebnis, jedoch ohne die Abhängigkeiten zu Google oder der proprietären Software anderer Unternehmen. Und ohne weitere proprietäre Apps von Drittanbietern, die du beim Kauf eines neuen Telefons vielleicht schon vorinstalliert hast. Das bedeutet, dass diese Custom-Roms meist weniger Ressourcen benötigen und dadurch schneller und flüssiger laufen.</p>
+    <h4>Auswahl eines Custom-ROMs</h4>
+    <p>Es gibt es viele verschiedene Custom-ROMs zur Auswahl. Einige von ihnen sind näher am ursprünglichen Android, andere sind weiter davon entfernt. Manche enthalten mehr Freie-Software-Komponenten oder vorinstallierte Apps als andere. Bei einigen liegt der Schwerpunkt auf Sicherheit, bei anderen auf Benutzerfreundlichkeit, bei wieder anderen auf Modularität. Die Anzahl der Custom ROMs, aus denen du wählen kannst, kann am Anfang verwirrend sein. Aber am Ende wird die Auswahl durch dein Telefonmodell und die Art des gewünschten Systems begrenzt, so dass sie sich auf eine überschaubare Anzahl reduziert.</p>
+    <p>Um nur ein paar prominente Beispiele zu nennen, die zugleich eine große Bandbreite aufzeigen: <a href="https://calyxos.org/get/">CalyxOS</a> hat einen Schwerpunkt auf Sicherheit und kommt mit verifiziertem Boot. <a href="https://lineageos.org/">LineageOS</a> konzentriert sich darauf, auf so vielen Geräten wie möglich lauffähig zu sein und <a href="https://replicant.us/">Replicant</a> legt den Schwerpunkt auf Freiheit, indem es 100% Freie Software anbietet, einschließlich der Treiber. </p>
+    <h3>Kontroversen um das Flashen von Telefonen</h3>
+    <p>Einige Telefone sind leichter zu upcyceln als andere. Das liegt daran, dass manche Hersteller es dir künstlich schwer machen, dein Handy zu upcyceln. Zum Beispiel indem sie dir eine <a href="https://drm.info">Digitale Rechteminderung</a> auferlegen. Oft ist es ihnen lieber, wenn du ein neues Handy kaufst, anstatt dein altes zu erneuern. Viele Hersteller wollen dich deshalb auch dadurch davon abhalten, dein Telefon zu flashen, indem sie behaupten, dass du deine Gewährleistung verlierst. <a href="/activities/upcyclingandroid/is-flashing-legal.html">Nach der Analyse der Rechtsexperten der FSFE</a> ist das jedoch so nicht vertretbar.</p>
+    <p>Um ein Freies-Software-Betriebssystem auf deinem Telefon flashen zu können, musst du manchmal zunächst den Bootloader deines Geräts entsperren. Der Bootloader ist eine unterliegende Softwareebene, auf der du das Betriebssystem installierst. Bei manchen Handys ist es einfach, den Bootloader zu entsperren, bei anderen nicht. Manche Betriebssysteme können ohne Entsperrung des Bootloaders installiert werden, andere nicht. Bitte beachte, dass wir dir bei diesem Prozess keine Online- oder Fernhilfe anbieten können. Aber du bist herzlich eingeladen, an einem unserer <a href="/activities/upcyclingandroid/workshops.html">Workshops</a> teilzunehmen. </p>
+    <p>Manchmal kommt du aus Gründen tatsächlich nicht drumherum mal ein neues Telefon zu kaufen.  Dann ist es ratsam, dein Handy auch danach auszuwählen, ob es sich für ein späteres Upcycling eignet. Du machst es dir nicht nur leichter, sondern unterstützt mit deiner Wahl auch gleich die weitere Produktion offener Telefone. Es gibt bereits auch einige Telefone, auf denen ein GNU/Linux-System oder ein Custom-ROM vorinstalliert ist. Das ist natürlich die einfachste Option. Sie nimmt dir die ganze Last ab und bietet dir ein benutzerfreundliches Erlebnis. </p>
+    <h2 class="painted">Entdecke die Welt der Freien Software</h2>
+    <p><strong>Freie Software ist das, was den Großteil unserer digitalen Infrastruktur und unserer Geräte betreibt.</strong> Das Internet baut auf den Innovationen und der Zugänglichkeit Freier Software. Und in den letzten zehn Jahren wurde Freie Software auch auf deinem Telefon immer wichtiger und verfügbarer.</p>
+    <figure>
+      <img src="https://pics.fsfe.org/uploads/medium/02fd306457bc64d885a52caa79db10e0.png" alt="Dies ist ein Screenshot aus dem UA-Kampagnenvideo, der Freie Software zeigt"/>
+    </figure>
+    <p><strong>Freie Software bringt viele Vorteile mit sich.</strong> Freie Software ist frei verfügbar und kann von jeder und jedem zu jeder Zeit verwendet, verstanden, verbreitet und verbessert werden. Sie unterliegt keinen Beschränkungen. Das ist eine der Haupteigenschaften Freier Software. Diese trägt in der Praxis auch dazu bei, die Nutzungsdauer von elektronischen Geräten zu verlängern - <a href="/freesoftware/sustainability/sustainability.html#hardware-production-and-usage-times">wie in unserer Studie beschrieben</a>. Und Freie Software ist auch gut für deine Privatsphäre. Sie hilft dir, die Kontrolle über deine Daten zu behalten. Und sie hilft auch dabei, Elektroschrott zu reduzieren und Telefone zu recyceln.</p>
+    <p>Nach dem Upcycling deines Telefons und der Installation eines Freie-Software-Betriebssystems hast du die Möglichkeit, nicht-Freie Software manuell auf dem Telefon nach zu installieren, was allerdings wiederum deine Freiheit wieder einschränken und deine Privatsphäre beeinträchtigen könnte. Das gilt für GNU/Linux-System genauso wie für Custom-ROMs. Im zweiten Fall könntest Du auf deinem Custom-ROM selbst die ursprünglich ausgelieferte Google-Software und die Google-Bibliotheken erneut installieren. Aber das musst du nicht! <strong>Behalte die Kontrolle über deine Software und Daten und nutze dein Telefon mit so vielen Freie-Software-Apps wie möglich.</strong> Für viele Nutzende ist das Upcycling ihres Telefons nur der Anfang einer langen Reise in eine Welt voller Freier Software. </p>
+    <p><strong>Jede proprietäre App, die du durch eine Freie Software ersetzen kannst, ist ein wichtiger Schritt</strong> in Richtung einer nachhaltigeren digitalen Gesellschaft. Jede Freie-Software-App, die du herunterlädst und installierst, lockt auf der anderen Seite Entwicklerinnen und Entwickler an, mehr Ressourcen in die Weiterentwicklung dieser freien App zu investieren. Und jede proprietäre App, die durch eine Freie-Software-App ersetzt wird, ist ein Schritt aus dem Dilemma der Software-Obsoleszenz - wie in unserer Studie <a href="/freesoftware/sustainability/sustainability.html">Zur Nachhaltigkeit Freier Software</a> dargelegt.</p>
+    <p>In GNU/Linux-System kannst du mit Leichtigkeit <strong>die ganze Welt der Freien Software auf deinem Telefon</strong> über das integrierte Software Repository entdecken. Im Falle von Custom-ROMs beginnt deine Reise mit einem Freie-Software-App-Store namens <strong>F-Droid</strong> und einem Ersatz für die proprietären Google-Bibliotheken namens <strong>MicroG</strong>. Wenn du auf der Suche nach unterhaltsamen und nützlichen Apps bist, kannst du dich im <a href="https://f-droid.org/packages/">F-Droid Store</a> inspirieren lassen oder dich auf kuratierten Drittanbieterkatalogen wie zum Beispiel <a href="https://fossdroid.com/">Fossdroid</a> oder <a href="https://droid-break.info/">Droid-Break</a> umsehen.</p>
+    <div class="icon-grid">
       <ul>
         <li>
-          <img src="https://pics.fsfe.org/uploads/thumb/e50bafbaaf03067800de118043ed2ee5.jpeg" alt="" />
+          <img src="https://pics.fsfe.org/uploads/thumb/e50bafbaaf03067800de118043ed2ee5.jpeg" alt=""/>
           <div>
-          <h2>F-Droid</h2>
-          <p>Die F-Droid-Initiative hat die Verfügbarkeit Freier-Software-Apps in der Android-Welt komplett verändert und erleichtert. Indem sie eine Sammlung mit leicht installierbaren Freie-Software-Apps für die Android-Plattform anbietet. In der Praxis bedeutet das, dass du <a href="https://www.f-droid.org/">F-Droid</a> auf ähnliche Weise nutzen kannst, wie du es vielleicht vom Google Play Store oder anderen App Stores kennst. F-Droid macht es dir leicht, Freie-Software-Apps zu durchsuchen, sie auf deinem Gerät zu installieren oder zu deinstallieren und den Überblick über Updates zu behalten. </p></div>
+            <h2>F-Droid</h2>
+            <p>Die F-Droid-Initiative hat die Verfügbarkeit Freier-Software-Apps in der Android-Welt komplett verändert und erleichtert. Indem sie eine Sammlung mit leicht installierbaren Freie-Software-Apps für die Android-Plattform anbietet. In der Praxis bedeutet das, dass du <a href="https://www.f-droid.org/">F-Droid</a> auf ähnliche Weise nutzen kannst, wie du es vielleicht vom Google Play Store oder anderen App Stores kennst. F-Droid macht es dir leicht, Freie-Software-Apps zu durchsuchen, sie auf deinem Gerät zu installieren oder zu deinstallieren und den Überblick über Updates zu behalten. </p>
+          </div>
         </li>
-
         <li>
-          <img id="" src="https://pics.fsfe.org/uploads/thumb/f40b2258e5be636588bb256efa9a1de9.jpeg" alt="" />
+          <img id="" src="https://pics.fsfe.org/uploads/thumb/f40b2258e5be636588bb256efa9a1de9.jpeg" alt=""/>
           <div>
             <h2>MicroG</h2>
-
-            <p>MicroG beschreibt sich selbst als <em>"Freie Software-Reimplementierung von Googles proprietären Android User Space Apps und Bibliotheken"</em>. In der Praxis bedeutet das, dass <a href="https://microg.org/">MicroG</a> es anderen Freie-Software-Anwendungen ermöglicht, sich nahtlos in das Android-System zu integrieren, ohne dafür Google-Software verwenden zu müssen. Nutzerinnen und Nutzer Freier Software erhalten damit eine erweiterte Anwendungsunterstützung, sie können die an Google gesendeten Daten reduzieren oder überwachen und vor allem ältere Telefone können mit einer Verbesserung der Akkulaufzeit rechnen.</p></div>
+            <p>MicroG beschreibt sich selbst als <em>"Freie Software-Reimplementierung von Googles proprietären Android User Space Apps und Bibliotheken"</em>. In der Praxis bedeutet das, dass <a href="https://microg.org/">MicroG</a> es anderen Freie-Software-Anwendungen ermöglicht, sich nahtlos in das Android-System zu integrieren, ohne dafür Google-Software verwenden zu müssen. Nutzerinnen und Nutzer Freier Software erhalten damit eine erweiterte Anwendungsunterstützung, sie können die an Google gesendeten Daten reduzieren oder überwachen und vor allem ältere Telefone können mit einer Verbesserung der Akkulaufzeit rechnen.</p>
+          </div>
         </li>
       </ul>
-</div>
-
-
-  <h3 class="painted" id="regain-control-of-your-device">Gewinne die Kontrolle über dein Gerät zurück!</h3>
-
-  <p>Diese Seite kann nur einen kleinen Einblick in die Möglichkeiten und Vorteile der Nutzung Freier Software auf deinem Gerät geben. Freie Software gibt dir die Kontrolle über deine Daten, deine Software und deine Hardware zurück. <a href="/freesoftware/index.html">Mehr über Freier Software</a> erfährst du auf den Seiten der FSFE. Wenn du jetzt auf eigene Faust Freie Software auf deinem Gerät installieren willst, findest du im Internet eine Vielzahl von weitern Informationen dazu. Wenn du einen unserer Workshops <a href="/activities/upcyclingandroid/workshops.html">besuchen willst, schau auf unserer Workshop-Seite</a> vorbei. Wenn dir diese Initiative gefällt, <a href="/activities/upcyclingandroid/informationmaterial.html">sag es weiter</a>, schließe dich der Bewegung an und erzähle anderen von unserer Initiative und unseren Zielen. </p>
-
-  
-  <h2 class="painted" id="upcycling-of-any-of-your-devices">Vom Upcycling beliebiger Geräte</h2>
-
-  <p>Die Wiederverwendung von Original-Android-Telefonen und die Installation eines völlig anderen Betriebssystems bedeutet Upcycling und Wiederverwendung in einem. Wir sollten das Recht auf das kreative Umfunktionieren all unserer Geräte haben. Das würde uns helfen nicht nur in einer modernen sondern auch in einer nachhaltigeren digitalen Gesellschaft zu leben. </p>
-  
-  <p>Denk einfach daran, dass dein Telefon ein Universalcomputer ist. Mit dem gesetzlich verankerten Recht und der technischen Möglichkeit darauf jedes passende Betriebssystem zu installieren, könntest Du dein Telefon nicht nur als Telefon, sondern beispielsweise auch als ein anderes Netzwerk-Gerät in deiner häuslichen Umgebung verwenden. Genauso wie in jedem anderen Netzwerk von verbundenen Geräten. Solch Wiederverwendungsmöglichkeiten unserer Geräte sollte außerdem nicht nur für Telefone gelten, sondern für alle Geräte mit Internetzugang. Aus diesem Grund fordert die FSFE das <a href="/freesoftware/sustainability/sustainability.html#general-purpose-computers">Recht, Freie-Software-Betriebssysteme und Software auf jedem Gerät zu installieren und zu verwenden</a>. Dieses Recht würde es uns ermöglichen, unsere Hardware vollumfänglich auszuschöpfen und unsere Ressourcen dadurch auf nachhaltige Weise umzufunktionieren und wiederzuverwenden,</p>
-
-  <figure>
-    <img src="https://pics.fsfe.org/uploads/medium/05b57b8dd9610bb2b8c89a0e93fed22e.jpg" />
-  </figure>
-
-  <p>Noch weiter gedacht ist die Wiederverwendung von Hardware zudem immer weniger nur eine Frage der persönlichen Wiederverwendbarkeit: Mit dem Aufkommen und der Weiterentwicklung von „Smart Cities“, „Smart Homes“, „Smart Industries“, „Smart Agriculture“ und „Smart überall“ werden wir in diesem Jahrzehnt ein weiteres exponentielles Wachstum vernetzter Geräte erleben. Viele dieser Geräte werden Teil größerer öffentlicher und privater Infrastrukturen sein. Für die Langlebigkeit dieser Infrastrukturen und die Lebensdauer der einzelnen dafür verwendeten Geräte wird es unvermeidlich sein, dass wir das Recht und die tatsächliche Möglichkeit haben, diese Geräte für jeden Zweck und universal wiederzuverwenden. Diese Möglichkeit ist nur gegeben, wenn wir jedes gewünschte Betriebssystem auf jedem Gerät installieren und entwickeln können. Und wenn <a href="/freesoftware/sustainability/sustainability.html#public-infrastructure-public-code">öffentliche Infrastrukturen von Anfang an unter Verwendung Freier Software und mit öffentlichem Code aufgebaut werden</a>.</p>
-  
-  <p>Und die Rolle von Software für die Langlebigkeit von Hardware geht noch weiter: Um verschiedene Betriebssysteme auf einem Gerät in Gänze auszuführen, ist es unvermeidlich, dass diese Systeme über <a href="/freesoftware/sustainability/sustainability.html #access-to-hardware">vollen Zugriff auf die Hardware, ihre Schnittstellen, Treiber und Standards</a> verfügen. Wenn Du dich noch über weitere Zusammenhänge über die Nachhaltigkeit von Software interessierst, dann lese die <a href="/freesoftware/sustainability/sustainability.html#id-device-neutrality">Forderungen der FSFE für eine echte Geräteneutralität</a> als Eckpfeiler für eine nachhaltigere digitale Gesellschaft.</p>
-
-
-
-
-   <p>Dieses Projekt wird finanziell unterstützt von:</p>
-    <img src="https://pics.fsfe.org/uploads/big/e4f61b31daadca46e2942f69fb7da6bf.png" />
-    <img src="https://pics.fsfe.org/uploads/big/7970e2f7c9c69d4e21f00ca242a657ca.jpg" />
+    </div>
+    <h3 class="painted" id="regain-control-of-your-device">Gewinne die Kontrolle über dein Gerät zurück!</h3>
+    <p>Diese Seite kann nur einen kleinen Einblick in die Möglichkeiten und Vorteile der Nutzung Freier Software auf deinem Gerät geben. Freie Software gibt dir die Kontrolle über deine Daten, deine Software und deine Hardware zurück. <a href="/freesoftware/index.html">Mehr über Freier Software</a> erfährst du auf den Seiten der FSFE. Wenn du jetzt auf eigene Faust Freie Software auf deinem Gerät installieren willst, findest du im Internet eine Vielzahl von weitern Informationen dazu. Wenn du einen unserer Workshops <a href="/activities/upcyclingandroid/workshops.html">besuchen willst, schau auf unserer Workshop-Seite</a> vorbei. Wenn dir diese Initiative gefällt, <a href="/activities/upcyclingandroid/informationmaterial.html">sag es weiter</a>, schließe dich der Bewegung an und erzähle anderen von unserer Initiative und unseren Zielen. </p>
+    <h2 class="painted" id="upcycling-of-any-of-your-devices">Vom Upcycling beliebiger Geräte</h2>
+    <p>Die Wiederverwendung von Original-Android-Telefonen und die Installation eines völlig anderen Betriebssystems bedeutet Upcycling und Wiederverwendung in einem. Wir sollten das Recht auf das kreative Umfunktionieren all unserer Geräte haben. Das würde uns helfen nicht nur in einer modernen sondern auch in einer nachhaltigeren digitalen Gesellschaft zu leben. </p>
+    <p>Denk einfach daran, dass dein Telefon ein Universalcomputer ist. Mit dem gesetzlich verankerten Recht und der technischen Möglichkeit darauf jedes passende Betriebssystem zu installieren, könntest Du dein Telefon nicht nur als Telefon, sondern beispielsweise auch als ein anderes Netzwerk-Gerät in deiner häuslichen Umgebung verwenden. Genauso wie in jedem anderen Netzwerk von verbundenen Geräten. Solch Wiederverwendungsmöglichkeiten unserer Geräte sollte außerdem nicht nur für Telefone gelten, sondern für alle Geräte mit Internetzugang. Aus diesem Grund fordert die FSFE das <a href="/freesoftware/sustainability/sustainability.html#general-purpose-computers">Recht, Freie-Software-Betriebssysteme und Software auf jedem Gerät zu installieren und zu verwenden</a>. Dieses Recht würde es uns ermöglichen, unsere Hardware vollumfänglich auszuschöpfen und unsere Ressourcen dadurch auf nachhaltige Weise umzufunktionieren und wiederzuverwenden,</p>
+    <figure>
+      <img src="https://pics.fsfe.org/uploads/medium/05b57b8dd9610bb2b8c89a0e93fed22e.jpg"/>
+    </figure>
+    <p>Noch weiter gedacht ist die Wiederverwendung von Hardware zudem immer weniger nur eine Frage der persönlichen Wiederverwendbarkeit: Mit dem Aufkommen und der Weiterentwicklung von „Smart Cities“, „Smart Homes“, „Smart Industries“, „Smart Agriculture“ und „Smart überall“ werden wir in diesem Jahrzehnt ein weiteres exponentielles Wachstum vernetzter Geräte erleben. Viele dieser Geräte werden Teil größerer öffentlicher und privater Infrastrukturen sein. Für die Langlebigkeit dieser Infrastrukturen und die Lebensdauer der einzelnen dafür verwendeten Geräte wird es unvermeidlich sein, dass wir das Recht und die tatsächliche Möglichkeit haben, diese Geräte für jeden Zweck und universal wiederzuverwenden. Diese Möglichkeit ist nur gegeben, wenn wir jedes gewünschte Betriebssystem auf jedem Gerät installieren und entwickeln können. Und wenn <a href="/freesoftware/sustainability/sustainability.html#public-infrastructure-public-code">öffentliche Infrastrukturen von Anfang an unter Verwendung Freier Software und mit öffentlichem Code aufgebaut werden</a>.</p>
+    <p>Und die Rolle von Software für die Langlebigkeit von Hardware geht noch weiter: Um verschiedene Betriebssysteme auf einem Gerät in Gänze auszuführen, ist es unvermeidlich, dass diese Systeme über <a href="/freesoftware/sustainability/sustainability.html #access-to-hardware">vollen Zugriff auf die Hardware, ihre Schnittstellen, Treiber und Standards</a> verfügen. Wenn Du dich noch über weitere Zusammenhänge über die Nachhaltigkeit von Software interessierst, dann lese die <a href="/freesoftware/sustainability/sustainability.html#id-device-neutrality">Forderungen der FSFE für eine echte Geräteneutralität</a> als Eckpfeiler für eine nachhaltigere digitale Gesellschaft.</p>
+    <p>Dieses Projekt wird finanziell unterstützt von:</p>
+    <img src="https://pics.fsfe.org/uploads/big/e4f61b31daadca46e2942f69fb7da6bf.png"/>
+    <img src="https://pics.fsfe.org/uploads/big/7970e2f7c9c69d4e21f00ca242a657ca.jpg"/>
     <p>Der Herausgeber ist für den Inhalt dieser Veröffentlichung verantwortlich.</p>
-
-  <p>The Android robot is reproduced or modified from work created and
+    <p>The Android robot is reproduced or modified from work created and
   shared by Google and used according to terms described in the Creative
   Commons 3.0 Attribution License.</p>
-
-
-</body>
-
+  </body>
 </html>

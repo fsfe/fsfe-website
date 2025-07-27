@@ -1,143 +1,114 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8"?>
 <html>
   <version>1</version>
-
   <head>
     <title>Informations pour les Webmasters</title>
   </head>
   <body class="article" microformats="h-entry">
-
-    <p id="category"><a href="/contribute/">Contribuer</a></p>
+    <p id="category">
+      <a href="/contribute/">Contribuer</a>
+    </p>
     <h1 class="p-name">Webmastering</h1>
-
     <div class="e-content">
-
-        <p id="introduction" class="p-summary">
+      <p id="introduction" class="p-summary">
           L'<em>équipe Web</em> maintient et développe les sites de la FSFE —
           allant de <a href="/index.html">fsfe.org</a> aux sites de projets ou de
           campagnes. Les administrateurs du site sont des bénévoles qui améliorent l'image que
           l'organisation donne au monde, et apportent des solutions techniques
           à nos efforts sur le Web.
         </p>
-
-
-        <h2>Apprenez à nous connaître, apprenez à connaître le site</h2>
-
-        <p>
+      <h2>Apprenez à nous connaître, apprenez à connaître le site</h2>
+      <p>
         Si vous voulez vous faire une idée d'à quoi ressemble le travail sur le
         site de la FSFE, le meilleur point de départ est de venir discuter avec
         nous. Certains administrateurs sont régulièrement sur le canal Libera Chat
         #fsfe, où nous serons ravi de vous rencontrer et de répondre à vos
-        questions&#160;! Pour connaitre ceux qui travaillent sur le site, et
+        questions ! Pour connaitre ceux qui travaillent sur le site, et
         avec la FSFE en général, visitez la page de <a href="/about/people/index.html">notre équipe</a>
         et la <a href="https://wiki.fsfe.org/Teams/Web">page de l'équipe Web</a>
         sur notre wiki.
         </p>
-
-
-        <h2>Introduction</h2>
-
-        <p>
+      <h2>Introduction</h2>
+      <p>
           Les technologies employées pour la maintenance des pages web de la FSFE
           seront sans doute familières à beaucoup de développeurs ou auteurs,
           et leurs descriptions pourraient intéresser ceux qui ne les ont pas
           encore découvertes.
         </p>
-
-        <p>
+      <p>
           Les traducteurs et bénévoles occasionnels auront probablement besoin
-          de connaître&#160;:
+          de connaître :
         </p>
-
-        <ul>
-          <li>
-            <a href="http://en.wikipedia.org/wiki/XHTML">XHTML</a> – à partir
+      <ul>
+        <li><a href="http://en.wikipedia.org/wiki/XHTML">XHTML</a> – à partir
             duquel les pages web sont générées
           </li>
-          <li>
-            <a href="http://git-scm.com/">Git</a> – pour gérer le versionnement des sources
+        <li><a href="http://git-scm.com/">Git</a> – pour gérer le versionnement des sources
             des pages web
           </li>
-        </ul>
-
-        <p>
+      </ul>
+      <p>
           Les bénévoles qui souhaitent plus s'engager dans la maintenance du
-          site devront également être familiers avec&#160;:
+          site devront également être familiers avec :
         </p>
-
-        <ul>
-          <li>
-            <a href="https://www.gnu.org/software/bash/">Bash</a> – pour la
+      <ul>
+        <li><a href="https://www.gnu.org/software/bash/">Bash</a> – pour la
             maintenance et les scripts de création de pages
           </li>
-          <li>
-            <a href="http://www.apache.org/">Apache</a> – comme serveur web
+        <li><a href="http://www.apache.org/">Apache</a> – comme serveur web
           </li>
-        </ul>
-
-
-        <h2 id="Understanding">Comprendre le mécanisme de construction des pages web</h2>
-
-        <p>
+      </ul>
+      <h2 id="Understanding">Comprendre le mécanisme de construction des pages web</h2>
+      <p>
           Les pages web de <var>fsfe.org</var> sont maintenues comme un ensemble
           de fichiers XML. Le serveur web génère automatiquement les pages HTML à
           partir de ces fichiers XML, toutes les dix minutes. Ainsi, toute
           l'édition des pages se fait dans les fichiers XML, on ne travaille
           jamais directement sur les fichiers HTML.
         </p>
-
-        <p>
+      <p>
           Chaque page de fsfe.org est nommée
           <var><em>nomdelapage</em>.<em>langue</em>.xhtml</var> (<em>langue</em>
-          étant le code à deux lettres <a
-          href="http://en.wikipedia.org/wiki/List_of_ISO_639-1_codes">ISO-639
+          étant le code à deux lettres <a href="http://en.wikipedia.org/wiki/List_of_ISO_639-1_codes">ISO-639
           de la langue</a>, comme "en" pour l'anglais ou "fr" pour le
           français). Les fichiers source sont nommés
           <var><em>nomdelapage</em>.<em>langue</em>.xhtml</var>.
         </p>
-
-        <p>
-          Certaines pages ont un contenu dynamique&#160;: hormis les textes fixes tirés
+      <p>
+          Certaines pages ont un contenu dynamique : hormis les textes fixes tirés
           du fichier XHTML, elles contiennent des informations provenant d'un ou
           plusieurs fichiers XML. Lorsqu'une telle page est construite, le système
           prend les fichiers XML traduits s'ils sont disponibles, ou prend la
           version anglaise de ces fichiers sinon. De telles pages peuvent donc
           afficher certaines parties traduites alors que d'autres resteront encore en
-          anglais. Par exemple, la <a href="/index.html">page d'accueil</a>, la <a
-          href="/news/news.html">page des nouvelles</a>, et la <a
-          href="/events/events.html">page des évènements</a>, sont
+          anglais. Par exemple, la <a href="/index.html">page d'accueil</a>, la <a href="/news/news.html">page des nouvelles</a>, et la <a href="/events/events.html">page des évènements</a>, sont
           construites ainsi.
         </p>
-
-        <h2 id="Getting">Travailler sur le site en tant qu'éditeur</h2>
-
-        <p>Visitez la page <a href="https://wiki.fsfe.org/TechDocs/Mainpage/Editing">d'édition
-        du site web de notre wiki</a> pour obtenir plus d'information sur&#160;:</p>
-
-        <ul>
-          <li>comment récupérer le code source du site web sur votre ordinateur</li>
-          <li>comment éditer et publier des fichiers sur le site</li>
-          <li>comment se coordonner avec les autres éditeurs du site</li>
-          <li>utiliser ses droits en écriture de manière responsable</li>
-          <li>techniques de webmaster avancées</li>
-          <li>Gestion des licences du code source et des média</li>
-        </ul>
-
+      <h2 id="Getting">Travailler sur le site en tant qu'éditeur</h2>
+      <p>Visitez la page <a href="https://wiki.fsfe.org/TechDocs/Mainpage/Editing">d'édition
+        du site web de notre wiki</a> pour obtenir plus d'information sur :</p>
+      <ul>
+        <li>comment récupérer le code source du site web sur votre ordinateur</li>
+        <li>comment éditer et publier des fichiers sur le site</li>
+        <li>comment se coordonner avec les autres éditeurs du site</li>
+        <li>utiliser ses droits en écriture de manière responsable</li>
+        <li>techniques de webmaster avancées</li>
+        <li>Gestion des licences du code source et des média</li>
+      </ul>
     </div>
     <!--/e-content-->
-
   </body>
-<sidebar promo="about-fsfe">
+  <sidebar promo="about-fsfe">
     <div id="related-content">
-        <h3>Guides&#160;:</h3>
-        <ul>
-            <li>
-            <a href="/contribute/web/features.html">Un exemple d'article, pour utilise de nouveaux designs web</a>
-            </li>
-        </ul>
+      <h3>Guides :</h3>
+      <ul>
+        <li>
+          <a href="/contribute/web/features.html">Un exemple d'article, pour utilise de nouveaux designs web</a>
+        </li>
+      </ul>
     </div>
-</sidebar>
-<translator>Michel Roche (Vercors - France), Jil Larner (Mont Blanc, France), Cryptie, roidelapluie, Stéphane, MDDN, Thibault et Vincent</translator>
+  </sidebar>
+  <translator>Michel Roche (Vercors - France), Jil Larner (Mont Blanc, France), Cryptie, roidelapluie, Stéphane, MDDN, Thibault et Vincent</translator>
 </html>
 <!--
 Local Variables: ***

@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <eventset>
   <version>1</version>
-
-   <event start="2014-02-27" end="2014-02-27">
-   <title>Podiumsdiskussion bei 3D-Druckkonferenz in Wien, Österreich</title>
-   <body>
-     <p>
-        <a href="http://futurezone.at/">Futurezone technology news</a> veranstaltet
+  <event start="2014-02-27" end="2014-02-27">
+    <title>Podiumsdiskussion bei 3D-Druckkonferenz in Wien, Österreich</title>
+    <body>
+      <p><a href="http://futurezone.at/">Futurezone technology news</a> veranstaltet
         heuer die erste 3D-Druck-Konferenz in Österreich. Sie haben Peter Bubestinger 
         eingeladen um die FSFE bei einer Podiumsdiskussion über "rechtliche Grauzonen" 
         dieser aufstrebenden Technologie zu vertreten.
@@ -14,12 +12,11 @@
         Die Veranstaltung trägt den Namen <a href="http://futurezone.at/thema/print3dfuture">print3Dfuture</a>
         und findet im <a href="http://www.odeon-theater.at/">Odeon Theater</a> statt.
      </p>
-   </body>
-   <link>http://futurezone.at/thema/print3dfuture</link>
-   <tags>
-    <tag key="at"/>
-    <tag key="front-page"/>
-   </tags>
+    </body>
+    <link>http://futurezone.at/thema/print3dfuture</link>
+    <tags>
+      <tag key="at"/>
+      <tag key="front-page"/>
+    </tags>
   </event>
 </eventset>
-

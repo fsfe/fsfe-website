@@ -35,13 +35,7 @@ in
           ruff-check.enable = true;
           ruff-format.enable = true;
           nixfmt.enable = true;
-          xmllint = {
-            enable = true;
-            excludes = [
-              "*.xhtml"
-              "*.xml"
-            ];
-          };
+          xmllint.enable = true;
         };
         settings = {
           global = {

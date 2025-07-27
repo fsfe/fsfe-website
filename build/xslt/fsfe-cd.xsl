@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <!-- ====================================================================== -->
 <!-- Helper stylesheets to include referrer for fsfe-cd                     -->
 <!-- ====================================================================== -->
-
-<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
-
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
   <!-- Hidden input field with referrer for https://my.fsfe.org/subscribe -->
   <xsl:template match="fsfe-cd-referrer-input">
     <xsl:element name="input">
@@ -18,7 +15,6 @@
       </xsl:attribute>
     </xsl:element>
   </xsl:template>
-
   <!-- Button with referrer for https://my.fsfe.org/donate -->
   <xsl:template match="fsfe-cd-donate-link">
     <xsl:element name="a">
@@ -30,5 +26,4 @@
       <xsl:apply-templates select="@*|node()"/>
     </xsl:element>
   </xsl:template>
-
 </xsl:stylesheet>

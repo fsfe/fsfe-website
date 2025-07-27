@@ -1,30 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
-<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
-
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
   <xsl:template name="translation_list">
     <xsl:if test="not(/buildinfo/document/@external)">
       <xsl:element name="nav">
         <xsl:attribute name="id">translations</xsl:attribute>
         <xsl:attribute name="class">alert</xsl:attribute>
-
-        <xsl:element name="a">
-          <xsl:attribute name="class">close</xsl:attribute>
-          <xsl:attribute name="data-toggle">collapse</xsl:attribute>
-          <xsl:attribute name="data-target">#translations</xsl:attribute>
-          <xsl:attribute name="href">#</xsl:attribute>
+        <xsl:element name="a"><xsl:attribute name="class">close</xsl:attribute><xsl:attribute name="data-toggle">collapse</xsl:attribute><xsl:attribute name="data-target">#translations</xsl:attribute><xsl:attribute name="href">#</xsl:attribute>
           ×
         </xsl:element>
-
         <xsl:element name="a">
           <xsl:attribute name="class">contribute-translation</xsl:attribute>
           <xsl:attribute name="href"><xsl:value-of select="$urlprefix"/>/contribute/translators/</xsl:attribute>
-          <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'translate'" /></xsl:call-template>
+          <xsl:call-template name="fsfe-gettext">
+            <xsl:with-param name="id" select="'translate'"/>
+          </xsl:call-template>
         </xsl:element>
-
         <xsl:element name="ul">
           <xsl:for-each select="/buildinfo/trlist/tr">
-            <xsl:sort select="@id" />
+            <xsl:sort select="@id"/>
             <xsl:choose>
               <xsl:when test="@id=/buildinfo/@language">
                 <xsl:element name="li">
@@ -34,8 +27,7 @@
               <xsl:otherwise>
                 <xsl:element name="li">
                   <xsl:element name="a">
-                    <xsl:attribute name="href">
-                      <xsl:value-of select="/buildinfo/@fileurl"/>.<xsl:value-of select="@id"/>.html</xsl:attribute>
+                    <xsl:attribute name="href"><xsl:value-of select="/buildinfo/@fileurl"/>.<xsl:value-of select="@id"/>.html</xsl:attribute>
                     <xsl:value-of select="." disable-output-escaping="yes"/>
                   </xsl:element>
                 </xsl:element>

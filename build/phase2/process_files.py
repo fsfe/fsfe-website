@@ -45,7 +45,7 @@ def _run_process(
         logger.debug(f"Building {target_file}")
         result = process_file(source_file, processor)
         target_file.parent.mkdir(parents=True, exist_ok=True)
-        result.write_output(target_file)
+        target_file.write_text(result)
 
 
 def _process_dir(

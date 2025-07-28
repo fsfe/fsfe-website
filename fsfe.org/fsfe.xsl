@@ -22,7 +22,7 @@
   <xsl:include href="../build/xslt/peertube.xsl" />
 
   <!-- HTML 5 compatibility doctype, since our XSLT parser doesn't support disabling output escaping -->
-  <xsl:output method="html" encoding="utf-8" doctype-system="about:legacy-compat" />
+  <xsl:output method="html" encoding="utf-8" indent="yes" doctype-system="about:legacy-compat" />
 
   <!-- EXTRACT / DESCRIPTION of each page -->
   <xsl:variable name="metadesc">

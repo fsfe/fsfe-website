@@ -5,7 +5,6 @@
   },
 }:
 let
-  inherit (pkgs) lib;
   treefmt-nixSrc = builtins.fetchTarball "https://github.com/numtide/treefmt-nix/archive/refs/heads/master.tar.gz";
   treefmt-nix = import treefmt-nixSrc;
 in
@@ -17,8 +16,6 @@ in
     (with pkgs; [
       # For getting python deps
       uv
-      # Need to use a nix python to prevent ssl certs issues
-      python312
       # needed by lxml
       libxslt
       libxml2
@@ -59,13 +56,5 @@ in
     pkgs:
     (with pkgs; [
     ]);
-  runScript = pkgs.writeShellScript "fsfe-website-env" ''
-    set -euo pipefail
-    # Force uv to use Python interpreter from venv
-    export UV_PYTHON="${lib.getExe pkgs.python312}";
-    # Prevent uv from downloading managed Python's
-    export UV_PYTHON_DOWNLOADS="never"
-    uv venv
-    bash --rcfile .venv/bin/activate "$@"
-  '';
+  # runScript = '''';
 }).env

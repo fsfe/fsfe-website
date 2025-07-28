@@ -200,7 +200,7 @@ def process_file(infile: Path, processor: Path) -> str:
             linkelem.set(
                 "href",
                 re.sub(
-                    r"""(https?://(test\.)?fsfe\.org)""",
+                    r"""^(https?://(test\.)?fsfe\.org)""",
                     "",
                     linkelem.get("href"),
                     flags=re.IGNORECASE,
@@ -212,7 +212,7 @@ def process_file(infile: Path, processor: Path) -> str:
             linkelem.set(
                 "href",
                 re.sub(
-                    r"""(/?([^:>]+/)?[^:/.]{3,}\.)(html|rss|ics)""",
+                    r"""^(/?([^:>]+/)?[^:/.]{3,}\.)(html|rss|ics)""",
                     rf"""\1{lang}.\3""",
                     linkelem.get("href"),
                     flags=re.IGNORECASE,
@@ -223,7 +223,7 @@ def process_file(infile: Path, processor: Path) -> str:
             linkelem.set(
                 "href",
                 re.sub(
-                    r"""(/?[^:>]+/)""",
+                    r"""^(/?[^:>]+/)$""",
                     rf"""\1index.{lang}.html""",
                     linkelem.get("href"),
                     flags=re.IGNORECASE,

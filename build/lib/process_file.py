@@ -14,76 +14,61 @@ from build.lib.misc import get_basename, get_version, lang_from_filename
 logger = logging.getLogger(__name__)
 
 
-def _include_xml(file: Path) -> str:
+def _get_xmls(file: Path, parser: etree.XMLParser) -> etree.Element:
     """
     include second level elements of a given XML file
     this emulates the behaviour of the original
     build script which wasn't able to load top
     level elements from any file
     """
-    work_str = ""
+    elements = []
     if file.exists():
-        tree = etree.parse(file)
+        tree = etree.parse(file, parser)
         root = tree.getroot()
         # Remove <version> because the filename attribute would otherwise be added
         # to this element instead of the actual content element.
         for elem in root.xpath("version"):
             root.remove(elem)
-        # Iterate over all elements in root node, add a filename attribute and
-        # then append the string to work_str
         for elem in root.xpath("*"):
             elem.set("filename", get_basename(file))
-            work_str += etree.tostring(elem, encoding="utf-8").decode("utf-8")
+            elements.append(elem)
+        # and then we return the element
+    return elements
 
-    return work_str
 
-
-def _get_attributes(file: Path) -> str:
+def _get_attributes(file: Path) -> dict:
     """
     get attributes of top level element in a given
     XHTML file
     """
-    work_str = ""
     tree = etree.parse(file)
     root = tree.getroot()
-    attributes = root.attrib
-    for attrib in attributes:
-        work_str += f'{attrib}="{attributes[attrib]}"\n'
-
-    return work_str
+    attributes = root.items()
+    return dict(attributes)
 
 
-def _list_langs(file: Path) -> str:
+def _get_trlist(file: Path) -> etree.Element:
     """
     list all languages a file exists in by globbing up
     the shortname (i.e. file path with file ending omitted)
     output is readily formatted for inclusion
     in xml stream
     """
-    return "\n".join(
-        list(
-            map(
-                lambda path: (
-                    f'<tr id="{lang_from_filename(path)}">'
-                    + (
-                        Path(f"global/languages/{lang_from_filename(path)}")
-                        .read_text()
-                        .strip()
-                    )
-                    + "</tr>"
-                ),
-                file.parent.glob(f"{get_basename(file)}.??{file.suffix}"),
-            )
+    trlist = etree.Element("trlist")
+    for path in file.parent.glob(f"{get_basename(file)}.??{file.suffix}"):
+        tr = etree.SubElement(trlist, "tr", id=lang_from_filename(path))
+        tr.text = (
+            Path(f"global/languages/{lang_from_filename(path)}").read_text().strip()
         )
-    )
+    return trlist
 
 
-def _auto_sources(action_file: Path, lang: str) -> str:
+def _get_set(action_file: Path, lang: str, parser: etree.XMLParser) -> etree.Element:
     """
     import elements from source files, add file name
     attribute to first element included from each file
     """
-    work_str = ""
+    doc_set = etree.Element("set")
     list_file = action_file.with_stem(
         f".{action_file.with_suffix('').stem}"
     ).with_suffix(".xmllist")
@@ -96,21 +81,28 @@ def _auto_sources(action_file: Path, lang: str) -> str:
                     if path.with_suffix(f".{lang}.xml").exists()
                     else path.with_suffix(".en.xml")
                 )
-                work_str += _include_xml(path_xml)
+                doc_set.extend(_get_xmls(path_xml, parser))
 
-    return work_str
+    return doc_set
 
 
-def _build_xmlstream(infile: Path):
+def _get_document(
+    action_lang: str, action_file: Path, lang: str, parser: etree.XMLParser
+) -> etree.Element:
+    document = etree.Element(
+        "document", language=action_lang, **_get_attributes(action_file)
+    )
+    document.append(_get_set(action_file, lang, parser))
+    document.extend(_get_xmls(action_file, parser))
+    return document
+
+
+def _build_xmlstream(infile: Path, parser: etree.XMLParser) -> etree.Element:
     """
     assemble the xml stream for feeding into xsltproc
     the expected shortname and language flag indicate
     a single xhtml page to be built
     """
-    # TODO
-    # Ideally this would use lxml to construct an object instead of string templating.
-    # Should be a little faster, and also guarantees that its valid xml
-
     logger.debug(f"infile: {infile}")
     shortname = infile.with_suffix("")
     lang = lang_from_filename(infile)
@@ -134,7 +126,6 @@ def _build_xmlstream(infile: Path):
     topbanner_xml = Path(f"global/data/topbanner/.topbanner.{lang}.xml")
     texts_xml = Path(f"global/data/texts/.texts.{lang}.xml")
     date = str(datetime.now().date())
-    # time = str(datetime.now().time())
     action_lang = ""
     translation_state = ""
 
@@ -159,41 +150,29 @@ def _build_xmlstream(infile: Path):
 
     action_file = shortname.with_suffix(f".{action_lang}{infile.suffix}")
     logger.debug(f"action_file: {action_file}")
+    # Create the root element
+    page = etree.Element(
+        "buildinfo",
+        date=date,
+        original=original_lang,
+        filename=f"/{str(shortname.with_suffix('')).removeprefix('/')}",
+        fileurl=f"/{shortname.relative_to(shortname.parts[0]).with_suffix('')}",
+        dirname=f"/{shortname.parent}/",
+        language=lang,
+        translation_state=translation_state,
+    )
 
-    result_str = f"""
-    <buildinfo
-        date="{date}"
-        original="{original_lang}"
-        filename="/{str(shortname.with_suffix("")).removeprefix("/")}"
-        fileurl="/{shortname.relative_to(shortname.parts[0]).with_suffix("")}"
-        dirname="/{shortname.parent}/"
-        language="{lang}"
-        translation_state="{translation_state}"
-    >
-        <trlist>
-            {_list_langs(infile)}
-        </trlist>
-        <topbanner>
-            {_include_xml(topbanner_xml)}
-        </topbanner>
-        <textsetbackup>
-            {_include_xml(Path("global/data/texts/texts.en.xml"))}
-        </textsetbackup>
-        <textset>
-            {_include_xml(texts_xml)}
-        </textset>
-        <document
-            language="{action_lang}"
-            {_get_attributes(action_file)}
-        >
-            <set>
-            {_auto_sources(action_file, lang)}
-            </set>
-            {_include_xml(action_file)}
-        </document>
-    </buildinfo>
-    """
-    return result_str
+    # Add the subelements
+    page.append(_get_trlist(infile))
+
+    page.extend(_get_xmls(topbanner_xml, parser))
+
+    page.extend(_get_xmls(Path("global/data/texts/texts.en.xml"), parser))
+
+    page.extend(_get_xmls(texts_xml, parser))
+
+    page.append(_get_document(action_lang, action_file, lang, parser))
+    return page
 
 
 def process_file(infile: Path, processor: Path) -> str:
@@ -202,41 +181,54 @@ def process_file(infile: Path, processor: Path) -> str:
     """
     logger.debug(f"Processing {infile}")
     lang = lang_from_filename(infile)
-    xmlstream = _build_xmlstream(infile)
-    xslt_tree = etree.parse(processor.resolve())
+    parser = etree.XMLParser(remove_blank_text=True, remove_comments=True)
+    xmlstream = _build_xmlstream(infile, parser)
+    xslt_tree = etree.parse(processor.resolve(), parser)
     transform = etree.XSLT(xslt_tree)
-    result = str(transform(etree.XML(xmlstream)))
+    result = transform(xmlstream)
     # And now a bunch of regexes to fix some links.
     # xx is the language code in all comments
-
-    # TODO
-    # Probably a faster way to do this
-    # Maybe iterating though all a tags with lxml?
-    # Once buildxmlstream generates an xml object that should be faster.
-
-    # Remove https://fsfe.org (or https://test.fsfe.org) from the start of all
-    result = re.sub(
-        r"""href\s*=\s*("|')(https?://(test\.)?fsfe\.org)([^>])\1""",
-        r"""href=\1\3\1""",
-        result,
-        flags=re.MULTILINE | re.IGNORECASE,
-    )
-    # Change links from /foo/bar.html into /foo/bar.xx.html
-    # Change links from foo/bar.html into foo/bar.xx.html
-    # Same for .rss and .ics links
-    result = re.sub(
-        r"""href\s*=\s*("|')(/?([^:>]+/)?[^:/.]+\.)(html|rss|ics)(#[^>]*)?\1""",
-        rf"""href=\1\2{lang}.\4\5\1""",
-        result,
-        flags=re.MULTILINE | re.IGNORECASE,
-    )
-    # Change links from /foo/bar/ into /foo/bar/index.xx.html
-    # Change links from foo/bar/ into foo/bar/index.xx.html
-    result = re.sub(
-        r"""href\s*=\s*("|')(/?[^:>]+/)\1""",
-        rf"""href=\1\2index.{lang}.html\1""",
-        result,
-        flags=re.MULTILINE | re.IGNORECASE,
-    )
-
+    try:
+        for linkelem in result.xpath("//*[@href]"):
+            # remove any spurious whitespace
+            linkelem.set(
+                "href",
+                linkelem.get("href").strip(),
+            )
+            # Remove https://fsfe.org (or https://test.fsfe.org)
+            # from the start of all links
+            linkelem.set(
+                "href",
+                re.sub(
+                    r"""^(https?://(test\.)?fsfe\.org)""",
+                    "",
+                    linkelem.get("href"),
+                    flags=re.IGNORECASE,
+                ),
+            )
+            # Change links from /foo/bar.html into /foo/bar.xx.html
+            # Change links from foo/bar.html into foo/bar.xx.html
+            # Same for .rss and .ics links
+            linkelem.set(
+                "href",
+                re.sub(
+                    r"""^(/?([^:>]+/)?[^:/.]{3,}\.)(html|rss|ics)""",
+                    rf"""\1{lang}.\3""",
+                    linkelem.get("href"),
+                    flags=re.IGNORECASE,
+                ),
+            )
+            # Change links from /foo/bar/ into /foo/bar/index.xx.html
+            # Change links from foo/bar/ into foo/bar/index.xx.html
+            linkelem.set(
+                "href",
+                re.sub(
+                    r"""^(/?[^:>]+/)$""",
+                    rf"""\1index.{lang}.html""",
+                    linkelem.get("href"),
+                    flags=re.IGNORECASE,
+                ),
+            )
+    except AssertionError:
+        logger.debug(f"Output generated for file {infile} is not valid xml")
     return result

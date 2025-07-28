@@ -5,7 +5,7 @@
   xmlns:str="http://exslt.org/strings"
   extension-element-prefixes="str">
 
-  <xsl:output method="text" encoding="UTF-8" indent="no" />
+  <xsl:output method="text" encoding="utf-8" />
   <xsl:strip-space elements="body"/>
 
   <!-- new line template -->

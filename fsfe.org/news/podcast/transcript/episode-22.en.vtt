@@ -1,0 +1,1075 @@
+WEBVTT
+
+00:00.000 --> 00:18.080
+Hello and welcome to the Software Freedom Podcast.
+
+00:18.080 --> 00:22.000
+This podcast is brought to you by the free Software Foundation Europe.
+
+00:22.000 --> 00:26.240
+We are a charity that empowers users to control technology.
+
+00:26.240 --> 00:31.040
+I'm Bonnie Merring and our guest for today's episode is Johannes Näder.
+
+00:31.040 --> 00:34.240
+Johannes has joined the FSFE Starfighters last year
+
+00:34.240 --> 00:38.880
+and since then he has become a valued and esteemed colleague.
+
+00:38.880 --> 00:42.000
+He is the FSFE's German team coordinator
+
+00:42.000 --> 00:46.560
+and also the person responsible for the Public Money Public Code Initiative.
+
+00:46.560 --> 00:49.840
+If you have not yet supported or heard of this initiative,
+
+00:49.840 --> 00:53.600
+this is the perfect episode for you to learn all about it.
+
+00:53.600 --> 00:57.200
+Hello and welcome Johannes, thank you so much for joining me today.
+
+00:57.200 --> 01:00.320
+Hi Bonnie and thanks for inviting me.
+
+01:00.320 --> 01:05.840
+I'm really excited to learn all about your connection with free software.
+
+01:05.840 --> 01:10.960
+You have known about free software before you started working for the free Software Foundation Europe.
+
+01:10.960 --> 01:14.880
+But how did you get to know and love free software?
+
+01:14.880 --> 01:19.360
+I think yes, my first contact with free software was in the late 1990s
+
+01:19.360 --> 01:24.000
+a long time ago when I installed Sousa 6 with a friend.
+
+01:24.000 --> 01:28.560
+And I remember hours of excitement typing commands on his computer
+
+01:28.560 --> 01:31.440
+until we finally managed to boot into the graphical system.
+
+01:32.240 --> 01:36.000
+At the time, although I didn't know about the four freedoms,
+
+01:36.000 --> 01:40.640
+I remember feeling like I was owning a computer for the first time released
+
+01:40.640 --> 01:45.040
+something I never experienced with the proprietary software I had used before.
+
+01:45.040 --> 01:48.240
+So I think this was the first contact with free software for me.
+
+01:49.120 --> 01:52.160
+But in the following years, I learned more about free software concepts
+
+01:52.160 --> 01:57.200
+and I switched to using Linux, excited not only by how it empowered me to use computers,
+
+01:57.840 --> 02:03.200
+but also by how it could help society remain free and collaborative in digital age.
+
+02:05.280 --> 02:09.200
+I've been involved in free software policy work since 2010
+
+02:09.200 --> 02:14.480
+and today, second, November, it has been one year since I joined the free software
+
+02:14.480 --> 02:16.480
+foundation Europe as policy project manager.
+
+02:20.720 --> 02:23.200
+Oh my god, that's quite a journey for you.
+
+02:23.200 --> 02:27.600
+Like it's 1990s, so it's 30 years?
+
+02:28.400 --> 02:29.680
+No, let's say 25.
+
+02:33.680 --> 02:34.640
+Oh my god.
+
+02:34.640 --> 02:35.680
+Yeah, a long time.
+
+02:36.480 --> 02:40.880
+And you have a free software, have you ever had a feeling of regret
+
+02:41.680 --> 02:46.000
+where you're always excited and had the feeling, oh my god, yes, I'm the person in charge.
+
+02:47.760 --> 02:51.200
+I really stick to free software and for my private use,
+
+02:51.200 --> 02:57.280
+absolutely during my last job, I had to use some proprietary systems and software
+
+02:57.280 --> 03:04.720
+and I really felt like, oh, I didn't really think I ever had to go back to this.
+
+03:04.720 --> 03:08.720
+So, but now with the free software foundation Europe, that's of,
+
+03:10.160 --> 03:11.600
+yeah, good again.
+
+03:12.880 --> 03:14.560
+Awesome, I'm really glad to hear that.
+
+03:16.320 --> 03:21.520
+Also, you have worked for, or you have loved free software, let's say, like that for a long time.
+
+03:22.320 --> 03:25.040
+You recently started your work with the FSFE.
+
+03:25.920 --> 03:30.720
+So, in this time, you have mainly worked on the public money, public code initiative.
+
+03:31.520 --> 03:37.600
+Can you tell me a bit about what's this initiative, all about what's so important for you
+
+03:37.600 --> 03:40.640
+in this initiative? And yeah, just give me a quick introduction.
+
+03:41.120 --> 03:44.880
+Yeah, sure, tell me if it's too long, try to keep it quick.
+
+03:45.760 --> 03:50.320
+Yeah, so we have this very simple claim for our public money, public code initiative.
+
+03:51.280 --> 03:56.560
+We want legislation requiring that publicly finance software developed for the public sector,
+
+03:56.560 --> 04:01.200
+be made publicly available under free and open source software license.
+
+04:01.200 --> 04:03.600
+If it is public money, it should be public code as well.
+
+04:04.160 --> 04:08.720
+Code paid by the people should be available to the people, as simple as that.
+
+04:08.720 --> 04:10.640
+So, why are we demanding this?
+
+04:11.280 --> 04:14.880
+The free software foundation Europe has been around for over 20 years now,
+
+04:14.880 --> 04:19.600
+and since the beginning, we have been trying to convince public bodies to use and procure
+
+04:19.600 --> 04:26.000
+free software. There is a useful political lever here and public institutions are among
+
+04:26.000 --> 04:31.520
+the biggest buyers of IT technology. I think up to 27% of software companies' revenues
+
+04:31.520 --> 04:37.520
+from public administrations and institutions. So, at some point, we realized that we needed a
+
+04:37.520 --> 04:42.960
+dedicated initiative for this. And that's why we came up, I think, six years ago with the idea
+
+04:42.960 --> 04:49.040
+of public money, public code. This framework gives us the opportunity to get in touch directly
+
+04:49.040 --> 04:54.640
+with decision makers, but also people from the administrations and explain to them why they
+
+04:54.640 --> 04:58.000
+should use free software and how they can move in this direction.
+
+04:58.720 --> 05:04.320
+So, public money, public code targets the whole of Europe, all political and all administrative
+
+05:04.320 --> 05:09.280
+levels. And we deliberately speak of an initiative or framework, not a campaign,
+
+05:09.280 --> 05:13.840
+because pressure from the street is certainly not the means of choice in this kind of political
+
+05:13.840 --> 05:20.160
+work. One big success of public money public code is that we have made the topics of free software
+
+05:20.240 --> 05:26.480
+and public code accessible to parties from the entire political spectrum. So, it's kind of
+
+05:26.480 --> 05:32.400
+depoliticized in the sense of it doesn't belong only to one part of the political spectrum,
+
+05:32.400 --> 05:39.200
+it is opposed by the other parties. So, what do we do with this framework? This is really what
+
+05:39.200 --> 05:45.280
+you were asking about. We have this catchy and successful slogan, which is very good to explain
+
+05:45.440 --> 05:51.200
+what we want to achieve. And it's here everywhere, like everybody keeps saying public money,
+
+05:51.200 --> 05:57.200
+public code. Yeah, it has really become widely known during the last years, which is good.
+
+05:58.800 --> 06:05.520
+We have a special brochure for public money public code, which we have developed for politicians
+
+06:05.520 --> 06:11.360
+and administrations. It contains best practices, experiences, success stories of other institutions
+
+06:11.760 --> 06:17.280
+and administrations. There are definitions, arguments, information on the economic relevance of
+
+06:17.280 --> 06:22.240
+free software and procurement also. I think it's a great tool to get started with the topic and
+
+06:22.240 --> 06:29.280
+to convince people. It can be downloaded from our website, fsfe.org, and you can audit as well
+
+06:29.280 --> 06:35.040
+as a printed version free of charge. By the way, the brochure is by now some years old already,
+
+06:35.040 --> 06:40.400
+and we plan to publish a new version with new best practices in some time next year,
+
+06:40.400 --> 06:48.560
+probably mid 2024. What else do we have there? It's of course our open letter, which currently more
+
+06:48.560 --> 06:55.840
+than 36,000 individual signatories, and more than 200 organizations have decided to sign the open
+
+06:55.840 --> 07:00.800
+letter also, including several administrations that have committed themselves to public money
+
+07:00.800 --> 07:08.560
+public code. For example, there's this Norwegian labor and welfare administration, they account up for
+
+07:09.280 --> 07:18.720
+one third of the Norwegian state budget. We have as well big as small administrations
+
+07:19.680 --> 07:24.960
+committed to public money public code by signing the open letter. We have an explanatory video
+
+07:24.960 --> 07:32.160
+in many languages. You can find it as well on fsfe.org or media.fsfe.org, as well as
+
+07:32.320 --> 07:37.760
+campaigning material. We have dedicated mailing lists for stakeholders from German municipalities,
+
+07:39.200 --> 07:45.920
+and of course our website publiccode.eu, which is landing page and information page about the whole
+
+07:45.920 --> 07:51.760
+initiative. And with this initiative, we also want to be kind of a hub for the community for
+
+07:51.760 --> 07:57.760
+stakeholders and for public administrations, enabling them to connect and to learn from each other
+
+07:57.840 --> 08:04.720
+and see how they can benefit from the experiences made in other administrations. So more. Yeah, short
+
+08:04.720 --> 08:10.400
+introduction. To what it is about in all the campaign material, that's quite a lot.
+
+08:11.760 --> 08:18.240
+And it has grown. I have to feeling like it's become one of the most well-known initiatives
+
+08:18.240 --> 08:26.240
+by the fsfe. Yes, definitely. So I think as you already said, the slogan public money public code is
+
+08:28.240 --> 08:33.920
+widely known by now. Many administrations not only in our fsfe.org bubble. Let's put it like that,
+
+08:33.920 --> 08:44.000
+but also in the whole administration digitization scene. So if you come up with public money public
+
+08:44.000 --> 08:52.720
+code, at least most people get an idea of what you're focusing on and what you're talking about,
+
+08:52.720 --> 08:59.600
+and you can start explaining more about this then. Why do you think it's such an important initiative?
+
+09:02.240 --> 09:07.520
+Well, for administrations, we think it's very important to opt for using free software instead
+
+09:07.520 --> 09:13.840
+of proprietary software. And there are several reasons for this. First proprietary software comes
+
+09:13.840 --> 09:19.120
+with a vendor login, whereas free software and open standards enable interoperability across
+
+09:19.120 --> 09:25.200
+institutions, across systems, and across versions. So this is the prerequisite for independence,
+
+09:25.200 --> 09:32.480
+and I think the cornerstone also for digital sovereignty, which is a term which has been
+
+09:32.480 --> 09:37.920
+discussed a lot during the last years. Second, free software enables collaboration. So public
+
+09:37.920 --> 09:41.840
+administrations can work together and tender or develop software tailored to the needs.
+
+09:42.720 --> 09:48.720
+This kind of collaboration may still be new to many public administrations, especially when it comes
+
+09:48.720 --> 09:54.160
+to code development. However, as the benefits of free software become more widely known,
+
+09:54.160 --> 09:59.040
+more and more administrations also want to collaborate and learn from how others have done it.
+
+10:00.640 --> 10:07.120
+Third free software supports sustainability, because once these effects are just described and
+
+10:07.120 --> 10:13.200
+the one for all principle have taken full effect, administrations no longer have to constantly reinvent
+
+10:14.160 --> 10:19.680
+especially in local administrations, similar processes and services exist in many different places.
+
+10:20.400 --> 10:26.720
+If you, for example, think about dock licensing or something like that, which is really a service
+
+10:26.720 --> 10:35.600
+that is needed in practically every municipality, every community in all countries. So it's the same
+
+10:35.600 --> 10:41.040
+all over the world. Why do administrations all over the world buy licenses for this of proprietary
+
+10:41.040 --> 10:45.280
+software products? Why don't they work together and make sure they have a tool that really needs
+
+10:45.280 --> 10:53.120
+their needs? One more point, the long run free software will save money. If you think about how much
+
+10:53.120 --> 10:59.280
+money administrations spend on proprietary licenses, if they just invest that money into free software,
+
+10:59.280 --> 11:08.160
+tax money would be saved and used more efficiently. And by these administrations and public
+
+11:08.160 --> 11:13.680
+administrations can also strengthen local partners from the local economy, especially small and
+
+11:13.680 --> 11:20.400
+medium enterprises, which might or will probably lead to more innovation by opening up this very
+
+11:20.400 --> 11:27.520
+close market that we have now with the proprietary software market to new competitors. And finally,
+
+11:27.520 --> 11:34.000
+free software is transparent by default. So the code is verifiable by independent third parties
+
+11:34.000 --> 11:38.400
+and security vulnerabilities are more likely to be found and can be fixed immediately,
+
+11:39.200 --> 11:45.840
+which, as we know, also leads to a higher acceptance of the whole digitalization of administrative
+
+11:45.840 --> 11:53.440
+services by the citizens. I think these are really good reasons for administrations to think of
+
+11:53.440 --> 11:58.000
+moving in the direction of free software and think of implementing public money, public code.
+
+11:58.000 --> 12:09.040
+How and why do you think it has a wider acceptance with the public or the civil society
+
+12:09.040 --> 12:16.880
+if public institutions would use free software? Yes, so I think for for myself and I think also for
+
+12:16.880 --> 12:24.240
+many citizens, if I want to use a digital service, especially new digital service, where
+
+12:24.240 --> 12:31.920
+switch from analog filling out forms to using my computer to ordering something or
+
+12:34.080 --> 12:39.440
+with an administration, then I really want to make sure that the program does what it should do
+
+12:39.440 --> 12:46.800
+and doesn't do anything else that my data is being handled carefully and doesn't end up maybe on
+
+12:46.800 --> 12:57.840
+a server somewhere out our own jurisdiction, which is very important. So I think we also know
+
+12:57.840 --> 13:05.840
+from studies during the corona pandemics that if people see that the software they are using for
+
+13:05.840 --> 13:16.320
+these digital services is transparent, they will rather take a step forward to choosing to really
+
+13:16.320 --> 13:22.320
+use them. And to also trust that the data is handled carefully and don't just link to some
+
+13:22.320 --> 13:28.240
+large companies who then sell it for profit. This comes additionally, yes, absolutely.
+
+13:29.520 --> 13:36.800
+How can institutions support public money, public code? So like if there is a public institution
+
+13:36.800 --> 13:45.040
+out there that says, oh yeah, I know it's important that we stick to the data laws that we protect
+
+13:45.040 --> 13:52.800
+that of civilians that we also do not waste the taxpayers' money on millions and millions of licenses
+
+13:52.800 --> 13:59.120
+for proprietary software. And how can those institutions support public money, public code?
+
+13:59.120 --> 14:05.200
+Because they obviously can't just change the whole infrastructure. And we have talked about this
+
+14:05.200 --> 14:10.880
+for a long time. We have said, you don't need to change everything overnight. It's a policy
+
+14:11.680 --> 14:21.760
+decision. How can they support? So what we have in mind with public money, public code is a
+
+14:21.760 --> 14:28.800
+continuous long-term process towards free software rather than this big bang migrations that we already
+
+14:28.800 --> 14:35.840
+have seen failed in the past, which are really complex. And often I've seen as lighthouse projects.
+
+14:36.080 --> 14:40.640
+So if they fail, the public tends to blame free software for that failure. Also, it's not good for
+
+14:40.640 --> 14:46.880
+their administrations. So public money, public code, therefore, more aims for incremental movement
+
+14:46.880 --> 14:53.760
+towards free software. Yeah, and you were asking, how can they take the first steps if they really
+
+14:53.760 --> 14:59.360
+want to do that? So of course, they can start learning more about free software, public code,
+
+14:59.360 --> 15:04.720
+and about the benefits that it brings to their work and to society. I think our brochure,
+
+15:04.720 --> 15:08.960
+I already mentioned it with best practices and how to use a good introduction, a good first step.
+
+15:10.400 --> 15:14.800
+And as I also said for interested stakeholders from German municipalities, only Germany, sorry,
+
+15:14.800 --> 15:20.400
+at this point, we have a mailing list for exchange and seeking synergies registering.
+
+15:20.400 --> 15:25.360
+It's really easy. So maybe we can also put the link in the show notes. Yes.
+
+15:26.960 --> 15:31.520
+Yes. And we like to encourage administrations,
+
+15:31.520 --> 15:37.280
+willing to move into this direction instead of doing this kind of big bang migrations,
+
+15:37.840 --> 15:42.880
+rather start putting their own developments in the free software licenses and design tenders
+
+15:42.880 --> 15:48.960
+and procurement procedures to ensure that public code is created. And of course, we welcome all
+
+15:48.960 --> 15:53.600
+administrations committed to public money, public code to sign our open letter, calling for public
+
+15:53.600 --> 15:58.560
+code legislation as explained above. And I think we will also put this link in the show notes.
+
+15:59.200 --> 16:06.400
+Yes. Does signing the open letter has any immediate consequences or is it more taking a stand
+
+16:06.400 --> 16:12.720
+and saying, Hey, I'm in favor of this and showing also like the parliamentarians,
+
+16:12.720 --> 16:18.880
+oh, I would really like us as public institutions to follow those rules and to
+
+16:19.600 --> 16:25.440
+implement free software. Please help us with laws and guide us in this direction.
+
+16:26.160 --> 16:33.760
+It's I would say it's both of course. Yes. We want to give visibility to these administrations
+
+16:33.760 --> 16:38.880
+and public institutions that decide to support public money, public code. So we are adding
+
+16:38.880 --> 16:44.320
+the new signatories to our PMPC website, so public money, public code website. Sorry if I
+
+16:44.320 --> 16:50.240
+accidentally stick to PMPC, which is our abbreviation for it, which we also use it internally.
+
+16:50.800 --> 16:57.360
+So we are adding the new signatories to public code.eu. And with some of them, if they agree,
+
+16:57.360 --> 17:02.480
+we conduct interviews to be published also on our website and social media channels as best
+
+17:02.480 --> 17:06.960
+practice examples. And some of these examples can also be found in the public money, public code
+
+17:06.960 --> 17:11.920
+pressure. We believe that the more institutions commit themselves publicly to free software,
+
+17:11.920 --> 17:18.000
+the easier it will be for others to follow suit and do the same. So it's really something that
+
+17:18.560 --> 17:25.440
+does have effect for the administrations in the sense that we want to show that they are supporting
+
+17:26.400 --> 17:35.840
+this call, this initiative. How do you like contact public institutions or do the public
+
+17:35.840 --> 17:42.080
+institutions or public bodies find the open letter by themselves? And if you contact them,
+
+17:42.640 --> 17:49.440
+how do they react? Yes, again, also here, both happens. So there are administrations that
+
+17:49.440 --> 17:55.600
+are public institutions that contact us and say, hey, we like your idea of public money, public
+
+17:55.600 --> 18:02.960
+code. And we would like to be part of that. So how can we do that? But we also reach out to
+
+18:03.600 --> 18:09.760
+public administrations across Europe. And there we try to target administrations that already
+
+18:09.760 --> 18:16.240
+have some ties to free software or where we see potential. So we get all kinds of reactions.
+
+18:16.240 --> 18:21.200
+We see we can see that many administrations are curious about this idea of public money, public
+
+18:21.200 --> 18:26.480
+code. And this often leads to video call where we get to know each other, where we can talk about
+
+18:26.480 --> 18:32.160
+the concepts and benefits of public code. We can find out what their current situation is,
+
+18:32.160 --> 18:38.160
+where they are, if they already know a lot or at the very beginning, we can answer their
+
+18:38.160 --> 18:42.880
+questions and address their fears and reservations if there are any. And often there are some
+
+18:44.240 --> 18:50.240
+fears and reservations. So sometimes, of course, we also find that we are preaching to the choir
+
+18:50.240 --> 18:55.360
+and don't need to convince them to sign the open letter because they do it deliberately.
+
+18:56.560 --> 19:00.800
+However, we also see that many institutions are more interesting in learning about the topic
+
+19:00.800 --> 19:05.920
+and exchanging ideas with other institutions. So we can provide them with contacts or if they
+
+19:05.920 --> 19:11.280
+are from Germany, invite them to this mailing list I've been talking about. So these kinds of
+
+19:11.280 --> 19:17.440
+conversations are really valuable to us as well. And even if they ultimately decide not to sign the
+
+19:17.440 --> 19:23.920
+letter for now, not to commit publicly to public money, public code for now, they get the chance
+
+19:23.920 --> 19:27.920
+to learn about free software and they may be more open to the idea in the future.
+
+19:28.080 --> 19:41.280
+So those were the aims or those were the approaches that you focused on in the past. Now I hear they
+
+19:41.280 --> 19:52.160
+have been some changes in the strategy as well. Those changes, can you explain them a bit to me and
+
+19:53.120 --> 20:03.120
+yeah, let me know why there have been those changes in the strategy or especially in our work
+
+20:03.120 --> 20:10.720
+on public money, public code. Yes, public money, public code initiative has now been running for
+
+20:10.720 --> 20:16.480
+more than six years and we see more and more free software strategies and announcements and
+
+20:16.560 --> 20:24.800
+politics and administrations to move towards public code. That's paper doesn't blush. We are
+
+20:27.040 --> 20:34.160
+we are often, yes, if you see what's happening actually, we often are missing concrete progress and
+
+20:34.160 --> 20:38.160
+this is a decisive implementation of free software friendly papers and legislations.
+
+20:38.880 --> 20:43.520
+Also, many of these papers contain loopholes. For example, if you take the European Commission's
+
+20:43.520 --> 20:50.160
+free software strategy, it allows a nose citation to choose non-open technologies where
+
+20:50.160 --> 20:55.680
+there are good reasons to do so and to publish software under free software license only wherever
+
+20:55.680 --> 21:03.200
+it makes sense to do so. So what are these reasons and when does something make sense, this really
+
+21:03.200 --> 21:08.480
+remains undefined and this is a loophole that really allows at any point to step back and say,
+
+21:08.560 --> 21:13.200
+oh no, this time we rather use proprietary products instead of opting for free software.
+
+21:13.920 --> 21:19.280
+Also, what we see is that clear targets and indicators are often missing. More than good
+
+21:19.280 --> 21:24.400
+intentions, we need statistics on the actual development, on procurement and on the use of
+
+21:24.400 --> 21:29.360
+free software and public administrations because we want to see if there is any progress and at the
+
+21:29.360 --> 21:37.040
+moment we don't have these statistics so it's hard for us to judge. This is why we during the last
+
+21:37.040 --> 21:42.800
+year have decided to shift the focus of the PMPC or public money public code framework a bit.
+
+21:43.440 --> 21:47.280
+We still want to encourage decision makers and administrations to move into this direction,
+
+21:47.920 --> 21:53.040
+to move into the direction of free software, but at the same time we want to take a watchdog role
+
+21:53.040 --> 22:01.520
+where we see problematic developments. Okay, so this is called PMPC watchdog, right?
+
+22:02.320 --> 22:12.400
+Right. Do you then check out all the strategy papers or how does this work? Could you explain
+
+22:12.400 --> 22:19.600
+there's a bit more to me like how I now totally understand why it's needed as you already said,
+
+22:19.600 --> 22:25.680
+people tend to write a lot, but just don't mean that they really do that.
+
+22:26.320 --> 22:33.520
+Yes, let me first say that steps in the right direction are always good and even if they are slow
+
+22:33.520 --> 22:39.040
+and even if we sometimes wish for more and faster progress we want to support and help and give
+
+22:39.040 --> 22:43.920
+advice and encourage and connect people to work together towards public code and administrations.
+
+22:45.440 --> 22:50.720
+But why have we chosen this to take this or to focus on this watchdog part
+
+22:51.680 --> 22:59.680
+is that we think we have reached a critical moment for free software. Some years ago free software
+
+22:59.680 --> 23:08.400
+and digital sovereignty were always mentioned in the same breath just yeah so it was clear to everybody
+
+23:08.400 --> 23:13.440
+that digital sovereignty for public administrations could only be reached with free software.
+
+23:13.440 --> 23:18.960
+Now increasingly many argue that digital sovereignty can also be guaranteed with proprietary software
+
+23:18.960 --> 23:23.680
+if only the servers are located in Europe or in Germany or any other country in Europe.
+
+23:23.680 --> 23:29.440
+So this leaves the concept of digital sovereignty far behind its potential and another problem arises
+
+23:30.080 --> 23:36.240
+when the terms free and open are used inflationarily for software that is not actually free software.
+
+23:36.240 --> 23:41.680
+So when projects call themselves free software or open source although the four freedoms are not
+
+23:41.680 --> 23:48.000
+granted and not even the source code is available this is very problematic and it can harm public
+
+23:48.000 --> 23:55.360
+money public code and it can harm free software. This is why we want to go in this direction by
+
+23:55.360 --> 24:00.960
+identifying and naming such undesirable developments and hopefully preventing them.
+
+24:02.480 --> 24:10.080
+And you are asking about how we are actually doing this so if you want I could give you
+
+24:10.800 --> 24:19.280
+one or two examples from our current work. So these are both from Germany which I apologize for
+
+24:19.280 --> 24:24.880
+the reason is that I've been mainly working with a focus on Germany during the last year.
+
+24:27.040 --> 24:33.200
+But yes so the first one is the German governmental parties have in their
+
+24:33.200 --> 24:38.800
+coalition contract announced to come up with legislation in favor of public money public code.
+
+24:38.800 --> 24:44.240
+This was two years ago and the coalition has failed to live up to this promise until now.
+
+24:44.960 --> 24:50.800
+Even worse the federal government until now continues to rely on proprietary software.
+
+24:51.520 --> 24:59.280
+In the 2024 budget for example 3.8 billion of euros are marked for the proprietary oracle cloud
+
+25:00.240 --> 25:07.600
+why the at the same time they're already far too small funds for digital sovereignty and by this
+
+25:07.600 --> 25:15.520
+also for free software are to be cut by almost by half in the new budget so from they had been
+
+25:16.640 --> 25:23.680
+48 million compared to these 3.8 billion euros for oracle and now they're even cut.
+
+25:24.640 --> 25:30.160
+What we did here is we formed a broad alliance of civil society and the free software industry
+
+25:30.160 --> 25:35.120
+and we publicly criticized the German government and called it to implement the promised free
+
+25:35.120 --> 25:42.720
+software friendly policy and also to provide the necessary funds before the current legislative
+
+25:43.200 --> 25:52.080
+period is over so it's time now to act and we yeah we call the government to action here before
+
+25:52.080 --> 26:00.080
+it's too late and one other example with a bit different perspective for what watchdog means
+
+26:01.840 --> 26:08.800
+we have in Germany a situation where some politicians and decision makers have identified the
+
+26:08.800 --> 26:15.920
+need of a sovereign workspace for the public sector so this means a digitally sovereign office
+
+26:15.920 --> 26:21.840
+and collaboration suits including documents storage email calendar chat online meeting rooms
+
+26:21.840 --> 26:26.480
+so everything that people and administrations need for the daily work for the daily computer work
+
+26:27.440 --> 26:33.200
+and for long the most advanced approach to this was the so-called Definix suite
+
+26:34.000 --> 26:41.440
+Definix suite developed by the public IT service provider data port. Definix contains numerous
+
+26:41.440 --> 26:46.560
+free software components and is advertised as open source based on open source and also digitally
+
+26:46.560 --> 26:52.160
+sovereign and this gives the false impression that Definix suite is free software. Data port
+
+26:52.960 --> 26:58.400
+has really not yet released the source code for its workspace suit despite being repeatedly
+
+26:58.400 --> 27:05.840
+asked to do so by eligible parties. Data port also had an interest in transparent relationship
+
+27:05.840 --> 27:10.080
+with a with a similar project run by the center for digital sovereignty at the German
+
+27:10.080 --> 27:16.560
+Federal Ministry of the Interior which is called open desk and when being asked for its source code
+
+27:16.560 --> 27:22.000
+for the Definix source code data port officials usually refer to open desk where until the summer
+
+27:22.000 --> 27:29.440
+new code was also available either um yeah and after we were not successful in obtaining the source
+
+27:29.440 --> 27:35.440
+code of Definix from data port we decided to tackle this by sending a catalog of questions to the
+
+27:35.440 --> 27:41.680
+German Ministry asking about ties between both projects about funding and about their plans to
+
+27:41.680 --> 27:46.640
+publish the source code under free software license and how their current policy of not having
+
+27:46.640 --> 27:52.640
+published it complies to the plans of um yeah of the German government to move towards public
+
+27:52.640 --> 27:59.440
+money public code. We published this question catalog and we also published the answers on fsfe.org
+
+27:59.440 --> 28:04.320
+pointing out some promising steps in the right direction on in the right direction on the
+
+28:04.320 --> 28:11.760
+side of open desk but we also clarified that Definix is currently not free software and we demanded
+
+28:11.760 --> 28:16.880
+that they should either release the code under free software license or step away from claiming to
+
+28:16.880 --> 28:24.320
+be free software. So this is something that that we did during during the summer by now we see
+
+28:24.320 --> 28:30.640
+that open desk has since already I think end of June or July has published its source code so as I
+
+28:30.640 --> 28:40.160
+said there are some hopeful movements on this part and at the same time with data port and this
+
+28:40.160 --> 28:47.760
+Definix yeah what they did is they are not using the terms open source for themselves anymore
+
+28:48.720 --> 28:58.960
+so they don't claim to be free software anymore which is not what we would wish to it would be
+
+28:58.960 --> 29:05.200
+better if they it would just put the whole Definix suite under an open under free software license
+
+29:06.480 --> 29:15.760
+but if they are not willing to do that it's better they yeah they admit not to be free software
+
+29:15.760 --> 29:25.600
+than claiming to be yes and at the same time so while doing all this we we always try to keep
+
+29:26.480 --> 29:31.120
+discussion channels open so we remain open to discuss these issues with all stakeholders we try to
+
+29:31.120 --> 29:35.760
+find out if and how the situation can be improved and how we can help them with this this is also
+
+29:35.760 --> 29:43.360
+very important to us so it's not trying to suddenly start opposing administrations
+
+29:45.520 --> 29:52.400
+but try to keep in contact and try to see where we can help and how we can improve the situation.
+
+29:52.880 --> 30:01.280
+so there are kind of like two strategies currently there is the one of our people to start with
+
+30:01.280 --> 30:09.360
+public money public code and then there is the one that also tries to keep the name sticking to
+
+30:09.360 --> 30:16.880
+the basis of the or to the aims of the initiative so that public money public code as it has become
+
+30:16.880 --> 30:26.320
+a widely known slogan also still means public administrations should use public money for public code
+
+30:27.280 --> 30:37.440
+yes and it's also about helping and yeah guiding institutions in this direction or
+
+30:37.680 --> 30:48.480
+yes definitely it's it's both what you said so we want to encourage and we want to
+
+30:48.480 --> 30:57.120
+a bit guard the yeah at the same time take care that yeah that the terms free software and public
+
+30:57.120 --> 31:05.120
+money public code and digital sovereignty are not watered down so this is very important and
+
+31:05.200 --> 31:10.240
+because if we allow projects to decorate themselves with the terms up source of free software
+
+31:10.240 --> 31:16.240
+but do something completely different then this is bad for taxpayers for digital sovereignty for
+
+31:16.240 --> 31:26.640
+innovation and for society as a whole so I think maybe a catchy summary of what we want to achieve
+
+31:26.640 --> 31:33.520
+with this new watchdog focus is could be thank you for the thank you for the fine words now please
+
+31:33.520 --> 31:39.920
+let the did speak so we want public money public code to become reality across Europe not only
+
+31:39.920 --> 31:45.440
+fine words for this we really need progress we really need implementation of existing policies
+
+31:45.440 --> 31:51.040
+and papers we need statistics and of course we also need to speak up if something is going
+
+31:51.680 --> 31:59.120
+into the wrong direction totally wrong yes sorry you need to speak up if something is going totally
+
+31:59.280 --> 32:10.000
+wrong yes all right and how can people participate in the PMPC initiative how can people support you
+
+32:10.000 --> 32:18.400
+with PMPC watchdog and yeah let us know how we can join you yeah of course so one thing
+
+32:19.040 --> 32:26.480
+everybody can do is go to our website public code.eu sign our open letter which is which is
+
+32:26.480 --> 32:32.640
+really good if it does get more signatures even which increases the visibility of it
+
+32:34.560 --> 32:42.080
+download our material or the material from our website fsfe.org on public money public code spread
+
+32:42.080 --> 32:47.200
+the word spread the word in in your communities especially if you're working in in an administration
+
+32:47.200 --> 32:53.920
+or if you have contacts to people in in administration spread the word about free software and public
+
+32:53.920 --> 33:03.040
+money public code and we have developed yeah we want to empower people to do this with a workshop
+
+33:03.040 --> 33:10.640
+that we have and we can also offer to hold this workshop to tell them how they can reach out to
+
+33:11.360 --> 33:17.920
+to the administrations and what they should be aware of how they can start with all of this and
+
+33:18.640 --> 33:27.600
+how they how they get to open doors how how they get into contact and how they
+
+33:29.120 --> 33:35.520
+yeah how they can really also get some success and what does success mean in the end so we have this
+
+33:35.520 --> 33:43.040
+workshop format and we we try to yeah to give this workshop now and then to empower people to
+
+33:43.760 --> 33:52.400
+to move in this direction another thing that we have is detective detective is a is a tool to
+
+33:52.400 --> 34:00.640
+analyze European tender data which is publicly available but in a format yeah not so easy to
+
+34:00.640 --> 34:06.720
+be read by humans so our detective website helps people and our detective tools help help people
+
+34:06.720 --> 34:14.080
+who want to dig into this and see what to see what money in Europe is is really spent for in the
+
+34:14.080 --> 34:23.360
+MIT sector so do some you can you can go to this website start yeah also linked in the show
+
+34:23.360 --> 34:34.160
+north thank you and just start searching and digging digging into this a bit and see yeah where the
+
+34:34.160 --> 34:40.240
+money flows really go go there in the direction of proprietary license how much money is spent for
+
+34:40.240 --> 34:47.280
+proprietary licenses and how much money is actually spent on free software and other thing is of
+
+34:47.280 --> 34:56.400
+course if yeah anybody sees a problematic development then you can always just drop us a line
+
+34:57.360 --> 35:05.520
+go to fsv.org write us an email and inform us so we can see how we can step in there so
+
+35:07.040 --> 35:11.760
+so that's of course also something that you can do if you see problematic developments just
+
+35:11.760 --> 35:20.240
+inform us about this all right thank you so much for the short introduction to this initiative
+
+35:20.320 --> 35:29.280
+and also the introduction to all the strategies and the work going on there it's quite a catchy
+
+35:29.280 --> 35:35.600
+slogan and it's really a good initiative and a nice initiative to be part of and yeah thank you
+
+35:35.600 --> 35:44.160
+so much for also letting us know how people can so how people can oh my god now I'm missing the
+
+35:44.720 --> 35:55.280
+participates how people can participate all right I do have a last question for you okay so you know
+
+35:56.080 --> 36:05.600
+every year under 14th of February we celebrate I love free software day and even so we do this every
+
+36:05.600 --> 36:13.120
+year it's not an old fashioned initiative okay it's not an old fashioned celebration it is
+
+36:13.120 --> 36:19.760
+important and it's important to let people know we are grateful for their work because on
+
+36:19.760 --> 36:25.760
+this day we reach out to all three software contributors and say thank you thank you so much
+
+36:25.760 --> 36:32.080
+for the work you're doing for free software this helps them to stay motivated this helps us to
+
+36:32.080 --> 36:38.960
+have a nice interaction with each other and not too many salty comments on this day as we all
+
+36:38.960 --> 36:46.560
+know just happening there however it says somebody you would like to say thank you too because we
+
+36:46.560 --> 36:51.840
+should not only do this once a year we should really stick to this and do this more that's great I
+
+36:51.840 --> 37:01.200
+really love this and I remember that last time when you asked me about this I I think next cloud
+
+37:01.200 --> 37:06.160
+because next cloud is to me one of the most fascinating free software projects moving forward so
+
+37:06.160 --> 37:10.960
+fast every new version full of new ideas and new features that really help me in my everyday work
+
+37:10.960 --> 37:17.600
+and also in my private life because I'm also using it privately but yeah as I said I've already
+
+37:17.600 --> 37:21.760
+thanked the folks behind next cloud at the last I love it I said I can do it again so thank you next
+
+37:21.760 --> 37:30.000
+cloud but this time my thanks go to a project I just recently became aware of since I've started to
+
+37:30.000 --> 37:36.240
+use the backup solution bulk base and the desktop client vorta to backup my private data I feel
+
+37:36.240 --> 37:42.560
+much more relaxed when traveling with my laptop so thanks a lot to folks behind bulk days and vorta
+
+37:44.240 --> 37:50.800
+that's really good thank you I would like to add my thanks to them yes it'd be awesome
+
+37:50.800 --> 37:59.520
+doing it yeah yeah it really helps to know that your data is backup and that just in case you might
+
+37:59.520 --> 38:06.480
+need it there to back yeah absolutely really really good to know that all right thank you so much
+
+38:06.480 --> 38:12.240
+for being here Johannes and thank you so much to talking with me about public money public code it
+
+38:12.240 --> 38:17.360
+was really great and yeah thank you so much Bonnie it was really pleasure to be here thanks for having me
+
+38:18.320 --> 38:26.320
+thank you bye bye bye this was the software freedom podcast if you liked this episode please
+
+38:26.320 --> 38:31.760
+recommend it to your friends and rate it stay tuned for more inspiring conversations that explored
+
+38:31.760 --> 38:38.240
+the importance of software freedom and its impact on our digital lives this podcast presented to
+
+38:38.240 --> 38:44.240
+you by the free software foundation europe we are a charity that works on promoting software freedom
+
+38:44.960 --> 38:50.320
+if you like our work please consider supporting us with our nation you find more information
+
+38:50.320 --> 38:57.360
+under fsfe.org slash donate and of course in the show notes see you bye bye

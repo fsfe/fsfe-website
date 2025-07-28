@@ -1,0 +1,955 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:04.640
+Before we start with the podcast, we would like to say thank you to all of you who support
+
+00:00:04.640 --> 00:00:07.740
+the FSFE's work of money.
+
+00:00:07.740 --> 00:00:12.760
+Working for software freedom and producing podcasts costs money.
+
+00:00:12.760 --> 00:00:18.200
+Please consider supporting us with our nation under FSFE.org, slash donate and in the
+
+00:00:18.200 --> 00:00:19.200
+show notes.
+
+00:00:30.000 --> 00:00:36.880
+Welcome to the software freedom podcast.
+
+00:00:36.880 --> 00:00:40.760
+This podcast is presented to you by the free software foundation Europe.
+
+00:00:40.760 --> 00:00:45.640
+We are a charity that empowers users to take control of technology.
+
+00:00:45.640 --> 00:00:50.040
+I'm Bonnie Merring and our guest for this episode is Alexander Sandar.
+
+00:00:50.040 --> 00:00:56.880
+Alex is a colleague of mine and he's also the senior policy consultant for the FSFE.
+
+00:00:56.880 --> 00:01:02.360
+In his work for the FSFE, he monitors the current happenings in the EU and pushes for
+
+00:01:02.360 --> 00:01:05.960
+recognition of free software there.
+
+00:01:05.960 --> 00:01:11.880
+Today we will talk a bit about funding of free software and especially the case of the
+
+00:01:11.880 --> 00:01:17.920
+NLNet foundation and thereby the funding of the next generation internet.
+
+00:01:17.920 --> 00:01:24.320
+Through the next generation internet program, free software projects are funded by public
+
+00:01:24.320 --> 00:01:25.320
+money.
+
+00:01:25.320 --> 00:01:30.280
+But this funding was actually cut by 27 million euros.
+
+00:01:30.280 --> 00:01:35.960
+When this news reached the FSFE and Alex, we decided to take action.
+
+00:01:35.960 --> 00:01:41.880
+About this and the latest developments, I will talk more with Alex in the next few minutes.
+
+00:01:41.880 --> 00:01:43.200
+So thank you very much Alex.
+
+00:01:43.200 --> 00:01:48.040
+I'm very, very happy to have you here at the software freedom podcast, especially since
+
+00:01:48.040 --> 00:01:49.240
+we do a lot together.
+
+00:01:49.240 --> 00:01:56.720
+So we do the EU packing for freedom competition for young teenagers, we occasionally work
+
+00:01:56.720 --> 00:02:02.400
+together on public money, public code and now we also do the software freedom podcast
+
+00:02:02.400 --> 00:02:03.400
+together.
+
+00:02:03.400 --> 00:02:07.520
+Thank you so much for making this possible and for finding the time to talk to me.
+
+00:02:07.520 --> 00:02:08.520
+Yeah.
+
+00:02:08.520 --> 00:02:09.520
+Thanks for having me, Bonnie.
+
+00:02:09.520 --> 00:02:14.320
+And I'm also looking forward to talk to you and our community about this very important
+
+00:02:14.320 --> 00:02:15.520
+issue in the next minutes.
+
+00:02:15.520 --> 00:02:18.480
+Look really looking forward.
+
+00:02:18.480 --> 00:02:24.360
+So just to give everybody a quick interaction, could you tell us a bit more of what an
+
+00:02:24.360 --> 00:02:30.640
+Lnet is and what the next generation internet program is and what actually happened there?
+
+00:02:30.640 --> 00:02:34.560
+How did this cut of 27 million happen?
+
+00:02:34.560 --> 00:02:35.560
+Yeah.
+
+00:02:35.560 --> 00:02:36.560
+I will try.
+
+00:02:36.560 --> 00:02:44.400
+A lot of questions and it's also a bit complex with all the words, but I'll give it a try.
+
+00:02:44.400 --> 00:02:49.600
+So first of all, you already said the next generation internet program.
+
+00:02:49.600 --> 00:02:57.800
+So this is basically a front which helps you come up with solutions that help people
+
+00:02:57.800 --> 00:03:04.160
+in the internet and here with a specific focus on free software, right?
+
+00:03:04.160 --> 00:03:09.680
+So because we know free software visits for freedoms to use, study, share and improve
+
+00:03:09.680 --> 00:03:14.960
+definitely helps to gain control over the technology you are using.
+
+00:03:14.960 --> 00:03:22.960
+And that is acknowledged in this fund and thus this fund provides financial support to projects
+
+00:03:22.960 --> 00:03:28.600
+like Jitsi, Kripport, F1, peer tube and other projects you might know.
+
+00:03:28.600 --> 00:03:33.840
+And here you can already see the money is not going to big tech, but rather to community
+
+00:03:33.840 --> 00:03:39.160
+projects, to small project, individual projects, projects by foundations.
+
+00:03:39.160 --> 00:03:45.000
+So it's about basically the core infrastructure that we are using every day when we are
+
+00:03:45.000 --> 00:03:48.080
+going in the internet.
+
+00:03:48.080 --> 00:03:53.440
+So it's more small projects that are funded by the NGI.
+
+00:03:53.440 --> 00:03:59.800
+So the NGI project basically funds up to around 500 projects, right?
+
+00:03:59.800 --> 00:04:06.960
+So there are many projects around all of them pretty like on the size of Jitsi, Kripport,
+
+00:04:06.960 --> 00:04:08.520
+have tried stuff like this, right?
+
+00:04:08.520 --> 00:04:12.480
+So but you won't find any gurus or Microsoft's in this fund.
+
+00:04:12.480 --> 00:04:14.480
+All right.
+
+00:04:14.480 --> 00:04:22.520
+And also the next generation internet is part of a bigger program, namely the Horizon Europe
+
+00:04:22.520 --> 00:04:23.520
+program.
+
+00:04:23.520 --> 00:04:29.760
+The Horizon Europe program is a research, the framework research program of the European Union
+
+00:04:29.760 --> 00:04:35.480
+and their money is distributed as a name says, obviously, into research projects.
+
+00:04:35.480 --> 00:04:41.920
+So here you can normally find pilot projects, one time projects, maybe sometimes project
+
+00:04:41.920 --> 00:04:45.440
+that go for a second term, a second one.
+
+00:04:45.440 --> 00:04:49.440
+But normally it's like a one project thing, then you have done your research, you found
+
+00:04:49.440 --> 00:04:51.800
+your results, and then you continue.
+
+00:04:51.800 --> 00:04:58.040
+So you see it's slightly different than what you have in mind when you were thinking
+
+00:04:58.040 --> 00:05:02.080
+about like investing in encryption of Jitsi, for example.
+
+00:05:02.080 --> 00:05:10.160
+So that's also some kind of research, definitely, but it's rather investing in our core infrastructure.
+
+00:05:10.160 --> 00:05:19.000
+So you can already see that there is a slight issue with the frame of this funding.
+
+00:05:19.000 --> 00:05:22.320
+But however in the last years, it worked out perfectly.
+
+00:05:22.320 --> 00:05:30.960
+So in this next generation internet program, the Net Foundation, a foundation from the Netherlands,
+
+00:05:30.960 --> 00:05:35.560
+they were distributing the funds to these tiny free software project that helped to improve
+
+00:05:35.560 --> 00:05:36.560
+their code.
+
+00:05:36.560 --> 00:05:41.400
+And by thus, we had way better tools than out there than before.
+
+00:05:41.400 --> 00:05:45.200
+And this should have continued until 2027, basically.
+
+00:05:45.200 --> 00:05:47.880
+And for this, there are work programs.
+
+00:05:47.880 --> 00:05:52.600
+So for every two years, the European Commission, together with the member states of the European
+
+00:05:52.600 --> 00:05:58.440
+Union, write on a work program to come up with a sketch, basically, to say what should
+
+00:05:58.440 --> 00:06:02.560
+happen, where should the money go roughly in the next two years?
+
+00:06:02.560 --> 00:06:06.640
+So in this work program, that was exactly, yeah.
+
+00:06:06.640 --> 00:06:11.640
+And that work program that was released during the summer break.
+
+00:06:11.640 --> 00:06:19.120
+And when I say released, it was publicly released, but it was basically released towards
+
+00:06:19.120 --> 00:06:24.160
+the member state with the European Union, but it was not released to the public.
+
+00:06:24.160 --> 00:06:29.560
+In this work program, we have seen that there is a cut of this budget for free software.
+
+00:06:29.560 --> 00:06:34.280
+27 millions that we expected to be there, haven't been there.
+
+00:06:34.280 --> 00:06:36.160
+So there was simply nothing.
+
+00:06:36.160 --> 00:06:38.640
+So we figured this out with a leak.
+
+00:06:38.640 --> 00:06:45.320
+And then we got active because we have seen during the summer 27 millions that had to
+
+00:06:45.320 --> 00:06:51.480
+be assigned to free software projects, right to do these Gizzi project script, and so on
+
+00:06:51.480 --> 00:06:56.200
+and so forth, the examples I mentioned for the next two years, they have been cut.
+
+00:06:56.200 --> 00:07:01.440
+That was the situation in the summer, and then we started to work.
+
+00:07:01.440 --> 00:07:09.160
+So this leak reached our ears, and we decided to work, but how did you feel at the moment
+
+00:07:09.160 --> 00:07:15.040
+when you noticed, oh my god, okay, where are the 27 millions, where have they gone?
+
+00:07:15.040 --> 00:07:20.160
+Yeah, I'm not sure if I can like publicly say what I really felt, but let's put it like
+
+00:07:20.160 --> 00:07:29.600
+this, I was pretty upset, yeah, and also I was, to be honest, I didn't expect it, and
+
+00:07:29.600 --> 00:07:34.320
+I haven't seen it coming because in the beginning of the year, at first, then the
+
+00:07:34.320 --> 00:07:39.440
+largest free software conference in the world, which is happening in Brussels, always the
+
+00:07:39.440 --> 00:07:46.200
+first week and in February, there we invited to commission in our death room to talk about
+
+00:07:46.200 --> 00:07:52.320
+this NGI funding, and there they presented a study where they showcased how important
+
+00:07:52.320 --> 00:07:57.120
+this NGI funding is, how good this funding is, how well everything works, and how important
+
+00:07:57.120 --> 00:08:02.800
+this is not only for the tools itself and our consumers, but also for the European Union,
+
+00:08:02.800 --> 00:08:09.400
+right, so all in the studies, they presented there, showed how important and how good
+
+00:08:09.400 --> 00:08:10.400
+this funding is.
+
+00:08:10.400 --> 00:08:15.080
+It was in the beginning of the year, and then during the summer break, there was this
+
+00:08:15.080 --> 00:08:20.360
+budget cut, so I definitely started to call people, I was asking around what happened,
+
+00:08:20.360 --> 00:08:25.200
+and then I figured out, wow, they shifted the money towards AI.
+
+00:08:25.200 --> 00:08:31.040
+So instead of bringing these 27 million euros into free software and build, they decided
+
+00:08:31.040 --> 00:08:37.560
+they wanted to shift it towards AI, and the argument was pretty much as these funds
+
+00:08:37.560 --> 00:08:43.160
+are made for research, they want to shift the focus to research since the whole European
+
+00:08:43.160 --> 00:08:48.320
+Union, basically you know the debate after the AI Act is now shifting towards this password
+
+00:08:48.320 --> 00:08:51.120
+and all the money should go into AI.
+
+00:08:51.120 --> 00:08:56.920
+So that's the problem we faced, and that's also what I then quickly figured out and where
+
+00:08:56.920 --> 00:09:03.240
+we have been a bit upset and see the need to talk.
+
+00:09:03.240 --> 00:09:10.840
+All right, so they decided to shift the money around and what did we do, what happened
+
+00:09:10.840 --> 00:09:11.840
+then?
+
+00:09:11.840 --> 00:09:18.960
+I mean, it was not only us who figured this out, I mean also other communities, also
+
+00:09:18.960 --> 00:09:23.680
+beneficiaries have figured out that there was an issue, and one of the first reaction
+
+00:09:23.680 --> 00:09:30.400
+was that in France some free software communities came together with an open letter, and they
+
+00:09:30.400 --> 00:09:37.320
+addressed the European Commission on this, and they wanted to get the funds back, but it
+
+00:09:37.320 --> 00:09:45.040
+was pretty much like on this specific 27 million funds, but I figured out that also with
+
+00:09:45.040 --> 00:09:50.040
+the argument that the Commission came up, that they said, hmm, research, we need to shift
+
+00:09:50.040 --> 00:09:58.360
+our priorities, I have seen that we have a larger issue here, so I have seen that we need
+
+00:09:58.360 --> 00:10:05.800
+to move the funds also away from the horizon Europe into something, so away from research
+
+00:10:05.800 --> 00:10:10.360
+into something which is core funding, which is sustainable, which is something where it's
+
+00:10:10.360 --> 00:10:14.560
+not simply happening that the Commission is sitting there in a summer break, and they
+
+00:10:14.560 --> 00:10:18.920
+are, we cut this funding, there should be a possibility to publicly debate this, to
+
+00:10:18.920 --> 00:10:25.760
+have some more visibility on this, and so that is why we asked our community to also contact
+
+00:10:25.760 --> 00:10:33.880
+the Commission directly on this, so we called on our community to call pretty much the president
+
+00:10:33.880 --> 00:10:39.120
+of the European Commission, Ursula von der Leyen, and write your emails on that, coming
+
+00:10:39.120 --> 00:10:44.600
+up with the argument that first of all these 27 millions mean some projects might even
+
+00:10:44.600 --> 00:10:49.720
+die on the way, right, so we can't improve them, it's also bad, but also that we want
+
+00:10:49.720 --> 00:10:56.560
+to move the funds away to something core funding, and people did this, so people were reaching
+
+00:10:56.560 --> 00:11:02.200
+out to the European Commission based on our arguments, letting them all individually
+
+00:11:02.200 --> 00:11:07.280
+created, so it was not like a standard letter they used, but they reused our arguments,
+
+00:11:07.280 --> 00:11:13.200
+so we put it in a way that we helped them to cut up this individual letters to the Commission,
+
+00:11:13.200 --> 00:11:19.480
+and this led to the situation that the Commission also reacted, so in the first place, also
+
+00:11:19.480 --> 00:11:24.280
+when journalists asked them on this, they didn't have any saying on this, they didn't
+
+00:11:24.280 --> 00:11:29.360
+wanted to speak publicly about this, but due to the open letter from France and our activity
+
+00:11:29.360 --> 00:11:34.720
+from the FBI on contacting the Commission directly, there were some movements within
+
+00:11:34.720 --> 00:11:39.280
+the Commission, and they reacted, and by that we got contact to a head of unit being
+
+00:11:39.280 --> 00:11:44.840
+in charge of the program, and by that we started basically in dialogue with the European
+
+00:11:44.840 --> 00:11:49.920
+Commission, and this led to the fact that they at least acknowledged already at this time
+
+00:11:49.920 --> 00:11:56.360
+that was then August September, and that they at least want to try to make sure that
+
+00:11:56.360 --> 00:12:03.480
+they will try to sprinkle the money still towards free software projects, even if it's
+
+00:12:03.480 --> 00:12:09.120
+not in there anymore. However, I mean, this is just a vague statement, rather than nothing
+
+00:12:09.120 --> 00:12:15.960
+for sure, but it is still vague, as it doesn't give us really a chance to say like, we can
+
+00:12:15.960 --> 00:12:23.760
+monitor this or how much is this like in euros, for example, so there was not really a
+
+00:12:23.760 --> 00:12:29.360
+chance for us for oversight, so and by that we continued, and followed up with the reaction,
+
+00:12:29.360 --> 00:12:34.480
+yeah, try to stay in touch with the European Commission, but also in the meantime we went
+
+00:12:34.480 --> 00:12:40.760
+to the European Parliament, and try to find members of the Parliament that will come up with
+
+00:12:40.760 --> 00:12:47.840
+amendments in this direction to change the text of this funding so that we can get the
+
+00:12:47.840 --> 00:12:55.120
+money back and that they basically asked the Commission to reintroduce these 27 million,
+
+00:12:55.120 --> 00:12:59.720
+so and the European Parliament did, so there have been members and the Parliament who came
+
+00:12:59.720 --> 00:13:06.320
+up with these amendments, unfortunately they didn't found a majority since the Conservatives
+
+00:13:06.320 --> 00:13:12.880
+didn't want to earmark the money, but they said, so they didn't want to give it precisely
+
+00:13:12.880 --> 00:13:18.640
+to free and open source software or free software, but they rather want to say we want to invest
+
+00:13:18.640 --> 00:13:25.040
+in digital, so to say, so that's why this amendment didn't found a majority, but still
+
+00:13:25.040 --> 00:13:30.000
+right, political costs were rising, people were talking about this, the debate was happening,
+
+00:13:30.720 --> 00:13:37.040
+and all of the sudden there was then also the consultation on the digital euro program,
+
+00:13:37.040 --> 00:13:46.880
+so another program to add to the complexity, right, and the digital euro program is a program
+
+00:13:46.880 --> 00:13:52.720
+which was introduced in light of the corona crisis, in order to move funds into the digital
+
+00:13:52.720 --> 00:13:58.560
+solutions we needed during the corona crisis, but also in the aftermath, as people understood,
+
+00:13:58.560 --> 00:14:05.360
+we need to invest in our own technology, in our own tools, and this is a good idea to do this
+
+00:14:05.440 --> 00:14:16.480
+free software, and let me quickly cut in there, there are a lot of programs around now just to give
+
+00:14:16.480 --> 00:14:23.920
+this wrap up and some overview, so we have the horizon Europe that is actually intended for research
+
+00:14:23.920 --> 00:14:33.600
+where the NLNet foundation and the next generation internet program are situated at, so this was
+
+00:14:33.600 --> 00:14:38.320
+the funding that was going to free software project, and this was the funding that was shifted
+
+00:14:38.320 --> 00:14:45.920
+then to AI during the summer break, and then we have the digital euro program which is
+
+00:14:45.920 --> 00:14:53.760
+absolutely independent of the horizon Europe, correct? Exactly, and this was introduced
+
+00:14:53.760 --> 00:15:00.640
+during corona, so what was the focus of the digital euro program? It doesn't matter so much to be
+
+00:15:00.640 --> 00:15:07.440
+honest, it only matters that the digital euro program runs until 2027, which means, and there will
+
+00:15:07.440 --> 00:15:14.640
+be a reform or like a renewal of the digital euro program very, very soon, it will happen
+
+00:15:15.440 --> 00:15:21.600
+obviously until 2027, so that from 2028 onwards, we have a new digital euro program,
+
+00:15:22.240 --> 00:15:28.160
+and digital euro as said was basically in the first place introduced to fix corona,
+
+00:15:28.880 --> 00:15:37.040
+one could say this is done, so now we need to look forward and see how can we prevent a situation
+
+00:15:37.040 --> 00:15:42.640
+happening again like corona, and there we say we need to invest in the core infrastructure,
+
+00:15:42.640 --> 00:15:48.720
+and that's why we do believe that the digital, the next digital euro program, which needs to be
+
+00:15:48.720 --> 00:15:55.280
+set up, which needs to be discussed in the next two years, this should be the new space for
+
+00:15:55.280 --> 00:16:02.400
+this core funding, and there we also need some new criteria, and we also need some
+
+00:16:04.320 --> 00:16:10.720
+some more oversight other than that we have seen in the horizon Europe and in the NGI program,
+
+00:16:10.720 --> 00:16:16.480
+so basically what we want to do or what we are asking to commission is to come up with a sustainable
+
+00:16:16.480 --> 00:16:23.840
+long-term funding for free software, which should not only focus on research, and therefore we had
+
+00:16:23.920 --> 00:16:28.960
+the idea to move it to the digital euro program. However, I'm also fine if they come up with a
+
+00:16:29.600 --> 00:16:34.560
+own completely new budget, but since it is very difficult to come up with completely new
+
+00:16:34.560 --> 00:16:40.560
+things, it's better to shift things into existing ones, and that's why we are asking for a reform
+
+00:16:40.560 --> 00:16:47.920
+of the digital euro program, and part of this reform should be that we introduce a sustainable
+
+00:16:47.920 --> 00:16:57.120
+long-term fund with dedicated oversight and overview for SMEs in Europe, for micro-ender prices,
+
+00:16:57.120 --> 00:17:05.360
+for communities, for charities, and individual developers for foundations might so, for all these
+
+00:17:05.360 --> 00:17:12.480
+projects that have been financed in the NGI before to move this into the digital euro program,
+
+00:17:12.560 --> 00:17:19.040
+but it's better oversight. What did we do then, like how did we take action basically?
+
+00:17:19.600 --> 00:17:27.440
+Yeah, and for this, the European Commission from time to time runs public consultations,
+
+00:17:28.000 --> 00:17:33.600
+so whenever they evaluate or whenever they come up with something new, they ask the public on their
+
+00:17:33.600 --> 00:17:40.000
+takes, and here also just slightly after the summer break, the European Commission opened a
+
+00:17:40.000 --> 00:17:46.800
+consultation on the digital euro program, and there we took part in this consultation, and there
+
+00:17:46.800 --> 00:17:51.920
+we asked for this sustainable long-term fund. We said this fund need to be open to individual
+
+00:17:51.920 --> 00:17:58.400
+developers for communities, as I just said, and basically all of these demands are just
+
+00:17:59.680 --> 00:18:06.240
+outline. Basically, these kinds of demands we moved into this consultation and asked the
+
+00:18:06.240 --> 00:18:13.120
+Commission to act accordingly, and also we asked our community to do the same, so we published
+
+00:18:13.120 --> 00:18:20.320
+our answers to this consultation, we were outlining what we see, how our arguments
+
+00:18:21.680 --> 00:18:27.600
+could be reused, and we basically asked our community to take part in this consultation,
+
+00:18:27.600 --> 00:18:32.080
+and to follow these arguments and to basically ask for this sustainable long-term funding,
+
+00:18:33.040 --> 00:18:42.080
+and normally these consultations attract some experts, some lobbyists, maybe from time to time,
+
+00:18:44.160 --> 00:18:49.920
+individuals, but normally only a few people take part, but after the consultation was closed,
+
+00:18:49.920 --> 00:18:56.480
+we have seen nearly 800 people took part in this consultation. This is completely outstanding.
+
+00:18:57.280 --> 00:19:04.240
+To give you some context, maybe just a few weeks ago, there was a consultation on AI and the
+
+00:19:04.240 --> 00:19:10.320
+European Commission released the press release that 400 people took part, and this is really outstanding,
+
+00:19:10.960 --> 00:19:17.040
+and I can tell you there was no press release on this consultation where 800, or nearly 800 people
+
+00:19:17.040 --> 00:19:24.160
+took part, but you can see, right, so we really managed it to shed a lot of light on this consultation,
+
+00:19:24.160 --> 00:19:30.800
+many people took part, and just of today, as we are talking, and so basically today is the
+
+00:19:30.800 --> 00:19:38.320
+13th of November, the results have been published of the consultation, and it is pretty clear
+
+00:19:39.920 --> 00:19:45.520
+that people were following basically our call and asked for this sustainable long-term funding,
+
+00:19:45.520 --> 00:19:51.760
+and what is even more important, they did this on an individual basis, not by copy and paste,
+
+00:19:51.760 --> 00:19:59.520
+what we did, but they came up with their own words, and this underlines not only the knowledge
+
+00:19:59.520 --> 00:20:06.400
+in our community, and also the, yeah, basically the courage to take part in such a consultation,
+
+00:20:06.400 --> 00:20:11.200
+which is not very common, and also to come up with their own words, since they see the problem,
+
+00:20:11.200 --> 00:20:17.680
+and then they can describe the problem pretty well in their own words. We have a very, very good
+
+00:20:17.760 --> 00:20:24.400
+answer to the consultation now, and the commission released a report where they clearly said that
+
+00:20:24.400 --> 00:20:30.560
+this is a calling demand from people taking part in this consultation. They also see that,
+
+00:20:31.760 --> 00:20:37.600
+and they also write it, that we, yeah, did the call on this, and they refer to our
+
+00:20:38.320 --> 00:20:45.920
+block posts, news items, where we were writing about it, but also other than that, it clearly shows
+
+00:20:46.000 --> 00:20:50.400
+that people gave individual answers that they took a lot of time and efforts to take part in this
+
+00:20:50.400 --> 00:20:55.360
+consultation, to tell the combination, we want this sustainable long-term fund, and I think that's
+
+00:20:55.360 --> 00:21:00.240
+already a success in itself, so I want to use this opportunity here to thank everyone who took
+
+00:21:00.240 --> 00:21:04.880
+part in this consultation. This is super, super helpful, because with this, we can create a lot
+
+00:21:04.880 --> 00:21:09.600
+of pressure towards the commission, but also do you remember states to really come up with such a fund?
+
+00:21:10.560 --> 00:21:16.960
+This is a short break for our own cause. Thank you for listening to the Software Freedom podcast.
+
+00:21:16.960 --> 00:21:23.280
+Working for Software Freedom and producing podcasts costs money. Please consider supporting us
+
+00:21:23.280 --> 00:21:28.240
+with a donation on the fsfe.org slash donate and then the show notes.
+
+00:21:30.880 --> 00:21:35.840
+So this is now being discussed, or what are the next steps here?
+
+00:21:36.480 --> 00:21:41.520
+Yeah, I mean, I've definitely, and I also would like to say thank you to everybody who participated.
+
+00:21:42.720 --> 00:21:46.320
+This is like, I'm sorry, I just quickly passed over it as he,
+
+00:21:48.640 --> 00:21:56.160
+no, but it is truly remarkable, and it is amazing that people actually care about free software
+
+00:21:56.160 --> 00:22:00.880
+that much that they sit down, write their arguments down, and think about it, so I'm,
+
+00:22:01.840 --> 00:22:05.440
+I also find this very touching that it's not something that people
+
+00:22:06.960 --> 00:22:14.400
+take lightly, but they want to support. Indeed. And it definitely helps in the political process.
+
+00:22:14.400 --> 00:22:22.560
+So it helps us to create pressure to always bring up this argument, since we can always say,
+
+00:22:22.560 --> 00:22:29.360
+look back in this consultation, there was a clear demand by the public to do this. And also,
+
+00:22:29.360 --> 00:22:36.000
+you have acknowledged this in your own analysis afterwards. So I mean, what's happening now is
+
+00:22:36.000 --> 00:22:42.400
+in the second, probably nothing other than we analyze this, we discuss this, and it's definitely
+
+00:22:42.400 --> 00:22:48.080
+a long-term game, right? So it's not an activity. You can a bit compare it to our public money,
+
+00:22:48.080 --> 00:22:52.640
+public code campaign, right? So where we asked public administrations to invest
+
+00:22:53.440 --> 00:23:00.080
+into free software, rather than proprietary software, when they do procurement processes.
+
+00:23:00.080 --> 00:23:06.560
+Also, this is a long-term game, which goes step-by-step where we see progress, not every day,
+
+00:23:06.560 --> 00:23:10.640
+but we see progress, right? And also in the last years, we have seen progress, and that's
+
+00:23:10.640 --> 00:23:14.640
+the same as the funding. So it won't be that we get from one day to another,
+
+00:23:15.440 --> 00:23:23.440
+is we billions of euros to invest in our core infrastructure, but it will rather be a step-by-step
+
+00:23:23.440 --> 00:23:31.120
+thing. And for these steps, this consultation helps, and the consultation is definitely a major step.
+
+00:23:31.680 --> 00:23:39.040
+In this, since we can directly go to the commission, we can directly demand from them. Also,
+
+00:23:39.040 --> 00:23:45.440
+members of the European Parliament can table with questions of this, thereby the reports about it,
+
+00:23:45.440 --> 00:23:51.440
+media, and by that, we publicly need to discuss, right? So we need to rise the political costs,
+
+00:23:51.440 --> 00:23:58.000
+so to say, so that this is a really a topic that they need to take care of. And this worked out,
+
+00:23:58.000 --> 00:24:03.840
+and this will continue to work out if we continue to work that closely together with our community.
+
+00:24:03.840 --> 00:24:11.520
+I'm really looking forward to this. There will be a few more moments in the next months and years
+
+00:24:11.520 --> 00:24:17.600
+where we will definitely reach out to us, to our community, again, to help us here, since this
+
+00:24:17.600 --> 00:24:26.960
+public pressure really, really helps. And in particular, in the European Union, you can debate
+
+00:24:26.960 --> 00:24:32.560
+with the people you can discuss. There are no, we set majorities, they are flexible, you can fight
+
+00:24:32.640 --> 00:24:39.200
+for majorities, and the more we bring in these good arguments, but also showcase that it's not only
+
+00:24:39.200 --> 00:24:46.960
+FSE, FSE arguments, but these are arguments for the European Union, right? The more likely it is
+
+00:24:46.960 --> 00:24:56.000
+that we get sufficient funds that are so heavily needed. So just to give also some context here,
+
+00:24:56.880 --> 00:25:07.120
+I heard at some point that the European Union and the parliament and all the institutions,
+
+00:25:07.120 --> 00:25:12.640
+this is a very democratic process, actually, so that people can interact and can
+
+00:25:14.640 --> 00:25:20.080
+also make their voices hear it. What would you say to this? So is this something that is happening
+
+00:25:20.160 --> 00:25:26.800
+here as well? It definitely helps. I mean, we are not the ones who can automatically vote,
+
+00:25:27.680 --> 00:25:33.600
+but we are the ones who can create pressures on these votes, and we can shed light on these votes.
+
+00:25:33.600 --> 00:25:39.520
+And for my experience, I can tell you the more light on that debate is and the more
+
+00:25:40.560 --> 00:25:48.720
+a topic is publicly debated, the more likely it is that also decision makers that do not really
+
+00:25:48.720 --> 00:25:54.720
+work in this space, listen to the argument and make up their own mind. And this is what I mean with
+
+00:25:54.720 --> 00:26:00.480
+fighting for a majority. So there is nothing like what we know, an example from the member states,
+
+00:26:00.480 --> 00:26:07.760
+right? So that you have basically governments deciding also more or less what to do next,
+
+00:26:07.760 --> 00:26:13.280
+since they have their maturity. In the European parliament, there is no such clear maturity.
+
+00:26:13.280 --> 00:26:20.800
+It's moving in every vote. And by thus, you can fight for such a majority to introduce such funds.
+
+00:26:20.800 --> 00:26:29.600
+So it definitely helps if they see citizens care because they are their voters. And also other
+
+00:26:29.600 --> 00:26:38.560
+than that, we also have seen that there are many other entities, basically, also the market
+
+00:26:38.560 --> 00:26:45.680
+is asking for such a fund. So it would not only help citizens or consumer. It will also help
+
+00:26:45.680 --> 00:26:51.840
+the European market and also European administrations and governments to come up with tools
+
+00:26:52.880 --> 00:26:58.080
+where they have control over their technology. And as said, we are discussing digital solidarity.
+
+00:26:58.720 --> 00:27:04.160
+And I really do believe that digital solidarity is not achievable without free software. So if
+
+00:27:04.320 --> 00:27:09.520
+you don't have the four freedoms to you study, share and improve for your software,
+
+00:27:10.240 --> 00:27:15.440
+you won't have digital sovereignty. And if you can make this point, and this is also on point,
+
+00:27:15.440 --> 00:27:20.800
+an documentary race in the consultation and connected even better, the better people understand.
+
+00:27:20.800 --> 00:27:28.560
+And from the last years and last debates, I can tell you the knowledge around free software
+
+00:27:28.560 --> 00:27:34.320
+is rising every day in the European Union. And these debates also help to rise this
+
+00:27:34.960 --> 00:27:41.280
+common level of understanding around free software. And that's also in itself very, very good.
+
+00:27:41.280 --> 00:27:47.680
+So we have a public debate. We can bring out our arguments. They are understood. Also we have
+
+00:27:48.240 --> 00:27:54.400
+from the Commission a study saying that these funds are needed. And also we have a new
+
+00:27:54.400 --> 00:28:00.320
+empowerment already some allies and tabling amendments in this direction. So it is a bit like
+
+00:28:02.320 --> 00:28:09.440
+an encrowing thing. So I wouldn't say we have this majority today. But since we started in summer,
+
+00:28:09.440 --> 00:28:14.720
+where there was basically nothing, what we achieved in the last months, I have to say this is
+
+00:28:14.720 --> 00:28:20.640
+really, really impressive. And this is only doable thanks to the help of our community. So without
+
+00:28:20.720 --> 00:28:28.880
+the participation of our community, we couldn't debate with this. So we couldn't be so confident in
+
+00:28:28.880 --> 00:28:34.160
+all debates. How we are today and this definitely helps us to give us power in the debate,
+
+00:28:34.160 --> 00:28:41.200
+to give us status in the debate. All right. Thank you so much for the update. And yeah,
+
+00:28:41.200 --> 00:28:48.560
+taking us through this whole process and talking to me about what has happened, what will happen,
+
+00:28:48.560 --> 00:28:56.560
+or what might happen in the future. And yeah, I'm really looking forward to hear more news about this
+
+00:28:56.560 --> 00:29:02.960
+in the coming months. Maybe. But before we close, if you want to stay updated on this,
+
+00:29:02.960 --> 00:29:07.920
+feel free to join our mailing lists, but also sign our public money public code campaign.
+
+00:29:07.920 --> 00:29:15.120
+By last, you will also get updates and you will be around those if you like. If you click the
+
+00:29:15.120 --> 00:29:20.880
+tick box that gets emails and information about it, when we are running such campaigns and when
+
+00:29:20.880 --> 00:29:27.200
+we are asking our volunteers to step in and also port us here to help us. Because as said, there
+
+00:29:27.200 --> 00:29:33.120
+will be more of these moments, there might be more consultations, there might be more moments when
+
+00:29:33.120 --> 00:29:38.880
+we need to call the you can parliament to vote in a specific direction. And where we asked our
+
+00:29:38.880 --> 00:29:43.920
+community to help us with a mail or a phone call or whatever. So and if you want to be around those
+
+00:29:43.920 --> 00:29:50.560
+that get emails and get information on this, how you can help us please sign up at our mailing list,
+
+00:29:50.560 --> 00:29:55.600
+go to fsfe.org, sign up for the newsletter and then you will be informed about this. I think
+
+00:29:55.600 --> 00:30:00.960
+this will be super helpful if you want to join the activities. And as said, it's a long term game,
+
+00:30:00.960 --> 00:30:05.440
+so there will be definitely more news on this and then not only in the next months, but I guess
+
+00:30:05.920 --> 00:30:18.720
+three years. Also linked in the show notes, the newsletter. Yes. So with this, I would say thank you
+
+00:30:18.720 --> 00:30:24.080
+very much, Alex. Thank you very much for taking us through this process. And yeah, as always,
+
+00:30:24.080 --> 00:30:30.880
+it was a pleasure to have you here. Thanks for having me. It was fun. I hope it's not too much,
+
+00:30:31.200 --> 00:30:39.280
+not too complex and still interesting. This is true. And also I think it's a very complex topic.
+
+00:30:39.280 --> 00:30:46.800
+So I think this really helps to understand and to go through this process again and to understand
+
+00:30:46.800 --> 00:30:54.880
+all the interactings and after different programs actually there. So it was a pleasure for me as well.
+
+00:30:55.840 --> 00:31:00.480
+With this, I would say goodbye and thank you very much. Thank you. Bye bye.
+
+00:31:02.240 --> 00:31:06.480
+This was the Software Freedom Podcast. If you liked this episode, please recommend it to
+
+00:31:06.480 --> 00:31:11.600
+your friends and rated. Stay tuned for more inspiring conversations that explore the importance
+
+00:31:11.600 --> 00:31:17.360
+of Software Freedom. This podcast is presented to you by the Free Software Foundation Europe.
+
+00:31:17.360 --> 00:31:22.560
+We are a charity that works on promoting Software Freedom. And if you like our work, please
+
+00:31:22.560 --> 00:31:29.520
+consider supporting us with our donation. You find more information on the fsfe.org slash donate.
+
+00:31:29.520 --> 00:31:32.320
+We depend on your support. Bye.
+
+00:31:44.000 --> 00:31:50.320
+That was my question. I wanted to ask you all. I wanted to ask you how can others help to secure
+
+00:31:50.320 --> 00:32:00.320
+continuous funding of Free Software. But that was a great idea. I'll see you in the next one.

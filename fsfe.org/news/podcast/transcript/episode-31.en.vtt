@@ -1,0 +1,1942 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:07.000
+Before we start after the podcast, we would like to say thank you to all of you who support the FSF East Work of Money.
+
+00:00:07.000 --> 00:00:12.000
+Working for software freedom and producing podcasts costs money.
+
+00:00:12.000 --> 00:00:20.000
+Please consider supporting us with the nation on the FSFE.org slash donate and in the show notes.
+
+00:00:20.000 --> 00:00:26.000
+Bringing these people together also takes time.
+
+00:00:26.000 --> 00:00:29.000
+It needs energy, finding, coming, crown.
+
+00:00:29.000 --> 00:00:31.000
+See where we can work together.
+
+00:00:31.000 --> 00:00:33.000
+This needs a lot of time.
+
+00:00:33.000 --> 00:00:38.000
+Resources and yeah, if you donate to us, you make this work possible.
+
+00:00:38.000 --> 00:00:40.000
+You make our fights for funding possible.
+
+00:00:40.000 --> 00:00:44.000
+And then also one day we benefit you.
+
+00:00:44.000 --> 00:00:51.000
+If you, for example, develop and maybe we get funds for your project in the future.
+
+00:00:51.000 --> 00:01:09.000
+Hello and welcome to the software freedom podcast.
+
+00:01:09.000 --> 00:01:13.000
+This podcast is presented to you by the Free Software Foundation Europe.
+
+00:01:13.000 --> 00:01:17.000
+We are a charity that empowered users to take control of technology.
+
+00:01:17.000 --> 00:01:21.000
+I'm body married and today I'm here with Alexander Sander.
+
+00:01:21.000 --> 00:01:25.000
+Alex is the senior policy consultant for the FSFE.
+
+00:01:25.000 --> 00:01:30.000
+And in his work for the FSFE, he monitors the current happenings in the European Union
+
+00:01:30.000 --> 00:01:34.000
+and also pushes for the recognition of the software.
+
+00:01:34.000 --> 00:01:39.000
+Yeah, today in this policy and EU episode, I don't know.
+
+00:01:39.000 --> 00:01:42.000
+I find this is a tongue breaker, trying to understand.
+
+00:01:42.000 --> 00:01:43.000
+They are called tanked.
+
+00:01:43.000 --> 00:01:45.000
+So you know what I mean?
+
+00:01:45.000 --> 00:01:49.000
+Alex and I will talk about our host and experience.
+
+00:01:49.000 --> 00:01:54.000
+And especially the outcome of the two DevRooms that were on the FSFE.
+
+00:01:54.000 --> 00:01:56.000
+Alex, thank you so much for making the time.
+
+00:01:56.000 --> 00:02:01.000
+Thank you so much for being here on our second try for the recording.
+
+00:02:02.000 --> 00:02:04.000
+Yeah, thanks for having me.
+
+00:02:05.000 --> 00:02:09.000
+Okay, so how was the two DevRooms?
+
+00:02:09.000 --> 00:02:11.000
+I remember they were not only run by the FSFE.
+
+00:02:11.000 --> 00:02:13.000
+There were others involved as well.
+
+00:02:13.000 --> 00:02:17.000
+So in the EU and policy DevRooms, who was involved again?
+
+00:02:17.000 --> 00:02:26.000
+So we partnering on two DevRooms, the legal and policy DevRooms that we are
+
+00:02:27.000 --> 00:02:31.000
+organizing together with other organizations like the Software Freedom Conservancy,
+
+00:02:31.000 --> 00:02:38.000
+Red Hat, Tom Marble, something we started to work on together doing the corona crisis,
+
+00:02:38.000 --> 00:02:41.000
+the DevRooms itself is longer than a decade.
+
+00:02:41.000 --> 00:02:48.000
+And it's very well established, DevRooms where we talk about SNS, legal and policy,
+
+00:02:48.000 --> 00:02:50.000
+related issues.
+
+00:02:50.000 --> 00:02:56.000
+And this year, we obviously again talked a lot about the cyber resilience act,
+
+00:02:56.000 --> 00:03:03.000
+a topic that keeps the first them or one could say the broader Free Software community,
+
+00:03:03.000 --> 00:03:08.000
+discussing for pretty much two years, I think we started to discuss during the first
+
+00:03:08.000 --> 00:03:10.000
+them, the cyber resilience act.
+
+00:03:10.000 --> 00:03:16.000
+And since we are now facing the implementation, some very practical questions arise.
+
+00:03:16.000 --> 00:03:20.000
+Which is important for us in particular for the FSFE.
+
+00:03:20.000 --> 00:03:24.000
+There is a so-called Stewart role introduced in the cyber resilience act,
+
+00:03:24.000 --> 00:03:30.000
+so there are manufacturers, Stewart and the basically one could say individual developers,
+
+00:03:30.000 --> 00:03:33.000
+these three roles are somehow given.
+
+00:03:33.000 --> 00:03:39.000
+And there are exemptions in particular for people that don't earn money with free software
+
+00:03:39.000 --> 00:03:44.000
+or smaller projects, projects that are non-profit projects,
+
+00:03:44.000 --> 00:03:49.000
+and here we discuss which role they might have in the cyber resilience act
+
+00:03:49.000 --> 00:03:52.000
+and what application might arise for them.
+
+00:03:52.000 --> 00:03:59.000
+And how we can, in particular, support stewards in the relationship as manufacturers,
+
+00:03:59.000 --> 00:04:05.000
+so that in particular, non-profit work is not destroyed by the cyber resilience act,
+
+00:04:05.000 --> 00:04:08.000
+but in more important, maybe even supported.
+
+00:04:09.000 --> 00:04:16.000
+And that was a huge discussion we had together with Michael from the German BSI,
+
+00:04:16.000 --> 00:04:20.000
+so the Bundesant for Sicherheit in the information station,
+
+00:04:20.000 --> 00:04:24.000
+so basically the IT security agency for Germany,
+
+00:04:24.000 --> 00:04:29.000
+which also most likely be the market surveillance authority.
+
+00:04:29.000 --> 00:04:34.000
+For the cyber resilience act was there with me together on a session where we hosted,
+
+00:04:34.000 --> 00:04:38.000
+yeah, basically a Q&amp;A session on this Stewart question,
+
+00:04:38.000 --> 00:04:44.000
+and I think that was very useful and intense discussion we had,
+
+00:04:44.000 --> 00:04:48.000
+so we tried to address these issues,
+
+00:04:48.000 --> 00:04:52.000
+but also listen to the community what they see, what their fears are,
+
+00:04:52.000 --> 00:04:59.000
+and this ultimately will also end in a project that we run together with this German BSI,
+
+00:04:59.000 --> 00:05:01.000
+this IT security agency,
+
+00:05:01.000 --> 00:05:06.000
+where we precisely want to research on this question,
+
+00:05:06.000 --> 00:05:09.000
+how the relationship between stewards and manufacturers will be,
+
+00:05:09.000 --> 00:05:15.000
+so this first session could be also seen as a starting point to this research,
+
+00:05:15.000 --> 00:05:19.000
+and I would also like to use this postcard episode to,
+
+00:05:19.000 --> 00:05:23.000
+to kind of as a call, so basically if you are a Stewart,
+
+00:05:23.000 --> 00:05:26.000
+or if you believe you might be a Stewart,
+
+00:05:26.000 --> 00:05:31.000
+a few, three to reach out to me directly or to contact at FFE.org,
+
+00:05:31.000 --> 00:05:37.000
+and we are working on a questionary which we want to share with manufacturers,
+
+00:05:37.000 --> 00:05:40.000
+stewards and interested stakeholders,
+
+00:05:40.000 --> 00:05:44.000
+and in order to come up with this question there where we want to address those questions,
+
+00:05:44.000 --> 00:05:47.000
+we are looking for input, so if you should have some,
+
+00:05:47.000 --> 00:05:52.000
+it's recommended to you to watch the Q&amp;A session on this year,
+
+00:05:52.000 --> 00:05:54.000
+from the first term,
+
+00:05:54.000 --> 00:05:58.000
+and maybe reach out to us if you have some input in this direction for us.
+
+00:05:58.000 --> 00:06:01.000
+How was the Q&amp;A session, like how many people were there,
+
+00:06:01.000 --> 00:06:06.000
+and how, what was your feeling from the questions that,
+
+00:06:06.000 --> 00:06:09.000
+where are those, that are those Q&amp;A session?
+
+00:06:09.000 --> 00:06:11.000
+Because we are just a cyber-resilience act,
+
+00:06:11.000 --> 00:06:15.000
+I believe this is the act that we discussed the most in the previous,
+
+00:06:15.000 --> 00:06:16.000
+in the past year.
+
+00:06:16.000 --> 00:06:19.000
+Yeah, it's definitely a huge discussion on going,
+
+00:06:19.000 --> 00:06:23.000
+and that's basically good, but bad at the same time.
+
+00:06:23.000 --> 00:06:27.000
+It's good since a lot of people take care of this very important topic.
+
+00:06:27.000 --> 00:06:34.000
+The bad part is that there are some rumors and myths around the cyber-resilience act.
+
+00:06:34.000 --> 00:06:39.000
+One of our tasks is to explain what's really in, what's not in.
+
+00:06:39.000 --> 00:06:42.000
+However, there are still, as I said, many open questions
+
+00:06:42.000 --> 00:06:44.000
+when it comes to implementation,
+
+00:06:44.000 --> 00:06:48.000
+basically the needy-credi of transforming the sentences we have in the law,
+
+00:06:48.000 --> 00:06:50.000
+into something which is working,
+
+00:06:50.000 --> 00:06:54.000
+and I think it is important for the community to know
+
+00:06:54.000 --> 00:06:56.000
+that there will be basically, in the end,
+
+00:06:56.000 --> 00:06:59.000
+a market surveillance authority who is doing this,
+
+00:06:59.000 --> 00:07:02.000
+and it's a good idea to talk to precisely this body,
+
+00:07:02.000 --> 00:07:06.000
+and since they really can't have this rules on how they do it,
+
+00:07:06.000 --> 00:07:09.000
+how they see all of this, how they implemented,
+
+00:07:09.000 --> 00:07:13.000
+so I think it's important to learn that,
+
+00:07:13.000 --> 00:07:16.000
+basically, it's the market surveillance authority who says,
+
+00:07:16.000 --> 00:07:20.000
+this is a steward, and this steward now needs to fulfill these obligations.
+
+00:07:20.000 --> 00:07:23.000
+So that's why it's a good idea to talk to them,
+
+00:07:23.000 --> 00:07:25.000
+to listen what they have in mind,
+
+00:07:25.000 --> 00:07:29.000
+and maybe to advocate if it's going in a wrong direction.
+
+00:07:29.000 --> 00:07:32.000
+So that was basically, I think, a very important point
+
+00:07:32.000 --> 00:07:34.000
+we made during this discussion,
+
+00:07:34.000 --> 00:07:36.000
+and which helped the people, however,
+
+00:07:36.000 --> 00:07:38.000
+so when it comes to the room,
+
+00:07:38.000 --> 00:07:42.000
+we had one of these basically bigger lecture rooms.
+
+00:07:42.000 --> 00:07:46.000
+It's very hard to guess how many people have been there,
+
+00:07:46.000 --> 00:07:49.000
+so the room was pretty full,
+
+00:07:49.000 --> 00:07:51.000
+and there was a huge interest in this topic,
+
+00:07:51.000 --> 00:07:54.000
+so I'd say a few hundred, maybe,
+
+00:07:54.000 --> 00:07:58.000
+but don't talk me on that,
+
+00:07:58.000 --> 00:08:01.000
+so I'm pretty poor in counting people.
+
+00:08:01.000 --> 00:08:03.000
+However, there was a huge interest,
+
+00:08:03.000 --> 00:08:06.000
+and I think, from the questions that came,
+
+00:08:06.000 --> 00:08:10.000
+it's also clear that there is still a lot of uncertainty
+
+00:08:10.000 --> 00:08:13.000
+when it comes to M-I-N-S-Dewart,
+
+00:08:13.000 --> 00:08:16.000
+and if I am a steward, what do I have to do?
+
+00:08:16.000 --> 00:08:20.000
+And I have to feeling that some people in our community
+
+00:08:20.000 --> 00:08:22.000
+are feeling the rules,
+
+00:08:22.000 --> 00:08:25.000
+and that they think that, for example,
+
+00:08:25.000 --> 00:08:28.000
+issue could be that some sort of
+
+00:08:29.000 --> 00:08:33.000
+continuity agencies that don't have too much to do with open source,
+
+00:08:33.000 --> 00:08:36.000
+want to be one of those stewards to earn money worth this,
+
+00:08:36.000 --> 00:08:37.000
+and how to prevent this,
+
+00:08:37.000 --> 00:08:41.000
+and I think there's also a lot of fear on the obligations
+
+00:08:41.000 --> 00:08:44.000
+that stewards might have that there's too much bureaucracy in this,
+
+00:08:44.000 --> 00:08:46.000
+and that they simply can't do it.
+
+00:08:46.000 --> 00:08:49.000
+And these are precisely the points we also want to
+
+00:08:49.000 --> 00:08:51.000
+bring to the market surveillance authority,
+
+00:08:51.000 --> 00:08:53.000
+and for this I think it was also good.
+
+00:08:53.000 --> 00:08:56.000
+That they have been there, and that they have seen,
+
+00:08:56.000 --> 00:09:00.000
+like physically seeing how people are worried about this,
+
+00:09:00.000 --> 00:09:05.000
+and that there is definitely needed to stay
+
+00:09:05.000 --> 00:09:07.000
+and touch with these people to communicate with these people
+
+00:09:07.000 --> 00:09:09.000
+to include them in the debate,
+
+00:09:09.000 --> 00:09:12.000
+and to remove a bit of the fog,
+
+00:09:12.000 --> 00:09:15.000
+which might be around this CIA,
+
+00:09:15.000 --> 00:09:19.000
+because ultimately I think it has more chances than downsides,
+
+00:09:19.000 --> 00:09:22.000
+if you play it right during this implementation.
+
+00:09:23.000 --> 00:09:27.000
+And that's something I have to feeling that people understood,
+
+00:09:27.000 --> 00:09:29.000
+so nothing is lost so far.
+
+00:09:29.000 --> 00:09:31.000
+It's still in the making,
+
+00:09:31.000 --> 00:09:35.000
+and we are actively searching for people contributing to this,
+
+00:09:35.000 --> 00:09:38.000
+and if our community understood,
+
+00:09:38.000 --> 00:09:42.000
+and this is I think what this panel definitely had for,
+
+00:09:42.000 --> 00:09:44.000
+is that there is still room for improvements,
+
+00:09:44.000 --> 00:09:46.000
+then this is something which is,
+
+00:09:46.000 --> 00:09:49.000
+the solar effects, that's what I think.
+
+00:09:50.000 --> 00:09:53.000
+So as you said, that the people from their commissioner
+
+00:09:53.000 --> 00:09:56.000
+are who, because there will be
+
+00:09:56.000 --> 00:10:00.000
+some agency that will define this to us,
+
+00:10:00.000 --> 00:10:04.000
+so people from this planned agency,
+
+00:10:04.000 --> 00:10:10.000
+or who was there and saw that some people are very worried about
+
+00:10:10.000 --> 00:10:12.000
+this whole server itself.
+
+00:10:12.000 --> 00:10:16.000
+So basically it's the person who is working in the BSI,
+
+00:10:17.000 --> 00:10:20.000
+the sort of department, which might be in charge
+
+00:10:20.000 --> 00:10:23.000
+of the Cyber Resilience Act in the implementation.
+
+00:10:23.000 --> 00:10:26.000
+The thing is that the CIA itself,
+
+00:10:26.000 --> 00:10:30.000
+was just really released by the end of last year,
+
+00:10:30.000 --> 00:10:32.000
+so member states are still discussing
+
+00:10:32.000 --> 00:10:35.000
+who ultimately will be market surveillance authority,
+
+00:10:35.000 --> 00:10:38.000
+so it's not set in stone,
+
+00:10:38.000 --> 00:10:41.000
+but it's likely that the BSI will be,
+
+00:10:41.000 --> 00:10:43.000
+and ultimately the person who was there,
+
+00:10:43.000 --> 00:10:45.000
+and Michael is also the person,
+
+00:10:45.000 --> 00:10:48.000
+this whom I'm running the project together with CBI,
+
+00:10:48.000 --> 00:10:51.000
+in order to figure out how this relationship looked like.
+
+00:10:51.000 --> 00:10:54.000
+So basically, one could say the representatives
+
+00:10:54.000 --> 00:10:57.000
+of the department that will be in charge was there,
+
+00:10:57.000 --> 00:11:00.000
+and for this, it's a thing,
+
+00:11:00.000 --> 00:11:05.000
+that's also sort of a very strong commitment
+
+00:11:05.000 --> 00:11:08.000
+that market surveillance authorities do not only want
+
+00:11:08.000 --> 00:11:10.000
+to work with manufacturers,
+
+00:11:10.000 --> 00:11:12.000
+or that they have only in eye for the industry,
+
+00:11:12.000 --> 00:11:16.000
+but they also go actively to our community
+
+00:11:16.000 --> 00:11:19.000
+in order to learn about our demands or fears,
+
+00:11:19.000 --> 00:11:22.000
+and I think that's something very valuable
+
+00:11:22.000 --> 00:11:27.000
+that Michael showed up and not only listen,
+
+00:11:27.000 --> 00:11:29.000
+but also actively to part in this Q&amp;A session
+
+00:11:29.000 --> 00:11:31.000
+and try to address those questions
+
+00:11:31.000 --> 00:11:35.000
+and trying to take away some of the fears
+
+00:11:35.000 --> 00:11:37.000
+that are in the room.
+
+00:11:37.000 --> 00:11:39.000
+That I can imagine.
+
+00:11:39.000 --> 00:11:42.000
+But so this was a successful era
+
+00:11:42.000 --> 00:11:47.000
+and session in the EU and quality of what else happened there.
+
+00:11:47.000 --> 00:11:50.000
+I think that it must have been not the only session there,
+
+00:11:50.000 --> 00:11:52.000
+right? There were loads more.
+
+00:11:52.000 --> 00:11:56.000
+And here do you were hanging around there the whole day?
+
+00:11:56.000 --> 00:11:58.000
+Yeah, absolutely.
+
+00:11:58.000 --> 00:12:02.000
+So it's always a intense experience.
+
+00:12:02.000 --> 00:12:07.000
+I mean, we start at 10, 30 and at 7,
+
+00:12:07.000 --> 00:12:10.000
+so that's quite a while.
+
+00:12:10.000 --> 00:12:13.000
+And also I have to say that many people
+
+00:12:13.000 --> 00:12:15.000
+stayed for the whole day in the room.
+
+00:12:15.000 --> 00:12:18.000
+So obviously we had an interesting agenda
+
+00:12:18.000 --> 00:12:21.000
+and often we also had to close the doors
+
+00:12:21.000 --> 00:12:25.000
+since the room was so packed that we can't let everybody in.
+
+00:12:25.000 --> 00:12:28.000
+So for all of you that couldn't see the talk,
+
+00:12:28.000 --> 00:12:30.000
+they wanted to see there are also recordings
+
+00:12:30.000 --> 00:12:32.000
+on the first and back side itself,
+
+00:12:32.000 --> 00:12:34.000
+where you can watch all the talks
+
+00:12:34.000 --> 00:12:36.000
+and also on FFE.org.
+
+00:12:36.000 --> 00:12:38.000
+You find the news item in the blog post
+
+00:12:38.000 --> 00:12:41.000
+where we also report about what happened.
+
+00:12:41.000 --> 00:12:44.000
+I want to highlight in this podcast again,
+
+00:12:44.000 --> 00:12:46.000
+a very practical talk we had,
+
+00:12:46.000 --> 00:12:50.000
+which is on the mandatory B2B e-in voices
+
+00:12:50.000 --> 00:12:52.000
+and which this means for software.
+
+00:12:52.000 --> 00:12:55.000
+I think that was a very interesting talk
+
+00:12:55.000 --> 00:12:59.000
+since it addresses a very practical hands-on question
+
+00:12:59.000 --> 00:13:02.000
+that is basically coming to us,
+
+00:13:02.000 --> 00:13:05.000
+which in the first place doesn't look like a free software problem,
+
+00:13:05.000 --> 00:13:10.000
+but there are some strings attached to the free software community.
+
+00:13:10.000 --> 00:13:12.000
+So that was a pretty hands-on talk,
+
+00:13:12.000 --> 00:13:17.000
+I think this is also always nice to have.
+
+00:13:17.000 --> 00:13:23.000
+Also we discussed in this like hands-on tool related topic,
+
+00:13:23.000 --> 00:13:28.000
+a tool from the UBIN data protection board,
+
+00:13:28.000 --> 00:13:30.000
+which is basically a compliance tool
+
+00:13:30.000 --> 00:13:35.000
+where you can check how your website is in line with data protection laws
+
+00:13:35.000 --> 00:13:38.000
+and this is also an open source tool.
+
+00:13:38.000 --> 00:13:42.000
+So here we can see how UBIN institutions
+
+00:13:42.000 --> 00:13:45.000
+also are made use of open source tools
+
+00:13:45.000 --> 00:13:49.000
+in order to fulfill the obligations in order to help.
+
+00:13:49.000 --> 00:13:52.000
+Companies out there are in this case like,
+
+00:13:52.000 --> 00:13:55.000
+yeah, people who run a website.
+
+00:13:55.000 --> 00:13:57.000
+Also I mean, which is very important for us,
+
+00:13:57.000 --> 00:14:02.000
+in particular for the FSE is the discussion we have on the DNA
+
+00:14:02.000 --> 00:14:04.000
+and the Apple litigation case.
+
+00:14:04.000 --> 00:14:09.000
+So my colleague Lucas is working on basically
+
+00:14:09.000 --> 00:14:15.000
+interoperability question when it comes to the App Store on iOS,
+
+00:14:15.000 --> 00:14:20.000
+so Apple phones and tablets.
+
+00:14:20.000 --> 00:14:26.000
+And here we run a legal activity against Apple
+
+00:14:26.000 --> 00:14:30.000
+and that was in particular interesting
+
+00:14:30.000 --> 00:14:33.000
+since there was a fire side chat with somebody
+
+00:14:33.000 --> 00:14:36.000
+or with two people from the UBIN commission
+
+00:14:36.000 --> 00:14:39.000
+that were giving insights in their daily work,
+
+00:14:39.000 --> 00:14:42.000
+how they do this and yeah,
+
+00:14:42.000 --> 00:14:46.000
+what questions arise when we talk about the gatekeeper issue,
+
+00:14:46.000 --> 00:14:51.000
+device neutrality topics and how we legally try to enforce this
+
+00:14:51.000 --> 00:14:55.000
+together with the commission to make sure that on the Apple,
+
+00:14:55.000 --> 00:14:58.000
+as device is this in the future possible
+
+00:14:58.000 --> 00:15:03.000
+to, for example, also install the F-Troid app store
+
+00:15:03.000 --> 00:15:07.000
+and by that you will be able to also get apps.
+
+00:15:07.000 --> 00:15:10.000
+There are not coming from this Apple universe
+
+00:15:10.000 --> 00:15:13.000
+but can be free software from the F-Troid store, for example.
+
+00:15:13.000 --> 00:15:15.000
+So a very interesting legal case.
+
+00:15:15.000 --> 00:15:20.000
+I think it will be somehow also covered in this podcast episode
+
+00:15:20.000 --> 00:15:24.000
+since there will be some results one day
+
+00:15:24.000 --> 00:15:29.000
+and we hope to be able to safeguard device neutrality business.
+
+00:15:29.000 --> 00:15:31.000
+And yeah, that was also in particular,
+
+00:15:31.000 --> 00:15:34.000
+since people from the UBIN commission showed up again
+
+00:15:34.000 --> 00:15:37.000
+I think a sign that's European institutions
+
+00:15:37.000 --> 00:15:41.000
+that institutions in general do take care of what we do
+
+00:15:41.000 --> 00:15:46.000
+that they follow our arguments even more
+
+00:15:46.000 --> 00:15:53.000
+and that they also even more up to also join these kind of like community events
+
+00:15:53.000 --> 00:15:56.000
+like the first them and explain their work towards this community
+
+00:15:56.000 --> 00:15:59.000
+and I think that's also a very strong statement
+
+00:15:59.000 --> 00:16:02.000
+from the commission to join these fireside chat.
+
+00:16:02.000 --> 00:16:05.000
+Where you know it's the first them,
+
+00:16:05.000 --> 00:16:08.000
+people are very critical to people
+
+00:16:08.000 --> 00:16:11.000
+and they sometimes ask questions that are not so nice
+
+00:16:11.000 --> 00:16:14.000
+for institution people or decision makers,
+
+00:16:14.000 --> 00:16:16.000
+but they show up, they took the questions
+
+00:16:16.000 --> 00:16:19.000
+and that's I think something we should also value
+
+00:16:20.000 --> 00:16:23.000
+that more and more people from the institutions
+
+00:16:23.000 --> 00:16:26.000
+are coming on a week and to explain their work
+
+00:16:26.000 --> 00:16:30.000
+and that's also a good result of our work at check.
+
+00:16:30.000 --> 00:16:33.000
+Yeah, it makes them more approachable, right?
+
+00:16:33.000 --> 00:16:35.000
+I just thought that this was like,
+
+00:16:35.000 --> 00:16:40.000
+it's actually a chance to engage with policy makers
+
+00:16:40.000 --> 00:16:44.000
+and to talk about your fears and your thoughts
+
+00:16:44.000 --> 00:16:47.000
+and bring them to their attention.
+
+00:16:47.000 --> 00:16:50.000
+Absolutely, and I do believe a dialogue is always better
+
+00:16:50.000 --> 00:16:54.000
+to have with the people we want to basically address
+
+00:16:54.000 --> 00:16:56.000
+with our demands, so it's better to talk with them
+
+00:16:56.000 --> 00:17:00.000
+instead of over them and for this I think it's also underlying
+
+00:17:00.000 --> 00:17:04.000
+how important this event is and that they see
+
+00:17:04.000 --> 00:17:06.000
+that it is an important event for them
+
+00:17:06.000 --> 00:17:09.000
+to go there and to meet these kind of stakeholders
+
+00:17:09.000 --> 00:17:12.000
+so that they are not only meeting the industry
+
+00:17:12.000 --> 00:17:14.000
+in the hidden hotel during the week,
+
+00:17:14.000 --> 00:17:17.000
+but that they also actively go on a Saturday
+
+00:17:17.000 --> 00:17:20.000
+to the university to an event
+
+00:17:20.000 --> 00:17:22.000
+which is absolutely crazy
+
+00:17:22.000 --> 00:17:24.000
+and if you have there for the very first time
+
+00:17:24.000 --> 00:17:26.000
+in particular, if you are living in the process but
+
+00:17:26.000 --> 00:17:29.000
+it's the complete opposite of what you normally see
+
+00:17:29.000 --> 00:17:31.000
+how people advocate for something
+
+00:17:31.000 --> 00:17:34.000
+and that they do the step that something
+
+00:17:34.000 --> 00:17:35.000
+really valued a lot.
+
+00:17:35.000 --> 00:17:38.000
+Okay, I can't imagine, I think that's a very nice of them
+
+00:17:38.000 --> 00:17:41.000
+and it shows a lot of commitment to the community.
+
+00:17:42.000 --> 00:17:45.000
+This is a short break for our own cause.
+
+00:17:45.000 --> 00:17:49.000
+Thank you for listening to this afternoon podcast.
+
+00:17:49.000 --> 00:17:52.000
+Working for software freedom and producing podcasts,
+
+00:17:52.000 --> 00:17:53.000
+cost money.
+
+00:17:53.000 --> 00:17:56.000
+Please consider supporting us with a donation
+
+00:17:56.000 --> 00:18:01.000
+on the ffs.org slash donate at the show notes.
+
+00:18:05.000 --> 00:18:10.000
+So this was the legal and policy too.
+
+00:18:11.000 --> 00:18:12.000
+That room.
+
+00:18:12.000 --> 00:18:14.000
+But I remember we had two.
+
+00:18:14.000 --> 00:18:15.000
+Yes.
+
+00:18:15.000 --> 00:18:17.000
+We did have another one.
+
+00:18:17.000 --> 00:18:19.000
+It was one on Sunday.
+
+00:18:19.000 --> 00:18:20.000
+Yeah.
+
+00:18:20.000 --> 00:18:22.000
+It was the post funding.
+
+00:18:22.000 --> 00:18:25.000
+Yeah, since this other day it's not enough of work.
+
+00:18:25.000 --> 00:18:30.000
+I also decided to have no with some other organizations
+
+00:18:30.000 --> 00:18:33.000
+to come up with a funding there from here.
+
+00:18:33.000 --> 00:18:36.000
+For example, we worked with the sovereignty agency from Germany.
+
+00:18:36.000 --> 00:18:39.000
+We worked with the Linux foundation, the prototype fund.
+
+00:18:39.000 --> 00:18:44.000
+So people that are also already active in this sphere of funding.
+
+00:18:44.000 --> 00:18:47.000
+We came together, I'd say,
+
+00:18:47.000 --> 00:18:53.000
+mid last year and decided on the idea to propose a funding
+
+00:18:53.000 --> 00:18:54.000
+that room.
+
+00:18:54.000 --> 00:18:59.000
+We precisely discussed basically all questions that arise
+
+00:18:59.000 --> 00:19:00.000
+from funding.
+
+00:19:00.000 --> 00:19:04.000
+So for example, from whom do you want to take funding?
+
+00:19:04.000 --> 00:19:06.000
+From whom not?
+
+00:19:06.000 --> 00:19:10.000
+Is there a way how we can identify, for example,
+
+00:19:10.000 --> 00:19:14.000
+very important projects or core infrastructure that we want to support?
+
+00:19:14.000 --> 00:19:17.000
+How much money do we want to give them?
+
+00:19:17.000 --> 00:19:24.000
+Is there some sort of communication or some sort of activity
+
+00:19:24.000 --> 00:19:28.000
+to be more successful in fundraising, for example?
+
+00:19:28.000 --> 00:19:32.000
+So there are many discussions on funds on funding on where
+
+00:19:32.000 --> 00:19:37.000
+money should come from, and all of these discussions
+
+00:19:37.000 --> 00:19:41.000
+happening here and there, but not like on one place.
+
+00:19:41.000 --> 00:19:45.000
+And that's why we decided to come up with this dedicated funding
+
+00:19:45.000 --> 00:19:49.000
+that room and I think that was also a huge success.
+
+00:19:49.000 --> 00:19:53.000
+So also this room was pretty packed during the whole day.
+
+00:19:53.000 --> 00:19:57.000
+And we had many, many submissions also in the first place.
+
+00:19:57.000 --> 00:20:01.000
+So we had to be very picky on the talks we had.
+
+00:20:01.000 --> 00:20:05.000
+And ultimately, but I think we came up with a very, very nice agenda
+
+00:20:05.000 --> 00:20:09.000
+that addressed most of the topics that somehow arise
+
+00:20:09.000 --> 00:20:11.000
+when we talk about funding.
+
+00:20:11.000 --> 00:20:15.000
+And also the discussions after every talk show that there is really
+
+00:20:15.000 --> 00:20:19.000
+in need for this discussion that there is a lot of expertise.
+
+00:20:19.000 --> 00:20:23.000
+Also, that was very nice to see that many participants who
+
+00:20:24.000 --> 00:20:30.000
+maybe had been rejected by their talk due to the nature of this very short date,
+
+00:20:30.000 --> 00:20:35.000
+which we had basically just eight hours, where we discussed this topic.
+
+00:20:35.000 --> 00:20:38.000
+But still in the room and sharing the expertise.
+
+00:20:38.000 --> 00:20:43.000
+And that was pretty nice to see that it was not just like people talking
+
+00:20:43.000 --> 00:20:47.000
+and sharing the experience from the stage, but that there was also a lot
+
+00:20:47.000 --> 00:20:51.000
+of interaction with the people in the room that also not only ask questions,
+
+00:20:52.000 --> 00:20:55.000
+but also added a lot of very useful information.
+
+00:20:55.000 --> 00:20:59.000
+And for example, sources, so where you can look for money,
+
+00:20:59.000 --> 00:21:02.000
+how to do this, they shared the experience.
+
+00:21:02.000 --> 00:21:06.000
+And I think that was basically what the deaf room should look like, right?
+
+00:21:06.000 --> 00:21:11.000
+So that there is a discussion ongoing that there is,
+
+00:21:11.000 --> 00:21:14.000
+one could say, something starts there.
+
+00:21:14.000 --> 00:21:18.000
+So I had a feeling that after this deaf room,
+
+00:21:18.000 --> 00:21:24.000
+more and more people are now connected and can work together and collaborate on these questions.
+
+00:21:24.000 --> 00:21:27.000
+So I would be very happy to see this deaf room again next year,
+
+00:21:27.000 --> 00:21:31.000
+and maybe to see if there was already some sort of progress.
+
+00:21:31.000 --> 00:21:34.000
+Or if there are some new questions, I mean,
+
+00:21:34.000 --> 00:21:38.000
+we both also talked about the funding topic that we discussed.
+
+00:21:38.000 --> 00:21:41.000
+I think two at this also go, go.
+
+00:21:41.000 --> 00:21:45.000
+So there are also discussions ongoing, not only in the European Union,
+
+00:21:45.000 --> 00:21:47.000
+but also in member states and globally,
+
+00:21:47.000 --> 00:21:49.000
+how to invest in core infrastructure,
+
+00:21:49.000 --> 00:21:52.000
+how to invest in digital to sovereignty,
+
+00:21:52.000 --> 00:21:55.000
+but world plays free software and all of this.
+
+00:21:55.000 --> 00:22:07.000
+And I think it's a good idea that our community is networking and collaborating on those questions in order to be able to influence these discussions happening on the European level.
+
+00:22:07.000 --> 00:22:10.000
+Like this input from us,
+
+00:22:10.000 --> 00:22:17.000
+because I do believe that our community is basically that one that can help in this debate a lot,
+
+00:22:17.000 --> 00:22:20.000
+in order to identify who are the people that need money,
+
+00:22:20.000 --> 00:22:23.000
+which are the projects that need support,
+
+00:22:23.000 --> 00:22:26.000
+and which are the other projects where we could also say,
+
+00:22:26.000 --> 00:22:28.000
+this is something that the market should invest,
+
+00:22:28.000 --> 00:22:32.000
+and not us taxpayers money.
+
+00:22:32.000 --> 00:22:37.000
+I think there are different sources we need to discuss,
+
+00:22:37.000 --> 00:22:41.000
+we are managed to come from and it should always be private and public.
+
+00:22:41.000 --> 00:22:45.000
+So in this, these are some questions that are not that easy
+
+00:22:45.000 --> 00:22:48.000
+to discuss when it comes again to the needy query,
+
+00:22:48.000 --> 00:22:54.000
+and here I think it's a good idea if we can up this idea as out of our community ourselves,
+
+00:22:54.000 --> 00:22:58.000
+and point to the right project that needs support,
+
+00:22:58.000 --> 00:23:01.000
+and discuss this also within our community,
+
+00:23:01.000 --> 00:23:06.000
+how we do believe funding for the free software ecosystem should look like,
+
+00:23:06.000 --> 00:23:09.000
+and what's good for us is community and what not.
+
+00:23:09.000 --> 00:23:12.000
+And therefore this deaf room was super helpful.
+
+00:23:12.000 --> 00:23:16.000
+It was also pretty hands on if you are a project and you struggle with finding money.
+
+00:23:16.000 --> 00:23:19.000
+There are definitely talks, you should watch again,
+
+00:23:19.000 --> 00:23:24.000
+also here these talks are all recorded.
+
+00:23:24.000 --> 00:23:27.000
+So you can go on the first step side,
+
+00:23:27.000 --> 00:23:29.000
+channel to the deaf room, click the talk,
+
+00:23:29.000 --> 00:23:31.000
+and you will find the recording of the talk.
+
+00:23:31.000 --> 00:23:33.000
+So you can watch all of this again,
+
+00:23:33.000 --> 00:23:36.000
+or I said, saying here we will also have a blog post,
+
+00:23:36.000 --> 00:23:38.000
+and use the item on fissivee.org.
+
+00:23:38.000 --> 00:23:40.000
+Where we report about this deaf room,
+
+00:23:40.000 --> 00:23:44.000
+and where you can also find recordings and rewatch,
+
+00:23:44.000 --> 00:23:46.000
+what's interesting for you.
+
+00:23:46.000 --> 00:23:48.000
+And I will also link them in the show notes.
+
+00:23:48.000 --> 00:23:49.000
+Yes.
+
+00:23:49.000 --> 00:23:50.000
+Perfect.
+
+00:23:50.000 --> 00:23:52.000
+Not all of the videos separately,
+
+00:23:52.000 --> 00:23:55.000
+but the deaf room that you can go through the talk.
+
+00:23:55.000 --> 00:23:56.000
+Exactly.
+
+00:23:56.000 --> 00:23:58.000
+And then what's the recording?
+
+00:23:58.000 --> 00:24:00.000
+Because otherwise it would be a bit too much.
+
+00:24:01.000 --> 00:24:03.000
+Maybe I can attach also here,
+
+00:24:03.000 --> 00:24:05.000
+a call to our community,
+
+00:24:05.000 --> 00:24:07.000
+or to our listeners of this podcast episode.
+
+00:24:07.000 --> 00:24:09.000
+So if you are working on the topic of funding,
+
+00:24:09.000 --> 00:24:11.000
+or if you are interested in the topic of funding,
+
+00:24:11.000 --> 00:24:14.000
+if you want to contribute with this debate,
+
+00:24:14.000 --> 00:24:17.000
+you're also free to reach out to me directly,
+
+00:24:17.000 --> 00:24:19.000
+or to contact at fissivee.org.
+
+00:24:19.000 --> 00:24:21.000
+So we are still in the very early phase,
+
+00:24:21.000 --> 00:24:23.000
+I'd say, of this debate,
+
+00:24:23.000 --> 00:24:25.000
+and it will keep us busy,
+
+00:24:25.000 --> 00:24:27.000
+I do believe for the next term.
+
+00:24:27.000 --> 00:24:29.000
+So basically for the next five years,
+
+00:24:29.000 --> 00:24:30.000
+you should debate,
+
+00:24:30.000 --> 00:24:32.000
+we are discussing,
+
+00:24:32.000 --> 00:24:34.000
+you will stick a one-stack,
+
+00:24:34.000 --> 00:24:36.000
+we are discussing core infrastructure,
+
+00:24:36.000 --> 00:24:38.000
+we are discussing innovation in Europe,
+
+00:24:38.000 --> 00:24:43.000
+the new digital program will be coming up into years
+
+00:24:43.000 --> 00:24:46.000
+where there might be potential sources for funding.
+
+00:24:46.000 --> 00:24:48.000
+So the discussion is just about to start,
+
+00:24:48.000 --> 00:24:51.000
+so if you want to take part in this discussion,
+
+00:24:51.000 --> 00:24:52.000
+if you have ideas,
+
+00:24:52.000 --> 00:24:53.000
+if you have points,
+
+00:24:53.000 --> 00:24:55.000
+or if you also have experience,
+
+00:24:55.000 --> 00:24:58.000
+which is a big interest for us,
+
+00:24:58.000 --> 00:25:00.000
+and if you are free to reach out to us.
+
+00:25:00.000 --> 00:25:03.000
+That one's a good idea to get all of us,
+
+00:25:03.000 --> 00:25:04.000
+if you could together,
+
+00:25:04.000 --> 00:25:06.000
+and to start with this discussion,
+
+00:25:06.000 --> 00:25:07.000
+also outside of Boston.
+
+00:25:07.000 --> 00:25:10.000
+But what was the best thing that happened in this,
+
+00:25:10.000 --> 00:25:11.000
+of course,
+
+00:25:11.000 --> 00:25:12.000
+funding,
+
+00:25:12.000 --> 00:25:13.000
+deaf room for you,
+
+00:25:13.000 --> 00:25:15.000
+like what really stood out for you?
+
+00:25:15.000 --> 00:25:19.000
+What was the something I better to ask us to hire to name?
+
+00:25:19.000 --> 00:25:23.000
+So I don't want to pick a specific talk,
+
+00:25:23.000 --> 00:25:26.000
+but what I really liked was,
+
+00:25:26.000 --> 00:25:27.000
+what I already said,
+
+00:25:27.000 --> 00:25:29.000
+that there was a lot of interaction in the deaf room.
+
+00:25:29.000 --> 00:25:34.000
+So, and that there was basically participants,
+
+00:25:34.000 --> 00:25:36.000
+and speakers have been on eye level,
+
+00:25:36.000 --> 00:25:40.000
+and it had been a very good exchange.
+
+00:25:40.000 --> 00:25:45.000
+I do believe that also speakers took some sort of information
+
+00:25:45.000 --> 00:25:49.000
+that was new to them away from this deaf room,
+
+00:25:49.000 --> 00:25:52.000
+and that's something which is really good.
+
+00:25:52.000 --> 00:25:55.000
+And I do believe also that this deaf room helped a lot,
+
+00:25:55.000 --> 00:25:57.000
+and in order to bring people together,
+
+00:25:57.000 --> 00:26:00.000
+to see who else is working on this topic,
+
+00:26:00.000 --> 00:26:03.000
+and to be able to network with those people,
+
+00:26:03.000 --> 00:26:06.000
+and to be able to collaborate in the future,
+
+00:26:06.000 --> 00:26:07.000
+and that's,
+
+00:26:07.000 --> 00:26:08.000
+I think,
+
+00:26:08.000 --> 00:26:10.000
+the biggest result of this deaf room,
+
+00:26:10.000 --> 00:26:11.000
+and yeah,
+
+00:26:11.000 --> 00:26:13.000
+bringing people together,
+
+00:26:13.000 --> 00:26:15.000
+and pointing to it,
+
+00:26:15.000 --> 00:26:17.000
+and giving it the importance with,
+
+00:26:17.000 --> 00:26:19.000
+like also a dedicated deaf room,
+
+00:26:19.000 --> 00:26:22.000
+showed that there is the need to discuss this,
+
+00:26:22.000 --> 00:26:24.000
+that there is a need from the community,
+
+00:26:24.000 --> 00:26:26.000
+and people are already working on this,
+
+00:26:26.000 --> 00:26:27.000
+but that they are not,
+
+00:26:27.000 --> 00:26:29.000
+well, network together,
+
+00:26:29.000 --> 00:26:31.000
+but this room definitely had to,
+
+00:26:31.000 --> 00:26:32.000
+to create this,
+
+00:26:32.000 --> 00:26:34.000
+get people closer together,
+
+00:26:34.000 --> 00:26:35.000
+absolutely.
+
+00:26:35.000 --> 00:26:36.000
+And that was,
+
+00:26:36.000 --> 00:26:39.000
+that was basically the best outcome for me,
+
+00:26:39.000 --> 00:26:40.000
+however,
+
+00:26:40.000 --> 00:26:41.000
+as said,
+
+00:26:41.000 --> 00:26:43.000
+so there is definitely something,
+
+00:26:43.000 --> 00:26:45.000
+which is super interesting,
+
+00:26:45.000 --> 00:26:46.000
+so for me,
+
+00:26:46.000 --> 00:26:48.000
+in particular,
+
+00:26:48.000 --> 00:26:51.000
+the question on combining public and private efforts,
+
+00:26:51.000 --> 00:26:54.000
+so how we can bring together the market,
+
+00:26:54.000 --> 00:26:57.000
+and the taxpayers in order to support,
+
+00:26:57.000 --> 00:26:59.000
+free software ecosystem,
+
+00:26:59.000 --> 00:27:02.000
+that's one of the most interesting questions for me,
+
+00:27:02.000 --> 00:27:03.000
+because I do believe,
+
+00:27:03.000 --> 00:27:05.000
+it should not only be taxpayers money,
+
+00:27:05.000 --> 00:27:06.000
+but also private money,
+
+00:27:06.000 --> 00:27:07.000
+and there,
+
+00:27:07.000 --> 00:27:08.000
+it's definitely a question,
+
+00:27:08.000 --> 00:27:10.000
+how can we push the market,
+
+00:27:10.000 --> 00:27:11.000
+how can we,
+
+00:27:11.000 --> 00:27:13.000
+in particular, push those who benefit from,
+
+00:27:13.000 --> 00:27:14.000
+feel software,
+
+00:27:14.000 --> 00:27:16.000
+but don't contribute back,
+
+00:27:16.000 --> 00:27:17.000
+how can we push them,
+
+00:27:17.000 --> 00:27:19.000
+and the very interesting part here is,
+
+00:27:19.000 --> 00:27:21.000
+that we can even combine this,
+
+00:27:21.000 --> 00:27:22.000
+we can combine this debate,
+
+00:27:22.000 --> 00:27:24.000
+with the cyber resilience act,
+
+00:27:24.000 --> 00:27:28.000
+as we dare have these roles of the Stuart and manufacturer,
+
+00:27:28.000 --> 00:27:31.000
+and we want the manufacturer supporting the Stuart,
+
+00:27:31.000 --> 00:27:32.000
+so you can see that we,
+
+00:27:32.000 --> 00:27:34.000
+with this topic,
+
+00:27:34.000 --> 00:27:35.000
+also,
+
+00:27:35.000 --> 00:27:39.000
+and using other files to create awareness about this topic,
+
+00:27:39.000 --> 00:27:43.000
+and this topic of funding is discussed in many debates,
+
+00:27:43.000 --> 00:27:46.000
+but it's not that there is,
+
+00:27:46.000 --> 00:27:48.000
+this one funding debate happening in Europe,
+
+00:27:49.000 --> 00:27:50.000
+at the moment,
+
+00:27:50.000 --> 00:27:51.000
+at the moment,
+
+00:27:51.000 --> 00:27:52.000
+it's still a lot of peace work,
+
+00:27:52.000 --> 00:27:54.000
+and I do believe that this,
+
+00:27:54.000 --> 00:27:57.000
+that we just address these questions,
+
+00:27:57.000 --> 00:28:00.000
+we've already helped us to showcase,
+
+00:28:00.000 --> 00:28:03.000
+that there's not this one single question in this,
+
+00:28:03.000 --> 00:28:04.000
+niche debate,
+
+00:28:04.000 --> 00:28:07.000
+but that there's ongoing overall funding debate,
+
+00:28:07.000 --> 00:28:13.000
+which is basically asking for public and private money,
+
+00:28:13.000 --> 00:28:15.000
+for innovation,
+
+00:28:15.000 --> 00:28:17.000
+for core infrastructure,
+
+00:28:17.000 --> 00:28:19.000
+and for digital digital sovereignty,
+
+00:28:19.000 --> 00:28:22.000
+and to come up with one answer to this,
+
+00:28:22.000 --> 00:28:24.000
+needs collaboration,
+
+00:28:24.000 --> 00:28:26.000
+it needs working together,
+
+00:28:26.000 --> 00:28:30.000
+and understanding in which niche's people are working on this topic,
+
+00:28:30.000 --> 00:28:34.000
+in order to have shared approach,
+
+00:28:34.000 --> 00:28:35.000
+so to say,
+
+00:28:35.000 --> 00:28:36.000
+to the funding question,
+
+00:28:36.000 --> 00:28:38.000
+and that we can also use the niche debates
+
+00:28:38.000 --> 00:28:40.000
+to show that there are other debates
+
+00:28:40.000 --> 00:28:42.000
+ongoing in other files as well.
+
+00:28:42.000 --> 00:28:43.000
+Yeah,
+
+00:28:43.000 --> 00:28:45.000
+I would like to pick out the word,
+
+00:28:45.000 --> 00:28:47.000
+as you mentioned,
+
+00:28:47.000 --> 00:28:49.000
+working together, creating that book,
+
+00:28:49.000 --> 00:28:52.000
+and also highlight the part
+
+00:28:52.000 --> 00:28:55.000
+that we at FSAFE took a lot of time
+
+00:28:55.000 --> 00:28:58.000
+to go through all of those talks,
+
+00:28:58.000 --> 00:28:59.000
+to like,
+
+00:28:59.000 --> 00:29:02.000
+put energy in there and to create those rooms
+
+00:29:02.000 --> 00:29:05.000
+for the whole community to network into you,
+
+00:29:05.000 --> 00:29:06.000
+get together,
+
+00:29:06.000 --> 00:29:09.000
+but we also depend on your support.
+
+00:29:09.000 --> 00:29:12.000
+So please consider supporting us with the nation,
+
+00:29:12.000 --> 00:29:16.000
+and you can find information on the FSAFE.org slash donate,
+
+00:29:16.000 --> 00:29:21.000
+as we can only continue our work for free software here support.
+
+00:29:21.000 --> 00:29:24.000
+This is something that I would like to highlight
+
+00:29:24.000 --> 00:29:26.000
+during the context of working,
+
+00:29:26.000 --> 00:29:28.000
+because I was just thinking,
+
+00:29:28.000 --> 00:29:30.000
+during the whole time I thought,
+
+00:29:30.000 --> 00:29:31.000
+oh my god,
+
+00:29:31.000 --> 00:29:33.000
+Alex has spent a lot of time
+
+00:29:33.000 --> 00:29:35.000
+and effort to create those rooms,
+
+00:29:35.000 --> 00:29:38.000
+and I think this is something
+
+00:29:38.000 --> 00:29:41.000
+that the whole community benefited by, you know?
+
+00:29:41.000 --> 00:29:44.000
+I hope so, I hope so, and I had a feeling.
+
+00:29:44.000 --> 00:29:45.000
+Yeah.
+
+00:29:45.000 --> 00:29:47.000
+And I also have to add,
+
+00:29:47.000 --> 00:29:49.000
+as the normally,
+
+00:29:49.000 --> 00:29:51.000
+not only the preparation of the FSAFE,
+
+00:29:51.000 --> 00:29:53.000
+it's very time consuming,
+
+00:29:53.000 --> 00:29:55.000
+but also the days afterwards,
+
+00:29:55.000 --> 00:29:57.000
+or even the weeks afterwards.
+
+00:29:57.000 --> 00:30:00.000
+So since you normally run into so many people during FSAFE,
+
+00:30:00.000 --> 00:30:03.000
+and you start so many short chats
+
+00:30:03.000 --> 00:30:04.000
+where you agree on,
+
+00:30:04.000 --> 00:30:06.000
+oh we need to continue this conversation,
+
+00:30:06.000 --> 00:30:07.000
+but it's for them,
+
+00:30:07.000 --> 00:30:09.000
+you know, I have to run to the next meeting,
+
+00:30:09.000 --> 00:30:11.000
+and you collect even addresses,
+
+00:30:11.000 --> 00:30:13.000
+and a lot of things,
+
+00:30:13.000 --> 00:30:15.000
+and several communication networks,
+
+00:30:15.000 --> 00:30:17.000
+and I'm still struggling,
+
+00:30:17.000 --> 00:30:21.000
+some may it's that I still have to send.
+
+00:30:21.000 --> 00:30:24.000
+So it's not only what's happening that day,
+
+00:30:24.000 --> 00:30:26.000
+it's one part is the preparation,
+
+00:30:26.000 --> 00:30:28.000
+the another part is being there for two days,
+
+00:30:28.000 --> 00:30:30.000
+more than nine hours in those deaf rooms,
+
+00:30:30.000 --> 00:30:32.000
+without any sunlight.
+
+00:30:32.000 --> 00:30:35.000
+And then the part which comes afterwards,
+
+00:30:35.000 --> 00:30:37.000
+and at one day,
+
+00:30:37.000 --> 00:30:40.000
+we will start again preparing the next FSAFE,
+
+00:30:40.000 --> 00:30:43.000
+so it's basically FSAFE keeps us busy for the whole year,
+
+00:30:43.000 --> 00:30:45.000
+one could say,
+
+00:30:45.000 --> 00:30:47.000
+and that I can do my work,
+
+00:30:47.000 --> 00:30:50.000
+in order to realize these kind of deaf rooms,
+
+00:30:50.000 --> 00:30:51.000
+but in order to follow up,
+
+00:30:51.000 --> 00:30:53.000
+so it's not just like,
+
+00:30:53.000 --> 00:30:55.000
+that we do these deaf rooms for fun.
+
+00:30:55.000 --> 00:30:57.000
+We also want to have impact business,
+
+00:30:57.000 --> 00:30:58.000
+and this needs follow up,
+
+00:30:58.000 --> 00:30:59.000
+and this needs a lot of time.
+
+00:30:59.000 --> 00:31:01.000
+And as said,
+
+00:31:01.000 --> 00:31:02.000
+for example, with the funding thing,
+
+00:31:02.000 --> 00:31:04.000
+we are just starting,
+
+00:31:04.000 --> 00:31:05.000
+to be able to do this,
+
+00:31:05.000 --> 00:31:06.000
+and I say,
+
+00:31:06.000 --> 00:31:08.000
+as a whole community,
+
+00:31:08.000 --> 00:31:10.000
+and bringing these people together,
+
+00:31:10.000 --> 00:31:11.000
+also takes time,
+
+00:31:11.000 --> 00:31:12.000
+it needs energy,
+
+00:31:12.000 --> 00:31:14.000
+finding common ground,
+
+00:31:14.000 --> 00:31:16.000
+see where we can work together,
+
+00:31:16.000 --> 00:31:18.000
+and this needs a lot of time,
+
+00:31:18.000 --> 00:31:19.000
+resources,
+
+00:31:19.000 --> 00:31:21.000
+and if you donate to us,
+
+00:31:21.000 --> 00:31:23.000
+you make this work possible,
+
+00:31:23.000 --> 00:31:25.000
+you make our sites for funding possible,
+
+00:31:25.000 --> 00:31:27.000
+and then also,
+
+00:31:27.000 --> 00:31:29.000
+one day we'll benefit you,
+
+00:31:29.000 --> 00:31:30.000
+if you,
+
+00:31:30.000 --> 00:31:31.000
+for example,
+
+00:31:31.000 --> 00:31:32.000
+a developer,
+
+00:31:32.000 --> 00:31:36.000
+and maybe we'll get funds for your project in the future.
+
+00:31:36.000 --> 00:31:37.000
+Perfect.
+
+00:31:37.000 --> 00:31:39.000
+I would like to take this as a closing word,
+
+00:31:39.000 --> 00:31:40.000
+because we,
+
+00:31:40.000 --> 00:31:43.000
+exceeded a bit of our time,
+
+00:31:43.000 --> 00:31:44.000
+11,
+
+00:31:44.000 --> 00:31:46.000
+but I had a very fine chat with you.
+
+00:31:46.000 --> 00:31:47.000
+Thank you so much,
+
+00:31:47.000 --> 00:31:48.000
+Alex,
+
+00:31:48.000 --> 00:31:49.000
+for making this possible.
+
+00:31:49.000 --> 00:31:50.000
+Thank you so much for your work,
+
+00:31:50.000 --> 00:31:51.000
+on free software,
+
+00:31:51.000 --> 00:31:54.000
+and advocating for free software in the European Union.
+
+00:31:54.000 --> 00:31:57.000
+I think this is a really valuable work,
+
+00:31:57.000 --> 00:32:00.000
+and I really appreciate working with you together,
+
+00:32:01.000 --> 00:32:02.000
+thank you.
+
+00:32:02.000 --> 00:32:03.000
+Thank you so much.
+
+00:32:03.000 --> 00:32:05.000
+This was the software freedom podcast.
+
+00:32:05.000 --> 00:32:07.000
+If you like this episode,
+
+00:32:07.000 --> 00:32:09.000
+please recommend it to your friends,
+
+00:32:09.000 --> 00:32:10.000
+and write it.
+
+00:32:10.000 --> 00:32:12.000
+Stay tuned for more inspiring conversations,
+
+00:32:12.000 --> 00:32:15.000
+that explore the importance of software freedom,
+
+00:32:15.000 --> 00:32:18.000
+and its impact on our digital life.
+
+00:32:18.000 --> 00:32:22.000
+This podcast is presented to you by the free software foundation Europe.
+
+00:32:22.000 --> 00:32:26.000
+We are a charity that works on promoting software freedom.
+
+00:32:26.000 --> 00:32:28.000
+If you like our work,
+
+00:32:28.000 --> 00:32:31.000
+please consider supporting us as a donation.
+
+00:32:31.000 --> 00:32:35.000
+You find more information on the FSE.org slash donate.
+
+00:32:35.000 --> 00:32:37.000
+Thank you so much for your support,
+
+00:32:37.000 --> 00:32:39.000
+and until next time,
+
+00:32:39.000 --> 00:32:40.000
+bye-bye.

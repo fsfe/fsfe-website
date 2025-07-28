@@ -333,6 +333,18 @@
               </xsl:for-each>
             </xsl:element>
 
+            <!-- Podcast Transcripts -->
+            <xsl:element name="podcast:transcript">
+              <xsl:attribute name="url">
+                <xsl:value-of select="translate(podcast/transcript/url, 'html', 'vtt')" />
+              </xsl:attribute>
+              <xsl:attribute name="type">text/vtt</xsl:attribute>
+              <xsl:attribute name="rel">captions</xsl:attribute>
+              <xsl:attribute name="language">
+                <xsl:value-of select="$lang" />
+              </xsl:attribute>
+            </xsl:element>
+
           </xsl:element>
         </xsl:for-each>
 

@@ -21,7 +21,8 @@ def _rsync(stagedir: Path, target: str, port: int) -> None:
             str(stagedir) + "/",
             target,
         ]
-        # Use ssh with a command such that it does not worry about fingerprints, as every connection is a new one basically
+        # Use ssh with a command such that it does not worry about fingerprints,
+        # as every connection is a new one basically
         # Also specify the sshport, and only load this sshconfig if required
         + (
             ["-e", f"ssh -o StrictHostKeyChecking=accept-new -p {port}"]

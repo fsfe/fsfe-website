@@ -14,7 +14,7 @@ logger = logging.getLogger(__name__)
 
 
 def _write_localmenus(
-    dir: str, files_by_dir: dict[str, list[Path]], languages: list[str]
+    directory: str, files_by_dir: dict[str, list[Path]], languages: list[str]
 ) -> None:
     """
     Write localmenus for a given directory
@@ -23,11 +23,11 @@ def _write_localmenus(
     base_files = set(
         map(
             lambda filter_file: get_basepath(filter_file),
-            files_by_dir[dir],
+            files_by_dir[directory],
         )
     )
     for lang in languages:
-        file = Path(dir).joinpath(f".localmenu.{lang}.xml")
+        file = Path(directory).joinpath(f".localmenu.{lang}.xml")
         logger.debug(f"Creating {file}")
         page = etree.Element("feed")
 
@@ -92,32 +92,38 @@ def update_localmenus(
     ):
         xslt_root = etree.parse(file)
         if xslt_root.xpath("//localmenu"):
-            dir = xslt_root.xpath("//localmenu/@dir")
-            dir = dir[0] if dir else str(file.parent.relative_to(Path(".")))
-            if dir not in files_by_dir:
-                files_by_dir[dir] = set()
-            files_by_dir[dir].add(file)
-    for dir in files_by_dir:
-        files_by_dir[dir] = sorted(list(files_by_dir[dir]))
+            directory = xslt_root.xpath("//localmenu/@dir")
+            directory = (
+                directory[0] if directory else str(file.parent.relative_to(Path(".")))
+            )
+            if directory not in files_by_dir:
+                files_by_dir[directory] = set()
+            files_by_dir[directory].add(file)
+    for directory in files_by_dir:
+        files_by_dir[directory] = sorted(list(files_by_dir[directory]))
 
     # If any of the source files has been updated, rebuild all .localmenu.*.xml
     dirs = filter(
-        lambda dir: (
+        lambda directory: (
             any(
                 map(
                     lambda file: (
-                        (not Path(dir).joinpath(".localmenu.en.xml").exists())
+                        (not Path(directory).joinpath(".localmenu.en.xml").exists())
                         or (
                             file.stat().st_mtime
-                            > Path(dir).joinpath(".localmenu.en.xml").stat().st_mtime
+                            > Path(directory)
+                            .joinpath(".localmenu.en.xml")
+                            .stat()
+                            .st_mtime
                         )
                     ),
-                    files_by_dir[dir],
+                    files_by_dir[directory],
                 )
             )
         ),
         files_by_dir,
     )
     pool.starmap(
-        _write_localmenus, map(lambda dir: (dir, files_by_dir, languages), dirs)
+        _write_localmenus,
+        map(lambda directory: (directory, files_by_dir, languages), dirs),
     )

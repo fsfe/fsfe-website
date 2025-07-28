@@ -49,9 +49,11 @@ def _run_process(
 
 
 def _process_dir(
-    source_dir: Path, languages: list[str], target: Path, dir: Path
+    source_dir: Path, languages: list[str], target: Path, directory: Path
 ) -> None:
-    for basename in set(map(lambda path: path.with_suffix(""), dir.glob("*.??.xhtml"))):
+    for basename in set(
+        map(lambda path: path.with_suffix(""), directory.glob("*.??.xhtml"))
+    ):
         for lang in languages:
             source_file = basename.with_suffix(f".{lang}.xhtml")
             target_file = target.joinpath(
@@ -85,12 +87,13 @@ def process_files(
     Build .html, .rss and .ics files from .xhtml sources
 
     """
-    # TODO for performance it would be better to iterate by processor xls, and parse it only once and pass the xsl object to called function.
+    # TODO for performance it would be better to iterate by processor xls,
+    # and parse it only once and pass the xsl object to called function.
     logger.info("Processing xhtml files")
     pool.starmap(
         _process_dir,
         map(
-            lambda dir: (source_dir, languages, target, dir),
+            lambda directory: (source_dir, languages, target, directory),
             set(map(lambda path: path.parent, source_dir.glob("**/*.*.xhtml"))),
         ),
     )

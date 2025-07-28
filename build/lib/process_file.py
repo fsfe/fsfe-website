@@ -75,7 +75,7 @@ def _get_set(action_file: Path, lang: str, parser: etree.XMLParser) -> etree.Ele
 
     if list_file.exists():
         with list_file.open("r") as file:
-            for index, path in enumerate(map(lambda line: Path(line.strip()), file)):
+            for path in map(lambda line: Path(line.strip()), file):
                 path_xml = (
                     path.with_suffix(f".{lang}.xml")
                     if path.with_suffix(f".{lang}.xml").exists()
@@ -195,7 +195,8 @@ def process_file(infile: Path, processor: Path) -> str:
                 "href",
                 linkelem.get("href").strip(),
             )
-            # Remove https://fsfe.org (or https://test.fsfe.org) from the start of all links
+            # Remove https://fsfe.org (or https://test.fsfe.org)
+            # from the start of all links
             linkelem.set(
                 "href",
                 re.sub(

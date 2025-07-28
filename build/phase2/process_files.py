@@ -9,7 +9,6 @@ from pathlib import Path
 from build.lib.misc import get_basepath
 from build.lib.process_file import process_file
 
-
 logger = logging.getLogger(__name__)
 
 

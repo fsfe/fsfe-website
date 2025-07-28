@@ -165,11 +165,16 @@ def _build_xmlstream(infile: Path, parser: etree.XMLParser) -> etree.Element:
     # Add the subelements
     page.append(_get_trlist(infile))
 
-    page.extend(_get_xmls(topbanner_xml, parser))
+    # Make the relevant subelmenets
+    # and then add the relevant xmls to it
+    topbanner = etree.SubElement(page, "topbanner")
+    topbanner.extend(_get_xmls(topbanner_xml, parser))
 
-    page.extend(_get_xmls(Path("global/data/texts/texts.en.xml"), parser))
+    textsetbackup = etree.SubElement(page, "textsetbackup")
+    textsetbackup.extend(_get_xmls(Path("global/data/texts/texts.en.xml"), parser))
 
-    page.extend(_get_xmls(texts_xml, parser))
+    textset = etree.SubElement(page, "textset")
+    textset.extend(_get_xmls(texts_xml, parser))
 
     page.append(_get_document(action_lang, action_file, lang, parser))
     return page

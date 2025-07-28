@@ -336,12 +336,12 @@
             <!-- Podcast Transcripts -->
             <xsl:element name="podcast:transcript">
               <xsl:attribute name="url">
-                <xsl:text>https://fsfe.org</xsl:text><xsl:value-of select="translate(podcast/transcript/url, 'html', '')"/><xsl:value-of select="$lang"/><xsl:text>.vtt</xsl:text>
+                <xsl:text>https://fsfe.org</xsl:text><xsl:value-of select="substring-before(podcast/transcript/url, 'html')"/><xsl:text>en.vtt</xsl:text>
               </xsl:attribute>
               <xsl:attribute name="type">text/vtt</xsl:attribute>
               <xsl:attribute name="rel">captions</xsl:attribute>
               <xsl:attribute name="language">
-                <xsl:value-of select="$lang" />
+                <xsl:text>en</xsl:text>
               </xsl:attribute>
             </xsl:element>
 

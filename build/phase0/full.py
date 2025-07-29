@@ -16,5 +16,5 @@ def full() -> None:
     """
     logger.info("Performing a full rebuild, git cleaning")
     run_command(
-        ["git", "clean", "-fdx", "--exclude", "/.venv"],
+        ["git", "clean", "-fdx", "--exclude", "/.venv", "--exclude", "/.nltk_data"],
     )

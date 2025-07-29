@@ -182,6 +182,9 @@
         <itunes:subtitle>The monthly podcast about Free Software</itunes:subtitle>
         <itunes:block>no</itunes:block>
         <itunes:explicit>false</itunes:explicit>
+        <xsl:if test="$format = 'mp3'">
+          <podcast:guid>f8587e67-d1c9-54ac-938f-84710472f4bd</podcast:guid>
+        </xsl:if>
 
 
         <!-- Podcast episodes -->

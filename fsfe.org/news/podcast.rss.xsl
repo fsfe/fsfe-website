@@ -348,6 +348,18 @@
               </xsl:attribute>
             </xsl:element>
 
+            <!-- Link to discussion topic on community.fsfe.org -->
+            <xsl:if test = "discussion/@href">
+              <xsl:element name="podcast:socialInteract">
+                <xsl:attribute name="uri">
+                  <xsl:value-of select="discussion/@href" />
+                </xsl:attribute>
+                <xsl:attribute name="protocol">activitypub</xsl:attribute>
+                <xsl:attribute name="accountId">@fsfe</xsl:attribute>
+                <xsl:attribute name="accountUrl">https://mastodon.social/@fsfe</xsl:attribute>
+              </xsl:element>
+            </xsl:if>
+
           </xsl:element>
         </xsl:for-each>
 

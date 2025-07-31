@@ -200,17 +200,6 @@ def process_file(infile: Path, processor: Path) -> str:
                 "href",
                 linkelem.get("href").strip(),
             )
-            # Remove https://fsfe.org (or https://test.fsfe.org)
-            # from the start of all links
-            linkelem.set(
-                "href",
-                re.sub(
-                    r"""^(https?://(test\.)?fsfe\.org)""",
-                    "",
-                    linkelem.get("href"),
-                    flags=re.IGNORECASE,
-                ),
-            )
             # Change links from /foo/bar.html into /foo/bar.xx.html
             # Change links from foo/bar.html into foo/bar.xx.html
             # Same for .rss and .ics links

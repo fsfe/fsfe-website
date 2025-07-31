@@ -14,6 +14,7 @@
                 xmlns:podcast="https://podcastindex.org/namespace/1.0">
 
   <xsl:import href="../../build/xslt/gettext.xsl" />
+  <xsl:import href="../../build/xslt/fsfe-cd.xsl" />
 
   <xsl:output method="xml" encoding="utf-8"/>
 

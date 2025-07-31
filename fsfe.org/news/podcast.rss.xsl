@@ -14,6 +14,7 @@
                 xmlns:podcast="https://podcastindex.org/namespace/1.0">
 
   <xsl:import href="../../build/xslt/gettext.xsl" />
+  <xsl:import href="../../build/xslt/fsfe-cd.xsl" />
 
   <xsl:output method="xml" encoding="utf-8"/>
 
@@ -182,6 +183,9 @@
         <itunes:subtitle>The monthly podcast about Free Software</itunes:subtitle>
         <itunes:block>no</itunes:block>
         <itunes:explicit>false</itunes:explicit>
+        <xsl:if test="$format = 'mp3'">
+          <podcast:guid>f8587e67-d1c9-54ac-938f-84710472f4bd</podcast:guid>
+        </xsl:if>
 
 
         <!-- Podcast episodes -->
@@ -344,6 +348,18 @@
                 <xsl:text>en</xsl:text>
               </xsl:attribute>
             </xsl:element>
+
+            <!-- Link to discussion topic on community.fsfe.org -->
+            <xsl:if test = "discussion/@href">
+              <xsl:element name="podcast:socialInteract">
+                <xsl:attribute name="uri">
+                  <xsl:value-of select="discussion/@href" />
+                </xsl:attribute>
+                <xsl:attribute name="protocol">activitypub</xsl:attribute>
+                <xsl:attribute name="accountId">@fsfe</xsl:attribute>
+                <xsl:attribute name="accountUrl">https://mastodon.social/@fsfe</xsl:attribute>
+              </xsl:element>
+            </xsl:if>
 
           </xsl:element>
         </xsl:for-each>

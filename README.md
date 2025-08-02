@@ -87,7 +87,7 @@ We can either install the required dependencies manually using our preferred pac
 If installing manually, the required binary names are
 
 ```
-uv
+uv lessc
 ```
 
 Also needed are the libraries

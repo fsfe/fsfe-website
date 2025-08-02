@@ -30,8 +30,8 @@ steps:
       # Environment variables necessary for rootless Docker
       XDG_RUNTIME_DIR: "/run/user/1001"
       DOCKER_HOST: "unix:///run/user/1001/docker.sock"
-      # Target bunsen directly, and use ipv4 proxies for noddack and gahn, as ipv6 broken.
-      TARGET: "www@bunsen.fsfeurope.org:fsfe.org/global/,www@proxy.noris.fsfeurope.org:fsfe.org/global/?10322,www@proxy.plutex.fsfeurope.org:fsfe.org/global/?10322"
+      # Target use ipv4 proxies for noddack and gahn, as ipv6 broken.
+      TARGET: "www@proxy.noris.fsfeurope.org:fsfe.org/global/?10322,www@proxy.plutex.fsfeurope.org:fsfe.org/global/?10322"
       KEY_PRIVATE:
         from_secret: KEY_PRIVATE
       KEY_PASSWORD:
@@ -63,8 +63,8 @@ steps:
       # Environment variables necessary for rootless Docker
       XDG_RUNTIME_DIR: "/run/user/1001"
       DOCKER_HOST: "unix:///run/user/1001/docker.sock"
-      # Target bunsen directly, and use ipv4 proxies for noddack and gahn, as ipv6 broken.
-      TARGET: "www@bunsen.fsfeurope.org:test.fsfe.org/global/,www@proxy.noris.fsfeurope.org:test.fsfe.org/global/?10322,www@proxy.plutex.fsfeurope.org:test.fsfe.org/global/?10322"
+      # Target use ipv4 proxies for noddack and gahn, as ipv6 broken.
+      TARGET: "www@proxy.noris.fsfeurope.org:test.fsfe.org/global/?10322,www@proxy.plutex.fsfeurope.org:test.fsfe.org/global/?10322"
       KEY_PRIVATE:
         from_secret: KEY_PRIVATE
       KEY_PASSWORD:
@@ -107,6 +107,6 @@ volumes:
       path: /run/user/1001/docker.sock
 ---
 kind: signature
-hmac: 1f8d1a3a595b66777a095a331964f64d83c9326ce7cc023d6830e15e715a50dc
+hmac: eaf415ecd325569610b238585acc3b3b50beda5f33decdc4e4d7fe3f0ab08262
 
 ...

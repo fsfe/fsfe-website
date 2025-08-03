@@ -1,34 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <eventset>
   <version>1</version>
-
-	<event start="2018-12-27" end="2018-12-30">
-
-		<title>The FSFE assembly at the Chaos Communication Congress 35C3 in Leipzig, Germany</title>
-
-		<body>
-			<p>As in previous years, the FSFE will be present with an assembly during the Chaos Communication Congress from December 27 to 30 in Leipzig, Germany. <a href="https://events.ccc.de/congress/2018/wiki/index.php/Assembly:Free_Software_Foundation_Europe">The FSFE assembly</a> will be part of the cluster "about:freedom" and running its <a href="https://events.ccc.de/congress/2018/wiki/index.php/Assembly:Free_Software_Foundation_Europe#Our_Sessions">own track</a>. In this track the we have Susanne speaking about her <a href="https://fahrplan.events.ccc.de/congress/2018/Fahrplan/events/9681.html">self-made "smartphone"</a> (<a href="https://media.ccc.de/v/35c3-9681-butterbrotdosen-smartphone">video</a>), Katharina Nocun about <a href="https://fahrplan.events.ccc.de/congress/2018/Fahrplan/events/9858.html">data collecting Amazon</a> (<a href="https://media.ccc.de/v/35c3-9858-archaologische_studien_im_datenmull">video</a>) and Erik Albers about <a href="https://pretalx.35c3oio.freifunk.space/35c3oio/talk/UFZYAS/">the best of Fdroid</a> (<a href="https://media.freifunk.net/v/35c3oio-74-f-droid-pimp-your-android-fork-with-the-best-free-software-apps">video</a>).</p>
-			
-			<div class="captioned" style="width:80%; margin: 1.5em auto;">
-				  <img src="https://pics.fsfe.org/uploads/medium/86eeac96f12f61928a5643dd30a82ca2.jpg" />
-				<footer><p>FSFE booth during 35C3, the 35th Chaos Communication Congress</p></footer>
-			</div>
-			
-			
-		</body>
-		
-		<link>https://events.ccc.de/congress/2018/wiki/index.php/Assembly:Free_Software_Foundation_Europe</link>
-
-
-		<tags>
-			<tag key="infobooth">infobooth</tag>
-			<tag key="talk">talk</tag>
-			<tag key="meeting">meeting</tag>
-			<tag key="de">Germany</tag>
-			<tag key="front-page"/>
-		</tags>
-
-
-	</event>
+  <event start="2018-12-27" end="2018-12-30">
+    <title>The FSFE assembly at the Chaos Communication Congress 35C3 in Leipzig, Germany</title>
+    <body>
+      <p>As in previous years, the FSFE will be present with an assembly during the Chaos Communication Congress from December 27 to 30 in Leipzig, Germany. <a href="https://events.ccc.de/congress/2018/wiki/index.php/Assembly:Free_Software_Foundation_Europe">The FSFE assembly</a> will be part of the cluster "about:freedom" and running its <a href="https://events.ccc.de/congress/2018/wiki/index.php/Assembly:Free_Software_Foundation_Europe#Our_Sessions">own track</a>. In this track the we have Susanne speaking about her <a href="https://fahrplan.events.ccc.de/congress/2018/Fahrplan/events/9681.html">self-made "smartphone"</a> (<a href="https://media.ccc.de/v/35c3-9681-butterbrotdosen-smartphone">video</a>), Katharina Nocun about <a href="https://fahrplan.events.ccc.de/congress/2018/Fahrplan/events/9858.html">data collecting Amazon</a> (<a href="https://media.ccc.de/v/35c3-9858-archaologische_studien_im_datenmull">video</a>) and Erik Albers about <a href="https://pretalx.35c3oio.freifunk.space/35c3oio/talk/UFZYAS/">the best of Fdroid</a> (<a href="https://media.freifunk.net/v/35c3oio-74-f-droid-pimp-your-android-fork-with-the-best-free-software-apps">video</a>).</p>
+      <div class="captioned" style="width:80%; margin: 1.5em auto;">
+        <img src="https://pics.fsfe.org/uploads/medium/86eeac96f12f61928a5643dd30a82ca2.jpg"/>
+        <footer>
+          <p>FSFE booth during 35C3, the 35th Chaos Communication Congress</p>
+        </footer>
+      </div>
+    </body>
+    <link>https://events.ccc.de/congress/2018/wiki/index.php/Assembly:Free_Software_Foundation_Europe</link>
+    <tags>
+      <tag key="infobooth">infobooth</tag>
+      <tag key="talk">talk</tag>
+      <tag key="meeting">meeting</tag>
+      <tag key="de">Germany</tag>
+      <tag key="front-page"/>
+    </tags>
+  </event>
 </eventset>

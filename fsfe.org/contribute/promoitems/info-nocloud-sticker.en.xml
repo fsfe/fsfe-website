@@ -1,7 +1,6 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <infoset>
   <version>1</version>
-
   <info id="nocloud-sticker">
     <name>There is no cloud, just other people's computers - Sticker</name>
     <description>
@@ -9,16 +8,19 @@
     </description>
     <type>Sticker</type>
     <size>Comes in two sizes: 74 x 74 mm</size>
-    <source></source> 
+    <source/>
     <languages>
       <a href="https://download.fsfe.org/advocacy/promomaterial/NoCloud/NoCloud-sticker/wir-machen-Druck/thereisnocloud-sticker-74mm.en.pdf">English</a>
     </languages>
     <printed>
       English
     </printed>
-    <license><a href="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA 4.0</a></license>
+    <license>
+      <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA 4.0</a>
+    </license>
     <author>Markus Meier</author>
-    <source><a href="https://download.fsfe.org/advocacy/promomaterial/NoCloud/NoCloud-sticker/">nocloud-sticker* in download.fsfe.org</a></source>
+    <source>
+      <a href="https://download.fsfe.org/advocacy/promomaterial/NoCloud/NoCloud-sticker/">nocloud-sticker* in download.fsfe.org</a>
+    </source>
   </info>
-
 </infoset>

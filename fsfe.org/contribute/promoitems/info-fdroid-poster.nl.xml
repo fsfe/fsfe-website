@@ -1,7 +1,6 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <infoset>
   <version>1</version>
-
   <info id="f-droid-poster">
     <!-- Leave a tag like <printready> blank or erase it if you don't 
     want to appear it -->
@@ -13,12 +12,11 @@
     </description>
     <type>Poster</type>
     <size>A1</size>
-    <context><a href="http://www.freeyourandroid.org">Bevrijd uw Android-campagne</a></context>
-    
-<!-- everything below this line uses native language names for each language or technical abbreviations respectively, so there is no need to transalate it from here on -->
-    
-    <languages>
-	  <a href="https://download.fsfe.org/advocacy/promomaterial/FYA/FYA-poster/FYA_poster_DIN_A1_de.png">Deutsch</a>, 
+    <context>
+      <a href="http://www.freeyourandroid.org">Bevrijd uw Android-campagne</a>
+    </context>
+    <!-- everything below this line uses native language names for each language or technical abbreviations respectively, so there is no need to transalate it from here on -->
+    <languages><a href="https://download.fsfe.org/advocacy/promomaterial/FYA/FYA-poster/FYA_poster_DIN_A1_de.png">Deutsch</a>, 
       <a href="https://download.fsfe.org/advocacy/promomaterial/FYA/FYA-poster/FYA_poster_DIN_A1_en_xl.png">English</a>,
       <a href="https://download.fsfe.org/advocacy/promomaterial/FYA/FYA-poster/FYA_poster_DIN_A1_es.png">Español</a>,
       <a href="https://download.fsfe.org/advocacy/promomaterial/FYA/FYA-poster/FYA_poster_DIN_A1_el.png">Ελληνικά</a>,  
@@ -31,9 +29,8 @@
     <license>CC-BY-SA 4.0</license>
     <author>Free Software Foundation Europe</author>
     <source>
-	  <a href="https://download.fsfe.org/advocacy/promomaterial/FYA/FYA-poster/" title="Free Your Android poster sources">FYA_poster_DIN_A1_* in download.fsfe.org</a>
-	</source> 
-    <printready></printready>
+      <a href="https://download.fsfe.org/advocacy/promomaterial/FYA/FYA-poster/" title="Free Your Android poster sources">FYA_poster_DIN_A1_* in download.fsfe.org</a>
+    </source>
+    <printready/>
   </info>
-
 </infoset>

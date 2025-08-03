@@ -1,18 +1,21 @@
+<?xml version="1.0"?>
 <readers>
   <version>1</version>
-
-   <reader priority="30">
-  <name>Okular</name>
-  <logo>okular.png</logo>
-  <homepage>http://okular.kde.org/</homepage>
-  <license>GPL</license>
-  <platform><name>GNU/Linux</name><installer>http://okular.kde.org/download.php</installer></platform>
-  <language>en</language>
-  <language>fr</language>
-  <language>de</language>
-  <language>it</language>
-  
-  <description>
-    Il lettore di documenti del progetto KDE è in grado di leggere anche PostScript, Doc, Odt ed altri formati. È ben integrato con i browser di KDE: Konqueror e Rekonq.
+  <reader priority="30">
+    <name>Okular</name>
+    <logo>okular.png</logo>
+    <homepage>http://okular.kde.org/</homepage>
+    <license>GPL</license>
+    <platform>
+      <name>GNU/Linux</name>
+      <installer>http://okular.kde.org/download.php</installer>
+    </platform>
+    <language>en</language>
+    <language>fr</language>
+    <language>de</language>
+    <language>it</language>
+    <description>
+    Il lettore di documenti del progetto KDE &#xE8; in grado di leggere anche PostScript, Doc, Odt ed altri formati. &#xC8; ben integrato con i browser di KDE: Konqueror e Rekonq.
   </description>
-</reader> </readers>
+  </reader>
+</readers>

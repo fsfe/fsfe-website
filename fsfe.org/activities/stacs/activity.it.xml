@@ -1,8 +1,6 @@
-<?xml version="1.0" encoding="utf-8" ?>
-
+<?xml version="1.0" encoding="utf-8"?>
 <activityset>
   <version>1</version>
-
   <activity date="2007-03-28" status="finished">
     <title>STACS</title>
     <description>
@@ -12,12 +10,11 @@
       realizzare questo obiettivo formando sia le organizzazioni della società civile
       sia i ricercatori e trovando progetti comuni su cui lavorare in futuro.
     </description>
-    <link href="/activities/stacs/stacs.html" />
-    <order priority="1" />
+    <link href="/activities/stacs/stacs.html"/>
+    <order priority="1"/>
     <tags>
-      <tag key="awareness" />
-        <tag key="hide" />
+      <tag key="awareness"/>
+      <tag key="hide"/>
     </tags>
-
   </activity>
 </activityset>

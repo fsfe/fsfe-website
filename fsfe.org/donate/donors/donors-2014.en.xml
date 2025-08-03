@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <!--
   Please keep each list alphabetically ordered.  Emacs users want to set
   sort-fold-case to true and run sort-lines on a region.  Vi+ users can
@@ -12,16 +11,13 @@
   donor, so if you add a donor to a file of the new year, don't forget to
   remove the date="..." in the old year's file.
 -->
-
 <donorset>
   <version>1</version>
-
   <gold>
     <donor img="donors/google.png" mark="yes">Google</donor>
     <donor img="donors/linuxhotel.png">Linuxhotel Villa Vogelsang</donor>
     <donor img="donors/redhat.png">Red Hat</donor>
   </gold>
-
   <silver>
     <donor img="donors/silver-arm.png">ARM</donor>
     <donor img="donors/silver-libreoffice.jpg">Document Foundation</donor>
@@ -33,7 +29,6 @@
     <donor img="donors/silver-linuxfoundation.png">Linux Foundation</donor>
     <donor>René Genz</donor>
   </silver>
-
   <bronze>
     <donor>Alexander Kahl</donor>
     <donor>Berlin Linux User Group (BeLUG)</donor>

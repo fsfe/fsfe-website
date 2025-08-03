@@ -1,25 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <eventset>
   <version>1</version>
-
-   
-	<event start="2015-05-27" end="2015-05-27"> 
- 
-		<title>Vortrag über das Python-Dokumentationstool Sphinx von Jan Ulrich Hasecke, Düsseldorf, Deutschland</title> 
- 
-		<body> 
-			<p>Das nächste reguläre Fellowshiptreffen in Düsseldorf findet am 27.05.2015 ab 19:30 Uhr wieder im Chaosdorf statt. Jan Ulrich Hasecke wird dabei nicht nur über das Python-Dokumentationstool Sphinx http://sphinx-doc.org/ sprechen, sondern unter dem Thema “Undocumented Code is Broken Code oder Dokumentation ist erfolgskritisch!” auch darüber, welchen Stellenwert die Dokumentation in einem Software-Projekt einnehmen sollte. “Documentation Driven Development” ist in diesem Zusammenhang ein Stichwort. Ebenso wird die Frage eine Rolle spielen: “Was kommt nach der Dokumentation?” Um 20:00 Uhr beginnt der offiziell Teil, das Chaosdorf findet sich in der Hüttenstr. 25, 40215 Düsseldorf. Gäste sind bei diesem Treffen wie immer herzlich willkommen.</p> 
-		</body> 
- 
-		<link>https://chaosdorf.de/kontakt/</link>
-		<tags>
-			<tag key="front-page"/>
-			<tag key="localgroup">Düsseldorf</tag>
-			<tag key="localgroup">Lokales FSFE Treffen</tag>
-			<tag key="meeting"/>
-		</tags>
-
- 
-	</event> 
-</eventset> 
+  <event start="2015-05-27" end="2015-05-27">
+    <title>Vortrag über das Python-Dokumentationstool Sphinx von Jan Ulrich Hasecke, Düsseldorf, Deutschland</title>
+    <body>
+      <p>Das nächste reguläre Fellowshiptreffen in Düsseldorf findet am 27.05.2015 ab 19:30 Uhr wieder im Chaosdorf statt. Jan Ulrich Hasecke wird dabei nicht nur über das Python-Dokumentationstool Sphinx http://sphinx-doc.org/ sprechen, sondern unter dem Thema “Undocumented Code is Broken Code oder Dokumentation ist erfolgskritisch!” auch darüber, welchen Stellenwert die Dokumentation in einem Software-Projekt einnehmen sollte. “Documentation Driven Development” ist in diesem Zusammenhang ein Stichwort. Ebenso wird die Frage eine Rolle spielen: “Was kommt nach der Dokumentation?” Um 20:00 Uhr beginnt der offiziell Teil, das Chaosdorf findet sich in der Hüttenstr. 25, 40215 Düsseldorf. Gäste sind bei diesem Treffen wie immer herzlich willkommen.</p>
+    </body>
+    <link>https://chaosdorf.de/kontakt/</link>
+    <tags>
+      <tag key="front-page"/>
+      <tag key="localgroup">Düsseldorf</tag>
+      <tag key="localgroup">Lokales FSFE Treffen</tag>
+      <tag key="meeting"/>
+    </tags>
+  </event>
+</eventset>

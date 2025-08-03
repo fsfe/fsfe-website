@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <html>
   <version>1</version>
-<head>
-  <title>Zoek</title>
-  <script type="text/javascript" src="/scripts/lunr-2.3.9.min.js"></script>
-  <script type="text/javascript" src="index.js"></script>
-</head>
-<body class="toplevel">
-  <h1>Zoek</h1>
-  <div id="introduction">
-    <p>
+  <head>
+    <title>Zoek</title>
+    <script type="text/javascript" src="/scripts/lunr-2.3.9.min.js"/>
+    <script type="text/javascript" src="index.js"/>
+  </head>
+  <body class="toplevel">
+    <h1>Zoek</h1>
+    <div id="introduction">
+      <p>
           Vind nieuwsartikelen en -pagina's over onderwerpen waarin u geïnteresseerd bent.
       U kunt één of meerdere trefwoorden gebruiken.
     </p>
-  </div>
-  <p>
+    </div>
+    <p>
       De zoekactie doorzoekt alle titels, teasers en tags van de site, maar
     niet de volledige tekst van het artikel. U krijgt maximaal 15 resultaten te zien, gesorteerd
     in nieuws en pagina's. Het gebruik van hoofd- of kleine letters doet er niet toe. Als u niet
@@ -22,64 +22,61 @@
     trefwoorden of andere woorden en gebruik de <a href="#tips">geavanceerde
     zoekfuncties</a>.
   </p>
-  <noscript>
-    <p>
+    <noscript>
+      <p>
           JavaScript moet geactiveerd zijn om de zoekfunctie te
       werken. Gewoonlijk doen wij ons best om te vermijden dat wij hiervan afhankelijk zijn. Als u
-      JavaScript niet wilt activeren kunt u een externe zoekmachine die dat niet nodig heeft (bijvoorbeeld <a
-      href="https://html.duckduckgo.com/html/">DuckDuckGo</a>) gebruiken, en daarbij "site:fsfe.org" toevoegen aan de zoekopdracht.
+      JavaScript niet wilt activeren kunt u een externe zoekmachine die dat niet nodig heeft (bijvoorbeeld <a href="https://html.duckduckgo.com/html/">DuckDuckGo</a>) gebruiken, en daarbij "site:fsfe.org" toevoegen aan de zoekopdracht.
     </p>
-  </noscript>
-  <form class="form-inline" method="GET" action="">
-    <div class="form-group">
-      <input type="text" class="form-control" id="search" name="q" aria-label="Search term" />
-    </div>
-    <button type="submit" class="btn btn-primary">Zoek</button>
-  </form>
-  <h2>Zoekresultaten</h2>
-  <div id="search_results"></div>
-  <h2 id="tips">Tips voor geavanceerde zoekopdrachten</h2>
-  <p>
+    </noscript>
+    <form class="form-inline" method="GET" action="">
+      <div class="form-group">
+        <input type="text" class="form-control" id="search" name="q" aria-label="Search term"/>
+      </div>
+      <button type="submit" class="btn btn-primary">Zoek</button>
+    </form>
+    <h2>Zoekresultaten</h2>
+    <div id="search_results"/>
+    <h2 id="tips">Tips voor geavanceerde zoekopdrachten</h2>
+    <p>
       U kunt uw zoekopdrachten aanpassen om de resultaten te beperken. Hier
-    zijn een paar voorbeelden (meer vindt u in de <a
-    href="https://lunrjs.com/guides/searching.html">documentatie van
+    zijn een paar voorbeelden (meer vindt u in de <a href="https://lunrjs.com/guides/searching.html">documentatie van
     de bibliotheek</a> die wij gebruiken).
   </p>
-  <ul>
-    <li>
+    <ul>
+      <li>
       Jokertekens: <code>communi*</code> zal resultaten weergeven voor bijv.
       <em>community</em> en <em>communication</em>.
     </li>
-    <li>
+      <li>
           Aanwezigheid: met <code>+router -patenten raadplegen</code>
       bepalen dat <em>router</em> in de resultaten gevonden moet worden. Alle
       resultaten die <em>patenten</em> bevatten worden uitgesloten. De
       aanwezigheid van <em>raadplegen</em> is optioneel.
     </li>
-    <li>
+      <li>
             Velden: u kunt uw zoekopdracht beperken tot de titels van de site met
       <code>title:router</code>. Andere velden zijn <code>teaser</code>,
       <code>type</code> en <code>tags</code>.
     </li>
-    <li>
+      <li>
           Alleen nieuws/pagina's: <code>+standaard +type:page</code> toont alleen
       pagina's met het woord <em>standaard</em>. Het tegenovergestelde is het
       <em>news</em> type. Let op de + tekens om af te dwingen dat beide termen
       aanwezig te zijn.
     </li>
-    <li>
+      <li>
           Boosts: u kunt het gewicht van bepaalde termen verhogen. Met
       <code>router^10 vrijheid</code> is het gewicht van de eerste term
       10x hoger.
     </li>
-    <li>
+      <li>
     Wazige overeenkomsten: Met <code>router~1</code>, vindt u
       resultaten met <em>router</em> en <em>routes</em>. Eén
       teken in de bevindingen kan verschillen van uw zoekterm.
     </li>
-  </ul>
-  <script type="text/javascript" src="search.js"></script>
-</body>
-<translator>André Ockers</translator>
+    </ul>
+    <script type="text/javascript" src="search.js"/>
+  </body>
+  <translator>André Ockers</translator>
 </html>
-

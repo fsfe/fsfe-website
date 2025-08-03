@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <eventset>
   <version>1</version>
-
-   <event start="2014-06-14" end="2014-06-14">
-   <title>Social Event at German speaking team meeting, Essen, Germany</title>
-   <body>
-     <p>
+  <event start="2014-06-14" end="2014-06-14">
+    <title>Social Event at German speaking team meeting, Essen, Germany</title>
+    <body>
+      <p>
      On Saturday 14 June at 18:00 there will be a social event in the
      Linuxhotel in Essen. During the weekend the German speaking teams of FSFE
      will have an internal coordination meeting. On Saturday we invite all
@@ -14,13 +13,11 @@
      BBQ. Please let us know if you plan to come and if you can also bring some
      snacks, so we can keep that in mind when we buy food.
      </p>
-   </body>
-   <link>https://wiki.fsfe.org/groups/Duesseldorf</link>
-   <tags>
-    <tag key="de"/>
-
-    <tag key="front-page"/>
-   </tags>
+    </body>
+    <link>https://wiki.fsfe.org/groups/Duesseldorf</link>
+    <tags>
+      <tag key="de"/>
+      <tag key="front-page"/>
+    </tags>
   </event>
 </eventset>
-

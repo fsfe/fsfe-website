@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
- 
 <eventset>
   <version>1</version>
-
   <event start="2010-04-14" end="2010-04-17">
     <title>"Linuxwochen" in Linz, Österreich</title>
     <body>
@@ -16,10 +14,9 @@
     zu unterhalten.
       </p>
     </body>
-
     <page>http://linz.linuxwochen.at/</page>
-  <tags>
-    <tag key="at"/>
-  </tags>
+    <tags>
+      <tag key="at"/>
+    </tags>
   </event>
 </eventset>

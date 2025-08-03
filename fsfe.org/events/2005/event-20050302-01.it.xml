@@ -1,12 +1,10 @@
-<?xml version="1.0" encoding="UTF-8" ?>
- 
+<?xml version="1.0" encoding="UTF-8"?>
 <eventset>
   <version>1</version>
-
-    <event start="2005-03-02" end="2005-03-04">
-       <title>Workshop sul software libero a Damasco, Siria</title>
-          <body>
-            <p>
+  <event start="2005-03-02" end="2005-03-04">
+    <title>Workshop sul software libero a Damasco, Siria</title>
+    <body>
+      <p>
               Tra il 2 e il 4 marzo, Karin Kosina e Jonas Öberg terranno alcuni
               interventi al "Free and Open Source Software Workshop" di Damasco.
               Karin parlerà degli aspetti economici del software libero e Jonas
@@ -14,13 +12,10 @@
               universitario.
 
             </p>
-          </body>
-
-<tags>
-<tag key="education"/>
+    </body>
+    <tags>
+      <tag key="education"/>
     </tags>
-
-
-          <page>http://www.foss2005.org</page>
-    </event>  
-</eventset> 
+    <page>http://www.foss2005.org</page>
+  </event>
+</eventset>

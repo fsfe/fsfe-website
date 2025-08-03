@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <!--
   Please keep each list alphabetically ordered.  Emacs users want to set
   sort-fold-case to true and run sort-lines on a region.  Vi+ users can
@@ -12,10 +11,8 @@
   donor, so if you add a donor to a file of the new year, don't forget to
   remove the date="..." in the old year's file.
 -->
-
 <donorset>
   <version>1</version>
-
   <gold>
     <donor date="2022-01-18" img="donors/google.png" mark="yes">Google</donor>
     <donor date="2022-07-26" img="donors/huawei.png">Huawei</donor>
@@ -25,7 +22,6 @@
     <donor img="donors/siemens.png">Siemens</donor>
     <donor>Reinhard Wiesemann</donor>
   </gold>
-
   <silver>
     <donor img="donors/silver-adfinis.png">Adfinis</donor>
     <donor img="donors/silver-avm.png">AVM</donor>
@@ -43,7 +39,6 @@
     <donor img="donors/silver-sysmocom.png">sysmocom - systems for mobile communications</donor>
     <donor>Thomas Etter</donor>
   </silver>
-
   <bronze>
     <donor>Andrew T. Wilson</donor>
     <donor>Arthur Schreiber</donor>
@@ -69,7 +64,8 @@
     <donor>ITOMIG GmbH</donor>
     <donor>Joachim Zobel</donor>
     <donor>Julien Furrer</donor>
-    <donor>LIHAS - LinuxHaus Stuttgart</donor><!-- Adrian Reyer -->
+    <donor>LIHAS - LinuxHaus Stuttgart</donor>
+    <!-- Adrian Reyer -->
     <donor>Martin F. Krafft</donor>
     <donor>Mateus Araujo Borges</donor>
     <donor>Matthias Köslin</donor>
@@ -77,18 +73,22 @@
     <donor date="2022-12-14">Michael Henzi</donor>
     <donor>Moritz Bunkus</donor>
     <donor>Morten Lind</donor>
-    <donor>Neuhaus-IT</donor><!-- Till Neuhaus -->
+    <donor>Neuhaus-IT</donor>
+    <!-- Till Neuhaus -->
     <donor date="2022-10-13">Netzint GmbH</donor>
-    <donor>Next Level Shit</donor><!-- Michael Czechowski -->
+    <donor>Next Level Shit</donor>
+    <!-- Michael Czechowski -->
     <donor date="2022-01-10">Peter van Eck</donor>
     <donor date="2022-10-31">Pius Frick</donor>
     <donor date="2022-11-28">Prograde AB</donor>
-    <donor>scvalex</donor><!-- Alexandru Scvortov -->
+    <donor>scvalex</donor>
+    <!-- Alexandru Scvortov -->
     <donor date="2022-02-26">Sebastian Pipping</donor>
     <donor>Simon Josefsson</donor>
     <donor date="2022-02-07">Stefan Begerad</donor>
     <donor>Stephan Kreutzer</donor>
-    <donor>Stichting Petities.nl (02-)</donor><!-- ReindeR Rustema -->
+    <donor>Stichting Petities.nl (02-)</donor>
+    <!-- ReindeR Rustema -->
     <donor>Syslinbit</donor>
     <donor>Thomas Doczkal</donor>
     <donor>Timo Wagner</donor>

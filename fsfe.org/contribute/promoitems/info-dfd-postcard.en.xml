@@ -1,7 +1,6 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <infoset>
   <version>1</version>
-
   <info id="dfd-postcard">
     <!-- Leave a tag like <printready> blank or erase it if you don't 
     want to appear it -->
@@ -13,17 +12,22 @@
     </description>
     <type>Postcard</type>
     <size>A6</size>
-    <context><a href="http://www.documentfreedom.org/">Document Freedom Day</a></context>
+    <context>
+      <a href="http://www.documentfreedom.org/">Document Freedom Day</a>
+    </context>
     <languages>
       <a href="https://download.fsfe.org/advocacy/promomaterial/DFD/DFD_ROBOTS_postcard_5000.pdf">English</a>
     </languages>
     <printed>
       English
     </printed>
-    <license><a href="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA 4.0</a></license>
+    <license>
+      <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA 4.0</a>
+    </license>
     <author>Markus Meier</author>
-    <source><a href="https://download.fsfe.org/advocacy/promomaterial/DFD/DFD_ROBOTS_postcard_5000_sources.tar.gz">English</a></source> 
-    <printready></printready>
+    <source>
+      <a href="https://download.fsfe.org/advocacy/promomaterial/DFD/DFD_ROBOTS_postcard_5000_sources.tar.gz">English</a>
+    </source>
+    <printready/>
   </info>
-
 </infoset>

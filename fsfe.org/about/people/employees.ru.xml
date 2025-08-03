@@ -1,15 +1,13 @@
 <?xml version="1.0"?>
-
 <employeeset>
   <version>1</version>
-
-  <employee id="full/m">Штатный&#160;сотрудник</employee>
-  <employee id="full/f">Штатная&#160;сотрудница</employee>
-  <employee id="part/m">Внештатный&#160;сотрудник</employee>
-  <employee id="part/f">Внештатная&#160;сотрудница</employee>
-  <employee id="intern/m">Стажер</employee>
-  <employee id="intern/f">Стажер</employee>
+  <employee id="full/m">&#x428;&#x442;&#x430;&#x442;&#x43D;&#x44B;&#x439;&#xA0;&#x441;&#x43E;&#x442;&#x440;&#x443;&#x434;&#x43D;&#x438;&#x43A;</employee>
+  <employee id="full/f">&#x428;&#x442;&#x430;&#x442;&#x43D;&#x430;&#x44F;&#xA0;&#x441;&#x43E;&#x442;&#x440;&#x443;&#x434;&#x43D;&#x438;&#x446;&#x430;</employee>
+  <employee id="part/m">&#x412;&#x43D;&#x435;&#x448;&#x442;&#x430;&#x442;&#x43D;&#x44B;&#x439;&#xA0;&#x441;&#x43E;&#x442;&#x440;&#x443;&#x434;&#x43D;&#x438;&#x43A;</employee>
+  <employee id="part/f">&#x412;&#x43D;&#x435;&#x448;&#x442;&#x430;&#x442;&#x43D;&#x430;&#x44F;&#xA0;&#x441;&#x43E;&#x442;&#x440;&#x443;&#x434;&#x43D;&#x438;&#x446;&#x430;</employee>
+  <employee id="intern/m">&#x421;&#x442;&#x430;&#x436;&#x435;&#x440;</employee>
+  <employee id="intern/f">&#x421;&#x442;&#x430;&#x436;&#x435;&#x440;</employee>
   <!--You should use the intern function rather than this, but maybe this will be needed-->
-  <employee id="freelancer/m">Работник по договорам</employee>
-  <employee id="freelancer/f">Работница по договорам</employee>
+  <employee id="freelancer/m">&#x420;&#x430;&#x431;&#x43E;&#x442;&#x43D;&#x438;&#x43A; &#x43F;&#x43E; &#x434;&#x43E;&#x433;&#x43E;&#x432;&#x43E;&#x440;&#x430;&#x43C;</employee>
+  <employee id="freelancer/f">&#x420;&#x430;&#x431;&#x43E;&#x442;&#x43D;&#x438;&#x446;&#x430; &#x43F;&#x43E; &#x434;&#x43E;&#x433;&#x43E;&#x432;&#x43E;&#x440;&#x430;&#x43C;</employee>
 </employeeset>

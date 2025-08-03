@@ -1,7 +1,6 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <infoset>
   <version>1</version>
-
   <info id="fsfe-logo-sticker">
     <name>FSFE-Logo - Aufkleber</name>
     <description>
@@ -9,16 +8,18 @@
     </description>
     <type>Aufkleber</type>
     <size> 66 x 39 mm</size>
-    <context><a href="/about/graphics/">Das offizielle FSFE-Logo</a></context>
-    <languages>
-		<a href="https://download.fsfe.org/advocacy/promomaterial/FSFE/FSFElogo/fsfe-sticker-print.pdf">PDF</a>, <a href="https://download.fsfe.org/advocacy/promomaterial/FSFE/FSFElogo/fsfe-logo.sla">SLA</a>, <a href="https://download.fsfe.org/advocacy/promomaterial/FSFE/FSFElogo/fsfe-sticker-print.svg">SVG</a>
+    <context>
+      <a href="/about/graphics/">Das offizielle FSFE-Logo</a>
+    </context>
+    <languages><a href="https://download.fsfe.org/advocacy/promomaterial/FSFE/FSFElogo/fsfe-sticker-print.pdf">PDF</a>, <a href="https://download.fsfe.org/advocacy/promomaterial/FSFE/FSFElogo/fsfe-logo.sla">SLA</a>, <a href="https://download.fsfe.org/advocacy/promomaterial/FSFE/FSFElogo/fsfe-sticker-print.svg">SVG</a>
     </languages>
     <printed>
       Keine einzelnen Sprachversionen.
     </printed>
     <license>Das Logo der FSFE darf ohne vorherige Genehmigung der FSFE nie auf eine Weise genutzt werden, die darauf schließen lassen könnte, dass die FSFE bestimmte Aktivitäten, Websites, Produkte oder sonstige Einheiten unterstützt</license>
     <author>Free Software Foundation Europe</author>
-    <source><a href="https://download.fsfe.org/advocacy/promomaterial/FSFE/FSFElogo/">fsfe-logo* in download.fsfe.org</a></source>
+    <source>
+      <a href="https://download.fsfe.org/advocacy/promomaterial/FSFE/FSFElogo/">fsfe-logo* in download.fsfe.org</a>
+    </source>
   </info>
 </infoset>
- 

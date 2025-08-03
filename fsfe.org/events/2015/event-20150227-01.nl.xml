@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <eventset>
   <version>1</version>
-
-<event start="2015-02-27" end="2015-03-13">
-<title>Fellowshipverkiezingen 2015</title>
-<body>
-  <p>
+  <event start="2015-02-27" end="2015-03-13">
+    <title>Fellowshipverkiezingen 2015</title>
+    <body>
+      <p>
 Fellows van de FSFE mogen stemmen voor de zevende verkiezingen van FSFE's Fellowshipvertegenwoordiger. 
 Iedere Fellow die mag stemmen zou een e-mail moeten hebben ontvangen van “FSFE Fellowship (CIVS poll supervisor)” met als onderwerp “Poll: Fellowship elections 2015”. Alle benodigde informatie om te kunnen stemmen vindt u in deze e-mail. De winnaar van de verkiezing zal publiekelijk bekend worden gemaakt op 16 maart op FSFE's webpagina.
 
@@ -14,11 +13,11 @@ Felix Stegerman,
 Max Mehl en
 Nicolas Dietrich.
   </p>
-</body> 
-<link>https://wiki.fsfe.org/FellowshipElection_2015</link>
-<tags>
-<tag key="front-page">voorpagina</tag>
-<tag key="localgroup"/>
-</tags>
-</event>
+    </body>
+    <link>https://wiki.fsfe.org/FellowshipElection_2015</link>
+    <tags>
+      <tag key="front-page">voorpagina</tag>
+      <tag key="localgroup"/>
+    </tags>
+  </event>
 </eventset>

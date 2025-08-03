@@ -1,12 +1,10 @@
-<?xml version="1.0" encoding="UTF-8" ?>
- 
+<?xml version="1.0" encoding="UTF-8"?>
 <eventset>
   <version>1</version>
-
-    <event start="2006-07-09" end="2006-07-11">
-       <title>Riunione di avvio del progetto SELF, L'Aia, Paesi Bassi</title>
-          <body>
-            <p>
+  <event start="2006-07-09" end="2006-07-11">
+    <title>Riunione di avvio del progetto SELF, L'Aia, Paesi Bassi</title>
+    <body>
+      <p>
               La conferenza pubblica di avvio del progetto "Science Education and
               Learning in Freedom" (SELF) avrà luogo all'Aia, nei Paesi Bassi
               il 10 luglio. Georg Greve, presidente della FSFE e Jonas Oberg, vice
@@ -16,11 +14,10 @@
               condurrà la tavola rotonda intitolata "La rivoluzione Open
               Content".
             </p>
-          </body>
-  <page>http://www.isoc.nl/SELF/kickoff/</page>
-<tags>
-<tag key="education"/>
+    </body>
+    <page>http://www.isoc.nl/SELF/kickoff/</page>
+    <tags>
+      <tag key="education"/>
     </tags>
-
-    </event>  
-</eventset> 
+  </event>
+</eventset>

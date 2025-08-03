@@ -1,25 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <html>
   <version>1</version>
-
-<head>
-  <title>Search</title>
-
-  <script type="text/javascript" src="/scripts/lunr-2.3.9.min.js"></script>
-  <script type="text/javascript" src="index.js"></script>
-</head>
-<body class="toplevel">
-
-  <h1>Search</h1>
-
-  <div id="introduction">
-    <p>
+  <head>
+    <title>Search</title>
+    <script type="text/javascript" src="/scripts/lunr-2.3.9.min.js"/>
+    <script type="text/javascript" src="index.js"/>
+  </head>
+  <body class="toplevel">
+    <h1>Search</h1>
+    <div id="introduction">
+      <p>
       Find news articles and pages about topics your are interested in.
       You can use one or multiple terms.
     </p>
-  </div>
-
-  <p>
+    </div>
+    <p>
     The search crawls through all site titles, teasers and tags, but
     not the full article text. You will see maximum 15 results in news 
     and pages. The case of your term does not matter. If you do
@@ -27,72 +22,62 @@
     terms, or different words, and use the <a href="#tips">advanced
     search features</a>.
   </p>
-
-  <noscript>
-    <p>
+    <noscript>
+      <p>
       JavaScript needs to be activated for the search functionality to
       work. Usually, we do our best to avoid depending on this. If you do
       not want to activate JavaScript, you can use an external search
-      engine which does not require it (for example <a
-      href="https://html.duckduckgo.com/html/">DuckDuckGo</a>), and use
+      engine which does not require it (for example <a href="https://html.duckduckgo.com/html/">DuckDuckGo</a>), and use
       the "site:fsfe.org" modifier in the query.
     </p>
-  </noscript>
-
-  <form class="form-inline" method="GET" action="">
-    <div class="form-group">
-      <input type="text" class="form-control" id="search" name="q" aria-label="Search term" />
-    </div>
-    <button type="submit" class="btn btn-primary">Search</button>
-  </form>
-
-  <h2>Search results</h2>
-
-  <div id="search_results"></div>
-
-  <h2 id="tips">Tips for advanced searches</h2>
-
-  <p>
+    </noscript>
+    <form class="form-inline" method="GET" action="">
+      <div class="form-group">
+        <input type="text" class="form-control" id="search" name="q" aria-label="Search term"/>
+      </div>
+      <button type="submit" class="btn btn-primary">Search</button>
+    </form>
+    <h2>Search results</h2>
+    <div id="search_results"/>
+    <h2 id="tips">Tips for advanced searches</h2>
+    <p>
     You can customise your searches to narrow down the results. Here
-    are a few examples, you can find more in the <a
-    href="https://lunrjs.com/guides/searching.html">documentation of
+    are a few examples, you can find more in the <a href="https://lunrjs.com/guides/searching.html">documentation of
     the library</a> we use.
   </p>
-
-  <ul>
-    <li>
+    <ul>
+      <li>
       Wildcards: <code>communi*</code> will display results for e.g.
       <em>community</em> and <em>communication</em>.
     </li>
-    <li>
+      <li>
       Presence: with <code>+router -patents consultation</code> you
       define that <em>router</em> must be found in the results. All
       results containing <em>patents</em> will be ruled out. The
       presence of <em>consultation</em> is optional.
     </li>
-    <li>
+      <li>
       Fields: you can limit your search to the site titles with
       <code>title:router</code>. Other fields are <code>teaser</code>,
       <code>type</code> and <code>tags</code>.
     </li>
-    <li>
+      <li>
       Only news/pages: <code>+standard +type:page</code> only shows
       pages with the word <em>standard</em>. The opposite is the
       <em>news</em> type. Note the + signs to enforce both terms to be
       present.
     </li>
-    <li>
+      <li>
       Boosts: you can increase weight of certain terms. With
       <code>router^10 freedom</code> the weight of the first term is
       10x higher.
     </li>
-    <li>
+      <li>
       Fuzzy matches: With <code>organisation~1</code>, you will find
       results with <em>organisation</em> and <em>organization</em>. One
       character in the findings can be different from your search term.
     </li>
-  </ul>
-
-  <script type="text/javascript" src="search.js"></script>
-</body>
+    </ul>
+    <script type="text/javascript" src="search.js"/>
+  </body>
 </html>

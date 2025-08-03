@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <eventset>
   <version>0</version>
-
-   <event start="2016-02-14" end="2016-02-14">
-   <title>I Love Free Software Day 2016</title>
-
-   <body>
-     <p>Οι συντελεστές του Ελεύθερου Λογισμικού καθιστούν εφικτό για εμάς
+  <event start="2016-02-14" end="2016-02-14">
+    <title>I Love Free Software Day 2016</title>
+    <body>
+      <p>Οι συντελεστές του Ελεύθερου Λογισμικού καθιστούν εφικτό για εμάς
 να χρησιμοποιούμε σε καθημερινή βάση τα εργαλεία της ελευθερίας που εκτιμούμε.
 Προγραμματιστές, σχεδιαστές, μεταφραστές και πολλοί άλλοι αξίζουν την
 ευγνωμοσύνη μας. Ας τους πούμε «ευχαριστώ» στην παραδοσιακή ημέρα της αγάπης,
@@ -14,12 +12,11 @@
 είναι μόνο διαδικτυακή. Ρίξτε μια ματιά στον ιστοχώρο για να δείτε πώς μπορείτε
 να γιορτάσετε μαζί μας.
      </p>
-   </body>
-   <link>http://ilovefs.org</link>
-   <tags>
-    <tag key="ilovefs"/>
-    <tag key="front-page"/>
-   </tags>
+    </body>
+    <link>http://ilovefs.org</link>
+    <tags>
+      <tag key="ilovefs"/>
+      <tag key="front-page"/>
+    </tags>
   </event>
 </eventset>
-

@@ -1,25 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-	
-	<eventset>
+<eventset>
   <version>1</version>
-
-   
-	        <event start="2015-08-22" end="2015-08-23"> 
-	 
-	                <title>FrOSCon 10 in St. Augustin, Duitsland</title> 
-	 
-	                <body> 
-	                        <p>FrOSCon is een Vrije Softwareconferentie, georganiseerd door de IT-afdeling van de Universiteit van Toegepaste Wetenschappen Bonn-Rhein-Sieg, met steun van de "Linux/Unix-gebruikersgroep Sankt Augustin" (LUUSA) en FrOSCon e.V. Bezoekers kunnen rekenen op een verrassend programma met praatjes en workshops voor bezoekers van alle leeftijden. FSFE zal met een kraam aanwezig zijn en kijkt uit naar het ontmoeten van geïnteresseerde bezoekers.</p> 
-	                </body> 
-	 
-	                <link>http://www.froscon.de/</link> 
-	 
-	
-	                <tags>
-	                        <tag key="de">Duitsland</tag>
-	                        <tag key="infobooth">kraam</tag>
-	                        <tag key="front-page">voorpagina</tag>
-	                </tags>
-	
-	 </event>
-</eventset> 
+  <event start="2015-08-22" end="2015-08-23">
+    <title>FrOSCon 10 in St. Augustin, Duitsland</title>
+    <body>
+      <p>FrOSCon is een Vrije Softwareconferentie, georganiseerd door de IT-afdeling van de Universiteit van Toegepaste Wetenschappen Bonn-Rhein-Sieg, met steun van de "Linux/Unix-gebruikersgroep Sankt Augustin" (LUUSA) en FrOSCon e.V. Bezoekers kunnen rekenen op een verrassend programma met praatjes en workshops voor bezoekers van alle leeftijden. FSFE zal met een kraam aanwezig zijn en kijkt uit naar het ontmoeten van geïnteresseerde bezoekers.</p>
+    </body>
+    <link>http://www.froscon.de/</link>
+    <tags>
+      <tag key="de">Duitsland</tag>
+      <tag key="infobooth">kraam</tag>
+      <tag key="front-page">voorpagina</tag>
+    </tags>
+  </event>
+</eventset>

@@ -1,7 +1,6 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <infoset>
   <version>1</version>
-
   <info id="plussy-sticker">
     <!-- Leave a tag like <printready> blank or erase it if you don't 
     want to appear it -->
@@ -13,18 +12,21 @@
     </description>
     <type>Sticker</type>
     <size>Groot (7.4 x 7.4 cm) en klein (5.2 x 5.2 cm) </size>
-    <context><a href="https://my.fsfe.org/donate">Word FSFE supporter</a></context>
-    <languages>
-      <a href="https://download.fsfe.org/advocacy/promomaterial/FSFE/PlussySticker/FSFE-plussy_72x72_v2.sla">SLA</a>, <a href="https://download.fsfe.org/advocacy/promomaterial/FSFE/PlussySticker/FSFE-plussy.png">PNG</a>, <a href="https://download.fsfe.org/advocacy/promomaterial/FSFE/PlussySticker/FSFE-plussy_72x72_v2.pdf">PDF</a>, <a href="https://download.fsfe.org/advocacy/promomaterial/FSFE/PlussySticker/FSFE-plussy.svg">SVG</a>
+    <context>
+      <a href="https://my.fsfe.org/donate">Word FSFE supporter</a>
+    </context>
+    <languages><a href="https://download.fsfe.org/advocacy/promomaterial/FSFE/PlussySticker/FSFE-plussy_72x72_v2.sla">SLA</a>, <a href="https://download.fsfe.org/advocacy/promomaterial/FSFE/PlussySticker/FSFE-plussy.png">PNG</a>, <a href="https://download.fsfe.org/advocacy/promomaterial/FSFE/PlussySticker/FSFE-plussy_72x72_v2.pdf">PDF</a>, <a href="https://download.fsfe.org/advocacy/promomaterial/FSFE/PlussySticker/FSFE-plussy.svg">SVG</a>
     </languages>
     <printed>
       Beschikbaar
     </printed>
-    <license><span style="font-size:0.8em">Het Fellowship-logo (en variaties erop) kunnen gebruikt worden om reclame te maken voor de Fellowship van de FSFE en in verband met iedere Vrije Software-gerelateerde activiteit uitgevoerd door FSFE-Fellows. Het kan ook worden opgenomen in logo's van lokale Fellowship-groepen als zij dat willen. Als u echter geen mandaat van FSFE heeft dan vragen wij u om niet de indruk te wekken dat u officieel spreekt namens FSFE, of dat FSFE u op welke manier dan ook heeft gecertificeerd of aanbevolen.</span></license>
+    <license>
+      <span style="font-size:0.8em">Het Fellowship-logo (en variaties erop) kunnen gebruikt worden om reclame te maken voor de Fellowship van de FSFE en in verband met iedere Vrije Software-gerelateerde activiteit uitgevoerd door FSFE-Fellows. Het kan ook worden opgenomen in logo's van lokale Fellowship-groepen als zij dat willen. Als u echter geen mandaat van FSFE heeft dan vragen wij u om niet de indruk te wekken dat u officieel spreekt namens FSFE, of dat FSFE u op welke manier dan ook heeft gecertificeerd of aanbevolen.</span>
+    </license>
     <author>Free Software Foundation Europe</author>
     <source>
-        <a href="https://download.fsfe.org/advocacy/promomaterial/FSFE/PlussySticker/" title="Plussy sticker sources">Plussy* in download.fsfe.org</a></source> 
-    <printready></printready>
+      <a href="https://download.fsfe.org/advocacy/promomaterial/FSFE/PlussySticker/" title="Plussy sticker sources">Plussy* in download.fsfe.org</a>
+    </source>
+    <printready/>
   </info>
-
 </infoset>

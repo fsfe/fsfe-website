@@ -1,27 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <eventset>
   <version>1</version>
-
-   
-	<event start="2015-05-14" end="2015-05-14"> 
- 
-		<title>FSFE Booth at Open Tech Summit in Berlin, Germany</title> 
- 
-		<body> 
-			<p>On 14 May there will be the OpenTech Summit, a one-day conference about Free Software, free knowledge and open hardware in the Kalkscheune in Berlin. On this occasion the FSFE will be present with a booth to discuss Free Software with you. Beside that, our sustaining member Ricardo Wurmus will give a talk about “Functional package management with GNU Guix”.
-			</p> 
-		</body> 
- 
-		<link>http://opentechsummit.net/</link> 
- 
-
-		<tags>
-			<tag key="front-page"/>
-			<tag key="infobooth">Info booth</tag>
-			<tag key="talk">Talk</tag>
-		</tags>
-
- 
-	</event> 
-</eventset> 
+  <event start="2015-05-14" end="2015-05-14">
+    <title>FSFE Booth at Open Tech Summit in Berlin, Germany</title>
+    <body>
+      <p>On 14 May there will be the OpenTech Summit, a one-day conference about Free Software, free knowledge and open hardware in the Kalkscheune in Berlin. On this occasion the FSFE will be present with a booth to discuss Free Software with you. Beside that, our sustaining member Ricardo Wurmus will give a talk about “Functional package management with GNU Guix”.
+			</p>
+    </body>
+    <link>http://opentechsummit.net/</link>
+    <tags>
+      <tag key="front-page"/>
+      <tag key="infobooth">Info booth</tag>
+      <tag key="talk">Talk</tag>
+    </tags>
+  </event>
+</eventset>

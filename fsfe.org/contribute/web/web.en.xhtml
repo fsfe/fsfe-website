@@ -1,29 +1,24 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8"?>
 <html>
   <version>2</version>
-
   <head>
     <title>Information for Webmasters</title>
   </head>
   <body class="article" microformats="h-entry">
-
-    <p id="category"><a href="/contribute/">Contribute</a></p>
+    <p id="category">
+      <a href="/contribute/">Contribute</a>
+    </p>
     <h1 class="p-name">Webmastering</h1>
-
     <div class="e-content">
-
-        <p id="introduction" class="p-summary">
+      <p id="introduction" class="p-summary">
           The <em>Web team </em> maintain and develop the FSFE's websites —
           ranging from <a href="/index.html">fsfe.org</a> to project and campaign
           sites.  Webmasters are volunteers working to enhance the
           organization's face to the world, and to improve the technical
           solutions of our web efforts.
         </p>
-
-
-        <h2>Get to know us, get to know the website</h2>
-
-        <p>
+      <h2>Get to know us, get to know the website</h2>
+      <p>
         If you want to get an idea of what work on FSFE's website consists
         of, the best way is to come have a chat with us. Some of the
         webmasters are regularly on Libera Chat's #fsfe channel, where we
@@ -32,68 +27,51 @@
         FSFE as a whole, visit <a href="/about/people/index.html">the FSFE's team page</a>
          and the specific <a href="https://wiki.fsfe.org/Teams/Web">Web team page</a>.
         </p>
-
-
-        <h2>Introduction</h2>
-
-        <p>
+      <h2>Introduction</h2>
+      <p>
           The technologies and programs used to maintain the FSFE web page
           should already be familiar to many developers and authors and might be of
           interest to those that have not yet discovered them.
         </p>
-
-        <p>
+      <p>
           Translators and occasional volunteers will most likely only get in touch
           with
         </p>
-
-        <ul>
-          <li>
-            <a href="https://en.wikipedia.org/wiki/XHTML">XHTML</a> – from
+      <ul>
+        <li><a href="https://en.wikipedia.org/wiki/XHTML">XHTML</a> – from
             which the web pages are generated
           </li>
-          <li>
-            <a href="https://git-scm.com/">Git</a> – for
+        <li><a href="https://git-scm.com/">Git</a> – for
             version control of web page sources
           </li>
-        </ul>
-
-        <p>
+      </ul>
+      <p>
           Volunteers interested in getting deeper into the maintenance should also
           be familiar with
         </p>
-
-        <ul>
-          <li>
-            <a href="https://www.gnu.org/software/bash/">Bash</a> – for the maintenance
+      <ul>
+        <li><a href="https://www.gnu.org/software/bash/">Bash</a> – for the maintenance
             and page creation scripts
           </li>
-          <li>
-            <a href="https://www.apache.org/">Apache</a> – as the web server
+        <li><a href="https://www.apache.org/">Apache</a> – as the web server
           </li>
-        </ul>
-
-
-        <h2 id="Understanding">Understanding how the web pages are built</h2>
-
-        <p>
+      </ul>
+      <h2 id="Understanding">Understanding how the web pages are built</h2>
+      <p>
           The web pages of <var>fsfe.org</var> are maintaned as a set of
           XML files.  The web server generates the HTML pages from these XML files
           automatically every ten minutes.  Consequently, all editing of the pages
           is done in the XML files, and the HTML is never edited directly.
         </p>
-
-        <p>
+      <p>
           Every page on fsfe.org is named
           <var><em>pagename</em>.<em>language</em>.html</var>
-          (<em>language</em> being the two-letter <a
-          href="https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes">ISO-639
+          (<em>language</em> being the two-letter <a href="https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes">ISO-639
           code</a> of the language, like "en" for English or "de" for German).
           The source files are named
           <var><em>pagename</em>.<em>language</em>.xhtml</var>.
         </p>
-
-        <p>
+      <p>
           Some pages have a dynamic part: apart from the fixed texts taken
           from the XHTML file, they include information from one or several
           XML files.  Whenever such a page is built, the build system takes
@@ -105,36 +83,30 @@
           <a href="/news/">news page</a>, and the <a href="/events/">events
           page</a>.
         </p>
-
-        <h2 id="Getting">Working with the website as an editor</h2>
-
-        <p>Please visit our <a href="https://wiki.fsfe.org/TechDocs/Mainpage/Editing">website editing wiki page</a> to find more information about:</p>
-
-        <ul>
-          <li>how to copy the websites' source code to your computer</li>
-          <li>how to edit and push files to the website</li>
-          <li>how to coordinate with other website editors</li>
-          <li>responsible handling of write access</li>
-          <li>advanced webmaster techniques</li>
-          <li>proper licencing of source code and media</li>
-        </ul>
-
+      <h2 id="Getting">Working with the website as an editor</h2>
+      <p>Please visit our <a href="https://wiki.fsfe.org/TechDocs/Mainpage/Editing">website editing wiki page</a> to find more information about:</p>
+      <ul>
+        <li>how to copy the websites' source code to your computer</li>
+        <li>how to edit and push files to the website</li>
+        <li>how to coordinate with other website editors</li>
+        <li>responsible handling of write access</li>
+        <li>advanced webmaster techniques</li>
+        <li>proper licencing of source code and media</li>
+      </ul>
     </div>
     <!--/e-content-->
-
   </body>
-<sidebar promo="about-fsfe">
+  <sidebar promo="about-fsfe">
     <div id="related-content">
-        <h3>Howtos:</h3>
-        <ul>
-            <li>
-              <a href="https://wiki.fsfe.org/TechDocs/Mainpage/">Technical documentation of the FSFE website</a>
-            </li>
-            <li>
-            <a href="/contribute/web/features.html">A template article, to use the new webdesign</a>
-            </li>
-        </ul>
+      <h3>Howtos:</h3>
+      <ul>
+        <li>
+          <a href="https://wiki.fsfe.org/TechDocs/Mainpage/">Technical documentation of the FSFE website</a>
+        </li>
+        <li>
+          <a href="/contribute/web/features.html">A template article, to use the new webdesign</a>
+        </li>
+      </ul>
     </div>
-</sidebar>
-
+  </sidebar>
 </html>

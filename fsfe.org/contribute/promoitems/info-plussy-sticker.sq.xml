@@ -1,7 +1,6 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <infoset>
   <version>1</version>
-
   <info id="plussy-sticker">
     <!-- Leave a tag like <printready> blank or erase it if you don't 
     want to appear it -->
@@ -13,18 +12,21 @@
     </description>
     <type>Ngjitës</type>
     <size>I madh (7.4 x 7.4 cm) dhe i vogël (5.2 x 5.2 cm) </size>
-    <context><a href="https://my.fsfe.org/donate">Join the FSFE</a></context>
-    <languages>
-      <a href="https://download.fsfe.org/advocacy/promomaterial/FSFE/PlussySticker/FSFE-plussy_72x72_v2.sla">SLA</a>, <a href="https://download.fsfe.org/advocacy/promomaterial/FSFE/PlussySticker/FSFE-plussy.png">PNG</a>, <a href="https://download.fsfe.org/advocacy/promomaterial/FSFE/PlussySticker/FSFE-plussy_72x72_v2.pdf">PDF</a>, <a href="https://download.fsfe.org/advocacy/promomaterial/FSFE/PlussySticker/FSFE-plussy.svg">SVG</a>
+    <context>
+      <a href="https://my.fsfe.org/donate">Join the FSFE</a>
+    </context>
+    <languages><a href="https://download.fsfe.org/advocacy/promomaterial/FSFE/PlussySticker/FSFE-plussy_72x72_v2.sla">SLA</a>, <a href="https://download.fsfe.org/advocacy/promomaterial/FSFE/PlussySticker/FSFE-plussy.png">PNG</a>, <a href="https://download.fsfe.org/advocacy/promomaterial/FSFE/PlussySticker/FSFE-plussy_72x72_v2.pdf">PDF</a>, <a href="https://download.fsfe.org/advocacy/promomaterial/FSFE/PlussySticker/FSFE-plussy.svg">SVG</a>
     </languages>
     <printed>
       I passhëm
     </printed>
-    <license><span style="font-size:0.8em">Stema e Anëtarësisë Shok (dhe variacione të saj) mund të përdoren për të bërë të njohur Anëtarësinë Shok të FSFE-së dhe kur vjen fjala për çfarëdo veprimtarie lidhur me Software-in e Lirë të kryer nga  anëtarë shokë të FSFE-së. Mund të trupëzohet edhe në stema grupesh vendorë të Anëtarësisë Shok të FSFE, nëse dëshirohet. Sido qoftë, nëse s;keni autorizim nga FSFE-ja, ju kërkojmë të mos lini përshtypje se flisni zyrtarisht në emër të FSFE-së, ose se jeni i certifikuar apo ngarkuar nga FSFE-ja që të bëni diçka të tillë.</span></license>
+    <license>
+      <span style="font-size:0.8em">Stema e Anëtarësisë Shok (dhe variacione të saj) mund të përdoren për të bërë të njohur Anëtarësinë Shok të FSFE-së dhe kur vjen fjala për çfarëdo veprimtarie lidhur me Software-in e Lirë të kryer nga  anëtarë shokë të FSFE-së. Mund të trupëzohet edhe në stema grupesh vendorë të Anëtarësisë Shok të FSFE, nëse dëshirohet. Sido qoftë, nëse s;keni autorizim nga FSFE-ja, ju kërkojmë të mos lini përshtypje se flisni zyrtarisht në emër të FSFE-së, ose se jeni i certifikuar apo ngarkuar nga FSFE-ja që të bëni diçka të tillë.</span>
+    </license>
     <author>Free Software Foundation Europe</author>
     <source>
-        <a href="https://download.fsfe.org/advocacy/promomaterial/FSFE/PlussySticker/" title="Plussy sticker sources">Plussy* in download.fsfe.org</a></source> 
-    <printready></printready>
+      <a href="https://download.fsfe.org/advocacy/promomaterial/FSFE/PlussySticker/" title="Plussy sticker sources">Plussy* in download.fsfe.org</a>
+    </source>
+    <printready/>
   </info>
-
 </infoset>

@@ -1,34 +1,32 @@
 <?xml version="1.0"?>
-
 <functionset>
   <version>0</version>
-
   <function id="president/f">Presidente</function>
   <function id="president/m">President</function>
-  <function id="vice-president/f">Zëvendëspresidente</function>
-  <function id="vice-president/m">Zëvendëspresident</function>
+  <function id="vice-president/f">Z&#xEB;vend&#xEB;spresidente</function>
+  <function id="vice-president/m">Z&#xEB;vend&#xEB;spresident</function>
   <function id="financial-officer/f">Financiere</function>
   <function id="financial-officer/m">Financier</function>
-  <function id="executive-director/f">Drejtoreshë e Përgjithshme</function>
-  <function id="executive-director/m">Drejtor i Përgjithshëm</function>
+  <function id="executive-director/f">Drejtoresh&#xEB; e P&#xEB;rgjithshme</function>
+  <function id="executive-director/m">Drejtor i P&#xEB;rgjithsh&#xEB;m</function>
   <function id="intern/f">Stazhiere</function>
   <function id="intern/m">Stazhier</function>
   <function id="office/f">Zyrtare</function>
   <function id="office/m">Zyrtar</function>
-  <function id="sysadmin/f">Përgjegjëse Sistemi</function>
-  <function id="sysadmin/m">Përgjegjës Sistemi</function>
-  <function id="coordinator/f">Bashkërenduese</function>
-  <function id="coordinator/m">Bashkërendues</function>
-  <function id="coordinator-policy/f">Zëvendësbashkërenduese e Ekipit të Politikave</function>
+  <function id="sysadmin/f">P&#xEB;rgjegj&#xEB;se Sistemi</function>
+  <function id="sysadmin/m">P&#xEB;rgjegj&#xEB;s Sistemi</function>
+  <function id="coordinator/f">Bashk&#xEB;renduese</function>
+  <function id="coordinator/m">Bashk&#xEB;rendues</function>
+  <function id="coordinator-policy/f">Z&#xEB;vend&#xEB;sbashk&#xEB;renduese e Ekipit t&#xEB; Politikave</function>
   <!--↑ TODO this is not the right way ↑↑↑ -->
-  <function id="campaign-manager/m">Përgjegjëse Fushatash</function>
-  <function id="campaign-manager/f">Përgjegjës Fushatash</function>
-  <function id="deputy/f">Zëvendësbashkërenduese</function>
-  <function id="deputy/m">Zëvendësbashkërendues</function>
-  <function id="seniorcounsel/f">Këshilltare Ligjore</function>
-  <function id="seniorcounsel/m">Këshilltar Ligjore</function>
-  <function id="member-assembly/f">Anëtare e Asamblesë së Përgjithshme</function>
-  <function id="member-assembly/m">Anëtar i Asamblesë së Përgjithshme</function>
-  <function id="merchandise/f">Artikuj Tregtarë</function>
-  <function id="merchandise/m">Artikuj Tregtarë</function>
+  <function id="campaign-manager/m">P&#xEB;rgjegj&#xEB;se Fushatash</function>
+  <function id="campaign-manager/f">P&#xEB;rgjegj&#xEB;s Fushatash</function>
+  <function id="deputy/f">Z&#xEB;vend&#xEB;sbashk&#xEB;renduese</function>
+  <function id="deputy/m">Z&#xEB;vend&#xEB;sbashk&#xEB;rendues</function>
+  <function id="seniorcounsel/f">K&#xEB;shilltare Ligjore</function>
+  <function id="seniorcounsel/m">K&#xEB;shilltar Ligjore</function>
+  <function id="member-assembly/f">An&#xEB;tare e Asambles&#xEB; s&#xEB; P&#xEB;rgjithshme</function>
+  <function id="member-assembly/m">An&#xEB;tar i Asambles&#xEB; s&#xEB; P&#xEB;rgjithshme</function>
+  <function id="merchandise/f">Artikuj Tregtar&#xEB;</function>
+  <function id="merchandise/m">Artikuj Tregtar&#xEB;</function>
 </functionset>

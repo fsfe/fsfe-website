@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <readers>
   <version>1</version>
-
-   <reader priority="30">
-  <name>Xpdf</name>
-  <logo>xpdf.png</logo>
-  <homepage>http://www.xpdfreader.com/opensource.html</homepage>
-  <license>GPLv2</license>
-  <platform><name>GNU/Linux</name></platform>
-  <language>en</language>
-  <language>fr</language>
-  <language>de</language>
-  
-  <description>Een lichte, eenvoudige PDF-lezer met een envoudige Motif-interface.</description>
-</reader> </readers>
+  <reader priority="30">
+    <name>Xpdf</name>
+    <logo>xpdf.png</logo>
+    <homepage>http://www.xpdfreader.com/opensource.html</homepage>
+    <license>GPLv2</license>
+    <platform>
+      <name>GNU/Linux</name>
+    </platform>
+    <language>en</language>
+    <language>fr</language>
+    <language>de</language>
+    <description>Een lichte, eenvoudige PDF-lezer met een envoudige Motif-interface.</description>
+  </reader>
+</readers>

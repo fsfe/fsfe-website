@@ -186,7 +186,11 @@
         <xsl:if test="$format = 'mp3'">
           <podcast:guid>f8587e67-d1c9-54ac-938f-84710472f4bd</podcast:guid>
         </xsl:if>
-
+        <!-- Podcast Recomendations -->
+        <podcast:podroll>
+          <podcast:remoteItem feedGuid="385183b8-8a23-5fa1-b9dc-3ed6c870f14a" feedUrl="https://media.fsfe.org/feeds/videos.xml?videoChannelId=3" title="FSFE Peertube Channel"/>
+          <podcast:remoteItem feedGuid="de52ef44-69d3-565d-b7c6-255562cdcd4c" feedUrl="https://linuxinlaws.eu/inlaws_rss.xml" title="Linux Inlaws"/>
+        </podcast:podroll>
 
         <!-- Podcast episodes -->
         <xsl:for-each select="/buildinfo/document/set/news[
@@ -349,7 +353,7 @@
               </xsl:attribute>
             </xsl:element>
 
-            <!-- Link to discussion topic on community.fsfe.org -->
+            <!-- Link to discussion topic on Mastodon -->
             <xsl:if test = "discussion/@href">
               <xsl:element name="podcast:socialInteract">
                 <xsl:attribute name="uri">

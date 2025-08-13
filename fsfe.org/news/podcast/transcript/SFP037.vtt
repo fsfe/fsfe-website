@@ -1,0 +1,962 @@
+WEBVTT
+
+00:00.000 --> 00:04.800
+Before we start with the podcast, we would like to say thank you to all of you who support
+
+00:04.800 --> 00:11.760
+the FSFE's work of money. Working for software freedom and producing podcasts costs money.
+
+00:12.800 --> 00:16.880
+Please consider supporting us with our donation under FSFE.org,
+
+00:16.880 --> 00:21.040
+slash donate and in the show notes. Don't forget your sentence, Alex.
+
+00:21.040 --> 00:32.960
+I'm Alex Sander, the FSFE Senior Policy Consultant for PELCUS, Andre European Union.
+
+00:33.760 --> 00:38.320
+This week, we talk about the cyber resilience act in short.
+
+00:51.520 --> 00:58.960
+Hello and welcome to the software freedom podcast. The podcast is presented to you by the free
+
+00:58.960 --> 01:04.480
+software foundation Europe. We are a charity that empowers users to control technology.
+
+01:05.840 --> 01:10.480
+I'm Bonnie Merring and I'm here with my colleague Alex. Hi Alex.
+
+01:10.480 --> 01:16.960
+Hi, hi, Bonnie. I'm Alex Sander, FSFE Senior Policy Consultant for PELCUS on the European Union
+
+01:16.960 --> 01:22.320
+most of the times and yeah, so this week we want to talk about the cyber resilience act
+
+01:22.320 --> 01:26.320
+so the CIA, as I guess you have already heard of it.
+
+01:28.880 --> 01:35.440
+I find this short thing very very noticeable to be honest because it sounds like
+
+01:35.440 --> 01:40.160
+cra cra cra so funny and it sticks on my head, I have to tell you.
+
+01:41.760 --> 01:44.960
+Thank you so much for being here. Thank you so much for walking us through this.
+
+01:45.760 --> 01:52.560
+I'm very, very curious to hear more about this very famous and widely discussed act.
+
+01:52.560 --> 01:57.600
+So could you give us a short history of this act and then it all started?
+
+01:58.400 --> 02:04.480
+Yes, sure. So the cyber resilience act is part of a, so to say, larger
+
+02:04.480 --> 02:10.240
+movement of regulations to regulate products in the digital world, so to say.
+
+02:10.960 --> 02:17.360
+And the European Union is starting to do this by, or started to do this by looking at the
+
+02:17.360 --> 02:24.720
+normal product world and there we know of the so-called CE labels. So you, I guess, pretty much
+
+02:24.720 --> 02:32.080
+notice from toys or like every other product basically what you can, what you can find in your
+
+02:32.080 --> 02:37.680
+home or somewhere else and these products normally have a CE label printed on it.
+
+02:38.240 --> 02:43.040
+And it says, with this label, the product is fine for the European market so there are no
+
+02:43.040 --> 02:49.040
+like, I don't know, things in it that harm people. And we didn't have something like this for,
+
+02:49.040 --> 02:52.880
+so to say, digital products and that's why the European Union came up with the idea
+
+02:53.440 --> 02:58.560
+to put such a CE label also on digital products and by that also on software.
+
+02:59.200 --> 03:05.280
+So and this, this, they came up with the AI act, the product liability directive and
+
+03:05.280 --> 03:11.920
+the cyber resiliency. And in all of these files, the CE label for the named products have
+
+03:11.920 --> 03:17.200
+been introduced. So first of all, it's very important to know we only talk about products.
+
+03:17.200 --> 03:23.360
+So it's a product regulation. And the goal of this product regulation is to make products more
+
+03:23.360 --> 03:28.800
+secure for the European market. So all of this has been discussed in the aftermath of things like
+
+03:28.800 --> 03:35.680
+lock for J or other security incidents. And so this regulation should help to avoid that these
+
+03:35.680 --> 03:41.920
+things do not happen too often. And also in this regard, so to make sure that all of this happens,
+
+03:42.480 --> 03:48.880
+some sort of like liabilities introduced. So this means if you do not follow the procedures to
+
+03:48.880 --> 03:55.360
+put the CE label on your software, you can get fined. Right. So and if the product fails and you
+
+03:55.360 --> 04:01.600
+don't have a CE label on it, you are in charge of your product and you have to take the consequences.
+
+04:01.600 --> 04:07.760
+However, if you put such a CE label on it and you follow the procedures, then these incidents can
+
+04:07.760 --> 04:12.560
+still happen, but you have followed the procedures and this helps us to make the product more secure.
+
+04:13.280 --> 04:18.320
+So there is not a liability for like you put a CE label on it and then it fails and then
+
+04:18.320 --> 04:24.000
+you are liable, but it is more unlike you didn't follow the procedures. That's why you are not
+
+04:24.000 --> 04:28.880
+allowed to put the CE label on it and that's why you are fine. So all in all, what we are talking
+
+04:28.880 --> 04:35.440
+about is a product regulation and we want to put CE labels on software. And this of course has
+
+04:35.440 --> 04:41.920
+consequences for free software. Since the free software ecosystem is not like a normal product
+
+04:41.920 --> 04:50.800
+ecosystem. So how to deal with those lines of code to say. So what happens if a hobbyists come
+
+04:50.800 --> 04:57.360
+up with a line of code which then ends up in a car and this car is involved in an accident and
+
+04:57.360 --> 05:05.440
+this line of code was maybe for example the issue. So who is then liable? And this is basically
+
+05:05.440 --> 05:11.840
+what the cyber resilience I could try to regulate. And in the first place, there was also already
+
+05:12.480 --> 05:18.080
+exemption put on the table for free software. So the wording was if you put it on the market,
+
+05:18.800 --> 05:25.440
+then there's an exemption for those who do not put it on the market. So and again, there's an issue
+
+05:25.440 --> 05:29.840
+with free software. How does it look like? What's the moment when you put something on the market? So
+
+05:29.840 --> 05:35.280
+if you put it in a git, is it then that you put something on the market? Yes or no? And this is
+
+05:35.280 --> 05:41.440
+something we defined over the last years when the regulation was in the parliament, council and
+
+05:41.440 --> 05:47.440
+the commission. So when it was written and we modified this exemption for free software and
+
+05:47.440 --> 05:54.000
+introduced more roads. So we are talking about manufacturers that are clearly those who have a
+
+05:54.000 --> 06:00.400
+product and who only handle products and have these products with digital elements and end
+
+06:00.400 --> 06:06.880
+software on the market. And they produce the code by themselves for example. So then it's a pretty
+
+06:06.960 --> 06:12.480
+clear case. But then we are going into this gray area. So as I already explained, what if you take
+
+06:13.840 --> 06:20.320
+a piece of code from an individual developer, from an NGO, from charities, or even from hobbyists.
+
+06:21.200 --> 06:28.160
+And for those, we introduced some more exemptions. So the so-called Stuart road. So if you
+
+06:28.160 --> 06:33.360
+happen to work on a project and you are doing this alone and the manufacturer drops by and just
+
+06:33.440 --> 06:40.400
+picks basically your code, then it would be good if there's a relationship between those who are
+
+06:40.400 --> 06:47.280
+producing the code and those who picked the code. And for this, we always like, we want to say
+
+06:47.280 --> 06:54.640
+like a mantra, we went around and said those who benefit from the use of free software should also
+
+06:54.640 --> 06:59.280
+pay. So they should take the burdens. And basically this is what we introduced in the Cyber
+
+06:59.360 --> 07:06.480
+Resilient Act. So there are exemptions for individual developers, for charity, for projects,
+
+07:06.480 --> 07:13.200
+and so on and so forth. But we want to move them in the Stuart road so that they also help to make
+
+07:13.200 --> 07:19.280
+free software more secure and that they support manufacturers that they can come up with a secure
+
+07:19.280 --> 07:25.920
+product. But this should happen in a way that the work of these people is valued and that it
+
+07:25.920 --> 07:30.240
+not like the manufacturer drops by and say you have to do this and this and this and this for
+
+07:30.240 --> 07:36.000
+me, but it should be the other way around. And this is basically what we are discussing at the moment.
+
+07:36.000 --> 07:42.160
+So how is this relationship between these Stuarts, so the project, charities, so on and so forth.
+
+07:42.800 --> 07:48.880
+And the manufacturer should look like. So we have a regulation which comes up with exemptions for
+
+07:48.880 --> 07:54.960
+individual developers. We have this Stuart road for projects that contribute to work of manufacturers
+
+07:54.960 --> 07:59.920
+and we have the manufacturers. But the question is like how do they interact with each other?
+
+08:00.480 --> 08:06.160
+So and this is not regulated too far. So this is now happening in the so-called implementation.
+
+08:06.880 --> 08:12.640
+Yeah, until the end of 2027, when the Cyber Resilient Act enters into force, all of these
+
+08:12.640 --> 08:18.480
+questions have to be clarified. And basically this is what we are doing now. So this is our work at the
+
+08:18.480 --> 08:25.440
+moment in the Cyber Resilient Act to make sugar that again, our mantra, those who benefit should also
+
+08:25.440 --> 08:31.760
+pay that this is also reflected in the implementation. Okay, I do now have two questions actually.
+
+08:33.120 --> 08:38.640
+First of all, so you already mentioned that we advocated for a free software exemption.
+
+08:39.360 --> 08:45.120
+How did we get involved? And what did we do to further the cost for free software here?
+
+08:45.840 --> 08:53.200
+And then I have a more basic question. So I will let you decide in which room to answer.
+
+08:53.200 --> 08:56.400
+Oh, right. How do I get a CE label?
+
+08:58.560 --> 09:04.240
+Yeah, good question. I'll start with the first one. Since this may be also give you some insights
+
+09:04.240 --> 09:10.800
+in how to get a CE label. So basically what we did is that in the first term of also La Fonda line,
+
+09:10.800 --> 09:17.520
+it was clear that there will be such a sort of regulation tackling this issue. So we already
+
+09:17.520 --> 09:23.920
+started to think a bit about this. Yeah, also had so to say background checks with decision-makers
+
+09:23.920 --> 09:29.840
+on this. And once the proposal by the Commission was released, they also went to the European Parliament.
+
+09:29.840 --> 09:34.720
+So the members of the European Parliament, so we approached them, the committee working on this
+
+09:34.720 --> 09:40.080
+file and the MEPs, so the members of the Parliament, MEPs working on this file and telling them
+
+09:40.080 --> 09:47.520
+basically our, yeah, so to say, red line, which was or which still is, so that those who benefit
+
+09:47.520 --> 09:52.960
+should also pay. And we also gave them some insight in how the free software ecosystem works and
+
+09:53.680 --> 09:58.400
+what would be the result of the proposed regulation by the European Commission. And this is how
+
+09:58.400 --> 10:03.360
+we entered the debate. And by that, we also got invited to a hearing in the European Parliament,
+
+10:03.360 --> 10:09.760
+where we were able to present our position. And so in this hearing, there were many people nodding,
+
+10:09.760 --> 10:15.200
+so it was already good sign that there's an appetite, so to say, to change the proposed
+
+10:15.200 --> 10:20.000
+exemption from the European Commission and make this one a bit better. And this took us then
+
+10:20.000 --> 10:26.800
+basically until the very end of the debate around the cyber resilience act, so just around the
+
+10:26.800 --> 10:32.880
+trialogue, so the final negotiations between Council Parliament with the help of the European
+
+10:32.880 --> 10:39.360
+Commission. We were able to change the text massively and to introduce these different roles that
+
+10:39.360 --> 10:44.720
+better reflect the ecosystem of the free software ecosystem by introducing the manufacturers,
+
+10:44.720 --> 10:49.040
+the stewards and those who are out like individual developers and so on and so forth.
+
+10:49.760 --> 10:58.240
+And this definition we made clear how roles are defined and how a CE label could be put on a
+
+10:58.240 --> 11:04.720
+product. So it's always the manufacturer who can put a CE label on the product. So the manufacturer,
+
+11:04.720 --> 11:11.120
+so the one entity that is then finally coming up with a product, that's the entity who needs to
+
+11:11.120 --> 11:17.680
+take care of the CE label. So it's not the individual development, no charity, no anyone else,
+
+11:17.680 --> 11:23.520
+it's only those who put something in the birth of the European Commission on the market and earn
+
+11:23.520 --> 11:30.880
+money with this. So and for this, there are also several applications what to do. So you have,
+
+11:30.880 --> 11:37.280
+for example, you have to have an incident management, also you have to follow standards and ultimately,
+
+11:37.280 --> 11:46.080
+there will be guidance and attestation and all of this. So how do you bring a product to attestation?
+
+11:46.080 --> 11:53.200
+So how do you make it do your diligence? How do you set interact with the Stuart to make sure that
+
+11:53.200 --> 11:58.080
+you get all the needed information to fulfill your applications under the cyber resilience act?
+
+11:59.040 --> 12:04.240
+This is something which is ultimately defined now. So I give you an example. So it's clear that
+
+12:05.360 --> 12:10.480
+let's assume you have a project and in this project, somebody finds a security incident.
+
+12:10.480 --> 12:16.800
+So the question is who is in charge of fixing this? So the manufacturer might not be able to fix it
+
+12:16.800 --> 12:22.240
+since it's a project. So but the manufacturer should inform the project and should help the
+
+12:22.240 --> 12:29.120
+project to make sure that the security incident is fixed. This could happen since everything is
+
+12:29.120 --> 12:35.760
+free software that the manufacturer is just doing this by its own and provides a bug fix of design.
+
+12:36.800 --> 12:43.360
+So and then this patch have to be available to everyone. So it's not possible that the manufacturer
+
+12:43.360 --> 12:48.560
+is just doing this for his own so but for everyone. So the other way around would be and that's
+
+12:48.560 --> 12:52.960
+probably the most easiest one is that the project is doing that by themselves and then by
+
+12:52.960 --> 13:01.280
+us also is distributing this patch to everyone. So and precisely this situation, I do believe that
+
+13:01.280 --> 13:06.720
+the manufacturer should support the project that this could happen. This could be financially,
+
+13:06.720 --> 13:11.600
+that could be with resources, but it should never be that the manufacturer is just dropping by at
+
+13:11.600 --> 13:17.120
+the project and say do this for me. And expecting that the project is doing this.
+
+13:17.840 --> 13:22.880
+So and precisely this is something which is not clearly defined in the cyber resilience
+
+13:22.880 --> 13:27.440
+act so how this should work out. The cyber resilience act just say it needs to work out.
+
+13:28.640 --> 13:34.240
+And this is basically how we continue our efforts so how we further advocate around the cyber
+
+13:34.240 --> 13:42.320
+resilience act and a market surveillance authority will check and will guide on how to do this.
+
+13:43.120 --> 13:47.680
+So Germany for example, that's the Bundesamt for society in the information station,
+
+13:47.680 --> 13:55.280
+so the agency for cybersecurity or basically you can check the NISA website or that's basically the
+
+13:56.000 --> 14:00.960
+umbrella organization for all cybersecurity organizations in the European Union member states.
+
+14:01.520 --> 14:07.120
+So these are most likely the ones who will be the market surveillance authority in the member
+
+14:07.120 --> 14:12.480
+state. You can compare with the data protection. You have a data protection law and the one
+
+14:12.480 --> 14:17.120
+following the laws are the data protection officers in the member states. So that's pretty much
+
+14:17.120 --> 14:21.760
+the same workflow for the cyber resilience act. So you have the rules on the cyber resilience
+
+14:21.760 --> 14:27.760
+act in the market surveillance authority will check if these rules are followed. This means they can
+
+14:28.240 --> 14:34.880
+go to the market by a product check it and see if the CE label procedures are fulfilled and if so
+
+14:34.880 --> 14:40.880
+everything fine if not they go to the manufacturer and tell them you have to fix this and maybe
+
+14:40.880 --> 14:46.720
+can you find them. That's why it's so important to talk to market surveillance authorities at the
+
+14:46.720 --> 14:52.720
+moment since they are the ones who then automatically cannot be the workflow and those are the ones
+
+14:52.800 --> 14:58.240
+telling you how they will check what they will check and based on what and for this they will come
+
+14:58.240 --> 15:04.480
+up with so called guidance. So next to standards that you have to follow there's also guidance on
+
+15:04.480 --> 15:10.880
+how the market surveillance authority is telling you what you should do in order to be out. You can
+
+15:10.880 --> 15:15.600
+also come up with completely different procedures so you can interpret the cyber resilience act for
+
+15:15.600 --> 15:20.240
+your own. Come up with something and say this is a procedure to come up with the CE label
+
+15:21.200 --> 15:26.480
+or you follow the guidance of the market surveillance authority and the European Commission
+
+15:26.480 --> 15:32.880
+where you can say look I did precisely what you wrote here in order to make sure that the security
+
+15:32.880 --> 15:40.960
+issue is fixed for example or that it's reported to the important agencies and so on and so
+
+15:40.960 --> 15:46.640
+forth. So I fulfilled my obligations and I did so by following the guidelines of the European
+
+15:46.640 --> 15:52.400
+Commission and the market surveillance authority and that's why guidance is so important since here
+
+15:52.400 --> 15:57.920
+we can define how these workflows should look like and that's why we are not talking to like
+
+15:57.920 --> 16:03.360
+decision makers like members of the parliament anymore on this since they already voted for them
+
+16:03.360 --> 16:10.480
+it's done but we need to talk to those who are around this implementation and this is how we
+
+16:10.560 --> 16:19.360
+for the advocate and how we further make sure that I have the feeling I have the feeling you are
+
+16:19.360 --> 16:28.480
+hinting at something that we will talk about in a few seconds absolutely absolutely I just I just
+
+16:28.480 --> 16:34.560
+want to put one more question there I hope to do so right here I'm sorry for interrupting you all
+
+16:34.560 --> 16:42.480
+right so as you already mentioned companies using free software products or free software
+
+16:43.600 --> 16:50.800
+projects that are developed by others and they are then putting them into money basically so
+
+16:50.800 --> 16:59.680
+they are the manufacturers yes but they are multiple of them using for example curl or
+
+17:00.400 --> 17:08.320
+open SSL so all of those projects that are like the foundation of our daily life and that are
+
+17:08.320 --> 17:16.960
+free software who of them is now reliable and who like build a BSE in Germany or the other market
+
+17:16.960 --> 17:23.120
+authorities establish a clear role here and what is your take on this yes so I'm not a lawyer
+
+17:23.120 --> 17:29.600
+but as it's looking now since you since you mentioned this example let's let's walk on this let's
+
+17:29.600 --> 17:37.120
+walk this through so a curl is most likely a steward so they are not a manufacturer and they are also
+
+17:37.120 --> 17:44.160
+not a hobbyist project so this means they are somehow in the middle and as you said a lot of people
+
+17:44.160 --> 17:51.760
+and products and yeah basically our digital is relying on them so that makes it important for them
+
+17:52.320 --> 17:59.920
+to be in this steward role but as we have already seen manufacturer was dropping by and said look
+
+17:59.920 --> 18:05.120
+I have this and this and I want to learn from you how you fulfill the applications from the cyber
+
+18:05.120 --> 18:09.840
+research experience so that I can put my CV on the product and this is basically how it should
+
+18:09.840 --> 18:16.320
+not block out the answer by the curl people was yeah fine fine please let's sign a support contract
+
+18:16.320 --> 18:20.640
+and then we can work on that so pay for this and then we can give you the information
+
+18:21.280 --> 18:27.120
+and this is how it should look like so and this is basically also what we want to put into
+
+18:27.120 --> 18:34.720
+guide and also I mean on these roles it's still not really clear they are certain thresholds are
+
+18:34.720 --> 18:40.800
+so I give you another example let's assume you are a hobbyist that comes up with a project and then
+
+18:40.800 --> 18:48.080
+you are asking for a bimeo coffee donation so then money is involved and the question is it
+
+18:48.080 --> 18:55.600
+is then a product so I'd say no and many other people also do say no and now we are discussing where
+
+18:55.600 --> 19:02.240
+could be the threshold and I think it's around living cost so it's most likely that we say it will
+
+19:02.240 --> 19:08.800
+circle around living cost so everything below this threshold is completely out and has to do
+
+19:08.800 --> 19:14.800
+nothing however you can still say you want to go in this steward position and you want to come up
+
+19:14.800 --> 19:20.720
+as a business model for example and say I want to create these support contracts and
+
+19:21.520 --> 19:26.800
+since you may be learn from the cyber research that there are many manufacturers using you
+
+19:27.520 --> 19:34.560
+code right so however back to the curl thing you are now a steward and you learn are these are my
+
+19:34.560 --> 19:40.800
+manufacturers and there might be many coming to you and there might be many that are not too nice
+
+19:40.800 --> 19:47.120
+so and this is basically what we are trying to regulate now or what we are trying to fix in
+
+19:47.120 --> 19:53.600
+implementation is to make clear that it should never be the steward who is just doing work for free
+
+19:53.600 --> 20:00.000
+for manufacturers but again those who benefit should pay and this mantra again also is guiding us
+
+20:00.560 --> 20:04.880
+through this implementation and that is why we are talking to the European Commission
+
+20:04.880 --> 20:10.240
+who is basically coming up with these thresholds for example and also again to market surveillance
+
+20:10.240 --> 20:17.520
+authorities who then help us to to understand first of all how this market is working and that they
+
+20:17.520 --> 20:23.040
+also understand where the problems are just described are happening and that they are happening
+
+20:23.040 --> 20:29.680
+and then we need to come up with a wording to fix this so and that's basically in a nutshell
+
+20:29.680 --> 20:35.520
+what we are doing now and which is also still not completely clear also the European Commission
+
+20:35.520 --> 20:40.640
+has if something should fail in this regard the possibility to come up with so-called
+
+20:40.640 --> 20:47.120
+delegate acts they are in the cyber resilience act some implementing acts so they will happen
+
+20:47.120 --> 20:52.880
+no matter what the example for this is the regulation around s-bombs so the software bill of
+
+20:52.880 --> 20:59.040
+materials so the cyber resilience act is saying we you you need to have as an obligation right so
+
+20:59.040 --> 21:06.080
+you need to have a s-bombs and this s-bombs should be basically state of the art so but this could
+
+21:06.080 --> 21:12.720
+be everything right so and that's why the European Commission said okay we won't do this in the cyber
+
+21:12.720 --> 21:20.320
+resilience act itself but we come up with a implementing act this means in the next month the
+
+21:20.320 --> 21:25.920
+European Commission will come up as a proposal how this state of the art is looking like and how this
+
+21:25.920 --> 21:32.160
+s-bombs ultimately should look like so and that's also such a discussion which is not completely
+
+21:32.160 --> 21:40.160
+done the same is true for how these roles should interact and if for example we do not manage this
+
+21:40.160 --> 21:47.600
+and this we I do not mean the FCE but the all the circles of people discussing the cyber resilience
+
+21:47.600 --> 21:55.360
+act at the moment and we do not come up with a working solution for the obligations to be fulfilled
+
+21:55.920 --> 22:01.280
+or that they can be fulfilled by the throughout any manufacturer then there is a possibility for
+
+22:01.280 --> 22:06.720
+the European Commission to come up with a so-called delegated act so they are allowed to also regulate
+
+22:06.720 --> 22:13.200
+this so and this also gives us a bit of pressure to come up with a with a solution by ourselves
+
+22:13.200 --> 22:18.080
+which is working for everyone since if we are not coming up with something like this
+
+22:18.080 --> 22:23.520
+they might be delegated act and then it's a bit more difficult to yeah get your word in
+
+22:24.240 --> 22:28.400
+since the European Commission is then basically yeah if you want just deciding I mean they will
+
+22:28.400 --> 22:33.040
+also have to run consultations and so on and so forth and also one has to say the European
+
+22:33.040 --> 22:38.480
+Commission since the very beginning so even with the first 12 never had the intention to harm
+
+22:38.480 --> 22:44.080
+free software ecosystem so that's not what the cyber resilience act is about they do not want to
+
+22:44.080 --> 22:50.320
+harm free software ecosystem they do not want to harm micro and small enterprises
+
+22:50.960 --> 22:56.400
+and they just want to make sure there is more cyber security and with this they mainly have
+
+22:56.960 --> 23:03.120
+big tech in the eyes so they are looking at larger companies who do not care about cyber security
+
+23:03.760 --> 23:10.080
+and it's also not too much that they target only the tech sector but it's also banking insurance
+
+23:10.080 --> 23:15.840
+car industry and then so on and so forth that are mainly using this but do not care about
+
+23:15.840 --> 23:21.280
+cyber security so and that's also something which you should have in mind right so that's not
+
+23:21.280 --> 23:26.640
+that they are after and again that's why we need to talk to market surveillance authorities
+
+23:26.640 --> 23:31.520
+it's not like that they are after the small micro enterprise that makes mistakes somewhere
+
+23:31.520 --> 23:37.200
+and then find them to death it's rather that they are looking for products that are largely distributed
+
+23:37.200 --> 23:42.720
+where they fear there is not enough cyber security and again you can compare this with data protection
+
+23:42.720 --> 23:47.680
+so it's not like that the data protection officer is after the small bakery around the corner
+
+23:47.680 --> 23:52.800
+it's rather that they are after google making sure that they handle your data correctly
+
+23:52.800 --> 23:59.520
+so and this is also how you can look at cyber resilience act so they will be after those who failed
+
+23:59.520 --> 24:06.240
+on a large scale and not much about like what the what the smart enterprise is doing in a tiny
+
+24:06.240 --> 24:11.680
+corner of the of the internet press I don't know 20 customers or something like that still that
+
+24:11.680 --> 24:17.280
+doesn't mean that you are free to do whatever you want so you should also look at the cyber resilience
+
+24:17.280 --> 24:26.240
+act but here or there you have not that large fines for example for small and micro enterprises
+
+24:26.240 --> 24:31.120
+as if you are a larger enterprise right so it's pretty balanced and it's pretty clear
+
+24:31.920 --> 24:37.680
+whom they are targeting and mainly they talk about mass markets and want to bring in security
+
+24:37.680 --> 24:43.360
+in those mass markets so that's the main aim and then there will be evaluation of the cyber
+
+24:43.360 --> 24:49.040
+resilience act also and in five and six years we will see if it's working out or if we have to
+
+24:49.040 --> 24:56.240
+reform something and if so then we will do this or else we say look on a large scale it's working fine
+
+24:56.240 --> 25:04.080
+let's proceed thank you so much for this interaction of the crab I do now have a question how are we
+
+25:04.080 --> 25:10.880
+engaging with the market awareness agencies and is there something that the thing is that for us
+
+25:10.880 --> 25:18.000
+it's very very important to learn how in particular so these projects are working together with
+
+25:18.000 --> 25:25.200
+manufacturers what they want what they need but also maybe there are already some examples already
+
+25:25.200 --> 25:30.560
+out there and I'm sure there are I know there are examples out there where projects are working
+
+25:30.640 --> 25:35.760
+together already with manufacturers where they are basically already doing what the cyber resilience
+
+25:35.760 --> 25:42.480
+act is asking for which we can then reuse as a blueprint for this guidance I just mentioned
+
+25:42.480 --> 25:47.280
+but also what we want to see examples and that's why this curl example you just mentioned is so
+
+25:47.280 --> 25:53.360
+important where we can showcase and say look this is how the reality looks like a manufacturer
+
+25:53.360 --> 25:59.840
+just dropping by at the store and it's asking for no costs for work for them to do so and this is
+
+25:59.840 --> 26:04.720
+not how it should look look like so this is the example it's we are looking for at the moment
+
+26:04.720 --> 26:12.000
+so good and best practices as well as we have it's also completely failed and with these examples
+
+26:12.000 --> 26:19.040
+we want to try to influence guidance and it could happen and it's also very likely that this guidance
+
+26:19.040 --> 26:24.480
+is also coming its examples to make it more clear what we are talking about so since the free
+
+26:24.560 --> 26:32.160
+software ecosystem is pretty unique it's sometimes very difficult to describe in words how
+
+26:32.160 --> 26:37.840
+something should look like in particular since there are many gray areas so and it could be that
+
+26:37.840 --> 26:46.320
+we for this guidance are using examples so and these examples then are it's something which helps
+
+26:46.320 --> 26:51.280
+us a lot to make clear in this guidance what should happen and what should not happen and for this
+
+26:51.920 --> 26:58.400
+we together with the BSI so the German market surveillance authority for the cyber resilience
+
+26:58.400 --> 27:05.280
+act worked on a questionnaire in the last month and just released this in the beginning of
+
+27:05.280 --> 27:12.960
+beginning of July it was this survey is now running for two months where we are asking in particular
+
+27:12.960 --> 27:18.960
+stewards or potential stewards how they look at the cyber resilience what they fear what they
+
+27:18.960 --> 27:26.080
+already maybe experienced and what they want and with this you can help us a lot if you first of
+
+27:26.080 --> 27:31.920
+all if you are a project or if you are potential stewards then through this survey so we will put it
+
+27:31.920 --> 27:38.400
+in the show note and the more and the more evaluated answers we get the better we can influence guidance
+
+27:38.400 --> 27:43.520
+so basically we are also looking for people who are a bit familiar with the cyber resilience act
+
+27:43.520 --> 27:49.680
+already so to make sure that yeah exempt that there are exemptions for those things that should
+
+27:49.680 --> 27:55.600
+be exempted but also that we define workflows for manufacturers and stewards where we can make sure
+
+27:55.600 --> 28:01.920
+that those who benefit also pay and that it's not the burden of stewards or the project to work for
+
+28:01.920 --> 28:07.600
+free from manufacturer so that's something we want to avoid also to believe that's what most of
+
+28:07.600 --> 28:14.240
+the people are trying to avoid in this fear of markets wellness authorities and you think mission
+
+28:14.240 --> 28:20.640
+and so on and so forth so again they do not want to harm but in order for them to know where they harm
+
+28:20.640 --> 28:27.360
+we need those examples and this is where we are asking you I do believe that we from this debate
+
+28:27.360 --> 28:34.400
+we were running have a good overview of those but there are so many yeah gray areas or niches
+
+28:35.040 --> 28:39.840
+that we do not see or that we might do not see at the moment and therefore you could help us a lot
+
+28:40.480 --> 28:45.840
+if you point us to these examples if you show us these examples if you provide us with this
+
+28:45.840 --> 28:52.240
+so that we can then implement those in our work or the implementation to make sure
+
+28:52.240 --> 28:59.840
+the safeguard the free software ecosystem the questionnaire is running until the end of August
+
+28:59.840 --> 29:07.600
+however if you contribute very very quickly we might also include your feedback in the talk we are
+
+29:07.600 --> 29:13.200
+giving at the frostcon so the biggest free software conference in Germany happening in mid-August
+
+29:13.200 --> 29:21.040
+in an august team near bond in Germany where Michael from the BSI and me are presenting the first
+
+29:21.040 --> 29:28.000
+results of this survey where we want to discuss with you the community how we look at this and then
+
+29:28.000 --> 29:34.240
+ultimately after the end of august then we have all answers we will come up with a final report
+
+29:34.240 --> 29:43.280
+and use this report then to to advocate further around the implementation and are also going to
+
+29:43.280 --> 29:48.720
+present these results at a conference in Christen the so-called Dattensperen conference which is
+
+29:48.720 --> 29:55.040
+then happening with September and with these talks as well as the results of the of the survey
+
+29:55.600 --> 30:02.160
+we will further make sure that every software is safeguarded in this implementation so you can
+
+30:02.160 --> 30:08.240
+pretty much help us a lot if you contribute by first of all it will be seen by the market surveillance
+
+30:08.240 --> 30:14.480
+authority directly since the FFFE and the BSI is working here together we have good chances that
+
+30:14.480 --> 30:20.000
+they not only see it but also listen to it and the more convincing we are they might even follow
+
+30:20.720 --> 30:26.960
+and again you will find the link in the show notes there is also I mean not only for Stuart but
+
+30:26.960 --> 30:32.960
+also for manufacturers there is a questionnaire and also for yeah just project who do not leave
+
+30:32.960 --> 30:38.080
+that they are Stuart so for all of these roles so we have three questionnaires if you are unsure
+
+30:38.080 --> 30:45.040
+just pick one and there are many free fields so feel free to put your answers in the free field
+
+30:45.040 --> 30:49.680
+also you do not have to answer every question so questions you do not understand or where you
+
+30:50.480 --> 30:58.960
+do not have anything to say skip them and if there is more you can just use the free field or
+
+30:58.960 --> 31:07.360
+drop us a message via contact at FFFE.org or directly to me Alex.Sound at FFFE.org and we will make
+
+31:07.360 --> 31:15.360
+sure your input is channeled into the evaluation so it's also a BSI discussion there if you
+
+31:15.440 --> 31:21.200
+free to reach out to us directly and talk about your pain and then we will try to make sure to
+
+31:21.840 --> 31:27.120
+yeah bring it into implementation so the more you give us the more we can help you.
+
+31:29.440 --> 31:32.480
+All right thank you so much Alex thank you so much for walking us through this.
+
+31:32.480 --> 31:36.320
+Thanks for thanks for having me giving me the time and room to talk about it.
+
+31:38.480 --> 31:44.320
+Always a pleasure it's always a pleasure I also learn a lot about all those acts that I have
+
+31:44.400 --> 31:52.560
+been reading on for the past years so I'm always happy to have you. You remember last time like in
+
+31:52.560 --> 32:00.480
+July where we called for feedback on the transcript. Yes I want to say thank you to all our listeners
+
+32:00.480 --> 32:07.680
+who reached out to me and gave ideas and feedback on it and I'm looking into this I will take some
+
+32:07.680 --> 32:15.280
+time but I will work on improving the transcript and a big thank you and shout out to all our
+
+32:15.280 --> 32:23.200
+listeners that got in touch with me. Thank you. Yeah that sounds pretty good yeah that sounds
+
+32:23.200 --> 32:31.280
+pretty good so also same for me let's see how we can improve it very nice. Yeah all right thank
+
+32:31.280 --> 32:36.560
+you so much Alex for being here thank you so much for taking the time as always it was a pleasure
+
+32:36.560 --> 32:41.680
+and I'm very much looking forward to our next episode in September. Same here.
+
+32:43.680 --> 32:49.520
+This was the software freedom podcast if you like this episode please recommend it to your friends
+
+32:49.520 --> 32:55.520
+and read it stay tuned for more inspiring conversations that explore the importance of software
+
+32:55.520 --> 33:02.320
+freedom and its impact on our digital lives like the crowd. This podcast is presented to you by the
+
+33:02.320 --> 33:07.440
+Free Software Foundation Europe. We are a charity that works on promoting software freedom.
+
+33:08.000 --> 33:14.640
+If you like our work please consider supporting us with our nation. You find more information
+
+33:14.640 --> 33:23.520
+under fsfe.org slash donate and in the show notes if this is financially not possible for you
+
+33:23.520 --> 33:30.640
+you can share the podcast on social media rated or contribute to the fsfe's work as a volunteer
+
+33:30.640 --> 33:35.920
+or by answering the questionnaire about the cyber resilience act. Thank you so much to your
+
+33:35.920 --> 33:42.080
+listener for listening to us and I look forward to be back in your ears in September then again.
+
+33:42.960 --> 33:53.680
+Bye bye. My name is Florian I've been a volunteer with the fsfe since 2012 and I continue volunteering
+
+33:53.680 --> 33:59.680
+for the fsfe because whenever I have an idea and I approach someone about it and I say I'm willing
+
+33:59.680 --> 34:17.600
+to do the work people actually let me and I find that very motivating.
+

@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <eventset>
   <version>1</version>
-
-   <event start="2016-01-14" end="2016-01-14">
-   <title>Free Thursday meeting in Helsinki, Finland</title>
-   <body>
-     <p>
+  <event start="2016-01-14" end="2016-01-14">
+    <title>Free Thursday meeting in Helsinki, Finland</title>
+    <body>
+      <p>
 Free Thursday on säännöllinen tapahtuma pääkaupunkiseudun alueella
 oleville ihmisille, jotka ovat kiinnostuneita vapaista ohjelmista (free
 software, open source software). Tapaamme joka kuukauden toisena
@@ -14,15 +13,12 @@ sponsorointia. Tervetuloa!
 
 Seuraava tapahtuma on torstaina 14.01.2015, kello 18:00, One Pintissä.
      </p>
-   </body>
-   <link>http://www.openstreetmap.org/?lat=60.162072&amp;lon=24.920281&amp;zoom=18&amp;layers=M</link>
-   <tags>
-    <tag key="fi"/>
-    <tag key="localgroup"/>
-    <tag key="front-page"/>
-   </tags>
-
-
+    </body>
+    <link>http://www.openstreetmap.org/?lat=60.162072&amp;lon=24.920281&amp;zoom=18&amp;layers=M</link>
+    <tags>
+      <tag key="fi"/>
+      <tag key="localgroup"/>
+      <tag key="front-page"/>
+    </tags>
   </event>
 </eventset>
-

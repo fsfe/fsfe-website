@@ -1,27 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <eventset>
   <version>1</version>
-
-   
-	<event start="2017-11-16" end="2017-11-17"> 
- 
-		<title>Polina Malaja with a talk about REUSE at Open Compliance Summit 2017 in Yokohama, Japan</title> 
- 
-		<body> 
-			<p>FSFE's Legal Coordinator Polina Malaja will be present at Open Compliance Summit in Yokohama, Japan, and will give a talk about REUSE practices for developers. </p> 
-		</body> 
- 
-		<link>http://events.linuxfoundation.org/events/open-compliance-summit/program/schedule</link> 
- 
-
-		<tags>
-			<tag key="jp">Japan</tag>
-			<tag key="reuse">REUSE</tag>
-			<tag key="talk">Talk</tag>
-			<tag key="front-page"/>
-		</tags>
-
- 
-	</event> 
-</eventset> 
+  <event start="2017-11-16" end="2017-11-17">
+    <title>Polina Malaja with a talk about REUSE at Open Compliance Summit 2017 in Yokohama, Japan</title>
+    <body>
+      <p>FSFE's Legal Coordinator Polina Malaja will be present at Open Compliance Summit in Yokohama, Japan, and will give a talk about REUSE practices for developers. </p>
+    </body>
+    <link>http://events.linuxfoundation.org/events/open-compliance-summit/program/schedule</link>
+    <tags>
+      <tag key="jp">Japan</tag>
+      <tag key="reuse">REUSE</tag>
+      <tag key="talk">Talk</tag>
+      <tag key="front-page"/>
+    </tags>
+  </event>
+</eventset>

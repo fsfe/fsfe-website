@@ -1,26 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <html>
   <version>1</version>
-
   <head>
     <title>Expense Request</title>
-		<link rel="stylesheet" href="internal.css"/>	
+    <link rel="stylesheet" href="internal.css"/>
   </head>
-
   <body>
     <h1>Expense Request</h1>
-
     <form action="/cgi-bin/expense-request.pl" method="post">
       <table>
         <tr>
-          <td><p>Catch phrase:</p></td>
+          <td>
+            <p>Catch phrase:</p>
+          </td>
           <td>
             <input type="text" size="80" style="width:500px" name="catch_phrase"/>
           </td>
         </tr>
         <tr>
-          <td><p>Who:</p></td>
+          <td>
+            <p>Who:</p>
+          </td>
           <td>
             <select name="who" size="1">
               <option value="alex.sander">Alexander Sander</option>
@@ -44,31 +44,41 @@
           </td>
         </tr>
         <tr>
-          <td><p>What:</p></td>
+          <td>
+            <p>What:</p>
+          </td>
           <td>
             <textarea cols="80" rows="5" style="width:500px" name="what"/>
           </td>
         </tr>
         <tr>
-          <td><p>When:</p></td>
+          <td>
+            <p>When:</p>
+          </td>
           <td>
             <input type="text" size="80" style="width:500px" name="when"/>
           </td>
         </tr>
         <tr>
-          <td><p>Why (explained so a tax consultant can understand it):</p></td>
+          <td>
+            <p>Why (explained so a tax consultant can understand it):</p>
+          </td>
           <td>
             <textarea cols="80" rows="5" style="width:500px" name="why"/>
           </td>
         </tr>
         <tr>
-          <td><p>Estimate (In Euro, numbers only please, ie. "10", not "Eur 10" or "10+2 Eur"):</p></td>
+          <td>
+            <p>Estimate (In Euro, numbers only please, ie. "10", not "Eur 10" or "10+2 Eur"):</p>
+          </td>
           <td>
             <input type="text" size="10" style="width:500px" name="estimate"/>
           </td>
         </tr>
         <tr>
-          <td><p>Budget:</p></td>
+          <td>
+            <p>Budget:</p>
+          </td>
           <td>
             <select name="budget" size="1">
               <option value="PA-EVENTS">PA participation in non-internal events and meetings</option>
@@ -111,13 +121,14 @@
           </td>
         </tr>
         <tr>
-          <td><p>Refund Contact:</p></td>
+          <td>
+            <p>Refund Contact:</p>
+          </td>
           <td>
             <input type="text" size="80" style="width:500px" name="refund"/>
           </td>
         </tr>
       </table>
-
       <center>
         <input type="submit" value="Send Expense Request"/>
       </center>

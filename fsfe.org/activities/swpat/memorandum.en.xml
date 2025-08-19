@@ -1,282 +1,278 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Please keep each list alphabetically ordered. (Sorry: No. Too much work. Karsten.)  Emacs users want -->
 <!-- to set sort-fold-case to true and run sort-lines on a region -->
-
 <sigset>
   <version>1</version>
-
   <osig>
     <li>BYTEWISE Software GmbH</li>
-    <li>Bohnert DV-Beratung</li>	
-      <li>Confederación Sindical de Comisiones Obreras</li>
+    <li>Bohnert DV-Beratung</li>
+    <li>Confederación Sindical de Comisiones Obreras</li>
     <li>Fundación Conocimiento Libre</li>
-	<li>Skolelinux (signed by Maximilian Wilhelm, Martin Herweg)</li>
-	<li>Skolelinux France (signed by Xavier Oswald, Boris Tersing)</li>
-	<li>newthinking network</li>
-	<li>OpenBSD (signed by Christian Weisgerber, Robert Nagy, Bernd Ahlers</li>
-	<li>Reactos Foundation (signed by Alexey Bragin)</li>	
-	<li>OpenGroupware.org (signed by Helge Heß)</li>
-	<li>Jäger Messtechnik GmbH</li>
-	<li>OpenUsability.org (signed by Tina Trillitzsch)</li>
-	<li>AMG Ettlingen (signed by Dirk Zechnall)</li>
-	<li>Pingos e.V. (signed by Jan Tripsler)</li>
-	<li>x-tend.be (signed by Filip Sneppe)</li>
-	<li>GNOME Deutschland e.V. (signed by Christian Meyer, Martin Kretzschmar, Michael Gebhart)
+    <li>Skolelinux (signed by Maximilian Wilhelm, Martin Herweg)</li>
+    <li>Skolelinux France (signed by Xavier Oswald, Boris Tersing)</li>
+    <li>newthinking network</li>
+    <li>OpenBSD (signed by Christian Weisgerber, Robert Nagy, Bernd Ahlers</li>
+    <li>Reactos Foundation (signed by Alexey Bragin)</li>
+    <li>OpenGroupware.org (signed by Helge Heß)</li>
+    <li>Jäger Messtechnik GmbH</li>
+    <li>OpenUsability.org (signed by Tina Trillitzsch)</li>
+    <li>AMG Ettlingen (signed by Dirk Zechnall)</li>
+    <li>Pingos e.V. (signed by Jan Tripsler)</li>
+    <li>x-tend.be (signed by Filip Sneppe)</li>
+    <li>GNOME Deutschland e.V. (signed by Christian Meyer, Martin Kretzschmar, Michael Gebhart)
 </li>
-	<li>MPlayer</li>
-	<li>ROCKLinux (signed by Daniel Jahre, Hannes Sowa)</li>
-	<li>FreeVideo (signed by Sami Okahn, Sascha Sommer)</li>
-	<li>xine (signed by Siggi Langauf, Mike Melanson)</li>
-	<li>FFmpeg (signed by Mans Rullgard)</li>
-	<li>KDE (signed by Carsten Niehaus, Tobias König)</li>
-	<li>eZ Systems</li>
-	<li>Gonicus GmbH</li>
-	<li>DZUG e.V. (German ZOPE User's Group)</li>
-	<li>comundus (signed by Philipp Burckhardt, Kai Schliemannli)</li>
-	<li>JIT Creatives</li>
-	<li>Stichting NLnet</li>
-	<li>Semantica</li>
-	<li>Association for Free Software (AFFS)</li>
-	<li>Hau Medientechnik</li>
-	<li>TRANSFLOW Informationslogistik GmbH</li>
-	<li>TYPO3 Association</li>
-	<li>Windfinder.com</li>
-        <li>Uebergebuehr (signed by Sven Wilhelm)</li>
-        <li>Opensourcelab Italy</li>
-	<li>LWsystems</li>
-	<li>K&amp;D Interactive</li>
+    <li>MPlayer</li>
+    <li>ROCKLinux (signed by Daniel Jahre, Hannes Sowa)</li>
+    <li>FreeVideo (signed by Sami Okahn, Sascha Sommer)</li>
+    <li>xine (signed by Siggi Langauf, Mike Melanson)</li>
+    <li>FFmpeg (signed by Mans Rullgard)</li>
+    <li>KDE (signed by Carsten Niehaus, Tobias König)</li>
+    <li>eZ Systems</li>
+    <li>Gonicus GmbH</li>
+    <li>DZUG e.V. (German ZOPE User's Group)</li>
+    <li>comundus (signed by Philipp Burckhardt, Kai Schliemannli)</li>
+    <li>JIT Creatives</li>
+    <li>Stichting NLnet</li>
+    <li>Semantica</li>
+    <li>Association for Free Software (AFFS)</li>
+    <li>Hau Medientechnik</li>
+    <li>TRANSFLOW Informationslogistik GmbH</li>
+    <li>TYPO3 Association</li>
+    <li>Windfinder.com</li>
+    <li>Uebergebuehr (signed by Sven Wilhelm)</li>
+    <li>Opensourcelab Italy</li>
+    <li>LWsystems</li>
+    <li>K&amp;D Interactive</li>
   </osig>
-
   <isig>
-	<li>Christa Dahme, Bundesvorstand Deutscher Gewerkschaftsbund (DGB)</li>
-	<li>Dr. Wolfgang Kowalsky, European Trade Union Confederation
+    <li>Christa Dahme, Bundesvorstand Deutscher Gewerkschaftsbund (DGB)</li>
+    <li>Dr. Wolfgang Kowalsky, European Trade Union Confederation
 	(ETUC)</li>
-	<li>Annette Mühlberg, Head of eGovernment, ver.di - United Services	Union-Headquarters, Berlin</li>
-	<li>Katja Husen, Bundesvorstand BÜNDNIS 90/DIE GRÜNEN (Federal Board of Green Party, Germany)</li>
-	<li>Christian Kopischke</li>
-	<li>Mario Fux</li>
-	<li>Michael Kallas</li>
-	<li>Felix Klee</li>
-	<li>Karsten Gerloff</li>
-	<li>Joachim Jakobs</li>
-	<li>Ciaran O'Riordan</li>
-	<li>Myriam Schweingruber</li>
-	<li>Florian Verdet</li>
-        <li>María Ruiz</li>
-        <li>Pablo Machón</li>
-	<li>Klaus Knopper</li>
-	<li>Prof.Dr.Clemens H. Cap</li>
-	<li>Dr.rer.nat. Juergen Vollmer</li>
-	<li>Sascha Kersken</li>
-	<li>Christoph Pingel</li>
-	<li>Arne Vogel</li>
-	<li>Tobias Koeck</li>
-	<li>Martin Hjort Eriksen</li>
-	<li>Sebastian Fontius</li>
-	<li>Dominik Bey</li>
-	<li>Johannes Schriewer</li>
-	<li>Isabella Hauschopp</li>
-	<li>Henning Wackernagel</li>
-	<li>Daniel Gibson</li>
-	<li>Mihael Vrbanec</li>
-	<li>Joshy Cyriac</li>
-	<li>Oliver Knoch</li>
-	<li>Andreas Hosch</li>
-	<li>Martin Frackl</li>
-	<li>Sonja Dures</li>
-	<li>Heiner Adam</li>
-	<li>Christian Holländer</li>
-	<li>Jörg Sawatcki</li>
-	<li>Ronald Richter</li>
-	<li>Georg Basse</li>
-	<li>Martin Schaller</li>
-	<li>Thomas Räthe</li>
-	<li>Maik Hetmank</li>
-	<li>Jochen Wambsgauß, </li>
-	<li>Sonja Fischer, M.A.</li>
-	<li>Werner Hüsch</li>
-	<li>Christoph Tielecke</li>
-	<li>Maurice Massar</li>
-	<li>Barbara Dolane</li>
-	<li>Daniel Paul</li>
-	<li>Steffen Pingel</li>
-	<li>Florian Grumor</li>
-	<li>Maximilian Weiß</li>
-	<li>Volker Schlef</li>
-	<li>Denis Kozjak</li>
-	<li>Jürgen Brock</li>
-	<li>Marius Nünnerich</li>
-	<li>Patrick Hurrelmann</li>
-	<li>Markus Brüffer</li>
-	<li>Max Laier</li>
-	<li>Ulrich Knobloch</li>
-	<li>Dirk Wetter</li>
-	<li>Daniel Steinberger</li>
-	<li>Florian Boor</li>
-	<li>Marko Friedemann</li>
-	<li>Edgar Hucek</li>
-	<li>Christina König</li>
-	<li>Michael Zacherle</li>
-	<li>Jörg Scheurich</li>
-	<li>Christian A. Korff</li>
-	<li>Dario Ernst</li>
-	<li>Stefan Schweizer</li>
-	<li>Stephan Grein</li>
-	<li>Horst Ehrnsberger</li>
-	<li>Florian Schiel</li>
-	<li>Helmut Lang</li>
-	<li>Sybille Schiel</li>
-	<li>Didier Clerk</li>
-	<li>Meike Richter </li>
-	<li>Jutta Horstmann</li>
-	<li>Robin Roth</li>
-	<li>Biska Classen</li>
-	<li>Til Kreuels</li>
-	<li>Hernulf Pelzer</li>
-	<li>Jasmin Blanchette (Trolltech)</li>
-	<li>Michael Batz</li>
-	<li>Jörg Böhme</li>
-	<li>Mete Boz</li>
-	<li>Philipp Ost</li>
-	<li>Michael Schile</li>
-	<li>Benjamin Albers</li>
-	<li>Klaus Trompka</li>
-	<li>Stefan Ditz</li>
-	<li>Yuwei Lin</li>
-	<li>Susan Pfeifer</li>
-	<li>Christian Nordioane</li>
-	<li>Julia Völz (tarent GmbH)</li>
-	<li>Benjamin Knust</li>
-	<li>Daniel Nümm (ALPHALOG)</li>
-	<li>Jörg Kreß (ubuntu/GNOME)</li>
-	<li>Alex Beregszaszi</li>
-	<li>Diego Biurrun</li>
-	<li>Reimar Döffinger</li>
-	<li>Alexander Strasser</li>
-	<li>Roberto Togni</li>
-	<li>Rebecca Grimm</li>
-	<li>Philipp Burckhardt (comundus)</li>
-	<li>Kai Schliemann (comundus)</li>
-	<li>Mareus Krüger</li>
-	<li>Martin Schmitz (net&amp;works)</li>
-	<li>Richard Verwayen</li>
-	<li>Andreas Kollmohr</li>
-	<li>Jens Kutzsche</li>
-	<li>Jens-Martin Rümer</li>
-	<li>Thomas Müller</li>
-	<li>Dohmen, Rainer</li>
-	<li>Immanuel Witschi</li>
-	<li>Jan Wildeboer (FFII e.V.)</li>
-	<li>Cord Martens</li>
-	<li>Alexander Schmehl</li>
-	<li>Uwe Kaiser</li>
-	<li>Uli Martens</li>
-	<li>Patrick Gerken (credativ)</li>
-	<li>H .Hohgraefe (MySQL)</li>
-	<li>Thomas Weinert (papaya)</li>
-	<li>Johann Hartmann (Mayflower/ThinkPHP)</li>
-	<li>Markus Börger</li>
-	<li>Till Kamppeter (Mandriva / Linuxprinting.org)</li>
-	<li>Manuel Schneider (All-Things-Open project group)</li>
-	<li>Stefan Zeeb (th data)</li>
-	<li>Johannes Loren (SerNet GmbH)</li>
-	<li>N. Rüther (tarent GmbH)</li>
-	<li>P. Haubold (tarent GmbH)</li>
-	<li>Alexander Födisch</li>
-	<li>Martin Kurz</li>
-	<li>Benjamin Mako Hill</li>
-	<li>Nico Stute</li>
-	<li>Rene Kopf</li>
-	<li>David Förster</li>
-	<li>Patric Wust</li>
-	<li>Tim Sutton</li>
-	<li>Marco Hugentobler</li>
-	<li>Jens Oberender</li>
-	<li>Daniel Lange</li>
-	<li>Melanie Nurdia</li>
-	<li>Christoph Breitler</li>
-	<li>Markus Groh</li>
-	<li>Markus Hoffmann</li>
-	<li>Emil Beinroth</li>
-	<li>Dennis Sela</li>
-	<li>Shanna Schweiz</li>
-	<li>Tilmann Koschnick</li>
-	<li>Sven Geggus</li>
-	<li>Henning Sprang</li>
-	<li>Matthias Himber</li>
-	<li>Steffen Mutter</li>
-	<li>Thorsten Zitterell</li>
-	<li>Dirk von Suchodoletz</li>
-	<li>Roman Malytsky</li>
-	<li>Rene Sprotte</li>
-	<li>Peter Bleckmann</li>
-	<li>Matthias Maisenbacher</li>
-	<li>Till Maas</li>
-	<li>Michael Schäfer</li>
-	<li>Heino Schwarz</li>
-	<li>Jörg Zastran</li>
-	<li>Stephan Krause</li>
-	<li>David Roetzel</li>
-	<li>Arno Nebauer</li>
-	<li>Lars Brand</li>
-	<li>Mareike Engusch</li>
-	<li>Julian von Wirth</li>
-	<li>Ramon Cahenzli</li>
-	<li>Irene Sommer</li>
-	<li>Alberto Gobbi</li>
-	<li>Florian Haas</li>
-	<li>Valentina Vuksic</li>
-	<li>Roman Haefeli</li>
-	<li>Sven Krewitt</li>
-        <li>Alberto González</li>
-        <li>Ulrich Klotz (IG Metall - Vorstand)</li>
-        <li>Fritz Effenberger</li>
-        <li>Eduardo Diez y Riega V.</li>
-        <li>Samuel Skanberg</li>
-        <li>Giovanni Biscuolo</li>
-        <li>Benedikt Wildenhain</li>
-        <li>Dipl. Phys. Karl Gaissmaier (University of Ulm)</li>
-        <li>Robert Christenson</li>
-        <li>Guide Günther</li>
-        <li>Karsten Merker</li>
-        <li>Richard Walter</li>
-        <li>Rüdiger Schiffer</li>
-        <li>Ruth Velte</li>
-        <li>Susanne Ebrecht</li>
-        <li>Kai Nitschke</li>
-        <li>Hauke Löffler</li>
-        <li>Kester Habermann</li>
-        <li>Jon Kristensen</li>
-        <li>Armin Rupp</li>
-        <li>Harald Weidner</li>
-        <li>Lars Wendler</li>
-        <li>Achim Woessner</li>
-        <li>Michael Widerhold</li>
-        <li>Uwe Heinecke</li>
-        <li>Robert Krig</li>
-        <li>Andreas K. Foerster</li>
-        <li>Valentin Born</li>
-        <li>Dennis Schneck</li>
-        <li>Kristian Rink</li>
-        <li>Daniel Herzog</li>
-        <li>Siegfried Seifert</li>
-        <li>Holger Niblau</li>
-        <li>Jürgen Burmeister</li>
-        <li>Matthias Steffen Müller</li>
-        <li>Hauke Goos-Habermann</li>
-        <li>Christian von Essen</li>
-        <li>Michael Hofmann</li>
-        <li>Philipp Haiden</li>
-        <li>Pascal Streichen</li>
-	<li>Hannes Lau</li>
-	<li>Sepp Käsbauer</li>
-	<li>Christian Gosch</li>
-	<li>Jörg Naumann</li>
-        <li>Tobias Hauth</li>
-        <li>Thimo Seufer</li>
-	<li>Johannes Rau</li>
-	<li>Harald Schweder</li>
-	<li>Julia Simon</li>
+    <li>Annette Mühlberg, Head of eGovernment, ver.di - United Services	Union-Headquarters, Berlin</li>
+    <li>Katja Husen, Bundesvorstand BÜNDNIS 90/DIE GRÜNEN (Federal Board of Green Party, Germany)</li>
+    <li>Christian Kopischke</li>
+    <li>Mario Fux</li>
+    <li>Michael Kallas</li>
+    <li>Felix Klee</li>
+    <li>Karsten Gerloff</li>
+    <li>Joachim Jakobs</li>
+    <li>Ciaran O'Riordan</li>
+    <li>Myriam Schweingruber</li>
+    <li>Florian Verdet</li>
+    <li>María Ruiz</li>
+    <li>Pablo Machón</li>
+    <li>Klaus Knopper</li>
+    <li>Prof.Dr.Clemens H. Cap</li>
+    <li>Dr.rer.nat. Juergen Vollmer</li>
+    <li>Sascha Kersken</li>
+    <li>Christoph Pingel</li>
+    <li>Arne Vogel</li>
+    <li>Tobias Koeck</li>
+    <li>Martin Hjort Eriksen</li>
+    <li>Sebastian Fontius</li>
+    <li>Dominik Bey</li>
+    <li>Johannes Schriewer</li>
+    <li>Isabella Hauschopp</li>
+    <li>Henning Wackernagel</li>
+    <li>Daniel Gibson</li>
+    <li>Mihael Vrbanec</li>
+    <li>Joshy Cyriac</li>
+    <li>Oliver Knoch</li>
+    <li>Andreas Hosch</li>
+    <li>Martin Frackl</li>
+    <li>Sonja Dures</li>
+    <li>Heiner Adam</li>
+    <li>Christian Holländer</li>
+    <li>Jörg Sawatcki</li>
+    <li>Ronald Richter</li>
+    <li>Georg Basse</li>
+    <li>Martin Schaller</li>
+    <li>Thomas Räthe</li>
+    <li>Maik Hetmank</li>
+    <li>Jochen Wambsgauß, </li>
+    <li>Sonja Fischer, M.A.</li>
+    <li>Werner Hüsch</li>
+    <li>Christoph Tielecke</li>
+    <li>Maurice Massar</li>
+    <li>Barbara Dolane</li>
+    <li>Daniel Paul</li>
+    <li>Steffen Pingel</li>
+    <li>Florian Grumor</li>
+    <li>Maximilian Weiß</li>
+    <li>Volker Schlef</li>
+    <li>Denis Kozjak</li>
+    <li>Jürgen Brock</li>
+    <li>Marius Nünnerich</li>
+    <li>Patrick Hurrelmann</li>
+    <li>Markus Brüffer</li>
+    <li>Max Laier</li>
+    <li>Ulrich Knobloch</li>
+    <li>Dirk Wetter</li>
+    <li>Daniel Steinberger</li>
+    <li>Florian Boor</li>
+    <li>Marko Friedemann</li>
+    <li>Edgar Hucek</li>
+    <li>Christina König</li>
+    <li>Michael Zacherle</li>
+    <li>Jörg Scheurich</li>
+    <li>Christian A. Korff</li>
+    <li>Dario Ernst</li>
+    <li>Stefan Schweizer</li>
+    <li>Stephan Grein</li>
+    <li>Horst Ehrnsberger</li>
+    <li>Florian Schiel</li>
+    <li>Helmut Lang</li>
+    <li>Sybille Schiel</li>
+    <li>Didier Clerk</li>
+    <li>Meike Richter </li>
+    <li>Jutta Horstmann</li>
+    <li>Robin Roth</li>
+    <li>Biska Classen</li>
+    <li>Til Kreuels</li>
+    <li>Hernulf Pelzer</li>
+    <li>Jasmin Blanchette (Trolltech)</li>
+    <li>Michael Batz</li>
+    <li>Jörg Böhme</li>
+    <li>Mete Boz</li>
+    <li>Philipp Ost</li>
+    <li>Michael Schile</li>
+    <li>Benjamin Albers</li>
+    <li>Klaus Trompka</li>
+    <li>Stefan Ditz</li>
+    <li>Yuwei Lin</li>
+    <li>Susan Pfeifer</li>
+    <li>Christian Nordioane</li>
+    <li>Julia Völz (tarent GmbH)</li>
+    <li>Benjamin Knust</li>
+    <li>Daniel Nümm (ALPHALOG)</li>
+    <li>Jörg Kreß (ubuntu/GNOME)</li>
+    <li>Alex Beregszaszi</li>
+    <li>Diego Biurrun</li>
+    <li>Reimar Döffinger</li>
+    <li>Alexander Strasser</li>
+    <li>Roberto Togni</li>
+    <li>Rebecca Grimm</li>
+    <li>Philipp Burckhardt (comundus)</li>
+    <li>Kai Schliemann (comundus)</li>
+    <li>Mareus Krüger</li>
+    <li>Martin Schmitz (net&amp;works)</li>
+    <li>Richard Verwayen</li>
+    <li>Andreas Kollmohr</li>
+    <li>Jens Kutzsche</li>
+    <li>Jens-Martin Rümer</li>
+    <li>Thomas Müller</li>
+    <li>Dohmen, Rainer</li>
+    <li>Immanuel Witschi</li>
+    <li>Jan Wildeboer (FFII e.V.)</li>
+    <li>Cord Martens</li>
+    <li>Alexander Schmehl</li>
+    <li>Uwe Kaiser</li>
+    <li>Uli Martens</li>
+    <li>Patrick Gerken (credativ)</li>
+    <li>H .Hohgraefe (MySQL)</li>
+    <li>Thomas Weinert (papaya)</li>
+    <li>Johann Hartmann (Mayflower/ThinkPHP)</li>
+    <li>Markus Börger</li>
+    <li>Till Kamppeter (Mandriva / Linuxprinting.org)</li>
+    <li>Manuel Schneider (All-Things-Open project group)</li>
+    <li>Stefan Zeeb (th data)</li>
+    <li>Johannes Loren (SerNet GmbH)</li>
+    <li>N. Rüther (tarent GmbH)</li>
+    <li>P. Haubold (tarent GmbH)</li>
+    <li>Alexander Födisch</li>
+    <li>Martin Kurz</li>
+    <li>Benjamin Mako Hill</li>
+    <li>Nico Stute</li>
+    <li>Rene Kopf</li>
+    <li>David Förster</li>
+    <li>Patric Wust</li>
+    <li>Tim Sutton</li>
+    <li>Marco Hugentobler</li>
+    <li>Jens Oberender</li>
+    <li>Daniel Lange</li>
+    <li>Melanie Nurdia</li>
+    <li>Christoph Breitler</li>
+    <li>Markus Groh</li>
+    <li>Markus Hoffmann</li>
+    <li>Emil Beinroth</li>
+    <li>Dennis Sela</li>
+    <li>Shanna Schweiz</li>
+    <li>Tilmann Koschnick</li>
+    <li>Sven Geggus</li>
+    <li>Henning Sprang</li>
+    <li>Matthias Himber</li>
+    <li>Steffen Mutter</li>
+    <li>Thorsten Zitterell</li>
+    <li>Dirk von Suchodoletz</li>
+    <li>Roman Malytsky</li>
+    <li>Rene Sprotte</li>
+    <li>Peter Bleckmann</li>
+    <li>Matthias Maisenbacher</li>
+    <li>Till Maas</li>
+    <li>Michael Schäfer</li>
+    <li>Heino Schwarz</li>
+    <li>Jörg Zastran</li>
+    <li>Stephan Krause</li>
+    <li>David Roetzel</li>
+    <li>Arno Nebauer</li>
+    <li>Lars Brand</li>
+    <li>Mareike Engusch</li>
+    <li>Julian von Wirth</li>
+    <li>Ramon Cahenzli</li>
+    <li>Irene Sommer</li>
+    <li>Alberto Gobbi</li>
+    <li>Florian Haas</li>
+    <li>Valentina Vuksic</li>
+    <li>Roman Haefeli</li>
+    <li>Sven Krewitt</li>
+    <li>Alberto González</li>
+    <li>Ulrich Klotz (IG Metall - Vorstand)</li>
+    <li>Fritz Effenberger</li>
+    <li>Eduardo Diez y Riega V.</li>
+    <li>Samuel Skanberg</li>
+    <li>Giovanni Biscuolo</li>
+    <li>Benedikt Wildenhain</li>
+    <li>Dipl. Phys. Karl Gaissmaier (University of Ulm)</li>
+    <li>Robert Christenson</li>
+    <li>Guide Günther</li>
+    <li>Karsten Merker</li>
+    <li>Richard Walter</li>
+    <li>Rüdiger Schiffer</li>
+    <li>Ruth Velte</li>
+    <li>Susanne Ebrecht</li>
+    <li>Kai Nitschke</li>
+    <li>Hauke Löffler</li>
+    <li>Kester Habermann</li>
+    <li>Jon Kristensen</li>
+    <li>Armin Rupp</li>
+    <li>Harald Weidner</li>
+    <li>Lars Wendler</li>
+    <li>Achim Woessner</li>
+    <li>Michael Widerhold</li>
+    <li>Uwe Heinecke</li>
+    <li>Robert Krig</li>
+    <li>Andreas K. Foerster</li>
+    <li>Valentin Born</li>
+    <li>Dennis Schneck</li>
+    <li>Kristian Rink</li>
+    <li>Daniel Herzog</li>
+    <li>Siegfried Seifert</li>
+    <li>Holger Niblau</li>
+    <li>Jürgen Burmeister</li>
+    <li>Matthias Steffen Müller</li>
+    <li>Hauke Goos-Habermann</li>
+    <li>Christian von Essen</li>
+    <li>Michael Hofmann</li>
+    <li>Philipp Haiden</li>
+    <li>Pascal Streichen</li>
+    <li>Hannes Lau</li>
+    <li>Sepp Käsbauer</li>
+    <li>Christian Gosch</li>
+    <li>Jörg Naumann</li>
+    <li>Tobias Hauth</li>
+    <li>Thimo Seufer</li>
+    <li>Johannes Rau</li>
+    <li>Harald Schweder</li>
+    <li>Julia Simon</li>
   </isig>
 </sigset>
-

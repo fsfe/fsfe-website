@@ -1,26 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-	
-	<eventset>
+<eventset>
   <version>1</version>
-
-   
-	        <event start="2015-08-15" end="2015-08-22"> 
-	 
-	                <title>DebConf15 in Heidelberg, Germany</title> 
-	 
-	                <body> 
-	                        <p>DebConf is de jaarlijkse ontmoeting van ontwikkelaars: een evenement vol discussies, workshops en codeerfeestjes - allen zeer technisch van aard. DebConf15, de 16e Debianconferentie, zal worden gehouden van 15 tot 22 augustus 2015 in het internationale jeugdhostel in Heidelberg, Duitsland. FSFE zal met een kraam aanwezig zijn op het weekend van 15 en 16 augustus.</p> 
-	                </body> 
-	 
-	                <link>http://debconf15.debconf.org/</link> 
-	 
-	
-	                <tags>
-	                        <tag key="de">Duitsland</tag>
-	                        <tag key="infobooth">kraam</tag>
-	                        <tag key="front-page">voorpagina</tag>
-	                </tags>
-	
-	 
-	        </event> 
-	</eventset> 
+  <event start="2015-08-15" end="2015-08-22">
+    <title>DebConf15 in Heidelberg, Germany</title>
+    <body>
+      <p>DebConf is de jaarlijkse ontmoeting van ontwikkelaars: een evenement vol discussies, workshops en codeerfeestjes - allen zeer technisch van aard. DebConf15, de 16e Debianconferentie, zal worden gehouden van 15 tot 22 augustus 2015 in het internationale jeugdhostel in Heidelberg, Duitsland. FSFE zal met een kraam aanwezig zijn op het weekend van 15 en 16 augustus.</p>
+    </body>
+    <link>http://debconf15.debconf.org/</link>
+    <tags>
+      <tag key="de">Duitsland</tag>
+      <tag key="infobooth">kraam</tag>
+      <tag key="front-page">voorpagina</tag>
+    </tags>
+  </event>
+</eventset>

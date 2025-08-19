@@ -1,8 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-
+<?xml version="1.0" encoding="UTF-8"?>
 <activityset>
   <version>2</version>
-
   <activity id="swpat" date="2003-02-01" status="active">
     <title>Brevetti Software in Europa</title>
     <description>
@@ -14,11 +12,11 @@
       ai detentori dei brevetti il potere legale di proibire completamente l'utilizzo
       delle idee brevettate agli sviluppatori software.
     </description>
-    <link href="/activities/swpat/swpat.html" />
-    <order priority="3" />
+    <link href="/activities/swpat/swpat.html"/>
+    <order priority="3"/>
     <tags>
-      <tag key="policy" />
-      <tag key="legal" />
+      <tag key="policy"/>
+      <tag key="legal"/>
     </tags>
   </activity>
 </activityset>

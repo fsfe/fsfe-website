@@ -1,7 +1,6 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <infoset>
   <version>1</version>
-
   <info id="ilovefs-postcard">
     <!-- Leave a tag like <printready> blank or erase it if you don't 
     want to appear it -->
@@ -13,7 +12,9 @@
     </description>
     <type>Kartolinë</type>
     <size>15,4 x 11,1 cm</size>
-    <context><a href="/activities/ilovefs/">Fushata E dua Software-in e Lirë</a></context>
+    <context>
+      <a href="/activities/ilovefs/">Fushata E dua Software-in e Lirë</a>
+    </context>
     <languages>
       <a href="https://download.fsfe.org/advocacy/promomaterial/IloveFS/IloveFS-postcard/ilovefs-postcard.en.pdf">Anglisht</a>
     </languages>
@@ -22,8 +23,9 @@
     </printed>
     <license>CC0</license>
     <author>Markus Meier</author>
-    <source><a href="https://download.fsfe.org/advocacy/promomaterial/IloveFS/IloveFS-postcard/">ilovefs-postcard* in download.fsfe.org</a></source> 
-    <printready></printready>
+    <source>
+      <a href="https://download.fsfe.org/advocacy/promomaterial/IloveFS/IloveFS-postcard/">ilovefs-postcard* in download.fsfe.org</a>
+    </source>
+    <printready/>
   </info>
-
 </infoset>

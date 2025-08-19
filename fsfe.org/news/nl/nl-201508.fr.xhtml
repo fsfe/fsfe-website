@@ -1,195 +1,153 @@
+<?xml version="1.0"?>
 <html newsdate="2015-08-04" type="newsletter">
   <version>1</version>
-
-
-<head>
-	<title>Lettre d’information - FSFE - Août  2015</title>
-</head>
-
-<body microformats="h-entry">
-	<h1 class="p-name">Lettre d’information – août  2015</h1>
-
-<h2>Réponse à la consultation de l’UE sur les droits d’auteurs, les
-brevets et les secrets d’affaires</h2>
-
-<p nesteaser="yes">Plus tôt ce mois-ci, la FSFE a répondu à la
-«&#160;consultation sur le respect de la propriété intellectuelle lors
-des procédures de passation de marché public&#160;», initiée par la
-Commission européenne. L’objectif initial, tel que défini par la
-Commission, était de «&#160;recueillir preuves, opinions et informations
-sur le respect du droit de la propriété intellectuelle et des secrets
-d’affaires lors des procédures de passation de marché public&#160;»
-et d’évaluer si il y avait besoin d’un guide à destination des autorités
-publiques à cet égard.</p>
-
-<p>Dans notre réponse, nous avons soulevé plusieurs problèmes qui
-demandent à être adressés au sujet de cette consultation. Par exemple
-pour les brevets sur des logiciels, nous expliquons qu’il est impossible
+  <head>
+    <title>Lettre d&#x2019;information - FSFE - Ao&#xFB;t  2015</title>
+  </head>
+  <body microformats="h-entry">
+    <h1 class="p-name">Lettre d&#x2019;information &#x2013; ao&#xFB;t  2015</h1>
+    <h2>R&#xE9;ponse &#xE0; la consultation de l&#x2019;UE sur les droits d&#x2019;auteurs, les
+brevets et les secrets d&#x2019;affaires</h2>
+    <p nesteaser="yes">Plus t&#xF4;t ce mois-ci, la FSFE a r&#xE9;pondu &#xE0; la
+&#xAB;&#xA0;consultation sur le respect de la propri&#xE9;t&#xE9; intellectuelle lors
+des proc&#xE9;dures de passation de march&#xE9; public&#xA0;&#xBB;, initi&#xE9;e par la
+Commission europ&#xE9;enne. L&#x2019;objectif initial, tel que d&#xE9;fini par la
+Commission, &#xE9;tait de &#xAB;&#xA0;recueillir preuves, opinions et informations
+sur le respect du droit de la propri&#xE9;t&#xE9; intellectuelle et des secrets
+d&#x2019;affaires lors des proc&#xE9;dures de passation de march&#xE9; public&#xA0;&#xBB;
+et d&#x2019;&#xE9;valuer si il y avait besoin d&#x2019;un guide &#xE0; destination des autorit&#xE9;s
+publiques &#xE0; cet &#xE9;gard.</p>
+    <p>Dans notre r&#xE9;ponse, nous avons soulev&#xE9; plusieurs probl&#xE8;mes qui
+demandent &#xE0; &#xEA;tre adress&#xE9;s au sujet de cette consultation. Par exemple
+pour les brevets sur des logiciels, nous expliquons qu&#x2019;il est impossible
 de se procurer des logiciels qui ne violent aucun brevet, et que les
-droits d’auteur ne doivent pas etre dévalués par les brevets de tiers.
-De plus, la FSFE a avancé que, en principe et par défaut, chaque
-logiciel financé avec de l’argent public doit être publié et distribué
+droits d&#x2019;auteur ne doivent pas etre d&#xE9;valu&#xE9;s par les brevets de tiers.
+De plus, la FSFE a avanc&#xE9; que, en principe et par d&#xE9;faut, chaque
+logiciel financ&#xE9; avec de l&#x2019;argent public doit &#xEA;tre publi&#xE9; et distribu&#xE9;
 comme logiciel libre, afin que chacun puisse utiliser le logiciel pour
 ses propres objectifs et fournir en retour un meilleur service aux
-autorités publiques.</p>
-
-<p>Notre actuelle stagiaire Polina Malaja a résumé nos réponses et écrit
-au sujet de la consultation dans son <a
-href="https://blogs.fsfe.org/polina/2015/07/24/fsfe-answers-to-the-consultation-on-copyright-patents-and-trade-secrets-in-public-procurement/">billet
-de blogue</a>, et donné des éléments de réponse sur<a
-href="https://wiki.fsfe.org/Free_Software_in_public_procurement">le wiki
+autorit&#xE9;s publiques.</p>
+    <p>Notre actuelle stagiaire Polina Malaja a r&#xE9;sum&#xE9; nos r&#xE9;ponses et &#xE9;crit
+au sujet de la consultation dans son <a href="https://blogs.fsfe.org/polina/2015/07/24/fsfe-answers-to-the-consultation-on-copyright-patents-and-trade-secrets-in-public-procurement/">billet
+de blogue</a>, et donn&#xE9; des &#xE9;l&#xE9;ments de r&#xE9;ponse sur<a href="https://wiki.fsfe.org/Free_Software_in_public_procurement">le wiki
 de la FSFE</a>.</p>
-
-<h2>Comment gérer les restrictions sur le <em>firmware</em> (microcodes)</h2>
-
-<p>Le but de la FSFE est d’assurer que les propriétaires d’appareils
-informatiques en aient la pleine maîtrise et soient les seuls à pouvoir
-les contrôler. Ces dernières années, ce principe fondamental est remis
-en cause par des développements comme<a
-href="/freesoftware/secure-boot.html">le
-«&#160;Secure Boot&#160;» UEFI</a>, ou les BIOS privateurs. Ces
-logiciels de bas niveau sont ceux qui fonctionnent lorsque vous démarrez
-votre ordinateur. Ils initialisent le matériel électronique et peuvent
-être conçus pour empêcher les utilisateurs de pouvoir installer un
-logiciel que le fabricant n’aurait pas «&#160;autorisé&#160;». Ces
-développements furent l’objet d’une partie de la <a
-href="https://dot.kde.org/2015/07/25/akademy-talks-day-1">la présentation
-du rédacteur en chef</a> durant l’Akademy de cette année, à A
-Coruña/Espagne. Cette présentation vous donne quelques idées sur la façon
-de résoudre le problème posé par ces restrictions.</p>
-
-<p>L’une des façons de contrecarrer cela est de développer du microcode
-de démarrage alternatif. Il existe plusieurs façons de remplacer le
-firmware privateur par des équivalents libres. Notre Fellow Kevin Keijzer
-explique en détails comment <a
-href="https://blogs.fsfe.org/the_unconventional/2015/06/08/setting-up-a-beaglebone-black-to-flash-coreboot/">mettre
+    <h2>Comment g&#xE9;rer les restrictions sur le <em>firmware</em> (microcodes)</h2>
+    <p>Le but de la FSFE est d&#x2019;assurer que les propri&#xE9;taires d&#x2019;appareils
+informatiques en aient la pleine ma&#xEE;trise et soient les seuls &#xE0; pouvoir
+les contr&#xF4;ler. Ces derni&#xE8;res ann&#xE9;es, ce principe fondamental est remis
+en cause par des d&#xE9;veloppements comme<a href="/freesoftware/secure-boot.html">le
+&#xAB;&#xA0;Secure Boot&#xA0;&#xBB; UEFI</a>, ou les BIOS privateurs. Ces
+logiciels de bas niveau sont ceux qui fonctionnent lorsque vous d&#xE9;marrez
+votre ordinateur. Ils initialisent le mat&#xE9;riel &#xE9;lectronique et peuvent
+&#xEA;tre con&#xE7;us pour emp&#xEA;cher les utilisateurs de pouvoir installer un
+logiciel que le fabricant n&#x2019;aurait pas &#xAB;&#xA0;autoris&#xE9;&#xA0;&#xBB;. Ces
+d&#xE9;veloppements furent l&#x2019;objet d&#x2019;une partie de la <a href="https://dot.kde.org/2015/07/25/akademy-talks-day-1">la pr&#xE9;sentation
+du r&#xE9;dacteur en chef</a> durant l&#x2019;Akademy de cette ann&#xE9;e, &#xE0; A
+Coru&#xF1;a/Espagne. Cette pr&#xE9;sentation vous donne quelques id&#xE9;es sur la fa&#xE7;on
+de r&#xE9;soudre le probl&#xE8;me pos&#xE9; par ces restrictions.</p>
+    <p>L&#x2019;une des fa&#xE7;ons de contrecarrer cela est de d&#xE9;velopper du microcode
+de d&#xE9;marrage alternatif. Il existe plusieurs fa&#xE7;ons de remplacer le
+firmware privateur par des &#xE9;quivalents libres. Notre Fellow Kevin Keijzer
+explique en d&#xE9;tails comment <a href="https://blogs.fsfe.org/the_unconventional/2015/06/08/setting-up-a-beaglebone-black-to-flash-coreboot/">mettre
 en place un <em>beaglebone black</em> pour flasher Coreboot</a> ou
 comment <a href="https://blogs.fsfe.org/the_unconventional/2015/06/06/libreboot-x200-raspberry-pi/">flasher
 Libreboot sur un Lenovo X200 avec un Raspberry Pi</a>. Un autre Fellow,
-André Ockers, explique sur son blog comment il a obtenu un <a
-href="https://blogs.fsfe.org/ao/2015/05/29/how-i-got-a-thinkpad-t60p-coreboot-gnu-linux-libre-trisquel-laptop/">Thinkpad
+Andr&#xE9; Ockers, explique sur son blog comment il a obtenu un <a href="https://blogs.fsfe.org/ao/2015/05/29/how-i-got-a-thinkpad-t60p-coreboot-gnu-linux-libre-trisquel-laptop/">Thinkpad
 T60p avec Trisquel et Libreboot</a>.</p>
-
-<p>En plus de travailer sur du microcode de démarrage alternatif et
-libre, nous devons aussi nous tourner vers l’avenir. Nous devons
-réfléchir sur la façon d’étendre au matériel nos idées sur le logiciel
-libre. Richard Stallman a écrit à ce propos dans un article<a
-href="http://www.wired.com/2015/03/need-free-digital-hardware-designs/">Pourquoi
-avons-nous besoin de plans de matériel informatique libres</a>.</p>
-
-<h2>Par ailleurs</h2>
-
-<ul>
-	
-<li>Du 24 au 26 juillet, la FSFE a tenu la réunion des coordinateurs
-européens de 2015 (ECM15) à Essen (Allemagne). Parmi les nombreux sujets,
-nos coordinateurs ont discuté stratégie, notamment une proposition pour
-restructurer la communauté et sa communication, ainsi que notre travail
-de presse et les campagne d’actions. Pour plus d’informations, merci de
+    <p>En plus de travailer sur du microcode de d&#xE9;marrage alternatif et
+libre, nous devons aussi nous tourner vers l&#x2019;avenir. Nous devons
+r&#xE9;fl&#xE9;chir sur la fa&#xE7;on d&#x2019;&#xE9;tendre au mat&#xE9;riel nos id&#xE9;es sur le logiciel
+libre. Richard Stallman a &#xE9;crit &#xE0; ce propos dans un article<a href="http://www.wired.com/2015/03/need-free-digital-hardware-designs/">Pourquoi
+avons-nous besoin de plans de mat&#xE9;riel informatique libres</a>.</p>
+    <h2>Par ailleurs</h2>
+    <ul>
+      <li>Du 24 au 26 juillet, la FSFE a tenu la r&#xE9;union des coordinateurs
+europ&#xE9;ens de 2015 (ECM15) &#xE0; Essen (Allemagne). Parmi les nombreux sujets,
+nos coordinateurs ont discut&#xE9; strat&#xE9;gie, notamment une proposition pour
+restructurer la communaut&#xE9; et sa communication, ainsi que notre travail
+de presse et les campagne d&#x2019;actions. Pour plus d&#x2019;informations, merci de
 lire le  <a href="https://blogs.fsfe.org/eal/2015/07/30/european-coordinators-meeting-2015/">billet
-de blogue d’Erik Albers</a>.</li>
-
-<li>L’équipe de la FSFE sur l’éducation <a href="/freesoftware/education/education.html">a
-mis à jour son site web</a>. Jetez-y un œil, donnez-nous votre avis, ou
-mieux&#160;: rejoignez cette équipe dédiée à la promotion du logiciel
-libre pour l’éducation et de son utilisation dans les écoles et
-universités.</li>
-
-<li>Votre rédacteur en chef Matthias Kirschner a donné une interview
-avant Akademy. L’entretien est disponible sur le <a
-href="https://dot.kde.org/2015/07/15/akademy-2015-keynote-matthias-kirschner">site
-web de KDE</a>. Il s’agissait de questions concernant la première
-distribution GNU/Linux de votre rédacteur en chef, de son implication à
-la FSFE, comment les Logiciels Libres sont liés au progrès de la société,
-ainsi que sa participation à des séminaires de secourisme sauvage.
+de blogue d&#x2019;Erik Albers</a>.</li>
+      <li>L&#x2019;&#xE9;quipe de la FSFE sur l&#x2019;&#xE9;ducation <a href="/freesoftware/education/education.html">a
+mis &#xE0; jour son site web</a>. Jetez-y un &#x153;il, donnez-nous votre avis, ou
+mieux&#xA0;: rejoignez cette &#xE9;quipe d&#xE9;di&#xE9;e &#xE0; la promotion du logiciel
+libre pour l&#x2019;&#xE9;ducation et de son utilisation dans les &#xE9;coles et
+universit&#xE9;s.</li>
+      <li>Votre r&#xE9;dacteur en chef Matthias Kirschner a donn&#xE9; une interview
+avant Akademy. L&#x2019;entretien est disponible sur le <a href="https://dot.kde.org/2015/07/15/akademy-2015-keynote-matthias-kirschner">site
+web de KDE</a>. Il s&#x2019;agissait de questions concernant la premi&#xE8;re
+distribution GNU/Linux de votre r&#xE9;dacteur en chef, de son implication &#xE0;
+la FSFE, comment les Logiciels Libres sont li&#xE9;s au progr&#xE8;s de la soci&#xE9;t&#xE9;,
+ainsi que sa participation &#xE0; des s&#xE9;minaires de secourisme sauvage.
 (Victorhck a <a href="https://victorhckinthefreeworld.wordpress.com/2015/07/18/entrevista-a-matthias-kirschner-vicepresidente-de-la-fsfe-que-dara-una-charla-en-akademy/">traduit
 cette interview en Espagnol</a>.)</li>
-
-<li>La Commission européenne a <a href="https://joinup.ec.europa.eu/node/144375">mis
-en ligne l’éditeur de législation LEOS comme logiciel libre</a>.
-Celui-ci peut être utilisé pour rédiger et traiter automatiquement les
-textes législatifs. Actuellement, le logiciel prend en charge les textes
-législatifs émanant de la Commission européenne, mais peut être étendu
-pour gérer d’autres processus législatifs.</li>
-
-<li>Deux bonnes évolutions en France : D’une part le gouvernement
-français a publié des <a href="https://joinup.ec.europa.eu/node/144729">modèles</a>
-pour les agents des procédures d’appel d’offres publiques lors de la
-demande de solutions de TIC basées sur des logiciels libres. Les modèles
-incluent des clauses d’obtention des Logiciels Libres qui incitent les
-développeurs à participer au code auquel ils contribuent. D’autre part,
-la France veut que son administration publique donne la priorité au
-format ODF plutôt qu’au format OOXML de Microsoft (voir <a
-href="http://www.theregister.co.uk/2015/07/22/french_government_computer_agency_recommends_giving_microsoft_le_boot/">un
+      <li>La Commission europ&#xE9;enne a <a href="https://joinup.ec.europa.eu/node/144375">mis
+en ligne l&#x2019;&#xE9;diteur de l&#xE9;gislation LEOS comme logiciel libre</a>.
+Celui-ci peut &#xEA;tre utilis&#xE9; pour r&#xE9;diger et traiter automatiquement les
+textes l&#xE9;gislatifs. Actuellement, le logiciel prend en charge les textes
+l&#xE9;gislatifs &#xE9;manant de la Commission europ&#xE9;enne, mais peut &#xEA;tre &#xE9;tendu
+pour g&#xE9;rer d&#x2019;autres processus l&#xE9;gislatifs.</li>
+      <li>Deux bonnes &#xE9;volutions en France : D&#x2019;une part le gouvernement
+fran&#xE7;ais a publi&#xE9; des <a href="https://joinup.ec.europa.eu/node/144729">mod&#xE8;les</a>
+pour les agents des proc&#xE9;dures d&#x2019;appel d&#x2019;offres publiques lors de la
+demande de solutions de TIC bas&#xE9;es sur des logiciels libres. Les mod&#xE8;les
+incluent des clauses d&#x2019;obtention des Logiciels Libres qui incitent les
+d&#xE9;veloppeurs &#xE0; participer au code auquel ils contribuent. D&#x2019;autre part,
+la France veut que son administration publique donne la priorit&#xE9; au
+format ODF plut&#xF4;t qu&#x2019;au format OOXML de Microsoft (voir <a href="http://www.theregister.co.uk/2015/07/22/french_government_computer_agency_recommends_giving_microsoft_le_boot/">un
 article dans The Register</a>).</li>
-
-<li>Le 3 octobre 2015 la FSF célèbrera son 30<sup>e</sup> anniversaire à
-Boston (États-Unis). C’est une occasion à célébrer. En tant
-qu’organisation sœur nous vous invitons à <a
-href="http://www.fsf.org/news/fsf-invites-the-free-software-community-to-its-30th-birthday-party-on-october-3rd-2015">organiser
-des petites fêtes</a> dans toute l’Europe, alors, faites nous savoir si
-vous prévoyez quelque chose afin que nous puissions faire la promotion
-de cette célébration.</li>
-
-<li>Depuis <a href="https://planet.fsfe.org">les blogs</a> :</li>
-
-<ul>
-
-<li>Riccardo Iaconelli a écrit sur <a href="https://blogs.fsfe.org/ruphy/2015/07/announcing-wikifm/">WikiFM</a>,
-concernant un projet de KDE visant à apporter la connaissance libre et
+      <li>Le 3 octobre 2015 la FSF c&#xE9;l&#xE8;brera son 30<sup>e</sup> anniversaire &#xE0;
+Boston (&#xC9;tats-Unis). C&#x2019;est une occasion &#xE0; c&#xE9;l&#xE9;brer. En tant
+qu&#x2019;organisation s&#x153;ur nous vous invitons &#xE0; <a href="http://www.fsf.org/news/fsf-invites-the-free-software-community-to-its-30th-birthday-party-on-october-3rd-2015">organiser
+des petites f&#xEA;tes</a> dans toute l&#x2019;Europe, alors, faites nous savoir si
+vous pr&#xE9;voyez quelque chose afin que nous puissions faire la promotion
+de cette c&#xE9;l&#xE9;bration.</li>
+      <li>Depuis <a href="https://planet.fsfe.org">les blogs</a> :</li>
+      <ul>
+        <li>Riccardo Iaconelli a &#xE9;crit sur <a href="https://blogs.fsfe.org/ruphy/2015/07/announcing-wikifm/">WikiFM</a>,
+concernant un projet de KDE visant &#xE0; apporter la connaissance libre et
 ouverte au monde sous la forme de notes et manuels de cours. Il vise
-particulièrement les étudiants, les chercheurs et la formation continue,
-avec des manuels sur le calcul de base et étendu/infini <em>Concevoir
-avec QML</em> (déjà utilisés par la HEP software Foundation).</li>
-
-<li>Daniel Pocock nous explique
-l’enregistrement en direct/temps-réel avec votre téléphone portable et
+particuli&#xE8;rement les &#xE9;tudiants, les chercheurs et la formation continue,
+avec des manuels sur le calcul de base et &#xE9;tendu/infini <em>Concevoir
+avec QML</em> (d&#xE9;j&#xE0; utilis&#xE9;s par la HEP software Foundation).</li>
+        <li>Daniel Pocock nous explique
+l&#x2019;enregistrement en direct/temps-r&#xE9;el avec votre t&#xE9;l&#xE9;phone portable et
 un micro miniature.</li>
-
-<li>Guide Arnold fait un compte rendu sur la <a
-href="https://blogs.fsfe.org/guido/2015/07/galicia-introducing-over-50-000-students-to-free-software/">présentation
-du Logiciel Libre à plus de 50000 étudiants de Galice (Espagne)</a>,
+        <li>Guide Arnold fait un compte rendu sur la <a href="https://blogs.fsfe.org/guido/2015/07/galicia-introducing-over-50-000-students-to-free-software/">pr&#xE9;sentation
+du Logiciel Libre &#xE0; plus de 50000 &#xE9;tudiants de Galice (Espagne)</a>,
 ainsi que la <a href="https://blogs.fsfe.org/guido/2015/07/we-dont-use-free-software-we-want-something-that-just-works/">commutation
-des écoles espagnoles dans l’utilisation de Linux/Ubuntu</a> pour les
+des &#xE9;coles espagnoles dans l&#x2019;utilisation de Linux/Ubuntu</a> pour les
 ordinateurs de bureau ainsi que dans les salles de classe.</li>
-
-</ul>
-</ul>
-
-<h2>Contribuer à notre générateur de site Web statique</h2>
-
-<p>Depuis 2002 la FSFE utilise un générateur de site web statique pour
-marquer sa présence sur le web. La première version a été écrite par
-Jonas Öberg, qui est maintenant directeur exécutif de la FSFE. Le mois
-dernier nous avions soumis une version actualisée à l’instance de test
-de notre site web. Sur son blog, le webmaster de la FSFE Paul Hänsch <a
-href="http://blog.plutz.net/The_FSFE_org_buildscript.html">résume les
-nouvelles fonctionnalités ainsi que les restrictions</a>. Ainsi si vous
-êtes interessés par l’amélioration sur le plan technique de la présence
-web de la FSFE, lisez ceci et prenez contact avec notre équipe web.</p>
-
-<p>Merci à tous <a href="/contribute/contribute.html">les bénévoles</a>,
-<a href="https://my.fsfe.org/donate">Fellows</a> et <a href="/donate/thankgnus.html">mécènes</a>
+      </ul>
+    </ul>
+    <h2>Contribuer &#xE0; notre g&#xE9;n&#xE9;rateur de site Web statique</h2>
+    <p>Depuis 2002 la FSFE utilise un g&#xE9;n&#xE9;rateur de site web statique pour
+marquer sa pr&#xE9;sence sur le web. La premi&#xE8;re version a &#xE9;t&#xE9; &#xE9;crite par
+Jonas &#xD6;berg, qui est maintenant directeur ex&#xE9;cutif de la FSFE. Le mois
+dernier nous avions soumis une version actualis&#xE9;e &#xE0; l&#x2019;instance de test
+de notre site web. Sur son blog, le webmaster de la FSFE Paul H&#xE4;nsch <a href="http://blog.plutz.net/The_FSFE_org_buildscript.html">r&#xE9;sume les
+nouvelles fonctionnalit&#xE9;s ainsi que les restrictions</a>. Ainsi si vous
+&#xEA;tes interess&#xE9;s par l&#x2019;am&#xE9;lioration sur le plan technique de la pr&#xE9;sence
+web de la FSFE, lisez ceci et prenez contact avec notre &#xE9;quipe web.</p>
+    <p>Merci &#xE0; tous <a href="/contribute/contribute.html">les b&#xE9;n&#xE9;voles</a>,
+<a href="https://my.fsfe.org/donate">Fellows</a> et <a href="/donate/thankgnus.html">m&#xE9;c&#xE8;nes</a>
 qui permettent cette action,<br/>
 
 <a href="/about/people/kirschner">Matthias Kirschner</a> - <a href="/index.html">FSFE</a></p>
-	<!--/e-content-->
-</body>
-
-<sidebar promo="about-fsfe" />
-<author id="kirschner" />
-<date>
-	<original content="2015-08-04" />
-</date>
-<followup>donate</followup>
-<tags>
-	<tag key="newsletter"/>
-</tags>
-
+    <!--/e-content-->
+  </body>
+  <sidebar promo="about-fsfe"/>
+  <author id="kirschner"/>
+  <date>
+    <original content="2015-08-04"/>
+  </date>
+  <followup>donate</followup>
+  <tags>
+    <tag key="newsletter"/>
+  </tags>
 </html>
 <!--
 Local Variables: ***
 mode: xml ***
 End: ***
 -->
-

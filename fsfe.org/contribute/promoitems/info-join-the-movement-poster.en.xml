@@ -1,7 +1,6 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <infoset>
   <version>1</version>
-
   <info id="jtsfm-poster">
     <!-- Leave a tag like <printready> blank or erase it if you don't 
     want to appear it -->
@@ -13,18 +12,22 @@
     </description>
     <type>Poster</type>
     <size>420mm x 594mm</size>
-    
-    <context><a href="/contribute/contribute.html">Join the Movement!</a></context>
+    <context>
+      <a href="/contribute/contribute.html">Join the Movement!</a>
+    </context>
     <languages>
-          <a href="https://download.fsfe.org/advocacy/promomaterial/FSFE/JoinTheMovement/FSFE_ADA_ZANGEMANN_poster_A2.pdf">English</a>
+      <a href="https://download.fsfe.org/advocacy/promomaterial/FSFE/JoinTheMovement/FSFE_ADA_ZANGEMANN_poster_A2.pdf">English</a>
     </languages>
     <printed>
       PDF (English)
     </printed>
-    <license><a href="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA 4.0</a></license>
+    <license>
+      <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA 4.0</a>
+    </license>
     <author>Sandra Brandstätter</author>
-    <source><a href="https://download.fsfe.org/advocacy/promomaterial/FSFE/JoinTheMovement/FSFE_ADA_ZANGEMANN_poster_A2.pdf">Join the Software Freedom Movement Poster in download.fsfe.org</a></source> 
-    <printready></printready>
+    <source>
+      <a href="https://download.fsfe.org/advocacy/promomaterial/FSFE/JoinTheMovement/FSFE_ADA_ZANGEMANN_poster_A2.pdf">Join the Software Freedom Movement Poster in download.fsfe.org</a>
+    </source>
+    <printready/>
   </info>
-
 </infoset>

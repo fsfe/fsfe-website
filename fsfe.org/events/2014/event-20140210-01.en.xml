@@ -1,23 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <eventset>
   <version>1</version>
-
-   <event start="2014-02-10" end="2014-02-10">
-   <title>MutterWare 3, Paris, France</title>
-   <body>
-     <p>
+  <event start="2014-02-10" end="2014-02-10">
+    <title>MutterWare 3, Paris, France</title>
+    <body>
+      <p>
 MutterWare are like tupperware meetings for mutt users (mutters), sharing tips
-and hacks on mutt, the UNIX email client that lives in your terminal.<br />
+and hacks on mutt, the UNIX email client that lives in your terminal.<br/>
 The 3rd Paris MutterWare will take place at Numa. Everybody is welcome to learn
-how to use it. More information <a
-    href="https://wiki.fsfe.org/groups/Paris/Mutterware">on the wiki</a>.
+how to use it. More information <a href="https://wiki.fsfe.org/groups/Paris/Mutterware">on the wiki</a>.
      </p>
-   </body>
-   <page>http://events.numaparis.com/Evenements/mutterware-3</page>
-   <tags>
-    <tag key="fr"/>
-    <tag key="front-page"/>
-   </tags>
+    </body>
+    <page>http://events.numaparis.com/Evenements/mutterware-3</page>
+    <tags>
+      <tag key="fr"/>
+      <tag key="front-page"/>
+    </tags>
   </event>
 </eventset>
-

@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <!--
   Please keep each list alphabetically ordered.  Emacs users want to set
   sort-fold-case to true and run sort-lines on a region.  Vi+ users can
@@ -12,10 +11,8 @@
   donor, so if you add a donor to a file of the new year, don't forget to
   remove the date="..." in the old year's file.
 -->
-
 <donorset>
   <version>1</version>
-
   <gold>
     <donor date="2020-12-30" img="donors/aws.png">AWS</donor>
     <donor img="donors/google.png" mark="yes">Google</donor>
@@ -23,7 +20,6 @@
     <donor date="2020-08-17" img="donors/knf.png">Kommunikationsnetz Franken</donor>
     <donor img="donors/linuxhotel.png">Linuxhotel Villa Vogelsang</donor>
   </gold>
-
   <silver>
     <donor img="donors/silver-credativ.png">credativ</donor>
     <donor img="donors/silver-freiheit.png">freiheit.com technologies</donor>
@@ -39,7 +35,6 @@
     <donor img="donors/silver-sysmocom.png">sysmocom - s.f.m.c. GmbH</donor>
     <donor>Thomas Etter</donor>
   </silver>
-
   <bronze>
     <donor date="2020-12-30">Andreas Lauser</donor>
     <donor>Andrew T. Wilson</donor>
@@ -76,7 +71,8 @@
     <donor>Matthias Köslin (11-)</donor>
     <donor>Moritz Bunkus</donor>
     <donor>Neuhaus-IT (08-)</donor>
-    <donor>Next Level Shit (10-)</donor><!-- Michael Czechowski -->
+    <donor>Next Level Shit (10-)</donor>
+    <!-- Michael Czechowski -->
     <donor date="2020-04-15">Oslandia</donor>
     <donor date="2020-06-21">Pierre Bourdon</donor>
     <donor>Raigo Aljand</donor>

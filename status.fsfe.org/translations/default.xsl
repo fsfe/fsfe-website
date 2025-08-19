@@ -13,7 +13,7 @@
           <th>Priority 2 files in need of translation</th>
         </tr>
         <xsl:for-each select="/buildinfo/document/set/language">
-        <xsl:sort select="@long" order="ascending"/>
+          <xsl:sort select="@long" order="ascending"/>
           <tr>
             <td>
               <a>
@@ -36,7 +36,6 @@
       </table>
     </details>
   </xsl:template>
-
   <xsl:template match="translation-status">
     <xsl:if test="/buildinfo/@language != 'en'">
       <div class="translation-status">
@@ -126,5 +125,4 @@
       </div>
     </xsl:if>
   </xsl:template>
-
 </xsl:stylesheet>

@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <eventset>
   <version>1</version>
-
-	<event start="2012-09-15" end="2012-09-15">
-	<title>Ημέρα Ελευθερίας Λογισμικού με τα Μέλη του Μάντσεστερ</title>
-		<body>
-  <p>
+  <event start="2012-09-15" end="2012-09-15">
+    <title>Ημέρα Ελευθερίας Λογισμικού με τα Μέλη του Μάντσεστερ</title>
+    <body>
+      <p>
 			Τα Μέλη στο Μάντσεστερ θα συναντηθούν για να 
 αποφασίσουν το βέλτιστο τρόπο για φωνητική και οπτική συνομιλία (chat) 
 με χρήση Ελεύθερου Λογισμικού. Μεταξύ 14.00-17.00 στο 
@@ -13,12 +12,12 @@
 δοκιμάσουν ποιο πρόγραμμα είναι συμβατό με ποιο και θα δημοσιεύσουν έναν
 πίνακα αποτελεσμάτων για δημόσια χρήση.
 		  </p>
-</body>
-		<page>https://wiki.fsfe.org/groups/Manchester</page>
-		<tags>
-			<tag key="front-page"/>
-			<tag key="localgroup"/>
-			<tag key="gb"/>
-		</tags>
-	</event>
+    </body>
+    <page>https://wiki.fsfe.org/groups/Manchester</page>
+    <tags>
+      <tag key="front-page"/>
+      <tag key="localgroup"/>
+      <tag key="gb"/>
+    </tags>
+  </event>
 </eventset>

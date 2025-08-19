@@ -1,7 +1,6 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <infoset>
   <version>1</version>
-
   <info id="f-droid-leaflet">
     <!-- Leave a tag like <printready> blank or erase it if you don't 
     want to appear it -->
@@ -13,12 +12,11 @@
     </description>
     <type>Fletëpalosje</type>
     <size>10 x 21 cm (e palosur); 29,7 x 21 cm (=A4, e papalosur)</size>
-    <context><a href="http://www.freeyourandroid.org">Fushata Çlironi Android-in Tuaj</a></context>
-    
-<!-- everything below this line uses native language names for each language or technical abbreviations respectively, so there is no need to transalate it from here on -->
-    
-    <languages>
-      <a href="https://download.fsfe.org/advocacy/promomaterial/FYA/Fdroid-leaflet/fdroid-leaflet.de.pdf" title="F-Droid">Deutsch</a>, <a href="https://download.fsfe.org/advocacy/promomaterial/FYA/Fdroid-leaflet/fdroid-leaflet.en.pdf" title="F-Droid">English</a>, <a href="https://download.fsfe.org/advocacy/promomaterial/FYA/Fdroid-leaflet/fdroid-leaflet.fr.pdf" title="F-Droid">Français</a>, <a href="https://download.fsfe.org/advocacy/promomaterial/FYA/Fdroid-leaflet/fdroid-leaflet.it.pdf" title="F-Droid">Italiano</a>, <a href="https://download.fsfe.org/advocacy/promomaterial/FYA/Fdroid-leaflet/fdroid-leaflet.fi.pdf" title="F-Droid">Suomi</a> 
+    <context>
+      <a href="http://www.freeyourandroid.org">Fushata Çlironi Android-in Tuaj</a>
+    </context>
+    <!-- everything below this line uses native language names for each language or technical abbreviations respectively, so there is no need to transalate it from here on -->
+    <languages><a href="https://download.fsfe.org/advocacy/promomaterial/FYA/Fdroid-leaflet/fdroid-leaflet.de.pdf" title="F-Droid">Deutsch</a>, <a href="https://download.fsfe.org/advocacy/promomaterial/FYA/Fdroid-leaflet/fdroid-leaflet.en.pdf" title="F-Droid">English</a>, <a href="https://download.fsfe.org/advocacy/promomaterial/FYA/Fdroid-leaflet/fdroid-leaflet.fr.pdf" title="F-Droid">Français</a>, <a href="https://download.fsfe.org/advocacy/promomaterial/FYA/Fdroid-leaflet/fdroid-leaflet.it.pdf" title="F-Droid">Italiano</a>, <a href="https://download.fsfe.org/advocacy/promomaterial/FYA/Fdroid-leaflet/fdroid-leaflet.fi.pdf" title="F-Droid">Suomi</a> 
     </languages>
     <printed>
       Deutsch, English, Français, Italiano
@@ -27,8 +25,7 @@
     <author>Free Software Foundation Europe</author>
     <source>
       <a href="https://download.fsfe.org/advocacy/promomaterial/FYA/Fdroid-leaflet/" title="F-Droid leaflet sources">F-droid_folder.* in download.fsfe.org</a>
-	</source> 
-    <printready></printready>
+    </source>
+    <printready/>
   </info>
-
 </infoset>

@@ -1,11 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-
+<?xml version="1.0" encoding="UTF-8"?>
 <activityset>
   <version>1</version>
-
-   <activity id="fla" date="2017-06-01" status="active">
-        <title>Fiduciary Programme</title>
-        <description>
+  <activity id="fla" date="2017-06-01" status="active">
+    <title>Fiduciary Programme</title>
+    <description>
     The Fiduciary License Agreement (FLA) allows software projects to assign 
     copyrights to a named fiduciary for its effective management. This allows 
     developers to focus on development rather than spending time on legal 
@@ -13,13 +11,11 @@
     Fiduciary Programme, we continue to offer customisable versions of the FLA) 
     for your use. 
         </description>
-        <link href="/activities/fla/fiduciary.html" />
-        <image url="/graphics/logos/fla.png" />
-        <order priority="6" highlight="no" />
+    <link href="/activities/fla/fiduciary.html"/>
+    <image url="/graphics/logos/fla.png"/>
+    <order priority="6" highlight="no"/>
     <tags>
-      <tag key="legal" />
+      <tag key="legal"/>
     </tags>
   </activity>
 </activityset>
-
-

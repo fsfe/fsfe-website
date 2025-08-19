@@ -1,7 +1,6 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <infoset>
   <version>1</version>
-
   <info id="fya-sticker">
     <!-- Leave a tag like <printready> blank or erase it if you don't 
     want to appear it -->
@@ -13,20 +12,21 @@
     </description>
     <type>Sticker</type>
     <size>⌀ 30mm</size>
-    <context><a href="http://www.freeyourandroid.org">Bevrijd Uw Android-campagne</a></context>
-    <languages>
-      <a href="https://download.fsfe.org/advocacy/promomaterial/FYA/FYA-sticker/FYA_sticker_2017_3cm.pdf">PDF</a>, <a href="https://download.fsfe.org/advocacy/promomaterial/FYA/FYA-sticker/FYA_sticker_2017_3cm.sla">SLA</a>, <a href="https://download.fsfe.org/advocacy/promomaterial/FYA/FYA-sticker/FYA_sticker_2017_3cm.svg">SVG</a>
+    <context>
+      <a href="http://www.freeyourandroid.org">Bevrijd Uw Android-campagne</a>
+    </context>
+    <languages><a href="https://download.fsfe.org/advocacy/promomaterial/FYA/FYA-sticker/FYA_sticker_2017_3cm.pdf">PDF</a>, <a href="https://download.fsfe.org/advocacy/promomaterial/FYA/FYA-sticker/FYA_sticker_2017_3cm.sla">SLA</a>, <a href="https://download.fsfe.org/advocacy/promomaterial/FYA/FYA-sticker/FYA_sticker_2017_3cm.svg">SVG</a>
     </languages>
-      <printed>
+    <printed>
       welke taal dan ook / geen taal
     </printed>
-    <license><a href="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA 4.0</a></license>
+    <license>
+      <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA 4.0</a>
+    </license>
     <author>Free Software Foundation Europe</author>
-    <source><a href="https://download.fsfe.org/advocacy/promomaterial/FYA/FYA-sticker/">FYA_sticker* in download.fsfe.org</a></source> 
-    <printready></printready>
+    <source>
+      <a href="https://download.fsfe.org/advocacy/promomaterial/FYA/FYA-sticker/">FYA_sticker* in download.fsfe.org</a>
+    </source>
+    <printready/>
   </info>
-
 </infoset>
- 
-
-

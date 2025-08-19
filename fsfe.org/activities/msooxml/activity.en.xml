@@ -1,8 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-
+<?xml version="1.0" encoding="UTF-8"?>
 <activityset>
   <version>1</version>
-
   <activity id="msooxml" date="2006-01-01" status="finished">
     <title>MS-OOXML</title>
     <description>
@@ -12,11 +10,11 @@
       the issue in the community, led the movement against the standardisation 
       of MS-OOXML, and has been closely following developments over the years. 
     </description>
-    <link href="/activities/msooxml/msooxml.html" />
-    <order priority="1" />
+    <link href="/activities/msooxml/msooxml.html"/>
+    <order priority="1"/>
     <tags>
-      <tag key="policy" />
-      <tag key="legal" />
+      <tag key="policy"/>
+      <tag key="legal"/>
     </tags>
   </activity>
 </activityset>

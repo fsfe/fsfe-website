@@ -1,34 +1,32 @@
 <?xml version="1.0"?>
-
 <functionset>
   <version>0</version>
-
-  <function id="president/f"> президент</function>
-  <function id="president/m"> президент</function>
-  <function id="vice-president/f"> вице-президент</function>
-  <function id="vice-president/m"> вице-президент</function>
-  <function id="financial-officer/f"> бухгалтер</function>
-  <function id="financial-officer/m"> бухгалтер</function>
-  <function id="executive-director/f"> исполнительный директор</function>
-  <function id="executive-director/m"> исполнительный директор</function>
-  <function id="intern/f"> стажер</function>
-  <function id="intern/m"> стажер</function>
-  <function id="office/f"> офисная работница</function>
-  <function id="office/m"> офисный работник</function>
-  <function id="sysadmin/f"> системный администратор</function>
-  <function id="sysadmin/m"> системный администратор</function>
-  <function id="coordinator/f"> координатор</function>
-  <function id="coordinator/m"> координатор</function>
+  <function id="president/f"> &#x43F;&#x440;&#x435;&#x437;&#x438;&#x434;&#x435;&#x43D;&#x442;</function>
+  <function id="president/m"> &#x43F;&#x440;&#x435;&#x437;&#x438;&#x434;&#x435;&#x43D;&#x442;</function>
+  <function id="vice-president/f"> &#x432;&#x438;&#x446;&#x435;-&#x43F;&#x440;&#x435;&#x437;&#x438;&#x434;&#x435;&#x43D;&#x442;</function>
+  <function id="vice-president/m"> &#x432;&#x438;&#x446;&#x435;-&#x43F;&#x440;&#x435;&#x437;&#x438;&#x434;&#x435;&#x43D;&#x442;</function>
+  <function id="financial-officer/f"> &#x431;&#x443;&#x445;&#x433;&#x430;&#x43B;&#x442;&#x435;&#x440;</function>
+  <function id="financial-officer/m"> &#x431;&#x443;&#x445;&#x433;&#x430;&#x43B;&#x442;&#x435;&#x440;</function>
+  <function id="executive-director/f"> &#x438;&#x441;&#x43F;&#x43E;&#x43B;&#x43D;&#x438;&#x442;&#x435;&#x43B;&#x44C;&#x43D;&#x44B;&#x439; &#x434;&#x438;&#x440;&#x435;&#x43A;&#x442;&#x43E;&#x440;</function>
+  <function id="executive-director/m"> &#x438;&#x441;&#x43F;&#x43E;&#x43B;&#x43D;&#x438;&#x442;&#x435;&#x43B;&#x44C;&#x43D;&#x44B;&#x439; &#x434;&#x438;&#x440;&#x435;&#x43A;&#x442;&#x43E;&#x440;</function>
+  <function id="intern/f"> &#x441;&#x442;&#x430;&#x436;&#x435;&#x440;</function>
+  <function id="intern/m"> &#x441;&#x442;&#x430;&#x436;&#x435;&#x440;</function>
+  <function id="office/f"> &#x43E;&#x444;&#x438;&#x441;&#x43D;&#x430;&#x44F; &#x440;&#x430;&#x431;&#x43E;&#x442;&#x43D;&#x438;&#x446;&#x430;</function>
+  <function id="office/m"> &#x43E;&#x444;&#x438;&#x441;&#x43D;&#x44B;&#x439; &#x440;&#x430;&#x431;&#x43E;&#x442;&#x43D;&#x438;&#x43A;</function>
+  <function id="sysadmin/f"> &#x441;&#x438;&#x441;&#x442;&#x435;&#x43C;&#x43D;&#x44B;&#x439; &#x430;&#x434;&#x43C;&#x438;&#x43D;&#x438;&#x441;&#x442;&#x440;&#x430;&#x442;&#x43E;&#x440;</function>
+  <function id="sysadmin/m"> &#x441;&#x438;&#x441;&#x442;&#x435;&#x43C;&#x43D;&#x44B;&#x439; &#x430;&#x434;&#x43C;&#x438;&#x43D;&#x438;&#x441;&#x442;&#x440;&#x430;&#x442;&#x43E;&#x440;</function>
+  <function id="coordinator/f"> &#x43A;&#x43E;&#x43E;&#x440;&#x434;&#x438;&#x43D;&#x430;&#x442;&#x43E;&#x440;</function>
+  <function id="coordinator/m"> &#x43A;&#x43E;&#x43E;&#x440;&#x434;&#x438;&#x43D;&#x430;&#x442;&#x43E;&#x440;</function>
   <function id="coordinator-policy/f">
-    помощница координатора (группа политики)</function>
-  <function id="campaign-manager/m">специалист по кампаниям</function>
-  <function id="campaign-manager/f">специалист по кампаниям</function>
-  <function id="deputy/f"> помощница координатора</function>
-  <function id="deputy/m"> помощник координатора</function>
-  <function id="seniorcounsel/f"> старшая советница</function>
-  <function id="seniorcounsel/m"> старший советник</function>
-  <function id="member-assembly/f"> член Генеральной ассамблеи</function>
-  <function id="member-assembly/m"> член Генеральной ассамблеи</function>
-  <function id="merchandise/f"> торговая работница</function>
-  <function id="merchandise/m"> торговый работник</function>
+    &#x43F;&#x43E;&#x43C;&#x43E;&#x449;&#x43D;&#x438;&#x446;&#x430; &#x43A;&#x43E;&#x43E;&#x440;&#x434;&#x438;&#x43D;&#x430;&#x442;&#x43E;&#x440;&#x430; (&#x433;&#x440;&#x443;&#x43F;&#x43F;&#x430; &#x43F;&#x43E;&#x43B;&#x438;&#x442;&#x438;&#x43A;&#x438;)</function>
+  <function id="campaign-manager/m">&#x441;&#x43F;&#x435;&#x446;&#x438;&#x430;&#x43B;&#x438;&#x441;&#x442; &#x43F;&#x43E; &#x43A;&#x430;&#x43C;&#x43F;&#x430;&#x43D;&#x438;&#x44F;&#x43C;</function>
+  <function id="campaign-manager/f">&#x441;&#x43F;&#x435;&#x446;&#x438;&#x430;&#x43B;&#x438;&#x441;&#x442; &#x43F;&#x43E; &#x43A;&#x430;&#x43C;&#x43F;&#x430;&#x43D;&#x438;&#x44F;&#x43C;</function>
+  <function id="deputy/f"> &#x43F;&#x43E;&#x43C;&#x43E;&#x449;&#x43D;&#x438;&#x446;&#x430; &#x43A;&#x43E;&#x43E;&#x440;&#x434;&#x438;&#x43D;&#x430;&#x442;&#x43E;&#x440;&#x430;</function>
+  <function id="deputy/m"> &#x43F;&#x43E;&#x43C;&#x43E;&#x449;&#x43D;&#x438;&#x43A; &#x43A;&#x43E;&#x43E;&#x440;&#x434;&#x438;&#x43D;&#x430;&#x442;&#x43E;&#x440;&#x430;</function>
+  <function id="seniorcounsel/f"> &#x441;&#x442;&#x430;&#x440;&#x448;&#x430;&#x44F; &#x441;&#x43E;&#x432;&#x435;&#x442;&#x43D;&#x438;&#x446;&#x430;</function>
+  <function id="seniorcounsel/m"> &#x441;&#x442;&#x430;&#x440;&#x448;&#x438;&#x439; &#x441;&#x43E;&#x432;&#x435;&#x442;&#x43D;&#x438;&#x43A;</function>
+  <function id="member-assembly/f"> &#x447;&#x43B;&#x435;&#x43D; &#x413;&#x435;&#x43D;&#x435;&#x440;&#x430;&#x43B;&#x44C;&#x43D;&#x43E;&#x439; &#x430;&#x441;&#x441;&#x430;&#x43C;&#x431;&#x43B;&#x435;&#x438;</function>
+  <function id="member-assembly/m"> &#x447;&#x43B;&#x435;&#x43D; &#x413;&#x435;&#x43D;&#x435;&#x440;&#x430;&#x43B;&#x44C;&#x43D;&#x43E;&#x439; &#x430;&#x441;&#x441;&#x430;&#x43C;&#x431;&#x43B;&#x435;&#x438;</function>
+  <function id="merchandise/f"> &#x442;&#x43E;&#x440;&#x433;&#x43E;&#x432;&#x430;&#x44F; &#x440;&#x430;&#x431;&#x43E;&#x442;&#x43D;&#x438;&#x446;&#x430;</function>
+  <function id="merchandise/m"> &#x442;&#x43E;&#x440;&#x433;&#x43E;&#x432;&#x44B;&#x439; &#x440;&#x430;&#x431;&#x43E;&#x442;&#x43D;&#x438;&#x43A;</function>
 </functionset>

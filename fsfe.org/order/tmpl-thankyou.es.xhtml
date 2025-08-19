@@ -1,39 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <html>
   <version>1</version>
-
   <head>
     <title>¡Gracias por su pedido!</title>
   </head>
-
   <body>
     <p id="category" class="p-category">
       <a href="/order/order.html">Material promocional</a>
     </p>
-
     <h1>¡Gracias por su pedido!</h1>
-
     <p class="p-summary">
       El importe total de su pedido es de <strong>€:AMOUNT:</strong>.
     </p>
-
     <p>
       Ahora puede pagar en línea a través de varias tarjetas de crédito y débito o a través de
       PayPal.
     </p>
-
     <form action="https://secure.payengine.de/ncol/prod/orderstandard_utf8.asp" method="post" class="thankyou">
 :FORM:
       <!-- translators: please also translate the term "Pay online", it will
            show on the button. -->
       <input type="submit" name="submit" value="Pagar online"/>
     </form>
-
     <p>
       En caso que prefiera pagar por transferencia bancaria, por favor utilice los siguientes datos:
     </p>
-
     <p>
       Destinatario: Free Software Foundation Europe e.V.<br/>
       Dirección: Revaler Straße 19, 10245 Berlin, Alemania<br/>
@@ -44,7 +35,6 @@
       Referencia: :REFERENCE:
     </p>
   </body>
-
   <followup>únete</followup>
 </html>
 <!--

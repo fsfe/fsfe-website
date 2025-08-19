@@ -1,7 +1,6 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <infoset>
   <version>1</version>
-
   <info id="dfd-wcryd">
     <!-- Leave a tag like <printready> blank or erase it if you don't 
     want to appear it -->
@@ -13,7 +12,9 @@
     </description>
     <type>Aufkleber</type>
     <size>7,4 x 7,4 cm</size>
-    <context><a href="http://www.documentfreedom.org/">Document Freedom Day</a></context>
+    <context>
+      <a href="http://www.documentfreedom.org/">Document Freedom Day</a>
+    </context>
     <languages>
       <a href="https://download.fsfe.org/advocacy/promomaterial/DFD/we-cannot-read-your-documents.png">Englisch</a>
     </languages>
@@ -22,8 +23,9 @@
     </printed>
     <license>CC-BY-SA 3.0</license>
     <author>Free Software Foundation Europe</author>
-    <source><a href="https://download.fsfe.org/advocacy/promomaterial/DFD/we-cannot-read-your-documents.svg">Englisch</a></source> 
-    <printready></printready>
+    <source>
+      <a href="https://download.fsfe.org/advocacy/promomaterial/DFD/we-cannot-read-your-documents.svg">Englisch</a>
+    </source>
+    <printready/>
   </info>
-
 </infoset>

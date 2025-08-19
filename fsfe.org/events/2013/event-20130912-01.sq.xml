@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
- 
 <eventset>
   <version>1</version>
-
   <event start="2013-09-12" end="2013-09-12">
     <title>Debat me organizatat e rinisë së përtive politike në Berlin, Gjermani</title>
     <body>
@@ -11,12 +9,10 @@
       </p>
     </body>
     <page>https://fsfe.org/events/2013/panel-btw2013.en.html</page>
-  <tags>
-    <tag key="de"/>
-
-
-    <tag key="localgroup"/>
-    <tag key="front-page"/>
-  </tags>
+    <tags>
+      <tag key="de"/>
+      <tag key="localgroup"/>
+      <tag key="front-page"/>
+    </tags>
   </event>
 </eventset>

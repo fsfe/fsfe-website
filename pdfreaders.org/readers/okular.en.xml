@@ -1,18 +1,24 @@
+<?xml version="1.0"?>
 <readers>
   <version>1</version>
-
-   <reader priority="30">
-  <name>Okular</name>
-  <logo>okular.png</logo>
-  <homepage>http://okular.kde.org/</homepage>
-  <license>GPL</license>
-  <platform><name>GNU/Linux</name><installer>http://okular.kde.org/download.php</installer></platform>
-  <platform><name>Windows</name><installer>http://okular.kde.org/download.php</installer></platform>
-  <language>en</language>
-  <language>fr</language>
-  <language>de</language>
-
-  <description>
+  <reader priority="30">
+    <name>Okular</name>
+    <logo>okular.png</logo>
+    <homepage>http://okular.kde.org/</homepage>
+    <license>GPL</license>
+    <platform>
+      <name>GNU/Linux</name>
+      <installer>http://okular.kde.org/download.php</installer>
+    </platform>
+    <platform>
+      <name>Windows</name>
+      <installer>http://okular.kde.org/download.php</installer>
+    </platform>
+    <language>en</language>
+    <language>fr</language>
+    <language>de</language>
+    <description>
     The document viewer of the KDE project also displays postscript, doc, odt and other formats. It is well integrated with the KDE web browser Konqueror.
   </description>
-</reader> </readers>
+  </reader>
+</readers>

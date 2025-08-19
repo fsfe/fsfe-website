@@ -1,24 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <eventset>
   <version>1</version>
-
-   
-	<event start="2016-05-15" end="2016-05-15"> 
- 
-		<title>Außerordentliches Fellowship-Treffen in Düsseldorf in Düsseldorf, Deutschland</title> 
- 
-		<body> 
-			<p>Martin Gollowitzer, Sys-Admin und Mitglied der FSFE wird ab 19:00 Uhr im Düsseldorfer Büro der FSFE, Bilker Allee 173, mit lokalen Fellows zu einem außerordentlichen Fellowshiptreffen zusammenkommen.</p> 
-		</body> 
- 
-
-		<tags>
-			<tag key="localgroup">Düsseldorf</tag>
-			<tag key="de">Deutschland</tag>
-			<tag key="front-page"/>
-		</tags>
-
- 
-	</event> 
-</eventset> 
+  <event start="2016-05-15" end="2016-05-15">
+    <title>Außerordentliches Fellowship-Treffen in Düsseldorf in Düsseldorf, Deutschland</title>
+    <body>
+      <p>Martin Gollowitzer, Sys-Admin und Mitglied der FSFE wird ab 19:00 Uhr im Düsseldorfer Büro der FSFE, Bilker Allee 173, mit lokalen Fellows zu einem außerordentlichen Fellowshiptreffen zusammenkommen.</p>
+    </body>
+    <tags>
+      <tag key="localgroup">Düsseldorf</tag>
+      <tag key="de">Deutschland</tag>
+      <tag key="front-page"/>
+    </tags>
+  </event>
+</eventset>

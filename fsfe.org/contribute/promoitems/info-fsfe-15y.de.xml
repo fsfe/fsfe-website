@@ -1,7 +1,6 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <infoset>
   <version>1</version>
-
   <info id="15y-fsfe-sticker">
     <name>15 Jahre FSFE - Aufkleber</name>
     <description>
@@ -9,18 +8,21 @@
     </description>
     <type>Aufkleber</type>
     <size> ⌀ 50 mm</size>
-    <source></source> 
-    <context><a href="/activities/15years">15 Jahre FSFE</a></context>
-    <languages>
-		<a href="https://download.fsfe.org/advocacy/promomaterial/FSFE/15years/FSFE_15_Sticker_50mm_x_50_mm.pdf">PDF</a>, <a href="https://download.fsfe.org/advocacy/promomaterial/FSFE/15years/sources/FSFE_15_Sticker_95mm_x_95mm_v2.sla">SLA</a>, <a href="https://download.fsfe.org/advocacy/promomaterial/FSFE/15years/sources/FSFE_15_Sticker_RGB.svg">SVG</a>
+    <source/>
+    <context>
+      <a href="/activities/15years">15 Jahre FSFE</a>
+    </context>
+    <languages><a href="https://download.fsfe.org/advocacy/promomaterial/FSFE/15years/FSFE_15_Sticker_50mm_x_50_mm.pdf">PDF</a>, <a href="https://download.fsfe.org/advocacy/promomaterial/FSFE/15years/sources/FSFE_15_Sticker_95mm_x_95mm_v2.sla">SLA</a>, <a href="https://download.fsfe.org/advocacy/promomaterial/FSFE/15years/sources/FSFE_15_Sticker_RGB.svg">SVG</a>
     </languages>
     <printed>
       Keine einzelnen Sprachversionen.
     </printed>
-    <license><a href="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA 4.0</a></license>
+    <license>
+      <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA 4.0</a>
+    </license>
     <author>Markus Meier</author>
     <source>
-	  <a href="https://download.fsfe.org/advocacy/promomaterial/FSFE/15years/sources" title="15 years FSFE sticker sources">FSFE_15_Sticker_* in download.fsfe.org</a>
-	</source> 
+      <a href="https://download.fsfe.org/advocacy/promomaterial/FSFE/15years/sources" title="15 years FSFE sticker sources">FSFE_15_Sticker_* in download.fsfe.org</a>
+    </source>
   </info>
 </infoset>

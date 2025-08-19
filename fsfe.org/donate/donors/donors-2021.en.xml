@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <!--
   Please keep each list alphabetically ordered.  Emacs users want to set
   sort-fold-case to true and run sort-lines on a region.  Vi+ users can
@@ -12,10 +11,8 @@
   donor, so if you add a donor to a file of the new year, don't forget to
   remove the date="..." in the old year's file.
 -->
-
 <donorset>
   <version>1</version>
-
   <gold>
     <donor img="donors/google.png" mark="yes">Google</donor>
     <donor img="donors/huawei.png">Huawei</donor>
@@ -27,7 +24,6 @@
     <donor img="donors/siemens.png">Siemens</donor>
     <donor img="donors/sysmocom.png">sysmocom - systems for mobile communications</donor>
   </gold>
-
   <silver>
     <donor date="2021-10-06">In memory of Andrew Hayes</donor>
     <donor date="2021-01-25" img="donors/silver-b1.png">B1 Systems</donor>
@@ -41,7 +37,6 @@
     <donor date="2021-12-22" img="donors/silver-primekey.png">PrimeKey by Keyfactor</donor>
     <donor>Thomas Etter</donor>
   </silver>
-
   <bronze>
     <donor date="2021-08-31">Aarhus University BTECH</donor>
     <donor>Arvena Capital (02-)</donor>
@@ -79,7 +74,8 @@
     <donor>Moritz Bunkus</donor>
     <donor>Morten Lind</donor>
     <donor>Neuhaus-IT</donor>
-    <donor>Next Level Shit</donor><!-- Michael Czechowski -->
+    <donor>Next Level Shit</donor>
+    <!-- Michael Czechowski -->
     <donor>Raigo Aljand</donor>
     <donor>scvalex</donor>
     <donor date="2021-02-02">shiphrah GmbH<!-- "GmbH" suffix explicitly requested --></donor>

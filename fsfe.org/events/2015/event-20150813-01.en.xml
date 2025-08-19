@@ -1,27 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <eventset>
   <version>1</version>
-
-   
-	<event start="2015-08-13" end="2015-08-17"> 
- 
-		<title>Chaos Communication Camp, Germany</title> 
- 
-		<body> 
-			<p>On August 13 - 17 there will be the Chaos Communication Camp, close to Zehdenick, Germany, organised by the Chaos Computer Club. The camp presents itself as "an international, five-day open-air event for hackers and associated life-forms". FSFE will be present with an own village throughout the days to welcome every interested person, friend and sustaining members. The village will offer promotion material, merchandise and contact with people from the FSFE. You can use the village as a meeting point, to hangout or to have a chat about current activities as well as your own ideas. You will find power supply and ethernet connectivity as well. You can also use our village for a self-organised session, please contact <email>eal@fsfe.org</email> to plan any activity.</p> 
-		</body> 
- 
-		<link>https://events.ccc.de/camp/2015/wiki/Main_Page</link> 
- 
-
-		<tags>
-			<tag key="ccc">Chaos Communication Camp</tag>
-			<tag key="de">Germany</tag>
-			<tag key="infobooth">FSFE village</tag>
-			<tag key="front-page"/>
-		</tags>
-
- 
-	</event> 
-</eventset> 
+  <event start="2015-08-13" end="2015-08-17">
+    <title>Chaos Communication Camp, Germany</title>
+    <body>
+      <p>On August 13 - 17 there will be the Chaos Communication Camp, close to Zehdenick, Germany, organised by the Chaos Computer Club. The camp presents itself as "an international, five-day open-air event for hackers and associated life-forms". FSFE will be present with an own village throughout the days to welcome every interested person, friend and sustaining members. The village will offer promotion material, merchandise and contact with people from the FSFE. You can use the village as a meeting point, to hangout or to have a chat about current activities as well as your own ideas. You will find power supply and ethernet connectivity as well. You can also use our village for a self-organised session, please contact <email>eal@fsfe.org</email> to plan any activity.</p>
+    </body>
+    <link>https://events.ccc.de/camp/2015/wiki/Main_Page</link>
+    <tags>
+      <tag key="ccc">Chaos Communication Camp</tag>
+      <tag key="de">Germany</tag>
+      <tag key="infobooth">FSFE village</tag>
+      <tag key="front-page"/>
+    </tags>
+  </event>
+</eventset>

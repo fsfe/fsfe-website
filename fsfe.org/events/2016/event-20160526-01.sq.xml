@@ -1,15 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <eventset>
   <version>1</version>
-
-   
-	<event start="2016-05-26" end="2016-05-26"> 
- 
-		<title>foss-north 2016 në Goteborg, Suedi</title> 
- 
-		<body>
-  <p> 
+  <event start="2016-05-26" end="2016-05-26">
+    <title>foss-north 2016 në Goteborg, Suedi</title>
+    <body>
+      <p> 
 Konferenca foss-north është një veprimtari kushtuar software-it dhe
 hardware-it, nën një këndvështrim teknik, e zhvilluar në Goteborg dhe 
 për të ofruar një vend takimi për bashkësitë foss nordike. Zëvendëspresidenti
@@ -18,15 +13,10 @@ i FSFE-së, Alessandro Rubini, do të marrë pjesë dhe do të flasë për
 e Linux-it dhe në rrjetin Lepuri i Bardhë në CERN</i>.
 
 		  </p>
-</body> 
- 
-
-		<tags>
-			<tag key="se">Suedi</tag>
-			<tag key="front-page"/>
-		</tags>
-
- 
-	</event> 
-</eventset> 
-
+    </body>
+    <tags>
+      <tag key="se">Suedi</tag>
+      <tag key="front-page"/>
+    </tags>
+  </event>
+</eventset>

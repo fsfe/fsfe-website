@@ -1,48 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <html newsdate="2020-11-12">
-<version>2</version>
-
-<head>
-  <title>How (not) to set up a public warning system</title>
-</head>
-
-<body>
-
-<h1>How (not) to set up a public warning system</h1>
-
-<p>
+  <version>2</version>
+  <head>
+    <title>How (not) to set up a public warning system</title>
+  </head>
+  <body>
+    <h1>How (not) to set up a public warning system</h1>
+    <p>
   What is the best way to alert people about catastrophes? Germany went
   with proprietary apps which caused the recent warning day ("Warntag")
   to become an official failure. We analysed the situation and found
   more robust solutions that respect user rights.
 </p>
-
-<p>
+    <p>
   The basic idea of testing emergency systems is to find potential or
   real problems. However, it is remarkable how much went wrong in
-  Germany's official warning day in September. Especially the <a
-  href="https://www.dw.com/en/germanys-nationwide-emergency-warning-day-sees-bumpy-rollout/a-54877137">unreliability</a>
+  Germany's official warning day in September. Especially the <a href="https://www.dw.com/en/germanys-nationwide-emergency-warning-day-sees-bumpy-rollout/a-54877137">unreliability</a>
   of the officially advertised non-free and non-standard apps forced
   the Federal Ministry of the Interior (BMI), that is in charge of the
   responsible Federal Office of Civil Protection and Disaster
   Assistance (BBK), to label the test day as a failure.
 </p>
-
-<p>
+    <p>
   The FSFE analysed the findings together with experts in civil
   protection and mobile networking to figure out why the apps failed,
   and what a more resilient and open system can look like.
 </p>
-
-<figure>
-  <img
-      src="https://pics.fsfe.org/uploads/medium/8a77a3fbd5eb790cf94b2f115f6f94f3.jpg"
-      alt="A red emergency phone" />
-</figure>
-
-<h2>Digital Warning Systems in Germany</h2>
-
-<p>
+    <figure>
+      <img src="https://pics.fsfe.org/uploads/medium/8a77a3fbd5eb790cf94b2f115f6f94f3.jpg" alt="A red emergency phone"/>
+    </figure>
+    <h2>Digital Warning Systems in Germany</h2>
+    <p>
   There are three popular publicly financed apps that can carry
   official emergency alerts to their users: Katwarn, Nina, and Biwapp.
   All three are proprietary, so non-free
@@ -52,8 +40,7 @@
   these to the app users using their phones' WiFi or mobile internet
   connection.
 </p>
-
-<p>
+    <p>
   An overload of this central system was the main reason why many
   alerts did not reach the app users in time or at all. This did not
   come as a surprise, though. In a scenario where millions of devices
@@ -61,8 +48,7 @@
   one-to-one (<em>unicast</em>) connections, network bottlenecks are
   almost inevitable.
 </p>
-
-<p>
+    <p>
   The underlying problem, however, is unnecessary complexity and duplicated
   structures. Instead of investing large amounts of public money into
   centralised systems and three proprietary apps, other states run a
@@ -70,10 +56,8 @@
   emergency messages: SMSCB, more commonly called <em>cell
   broadcasts</em>, to provide one-to-many messages.
 </p>
-
-<h2>Cell Broadcasts</h2>
-
-<p>
+    <h2>Cell Broadcasts</h2>
+    <p>
   Standardised around 1990, cell broadcasts are an established method to
   send messages to all mobile network users, either in a whole country
   or limited to specific areas, in no more than a few seconds. Phones do
@@ -83,21 +67,18 @@
   broadcasts have a reserved channel that works even if phone cells are
   overloaded with users and messages.
 </p>
-
-<p>
+    <p>
   Furthermore, cell broadcasts can be received by every phone, no
   matter whether emergency apps, an up-to-date operating system, or
   proprietary Google/Apple services are installed. Because the
   communication is one-to-many, there are no privacy concerns either.
-  These clear benefits made the European Union decide to base the <a
-  href="https://en.wikipedia.org/wiki/EU-Alert">EU-Alert</a> system on
+  These clear benefits made the European Union decide to base the <a href="https://en.wikipedia.org/wiki/EU-Alert">EU-Alert</a> system on
   cell broadcasts. As a directive, this has to be implemented by all EU
   member states before June 2022, unless a state can provide a service
   with a similarily reliable performance – which is a very high
   threshold.
 </p>
-
-<p>
+    <p>
   Regardless of these advantages, Germany chose to not base its
   emergency alert system on the SMSBC standard, unlike other countries
   such as the Netherlands, Greece, Romania, Italy, or the USA. Because
@@ -106,46 +87,36 @@
   higher costs are incurred by the taxpayers to finance an isolated
   system and accompanying proprietary apps.
 </p>
-
-<figure>
-  <img
-      src="https://pics.fsfe.org/uploads/big/f790c7602451468f95091e50dc7988d1.jpg"
-      alt="EU-Alert/NL-Alert Cell Broadcast message" />
-  <figcaption>EU-Alert/NL-Alert Cell Broadcast message in 2018.
+    <figure>
+      <img src="https://pics.fsfe.org/uploads/big/f790c7602451468f95091e50dc7988d1.jpg" alt="EU-Alert/NL-Alert Cell Broadcast message"/>
+      <figcaption>EU-Alert/NL-Alert Cell Broadcast message in 2018.
   CC-BY-SA-4.0 by WarningMessageDelivery</figcaption>
-</figure>
-
-<h2>Warning Apps</h2>
-
-<p>
+    </figure>
+    <h2>Warning Apps</h2>
+    <p>
   Despite the clear advantages of cell broadcasts, warning apps have
   their justification. Users can request various information about
   other regions and past events. However, basing a
   large part of the emergency communication system on warning apps has proven to be
   too prone to single points of failure.
 </p>
-
-<p>
+    <p>
   Furthermore, because of the critical role of emergency communication systems for the public, they have
-  to be <a href="/freesoftware/">Free Software</a>, and built upon <a
-  href="/freesoftware/standards/">Open Standards</a>. Only with the
+  to be <a href="/freesoftware/">Free Software</a>, and built upon <a href="/freesoftware/standards/">Open Standards</a>. Only with the
   freedoms to use, study, share, and improve software, can they be
   analysed by citizens and independent security researchers. This in
   turn increases trust and willingness to install a complementary
   warning app, as the practical experience with the Corona tracing apps
   shows.
 </p>
-
-<h2>Conclusion</h2>
-
-<p>
+    <h2>Conclusion</h2>
+    <p>
   Our analysis concludes with three key findings that not only the
   responsible administrations but also other actors should keep in
   mind.
 </p>
-
-<ul>
-  <li>
+    <ul>
+      <li>
     The foundation of emergency communication from authorities
     should be a standardised, resilient system that
     is capable of sending millions of messages to as many devices as
@@ -155,38 +126,29 @@
     Therefore, we appreciate that the EU chose to base EU-Alert on cell
     broadcasts.
   </li>
-
-  <li>
+      <li>
     Warning apps can be a useful complement. Especially for publicly
     funded apps, it is crucial to develop and release the software under a
-    Free Software license, following the principle of <a
-    href="https://publiccode.eu">Public Money? Public Code!</a>.
+    Free Software license, following the principle of <a href="https://publiccode.eu">Public Money? Public Code!</a>.
   </li>
-
-  <li>
+      <li>
     Testing warning systems is important, and the planned regular warning days
     should be maintained in the future. It is normal that errors occur
     during these tests, but they must not be glossed over. Instead
     errors must be addressed thoroughly.
   </li>
-</ul>
-
-<p>
+    </ul>
+    <p>
   In this sense, the responsible administrations, BBK and BMI, have a lot of work
   ahead. But it is doable, both from the practical and financial
   perspectives.
 </p>
-
-</body>
-
-<tags>
-  <tag key="front-page"/>
-  <tag key="de">Germany</tag>
-  <tag key="fya">Android</tag>
-  <tag key="pmpc">Public Code</tag>
-</tags>
-
-
-<image url="https://pics.fsfe.org/uploads/medium/7a0203c58e6e11e841072693a1a91eeb.jpg"/> 
-
+  </body>
+  <tags>
+    <tag key="front-page"/>
+    <tag key="de">Germany</tag>
+    <tag key="fya">Android</tag>
+    <tag key="pmpc">Public Code</tag>
+  </tags>
+  <image url="https://pics.fsfe.org/uploads/medium/7a0203c58e6e11e841072693a1a91eeb.jpg"/>
 </html>

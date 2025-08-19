@@ -1,26 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <eventset>
   <version>1</version>
-
   <event start="2016-01-30" end="2016-01-31">
-	<title>FOSDEM 2016, Βρυξέλλες, Βέλγιο</title>
-	<body>
-  <p>
+    <title>FOSDEM 2016, Βρυξέλλες, Βέλγιο</title>
+    <body>
+      <p>
 	Φέτος η FOSDEM θα διεξαχθεί στις 30 και 31 Ιανουαρίου 2016
         στις Βρυξέλλες. Το FSFE θα συμμετάσχει τουλάχιστον με ένα
         περίπτερο και θα παρευρίσκονται πολλά μέλη, συντονιστές και
-        προσωπικό.<br />
+        προσωπικό.<br/>
 	Όπως κάθε χρόνο, ευελπιστούμε σε πολλές συναντήσεις και συζητήσεις
         και επίσης όλοι να περάσουν καλά.
     </p>
-  </body>
-  <page>https://fosdem.org/2016/</page>
-  <tags>
-	<tag key="fr"/>
-	<tag key="be">Belgium</tag>
-	<tag key="localgroup">Fellowship</tag>
-	<tag key="infobooth"/>
-	<tag key="front-page"/>
-  </tags>
-</event>
+    </body>
+    <page>https://fosdem.org/2016/</page>
+    <tags>
+      <tag key="fr"/>
+      <tag key="be">Belgium</tag>
+      <tag key="localgroup">Fellowship</tag>
+      <tag key="infobooth"/>
+      <tag key="front-page"/>
+    </tags>
+  </event>
 </eventset>

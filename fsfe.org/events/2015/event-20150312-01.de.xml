@@ -1,25 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <eventset>
   <version>1</version>
-
-   
-	<event start="2015-03-12" end="2015-03-12"> 
- 
-		<title>Monatliches Treffen der FSFE Schweiz in Zürich, Switzerland</title> 
- 
-		<body> 
-			<p>Die FSFE Schweiz trifft sich zum monatlichen Treffen in der ETH Zürich, Stampfenbachstrasse 69. Themen werden diesmal unter anderem sein: OpenJustitia, Free Software Fotobuch und Hosting Infrastruktur. Altbekannte und neue Gäste sind herzlich willkommen</p> 
-		</body> 
- 
-
-		<tags>
-			<tag key="localgroup">Zürich</tag>
-			<tag key="ch">Schweiz</tag>
-			<tag key="localgroup">Fellowship</tag>
-			<tag key="front-page"/>
-		</tags>
-
- 
-	</event> 
-</eventset> 
+  <event start="2015-03-12" end="2015-03-12">
+    <title>Monatliches Treffen der FSFE Schweiz in Zürich, Switzerland</title>
+    <body>
+      <p>Die FSFE Schweiz trifft sich zum monatlichen Treffen in der ETH Zürich, Stampfenbachstrasse 69. Themen werden diesmal unter anderem sein: OpenJustitia, Free Software Fotobuch und Hosting Infrastruktur. Altbekannte und neue Gäste sind herzlich willkommen</p>
+    </body>
+    <tags>
+      <tag key="localgroup">Zürich</tag>
+      <tag key="ch">Schweiz</tag>
+      <tag key="localgroup">Fellowship</tag>
+      <tag key="front-page"/>
+    </tags>
+  </event>
+</eventset>

@@ -1,15 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <eventset>
   <version>1</version>
-
-   
-	<event start="2017-04-03" end="2017-04-04"> 
- 
-		<title>FSFE Booth @LiMA17 in Berlin, Germany</title> 
- 
-		<body> 
-			<p>On Monday and Tuesday, 3-4 April, the FSFE will be present 
+  <event start="2017-04-03" end="2017-04-04">
+    <title>FSFE Booth @LiMA17 in Berlin, Germany</title>
+    <body><p>On Monday and Tuesday, 3-4 April, the FSFE will be present 
 			with a small info and merchandise booth at the spring edition 
 			of the Linke Medienakademie. The theme of this edition is 
 			#Polarisierung. We will be there from 10:00 till 17:00, 
@@ -19,16 +13,11 @@
 			<p>Location: Linke Medienakademie e.V.
 			Franz-Mehring-Platz 1, 10243 Berlin - Foyer (1st floor),
 			near S-Bhf.Ostbahnhof</p> 
-		</body> 
- 
-		<link>http://www.linkemedienakademie.de/programm-der-lima17/</link> 
- 
-
-		<tags>
-			<tag key="de"/>
-			<tag key="front-page"/>
-		</tags>
-
- 
-	</event> 
-</eventset> 
+		</body>
+    <link>http://www.linkemedienakademie.de/programm-der-lima17/</link>
+    <tags>
+      <tag key="de"/>
+      <tag key="front-page"/>
+    </tags>
+  </event>
+</eventset>

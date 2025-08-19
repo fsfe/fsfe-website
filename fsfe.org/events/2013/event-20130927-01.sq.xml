@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
- 
 <eventset>
   <version>1</version>
-
   <event start="2013-09-27" end="2013-09-29">
     <title>Takim i Bashkërenduesve Europianë në Berlin, Gjermani</title>
     <body>
@@ -11,12 +9,10 @@
       </p>
     </body>
     <page>https://fsfe.org/fellowship/</page>
-  <tags>
-    <tag key="de"/>
-
-
-    <tag key="localgroup"/>
-    <tag key="front-page"/>
-  </tags>
+    <tags>
+      <tag key="de"/>
+      <tag key="localgroup"/>
+      <tag key="front-page"/>
+    </tags>
   </event>
 </eventset>

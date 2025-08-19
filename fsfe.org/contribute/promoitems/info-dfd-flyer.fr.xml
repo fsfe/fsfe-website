@@ -1,7 +1,6 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <infoset>
   <version>1</version>
-
   <info id="dfd-flyer">
     <!-- Leave a tag like <printready> blank or erase it if you don't 
     want to appear it -->
@@ -13,17 +12,20 @@
     </description>
     <type>Prospectus</type>
     <size>A7 (7,4 x 10,5 cm)</size>
-    <context><a href="http://www.documentfreedom.org/">Journée de Libération des Documents </a></context>
+    <context>
+      <a href="http://www.documentfreedom.org/">Journée de Libération des Documents </a>
+    </context>
     <languages>
       <a href="https://download.fsfe.org/advocacy/promomaterial/DFD/dfd-flyer-a7.pdf">Multilingue</a>
     </languages>
     <printed>
-      Six langues sur le même tract&#160;: Anglais, Français, Allemand, Portugais, Espagnol, Turc
+      Six langues sur le même tract : Anglais, Français, Allemand, Portugais, Espagnol, Turc
     </printed>
     <license>CC-BY-SA 4.0</license>
     <author>Free Software Foundation Europe</author>
-    <source><a href="https://download.fsfe.org/advocacy/promomaterial/DFD/dfd-flyer-a7-SOURCES.tar.gz">Multilingue</a></source> 
-    <printready></printready>
+    <source>
+      <a href="https://download.fsfe.org/advocacy/promomaterial/DFD/dfd-flyer-a7-SOURCES.tar.gz">Multilingue</a>
+    </source>
+    <printready/>
   </info>
-
 </infoset>

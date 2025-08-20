@@ -40,7 +40,7 @@ def parse_arguments() -> argparse.Namespace:
         "--languages",
         help="Languages to build website in.",
         default=[],
-        type=lambda langs: langs.split(","),
+        type=lambda langs: sorted(langs.split(",")),
     )
     parser.add_argument(
         "--log-level",
@@ -116,10 +116,17 @@ def main():
         # otherwise. This symlinks make sure that phase 2 can easily use the right file
         # for each language
         global_symlinks(
-            args.languages
-            if args.languages
-            else list(
-                map(lambda path: path.name, Path(".").glob("global/languages/??"))
+            (
+                args.languages
+                if args.languages
+                else sorted(
+                    list(
+                        map(
+                            lambda path: path.name,
+                            Path(".").glob("global/languages/??"),
+                        )
+                    ),
+                )
             ),
             pool,
         )
@@ -146,11 +153,13 @@ def main():
             languages = (
                 args.languages
                 if args.languages
-                else list(
-                    set(
-                        map(
-                            lambda path: lang_from_filename(path),
-                            site.glob("**/*.*.xhtml"),
+                else sorted(
+                    list(
+                        set(
+                            map(
+                                lambda path: lang_from_filename(path),
+                                site.glob("**/*.*.xhtml"),
+                            )
                         )
                     )
                 )

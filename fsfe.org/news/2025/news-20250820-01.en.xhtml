@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html newsdate="2025-08-20">
+	<version>1</version>
+	
+<head>
+	<title>Legal Corner: Bringing SumUp to compliance: a case study of license enforcement</title>
+</head>
+	
+<body>
+ 
+	<h1>Legal Corner: Bringing SumUp to compliance: a case study of license enforcement</h1>
+
+<p>What happens when those who benefit from the four freedoms fail to 
+comply with the terms of a Free Software license? Today we take a look 
+at the experience of license enforcement by one of our FSFE volunteers 
+against the fintech company SumUp, and examine the lessons that 
+supporters of Free Software can take away from it.</p>
+
+<figure>
+<img src="https://pics.fsfe.org/uploads/medium/81/5b/9af7a02b40d9a1ee0550fbb145be.jpg"
+  alt="A hand putting a credit card on a SumUp Solo device"/>
+  <figcaption>Photo by SumUp on Unsplash</figcaption>
+</figure>
+
+
+<h3>Enforcing your rights under a Free Software license</h3>
+
+<p>The <a href="/freesoftware/freesoftware.html#freedoms">four freedoms of 
+Free Software</a> are important foundations on which
+user freedom in a digital society is built upon. In practice, the four
+freedoms in a particular piece of software are recognized, legitimized,
+and supported by the legal system through the application of a <a 
+href="/freesoftware/legal/faq.html#license">Free
+Software license</a>. However, like many other rights, the four freedoms
+will merely be pipe dreams if they are not enforced and complied
+with.</p>
+
+<p>Because of the construction of Free Software licenses as permissions
+granted by the copyright holder of the software, the use of Free
+Software creates a kind of legal relationship between the copyright
+holder and the user. Violating the terms of a Free Software license
+therefore results in legal consequences, including revocation of the
+license to the specific violating user or demands for corrective
+actions, the specific performance of the software license, and
+lawsuits.</p>
+
+
+<div class="standout-text-bggreen">“Specific performance” is a legal term referring to the act
+of fulfilling a requirement in a legal agreement in exactly the way that
+it is specified in that agreement. </div>
+
+<p>It is important not to conceptualize software license violations
+simply as individual users not complying with the license of a single
+software project. The widespread use of Free Software licensed
+components in many significant commercial software products means that
+violators can often be large companies and organizations. Because of
+this, enforcement of Free Software rights against larger violating
+entities in practice can feel daunting and intimidating for many
+individual users.</p>
+
+<p>Nevertheless, ensuring that Free Software license terms are complied
+with is ultimately a crucial factor contributing to the adherence of the
+four freedoms. Enforcement is therefore an important stepping stone to
+achieving the transparency, autonomy, and liberty that we value so much
+in software freedom.</p>
+
+<h3>Bringing SumUp to compliance: how it started</h3>
+
+<p><a href="https://www.sumup.com/">SumUp</a> is a financial tech company that produces payment terminals and
+other point-of-sale systems used primarily by business entities for
+financial transactions, as well as the corresponding software that is
+loaded into them. One of SumUp’s products is the <a 
+href="https://store.sumup.com/product-selection/card_reader.solo_bundle_cradle_v2">SumUp 
+Solo (the Solo)</a>,
+a contactless payment terminal with many digital and software components
+that facilitate its operation.</p>
+
+<p>In July of 2024, German FSFE team member <a href="/about/people/index.html">Nicole Faerber</a>’s place of
+work acquired a Solo payment card terminal. Nicole noticed that neither
+the documentation for the Solo, nor the software provided, nor the SumUp
+website provided any Free Software disclosures. In other words, Nicole
+noticed that users of the Solo: </p>
+
+<ol>
+<li>did not have access to any identification of Free Software
+components present in the retail version of the Solo device;
+</li>
+<li>did not have access to the corresponding licensing information
+related to these Free Software components;</li>
+<li>
+did not have access to any copyright notices conveying information about 
+copyright ownership of these Free Software components;
+</li>
+<li>were not provided any offers for the source code.</li>
+</ol>
+
+<p>This lack of disclosure was curious, especially as Nicole was aware
+of <a href="https://hackaday.io/atc1441">the work of Aaron 
+Christophel</a>, a German engineer who showcases how he
+disassembles and tinkers with his various devices. In 2023, Christophel
+<a 
+href="https://hackaday.com/2023/03/01/aaron-christophel-brings-doom-to-payment-terminal/">took 
+apart a Solo device</a> and <a 
+href="https://www.youtube.com/watch?v=2vJX80dyMp0">demonstrated how he 
+was able to find
+several security issues with the device</a>. Of interest as well was that
+Christophel’s disassemble showed that the Solo was working off of an
+Open Root Shell and a Linux system, which would imply a certain level of
+necessary Free Software disclosure, as well as corresponding source
+code, to its users. </p>
+
+<p>With this in mind, Nicole privately obtained her own Solo, and
+conducted her own investigation into the device. In addition to the
+Linux kernel, she found that the device also functioned with a lot of
+Free Software, including:</p>
+<ul>
+<li>U-Boot (<a href="https://spdx.org/licenses/GPL-2.0-or-later.html">licensed under GPL-2.0-or-later</a>);</li>
+<li>BusyBox (licensed under GPL-2.0-only); and</li>
+<li>
+glibc (<a 
+href="https://spdx.org/licenses/LGPL-2.1-or-later.html">licensed under 
+LGPL-2.1-or-later</a>), etc etc.
+</li>
+</ul>
+
+<h3>Correspondence with SumUp</h3>
+
+<p>With the knowledge that the Solo was loaded with numerous Free
+Software components, and that the lack of any FOSS disclosures meant
+that the Solo device was not in compliance with its license obligations,
+Nicole contacted SumUp support. She requested their compliance through
+disclosure and provision of the “complete corresponding source code”
+(CCS). The initial response was that such information was protected by
+copyright and constituted trade secrets, and accordingly her request
+would not be fulfilled. </p>
+
+<p>Nevertheless, Nicole persisted with following up emails explaining
+the principles of Free Software and its licensing, and the general
+obligations that SumUp is obliged to comply with by including Free
+Software components in their devices. Without divulging too much
+information about the internal state of their licensing affairs, SumUp
+eventually responded that they were working on licensing compliance and
+would get back to Nicole as soon as they could.</p>
+
+<p>Despite this, almost half a year after her initial contact and
+request, Nicole still had not received any disclosures by December 2024,
+nor the CCS from SumUp. In a follow-up response to indicate that she had
+not forgotten their obligations and her request, Nicole specified to
+SumUp that if their inability to provide the CCS as well as proper FOSS
+disclosure persisted, this could void their rights to continue properly
+and legally retailing their Solo devices. In response, SumUp asked
+Nicole to provide the legal basis for her statements, despite such
+information being readily available online.</p>
+
+<p>Shortly thereafter, SumUp finally provided some initial disclosure
+documentation to Nicole as well as what they claimed to be the CCS for
+the Solo device. Such disclosures were insufficient, as the disclosure
+document was provided directly and only to Nicole, and not on a public
+forum, and the source code provided appeared to be incomplete. Nicole
+therefore requested that SumUp do the disclosures locally on the Solo
+devices themselves, by adding something in the Solo user interface that
+displays a list of software components, as well as all required
+licensing and copyright information. </p>
+
+<p>In June 2025, after almost a year since the initial contact made with
+SumUp, Nicole finally received a USB stick <a 
+href="https://disco.haeckserei.de/archive/SumUp/SumUp%20Solo/">containing 
+the required
+disclosures and the CCS</a>. Additionally, SumUp also updated their Solo
+device software to now show the relevant FOSS disclosures, and also to
+indicate where users will be able to access the CCS. </p>
+<p>While some additional work is required to ensure if this provided
+information is fully accurate and fully compliant, this is nevertheless
+a positive outcome that contributes to SumUp’s users being able to enjoy
+software freedom. </p>
+
+<h3>Summing Up the SumUp experience</h3>
+<p><u>Enforcement requests can in egregious situations take time to yield
+results</u>: In general, Nicole’s experience tells us that, unfortunately,
+enforcement against a violator can often take a fair amount of time
+before there can be any substantial change from a violator that yields
+concrete compliance results. This is particularly because if the
+violator had not paid attention to licensing requirements before, it
+will take a lot of work for a large project to come into compliance.
+Additionally, internal administrative procedures can also play a part in
+slowing down the overall compliance process.</p>
+
+<p><u>Expect to be told that default copyright protections apply</u>: Another
+factor that contributes to these delays is the defensiveness that many
+violators are prone to display when confronted with their
+non-compliance. Copyright protections are generally more well-known to
+the general public, relative to Free Software licensing. Because of
+this, a typical knee-jerk reaction experienced when requesting
+disclosure or CCS would be to invoke copyrights and trade secrets as a
+tactic, as was the case here with SumUp. </p>
+
+<p><u>Bear in mind which department you are speaking with</u>: Defaulting to
+the argument that the CCS cannot be shared because it is “copyrighted”,
+“trade secrets”, or other legal jargon, happens also because, especially
+when dealing with larger organizations, it is quite likely that the
+first contact you will have is usually with a customer service
+representative operating from a generic contact email address. The first
+response to a license compliance request will therefore not usually be
+entirely productive, unless you have a direct contact to those who have
+the requisite expertise in licensing to fully understand the context of
+a license compliance request. </p>
+
+<div class="standout-text-bggreen">Indeed, if you would like to expedite your own enforcement
+process of a particular company violator, it is generally a good idea to
+look for the contacts of people working either in a software development
+or legal capacity within that company. You can try to find this
+information from various sources, including the “About” pages of the
+company website, publicly available employee personal pages, or from
+public repositories such as GitHub where the company in question may
+have contributed to.</div>
+
+<p><u>Non-compliance is not necessarily a malicious act</u>: It is important to
+keep in mind that violations are not necessarily malicious; often times,
+non-compliance with Free Software license terms are based in ignorance
+of best practices. Additionally, even if you get through to those
+specifically dealing with legal issues in a non-compliant organization,
+there is unfortunately also a fair amount of misunderstanding or
+ignorance of Free Software legal and licensing issues within the legal
+profession. As Hanlon’s Razor states: “Never attribute to malice that
+which can adequately be explained by incompetence”.</p>
+
+<p><u>“Accidental/unintentional non-compliance” is nevertheless losing
+credibility</u>: That being said, Hanlon’s Razor is merely a general
+observation, not an immutable natural law. Conversations and information
+around Free Software licensing have grown significantly in the past few
+decades, and many professional software developers and IT lawyers should
+have a passing understanding of Free Software licensing and the
+obligations that come with it. Ignorance as a defence can therefore only
+go so far, and especially with large entities handling large projects,
+can often cease to be credible.</p>
+
+<p>In certain cases, it is also possible that companies have
+strategically neglected their licensing obligations for a number of
+reasons. One possibility is that putting in the work to ensure full
+disclosure and compliance might take up too much time, effort, and/or
+cost, and a particular company may choose to ignore the problem in
+favour of utilizing their workforce in other priorities. </p>
+<p>We should always keep in mind that the reasons given by a violator
+may explain past non-compliance, but it should never be used to justify
+and/or excuse continued and ongoing non-compliance. For individuals
+seeking compliance, it may nonetheless ultimately be more productive and
+worthwhile to focus on practical strategies that ensure that the end
+result is compliance, rather than to assign blame.</p>
+
+<h3>Some tips for when you are enforcing your rights</h3>
+
+<p>Bearing all the observations above in mind, if you suspect that an
+organization is violating the obligations of a Free Software license, by
+withholding disclosure or the CCS, and you’d like to enforce these
+license obligations by requesting Free Software disclosure, here are
+some things to keep in mind.</p>
+
+<p>Be aware of the kinds of Free Software components present in the
+systems that you are seeking the source code for. This allows you to
+also understand which Free Software licenses apply for the device or
+software in question, and therefore the precise license obligations that
+the potential violator is under. Awareness of your legal rights, and
+their legal obligations to provide disclosure, will allow you to be more
+assertive in pushing for compliance.</p>
+
+<p>You should also be prepared for efforts by violators to resist making
+substantive changes to their practices that would result in compliance,
+and sometimes can resort to defensive measures in an attempt to stop
+your enforcement efforts. Persistence is unfortunately necessary in
+order to see the process through to your end goal of proper
+disclosure.</p>
+
+<p>Additionally, the FSF and the SFC have also developed <a 
+href="https://www.fsf.org/licensing/enforcement-principles">the 
+Principles
+of Community-Oriented GPL-Enforcement (the Principles)</a>, which lays out
+their recommendations on how community users can go about enforcing
+licensing obligations in a manner that enables users to understand the
+violator’s situation without excusing the violation, but rather to allow
+for collaboration to bring the violator into compliance. </p>
+
+<p>An important takeaway as well from the FSF and SFC’s perspective in
+creating these Principles is that the focus of enforcement processes
+should always be on bringing about compliance with licensing
+obligations. Indeed, they stress that: </p>
+
+<p>“[c]opyleft licenses do not state specific enforcement methodologies
+(other than license termination itself) in part because the real world
+situation of GPL violations varies; rigidity impedes success.</p>
+
+<p>In particular, this list of principles purposely does not seek to
+create strict criteria and/or “escalation and mediation rules” for
+enforcement action. Efforts to do that limit the ability of copyright
+holders to use copyleft licenses for their intended effect: to stand up
+for the rights of users to copy, modify, and redistribute free
+software.”</p>
+
+<h3>Concluding remarks</h3>
+<p>Free Software licensing formalizes our ability as users to enjoy the
+four freedoms of Free Software. Without proper adherence to these
+licensing obligations, and without the ability to enforce these rights,
+the proper and guaranteed enjoyment of our user freedoms will be at
+risk.</p>
+
+<p>Unfortunately, the history of Free Software license enforcement has
+shown that often, large amounts of effort has to be expended in order to
+for users to be able to properly enjoy these freedoms. Nicole’s
+experience in this example is indicative of how much time and effort
+currently needs to be spent in order to effectively enjoy what is
+actually a legal right for users, especially from larger companies that
+work with digital technology.</p>
+
+<p>Nevertheless, this example does indicate that some positive changes
+have taken hold in the past decades since the early days of GPL
+enforcement, where compliance had to be litigated in, and enforced by,
+the courts. In this example case, despite being initially defensive and
+protective over their CCS and Free Software disclosures, SumUp has since
+been relatively proactive in taking steps to ensure Free Software
+license compliance with their devices, which is always good to see. This
+can be indicative that companies are progressively becoming more aware
+of Free Software legal requirements, and growing awareness of their
+obligations to comply.</p>
+
+<p>We therefore encourage all our readers to start asking questions
+about your devices and the software that they contain. When more users
+hold vendors of digital technologies accountable, even if it is just
+through a simple request for the CCS and Free Software disclosures, this
+can be a way to force companies to have to substantively conceptualize
+and understand their obligations in a digital society where openness and
+collaboration has been baked into many of the software components that
+enable their products to function.</p>
+
+<p>Nicole’s efforts show that individuals can have outsized positive
+impacts on software freedom, and many little steps like Nicole’s, when
+taken together, can amount to a large enough movement to further develop
+the Free Software ecosystem in a positive direction.</p>
+
+<p>If you have a legal or licensing question related to Free Software
+that is not covered here or in any of our other resources, you can
+consider asking <a 
+href="/activities/licence-questions/licence-questions.html#lqteam">our 
+License Questions team</a> by sending them an email at
+<email>licence-questions@fsfe.org</email>.</p>
+
+<p></p>
+
+<p></p>
+</body>
+
+		<sidebar promo="our-work">
+	<cite>This publication is part of the FSFE’s
+Legal Column aimed at offering basic legal guidance on various issues
+related to Free Software. Please note that this article does not
+constitute legal advice. If you have a legal or licensing question
+related to Free Software that is not covered here or in any of our other
+resources, you can consider asking our License Questions team by sending
+them an email at <email>licence-questions@fsfe.org</email>.</cite>
+</sidebar>
+
+
+
+<tags>
+<tag key="community">Community</tag>
+<tag key="front-page"/>
+<tag key="legal">Legal</tag>
+<tag key="licensing">Licensing</tag>
+<tag key="legal-corner">Legal Corner</tag>
+<tag key="highlights">highlights</tag>
+</tags>
+<discussion href="https://mastodon.social/deck/@fsfe/"/>  
+
+<image url="https://pics.fsfe.org/uploads/medium/81/5b/9af7a02b40d9a1ee0550fbb145be.jpg"
+  alt="A hand putting a credit card on a SumUp Solo device"/>
+
+</html>
+

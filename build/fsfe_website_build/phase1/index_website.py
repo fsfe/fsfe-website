@@ -14,7 +14,7 @@ import lxml.etree as etree
 import nltk
 from nltk.corpus import stopwords as nltk_stopwords
 
-from build.lib.misc import update_if_changed
+from fsfe_website_build.lib.misc import update_if_changed
 
 logger = logging.getLogger(__name__)
 

@@ -7,8 +7,7 @@ import multiprocessing
 from pathlib import Path
 
 import lxml.etree as etree
-
-from build.lib.misc import (
+from fsfe_website_build.lib.misc import (
     update_if_changed,
 )
 

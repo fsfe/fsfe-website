@@ -6,7 +6,7 @@ import logging
 import multiprocessing
 from pathlib import Path
 
-from build.lib.misc import run_command
+from fsfe_website_build.lib.misc import run_command
 
 logger = logging.getLogger(__name__)
 

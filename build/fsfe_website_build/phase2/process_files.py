@@ -6,8 +6,8 @@ import logging
 import multiprocessing
 from pathlib import Path
 
-from build.lib.misc import get_basepath
-from build.lib.process_file import process_file
+from fsfe_website_build.lib.misc import get_basepath
+from fsfe_website_build.lib.process_file import process_file
 
 logger = logging.getLogger(__name__)
 

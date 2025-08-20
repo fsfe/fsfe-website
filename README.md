@@ -86,11 +86,7 @@ Alterations to build scripts or the files used site-wide will result in near ful
 
 We can either install the required dependencies manually using our preferred package manager. If you are a nix use one can run `nix-shell` to enter a shell with the required build dependencies.
 
-If installing manually, the required binary names are
-
-```
-uv lessc
-```
+If installing manually, you need the python package `uv` and the node package `lessc`.
 
 Also needed are the libraries
 
@@ -103,6 +99,10 @@ As we are using [UV](https://docs.astral.sh/uv/) we can just run the build proce
 The pages can be built and served by running `uv run build`. Try `--help` for more information. The simple web server used lacks the features of `apache` which used on the FSFE web servers. This is why no index is automatically selected for each directory and other behaviours.
 
 ### Docker
+
+> Docker is used on the build server, so you can use this to replicate the exact behavior
+> **Advantage**: Reproducibility, no changes on the host system
+> **Disadvantage**: Docker breaks sometimes, bigger install size, more network usage
 
 The docker build process is in some ways designed for deployment. This means that it expects some environment variables to be set to function. Namely, it will try and load ssh credentials and git credentials, and docker does not support providing default values to these.
 
@@ -132,14 +132,14 @@ The repo contains some highly recommended githooks that one should enable. They 
 One can enable them locally using
 
 ```sh
-rm ./.git/hooks -r # remove git's sample hooks
-ln -s ../tools/githooks/ .git/hooks # link our hooks to the right dir
+rm .git/hooks -r                  # remove git's sample hooks
+ln -s tools/githooks/ .git/hooks  # link our hooks to the right dir
 ```
 
 The hooks have some extra dependencies, namely
 
 ```
-  git xmllint sed file grep bash perl mediainfo curl mktemp
+git xmllint sed file grep bash perl mediainfo curl mktemp
 ```
 
 The provided `nix-shell` includes the needed packages. Otherwise, they can be installed manually.

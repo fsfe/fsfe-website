@@ -21,7 +21,7 @@ WORKDIR /website-source
 # Copy the pyproject and build deps
 # Done in a seperate step for optimal docker caching
 COPY ./pyproject.toml .
-RUN uv sync --no-install-package build
+RUN uv sync --no-install-package fsfe_website_build
 
 # Copy everything else
 COPY . .

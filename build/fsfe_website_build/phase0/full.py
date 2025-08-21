@@ -4,7 +4,7 @@
 
 import logging
 
-from build.lib.misc import run_command
+from fsfe_website_build.lib.misc import run_command
 
 logger = logging.getLogger(__name__)
 

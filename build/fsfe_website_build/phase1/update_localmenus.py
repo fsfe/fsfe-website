@@ -8,7 +8,7 @@ from pathlib import Path
 
 import lxml.etree as etree
 
-from build.lib.misc import get_basepath, update_if_changed
+from fsfe_website_build.lib.misc import get_basepath, update_if_changed
 
 logger = logging.getLogger(__name__)
 

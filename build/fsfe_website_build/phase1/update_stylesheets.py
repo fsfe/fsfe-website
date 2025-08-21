@@ -9,7 +9,7 @@ from pathlib import Path
 
 from lxml import etree
 
-from build.lib.misc import touch_if_newer_dep
+from fsfe_website_build.lib.misc import touch_if_newer_dep
 
 logger = logging.getLogger(__name__)
 

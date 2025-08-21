@@ -9,7 +9,7 @@ from xml.sax.saxutils import escape
 
 import lxml.etree as etree
 
-from build.lib.misc import (
+from fsfe_website_build.lib.misc import (
     get_basepath,
     keys_exists,
     lang_from_filename,

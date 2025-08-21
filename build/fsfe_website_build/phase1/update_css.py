@@ -7,7 +7,7 @@ from pathlib import Path
 
 import minify
 
-from build.lib.misc import run_command, update_if_changed
+from fsfe_website_build.lib.misc import run_command, update_if_changed
 
 logger = logging.getLogger(__name__)
 

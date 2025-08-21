@@ -1,5 +1,5 @@
 [project]
-name = "build"
+name = "fsfe-website-build"
 version = "0.0.0"
 description = "Python tooling to build the fsfe websites"
 readme = "README.md"
@@ -19,7 +19,7 @@ dependencies = [
 ]
 
 [project.scripts]
-build = "build:main"
+build = "fsfe_website_build:main"
 
 [dependency-groups]
 dev = [
@@ -30,8 +30,8 @@ requires = ["uv_build"]
 build-backend = "uv_build"
 
 [tool.uv.build-backend]
-module-name = "build"
-module-root = ""
+module-name = "fsfe_website_build"
+module-root = "build"
 
 [tool.ruff.lint]
 select = [

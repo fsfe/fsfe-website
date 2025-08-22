@@ -27,6 +27,9 @@ pre-commit:
       - "*.yaml"
       - "*.yml"
     run: prettier --write {staged_files}
+  taplo:
+    glob: "*.toml"
+    run: taplo format {staged_files}
   non-en-frontpage-news:
     glob:
       - "*.xml"

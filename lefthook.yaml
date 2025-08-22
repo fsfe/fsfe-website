@@ -7,7 +7,6 @@ output:
   - skips # Print "skip" (i.e. no files matched)
 
 pre-commit:
-  parallel: true
   commands:
     ruff-check:
       glob: "*.py"

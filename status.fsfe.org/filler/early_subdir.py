@@ -14,9 +14,11 @@ from fsfe_website_build.lib.misc import (
 logger = logging.getLogger(__name__)
 
 
-def _create_index(
-    target_file: Path,
-):
+def run(processes: int, working_dir: Path) -> None:
+    """
+    Place filler indices to encourage the site to
+    ensure that status pages for all langs are build.
+    """
     # Create the root element
     page = etree.Element("html")
 
@@ -28,26 +30,19 @@ def _create_index(
     title.text = "filler"
     head = etree.SubElement(page, "body")
 
-    result_str = etree.tostring(page, xml_declaration=True, encoding="utf-8").decode(
+    index_content = etree.tostring(page, xml_declaration=True, encoding="utf-8").decode(
         "utf-8"
     )
-    update_if_changed(target_file, result_str)
-
-
-def run(processes: int, working_dir: Path) -> None:
-    """
-    Place filler indices to encourage the site to
-    ensure that status pages for all langs are build.
-    """
 
     with multiprocessing.Pool(processes) as pool:
-        pool.map(
-            _create_index,
+        pool.starmap(
+            update_if_changed,
             map(
                 lambda path: (
                     working_dir.joinpath(
                         f"index.{path.name}.xhtml",
-                    )
+                    ),
+                    index_content,
                 ),
                 Path().glob("global/languages/*"),
             ),

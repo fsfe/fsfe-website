@@ -93,7 +93,8 @@ def _create_overview(
     data: dict[str : dict[int : list[dict]]],
 ):
     work_file = target_dir.joinpath("langs.en.xml")
-    work_file.parent.mkdir(parents=True, exist_ok=True)
+    if not target_dir.exists():
+        target_dir.mkdir(parents=True)
     # Create the root element
     page = etree.Element("translation-overall-status")
 
@@ -197,41 +198,47 @@ def run(languages: list[str], processes: int, working_dir: Path) -> None:
 
         # Generate our file lists by priority
         # Super hardcoded unfortunately
-        files_by_prio = dict()
-        files_by_prio[1] = list(Path("fsfe.org/").glob("index.en.xhtml")) + list(
+        files_by_priority = dict()
+        files_by_priority[1] = list(Path("fsfe.org/").glob("index.en.xhtml")) + list(
             Path("fsfe.org/freesoftware/").glob("freesoftware.en.xhtml")
         )
-        files_by_prio[2] = list(Path("fsfe.org/activities/").glob("*/activity.en.xml"))
-        files_by_prio[3] = (
+        files_by_priority[2] = list(
+            Path("fsfe.org/activities/").glob("*/activity.en.xml")
+        )
+        files_by_priority[3] = (
             list(Path("fsfe.org/activities/").glob("*.en.xhtml"))
             + list(Path("fsfe.org/activities/").glob("*.en.xml"))
             + list(Path("fsfe.org/freesoftware/").glob("*.en.xhtml"))
             + list(Path("fsfe.org/freesoftware/").glob("*.en.xml"))
         )
-        files_by_prio[4] = (
+        files_by_priority[4] = (
             list(Path("fsfe.org/order/").glob("*.en.xml"))
             + list(Path("fsfe.org/order/").glob("*.en.xhtml"))
             + list(Path("fsfe.org/contribute/").glob("*.en.xml"))
             + list(Path("fsfe.org/contribute/").glob("*.en.xhtml"))
         )
-        files_by_prio[5] = list(Path("fsfe.org/order/").glob("**/*.en.xml")) + list(
+        files_by_priority[5] = list(Path("fsfe.org/order/").glob("**/*.en.xml")) + list(
             Path("fsfe.org/order/").glob("**/*.en.xhtml")
         )
 
-        for priority in sorted(files_by_prio.keys(), reverse=True):
-            files_by_prio[priority] = list(
+        # Make remove files from a priority if they already exist in a higher priority
+        for priority in sorted(files_by_priority.keys(), reverse=True):
+            files_by_priority[priority] = list(
                 filter(
                     lambda path: not any(
-                        [(path in files_by_prio[prio]) for prio in range(1, priority)]
+                        [
+                            (path in files_by_priority[priority])
+                            for priority in range(1, priority)
+                        ]
                     ),
-                    files_by_prio[priority],
+                    files_by_priority[priority],
                 )
             )
 
         files_by_lang_by_prio = {}
         for lang in languages:
             files_by_lang_by_prio[lang] = {}
-            for priority in files_by_prio:
+            for priority in sorted(files_by_priority.keys()):
                 files_by_lang_by_prio[lang][priority] = list(
                     filter(
                         lambda result: result is not None,
@@ -239,7 +246,7 @@ def run(languages: list[str], processes: int, working_dir: Path) -> None:
                             _generate_translation_data,
                             [
                                 (lang, priority, file)
-                                for file in files_by_prio[priority]
+                                for file in files_by_priority[priority]
                             ],
                         ),
                     )

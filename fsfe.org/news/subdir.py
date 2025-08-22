@@ -22,18 +22,19 @@ def _gen_archive_index(working_dir: Path, languages: list[str], directory: Path)
             logger.debug("Template Exists!")
             content = template.read_text()
             content = content.replace(":YYYY:", directory.name)
-            directory.joinpath(f"index.{lang}.xhtml").write_text(content)
+            update_if_changed(directory.joinpath(f"index.{lang}.xhtml"), content)
 
 
 def _gen_index_sources(directory: Path):
-    directory.joinpath("index.sources").write_text(
+    update_if_changed(
+        directory.joinpath("index.sources"),
         dedent(
             f"""\
                 {directory}/news-*:[]
                 {directory}/.news-*:[]
                 {directory.parent}/.localmenu:[]
             """
-        )
+        ),
     )
 
 

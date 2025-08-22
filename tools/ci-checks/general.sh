@@ -33,40 +33,41 @@ total="$(echo "$files_all" | wc -l)"
 count=0
 
 # return codes
-RETURN_SYNTAX=0
-RETURN_HTML=0
-RETURN_TAGS_NEW=0
-RETURN_TAGS_MISMATCH=0
+# Set to zero now and increment when issue encountred
+RETURN_ABS_LINK=0
+RETURN_CSS_ATTR=0
+RETURN_CSS_ELEMENT=0
+RETURN_EMAIL=0
 RETURN_ENC=0
+RETURN_FIX_LANG=0
+RETURN_HTML=0
+RETURN_IMGALT=0
+RETURN_IMGRATIO=0
 RETURN_NAME=0
 RETURN_NEWSDATE=0
-RETURN_VERSION_PRES=0
+RETURN_SYNTAX=0
+RETURN_TAGS_MISMATCH=0
+RETURN_TAGS_NEW=0
 RETURN_VERSION_INT=0
-RETURN_ABS_LINK=0
-RETURN_FIX_LANG=0
-RETURN_CSS_ELEMENT=0
-RETURN_CSS_ATTR=0
-RETURN_IMGRATIO=0
-RETURN_IMGALT=0
-RETURN_EMAIL=0
+RETURN_VERSION_PRES=0
 
 # displayed files
-FILES_SYNTAX=""
-FILES_HTML=""
-FILES_TAGS_NEW=""
-FILES_TAGS_MISMATCH=""
+FILES_ABS_LINK=""
+FILES_CSS_ATTR=""
+FILES_CSS_ELEMENT=""
+FILES_EMAIL=""
 FILES_ENC=""
+FILES_FIX_LANG=""
+FILES_HTML=""
+FILES_IMGALT=""
+FILES_IMGRATIO=""
 FILES_NAME=""
 FILES_NEWSDATE=""
-FILES_VERSION_PRES=""
+FILES_SYNTAX=""
+FILES_TAGS_MISMATCH=""
+FILES_TAGS_NEW=""
 FILES_VERSION_INT=""
-FILES_ABS_LINK=""
-FILES_FIX_LANG=""
-FILES_CSS_ELEMENT=""
-FILES_CSS_ATTR=""
-FILES_IMGRATIO=""
-FILES_IMGALT=""
-FILES_EMAIL=""
+FILES_VERSION_PRES=""
 
 # =============================================================================
 # Functions for common operations
@@ -607,6 +608,24 @@ if [ $RETURN_IMGRATIO -gt 0 ]; then
 EOF
 fi
 
+if [ $RETURN_CSS_ELEMENT -gt 0 ]; then
+	cat <<EOF >&2
+  =================================
+  || [CRIT] INLINE CSS (<style>) ||
+  =================================
+  The following ${RETURN_CSS_ELEMENT} file(s) in your commit contain inline CSS
+  as <style> elements:
+
+  $(filelisting "${FILES_CSS_ELEMENT}")
+
+  Please do not use <style> elements to define CSS rules for a file.
+
+  More information why this is bad style, and what to do instead:
+  https://wiki.fsfe.org/TechDocs/Mainpage/Editing/BestPractices#No_in-line_CSS
+
+EOF
+fi
+
 # --------
 # WARNINGS
 # --------
@@ -630,24 +649,6 @@ if [ $RETURN_TAGS_NEW -gt 0 ]; then
 
   Please make another commit to replace a new tag with an already
   existing one unless you are really sure. Thank you.
-
-EOF
-fi
-
-if [ $RETURN_CSS_ELEMENT -gt 0 ]; then
-	cat <<EOF >&2
-  =================================
-  || [WARN] INLINE CSS (<style>) ||
-  =================================
-  The following ${RETURN_CSS_ELEMENT} file(s) in your commit contain inline CSS
-  as <style> elements:
-
-  $(filelisting "${FILES_CSS_ELEMENT}")
-
-  Please do not use <style> elements to define CSS rules for a file.
-
-  More information why this is bad style, and what to do instead:
-  https://wiki.fsfe.org/TechDocs/Mainpage/Editing/BestPractices#No_in-line_CSS
 
 EOF
 fi
@@ -713,12 +714,25 @@ if [ $RETURN_EMAIL -gt 0 ]; then
 EOF
 fi
 
-EXIT_CRIT=$((RETURN_SYNTAX + RETURN_TAGS_MISMATCH + RETURN_ENC + RETURN_NAME + \
-	RETURN_NEWSDATE + RETURN_VERSION_PRES + RETURN_VERSION_INT + \
-	RETURN_ABS_LINK + RETURN_FIX_LANG + RETURN_IMGRATIO))
+EXIT_CRIT=$((\
+	RETURN_ABS_LINK + \
+	RETURN_CSS_ELEMENT + \
+	RETURN_ENC + \
+	RETURN_FIX_LANG + \
+	RETURN_HTML + \
+	RETURN_IMGRATIO + \
+	RETURN_NAME + \
+	RETURN_NEWSDATE + \
+	RETURN_SYNTAX + \
+	RETURN_TAGS_MISMATCH + \
+	RETURN_VERSION_INT + \
+	RETURN_VERSION_PRES))
 
-EXIT_WARN=$((RETURN_TAGS_NEW + RETURN_CSS_ELEMENT + RETURN_CSS_ATTR + \
-	RETURN_IMGALT + RETURN_EMAIL))
+EXIT_WARN=$((\
+	RETURN_CSS_ATTR + \
+	RETURN_EMAIL + \
+	RETURN_IMGALT + \
+	RETURN_TAGS_NEW))
 
 if [ $EXIT_CRIT -gt 0 ]; then
 	cat <<EOF >&2

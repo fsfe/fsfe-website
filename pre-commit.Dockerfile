@@ -15,9 +15,14 @@ libxml2 \
 libxml2-utils \
 libxslt1.1 \
 mediainfo \
+npm \
 perl-base \
 rsync \
-sed 
+sed \
+shfmt
+
+# Install prettier
+RUN npm install -g prettier
 # Set uv project env, to persist stuff moving dirs 
 ENV UV_PROJECT_ENVIRONMENT=/root/.cache/uv/venv
 # Add vent to path

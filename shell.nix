@@ -33,7 +33,6 @@ in
       file
       shfmt
       prettier
-      taplo
     ]);
   # Installed for every architecture: only install the lib outputs
   multiPkgs =

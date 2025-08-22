@@ -1,10 +1,10 @@
 output:
-  - meta           # Print lefthook version
-  - summary        # Print summary block (successful and failed steps)
-  - empty_summary  # Print summary heading when there are no steps to run
-  - success        # Print successful steps
-  - failure        # Print failed steps printing
-  - skips          # Print "skip" (i.e. no files matched)
+  - meta # Print lefthook version
+  - summary # Print summary block (successful and failed steps)
+  - empty_summary # Print summary heading when there are no steps to run
+  - success # Print successful steps
+  - failure # Print failed steps printing
+  - skips # Print "skip" (i.e. no files matched)
 
 pre-commit:
   parallel: true
@@ -12,18 +12,15 @@ pre-commit:
     ruff-check:
       glob: "*.py"
       run: ruff check --fix {staged_files}
+      stage_fixed: true
     ruff-format:
       glob: "*.py"
       run: ruff format {staged_files}
+      stage_fixed: true
     shfmt:
       glob: "*.sh"
       run: shfmt --write {staged_files}
-    custom-check:
-      glob:
-        - "*.html"
-        - "*.xml"
-        - "*.xhtml"
-      run: tools/ci-checks/general.sh {staged_files}
+      stage_fixed: true
     prettier:
       glob:
         - "*.css"
@@ -36,9 +33,17 @@ pre-commit:
         - "*.yaml"
         - "*.yml"
       run: prettier --write {staged_files}
+      stage_fixed: true
     taplo:
       glob: "*.toml"
       run: taplo format {staged_files}
+      stage_fixed: true
+    custom-check:
+      glob:
+        - "*.html"
+        - "*.xml"
+        - "*.xhtml"
+      run: tools/ci-checks/general.sh {staged_files}
     non-en-frontpage-news:
       glob:
         - "*.xml"

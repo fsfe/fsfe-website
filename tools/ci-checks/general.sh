@@ -6,19 +6,19 @@
 
 deperrors=''
 for depend in xmllint sed file grep bash perl mediainfo curl mktemp; do
-    if ! command -v "$depend" >/dev/null 2>&1; then
-        deperrors="$depend $deperrors"
-    fi
+	if ! command -v "$depend" >/dev/null 2>&1; then
+		deperrors="$depend $deperrors"
+	fi
 done
 if [ -n "$deperrors" ]; then
-    cat <<-EOF
-	The githook script depends on some other programs to function. Not all of
-	those programs could be located on your system. Please use your package
-	manager to install the following programs: $deperrors
+	cat <<-EOF
+		The githook script depends on some other programs to function. Not all of
+		those programs could be located on your system. Please use your package
+		manager to install the following programs: $deperrors
 
-	Your commit has therefore been aborted.
+		Your commit has therefore been aborted.
 	EOF
-    exit 1
+	exit 1
 fi >>/dev/stderr
 
 # =============================================================================
@@ -75,31 +75,31 @@ FILES_EMAIL=""
 # Convert a string like "|first|second" to a readable list starting from line 1
 # and removing two spaces in the first line
 filelisting() {
-    echo "${1}" | sed -E -e "s/\|/\n  - /g" | sed '1d' | sed '1 s/^  //'
+	echo "${1}" | sed -E -e "s/\|/\n  - /g" | sed '1d' | sed '1 s/^  //'
 }
 
 # Check whether file exists, matches a defined regex, and not potential excludes
 matchfile() {
-    local file=$1
-    local regex=$2
-    local exclude=$3
+	local file=$1
+	local regex=$2
+	local exclude=$3
 
-    if [[ -n ${exclude} ]]; then
-        if [[ ($file =~ $regex) && (! $file =~ $exclude) && (-e "$file") ]]; then
-            true
-        else
-            false
-        fi
-    elif [[ -n ${regex} ]]; then
-        if [[ ($file =~ $regex) && (-e "$file") ]]; then
-            true
-        else
-            false
-        fi
-    else
-        echo "[ERROR] matchregex() has too few arguments!"
-        false
-    fi
+	if [[ -n ${exclude} ]]; then
+		if [[ ($file =~ $regex) && (! $file =~ $exclude) && (-e "$file") ]]; then
+			true
+		else
+			false
+		fi
+	elif [[ -n ${regex} ]]; then
+		if [[ ($file =~ $regex) && (-e "$file") ]]; then
+			true
+		else
+			false
+		fi
+	else
+		echo "[ERROR] matchregex() has too few arguments!"
+		false
+	fi
 }
 
 # =============================================================================
@@ -107,273 +107,273 @@ matchfile() {
 # =============================================================================
 
 for f in $files_all; do
-    ((count++))
-    if [[ "$1" != "ci-pr" ]]; then
-        echo -ne "pre-commit check: [$count/$total]\r"
-    fi
+	((count++))
+	if [[ "$1" != "ci-pr" ]]; then
+		echo -ne "pre-commit check: [$count/$total]\r"
+	fi
 
-    # ---------------------------------------------------------------------------
-    # XML syntax
-    # ---------------------------------------------------------------------------
-    fileregex="(\.xhtml$|\.xml$|\.xsl$)"
-    if matchfile "${f}" "${fileregex}"; then
-        if ! xmllint --noout --nonet "${f}"; then
-            RETURN_SYNTAX=$((RETURN_SYNTAX + 1))
-            FILES_SYNTAX="${FILES_SYNTAX}|${f}"
-        fi
-    fi
+	# ---------------------------------------------------------------------------
+	# XML syntax
+	# ---------------------------------------------------------------------------
+	fileregex="(\.xhtml$|\.xml$|\.xsl$)"
+	if matchfile "${f}" "${fileregex}"; then
+		if ! xmllint --noout --nonet "${f}"; then
+			RETURN_SYNTAX=$((RETURN_SYNTAX + 1))
+			FILES_SYNTAX="${FILES_SYNTAX}|${f}"
+		fi
+	fi
 
-    # ---------------------------------------------------------------------------
-    # HTML files
-    # ---------------------------------------------------------------------------
-    fileregex="(\.html$)"
-    if matchfile "${f}" "${fileregex}"; then
-        RETURN_HTML=$((RETURN_HTML + 1))
-        FILES_HTML="${FILES_HTML}|${f}"
-    fi
+	# ---------------------------------------------------------------------------
+	# HTML files
+	# ---------------------------------------------------------------------------
+	fileregex="(\.html$)"
+	if matchfile "${f}" "${fileregex}"; then
+		RETURN_HTML=$((RETURN_HTML + 1))
+		FILES_HTML="${FILES_HTML}|${f}"
+	fi
 
-    # ---------------------------------------------------------------------------
-    # New tags
-    # ---------------------------------------------------------------------------
-    fileregex="^(news/|events/).*(\.xhtml$|\.xml$|\.xsl$)"
-    if matchfile "${f}" "${fileregex}"; then
-        hit=0
-        tags=""
-        # go through all tags in this file
-        # make only a new line a field separator to support tags with spaces inside
-        # (which is not recommended)
-        OLDIFS=$IFS # save IFS, usually " \t\n"
-        IFS=$'\n'
-        for tag in $(grep -Ei '<tag(\s|\>)' "${f}" | perl -pe 's/.*<tag key="(.+?)".*/\1/'); do
-            # check if this tag does exist in any other news/event item
-            if ! git grep -ilE "<tag key=\"${tag}\"" news/ events/ | grep -vq "${f}"; then
-                hit=1
-                tags="${tag}, ${tags}"
-                RETURN_TAGS_NEW=$((RETURN_TAGS_NEW + 1))
-            fi
-        done
-        IFS=$OLDIFS # reset IFS
-        # if any new tag has been found, enlist them
-        if [ $hit -ne 0 ]; then
-            tags="${tags%, }"
-            FILES_TAGS_NEW="${FILES_TAGS_NEW}|${f} (new tag(s): ${tags})"
-        fi
-    fi
+	# ---------------------------------------------------------------------------
+	# New tags
+	# ---------------------------------------------------------------------------
+	fileregex="^(news/|events/).*(\.xhtml$|\.xml$|\.xsl$)"
+	if matchfile "${f}" "${fileregex}"; then
+		hit=0
+		tags=""
+		# go through all tags in this file
+		# make only a new line a field separator to support tags with spaces inside
+		# (which is not recommended)
+		OLDIFS=$IFS # save IFS, usually " \t\n"
+		IFS=$'\n'
+		for tag in $(grep -Ei '<tag(\s|\>)' "${f}" | perl -pe 's/.*<tag key="(.+?)".*/\1/'); do
+			# check if this tag does exist in any other news/event item
+			if ! git grep -ilE "<tag key=\"${tag}\"" news/ events/ | grep -vq "${f}"; then
+				hit=1
+				tags="${tag}, ${tags}"
+				RETURN_TAGS_NEW=$((RETURN_TAGS_NEW + 1))
+			fi
+		done
+		IFS=$OLDIFS # reset IFS
+		# if any new tag has been found, enlist them
+		if [ $hit -ne 0 ]; then
+			tags="${tags%, }"
+			FILES_TAGS_NEW="${FILES_TAGS_NEW}|${f} (new tag(s): ${tags})"
+		fi
+	fi
 
-    # ---------------------------------------------------------------------------
-    # Tags mismatch between EN and translations
-    # ---------------------------------------------------------------------------
-    fileregex="^(news/|events/).*(\.xhtml$|\.xml$|\.xsl$)"
-    if matchfile "${f}" "${fileregex}"; then
-        # Only check non-english files
-        if [[ ! $f =~ \.en\. ]]; then
-            # Get file extension
-            ext="${f##*.}"
-            # Get base file name (without) "en.$EXT"
-            base=$(echo "${f}" | sed -E "s/\.[a-z][a-z]\.${ext}//")
-            # exit TAGS_MISMATCH check if no english original exists
-            if [[ -e "$base.en.$ext" ]]; then
-                # Extract tags from the translated and the English file, and sort them
-                tags_trans="$(grep -Ei '<tag(\s|\>)' "${f}" |
-                    perl -pe 's/.*<tag key="(.+?)".*/\1/' | sort)"
-                tags_en="$(grep -Ei '<tag(\s|\>)' "${base}.en.${ext}" |
-                    perl -pe 's/.*<tag key="(.+?)".*/\1/' | sort)"
-                # Compare the two lists, and output tags that are not present in one of
-                # the files. `-3` strips away the list of tags that are common. So the
-                # output should be empty normally
-                if [[ $(comm -3 <(echo "$tags_en") <(echo "$tags_trans")) ]]; then
-                    RETURN_TAGS_MISMATCH=$((RETURN_TAGS_MISMATCH + 1))
-                    FILES_TAGS_MISMATCH="${FILES_TAGS_MISMATCH}|${f}"
-                fi
-            fi
-        fi
-    fi
+	# ---------------------------------------------------------------------------
+	# Tags mismatch between EN and translations
+	# ---------------------------------------------------------------------------
+	fileregex="^(news/|events/).*(\.xhtml$|\.xml$|\.xsl$)"
+	if matchfile "${f}" "${fileregex}"; then
+		# Only check non-english files
+		if [[ ! $f =~ \.en\. ]]; then
+			# Get file extension
+			ext="${f##*.}"
+			# Get base file name (without) "en.$EXT"
+			base=$(echo "${f}" | sed -E "s/\.[a-z][a-z]\.${ext}//")
+			# exit TAGS_MISMATCH check if no english original exists
+			if [[ -e "$base.en.$ext" ]]; then
+				# Extract tags from the translated and the English file, and sort them
+				tags_trans="$(grep -Ei '<tag(\s|\>)' "${f}" |
+					perl -pe 's/.*<tag key="(.+?)".*/\1/' | sort)"
+				tags_en="$(grep -Ei '<tag(\s|\>)' "${base}.en.${ext}" |
+					perl -pe 's/.*<tag key="(.+?)".*/\1/' | sort)"
+				# Compare the two lists, and output tags that are not present in one of
+				# the files. `-3` strips away the list of tags that are common. So the
+				# output should be empty normally
+				if [[ $(comm -3 <(echo "$tags_en") <(echo "$tags_trans")) ]]; then
+					RETURN_TAGS_MISMATCH=$((RETURN_TAGS_MISMATCH + 1))
+					FILES_TAGS_MISMATCH="${FILES_TAGS_MISMATCH}|${f}"
+				fi
+			fi
+		fi
+	fi
 
-    # ---------------------------------------------------------------------------
-    # Encoding
-    # ---------------------------------------------------------------------------
-    fileregex="(\.xhtml$|\.xml$|\.xsl$)"
-    if matchfile "${f}" "${fileregex}"; then
-        regex="(utf-8|us-ascii)"
-        if ! [[ $(file -b --mime-encoding "$(realpath "${f}")") =~ $regex ]]; then
-            RETURN_ENC=$((RETURN_ENC + 1))
-            FILES_ENC="${FILES_ENC}|${f}"
-        fi
-    fi
+	# ---------------------------------------------------------------------------
+	# Encoding
+	# ---------------------------------------------------------------------------
+	fileregex="(\.xhtml$|\.xml$|\.xsl$)"
+	if matchfile "${f}" "${fileregex}"; then
+		regex="(utf-8|us-ascii)"
+		if ! [[ $(file -b --mime-encoding "$(realpath "${f}")") =~ $regex ]]; then
+			RETURN_ENC=$((RETURN_ENC + 1))
+			FILES_ENC="${FILES_ENC}|${f}"
+		fi
+	fi
 
-    # ---------------------------------------------------------------------------
-    # Naming and newsdate attribute mistakes in news/events
-    # ---------------------------------------------------------------------------
-    fileregex="^(news/20[0-9]{2}/|news/nl/|news/podcast/|events/20[0-9]{2}/).*(\.xhtml$|\.xml$)"
-    if matchfile "${f}" "${fileregex}"; then
-        filename="$(basename "${f}")"
-        # file naming scheme
-        regex="^((nl-20[0-9]{4})|episode-(special-)?[0-9]{1,3}"
-        regex+="|(news|event)-20[0-9]{6}-[0-9]{2})\.[a-z]{2}\.(xml|xhtml)$"
-        if ! [[ $filename =~ $regex ]]; then
-            RETURN_NAME=$((RETURN_NAME + 1))
-            FILES_NAME="${FILES_NAME}|${f}"
-        fi
+	# ---------------------------------------------------------------------------
+	# Naming and newsdate attribute mistakes in news/events
+	# ---------------------------------------------------------------------------
+	fileregex="^(news/20[0-9]{2}/|news/nl/|news/podcast/|events/20[0-9]{2}/).*(\.xhtml$|\.xml$)"
+	if matchfile "${f}" "${fileregex}"; then
+		filename="$(basename "${f}")"
+		# file naming scheme
+		regex="^((nl-20[0-9]{4})|episode-(special-)?[0-9]{1,3}"
+		regex+="|(news|event)-20[0-9]{6}-[0-9]{2})\.[a-z]{2}\.(xml|xhtml)$"
+		if ! [[ $filename =~ $regex ]]; then
+			RETURN_NAME=$((RETURN_NAME + 1))
+			FILES_NAME="${FILES_NAME}|${f}"
+		fi
 
-        # newsdate attribute scheme
-        regex="^20[0-9]{2}-[0-9]{2}-[0-9]{2}$"
-        if grep -qE "<html\s*newsdate=\".*?>" "${f}"; then
-            newsdate=$(grep -E "<html\s*newsdate=\".*?>" "${f}" |
-                perl -pe 's/.*newsdate="(.+?)".*/\1/')
-            if ! [[ $newsdate =~ $regex ]]; then
-                RETURN_NEWSDATE=$((RETURN_NEWSDATE + 1))
-                FILES_NEWSDATE="${FILES_NEWSDATE}|${f}"
-            fi
-        fi
-    fi
+		# newsdate attribute scheme
+		regex="^20[0-9]{2}-[0-9]{2}-[0-9]{2}$"
+		if grep -qE "<html\s*newsdate=\".*?>" "${f}"; then
+			newsdate=$(grep -E "<html\s*newsdate=\".*?>" "${f}" |
+				perl -pe 's/.*newsdate="(.+?)".*/\1/')
+			if ! [[ $newsdate =~ $regex ]]; then
+				RETURN_NEWSDATE=$((RETURN_NEWSDATE + 1))
+				FILES_NEWSDATE="${FILES_NEWSDATE}|${f}"
+			fi
+		fi
+	fi
 
-    # ---------------------------------------------------------------------------
-    # Version tag presence + integer check
-    # ---------------------------------------------------------------------------
-    fileregex="(\.xhtml$|\.xml$)"
-    if matchfile "${f}" "${fileregex}"; then
-        # check whether version tag is present
-        if ! xmllint --xpath "/*/version" "${f}" &>/dev/null; then
-            RETURN_VERSION_PRES=$((RETURN_VERSION_PRES + 1))
-            FILES_VERSION_PRES="${FILES_VERSION_PRES}|${f}"
-        else
-            # check whether it's a positive integer
-            if ! [[ $(xmllint --xpath "/*/version/text()" "${f}") =~ ^[0-9]+$ ]]; then
-                RETURN_VERSION_INT=$((RETURN_VERSION_INT + 1))
-                FILES_VERSION_INT="${FILES_VERSION_INT}|${f}"
-            fi
-        fi
-    fi
+	# ---------------------------------------------------------------------------
+	# Version tag presence + integer check
+	# ---------------------------------------------------------------------------
+	fileregex="(\.xhtml$|\.xml$)"
+	if matchfile "${f}" "${fileregex}"; then
+		# check whether version tag is present
+		if ! xmllint --xpath "/*/version" "${f}" &>/dev/null; then
+			RETURN_VERSION_PRES=$((RETURN_VERSION_PRES + 1))
+			FILES_VERSION_PRES="${FILES_VERSION_PRES}|${f}"
+		else
+			# check whether it's a positive integer
+			if ! [[ $(xmllint --xpath "/*/version/text()" "${f}") =~ ^[0-9]+$ ]]; then
+				RETURN_VERSION_INT=$((RETURN_VERSION_INT + 1))
+				FILES_VERSION_INT="${FILES_VERSION_INT}|${f}"
+			fi
+		fi
+	fi
 
-    # ---------------------------------------------------------------------------
-    # Check absolute links to fsfe.org
-    # ---------------------------------------------------------------------------
-    fileregex="(\.xhtml$|\.xml$)"
-    exclude="^(drm\.info|pdfreaders\.org|global|fsfe\.org\/cgi-bin|build|fsfe\.org\/scripts|fsfe\.org\/events)"
-    if matchfile "${f}" "${fileregex}" "${exclude}"; then
-        if xmllint --xpath "//a/@href" "${f}" 2>/dev/null |
-            sed -E 's/([^\r\n]) (href=)/\1\n \2/g' |
-            grep -qE "https?://fsfe(urope)?.org"; then
-            RETURN_ABS_LINK=$((RETURN_ABS_LINK + 1))
-            FILES_ABS_LINK="${FILES_ABS_LINK}|${f}"
-        fi
-    fi
+	# ---------------------------------------------------------------------------
+	# Check absolute links to fsfe.org
+	# ---------------------------------------------------------------------------
+	fileregex="(\.xhtml$|\.xml$)"
+	exclude="^(drm\.info|pdfreaders\.org|global|fsfe\.org\/cgi-bin|build|fsfe\.org\/scripts|fsfe\.org\/events)"
+	if matchfile "${f}" "${fileregex}" "${exclude}"; then
+		if xmllint --xpath "//a/@href" "${f}" 2>/dev/null |
+			sed -E 's/([^\r\n]) (href=)/\1\n \2/g' |
+			grep -qE "https?://fsfe(urope)?.org"; then
+			RETURN_ABS_LINK=$((RETURN_ABS_LINK + 1))
+			FILES_ABS_LINK="${FILES_ABS_LINK}|${f}"
+		fi
+	fi
 
-    # ---------------------------------------------------------------------------
-    # Check for links with fixed language
-    # ---------------------------------------------------------------------------
-    fileregex="(\.xhtml$|\.xml$)"
-    exclude="^(cgi-bin|build)"
-    if matchfile "${f}" "${fileregex}" "${exclude}"; then
-        if xmllint --xpath "//a/@href" "${f}" 2>/dev/null |
-            sed -E 's/([^\r\n]) (href=)/\1\n \2/g' |
-            grep -vE '\.js"' |
-            grep -qE "\"(https?://fsfe(urope)?.org)?/.+?\.[a-z]{2}(\.html)?(#.+?)?\""; then
-            RETURN_FIX_LANG=$((RETURN_FIX_LANG + 1))
-            FILES_FIX_LANG="${FILES_FIX_LANG}|${f}"
-        fi
-    fi
+	# ---------------------------------------------------------------------------
+	# Check for links with fixed language
+	# ---------------------------------------------------------------------------
+	fileregex="(\.xhtml$|\.xml$)"
+	exclude="^(cgi-bin|build)"
+	if matchfile "${f}" "${fileregex}" "${exclude}"; then
+		if xmllint --xpath "//a/@href" "${f}" 2>/dev/null |
+			sed -E 's/([^\r\n]) (href=)/\1\n \2/g' |
+			grep -vE '\.js"' |
+			grep -qE "\"(https?://fsfe(urope)?.org)?/.+?\.[a-z]{2}(\.html)?(#.+?)?\""; then
+			RETURN_FIX_LANG=$((RETURN_FIX_LANG + 1))
+			FILES_FIX_LANG="${FILES_FIX_LANG}|${f}"
+		fi
+	fi
 
-    # ---------------------------------------------------------------------------
-    # Check for <style> elements
-    # ---------------------------------------------------------------------------
-    fileregex="(\.xhtml$|\.xml$)"
-    if matchfile "${f}" "${fileregex}"; then
-        if xmllint --xpath "//style" "${f}" &>/dev/null; then
-            RETURN_CSS_ELEMENT=$((RETURN_CSS_ELEMENT + 1))
-            FILES_CSS_ELEMENT="${FILES_CSS_ELEMENT}|${f}"
-        fi
-    fi
+	# ---------------------------------------------------------------------------
+	# Check for <style> elements
+	# ---------------------------------------------------------------------------
+	fileregex="(\.xhtml$|\.xml$)"
+	if matchfile "${f}" "${fileregex}"; then
+		if xmllint --xpath "//style" "${f}" &>/dev/null; then
+			RETURN_CSS_ELEMENT=$((RETURN_CSS_ELEMENT + 1))
+			FILES_CSS_ELEMENT="${FILES_CSS_ELEMENT}|${f}"
+		fi
+	fi
 
-    # ---------------------------------------------------------------------------
-    # Check for style attributes
-    # ---------------------------------------------------------------------------
-    fileregex="(\.xhtml$|\.xml$)"
-    if matchfile "${f}" "${fileregex}"; then
-        if xmllint --xpath "//@style" "${f}" &>/dev/null; then
-            RETURN_CSS_ATTR=$((RETURN_CSS_ATTR + 1))
-            FILES_CSS_ATTR="${FILES_CSS_ATTR}|${f}"
-        fi
-    fi
+	# ---------------------------------------------------------------------------
+	# Check for style attributes
+	# ---------------------------------------------------------------------------
+	fileregex="(\.xhtml$|\.xml$)"
+	if matchfile "${f}" "${fileregex}"; then
+		if xmllint --xpath "//@style" "${f}" &>/dev/null; then
+			RETURN_CSS_ATTR=$((RETURN_CSS_ATTR + 1))
+			FILES_CSS_ATTR="${FILES_CSS_ATTR}|${f}"
+		fi
+	fi
 
-    # ---------------------------------------------------------------------------
-    # Check for ratio of preview image
-    # ---------------------------------------------------------------------------
-    # Note: we also check events, could carry images in the future
-    fileregex="^(news/|events/).*(\.xhtml$|\.xml$)"
-    if matchfile "${f}" "${fileregex}"; then
-        imgratio_status=""
-        imageurl=$(xmllint --xpath "string(//image/@url)" "${f}")
-        if [[ -n "${imageurl}" ]]; then
-            # Remote images need to be downloaded
-            if grep -Eq "^http(s)?://" <<<"${imageurl}"; then
-                image=$(mktemp --suffix fsfe-imgratio)
-                # Download file, and handle failed download
-                if ! curl -s -f "${imageurl}" >"${image}"; then
-                    imgratio_status="failed"
-                else
-                    imgratio_status="remote"
-                fi
+	# ---------------------------------------------------------------------------
+	# Check for ratio of preview image
+	# ---------------------------------------------------------------------------
+	# Note: we also check events, could carry images in the future
+	fileregex="^(news/|events/).*(\.xhtml$|\.xml$)"
+	if matchfile "${f}" "${fileregex}"; then
+		imgratio_status=""
+		imageurl=$(xmllint --xpath "string(//image/@url)" "${f}")
+		if [[ -n "${imageurl}" ]]; then
+			# Remote images need to be downloaded
+			if grep -Eq "^http(s)?://" <<<"${imageurl}"; then
+				image=$(mktemp --suffix fsfe-imgratio)
+				# Download file, and handle failed download
+				if ! curl -s -f "${imageurl}" >"${image}"; then
+					imgratio_status="failed"
+				else
+					imgratio_status="remote"
+				fi
 
-            # Local files need absolute path
-            else
-                imgratio_status="local"
-                image="$(git rev-parse --show-toplevel)${imageurl}"
-            fi
+			# Local files need absolute path
+			else
+				imgratio_status="local"
+				image="$(git rev-parse --show-toplevel)${imageurl}"
+			fi
 
-            if [[ "${imgratio_status}" == "failed" ]]; then
-                RETURN_IMGRATIO=$((RETURN_IMGRATIO + 1))
-                FILES_IMGRATIO="${FILES_IMGRATIO}|${f} (Image could not be downloaded from ${imageurl})"
-            else
-                # Run ratio checks
-                height=$(mediainfo --Output='Image;%Height%' "${image}")
-                width=$(mediainfo --Output='Image;%Width%' "${image}")
-                # The ideal ratio is 1,777. We multiply by 1000 because bash cannot float
-                ratio=$((1000 * width / height))
+			if [[ "${imgratio_status}" == "failed" ]]; then
+				RETURN_IMGRATIO=$((RETURN_IMGRATIO + 1))
+				FILES_IMGRATIO="${FILES_IMGRATIO}|${f} (Image could not be downloaded from ${imageurl})"
+			else
+				# Run ratio checks
+				height=$(mediainfo --Output='Image;%Height%' "${image}")
+				width=$(mediainfo --Output='Image;%Width%' "${image}")
+				# The ideal ratio is 1,777. We multiply by 1000 because bash cannot float
+				ratio=$((1000 * width / height))
 
-                # We allow a buffer of ± 2px per height/width in 800 x 450px
-                if [[ ${ratio} -lt 1769 || ${ratio} -gt 1785 ]]; then
-                    RETURN_IMGRATIO=$((RETURN_IMGRATIO + 1))
-                    FILES_IMGRATIO="${FILES_IMGRATIO}|${f} ($imageurl)"
-                fi
-            fi
+				# We allow a buffer of ± 2px per height/width in 800 x 450px
+				if [[ ${ratio} -lt 1769 || ${ratio} -gt 1785 ]]; then
+					RETURN_IMGRATIO=$((RETURN_IMGRATIO + 1))
+					FILES_IMGRATIO="${FILES_IMGRATIO}|${f} ($imageurl)"
+				fi
+			fi
 
-            # delete temporary file unless local graphic
-            if [[ ${imgratio_status} != "local" ]]; then
-                rm "${image}"
-            fi
-        fi
-    fi
+			# delete temporary file unless local graphic
+			if [[ ${imgratio_status} != "local" ]]; then
+				rm "${image}"
+			fi
+		fi
+	fi
 
-    # ---------------------------------------------------------------------------
-    # alt attribute presence for images
-    # ---------------------------------------------------------------------------
-    fileregex="(\.xhtml$|\.xml$)"
-    if matchfile "${f}" "${fileregex}"; then
-        # check <img> without @alt attribute
-        if xmllint --xpath "//img[not(@alt) or string-length(normalize-space(@alt))=0]" "${f}" \
-            &>/dev/null; then
-            RETURN_IMGALT=$((RETURN_IMGALT + 1))
-            FILES_IMGALT="${FILES_IMGALT}|${f}"
-        fi
-        if xmllint --xpath "//image[not(@alt) or string-length(normalize-space(@alt))=0]" "${f}" \
-            &>/dev/null; then
-            RETURN_IMGALT=$((RETURN_IMGALT + 1))
-            FILES_IMGALT="${FILES_IMGALT}|${f}"
-        fi
-    fi
+	# ---------------------------------------------------------------------------
+	# alt attribute presence for images
+	# ---------------------------------------------------------------------------
+	fileregex="(\.xhtml$|\.xml$)"
+	if matchfile "${f}" "${fileregex}"; then
+		# check <img> without @alt attribute
+		if xmllint --xpath "//img[not(@alt) or string-length(normalize-space(@alt))=0]" "${f}" \
+			&>/dev/null; then
+			RETURN_IMGALT=$((RETURN_IMGALT + 1))
+			FILES_IMGALT="${FILES_IMGALT}|${f}"
+		fi
+		if xmllint --xpath "//image[not(@alt) or string-length(normalize-space(@alt))=0]" "${f}" \
+			&>/dev/null; then
+			RETURN_IMGALT=$((RETURN_IMGALT + 1))
+			FILES_IMGALT="${FILES_IMGALT}|${f}"
+		fi
+	fi
 
-    # ---------------------------------------------------------------------------
-    # check for non-obfuscated email addresses
-    # ---------------------------------------------------------------------------
-    fileregex="(\.xhtml$|\.xml$)"
-    if matchfile "${f}" "${fileregex}"; then
-        # Find an @fsfe.org email not followed by </email>
-        if grep -qPi "[A-Za-z-+]*@fsfe.org(?!<\/email)" "${f}"; then
-            RETURN_EMAIL=$((RETURN_EMAIL + 1))
-            FILES_EMAIL="${FILES_EMAIL}|${f}"
-        fi
-    fi
+	# ---------------------------------------------------------------------------
+	# check for non-obfuscated email addresses
+	# ---------------------------------------------------------------------------
+	fileregex="(\.xhtml$|\.xml$)"
+	if matchfile "${f}" "${fileregex}"; then
+		# Find an @fsfe.org email not followed by </email>
+		if grep -qPi "[A-Za-z-+]*@fsfe.org(?!<\/email)" "${f}"; then
+			RETURN_EMAIL=$((RETURN_EMAIL + 1))
+			FILES_EMAIL="${FILES_EMAIL}|${f}"
+		fi
+	fi
 
 done
 
@@ -387,7 +387,7 @@ echo -ne "\n"
 # CRITICAL
 # --------
 if [ $RETURN_SYNTAX -gt 0 ]; then
-    cat <<EOF >&2
+	cat <<EOF >&2
   =========================
   || [CRIT] SYNTAX ERROR ||
   =========================
@@ -412,7 +412,7 @@ EOF
 fi
 
 if [ $RETURN_HTML -gt 0 ]; then
-    cat <<EOF >&2
+	cat <<EOF >&2
   =================================
   || [CRIT] FILE EXTENSION ERROR ||
   =================================
@@ -430,7 +430,7 @@ EOF
 fi
 
 if [ $RETURN_TAGS_MISMATCH -gt 0 ]; then
-    cat <<EOF >&2
+	cat <<EOF >&2
   ====================================
   || [CRIT] MISMATCHED TAG(S) ||
   ====================================
@@ -450,7 +450,7 @@ EOF
 fi
 
 if [ $RETURN_ENC -gt 0 ]; then
-    cat <<EOF >&2
+	cat <<EOF >&2
   ================================
   || [CRIT] FILE ENCODING ERROR ||
   ================================
@@ -467,7 +467,7 @@ EOF
 fi
 
 if [ $RETURN_NAME -gt 0 ]; then
-    cat <<EOF >&2
+	cat <<EOF >&2
   ==============================
   || [CRIT] FILE NAMING ERROR ||
   ==============================
@@ -490,7 +490,7 @@ EOF
 fi
 
 if [ $RETURN_NEWSDATE -gt 0 ]; then
-    cat <<EOF >&2
+	cat <<EOF >&2
   =====================================
   || [CRIT] NEWSDATE ATTRIBUTE ERROR ||
   =====================================
@@ -506,7 +506,7 @@ EOF
 fi
 
 if [ $RETURN_VERSION_PRES -gt 0 ]; then
-    cat <<EOF >&2
+	cat <<EOF >&2
   ================================
   || [CRIT] MISSING VERSION TAG ||
   ================================
@@ -522,7 +522,7 @@ EOF
 fi
 
 if [ $RETURN_VERSION_INT -gt 0 ]; then
-    cat <<EOF >&2
+	cat <<EOF >&2
   ==============================
   || [CRIT] WRONG VERSION TAG ||
   ==============================
@@ -541,7 +541,7 @@ EOF
 fi
 
 if [ $RETURN_ABS_LINK -gt 0 ]; then
-    cat <<EOF >&2
+	cat <<EOF >&2
   ======================================
   || [CRIT] ABSOLUTE LINK TO fsfe.org ||
   ======================================
@@ -565,7 +565,7 @@ EOF
 fi
 
 if [ $RETURN_FIX_LANG -gt 0 ]; then
-    cat <<EOF >&2
+	cat <<EOF >&2
   ================================
   || [CRIT] FIXED LANGUAGE LINK ||
   ================================
@@ -590,7 +590,7 @@ EOF
 fi
 
 if [ $RETURN_IMGRATIO -gt 0 ]; then
-    cat <<EOF >&2
+	cat <<EOF >&2
   ========================================
   || [CRIT] Invalid preview image ratio ||
   ========================================
@@ -611,7 +611,7 @@ fi
 # WARNINGS
 # --------
 if [ $RETURN_TAGS_NEW -gt 0 ]; then
-    cat <<EOF >&2
+	cat <<EOF >&2
   ====================================
   || [WARN] NEW / DUPLICATED TAG(S) ||
   ====================================
@@ -635,7 +635,7 @@ EOF
 fi
 
 if [ $RETURN_CSS_ELEMENT -gt 0 ]; then
-    cat <<EOF >&2
+	cat <<EOF >&2
   =================================
   || [WARN] INLINE CSS (<style>) ||
   =================================
@@ -653,7 +653,7 @@ EOF
 fi
 
 if [ $RETURN_CSS_ATTR -gt 0 ]; then
-    cat <<EOF >&2
+	cat <<EOF >&2
   ==================================
   || [WARN] INLINE CSS (style="") ||
   ==================================
@@ -675,7 +675,7 @@ EOF
 fi
 
 if [ $RETURN_IMGALT -gt 0 ]; then
-    cat <<EOF >&2
+	cat <<EOF >&2
   ==========================================
   || [WARN] No alternative text for image ||
   ==========================================
@@ -696,7 +696,7 @@ EOF
 fi
 
 if [ $RETURN_EMAIL -gt 0 ]; then
-    cat <<EOF >&2
+	cat <<EOF >&2
   ==========================================
   || [WARN] Clear-text email address      ||
   ==========================================
@@ -714,21 +714,21 @@ EOF
 fi
 
 EXIT_CRIT=$((RETURN_SYNTAX + RETURN_TAGS_MISMATCH + RETURN_ENC + RETURN_NAME + \
-    RETURN_NEWSDATE + RETURN_VERSION_PRES + RETURN_VERSION_INT + \
-    RETURN_ABS_LINK + RETURN_FIX_LANG + RETURN_IMGRATIO))
+	RETURN_NEWSDATE + RETURN_VERSION_PRES + RETURN_VERSION_INT + \
+	RETURN_ABS_LINK + RETURN_FIX_LANG + RETURN_IMGRATIO))
 
 EXIT_WARN=$((RETURN_TAGS_NEW + RETURN_CSS_ELEMENT + RETURN_CSS_ATTR + \
-    RETURN_IMGALT + RETURN_EMAIL))
+	RETURN_IMGALT + RETURN_EMAIL))
 
 if [ $EXIT_CRIT -gt 0 ]; then
-    cat <<EOF >&2
+	cat <<EOF >&2
   ----------------------------------
 
   The commit will be aborted. You have to fix the critical problems
   first. These are marked with [CRIT].
 EOF
 elif [ $EXIT_WARN -gt 0 ]; then
-    cat <<EOF >&2
+	cat <<EOF >&2
   ----------------------------------
 
   Your commit contains a few problematic, but not critical problems,

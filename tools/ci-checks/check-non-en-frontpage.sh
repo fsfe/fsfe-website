@@ -15,7 +15,7 @@ for file in $matched_files; do
 	sfx=${file##*.}    # xhtml
 	en="$base.en.$sfx" # file.en.xhtml
 	if [[ ! -f "$en" ]]; then
-		echo "$file has no english version" 
+		echo "$file has no english version"
 		exit=1
 	fi
 done

@@ -31,6 +31,7 @@ in
       mediainfo
       perl
       file
+      shfmt
     ]);
   # Installed for every architecture: only install the lib outputs
   multiPkgs =

@@ -127,22 +127,18 @@ Some more explanation: we are essentially just using docker as a way to provide 
 
 ## Githooks
 
-The repo contains some highly recommended githooks that one should enable. They check for several kinds of common issues. They are also run in CI, so enabling them locally speeds the development feedback loop.
+The repo contains some highly recommended githooks using [lefthook](github.com/evilmartians/lefthook) that one should enable. They check for several kinds of common issues. They are also run in CI, so enabling them locally speeds the development feedback loop.
 
-One can enable them locally using
-
+Lefthook is installed as part of the python virtual environment. If using the `nix-shell` the hooks are automatically activated and all required dependencies installed. If not, one must install them using
 ```sh
-rm .git/hooks -r                  # remove git's sample hooks
-ln -s tools/githooks/ .git/hooks  # link our hooks to the right dir
+lefthook install
 ```
 
-The hooks have some extra dependencies, namely
+The hooks have some extra dependencies, at time of writing: 
 
 ```
-git xmllint sed file grep bash perl mediainfo curl mktemp
+ruff git xmllint sed file grep bash perl mediainfo curl mktemp
 ```
-
-The provided `nix-shell` includes the needed packages. Otherwise, they can be installed manually.
 
 ## Testing
 

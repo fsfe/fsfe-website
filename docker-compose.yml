@@ -1,8 +1,14 @@
 services:
+  pre-commit:
+    build:
+      context: .
+      dockerfile: pre-commit.Dockerfile
+    image: fsfe-websites-pre-commit
   build:
-    build: .
-    image: fsfe-websites
-    container_name: fsfe-websites
+    build:
+      context: .
+      dockerfile: build.Dockerfile
+    image: fsfe-websites-build
     ports:
       - 2000:2000
       - 2100:2100

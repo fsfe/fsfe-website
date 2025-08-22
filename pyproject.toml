@@ -23,8 +23,10 @@ build = "fsfe_website_build:main"
 
 [dependency-groups]
 dev = [
-  "ruff"
+  "ruff== 0.12.10",
+  "lefthook==1.12.3"
 ]
+
 [build-system]
 requires = ["uv_build"]
 build-backend = "uv_build"

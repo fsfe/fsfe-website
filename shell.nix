@@ -32,6 +32,7 @@ in
       perl
       file
       shfmt
+      prettier
     ]);
   # Installed for every architecture: only install the lib outputs
   multiPkgs =

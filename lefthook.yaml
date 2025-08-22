@@ -15,7 +15,18 @@ pre-commit:
         - "*.html"
         - "*.xml"
         - "*.xhtml"
-      run: tools/ci-checks/general.sh {staged_files}
+  prettier:
+      glob:
+         - "*.css"
+         - "*.html"
+         - "*.js"
+         - "*.json"
+         - "*.less"
+         - "*.md"
+         - "*.scss"
+         - "*.yaml"
+         - "*.yml"
+      run: prettier --write {staged_files}
   non-en-frontpage-news:
       glob:
          - "*.xml"

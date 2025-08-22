@@ -3,11 +3,14 @@
   -moz-box-sizing: border-box;
 }
 body {
-  background-color: #EEE;
+  background-color: #eee;
   margin: 0;
 }
 
-header, main, div#notifications, footer {
+header,
+main,
+div#notifications,
+footer {
   display: block;
   width: 90%;
   max-width: 1000px;
@@ -15,32 +18,39 @@ header, main, div#notifications, footer {
   border-style: none solid;
   border-width: 4px;
   border-color: #693;
-  background-color: #FFF;
+  background-color: #fff;
 }
 
-main, body div#notifications {
+main,
+body div#notifications {
   padding: 1%;
 }
 
 .alert.warning.red {
-  background-color: #EB8;
-  padding: .5em;
+  background-color: #eb8;
+  padding: 0.5em;
 }
 
-#logo { float: left; }
-#fsfe-logo { float: right; }
-#logo, #fsfe-logo {
+#logo {
+  float: left;
+}
+#fsfe-logo {
+  float: right;
+}
+#logo,
+#fsfe-logo {
   padding: 1em;
   width: 20%;
 }
-#logo img, #fsfe-logo img {
+#logo img,
+#fsfe-logo img {
   width: 100%;
 }
 #translations {
   float: left;
   width: 60%;
   padding: 2em;
-  font-size: .75em;
+  font-size: 0.75em;
   text-align: center;
 }
 #translations > a.close {
@@ -50,7 +60,7 @@ main, body div#notifications {
   display: inline;
 }
 #translations li {
-  margin: auto .5em;
+  margin: auto 0.5em;
 }
 #translations a {
   text-decoration: none;
@@ -81,13 +91,13 @@ main, body div#notifications {
 .graphic-link {
   font-style: italic;
   color: #080;
-  font-size: .75em;
+  font-size: 0.75em;
 }
 .htmlcode {
   font-family: monospace;
   border: 1px dashed #000;
-  background-color: #DDD;
-  padding: .5em;
+  background-color: #ddd;
+  padding: 0.5em;
   margin: -1em 1em 0 0;
 }
 
@@ -100,13 +110,13 @@ main, body div#notifications {
   width: 23%;
   min-height: 18em;
 
-  margin: .5em .75%;
+  margin: 0.5em 0.75%;
   padding: 1ex;
 
   border-style: solid;
   border-width: 2px;
   border-color: #888;
-  border-radius: .25em;
+  border-radius: 0.25em;
   overflow: hidden;
   vertical-align: top;
 }
@@ -122,17 +132,17 @@ main, body div#notifications {
   height: 2em;
   margin-right: 1em;
 }
-.readerlist .reader:nth-child(-n+3) {
+.readerlist .reader:nth-child(-n + 3) {
   width: 31%;
   min-height: 22em;
   margin-top: 2em;
   margin-bottom: 5em;
   border-width: 3px;
 }
-.readerlist .reader:nth-child(-n+3) h1 {
+.readerlist .reader:nth-child(-n + 3) h1 {
   font-size: 1.5em;
 }
-.readerlist .reader:nth-child(-n+3) .logo {
+.readerlist .reader:nth-child(-n + 3) .logo {
   height: 3em;
   margin-right: 1.5em;
 }
@@ -153,7 +163,7 @@ main, body div#notifications {
   margin-bottom: 1em;
 }
 .reader .info.platform {
-  margin: 0 .25em;
+  margin: 0 0.25em;
 }
 .reader .description {
   float: left;
@@ -181,28 +191,33 @@ footer {
   flex: 1;
 }
 
-@media (max-width: 700px){
+@media (max-width: 700px) {
   #menu ul {
     width: 95%;
     max-width: 504px;
   }
-  header, main, div#notifications, footer {
-    width:99%; 
-    max-width:630px; 
+  header,
+  main,
+  div#notifications,
+  footer {
+    width: 99%;
+    max-width: 630px;
   }
 }
-@media (max-width: 630px){
+@media (max-width: 630px) {
   .readerlist .reader {
     width: 48%;
   }
-  .readerlist .reader:nth-child(-n+3) {
+  .readerlist .reader:nth-child(-n + 3) {
     width: 98%;
     min-height: 1em;
-    margin: .5em .75%;
+    margin: 0.5em 0.75%;
   }
 }
-@media (max-width: 380px){
-  #menu ul li { display: block; }
+@media (max-width: 380px) {
+  #menu ul li {
+    display: block;
+  }
   .readerlist .reader {
     width: 98%;
     min-height: 1em;

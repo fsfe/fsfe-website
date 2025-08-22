@@ -35,8 +35,7 @@ steps:
         from_secret: KEY_PASSWORD
       GIT_TOKEN:
         from_secret: BUILD_TOKEN
-      VOLUME:
-        website-cached-master
+      VOLUME: website-cached-master
     volumes:
       # Mounting Docker socket of rootless docker user
       - name: dockersock
@@ -45,14 +44,14 @@ steps:
       - docker ps && echo "tampered with"
       # If we are in a cron job, then do a full rebuild
       # Ideally the cron would set the flag itself, but drone does not support that.
-      - if [ "$DRONE_BUILD_EVENT" = "cron" ]; then EXTRA_FLAGS="--full"; fi 
+      - if [ "$DRONE_BUILD_EVENT" = "cron" ]; then EXTRA_FLAGS="--full"; fi
       - docker compose -p fsfe-website-build run --remove-orphans --build build --target "$TARGET" $EXTRA_FLAGS
     when:
       branch:
-      - master
+        - master
       event:
         exclude:
-        - pull_request
+          - pull_request
 
   - name: deploy-test
     image: docker:27.4.1
@@ -76,14 +75,14 @@ steps:
       - docker ps && echo "tampered with"
       # If we are in a cron job, then do a full rebuild
       # Ideally the cron would set the flag itself, but drone does not support that.
-      - if [ "$DRONE_BUILD_EVENT" = "cron" ]; then EXTRA_FLAGS="--full"; fi 
+      - if [ "$DRONE_BUILD_EVENT" = "cron" ]; then EXTRA_FLAGS="--full"; fi
       - docker compose -p fsfe-website run --remove-orphans --build build --target "$TARGET" $EXTRA_FLAGS
     when:
       branch:
-      - test
+        - test
       event:
         exclude:
-        - pull_request
+          - pull_request
 trigger:
   branch:
     - master
@@ -105,5 +104,3 @@ volumes:
 ---
 kind: signature
 hmac: c60e4bdf14c9cb2080b64b91ac75ee055865b32dd04d2c900b89fed70ab6372b
-
-...

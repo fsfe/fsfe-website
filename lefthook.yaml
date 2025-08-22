@@ -2,40 +2,39 @@ pre-commit:
   parallel: true
   commands:
   ruff-check:
-      glob: "*.py"
-      run: ruff check --fix {staged_files}
+    glob: "*.py"
+    run: ruff check --fix {staged_files}
   ruff-format:
-      glob: "*.py"
-      run: ruff format {staged_files}
+    glob: "*.py"
+    run: ruff format {staged_files}
   shfmt:
-      glob: "*.sh"
-      run: shfmt --write {staged_files}
+    glob: "*.sh"
+    run: shfmt --write {staged_files}
   custom-check:
-      glob:
-        - "*.html"
-        - "*.xml"
-        - "*.xhtml"
+    glob:
+      - "*.html"
+      - "*.xml"
+      - "*.xhtml"
   prettier:
-      glob:
-         - "*.css"
-         - "*.html"
-         - "*.js"
-         - "*.json"
-         - "*.less"
-         - "*.md"
-         - "*.scss"
-         - "*.yaml"
-         - "*.yml"
-      run: prettier --write {staged_files}
+    glob:
+      - "*.css"
+      - "*.html"
+      - "*.js"
+      - "*.json"
+      - "*.less"
+      - "*.md"
+      - "*.scss"
+      - "*.yaml"
+      - "*.yml"
+    run: prettier --write {staged_files}
   non-en-frontpage-news:
-      glob:
-         - "*.xml"
-         - "*.xhtml"
-      run: tools/ci-checks/check-non-en-frontpage.sh {staged_files}
+    glob:
+      - "*.xml"
+      - "*.xhtml"
+    run: tools/ci-checks/check-non-en-frontpage.sh {staged_files}
   simple-syntax-check:
-      glob:
-         - "*.xml"
-         - "*.xhtml"
-         - "*.xsl"
-      run: xmllint --noout {staged_files}
-
+    glob:
+      - "*.xml"
+      - "*.xhtml"
+      - "*.xsl"
+    run: xmllint --noout {staged_files}

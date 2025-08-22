@@ -114,14 +114,16 @@ export KEY_PRIVATE=none;
 export KEY_PASSWORD=none;
 export GIT_TOKEN=none;
 ```
+
 One can then run Docker commands like `docker compose ...`.
 
 Alternatively one can prefix the Docker commands with the required variables, like so
+
 ```
 KEY_PRIVATE=none KEY_PASSWORD=none GIT_TOKEN=none docker compose
 ```
-Once your preferred method has been chosen, simply running `docker compose run --service-ports build --serve` should build the webpages and make them available over localhost.
 
+Once your preferred method has been chosen, simply running `docker compose run --service-ports build --serve` should build the webpages and make them available over localhost.
 
 Some more explanation: we are essentially just using docker as a way to provide dependencies and then running the build script. All flags after `build` are passed to the `build` cli. The `service-ports` flag is required to open ports from the container for serving the output, not needed if not using the `--serve` flag of the build script.
 
@@ -130,11 +132,12 @@ Some more explanation: we are essentially just using docker as a way to provide 
 The repo contains some highly recommended githooks using [lefthook](github.com/evilmartians/lefthook) that one should enable. They check for several kinds of common issues. They are also run in CI, so enabling them locally speeds the development feedback loop.
 
 Lefthook is installed as part of the python virtual environment. If using the `nix-shell` the hooks are automatically activated and all required dependencies installed. If not, one must install them using
+
 ```sh
 lefthook install
 ```
 
-The hooks have some extra dependencies, at time of writing: 
+The hooks have some extra dependencies, at time of writing:
 
 ```
 ruff git xmllint sed file grep bash perl mediainfo curl mktemp

@@ -30,16 +30,17 @@
 /* fsfe.org pages */
 
 body {
-    font-family: "Roboto","Noto Emoji", sans-serif;
+  font-family: "Roboto", "Noto Emoji", sans-serif;
 
-    @media (min-width: @screen-sm-min) {
-        background: url(/graphics/fellowship/plussy_tile_03.svg) top left fixed #F9F9F9;
-    }
+  @media (min-width: @screen-sm-min) {
+    background: url(/graphics/fellowship/plussy_tile_03.svg) top left fixed
+      #f9f9f9;
+  }
 }
 
 aside#followup {
   background-color: @brand-primary;
-  color: #FFF;
+  color: #fff;
 
   input#submit {
     background-color: @brand-strong;
@@ -72,11 +73,11 @@ aside#followup.donate {
 }
 
 img.signatory-logo {
-    padding: 10px;
+  padding: 10px;
 }
 
 .newsdate {
-  font-size: .875em;
+  font-size: 0.875em;
   color: #888;
   margin-right: 1ex;
 }
@@ -113,31 +114,29 @@ img.signatory-logo {
 // ----------------------------------------------------------------------------
 
 body.overview #content {
-    .toplevel;
+  .toplevel;
 
-    h2 {
-        text-align: center;
-        margin-top: (@line-height-computed * 3);
-        margin-bottom: @line-height-computed;
-    }
+  h2 {
+    text-align: center;
+    margin-top: (@line-height-computed * 3);
+    margin-bottom: @line-height-computed;
+  }
 
-    .icon-grid;
-
+  .icon-grid;
 }
 
 // ----------------------------------------------------------------------------
 
-
 /* Testimonials divs */
 
 .testimonial {
-    overflow: auto;
-    clear: both;
+  overflow: auto;
+  clear: both;
 }
 
 .testimonial img {
-    float: left;
-    margin-right: 10px;
+  float: left;
+  margin-right: 10px;
 }
 
 /* Activity view */
@@ -149,27 +148,30 @@ body.overview #content {
 /* Android campaign style */
 
 #hello-free-droid {
-    background: url('/activities/android/robot.png') no-repeat top left transparent;
-    height: 200px;
-    width: 230px;
-    float: left;
-    margin-left: -6em;
-    margin-right: 1.5em;
+  background: url("/activities/android/robot.png") no-repeat top left
+    transparent;
+  height: 200px;
+  width: 230px;
+  float: left;
+  margin-left: -6em;
+  margin-right: 1.5em;
 
-    @media (min-width: @screen-md-min) {
-        position: absolute;
-        margin-left: -200px;
-        margin-top:-10em;
-    }
-    img {display: none;}
+  @media (min-width: @screen-md-min) {
+    position: absolute;
+    margin-left: -200px;
+    margin-top: -10em;
+  }
+  img {
+    display: none;
+  }
 }
 
 /* Valentine for ILOVEFS style */
 
 .valentine-ilovefs {
-    #logo {
-        background: url(/graphics/logov.svg) top left no-repeat;
-    }
+  #logo {
+    background: url(/graphics/logov.svg) top left no-repeat;
+  }
 }
 
 @import "fonts.less";
@@ -178,9 +180,8 @@ body.overview #content {
 /* PDFreaders buglist */
 
 tr.highlighted {
-  background-color: rgb(208,244,0);
+  background-color: rgb(208, 244, 0);
 }
-
 
 /* FSFE Shop (/order) */
 
@@ -207,10 +208,12 @@ table.merchandise {
     &.quantity {
       text-align: right;
       width: 15%;
-      min-width: 100px
+      min-width: 100px;
     }
     @media (max-width: @screen-xs-max) {
-      &.image, &.description, &.quantity {
+      &.image,
+      &.description,
+      &.quantity {
         display: block;
         width: auto;
       }
@@ -233,7 +236,7 @@ table.merchandise {
     color: black;
     text-align: center;
     width: 7em;
-    padding: .5em;
+    padding: 0.5em;
     background-color: #85bfe2;
     border: 1px solid black;
     position: absolute;
@@ -254,56 +257,54 @@ form.thankyou {
   margin-bottom: 10px;
 }
 
-
 /* Free Your Andoid pages */
 video#freeyourandroid {
-    max-width: 500px;
+  max-width: 500px;
 }
 
 .news-sidebar {
-    // there is no sidebar on mobile
-    display: none;
+  // there is no sidebar on mobile
+  display: none;
 }
 
 @media (min-width: @screen-md-min) {
-    .news-sidebar {
-        display: block;
-        padding-top: 5.1rem;
-    }
+  .news-sidebar {
+    display: block;
+    padding-top: 5.1rem;
+  }
 
-    .news-follow-us {
-        display: none;
-    }
+  .news-follow-us {
+    display: none;
+  }
 }
 
 #formnl {
+  select {
+    display: inline-block;
+    height: 45px;
+    line-height: 45px;
+    margin-right: 10px;
+    width: auto;
+  }
 
-    select {
-        display: inline-block;
-        height: 45px;
-        line-height: 45px;
-        margin-right: 10px;
-        width: auto;
-    }
+  input[type="text"],
+  input[type="email"] {
+    margin-top: 3px;
+    margin-bottom: 3px;
+  }
 
-    input[type="text"], input[type="email"] {
-      margin-top: 3px;
-      margin-bottom: 3px;
-    }
+  #submit {
+    .btn;
+    .btn-block;
+    .btn-primary;
+    display: inline-block;
+    font-size: 18px;
+    line-height: 24px;
+    padding: 6px 12px;
+    width: auto;
+  }
 
-    #submit {
-        .btn;
-        .btn-block;
-        .btn-primary;
-        display: inline-block;
-        font-size: 18px;
-        line-height: 24px;
-        padding: 6px 12px;
-        width: auto;
-    }
-
-    padding-bottom: 10px;
-
+  padding-bottom: 10px;
 }
 
 /* podcast transcript */

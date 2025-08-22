@@ -4,6 +4,8 @@ services:
       context: .
       dockerfile: pre-commit.Dockerfile
     image: fsfe-websites-pre-commit
+    volumes:
+      - ./:/website-source
   build:
     build:
       context: .

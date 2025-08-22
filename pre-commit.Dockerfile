@@ -29,13 +29,12 @@ ENV UV_PROJECT_ENVIRONMENT=/root/.cache/uv/venv
 ENV PATH="$UV_PROJECT_ENVIRONMENT/bin:$PATH"
 # Set the workdir
 WORKDIR /website-source
-
+# Allow git add operations and so forth
+RUN git config --global --add safe.directory /website-source
 # Copy the pyproject and build deps
 # Done in a seperate step for optimal docker caching
 COPY ./pyproject.toml .
 RUN uv sync --no-install-package fsfe_website_build --group dev
-# Copy everything else
-COPY . .
 
 ENTRYPOINT ["bash", "./pre-commit.entrypoint.sh"]
 

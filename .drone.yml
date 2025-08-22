@@ -20,7 +20,7 @@ steps:
     commands:
       - docker ps && echo "tampered with"
       - echo "DRONE_COMMIT_BRANCH ${DRONE_COMMIT_BRANCH}"
-      - docker compose -p fsfe-website-pre-commit run --remove-orphans --build pre-commit "origin/${DRONE_COMMIT_BRANCH}"
+      - docker compose --project-name fsfe-website-pre-commit run --remove-orphans --build pre-commit "origin/${DRONE_COMMIT_BRANCH}"
 
   - name: deploy-master
     image: docker:27.4.1
@@ -46,7 +46,7 @@ steps:
       # If we are in a cron job, then do a full rebuild
       # Ideally the cron would set the flag itself, but drone does not support that.
       - if [ "$DRONE_BUILD_EVENT" = "cron" ]; then EXTRA_FLAGS="--full"; fi
-      - docker compose -p fsfe-website-build run --remove-orphans --build build --target "$TARGET" $EXTRA_FLAGS
+      - docker compose --project-name fsfe-website-build run --remove-orphans --build build --target "$TARGET" $EXTRA_FLAGS
     when:
       branch:
         - master
@@ -77,7 +77,7 @@ steps:
       # If we are in a cron job, then do a full rebuild
       # Ideally the cron would set the flag itself, but drone does not support that.
       - if [ "$DRONE_BUILD_EVENT" = "cron" ]; then EXTRA_FLAGS="--full"; fi
-      - docker compose -p fsfe-website run --remove-orphans --build build --target "$TARGET" $EXTRA_FLAGS
+      - docker compose --project-name fsfe-website run --remove-orphans --build build --target "$TARGET" $EXTRA_FLAGS
     when:
       branch:
         - test
@@ -104,4 +104,4 @@ volumes:
       path: /run/user/1001/docker.sock
 ---
 kind: signature
-hmac: ca0491089162b9ba67148818d28d0dd46e58d506c69245d5fdb60e4e49df6981
+hmac: 02de5f6b24fa72033e90a6058bde32e36716cbcbf207d56b6677c73be3a93d14

@@ -140,7 +140,15 @@ lefthook install
 The hooks have some extra dependencies, at time of writing:
 
 ```
-ruff git xmllint sed file grep bash perl mediainfo curl mktemp
+ruff git xmllint sed file grep bash perl mediainfo curl mktemp prettier shfmt
+```
+
+If for some reason one cannot/does not want to install the deps locally, one can use docker, to run the precommit steps. This is how it is executed in CI.
+
+An example command is
+
+```sh
+docker compose run --remove-orphans --build pre-commit
 ```
 
 ## Testing

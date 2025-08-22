@@ -19,7 +19,7 @@ steps:
         path: /run/user/1001/docker.sock
     commands:
       - docker ps && echo "tampered with"
-      - docker compose -p fsfe-website-pre-commit run --remove-orphans --build pre-commit "${DRONE_BRANCH}"
+      - docker compose -p fsfe-website-pre-commit run --remove-orphans --build pre-commit "${DRONE_TARGET_BRANCH}"
 
   - name: deploy-master
     image: docker:27.4.1
@@ -103,4 +103,4 @@ volumes:
       path: /run/user/1001/docker.sock
 ---
 kind: signature
-hmac: f325227528c5652b019042171ec4314e293cd958deaed857c37bdde2f7889e41
+hmac: 57d13ae6aad3f5c9e4025f11d5def2f875831f561a45eaf910dcf240e62165b4

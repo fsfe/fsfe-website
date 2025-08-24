@@ -9,7 +9,6 @@ curl \
 file \
 findutils \
 git \
-git \
 grep \
 libxml2 \
 libxml2-utils \

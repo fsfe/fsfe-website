@@ -17,7 +17,11 @@ steps:
       # Mounting Docker socket of rootless docker user
       - name: dockersock
         path: /run/user/1001/docker.sock
+      - name: copied-source
+        path: /fsfe-website/mounted-source
     commands:
+      - rsync -a /drone/src/ /fsfe-website/mounted-source/
+      - cd /fsfe-website/mounted-source
       - docker ps && echo "tampered with"
       - echo "DRONE_COMMIT_BRANCH ${DRONE_COMMIT_BRANCH}"
       - docker compose --project-name fsfe-website-pre-commit run --remove-orphans --build pre-commit "origin/${DRONE_COMMIT_BRANCH}"
@@ -41,12 +45,16 @@ steps:
       # Mounting Docker socket of rootless docker user
       - name: dockersock
         path: /run/user/1001/docker.sock
+      - name: copied-source
+        path: /fsfe-website/mounted-source
     commands:
+      - cd /fsfe-website/mounted-source
       - docker ps && echo "tampered with"
       # If we are in a cron job, then do a full rebuild
       # Ideally the cron would set the flag itself, but drone does not support that.
       - if [ "$DRONE_BUILD_EVENT" = "cron" ]; then EXTRA_FLAGS="--full"; fi
       - docker compose --project-name fsfe-website-build run --remove-orphans --build build --target "$TARGET" $EXTRA_FLAGS
+      - rm -r /fsfe-website/mounted-source/*
     when:
       branch:
         - master
@@ -72,12 +80,16 @@ steps:
       # Mounting Docker socket of rootless docker user
       - name: dockersock
         path: /run/user/1001/docker.sock
+      - name: copied-source
+        path: /fsfe-website/mounted-source
     commands:
+      - cd /fsfe-website/mounted-source
       - docker ps && echo "tampered with"
       # If we are in a cron job, then do a full rebuild
       # Ideally the cron would set the flag itself, but drone does not support that.
       - if [ "$DRONE_BUILD_EVENT" = "cron" ]; then EXTRA_FLAGS="--full"; fi
       - docker compose --project-name fsfe-website run --remove-orphans --build build --target "$TARGET" $EXTRA_FLAGS
+      - rm -r /fsfe-website/mounted-source/*
     when:
       branch:
         - test
@@ -102,6 +114,11 @@ volumes:
   - name: dockersock
     host:
       path: /run/user/1001/docker.sock
+  - name: copied-source
+    host:
+      path: /tmp/fsfe-website-ci-cache
 ---
 kind: signature
-hmac: 02de5f6b24fa72033e90a6058bde32e36716cbcbf207d56b6677c73be3a93d14
+hmac: 0a5dd0a048e048665dc54e019703135a14aa39c476b7b84aa85223e77bdd6c41
+
+...

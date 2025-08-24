@@ -143,14 +143,6 @@ The hooks have some extra dependencies, at time of writing:
 ruff git xmllint sed file grep bash perl mediainfo curl mktemp prettier shfmt
 ```
 
-If for some reason one cannot/does not want to install the deps locally, one can use docker, to run the precommit steps. This is how it is executed in CI.
-
-An example command is
-
-```sh
-docker compose run --remove-orphans --build pre-commit
-```
-
 ## Testing
 
 While most small changes can be tested adequately by building locally some larger changes, particularly ones relating to the order pages, event registration and other forms may require more integrated testing. This can be achieved using the `test` branch. This branch is built and served in the same way as the main site, [fsfe.org](https://fsfe.org). The built version of the `test` branch may be viewed at [test.fsfe.org](https://test.fsfe.org).

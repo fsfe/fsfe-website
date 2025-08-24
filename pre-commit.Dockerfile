@@ -35,6 +35,8 @@ RUN git config --global --add safe.directory /website-source
 COPY ./pyproject.toml .
 RUN uv sync --no-install-package fsfe_website_build --group dev
 
+COPY . .
+
 ENTRYPOINT ["bash", "./pre-commit.entrypoint.sh"]
 
 

@@ -23,6 +23,8 @@ WORKDIR /website-source
 COPY ./pyproject.toml .
 RUN uv sync --no-install-package fsfe_website_build
 
+COPY . .
+
 ENTRYPOINT ["bash", "./build.entrypoint.sh"]
 
 

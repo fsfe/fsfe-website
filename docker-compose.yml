@@ -5,7 +5,7 @@ services:
       dockerfile: pre-commit.Dockerfile
     image: fsfe-websites-pre-commit
     volumes:
-      - ./:/website-source
+      - ${FSFE_WEBSITE_SOURCE_PATH:-./}:/website-source
   build:
     build:
       context: .
@@ -19,19 +19,19 @@ services:
       - 2400:2400
       - 2500:2500
     secrets:
-      - KEY_PRIVATE
-      - KEY_PASSWORD
-      - GIT_TOKEN
+      - FSFE_WEBSITE_KEY_PRIVATE
+      - FSFE_WEBSITE_KEY_PASSWORD
+      - FSFE_WEBSITE_GIT_TOKEN
     volumes:
-      - ./:/website-source
-      - ${VOLUME:-website-cached}:/website-cached
+      - ${FSFE_WEBSITE_SOURCE_PATH:-./}:/website-source
+      - ${FSFE_WEBSITE_VOLUME:-website-cached}:/website-cached
 volumes:
   website-cached:
   website-cached-master:
 secrets:
-  KEY_PRIVATE:
+  FSFE_WEBSITE_KEY_PRIVATE:
     environment: KEY_PRIVATE
-  KEY_PASSWORD:
+  FSFE_WEBSITE_KEY_PASSWORD:
     environment: KEY_PASSWORD
-  GIT_TOKEN:
+  FSFE_WEBSITE_GIT_TOKEN:
     environment: GIT_TOKEN

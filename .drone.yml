@@ -17,11 +17,7 @@ steps:
       # Mounting Docker socket of rootless docker user
       - name: dockersock
         path: /run/user/1001/docker.sock
-      - name: copied-source
-        path: /fsfe-website/mounted-source
     commands:
-      - rsync -a /drone/src/ /fsfe-website/mounted-source/
-      - cd /fsfe-website/mounted-source
       - docker ps && echo "tampered with"
       - echo "DRONE_COMMIT_BRANCH ${DRONE_COMMIT_BRANCH}"
       - docker compose --project-name fsfe-website-pre-commit run --remove-orphans --build pre-commit "origin/${DRONE_COMMIT_BRANCH}"
@@ -34,21 +30,18 @@ steps:
       DOCKER_HOST: "unix:///run/user/1001/docker.sock"
       # Target use ipv4 proxies for noddack and gahn, as ipv6 broken.
       TARGET: "www@proxy.noris.fsfeurope.org:fsfe.org/global/?10322,www@proxy.plutex.fsfeurope.org:fsfe.org/global/?10322"
-      KEY_PRIVATE:
+      FSFE_WEBSITE_KEY_PRIVATE:
         from_secret: KEY_PRIVATE
-      KEY_PASSWORD:
+      FSFE_WEBSITE_KEY_PASSWORD:
         from_secret: KEY_PASSWORD
-      GIT_TOKEN:
+      FSFE_WEBSITE_GIT_TOKEN:
         from_secret: BUILD_TOKEN
-      VOLUME: website-cached-master
+      FSFE_WEBSITE_VOLUME: website-cached-master
     volumes:
       # Mounting Docker socket of rootless docker user
       - name: dockersock
         path: /run/user/1001/docker.sock
-      - name: copied-source
-        path: /fsfe-website/mounted-source
     commands:
-      - cd /fsfe-website/mounted-source
       - docker ps && echo "tampered with"
       # If we are in a cron job, then do a full rebuild
       # Ideally the cron would set the flag itself, but drone does not support that.
@@ -70,20 +63,17 @@ steps:
       DOCKER_HOST: "unix:///run/user/1001/docker.sock"
       # Target use ipv4 proxies for noddack and gahn, as ipv6 broken.
       TARGET: "www@proxy.noris.fsfeurope.org:test.fsfe.org/global/?10322,www@proxy.plutex.fsfeurope.org:test.fsfe.org/global/?10322"
-      KEY_PRIVATE:
+      FSFE_WEBSITE_KEY_PRIVATE:
         from_secret: KEY_PRIVATE
-      KEY_PASSWORD:
+      FSFE_WEBSITE_KEY_PASSWORD:
         from_secret: KEY_PASSWORD
-      GIT_TOKEN:
+      FSFE_WEBSITE_GIT_TOKEN:
         from_secret: BUILD_TOKEN
     volumes:
       # Mounting Docker socket of rootless docker user
       - name: dockersock
         path: /run/user/1001/docker.sock
-      - name: copied-source
-        path: /fsfe-website/mounted-source
     commands:
-      - cd /fsfe-website/mounted-source
       - docker ps && echo "tampered with"
       # If we are in a cron job, then do a full rebuild
       # Ideally the cron would set the flag itself, but drone does not support that.
@@ -114,9 +104,6 @@ volumes:
   - name: dockersock
     host:
       path: /run/user/1001/docker.sock
-  - name: copied-source
-    host:
-      path: /tmp/fsfe-website-ci-cache
 ---
 kind: signature
-hmac: 0a5dd0a048e048665dc54e019703135a14aa39c476b7b84aa85223e77bdd6c41
+hmac: 911802035d9319a0cb22d998dbd183d27af75f6c5a6141ec8b9f0b7482f1e99b

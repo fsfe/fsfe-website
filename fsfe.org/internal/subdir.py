@@ -23,9 +23,11 @@ def run(languages: list[str], processes: int, working_dir: Path) -> None:
     raw_url = urlparse(
         "https://git.fsfe.org/FSFE/activities/raw/branch/master/activities.csv"
     )
-    git_token = os.environ.get("GIT_TOKEN")
+    git_token = os.environ.get("FSFE_WEBSITE_GIT_TOKEN")
     if git_token is None:
-        logger.warn("GIT_TOKEN is not set, skipping generation of activities file")
+        logger.warn(
+            "FSFE_WEBSITE_GIT_TOKEN is not set, skipping generation of activities file"
+        )
         return
 
     url = raw_url._replace(query=f"token={git_token}").geturl()

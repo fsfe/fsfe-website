@@ -6,8 +6,11 @@ import http.server
 import logging
 import multiprocessing
 import os
+import shutil
 import socketserver
 from pathlib import Path
+
+from fsfe_website_build.lib.misc import run_command
 
 logger = logging.getLogger(__name__)
 
@@ -33,7 +36,10 @@ def serve_websites(serve_dir: str, base_port: int, increment_number: int) -> Non
     serves = []
     for index, directory in enumerate(dirs):
         port = base_port + (increment_number * index)
-        logging.info(f"{directory.name} served at http://127.0.0.1:{port}")
+        url = f"http://127.0.0.1:{port}"
+        logging.info(f"{directory.name} served at {url}")
+        if shutil.which("xdg-open") is not None:
+            run_command(["xdg-open", url + "/index.en.html"])
         serves.append((str(directory), port))
     with multiprocessing.Pool(len(serves)) as pool:
         pool.starmap(_run_webserver, serves)

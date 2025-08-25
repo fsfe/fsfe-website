@@ -8,6 +8,7 @@ let
   inherit (pkgs) lib;
   treefmt-nixSrc = builtins.fetchTarball "https://github.com/numtide/treefmt-nix/archive/refs/heads/master.tar.gz";
   treefmt-nix = import treefmt-nixSrc;
+  python = pkgs.python313;
 in
 (pkgs.buildFHSEnv {
   name = "simple-env";
@@ -18,7 +19,7 @@ in
       # For getting python deps
       uv
       # Need to use a nix python to prevent ssl certs issues
-      python312
+      python313
       # needed by lxml
       libxslt
       libxml2
@@ -62,7 +63,7 @@ in
   runScript = pkgs.writeShellScript "fsfe-website-env" ''
     set -euo pipefail
     # Force uv to use Python interpreter from venv
-    export UV_PYTHON="${lib.getExe pkgs.python312}";
+    export UV_PYTHON="${lib.getExe python}";
     # Prevent uv from downloading managed Python's
     export UV_PYTHON_DOWNLOADS="never"
     uv venv

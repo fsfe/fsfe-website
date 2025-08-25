@@ -5,7 +5,6 @@
 import datetime
 import logging
 import multiprocessing
-import os
 from pathlib import Path
 
 import lxml.etree as etree
@@ -19,21 +18,14 @@ from fsfe_website_build.lib.misc import (
 logger = logging.getLogger(__name__)
 
 
-def _update_mtime(
-    file: Path,
-) -> None:
-    logger.debug(f"Updating mtime of {file}")
-    result = run_command(["git", "log", '--pretty="%ct"', "-1", file])
-    time = int(result.strip('"'))
-    os.utime(file, (time, time))
-
-
 def _generate_translation_data(lang: str, priority: int, file: Path) -> dict:
     page = get_basepath(file)
     ext = file.suffix.removeprefix(".")
     working_file = file.with_suffix("").with_suffix(f".{lang}.{ext}")
 
-    original_date = datetime.datetime.fromtimestamp(file.stat().st_mtime)
+    result = run_command(["git", "log", '--pretty="%ct"', "-1", file]).strip('"')
+    time = int(result)
+    original_date = datetime.datetime.fromtimestamp(time)
 
     original_version = str(get_version(file))
     translation_version = (
@@ -174,66 +166,60 @@ def run(languages: list[str], processes: int, working_dir: Path) -> None:
     target_dir = working_dir.joinpath("data/")
     logger.debug(f"Building index of status of translations into dir {target_dir}")
 
-    result = run_command(
-        ["git", "rev-parse", "--show-toplevel"],
-    )
-
     # TODO
     # Run generating all this stuff only if some xhtml|xml files have been changed
 
     # List files separated by a null bytes
-    result = run_command(
-        ["git", "ls-files", "-z", result],
+    all_git_tracked_files = run_command(
+        ["git", "ls-files", "-z"],
     )
 
-    with multiprocessing.Pool(processes) as pool:
-        pool.map(
-            _update_mtime,
-            filter(
-                lambda path: path.suffix in [".xhtml", ".xml"],
-                # Split on null bytes, strip and then parse into path
-                map(lambda line: Path(line.strip()), result.split("\x00")),
-            ),
+    all_files_with_translations = set(
+        filter(
+            lambda path: path.suffix in [".xhtml", ".xml"],
+            # Split on null bytes, strip and then parse into path
+            map(lambda line: Path(line.strip()), all_git_tracked_files.split("\x00")),
         )
-
+    )
+    priorities_and_searches = {
+        "1": [
+            "**/fsfe.org/index.en.xhtml",
+            "**/fsfe.org/freesoftware/freesoftware.en.xhtml",
+        ],
+        "2": ["**/fsfe.org/activities/*/activity.en.xml"],
+        "3": [
+            "**/fsfe.org/activities/*.en.xhtml",
+            "**/fsfe.org/activities/*.en.xml",
+            "**/fsfe.org/freesoftware/*.en.xhtml",
+            "**/fsfe.org/freesoftware/*.en.xml",
+        ],
+        "4": [
+            "**/fsfe.org/order/*.en.xml",
+            "**/fsfe.org/order/*.en.xhtml",
+            "**/fsfe.org/contribute/*.en.xml",
+            "**/fsfe.org/contribute/*.en.xhtml",
+        ],
+        "5": ["**/fsfe.org/order/**/*.en.xml", "**/fsfe.org/order/**/*.en.xhtml"],
+        # "6": ["**/fsfe.org/**/*.en.xml", "**/fsfe.org/**/*.en.xhtml"],
+    }
+    with multiprocessing.Pool(processes) as pool:
         # Generate our file lists by priority
         # Super hardcoded unfortunately
         files_by_priority = dict()
-        files_by_priority[1] = list(Path("fsfe.org/").glob("index.en.xhtml")) + list(
-            Path("fsfe.org/freesoftware/").glob("freesoftware.en.xhtml")
-        )
-        files_by_priority[2] = list(
-            Path("fsfe.org/activities/").glob("*/activity.en.xml")
-        )
-        files_by_priority[3] = (
-            list(Path("fsfe.org/activities/").glob("*.en.xhtml"))
-            + list(Path("fsfe.org/activities/").glob("*.en.xml"))
-            + list(Path("fsfe.org/freesoftware/").glob("*.en.xhtml"))
-            + list(Path("fsfe.org/freesoftware/").glob("*.en.xml"))
-        )
-        files_by_priority[4] = (
-            list(Path("fsfe.org/order/").glob("*.en.xml"))
-            + list(Path("fsfe.org/order/").glob("*.en.xhtml"))
-            + list(Path("fsfe.org/contribute/").glob("*.en.xml"))
-            + list(Path("fsfe.org/contribute/").glob("*.en.xhtml"))
-        )
-        files_by_priority[5] = list(Path("fsfe.org/order/").glob("**/*.en.xml")) + list(
-            Path("fsfe.org/order/").glob("**/*.en.xhtml")
-        )
-
-        # Make remove files from a priority if they already exist in a higher priority
-        for priority in sorted(files_by_priority.keys(), reverse=True):
-            files_by_priority[priority] = list(
-                filter(
-                    lambda path: not any(
-                        [
-                            (path in files_by_priority[priority])
-                            for priority in range(1, priority)
-                        ]
-                    ),
-                    files_by_priority[priority],
-                )
-            )
+        for file in all_files_with_translations:
+            for priority in priorities_and_searches:
+                if priority not in files_by_priority:
+                    files_by_priority[priority] = list()
+                # If any search matches,
+                # add it to that priority and skip all subsequent priorities
+                if any(
+                    [
+                        file.full_match(search)
+                        for search in priorities_and_searches[priority]
+                    ]
+                ):
+                    files_by_priority[priority].append(file)
+                    continue
 
         files_by_lang_by_prio = {}
         for lang in languages:

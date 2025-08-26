@@ -10,7 +10,12 @@
                 xmlns:content="http://purl.org/rss/1.0/modules/content/"
                 xmlns:atom="http://www.w3.org/2005/Atom">
 
-  <xsl:output method="xml" encoding="utf-8"/>
+  <xsl:output
+    doctype-system="about:legacy-compat"
+    encoding="utf-8"
+    indent="no"
+    method="xml"
+    omit-xml-declaration="yes" />
 
   <!-- ====== -->
   <!-- Months -->

@@ -5,7 +5,12 @@
   xmlns:str="http://exslt.org/strings"
   extension-element-prefixes="str">
 
-  <xsl:output method="text" encoding="utf-8" />
+  <xsl:output 
+    doctype-system="about:legacy-compat"
+    encoding="utf-8"
+    indent="no"
+    method="text"
+    omit-xml-declaration="yes" />
   <xsl:strip-space elements="body"/>
 
   <!-- new line template -->

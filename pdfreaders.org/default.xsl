@@ -3,7 +3,12 @@
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
   <xsl:import href="xslt/pdfreaders_head.xsl" />
   <xsl:import href="xslt/pdfreaders_body.xsl" />
-  <xsl:output method="html" omit-xml-declaration="yes" encoding="utf-8" doctype-system="about:legacy-compat" />
+  <xsl:output
+    doctype-system="about:legacy-compat"
+    encoding="utf-8"
+    indent="no"
+    method="html"
+    omit-xml-declaration="yes" />
 
   <xsl:include href="../build/xslt/fsfe_document.xsl" />
   <xsl:include href="xslt/pdfreaders_list.xsl" />

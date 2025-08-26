@@ -16,7 +16,12 @@
   <xsl:import href="../../build/xslt/gettext.xsl" />
   <xsl:import href="../../build/xslt/fsfe-cd.xsl" />
 
-  <xsl:output method="xml" encoding="utf-8"/>
+  <xsl:output
+    doctype-system="about:legacy-compat"
+    encoding="utf-8"
+    indent="no"
+    method="xml"
+    omit-xml-declaration="yes" />
 
   <!-- ====== -->
   <!-- Months -->

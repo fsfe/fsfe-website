@@ -4,18 +4,18 @@ version = "0.0.0"
 description = "Python tooling to build the fsfe websites"
 readme = "README.md"
 # Pinned to 3.12 as a known working version, that also has a prebuild wheel for tdewolff-minify
-requires-python = "==3.12.*"
+requires-python = "==3.13.*"
 dependencies = [
   # XML parser
-  "lxml==5.3.2",
+  "lxml==5.3.*",
   # For getting english language names of languages from two letter codes.
-  "python-iso639==2025.2.18",
+  "python-iso639==2025.2.*",
   # For stopwords for the search index
-  "nltk==3.9.1",
+  "nltk==3.9.*",
   # For minification html css and js
-  "tdewolff-minify==2.20.37",
+  "tdewolff-minify==2.23.*",
   # For HTTP requests
-  "requests==2.32.3",
+  "requests==2.32.*",
 ]
 
 [project.scripts]

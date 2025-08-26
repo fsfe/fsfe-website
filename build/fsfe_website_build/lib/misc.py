@@ -93,11 +93,8 @@ def run_command(commands: list) -> str:
         capture_output=True,
         # Get output as str instead of bytes
         text=True,
+        check=True,
     )
-    if result.returncode != 0:
-        logger.critical(f"Command {commands} failed with error")
-        logger.critical(result.stderr.strip())
-        sys.exit(1)
     return result.stdout.strip()
 
 

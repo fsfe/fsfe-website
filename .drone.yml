@@ -38,8 +38,6 @@ steps:
         from_secret: KEY_PASSWORD
       GIT_TOKEN:
         from_secret: BUILD_TOKEN
-      VOLUME:
-        website-cached-master
       PROJECT:
         fsfe-website-master
     volumes:
@@ -51,7 +49,7 @@ steps:
       - docker compose -p "$PROJECT" down 
       # If we are in a cron job, then do a full rebuild
       # Ideally the cron would set the flag itself, but drone does not support that.
-      - if [ "$DRONE_BUILD_EVENT" = "cron" ]; then EXTRA_FLAGS="--full"; fi 
+      - if [ "$DRONE_BUILD_EVENT" = "cron" ]; then EXTRA_FLAGS+="--full"; fi 
       - docker compose -p "$PROJECT" run --remove-orphans --build build --target "$TARGET" $EXTRA_FLAGS
     when:
       branch:
@@ -85,7 +83,7 @@ steps:
       - docker compose -p "$PROJECT" down
       # If we are in a cron job, then do a full rebuild
       # Ideally the cron would set the flag itself, but drone does not support that.
-      - if [ "$DRONE_BUILD_EVENT" = "cron" ]; then EXTRA_FLAGS="--full"; fi 
+      - if [ "$DRONE_BUILD_EVENT" = "cron" ]; then EXTRA_FLAGS+="--full"; fi 
       - docker compose -p "$PROJECT" run --remove-orphans --build build --target "$TARGET" $EXTRA_FLAGS
     when:
       branch:
@@ -113,6 +111,6 @@ volumes:
       path: /run/user/1001/docker.sock
 ---
 kind: signature
-hmac: 87655462136fa65c74274ca10b061cb77a306c120478c5d11884798d1265df0a
+hmac: ccd18458498ec0138ca2822435bcc2fae9d03e50ec23801303cc76f9c888a68b
 
 ...

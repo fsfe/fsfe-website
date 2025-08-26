@@ -11,7 +11,7 @@ It will
 5. Processes the file, and puts the result into the output dir with name `<name>.<lang>.<html>`.
 6. If the file name matches its parent directory name, IE it is in `<name>/<name>.<lang>.xhtml`, then generate an index symlink in the output dir.
 7. Generate symlinks from `<name>.<lang>.html` to `<name>.html.<lang>`, for [Apache Multiviews](https://httpd.apache.org/docs/current/content-negotiation.html) (how we handle choosing pages based on user browser language)
-8. Using some somewhat advanced XSL wizardry, Phase 2 is also able to build RSS and ICS files from XML data. The process of selecting stylesheets etc is the same as for XHTML>
+8. Using some somewhat advanced XSL wizardry, Phase 2 is also able to build RSS and ICS files from XML data. The process of selecting stylesheets etc is the same as for XHTML.
 9. Copies over any static files that are needed, like images, PDFs etc.
 
 After phase 2 is over we have a copy of all sites built. If the site was not staged then it is in the target directory if it was staged, then it is in the staging directory.

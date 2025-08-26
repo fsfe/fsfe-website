@@ -88,14 +88,22 @@ def lang_from_filename(file: Path) -> str:
 
 
 def run_command(commands: list) -> str:
-    result = subprocess.run(
-        commands,
-        capture_output=True,
-        # Get output as str instead of bytes
-        text=True,
-        check=True,
-    )
-    return result.stdout.strip()
+    try:
+        result = subprocess.run(
+            commands,
+            capture_output=True,
+            # Get output as str instead of bytes
+            text=True,
+            check=True,
+        )
+        return result.stdout.strip()
+    except subprocess.CalledProcessError as error:
+        logger.error(
+            f"Command: {error.cmd} returned non zero exit code {error.returncode}"
+            f"\nstdout: {error.stdout}"
+            f"\nstderr: {error.stderr}"
+        )
+        sys.exit(1)
 
 
 def get_version(file: Path) -> int:

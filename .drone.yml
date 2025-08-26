@@ -38,18 +38,19 @@ steps:
         from_secret: KEY_PASSWORD
       GIT_TOKEN:
         from_secret: BUILD_TOKEN
-      VOLUME:
-        website-cached-master
+      PROJECT:
+        fsfe-website-master
     volumes:
       # Mounting Docker socket of rootless docker user
       - name: dockersock
         path: /run/user/1001/docker.sock
     commands:
       - docker ps && echo "tampered with"
+      - docker compose -p "$PROJECT" down 
       # If we are in a cron job, then do a full rebuild
       # Ideally the cron would set the flag itself, but drone does not support that.
-      - if [ "$DRONE_BUILD_EVENT" = "cron" ]; then EXTRA_FLAGS="--full"; fi 
-      - docker compose -p fsfe-website run --remove-orphans --build build --target "$TARGET" $EXTRA_FLAGS
+      - if [ "$DRONE_BUILD_EVENT" = "cron" ]; then EXTRA_FLAGS+="--full"; fi 
+      - docker compose -p "$PROJECT" run --remove-orphans --build build --target "$TARGET" $EXTRA_FLAGS
     when:
       branch:
       - master
@@ -71,16 +72,19 @@ steps:
         from_secret: KEY_PASSWORD
       GIT_TOKEN:
         from_secret: BUILD_TOKEN
+      PROJECT:
+        fsfe-website-test
     volumes:
       # Mounting Docker socket of rootless docker user
       - name: dockersock
         path: /run/user/1001/docker.sock
     commands:
       - docker ps && echo "tampered with"
+      - docker compose -p "$PROJECT" down
       # If we are in a cron job, then do a full rebuild
       # Ideally the cron would set the flag itself, but drone does not support that.
-      - if [ "$DRONE_BUILD_EVENT" = "cron" ]; then EXTRA_FLAGS="--full"; fi 
-      - docker compose -p fsfe-website run --remove-orphans --build build --target "$TARGET" $EXTRA_FLAGS
+      - if [ "$DRONE_BUILD_EVENT" = "cron" ]; then EXTRA_FLAGS+="--full"; fi 
+      - docker compose -p "$PROJECT" run --remove-orphans --build build --target "$TARGET" $EXTRA_FLAGS
     when:
       branch:
       - test
@@ -107,6 +111,6 @@ volumes:
       path: /run/user/1001/docker.sock
 ---
 kind: signature
-hmac: eaf415ecd325569610b238585acc3b3b50beda5f33decdc4e4d7fe3f0ab08262
+hmac: ccd18458498ec0138ca2822435bcc2fae9d03e50ec23801303cc76f9c888a68b
 
 ...

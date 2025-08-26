@@ -48,7 +48,7 @@ steps:
         path: /run/user/1001/docker.sock
     commands:
       - docker ps && echo "tampered with"
-      - docker compose down -p "$PROJECT"
+      - docker compose -p "$PROJECT" down 
       # If we are in a cron job, then do a full rebuild
       # Ideally the cron would set the flag itself, but drone does not support that.
       - if [ "$DRONE_BUILD_EVENT" = "cron" ]; then EXTRA_FLAGS="--full"; fi 
@@ -82,7 +82,7 @@ steps:
         path: /run/user/1001/docker.sock
     commands:
       - docker ps && echo "tampered with"
-      - docker compose down -p "$PROJECT"
+      - docker compose -p "$PROJECT" down
       # If we are in a cron job, then do a full rebuild
       # Ideally the cron would set the flag itself, but drone does not support that.
       - if [ "$DRONE_BUILD_EVENT" = "cron" ]; then EXTRA_FLAGS="--full"; fi 
@@ -113,6 +113,6 @@ volumes:
       path: /run/user/1001/docker.sock
 ---
 kind: signature
-hmac: 56349a67fa663ef186a5733c07c8b47a837c7df49da20612cb28573c749b1d7c
+hmac: 87655462136fa65c74274ca10b061cb77a306c120478c5d11884798d1265df0a
 
 ...

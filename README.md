@@ -129,7 +129,7 @@ Some more explanation: we are essentially just using docker as a way to provide 
 
 ## Githooks
 
-The repo contains some highly recommended githooks using [lefthook](github.com/evilmartians/lefthook) that one should enable. They check for several kinds of common issues. They are also run in CI, so enabling them locally speeds the development feedback loop.
+The repo contains some highly recommended githooks using [lefthook](https://github.com/evilmartians/lefthook) that one should enable. They check for several kinds of common issues. They are also run in CI, so enabling them locally speeds the development feedback loop.
 
 Lefthook is installed as part of the python virtual environment. If using the `nix-shell` the hooks are automatically activated and all required dependencies installed. If not, one must install them using
 

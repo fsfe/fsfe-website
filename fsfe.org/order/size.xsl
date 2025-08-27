@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
-<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
-  <xsl:import href="../fsfe.xsl" />
-
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
+  <xsl:import href="../fsfe.xsl"/>
   <!-- Fill dynamic content -->
   <xsl:template match="dynamic-content">
-    <xsl:variable name="type"><xsl:value-of select="@type"/></xsl:variable>
-
+    <xsl:variable name="type">
+      <xsl:value-of select="@type"/>
+    </xsl:variable>
     <!-- Iterate through all items -->
     <xsl:for-each select="/buildinfo/document/set/item[@type=$type]">
       <xsl:sort select="@date" order="descending"/>
-      <xsl:variable name="id"><xsl:value-of select="@id"/></xsl:variable>
+      <xsl:variable name="id">
+        <xsl:value-of select="@id"/>
+      </xsl:variable>
       <xsl:variable name="name">
         <xsl:value-of select="/buildinfo/document/set/info[@id=$id]/name"/>
       </xsl:variable>
-
       <!-- Iterate through all sizes -->
       <xsl:for-each select="available">
         <xsl:element name="tr">

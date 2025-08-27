@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
-<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
-
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
   <xsl:template name="fsfe_pagefooter">
     <!-- Go to top -->
     <xsl:element name="nav">
@@ -13,18 +11,15 @@
         </xsl:call-template>
       </xsl:element>
     </xsl:element>
-
     <xsl:element name="footer">
-
       <xsl:element name="div">
         <xsl:attribute name="id">page-info</xsl:attribute>
-
         <xsl:element name="div">
-
           <!-- Social Media links -->
           <xsl:element name="p">
             <xsl:attribute name="class">share-buttons footer</xsl:attribute>
-            <xsl:element name="a"> <!-- Mastodon -->
+            <xsl:element name="a">
+              <!-- Mastodon -->
               <xsl:attribute name="href">
                 <xsl:text>https://mastodon.social/@fsfe</xsl:text>
               </xsl:attribute>
@@ -37,7 +32,8 @@
                 <xsl:attribute name="title">Mastodon</xsl:attribute>
               </xsl:element>
             </xsl:element>
-            <xsl:element name="a"> <!-- Peertube -->
+            <xsl:element name="a">
+              <!-- Peertube -->
               <xsl:attribute name="href">
                 <xsl:text>https://media.fsfe.org/a/fsfe/videos</xsl:text>
               </xsl:attribute>
@@ -51,7 +47,6 @@
               </xsl:element>
             </xsl:element>
           </xsl:element>
-
           <!-- Copyright notice -->
           <xsl:element name="p">
             <xsl:text>Copyright © 2001-2025 </xsl:text>
@@ -66,18 +61,14 @@
             </xsl:element>
             <xsl:text>.</xsl:text>
           </xsl:element>
-
           <!-- Usage permission -->
           <xsl:element name="p">
             <xsl:call-template name="fsfe-gettext">
               <xsl:with-param name="id" select="'permission'"/>
             </xsl:call-template>
           </xsl:element>
-
         </xsl:element>
-
         <xsl:element name="div">
-
           <!-- Contact -->
           <xsl:element name="p">
             <xsl:element name="a">
@@ -90,7 +81,6 @@
               </xsl:call-template>
             </xsl:element>
           </xsl:element>
-
           <!-- Jobs -->
           <xsl:element name="p">
             <xsl:element name="a">
@@ -103,7 +93,6 @@
               </xsl:call-template>
             </xsl:element>
           </xsl:element>
-
           <!-- Imprint and other legal stuff -->
           <xsl:element name="p">
             <xsl:element name="a">
@@ -136,18 +125,14 @@
               </xsl:call-template>
             </xsl:element>
           </xsl:element>
-
           <!-- Sister organisations -->
           <xsl:element name="p">
             <xsl:call-template name="fsfe-gettext">
               <xsl:with-param name="id" select="'fsfnetwork'"/>
             </xsl:call-template>
           </xsl:element>
-
         </xsl:element>
-
         <xsl:element name="div">
-
           <!-- Link to the XHTML source -->
           <xsl:element name="p">
             <xsl:element name="a">
@@ -164,7 +149,6 @@
               </xsl:call-template>
             </xsl:element>
           </xsl:element>
-
           <!-- Contribute to website -->
           <xsl:element name="p">
             <xsl:element name="a">
@@ -177,7 +161,6 @@
               </xsl:call-template>
             </xsl:element>
           </xsl:element>
-
           <!-- Contribute to translations -->
           <xsl:element name="p">
             <xsl:element name="a">
@@ -190,7 +173,6 @@
               </xsl:call-template>
             </xsl:element>
           </xsl:element>
-
           <!-- Appropriate translation notice -->
           <xsl:element name="p">
             <xsl:if test="/buildinfo/document/@language!=/buildinfo/@original">
@@ -228,7 +210,6 @@
               </xsl:call-template>
             </xsl:if>
           </xsl:element>
-
           <!-- Javascript licenses -->
           <xsl:element name="p">
             <xsl:element name="a">
@@ -242,11 +223,8 @@
               </xsl:call-template>
             </xsl:element>
           </xsl:element>
-
         </xsl:element>
-
       </xsl:element>
-
     </xsl:element>
   </xsl:template>
 </xsl:stylesheet>

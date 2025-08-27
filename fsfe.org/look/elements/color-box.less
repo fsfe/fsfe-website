@@ -6,7 +6,6 @@
 // ============================================================================
 
 div.color-box {
-
   // VARIANT 1: A coloured border around the content
   &.border {
     padding: 1em;
@@ -15,32 +14,31 @@ div.color-box {
 
     & > h2,
     & > div.grid-50-50 > div.box > h2,
-    & > section > h2
-    {
+    & > section > h2 {
       margin-top: 0;
     }
 
     // Pre-defined colours for border box
-    &[data-color=fsfe-darkblue] {
-      border-color: #202D79;
+    &[data-color="fsfe-darkblue"] {
+      border-color: #202d79;
     }
-    &[data-color=fsfe-blue] {
-      border-color: #3394CE;
+    &[data-color="fsfe-blue"] {
+      border-color: #3394ce;
     }
-    &[data-color=fsfe-blue] {
-      border-color: #4AD2F0;
+    &[data-color="fsfe-blue"] {
+      border-color: #4ad2f0;
     }
-    &[data-color=fsfe-lime] {
-      border-color: #D0F400;
+    &[data-color="fsfe-lime"] {
+      border-color: #d0f400;
     }
-    &[data-color=burnt-sienna] {
-      border-color: #F0684A;
+    &[data-color="burnt-sienna"] {
+      border-color: #f0684a;
     }
-    &[data-color=heliotrope] {
-      border-color: #BB4AF0;
+    &[data-color="heliotrope"] {
+      border-color: #bb4af0;
     }
-    &[data-color=screaming-green] {
-      border-color: #7FF04A;
+    &[data-color="screaming-green"] {
+      border-color: #7ff04a;
     }
   }
 
@@ -52,7 +50,8 @@ div.color-box {
     padding: 15px;
 
     // Move the headline closer to the box top, and thicker
-    h2, h3 {
+    h2,
+    h3 {
       margin-top: 0;
       font-weight: 700;
     }
@@ -94,14 +93,14 @@ div.color-box {
     }
 
     // Pre-defined colours for background box
-    &[data-color=android-lime] {
-      background-color: #A4C639;
+    &[data-color="android-lime"] {
+      background-color: #a4c639;
     }
-    &[data-color=android-blue] {
+    &[data-color="android-blue"] {
       background-color: #1c68a6;
     }
-    &[data-color=dark-green] {
-      background-color: #6BB340;
+    &[data-color="dark-green"] {
+      background-color: #6bb340;
     }
   }
 }

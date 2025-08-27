@@ -12,7 +12,7 @@ body {
 }
 
 [role="doc-noteref"]::after {
-  content: '[' counter(footnotes) ']';
+  content: "[" counter(footnotes) "]";
   vertical-align: super;
   font-size: 0.7em;
 }
@@ -23,21 +23,24 @@ body {
 }
 
 [role="doc-backlink"]::after {
-  content: '↩';
+  content: "↩";
 }
 
 /* class "fn" as backwards compatibility */
-a.fn, span.fn {
+a.fn,
+span.fn {
   vertical-align: super;
   font-size: 0.7em;
 }
 
 /* Hide headline of footnotes, but instead make a thin grey line */
 // we recommend #footnotes, but keep #fn as backwards compatibility
-h2#footnotes, h2#fn {
+h2#footnotes,
+h2#fn {
   display: none;
 }
-h2#footnotes + ol, h2#fn + ol {
+h2#footnotes + ol,
+h2#fn + ol {
   border-top: 1px solid @gray-lighter;
   font-size: 0.9em;
   margin: 2em 0;

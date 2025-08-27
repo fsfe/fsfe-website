@@ -1,49 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
-<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
-
-  <xsl:output
-    doctype-system="about:legacy-compat"
-    encoding="utf-8"
-    indent="no"
-    method="xml"
-    omit-xml-declaration="yes" />
-
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
+  <xsl:output doctype-system="about:legacy-compat" encoding="utf-8" indent="no" method="xml" omit-xml-declaration="yes"/>
   <xsl:param name="link"/>
-
   <xsl:template match="/html">
-    <xsl:text>&#xa;</xsl:text>
+    <xsl:text>
+</xsl:text>
     <xsl:comment> ***************************************************** </xsl:comment>
     <xsl:comment> This file has been automatically generated.           </xsl:comment>
     <xsl:comment> Please do not modify it, and do not commit it to git. </xsl:comment>
     <xsl:comment> ***************************************************** </xsl:comment>
-    <xsl:text>&#xa;</xsl:text>
-
+    <xsl:text>
+</xsl:text>
     <xsl:element name="newsset">
       <xsl:element name="news">
-
         <xsl:attribute name="date">
           <xsl:value-of select="/html/@newsdate"/>
         </xsl:attribute>
-
         <xsl:if test="/html/@type">
-          <xsl:attribute name ="type">
+          <xsl:attribute name="type">
             <xsl:value-of select="/html/@type"/>
           </xsl:attribute>
         </xsl:if>
-
         <xsl:element name="title">
           <xsl:value-of select="/html/head/title"/>
         </xsl:element>
-
         <xsl:element name="body">
           <xsl:copy-of select="/html/body/p[1]"/>
         </xsl:element>
-
         <xsl:element name="body-complete">
           <xsl:copy-of select="/html/body/node()"/>
         </xsl:element>
-
         <xsl:element name="image">
           <xsl:attribute name="url">
             <xsl:value-of select="/html/image/@url"/>
@@ -52,7 +38,6 @@
             <xsl:value-of select="/html/image/@alt"/>
           </xsl:attribute>
         </xsl:element>
-
         <xsl:element name="link">
           <xsl:variable name="the_link">
             <xsl:value-of select="/html/@link"/>
@@ -66,12 +51,10 @@
             </xsl:otherwise>
           </xsl:choose>
         </xsl:element>
-
-        <xsl:copy-of select="/html/tags" />
-        <xsl:copy-of select="/html/author" />
-        <xsl:copy-of select="/html/podcast" />
-        <xsl:copy-of select="/html/discussion" />
-
+        <xsl:copy-of select="/html/tags"/>
+        <xsl:copy-of select="/html/author"/>
+        <xsl:copy-of select="/html/podcast"/>
+        <xsl:copy-of select="/html/discussion"/>
       </xsl:element>
     </xsl:element>
   </xsl:template>

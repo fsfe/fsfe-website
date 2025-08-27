@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
-<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
-  <xsl:import href="../fsfe.xsl" />
-
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
+  <xsl:import href="../fsfe.xsl"/>
   <!-- Fill dynamic content -->
   <xsl:template match="activity-display">
     <xsl:variable name="highlight">
@@ -24,7 +22,7 @@
                 <xsl:for-each select="/buildinfo/document/set/activity [(order/@highlight = 'yes') and (tags/tag/@key = $tag) and not (tags/tag/@key = 'hide')]">
                   <xsl:sort select="order/@priority" order="descending"/>
                   <xsl:sort select="@date" order="descending"/>
-                  <xsl:call-template name="activity" />
+                  <xsl:call-template name="activity"/>
                 </xsl:for-each>
               </xsl:when>
               <!-- all tags -->
@@ -32,7 +30,7 @@
                 <xsl:for-each select="/buildinfo/document/set/activity [(order/@highlight = 'yes') and not (tags/tag/@key = 'hide')]">
                   <xsl:sort select="order/@priority" order="descending"/>
                   <xsl:sort select="@date" order="descending"/>
-                  <xsl:call-template name="activity" />
+                  <xsl:call-template name="activity"/>
                 </xsl:for-each>
               </xsl:otherwise>
             </xsl:choose>
@@ -48,7 +46,7 @@
                 <xsl:for-each select="/buildinfo/document/set/activity [(order/@highlight != 'yes' or not(order/@highlight)) and tags/tag/@key = $tag and not (tags/tag/@key = 'hide')]">
                   <xsl:sort select="order/@priority" order="descending"/>
                   <xsl:sort select="@date" order="descending"/>
-                  <xsl:call-template name="activity" />
+                  <xsl:call-template name="activity"/>
                 </xsl:for-each>
               </xsl:when>
               <!-- all tags -->
@@ -56,7 +54,7 @@
                 <xsl:for-each select="/buildinfo/document/set/activity [(order/@highlight != 'yes' or not(order/@highlight)) and not (tags/tag/@key = 'hide')]">
                   <xsl:sort select="order/@priority" order="descending"/>
                   <xsl:sort select="@date" order="descending"/>
-                  <xsl:call-template name="activity" />
+                  <xsl:call-template name="activity"/>
                 </xsl:for-each>
               </xsl:otherwise>
             </xsl:choose>
@@ -65,7 +63,6 @@
       </xsl:choose>
     </xsl:element>
   </xsl:template>
-
   <xsl:template name="activity">
     <xsl:element name="li">
       <!-- Logo -->
@@ -81,7 +78,6 @@
           <xsl:attribute name="class">activitylogo</xsl:attribute>
         </xsl:element>
       </xsl:if>
-
       <xsl:element name="div">
         <!-- Title -->
         <xsl:element name="h3">
@@ -94,17 +90,19 @@
           <xsl:if test="@status = 'finished'">
             <xsl:element name="span">
               <xsl:attribute name="class">status</xsl:attribute>
-              <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'finished'" /></xsl:call-template>
+              <xsl:call-template name="fsfe-gettext">
+                <xsl:with-param name="id" select="'finished'"/>
+              </xsl:call-template>
             </xsl:element>
           </xsl:if>
         </xsl:element>
-
         <!-- Description -->
         <xsl:element name="p">
           <xsl:apply-templates select="description/node()"/>
         </xsl:element>
-      </xsl:element> <!-- /div -->
-    </xsl:element> <!-- /li -->
+      </xsl:element>
+      <!-- /div -->
+    </xsl:element>
+    <!-- /li -->
   </xsl:template>
-
 </xsl:stylesheet>

@@ -6,12 +6,10 @@
 }:
 let
   inherit (pkgs) lib;
-  treefmt-nixSrc = builtins.fetchTarball "https://github.com/numtide/treefmt-nix/archive/refs/heads/master.tar.gz";
-  treefmt-nix = import treefmt-nixSrc;
   python = pkgs.python313;
 in
 (pkgs.buildFHSEnv {
-  name = "simple-env";
+  name = "fsfe-website-env";
   # Installed for host pc only
   targetPkgs =
     pkgs:
@@ -19,7 +17,7 @@ in
       # For getting python deps
       uv
       # Need to use a nix python to prevent ssl certs issues
-      python313
+      python
       # needed by lxml
       libxslt
       libxml2
@@ -30,30 +28,12 @@ in
       # Needed for compiling minifiers
       libffi
       go
-      # Formatter
-      (treefmt-nix.mkWrapper pkgs {
-        # Used to find the project root
-        projectRootFile = "shell.nix";
-        enableDefaultExcludes = true;
-        programs = {
-          ruff-check.enable = true;
-          ruff-format.enable = true;
-          nixfmt.enable = true;
-        };
-        settings = {
-          global = {
-            on-unmatched = "debug";
-            excludes = [
-              ".nltk_data"
-              ".venv"
-            ];
-          };
-        };
-      })
       # Packages for git hooks
       mediainfo
       perl
       file
+      shfmt
+      prettier
     ]);
   # Installed for every architecture: only install the lib outputs
   multiPkgs =
@@ -66,7 +46,15 @@ in
     export UV_PYTHON="${lib.getExe python}";
     # Prevent uv from downloading managed Python's
     export UV_PYTHON_DOWNLOADS="never"
-    uv venv
-    bash --rcfile .venv/bin/activate "$@"
+    # Install the venv, clearing old ones
+    uv venv --clear
+    # install project + dev extras
+    uv sync --group dev
+    # activate the venv in the *current* shell
+    source .venv/bin/activate
+    # install your git hooks
+    lefthook install
+    # hand control over to the caller (or start a shell)
+    exec ''\${@:-bash}
   '';
 }).env

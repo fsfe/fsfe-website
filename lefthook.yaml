@@ -1,0 +1,60 @@
+output:
+  - meta # Print lefthook version
+  - summary # Print summary block (successful and failed steps)
+  - empty_summary # Print summary heading when there are no steps to run
+  - success # Print successful steps
+  - failure # Print failed steps printing
+  - skips # Print "skip" (i.e. no files matched)
+
+pre-commit:
+  commands:
+    ruff-check:
+      glob: "*.py"
+      run: ruff check --fix {staged_files}
+      stage_fixed: true
+    ruff-format:
+      glob: "*.py"
+      run: ruff format {staged_files}
+      stage_fixed: true
+    shfmt:
+      glob: "*.sh"
+      run: shfmt --write {staged_files}
+      stage_fixed: true
+    prettier:
+      glob:
+        - "*.css"
+        - "*.html"
+        - "*.js"
+        - "*.json"
+        - "*.less"
+        - "*.md"
+        - "*.scss"
+        - "*.yaml"
+        - "*.yml"
+      run: prettier --write {staged_files}
+      stage_fixed: true
+    taplo:
+      glob: "*.toml"
+      run: taplo format {staged_files}
+      stage_fixed: true
+    format-xsl:
+      glob: "*.xsl"
+      run: for file in {staged_files}; do xmllint --format "$file" --output "$file"; done
+      stage_fixed: true
+    custom-check:
+      glob:
+        - "*.html"
+        - "*.xml"
+        - "*.xhtml"
+      run: tools/ci-checks/general.sh {staged_files}
+    non-en-frontpage-news:
+      glob:
+        - "*.xml"
+        - "*.xhtml"
+      run: tools/ci-checks/check-non-en-frontpage.sh {staged_files}
+    simple-syntax-check:
+      glob:
+        - "*.xml"
+        - "*.xhtml"
+        - "*.xsl"
+      run: xmllint --noout {staged_files}

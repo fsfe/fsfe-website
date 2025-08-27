@@ -21,7 +21,8 @@ div.toc {
   }
 
   // Smaller paddings for sub-levels
-  ol, ul {
+  ol,
+  ul {
     ol {
       padding-left: 15px;
     }
@@ -46,7 +47,7 @@ div.toc {
     // automatically count the list items cleverly like "1.2.3 myitem"
     counter-reset: item;
     > li:before {
-      content: counters(item, ".")" ";
+      content: counters(item, ".") " ";
       counter-increment: item;
       margin-right: 0.2em;
     }

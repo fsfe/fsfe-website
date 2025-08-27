@@ -1,28 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <!-- ====================================================================== -->
 <!-- XML tag for obfuscating an email address against scaper bots           -->
 <!-- ====================================================================== -->
-
-<xsl:stylesheet version="1.0"
-                xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-                xmlns:exsl="http://exslt.org/common">
-
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:exsl="http://exslt.org/common" version="1.0">
   <xsl:import href="../../tools/xsltsl/tokenize.xsl"/>
-
   <!-- plain email is the input -->
   <xsl:template name="email" match="email">
-    <xsl:param name="email" select="." />
-    <xsl:param name="mailto" select="@mailto" />
-
+    <xsl:param name="email" select="."/>
+    <xsl:param name="mailto" select="@mailto"/>
     <!-- Split email on each character, creating a <token>character</token> element each -->
     <xsl:variable name="email-tokens">
       <xsl:call-template name="tokenize">
-        <xsl:with-param name="string" select="$email" />
-        <xsl:with-param name="delimiters" select="''" />
+        <xsl:with-param name="string" select="$email"/>
+        <xsl:with-param name="delimiters" select="''"/>
       </xsl:call-template>
     </xsl:variable>
-
     <!-- Replace the most common characters (with 4 exceptions) with their respective HTML entity or Hex -->
     <xsl:variable name="email-encoded">
       <xsl:for-each select="exsl:node-set($email-tokens)/token">
@@ -77,12 +69,12 @@
             <xsl:text>;</xsl:text>
           </xsl:when>
           <xsl:otherwise>
-            <xsl:value-of select="text()" />
+            <xsl:value-of select="text()"/>
           </xsl:otherwise>
         </xsl:choose>
       </xsl:for-each>
-    </xsl:variable> <!-- /$email-encoded -->
-
+    </xsl:variable>
+    <!-- /$email-encoded -->
     <!-- Output email address in desired form -->
     <xsl:choose>
       <!-- Should be a clickable mailto: link -->
@@ -92,17 +84,15 @@
           attribute. Therefore, the a element is created "manually"
         -->
         <xsl:text disable-output-escaping="yes">&lt;a href="mailto:</xsl:text>
-        <xsl:value-of select="$email-encoded" disable-output-escaping="yes" />
+        <xsl:value-of select="$email-encoded" disable-output-escaping="yes"/>
         <xsl:text disable-output-escaping="yes">"&gt;</xsl:text>
-        <xsl:value-of select="$email-encoded" disable-output-escaping="yes" />
+        <xsl:value-of select="$email-encoded" disable-output-escaping="yes"/>
         <xsl:text disable-output-escaping="yes">&lt;/a&gt;</xsl:text>
       </xsl:when>
       <!-- Default: just the obfuscated email address as string -->
       <xsl:otherwise>
-        <xsl:value-of select="$email-encoded" disable-output-escaping="yes" />
+        <xsl:value-of select="$email-encoded" disable-output-escaping="yes"/>
       </xsl:otherwise>
     </xsl:choose>
-
   </xsl:template>
-
 </xsl:stylesheet>

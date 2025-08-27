@@ -21,19 +21,15 @@ LANGUAGE=
 NO_ACT=0
 VERBOSE=0
 
-log()
-# log LVL MESSAGE
-{
+log() { # log LVL MESSAGE
 	local min_lvl="$1"
 	shift
-	if [[ VERBOSE -ge min_lvl ]]
-	then
+	if [[ VERBOSE -ge min_lvl ]]; then
 		echo "$@" >&2
 	fi
 }
 
-print_help()
-{
+print_help() {
 	cat <<EOF >&2
 Usage: tagstool OPTIONS --find-tags TAG..
        tagstool OPTIONS --remove-tags TAG..
@@ -65,40 +61,32 @@ Actions (only one action per invocation):
 EOF
 }
 
-performAction()
-# performAction CMD ARGS..
-# Perform the given command, if NO_ACT is not set.
-# If VERBOSE is set, also print the command.
-# Please use this for all actions that perform a change on the data!
-{
+performAction() { # performAction CMD ARGS..
+	# Perform the given command, if NO_ACT is not set.
+	# If VERBOSE is set, also print the command.
+	# Please use this for all actions that perform a change on the data!
 	log 1 "${@@Q}"
-	if [[ NO_ACT -eq 1 ]]
-	then
+	if [[ NO_ACT -eq 1 ]]; then
 		echo "NOT calling $1..." >&2
 	else
 		"$@"
 	fi
 }
 
-findTaggedFiles()
-# findTaggedFiles TAG_ID
-# grep for files containing the tag
-{
+findTaggedFiles() { # findTaggedFiles TAG_ID
+	# grep for files containing the tag
 	local tagId="$1"
 	git grep -i --files-with-matches -E "<tag\s+key=[\"']$tagId[\"']"
 }
 
-fileIsLanguage()
-# fileIsLanguage FILE LANGUAGE
-# Check the language of a file based on its filename
-# If the filename matches the language or if the language is an empty string, return true,
-# otherwise return false.
-{
+fileIsLanguage() { # fileIsLanguage FILE LANGUAGE
+	# Check the language of a file based on its filename
+	# If the filename matches the language or if the language is an empty string, return true,
+	# otherwise return false.
 	# remove filename until first "."
 	local suffix="${1#*.}"
 	local language="$2"
-	if [[ -z "$language" ]]
-	then
+	if [[ -z "$language" ]]; then
 		return 0
 	fi
 	# greedily remove from back to the leftmost "."
@@ -106,98 +94,77 @@ fileIsLanguage()
 	[[ "$pre_suffix" == "$language" ]]
 }
 
-renameTag()
-# renameTag OLD NEW
-# rename the tag using case-insensitive matching in all files.
-# Global variables: LANGUAGE
-{
+renameTag() { # renameTag OLD NEW
+	# rename the tag using case-insensitive matching in all files.
+	# Global variables: LANGUAGE
 	local oldTagId="$1"
 	local newTagId="$2"
 	echo "Renaming tag $oldTagId to $newTagId..." >&2
-	for f in $(findTaggedFiles "$oldTagId")
-	do
-		if ! fileIsLanguage "$f" "$LANGUAGE"
-		then
+	for f in $(findTaggedFiles "$oldTagId"); do
+		if ! fileIsLanguage "$f" "$LANGUAGE"; then
 			log 2 "Ignoring file (language filter): $f"
 			continue
 		fi
 		echo "  $f" >&2
-		if ! performAction sed -E -i "s;<tag\s+key=[\"']$oldTagId[\"']\s*(/?)>;<tag key=\"$newTagId\"\1>;i" "$f"
-		then
+		if ! performAction sed -E -i "s;<tag\s+key=[\"']$oldTagId[\"']\s*(/?)>;<tag key=\"$newTagId\"\1>;i" "$f"; then
 			echo "ERROR!" >&2
 			return 1
 		fi
 	done
 }
 
-removeTag()
-# removeTag TAG
-# remove the tag id in all files
-# this will result in additional empty lines
-# Global variables: LANGUAGE
-{
+removeTag() { # removeTag TAG
+	# remove the tag id in all files
+	# this will result in additional empty lines
+	# Global variables: LANGUAGE
 	local tagId="$1"
 	echo "Deleting tag $tagId..." >&2
-	for f in $(findTaggedFiles "$tagId")
-	do
-		if ! fileIsLanguage "$f" "$LANGUAGE"
-		then
+	for f in $(findTaggedFiles "$tagId"); do
+		if ! fileIsLanguage "$f" "$LANGUAGE"; then
 			log 2 "Ignoring file (language filter): $f"
 			continue
 		fi
 		echo "  $f" >&2
 		# regexp summary:
 		# /on lines with the tag/ { remove the tag ; if /line empty?/ then delete the entire line }
-		if ! performAction sed -E -i "/tag\s+key=[\"']$tagId[\"']/ { s;\s*<tag\s+key=[\"']$tagId[\"']\s*((/>)|([^/<]*</tag>))\s*;;i ; /^$/d }" "$f"
-		then
+		if ! performAction sed -E -i "/tag\s+key=[\"']$tagId[\"']/ { s;\s*<tag\s+key=[\"']$tagId[\"']\s*((/>)|([^/<]*</tag>))\s*;;i ; /^$/d }" "$f"; then
 			echo "ERROR!" >&2
 			return 1
 		fi
 	done
 }
 
-setTagLabel()
-# setTagLabel TagId Label
-# Global Variables: FORCE, LANGUAGE
-{
+setTagLabel() { # setTagLabel TagId Label
+	# Global Variables: FORCE, LANGUAGE
 	local TagId="$1"
 	local Label="$2"
 	# regexp part to force content:
 	local re_force_content=
-	if [[ FORCE -eq 1 ]]
-	then
+	if [[ FORCE -eq 1 ]]; then
 		re_force_content="|([^<]*</tag>)"
 	fi
 	echo "Setting label for tag $TagId to $Label.." >&2
-	for f in $(findTaggedFiles "$TagId")
-	do
+	for f in $(findTaggedFiles "$TagId"); do
 		# language is not empty
-		if ! fileIsLanguage "$f" "$LANGUAGE"
-		then
+		if ! fileIsLanguage "$f" "$LANGUAGE"; then
 			log 2 "Ignoring file (language filter): $f"
 			continue
 		fi
 		echo "  $f" >&2
-		if ! performAction sed -E -i "s;<tag\s+key=[\"']$TagId[\"']\s*((/>)$re_force_content)\s*;<tag key=\"$TagId\">$Label</tag>;i" "$f"
-		then
+		if ! performAction sed -E -i "s;<tag\s+key=[\"']$TagId[\"']\s*((/>)$re_force_content)\s*;<tag key=\"$TagId\">$Label</tag>;i" "$f"; then
 			echo "ERROR!" >&2
 			return 1
 		fi
 	done
 }
 
-action_findTags()
-# action_findTags TAGS..
-# find all files containing the given tags
-# If language is set, limit to the given language.
-# Global variables: LANGUAGE
-{
-	for tagId
-	do
-		for f in $(findTaggedFiles "$tagId")
-		do
-			if fileIsLanguage "$f" "$LANGUAGE"
-			then
+action_findTags() { # action_findTags TAGS..
+	# find all files containing the given tags
+	# If language is set, limit to the given language.
+	# Global variables: LANGUAGE
+	for tagId; do
+		for f in $(findTaggedFiles "$tagId"); do
+			if fileIsLanguage "$f" "$LANGUAGE"; then
 				echo "$f"
 			else
 				log 2 "Ignoring file (language filter): $f"
@@ -206,37 +173,28 @@ action_findTags()
 	done | sort -u
 }
 
-action_removeTags()
-# action_removeTags TAG..
-# Remove the given tags from all files
-# Global variables: LANGUAGE (indirect)
-{
-	for tagId
-	do
+action_removeTags() { # action_removeTags TAG..
+	# Remove the given tags from all files
+	# Global variables: LANGUAGE (indirect)
+	for tagId; do
 		removeTag "$tagId"
 	done
 }
 
-action_renameTag()
-# action_renameTag OLD NEW
-# Rename the old tag to new.
-# Global variables: LANGUAGE (indirect)
-{
-	if [[ "$#" -ne 2 ]]
-	then
+action_renameTag() { # action_renameTag OLD NEW
+	# Rename the old tag to new.
+	# Global variables: LANGUAGE (indirect)
+	if [[ "$#" -ne 2 ]]; then
 		echo "Error: expected 2 arguments, got $#." >&2
 		return 1
 	fi
 	renameTag "$1" "$2"
 }
 
-action_setLabel()
-# action_setLabel TAG
-# Global variables: FORCE, LABEL, LANGUAGE
-{
+action_setLabel() { # action_setLabel TAG
+	# Global variables: FORCE, LABEL, LANGUAGE
 	local TagId="$1"
-	if [[ -z "${LANGUAGE}" || -n "${LANGUAGE/??}" ]]
-	then
+	if [[ -z "${LANGUAGE}" || -n "${LANGUAGE/??/}" ]]; then
 		echo "Language must be a two-letter ISO 639-1 code!" >&2
 		return 1
 	fi
@@ -247,28 +205,65 @@ action_setLabel()
 # Parse commandline:
 ###
 
-TEMP=`getopt -o hnv \
-      --long find-tags,force,help,language:,no-act,remove-tags,rename-tag,set-label:,verbose \
-      -n 'tagtool' -- "$@"`
+TEMP=$(getopt -o hnv \
+	--long find-tags,force,help,language:,no-act,remove-tags,rename-tag,set-label:,verbose \
+	-n 'tagtool' -- "$@")
 
-if [ $? != 0 ] ; then echo "Terminating..." >&2 ; exit 1 ; fi
+if [ $? != 0 ]; then
+	echo "Terminating..." >&2
+	exit 1
+fi
 
 # Note the quotes around `$TEMP': they are essential!
 eval set -- "$TEMP"
 
-while true ; do
+while true; do
 	case "$1" in
-		--find-tags) ACTION=action_findTags ; shift ;;
-		--force) FORCE=1 ; shift ;;
-		-h|--help) print_help ; exit ;;
-		--language) LANGUAGE="$2" ; shift 2 ;;
-		-n|--no-act) NO_ACT=1 ; shift ;;
-		--remove-tags) ACTION=action_removeTags ; shift ;;
-		--rename-tag) ACTION=action_renameTag ; shift ;;
-		--set-label) ACTION=action_setLabel ; LABEL="$2" ; shift 2 ;;
-		-v|--verbose) let VERBOSE++ ; shift ;;
-		--) shift ; break ;;
-		*) echo "Internal error!" ; exit 1 ;;
+	--find-tags)
+		ACTION=action_findTags
+		shift
+		;;
+	--force)
+		FORCE=1
+		shift
+		;;
+	-h | --help)
+		print_help
+		exit
+		;;
+	--language)
+		LANGUAGE="$2"
+		shift 2
+		;;
+	-n | --no-act)
+		NO_ACT=1
+		shift
+		;;
+	--remove-tags)
+		ACTION=action_removeTags
+		shift
+		;;
+	--rename-tag)
+		ACTION=action_renameTag
+		shift
+		;;
+	--set-label)
+		ACTION=action_setLabel
+		LABEL="$2"
+		shift 2
+		;;
+	-v | --verbose)
+		let VERBOSE++
+		shift
+		;;
+	--)
+		shift
+		break
+		;;
+	*)
+		echo "Internal error!"
+		exit 1
+		;;
 	esac
 done
 
@@ -276,8 +271,7 @@ done
 # Perform action:
 ###
 
-if [ -z "$ACTION" ]
-then
+if [ -z "$ACTION" ]; then
 	echo "No action chosen!" >&2
 	print_help
 	exit 1

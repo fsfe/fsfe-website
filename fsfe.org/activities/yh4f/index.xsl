@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
-<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
-  <xsl:import href="../../fsfe.xsl" />
-  <xsl:import href="../../../build/xslt/countries.xsl" />
-
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
+  <xsl:import href="../../fsfe.xsl"/>
+  <xsl:import href="../../../build/xslt/countries.xsl"/>
   <!-- Dropdown list of countries requiring a choice -->
   <!-- when copying this, remember importing the xsl, and editing the .source file -->
   <xsl:template match="country-list">
@@ -13,14 +11,12 @@
       <xsl:with-param name="subset" select="'yh4f'"/>
     </xsl:call-template>
   </xsl:template>
-
   <!-- "Videobox" (provisional name) with YH4F/related talks -->
   <xsl:template match="talks">
-
     <figure id="yh4f-figure">
       <div>
         <div id="yh4f-iframe-container">
-          <iframe id="yh4f-iframe" src="https://media.fsfe.org/videos/embed/0dbe49c1-bd7d-44ca-bb97-1b922b3e110e" frameborder="0" allowfullscreen="" sandbox="allow-same-origin allow-scripts allow-popups allow-forms" />
+          <iframe id="yh4f-iframe" src="https://media.fsfe.org/videos/embed/0dbe49c1-bd7d-44ca-bb97-1b922b3e110e" frameborder="0" allowfullscreen="" sandbox="allow-same-origin allow-scripts allow-popups allow-forms"/>
         </div>
       </div>
       <figcaption id="yh4f-slideshow-caption">
@@ -29,7 +25,6 @@
         <button onclick="nextVideo();">→</button>
       </figcaption>
     </figure>
-
     <script type="text/javascript">
       /* &lt;![CDATA[ */
       var videos = [

@@ -1,0 +1,19 @@
+# Generated files from gitignore
+# Local build stuff
+output
+# Python stuff
+.venv
+__pycache__
+#Nltk
+.nltk_data
+
+# In repo external sources
+fsfe.org/look/bootstrap
+fsfe.org/scripts/bootstrap
+fsfe.org/scripts/data-tables
+fsfe.org/scripts/jquery.validate-localization
+
+# Minimised stuff
+*.min.*
+# This is used to signify some minified js
+*.custom.*

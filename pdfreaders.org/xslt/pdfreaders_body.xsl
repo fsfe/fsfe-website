@@ -1,21 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
-<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
-
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
   <!-- Prefix for links to FSFE's main website -->
   <xsl:variable name="urlprefix">https://fsfe.org</xsl:variable>
-
-  <xsl:include href="../../build/xslt/notifications.xsl" />
-  <xsl:include href="../../build/xslt/translation_list.xsl" />
-  <xsl:include href="../../build/xslt/fsfe_pagefooter.xsl" />
-  <xsl:include href="../../build/xslt/gettext.xsl" />
-  <xsl:include href="../../build/xslt/static-elements.xsl" />
-
+  <xsl:include href="../../build/xslt/notifications.xsl"/>
+  <xsl:include href="../../build/xslt/translation_list.xsl"/>
+  <xsl:include href="../../build/xslt/fsfe_pagefooter.xsl"/>
+  <xsl:include href="../../build/xslt/gettext.xsl"/>
+  <xsl:include href="../../build/xslt/static-elements.xsl"/>
   <xsl:template name="page-body">
     <xsl:element name="body">
       <xsl:element name="header">
         <xsl:attribute name="id">top</xsl:attribute>
-
         <xsl:element name="div">
           <xsl:attribute name="id">logo</xsl:attribute>
           <xsl:element name="a">
@@ -26,7 +21,6 @@
             </xsl:element>
           </xsl:element>
         </xsl:element>
-
         <xsl:element name="div">
           <xsl:attribute name="id">fsfe-logo</xsl:attribute>
           <xsl:element name="a">
@@ -36,9 +30,7 @@
             </xsl:element>
           </xsl:element>
         </xsl:element>
-
-        <xsl:call-template name="translation_list" />
-
+        <xsl:call-template name="translation_list"/>
         <xsl:element name="div">
           <xsl:attribute name="id">menu</xsl:attribute>
           <xsl:element name="ul">
@@ -46,7 +38,7 @@
               <xsl:element name="a">
                 <xsl:attribute name="href">index.html</xsl:attribute>
                 <xsl:call-template name="fsfe-gettext">
-                  <xsl:with-param name="id" select="'pdfreaders-head-readers'" />
+                  <xsl:with-param name="id" select="'pdfreaders-head-readers'"/>
                 </xsl:call-template>
               </xsl:element>
             </xsl:element>
@@ -54,7 +46,7 @@
               <xsl:element name="a">
                 <xsl:attribute name="href">os.html</xsl:attribute>
                 <xsl:call-template name="fsfe-gettext">
-                  <xsl:with-param name="id" select="'pdfreaders-head-standards'" />
+                  <xsl:with-param name="id" select="'pdfreaders-head-standards'"/>
                 </xsl:call-template>
               </xsl:element>
             </xsl:element>
@@ -62,7 +54,7 @@
               <xsl:element name="a">
                 <xsl:attribute name="href">graphics.html</xsl:attribute>
                 <xsl:call-template name="fsfe-gettext">
-                  <xsl:with-param name="id" select="'pdfreaders-head-graphics'" />
+                  <xsl:with-param name="id" select="'pdfreaders-head-graphics'"/>
                 </xsl:call-template>
               </xsl:element>
             </xsl:element>
@@ -70,40 +62,30 @@
               <xsl:element name="a">
                 <xsl:attribute name="href">about.html</xsl:attribute>
                 <xsl:call-template name="fsfe-gettext">
-                  <xsl:with-param name="id" select="'pdfreaders-head-about'" />
+                  <xsl:with-param name="id" select="'pdfreaders-head-about'"/>
                 </xsl:call-template>
               </xsl:element>
             </xsl:element>
           </xsl:element>
         </xsl:element>
-
       </xsl:element>
-
       <xsl:element name="div">
         <xsl:attribute name="id">notifications</xsl:attribute>
         <xsl:element name="div">
           <xsl:attribute name="class">alert warning yellow</xsl:attribute>
-          <xsl:element name="a">
-            <xsl:attribute name="class">close</xsl:attribute>
-            <xsl:attribute name="data-dismiss">alert</xsl:attribute>
-            <xsl:attribute name="href">#</xsl:attribute>
-            <xsl:attribute name="aria-hidden">true</xsl:attribute>
+          <xsl:element name="a"><xsl:attribute name="class">close</xsl:attribute><xsl:attribute name="data-dismiss">alert</xsl:attribute><xsl:attribute name="href">#</xsl:attribute><xsl:attribute name="aria-hidden">true</xsl:attribute>
             ×
           </xsl:element>
-            <xsl:element name="p">
+          <xsl:element name="p">
             <xsl:text>The pdfreaders campaign has ended, and this site is no longer updated.</xsl:text>
           </xsl:element>
         </xsl:element>
-    </xsl:element>
-
-
-      <xsl:call-template name="notifications" />
-
-      <xsl:element name="main">
-        <xsl:apply-templates select="body/node()" />
       </xsl:element>
-
-      <xsl:call-template name="fsfe_pagefooter" />
+      <xsl:call-template name="notifications"/>
+      <xsl:element name="main">
+        <xsl:apply-templates select="body/node()"/>
+      </xsl:element>
+      <xsl:call-template name="fsfe_pagefooter"/>
     </xsl:element>
   </xsl:template>
 </xsl:stylesheet>

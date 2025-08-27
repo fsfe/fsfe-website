@@ -7,22 +7,20 @@ clone:
   depth: 150
 
 steps:
-  - name: check-python
-    image: ghcr.io/astral-sh/ruff:latest 
-    command: [ "check", "." ]
-
-  - name: check-custom
-    image: debian:bookworm
+  - name: pre-commit
+    image: docker:27.4.1
+    environment:
+      # Environment variables necessary for rootless Docker
+      XDG_RUNTIME_DIR: "/run/user/1001"
+      DOCKER_HOST: "unix:///run/user/1001/docker.sock"
+    volumes:
+      # Mounting Docker socket of rootless docker user
+      - name: dockersock
+        path: /run/user/1001/docker.sock
     commands:
-      - apt update
-      # Install required packages
-      - apt install --yes --no-install-recommends coreutils sed grep libxml2-utils git findutils perl-base file mediainfo curl
-      # Check whether non-EN news item would appear on front-page
-      - bash tools/check-non-en-frontpage.sh news
-      # Run pre-commit checks
-      - bash tools/githooks/pre-commit ci-pr
-      # Check syntax for all files as a safety net
-      - find . -type f \( -iname "*.xhtml" -o -iname "*.xml" -o -iname "*.xsl" \) -exec xmllint --noout {} +
+      - docker ps && echo "tampered with"
+      - echo "DRONE_COMMIT_BRANCH ${DRONE_COMMIT_BRANCH}"
+      - docker compose -p fsfe-website-pre-commit run --remove-orphans --build pre-commit "origin/${DRONE_COMMIT_BRANCH}"
 
   - name: deploy-master
     image: docker:27.4.1
@@ -32,48 +30,13 @@ steps:
       DOCKER_HOST: "unix:///run/user/1001/docker.sock"
       # Target use ipv4 proxies for noddack and gahn, as ipv6 broken.
       TARGET: "www@proxy.noris.fsfeurope.org:fsfe.org/global/?10322,www@proxy.plutex.fsfeurope.org:fsfe.org/global/?10322"
-      KEY_PRIVATE:
+      FSFE_WEBSITE_KEY_PRIVATE:
         from_secret: KEY_PRIVATE
-      KEY_PASSWORD:
+      FSFE_WEBSITE_KEY_PASSWORD:
         from_secret: KEY_PASSWORD
-      GIT_TOKEN:
+      FSFE_WEBSITE_GIT_TOKEN:
         from_secret: BUILD_TOKEN
-      PROJECT:
-        fsfe-website-master
-    volumes:
-      # Mounting Docker socket of rootless docker user
-      - name: dockersock
-        path: /run/user/1001/docker.sock
-    commands:
-      - docker ps && echo "tampered with"
-      - docker compose -p "$PROJECT" down 
-      # If we are in a cron job, then do a full rebuild
-      # Ideally the cron would set the flag itself, but drone does not support that.
-      - if [ "$DRONE_BUILD_EVENT" = "cron" ]; then EXTRA_FLAGS="--full"; fi
-      - docker compose -p "$PROJECT" run --remove-orphans --build build --target "$TARGET" $EXTRA_FLAGS
-    when:
-      branch:
-      - master
-      event:
-        exclude:
-        - pull_request
-
-  - name: deploy-test
-    image: docker:27.4.1
-    environment:
-      # Environment variables necessary for rootless Docker
-      XDG_RUNTIME_DIR: "/run/user/1001"
-      DOCKER_HOST: "unix:///run/user/1001/docker.sock"
-      # Target use ipv4 proxies for noddack and gahn, as ipv6 broken.
-      TARGET: "www@proxy.noris.fsfeurope.org:test.fsfe.org/global/?10322,www@proxy.plutex.fsfeurope.org:test.fsfe.org/global/?10322"
-      KEY_PRIVATE:
-        from_secret: KEY_PRIVATE
-      KEY_PASSWORD:
-        from_secret: KEY_PASSWORD
-      GIT_TOKEN:
-        from_secret: BUILD_TOKEN
-      PROJECT:
-        fsfe-website-test
+      PROJECT: fsfe-website-master
     volumes:
       # Mounting Docker socket of rootless docker user
       - name: dockersock
@@ -87,10 +50,43 @@ steps:
       - docker compose -p "$PROJECT" run --remove-orphans --build build --target "$TARGET" $EXTRA_FLAGS
     when:
       branch:
-      - test
+        - master
       event:
         exclude:
-        - pull_request
+          - pull_request
+
+  - name: deploy-test
+    image: docker:27.4.1
+    environment:
+      # Environment variables necessary for rootless Docker
+      XDG_RUNTIME_DIR: "/run/user/1001"
+      DOCKER_HOST: "unix:///run/user/1001/docker.sock"
+      # Target use ipv4 proxies for noddack and gahn, as ipv6 broken.
+      TARGET: "www@proxy.noris.fsfeurope.org:test.fsfe.org/global/?10322,www@proxy.plutex.fsfeurope.org:test.fsfe.org/global/?10322"
+      FSFE_WEBSITE_KEY_PRIVATE:
+        from_secret: KEY_PRIVATE
+      FSFE_WEBSITE_KEY_PASSWORD:
+        from_secret: KEY_PASSWORD
+      FSFE_WEBSITE_GIT_TOKEN:
+        from_secret: BUILD_TOKEN
+      PROJECT: fsfe-website-test
+    volumes:
+      # Mounting Docker socket of rootless docker user
+      - name: dockersock
+        path: /run/user/1001/docker.sock
+    commands:
+      - docker ps && echo "tampered with"
+      - docker compose -p "$PROJECT" down
+      # If we are in a cron job, then do a full rebuild
+      # Ideally the cron would set the flag itself, but drone does not support that.
+      - if [ "$DRONE_BUILD_EVENT" = "cron" ]; then EXTRA_FLAGS="--full"; fi
+      - docker compose -p "$PROJECT" run --remove-orphans --build build --target "$TARGET" $EXTRA_FLAGS
+    when:
+      branch:
+        - test
+      event:
+        exclude:
+          - pull_request
 trigger:
   branch:
     - master
@@ -111,6 +107,4 @@ volumes:
       path: /run/user/1001/docker.sock
 ---
 kind: signature
-hmac: 010308e954faf164916eb11c4603a4dc71c0888ad165025e390120d0c9c08ecc
-
-...
+hmac: d01ec3f92e3e0261685c7c803c16002e809134015692d0cafb3eb8110365082f

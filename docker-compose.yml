@@ -1,8 +1,14 @@
 services:
+  pre-commit:
+    build:
+      context: .
+      dockerfile: pre-commit.Dockerfile
+    image: fsfe-websites-pre-commit
   build:
-    build: .
-    image: fsfe-websites
-    container_name: fsfe-websites
+    build:
+      context: .
+      dockerfile: build.Dockerfile
+    image: fsfe-websites-build
     ports:
       - 2000:2000
       - 2100:2100
@@ -11,17 +17,17 @@ services:
       - 2400:2400
       - 2500:2500
     secrets:
-      - KEY_PRIVATE
-      - KEY_PASSWORD
-      - GIT_TOKEN
+      - FSFE_WEBSITE_KEY_PRIVATE
+      - FSFE_WEBSITE_KEY_PASSWORD
+      - FSFE_WEBSITE_GIT_TOKEN
     volumes:
       - cache:/website-cached
 volumes:
   cache:
 secrets:
-  KEY_PRIVATE:
-    environment: KEY_PRIVATE
-  KEY_PASSWORD:
-    environment: KEY_PASSWORD
-  GIT_TOKEN:
-    environment: GIT_TOKEN
+  FSFE_WEBSITE_KEY_PRIVATE:
+    environment: FSFE_WEBSITE_KEY_PRIVATE
+  FSFE_WEBSITE_KEY_PASSWORD:
+    environment: FSFE_WEBSITE_KEY_PASSWORD
+  FSFE_WEBSITE_GIT_TOKEN:
+    environment: FSFE_WEBSITE_GIT_TOKEN

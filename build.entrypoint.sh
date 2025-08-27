@@ -4,7 +4,7 @@ set -euo pipefail
 # Ran from the volume of the website source mounted at /website-source
 
 # Load sshkeys
-if [ -f /run/secrets/KEY_PRIVATE ] && [ "$(cat /run/secrets/KEY_PRIVATE)" != "none" ]; then
+if [ -f /run/secrets/FSFE_WEBSITE_KEY_PRIVATE ] && [ "$(cat /run/secrets/FSFE_WEBSITE_KEY_PRIVATE)" != "none" ]; then
 
 	# Start ssh-agent
 	eval "$(ssh-agent)"
@@ -13,9 +13,9 @@ if [ -f /run/secrets/KEY_PRIVATE ] && [ "$(cat /run/secrets/KEY_PRIVATE)" != "no
 	mkdir -p ~/.ssh
 	echo "AddKeysToAgent yes" >~/.ssh/config
 	# Tighten permissions to keep ssh-add happy
-	chmod 400 /run/secrets/KEY_*
-	PASSWORD="$(cat "/run/secrets/KEY_PASSWORD")"
-	PRIVATE="$(cat "/run/secrets/KEY_PRIVATE")"
+	chmod 400 /run/secrets/FSFE_WEBSITE_KEY_*
+	PASSWORD="$(cat "/run/secrets/FSFE_WEBSITE_KEY_PASSWORD")"
+	PRIVATE="$(cat "/run/secrets/FSFE_WEBSITE_KEY_PRIVATE")"
 	# Really should be able to just read from the private path, but for some reason ssh-add fails when using the actual path
 	# But works when you cat the path into another file and then load it
 	# Or cat the file and pipe it in through stdin
@@ -32,8 +32,9 @@ else
 	echo "Secret not defined!"
 fi
 
-if [ -f /run/secrets/GIT_TOKEN ] && [ "$(cat /run/secrets/GIT_TOKEN)" != "none" ]; then
-	export GIT_TOKEN="$(cat "/run/secrets/GIT_TOKEN")"
+if [ -f /run/secrets/FSFE_WEBSITE_GIT_TOKEN ] && [ "$(cat /run/secrets/FSFE_WEBSITE_GIT_TOKEN)" != "none" ]; then
+	FSFE_WEBSITE_GIT_TOKEN="$(cat "/run/secrets/FSFE_WEBSITE_GIT_TOKEN")"
+	export FSFE_WEBSITE_GIT_TOKEN
 fi
 
 # Rsync files over, do not use the mtimes as they are wrong due to docker shenanigans

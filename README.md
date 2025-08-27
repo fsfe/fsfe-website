@@ -107,42 +107,41 @@ The pages can be built and served by running `uv run build`. Try `--help` for mo
 The docker build process is in some ways designed for deployment. This means that it expects some environment variables to be set to function. Namely, it will try and load ssh credentials and git credentials, and docker does not support providing default values to these.
 
 So, to stub out this functionality, please set the environment variables
-`KEY_PRIVATE KEY_PASSWORD GIT_TOKEN` to equal `none` when running docker. One can set them for the shell session, an example in bash is seen below.
+`FSFE_WEBSITE_KEY_PRIVATE FSFE_WEBSITE_KEY_PASSWORD FSFE_WEBSITE_GIT_TOKEN` to equal `none` when running docker. One can set them for the shell session, an example in bash is seen below.
 
 ```
-export KEY_PRIVATE=none;
-export KEY_PASSWORD=none;
-export GIT_TOKEN=none;
+export FSFE_WEBSITE_KEY_PRIVATE=none;
+export FSFE_WEBSITE_KEY_PASSWORD=none;
+export FSFE_WEBSITE_GIT_TOKEN=none;
 ```
+
 One can then run Docker commands like `docker compose ...`.
 
 Alternatively one can prefix the Docker commands with the required variables, like so
-```
-KEY_PRIVATE=none KEY_PASSWORD=none GIT_TOKEN=none docker compose
-```
-Once your preferred method has been chosen, simply running `docker compose run --service-ports build --serve` should build the webpages and make them available over localhost.
 
+```
+FSFE_WEBSITE_KEY_PRIVATE=none FSFE_WEBSITE_KEY_PASSWORD=none FSFE_WEBSITE_GIT_TOKEN=none docker compose
+```
+
+Once your preferred method has been chosen, simply running `docker compose run --service-ports build --serve` should build the webpages and make them available over localhost.
 
 Some more explanation: we are essentially just using docker as a way to provide dependencies and then running the build script. All flags after `build` are passed to the `build` cli. The `service-ports` flag is required to open ports from the container for serving the output, not needed if not using the `--serve` flag of the build script.
 
 ## Githooks
 
-The repo contains some highly recommended githooks that one should enable. They check for several kinds of common issues. They are also run in CI, so enabling them locally speeds the development feedback loop.
+The repo contains some highly recommended githooks using [lefthook](github.com/evilmartians/lefthook) that one should enable. They check for several kinds of common issues. They are also run in CI, so enabling them locally speeds the development feedback loop.
 
-One can enable them locally using
+Lefthook is installed as part of the python virtual environment. If using the `nix-shell` the hooks are automatically activated and all required dependencies installed. If not, one must install them using
 
 ```sh
-rm .git/hooks -r                  # remove git's sample hooks
-ln -s tools/githooks/ .git/hooks  # link our hooks to the right dir
+lefthook install
 ```
 
-The hooks have some extra dependencies, namely
+The hooks have some extra dependencies, at time of writing:
 
 ```
-git xmllint sed file grep bash perl mediainfo curl mktemp
+ruff git xmllint sed file grep bash perl mediainfo curl mktemp
 ```
-
-The provided `nix-shell` includes the needed packages. Otherwise, they can be installed manually.
 
 ## Testing
 

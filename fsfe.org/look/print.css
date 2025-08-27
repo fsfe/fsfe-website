@@ -3,24 +3,32 @@
  */
 
 body {
-  background: #FFFFFF;
+  background: #ffffff;
   font-family: "Nimbus Serif L", Georgia, Times, serif;
   font-size: 1em, 12pt;
 }
 
 /* Don't use color for links */
-a, a:link, a:visited {
+a,
+a:link,
+a:visited {
   color: #000000;
 }
 
 /* Hide things */
-#sidebar, #followup, #top, #translations, #translations a, #translations ul {
+#sidebar,
+#followup,
+#top,
+#translations,
+#translations a,
+#translations ul {
   display: none;
 }
 
-#wrapper, #wrapper-inner {
+#wrapper,
+#wrapper-inner {
   margin: 0;
-  padding:0;
+  padding: 0;
   width: auto;
   border: none;
   box-shadow: none;
@@ -47,40 +55,41 @@ a, a:link, a:visited {
 }
 
 h1 {
-	font-size: 1.8em;
-	padding: 0;
-	border: 0;
+  font-size: 1.8em;
+  padding: 0;
+  border: 0;
 }
 
 h2 {
-	font-size: 1.4em;
+  font-size: 1.4em;
 }
 
 h3 {
-	font-size: 1.2em;
+  font-size: 1.2em;
 }
 
 #content p#category {
-	font-size: 1.2em;
+  font-size: 1.2em;
 }
 
 #formnl {
-	display: none;
+  display: none;
 }
 
 #article-metadata {
-	margin: 0;
+  margin: 0;
 }
 
 #introduction {
-	border: none;
+  border: none;
 }
 
-#introduction p, p#introduction {
-	line-height: inherit;
-	margin: 0.8em 0;
-	font-size: 1em;
-	font-style: italic;
+#introduction p,
+p#introduction {
+  line-height: inherit;
+  margin: 0.8em 0;
+  font-size: 1em;
+  font-style: italic;
 }
 
 /* remove donate box on donation page */
@@ -89,14 +98,14 @@ h3 {
 }
 
 .postit {
-  background: #FFFFFF;
+  background: #ffffff;
 }
 
 #footer {
-	margin: 0;
-	padding: 0;
-	font-size: 80%;
-	border: 5px #FFFFFF solid;
+  margin: 0;
+  padding: 0;
+  font-size: 80%;
+  border: 5px #ffffff solid;
 }
 
 #footer div {
@@ -104,25 +113,25 @@ h3 {
 }
 
 #notice {
-	float: none;
-	margin: 0;
-	width: auto;
-	padding:0;
+  float: none;
+  margin: 0;
+  width: auto;
+  padding: 0;
 }
 
 #notice ul {
-	display: none;
+  display: none;
 }
 
 #contact-us-link strong {
-	display: none;
+  display: none;
 }
 
 #contact-us-link:after {
-	content: 'Email: contact@fsfe.org';
+  content: "Email: contact@fsfe.org";
 }
 
-.newsleft dt span, .newsright dt span {
+.newsleft dt span,
+.newsright dt span {
   color: #000000;
 }
-

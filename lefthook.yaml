@@ -16,6 +16,11 @@ pre-commit:
       glob: "*.py"
       run: ruff format {staged_files}
       stage_fixed: true
+    pytest:
+      glob:
+        - "*.py"
+        - "build/xslt/*.xsl"
+      run: pytest
     shfmt:
       glob: "*.sh"
       run: shfmt --write {staged_files}

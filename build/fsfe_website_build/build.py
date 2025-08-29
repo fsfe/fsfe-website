@@ -64,7 +64,7 @@ def parse_arguments() -> argparse.Namespace:
         "--sites",
         help="What site directories to build",
         default=list(filter(lambda path: path.is_dir(), Path().glob("?*.??*"))),
-        type=lambda sites: list(map(lambda site: Path(site), sites.split(","))),
+        type=lambda sites: [Path(site) for site in sites.split(",")],
     )
     parser.add_argument(
         "--stage",
@@ -119,12 +119,7 @@ def main() -> None:
                 args.languages
                 if args.languages
                 else sorted(
-                    list(
-                        map(
-                            lambda path: path.name,
-                            Path().glob("global/languages/??"),
-                        ),
-                    ),
+                    (path.name for path in Path().glob("global/languages/??")),
                 )
             ),
             pool,
@@ -153,14 +148,7 @@ def main() -> None:
                 args.languages
                 if args.languages
                 else sorted(
-                    list(
-                        set(
-                            map(
-                                lambda path: lang_from_filename(path),
-                                site.glob("**/*.*.xhtml"),
-                            ),
-                        ),
-                    ),
+                    {lang_from_filename(path) for path in site.glob("**/*.*.xhtml")},
                 )
             )
             # Processes needed only for subdir stuff

@@ -46,7 +46,7 @@ def run(languages: list[str], processes: int, working_dir: Path) -> None:
     preparation for news subdirectory
     """
     with multiprocessing.Pool(processes) as pool:
-        years = list(sorted(working_dir.glob("[0-9][0-9][0-9][0-9]")))
+        years = sorted(working_dir.glob("[0-9][0-9][0-9][0-9]"))
         # Copy news archive template to each of the years
         pool.starmap(
             _gen_archive_index,

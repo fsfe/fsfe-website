@@ -40,6 +40,7 @@ select = [
   "ARG",   # Unused arguments
   "ASYNC", # Flake 8 aysnc
   "B",     # bugbear: security warnings
+  "C4",    # Comprehensions
   "E",     # pycodestyle
   "ERA",   # Commented out code
   "F",     # pyflakes

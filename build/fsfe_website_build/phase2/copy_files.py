@@ -30,9 +30,9 @@ def copy_files(source_dir: Path, pool: multiprocessing.Pool, target: Path) -> No
     logger.info("Copying over media and misc files")
     pool.starmap(
         _copy_file,
-        map(
-            lambda file: (target, source_dir, file),
-            list(
+        (
+            (target, source_dir, file)
+            for file in list(
                 filter(
                     lambda path: path.is_file()
                     and path.suffix
@@ -54,6 +54,6 @@ def copy_files(source_dir: Path, pool: multiprocessing.Pool, target: Path) -> No
                 ),
             )
             # Special case hard code pass over orde items xml required by cgi script
-            + list(source_dir.glob("order/data/items.en.xml")),
+            + list(source_dir.glob("order/data/items.en.xml"))
         ),
     )

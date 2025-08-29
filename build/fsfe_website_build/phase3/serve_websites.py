@@ -32,7 +32,7 @@ def serve_websites(serve_dir: str, base_port: int, increment_number: int) -> Non
     Takes a target directory, a base port and a number to increment port by per dir
     It then serves all directories over http on localhost
     """
-    dirs = sorted(list(filter(lambda path: path.is_dir(), Path(serve_dir).iterdir())))
+    dirs = sorted(filter(lambda path: path.is_dir(), Path(serve_dir).iterdir()))
     serves = []
     for index, directory in enumerate(dirs):
         port = base_port + (increment_number * index)

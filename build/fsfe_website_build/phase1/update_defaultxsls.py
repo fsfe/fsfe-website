@@ -33,7 +33,7 @@ def update_defaultxsls(source_dir: Path, pool: multiprocessing.Pool) -> None:
     logger.info("Updating default xsl's")
 
     # Get a set of all directories containing .xhtml source files
-    directories = set(map(lambda path: path.parent, source_dir.glob("**/*.*.xhtml")))
+    directories = {path.parent for path in source_dir.glob("**/*.*.xhtml")}
 
     # Do all directories asynchronously
     pool.map(_do_symlinking, directories)

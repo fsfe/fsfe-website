@@ -146,18 +146,18 @@ def update_tags(
         logger.debug("Updating tag pages")
         pool.starmap(
             _update_tag_pages,
-            map(lambda tag: (source_dir, tag, languages), files_by_tag.keys()),
+            ((source_dir, tag, languages) for tag in files_by_tag),
         )
 
         logger.debug("Updating tag lists")
         pool.starmap(
             update_if_changed,
-            map(
-                lambda tag: (
+            (
+                (
                     Path(f"{source_dir}/tags/.tagged-{tag}.xmllist"),
-                    ("\n".join(map(lambda file: str(file), files_by_tag[tag])) + "\n"),
-                ),
-                files_by_tag.keys(),
+                    ("\n".join(str(file) for file in files_by_tag[tag]) + "\n"),
+                )
+                for tag in files_by_tag
             ),
         )
 
@@ -177,8 +177,8 @@ def update_tags(
                 )
         pool.starmap(
             _update_tag_sets,
-            map(
-                lambda lang: (source_dir, lang, filecount, files_by_tag, tags_by_lang),
-                filter(lambda lang: lang in languages, tags_by_lang.keys()),
+            (
+                (source_dir, lang, filecount, files_by_tag, tags_by_lang)
+                for lang in filter(lambda lang: lang in languages, tags_by_lang.keys())
             ),
         )

@@ -31,7 +31,7 @@ def sort_dict(in_dict: dict) -> dict:
     """
     Sort dict by keys
     """
-    return {key: val for key, val in sorted(in_dict.items(), key=lambda ele: ele[0])}
+    return dict(sorted(in_dict.items(), key=lambda ele: ele[0]))
 
 
 def update_if_changed(path: Path, content: str) -> None:

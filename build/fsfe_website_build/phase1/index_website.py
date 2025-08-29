@@ -42,9 +42,11 @@ def _process_file(file: Path, stopwords: set[str]) -> dict:
     """
     logger.debug("Processing file %s", file)
     xslt_root = etree.parse(file)
-    tags = map(
-        lambda tag: tag.get("key"),
-        filter(lambda tag: tag.get("key") != "front-page", xslt_root.xpath("//tag")),
+    tags = (
+        tag.get("key")
+        for tag in filter(
+            lambda tag: tag.get("key") != "front-page", xslt_root.xpath("//tag")
+        )
     )
     return {
         "url": f"/{file.with_suffix('.html').relative_to(file.parents[-2])}",
@@ -93,8 +95,8 @@ def index_websites(
         # Use iso639 to get the english name of the language
         # from the two letter iso639-1 code we use to mark files.
         # Then if that language has stopwords from nltk, use those stopwords.
-        files_with_stopwords = map(
-            lambda file: (
+        files_with_stopwords = (
+            (
                 file,
                 (
                     set(
@@ -110,11 +112,11 @@ def index_websites(
                     in nltk_stopwords.fileids()
                     else set()
                 ),
-            ),
-            filter(
+            )
+            for file in filter(
                 lambda file: file.suffixes[0].removeprefix(".") in languages,
                 source_dir.glob("**/*.??.xhtml"),
-            ),
+            )
         )
 
         articles = pool.starmap(_process_file, files_with_stopwords)

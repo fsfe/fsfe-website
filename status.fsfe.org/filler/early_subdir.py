@@ -37,13 +37,13 @@ def run(processes: int, working_dir: Path) -> None:
     with multiprocessing.Pool(processes) as pool:
         pool.starmap(
             update_if_changed,
-            map(
-                lambda path: (
+            (
+                (
                     working_dir.joinpath(
                         f"index.{path.name}.xhtml",
                     ),
                     index_content,
-                ),
-                Path().glob("global/languages/*"),
+                )
+                for path in Path().glob("global/languages/*")
             ),
         )

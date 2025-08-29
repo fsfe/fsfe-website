@@ -18,7 +18,7 @@ def prepare_subdirectories(
     Find any subdir scripts in subdirectories and run them
     """
     logger.info("Preparing Subdirectories")
-    for subdir_path in map(lambda path: path.parent, source_dir.glob("**/subdir.py")):
+    for subdir_path in (path.parent for path in source_dir.glob("**/subdir.py")):
         logger.info("Preparing subdirectory %s", subdir_path)
         sys.path.append(str(subdir_path.resolve()))
         # Ignore this very sensible warning, as we do evil things

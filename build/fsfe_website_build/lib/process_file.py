@@ -75,7 +75,7 @@ def _get_set(action_file: Path, lang: str, parser: etree.XMLParser) -> etree.Ele
 
     if list_file.exists():
         with list_file.open("r") as file:
-            for path in map(lambda line: Path(line.strip()), file):
+            for path in (Path(line.strip()) for line in file):
                 path_xml = (
                     path.with_suffix(f".{lang}.xml")
                     if path.with_suffix(f".{lang}.xml").exists()

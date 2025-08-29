@@ -61,12 +61,14 @@ def _update_for_base(
                     # contains tag if tag in pattern
                     and (
                         any(
-                            map(
-                                lambda xml_file_with_ending: etree.parse(
+                            (
+                                etree.parse(
                                     xml_file_with_ending,
                                 ).find(f".//tag[@key='{tag}']")
-                                is not None,
-                                xml_file.parent.glob(f"{xml_file.name}.*.xml"),
+                                is not None
+                                for xml_file_with_ending in xml_file.parent.glob(
+                                    f"{xml_file.name}.*.xml"
+                                )
                             ),
                         )
                         if tag != ""
@@ -99,39 +101,30 @@ def _update_module_xmllists(
     """
     logger.info("Updating XML lists")
     # Get all the bases and stuff before multithreading the update bit
-    all_xml = set(
-        map(
-            lambda path: get_basepath(path),
-            filter(
-                lambda path: lang_from_filename(path) in languages,
-                list(source_dir.glob("**/*.*.xml"))
-                + list(Path("global/").glob("**/*.*.xml")),
-            ),
-        ),
-    )
-    source_bases = set(
-        map(
-            lambda path: path.with_suffix(""),
-            source_dir.glob("**/*.sources"),
-        ),
-    )
-    module_bases = set(
-        map(
-            lambda path: get_basepath(path),
-            filter(
-                lambda path: lang_from_filename(path) in languages
-                and etree.parse(path).xpath("//module"),
-                source_dir.glob("**/*.*.xhtml"),
-            ),
-        ),
-    )
+    all_xml = {
+        get_basepath(path)
+        for path in filter(
+            lambda path: lang_from_filename(path) in languages,
+            list(source_dir.glob("**/*.*.xml"))
+            + list(Path("global/").glob("**/*.*.xml")),
+        )
+    }
+    source_bases = {path.with_suffix("") for path in source_dir.glob("**/*.sources")}
+    module_bases = {
+        get_basepath(path)
+        for path in filter(
+            lambda path: lang_from_filename(path) in languages
+            and etree.parse(path).xpath("//module"),
+            source_dir.glob("**/*.*.xhtml"),
+        )
+    }
     all_bases = source_bases | module_bases
     nextyear = str(datetime.datetime.today().year + 1)
     thisyear = str(datetime.datetime.today().year)
     lastyear = str(datetime.datetime.today().year - 1)
     pool.starmap(
         _update_for_base,
-        map(lambda base: (base, all_xml, nextyear, thisyear, lastyear), all_bases),
+        ((base, all_xml, nextyear, thisyear, lastyear) for base in all_bases),
     )
 
 

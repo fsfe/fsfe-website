@@ -39,12 +39,12 @@ def stage_to_target(stagedir: Path, targets: str, pool: multiprocessing.Pool) ->
     logger.info("Rsyncing from stage dir to target dir(s)")
     pool.starmap(
         _rsync,
-        map(
-            lambda target: (
+        (
+            (
                 stagedir,
                 (target if "?" not in target else target.split("?")[0]),
                 (int(target.split("?")[1]) if "?" in target else 22),
-            ),
-            targets.split(","),
+            )
+            for target in targets.split(",")
         ),
     )

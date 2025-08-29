@@ -24,11 +24,9 @@ def _run_process(
         # If any source file is newer than the file to be generated
         # we recreate the generated file
         # if the source file does not exist, ignore it.
-        map(
-            lambda file: (
-                file.exists() and file.stat().st_mtime > target_file.stat().st_mtime
-            ),
-            [
+        (
+            (file.exists() and file.stat().st_mtime > target_file.stat().st_mtime)
+            for file in [
                 (
                     source_file
                     if source_file.exists()
@@ -43,7 +41,7 @@ def _run_process(
                 Path(f"global/data/texts/.texts.{lang}.xml"),
                 Path(f"global/data/topbanner/.topbanner.{lang}.xml"),
                 Path("global/data/texts/texts.en.xml"),
-            ],
+            ]
         ),
     ):
         logger.debug("Building %s", target_file)
@@ -58,9 +56,7 @@ def _process_dir(
     target: Path,
     directory: Path,
 ) -> None:
-    for basename in set(
-        map(lambda path: path.with_suffix(""), directory.glob("*.??.xhtml")),
-    ):
+    for basename in {path.with_suffix("") for path in directory.glob("*.??.xhtml")}:
         for lang in languages:
             source_file = basename.with_suffix(f".{lang}.xhtml")
             target_file = target.joinpath(
@@ -105,24 +101,24 @@ def process_files(
     logger.info("Processing xhtml files")
     pool.starmap(
         _process_dir,
-        map(
-            lambda directory: (source_dir, languages, target, directory),
-            set(map(lambda path: path.parent, source_dir.glob("**/*.*.xhtml"))),
+        (
+            (source_dir, languages, target, directory)
+            for directory in {path.parent for path in source_dir.glob("**/*.*.xhtml")}
         ),
     )
     logger.info("Processing rss files")
     pool.starmap(
         _process_stylesheet,
-        map(
-            lambda processor: (source_dir, languages, target, processor),
-            source_dir.glob("**/*.rss.xsl"),
+        (
+            (source_dir, languages, target, processor)
+            for processor in source_dir.glob("**/*.rss.xsl")
         ),
     )
     logger.info("Processing ics files")
     pool.starmap(
         _process_stylesheet,
-        map(
-            lambda processor: (source_dir, languages, target, processor),
-            source_dir.glob("**/*.ics.xsl"),
+        (
+            (source_dir, languages, target, processor)
+            for processor in source_dir.glob("**/*.ics.xsl")
         ),
     )

@@ -22,12 +22,7 @@ def _write_localmenus(
     Write localmenus for a given directory
     """
     # Set of files with no langcode or xhtml extension
-    base_files = set(
-        map(
-            lambda filter_file: get_basepath(filter_file),
-            files_by_dir[directory],
-        ),
-    )
+    base_files = {get_basepath(filter_file) for filter_file in files_by_dir[directory]}
     for lang in languages:
         file = Path(directory).joinpath(f".localmenu.{lang}.xml")
         logger.debug("Creating %s", file)
@@ -39,15 +34,15 @@ def _write_localmenus(
 
         for source_file in filter(
             lambda path: path is not None,
-            map(
-                lambda base_file: base_file.with_suffix(f".{lang}.xhtml")
+            (
+                base_file.with_suffix(f".{lang}.xhtml")
                 if base_file.with_suffix(f".{lang}.xhtml").exists()
                 else (
                     base_file.with_suffix(".en.xhtml")
                     if base_file.with_suffix(".en.xhtml").exists()
                     else None
-                ),
-                base_files,
+                )
+                for base_file in base_files
             ),
         ):
             for localmenu in etree.parse(source_file).xpath("//localmenu"):
@@ -104,14 +99,14 @@ def update_localmenus(
                 files_by_dir[directory] = set()
             files_by_dir[directory].add(file)
     for directory, files in files_by_dir.items():
-        files_by_dir[directory] = sorted(list(files))
+        files_by_dir[directory] = sorted(files)
 
     # If any of the source files has been updated, rebuild all .localmenu.*.xml
     dirs = filter(
         lambda directory: (
             any(
-                map(
-                    lambda file: (
+                (
+                    (
                         (not Path(directory).joinpath(".localmenu.en.xml").exists())
                         or (
                             file.stat().st_mtime
@@ -120,8 +115,8 @@ def update_localmenus(
                             .stat()
                             .st_mtime
                         )
-                    ),
-                    files_by_dir[directory],
+                    )
+                    for file in files_by_dir[directory]
                 ),
             )
         ),
@@ -129,5 +124,5 @@ def update_localmenus(
     )
     pool.starmap(
         _write_localmenus,
-        map(lambda directory: (directory, files_by_dir, languages), dirs),
+        ((directory, files_by_dir, languages) for directory in dirs),
     )

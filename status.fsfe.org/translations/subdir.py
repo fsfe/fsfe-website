@@ -7,13 +7,13 @@ import logging
 import multiprocessing
 from pathlib import Path
 
-import lxml.etree as etree
 from fsfe_website_build.lib.misc import (
     get_basepath,
     get_version,
     run_command,
     update_if_changed,
 )
+from lxml import etree
 
 logger = logging.getLogger(__name__)
 
@@ -124,9 +124,9 @@ def _create_translation_file(
     page = etree.Element("translation-status")
     version = etree.SubElement(page, "version")
     version.text = "1"
-    for priority in data:
+    for priority, file_data_list in data.items():
         prio = etree.SubElement(page, "priority", value=str(priority))
-        for file_data in data[priority]:
+        for file_data in file_data_list:
             etree.SubElement(prio, "file", **file_data)
 
     en_texts_file = Path("global/data/texts/texts.en.xml")
@@ -206,16 +206,13 @@ def run(languages: list[str], processes: int, working_dir: Path) -> None:
         # Super hardcoded unfortunately
         files_by_priority = dict()
         for file in all_files_with_translations:
-            for priority in priorities_and_searches:
+            for priority, searches in priorities_and_searches.items():
                 if priority not in files_by_priority:
                     files_by_priority[priority] = list()
                 # If any search matches,
                 # add it to that priority and skip all subsequent priorities
                 if any(
-                    [
-                        file.full_match(search)
-                        for search in priorities_and_searches[priority]
-                    ],
+                    [file.full_match(search) for search in searches],
                 ):
                     files_by_priority[priority].append(file)
                     continue

@@ -6,7 +6,7 @@ import logging
 import multiprocessing
 from pathlib import Path
 
-import lxml.etree as etree
+from lxml import etree
 
 from fsfe_website_build.lib.misc import get_basepath, update_if_changed
 
@@ -103,8 +103,8 @@ def update_localmenus(
             if directory not in files_by_dir:
                 files_by_dir[directory] = set()
             files_by_dir[directory].add(file)
-    for directory in files_by_dir:
-        files_by_dir[directory] = sorted(list(files_by_dir[directory]))
+    for directory, files in files_by_dir.items():
+        files_by_dir[directory] = sorted(list(files))
 
     # If any of the source files has been updated, rebuild all .localmenu.*.xml
     dirs = filter(

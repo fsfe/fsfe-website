@@ -8,9 +8,9 @@ import os
 from pathlib import Path
 from urllib.parse import urlparse
 
-import lxml.etree as etree
 import requests
 from fsfe_website_build.lib.misc import update_if_changed
+from lxml import etree
 
 logger = logging.getLogger(__name__)
 

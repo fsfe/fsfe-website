@@ -9,7 +9,7 @@ import multiprocessing
 import re
 from pathlib import Path
 
-import lxml.etree as etree
+from lxml import etree
 
 from fsfe_website_build.lib.misc import (
     get_basepath,

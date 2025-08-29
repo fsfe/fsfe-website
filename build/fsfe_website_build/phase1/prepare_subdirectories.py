@@ -21,7 +21,9 @@ def prepare_subdirectories(
     for subdir_path in map(lambda path: path.parent, source_dir.glob("**/subdir.py")):
         logger.info("Preparing subdirectory %s", subdir_path)
         sys.path.append(str(subdir_path.resolve()))
-        import subdir
+        # Ignore this very sensible warning, as we do evil things
+        # here for out subdir scripts
+        import subdir  # noqa: PLC0415
 
         subdir.run(languages, processes, subdir_path)
         # Remove its path from where things can be imported

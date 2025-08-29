@@ -91,8 +91,10 @@ def run_command_ok_test() -> None:
 
 def get_version_valid_test(tmp_path: Path) -> None:
     xml_file = tmp_path / "page.xml"
-    xml_file.write_text("<root><version>3</version></root>")
-    assert get_version(xml_file) == 3
+    version = 3
+    xml_file.write_text(f"<root><version>{version}</version></root>")
+
+    assert get_version(xml_file) == version
 
 
 def get_version_no_version_test(tmp_path: Path) -> None:

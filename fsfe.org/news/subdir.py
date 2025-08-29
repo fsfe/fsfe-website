@@ -7,8 +7,8 @@ import multiprocessing
 from pathlib import Path
 from textwrap import dedent
 
-import lxml.etree as etree
 from fsfe_website_build.lib.misc import lang_from_filename, update_if_changed
+from lxml import etree
 
 logger = logging.getLogger(__name__)
 

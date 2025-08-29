@@ -10,8 +10,8 @@ import multiprocessing
 from pathlib import Path
 
 import iso639
-import lxml.etree as etree
 import nltk
+from lxml import etree
 from nltk.corpus import stopwords as nltk_stopwords
 
 from fsfe_website_build.lib.misc import update_if_changed
@@ -29,8 +29,9 @@ def _find_teaser(document: etree.ElementTree) -> str:
     :document: The parsed lxml ElementTree document
     :returns: The text of the teaser or an empty string
     """
+    trivial_length = 10
     for p in document.xpath("//body//p"):
-        if p.text and len(p.text.strip().split(" ")) > 10:
+        if p.text and len(p.text.strip().split(" ")) > trivial_length:
             return p.text
     return ""
 

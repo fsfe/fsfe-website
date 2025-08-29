@@ -38,17 +38,20 @@ select = [
   "ANN",   # Flake 8 type annotations
   "A",     # prevent using keywords that clobber python builtins
   "ARG",   # Unused arguments
-  "ASYNC", # FLake 8 aysnc
+  "ASYNC", # Flake 8 aysnc
   "B",     # bugbear: security warnings
   "E",     # pycodestyle
   "ERA",   # Commented out code
   "F",     # pyflakes
+  "FURB",  # More upgrades to newer styles
   "G",     # Logging Formatting
   "I",     # ordered import
   "ISC",   # implicit string concatenation
   "LOG",   # Logging stuff
   "N",     # pep 8 naming
+  "PERF",  # SOme performance stuff
   "PIE",   # Some extra checks
+  "PL",    # Pylint
   "PTH",   # Use pathlib
   "PT",    # Pytest style
   "Q",     # flake 8 quotes
@@ -57,7 +60,9 @@ select = [
   "RUF",   # the ruff developer's own rules
   "SIM",   # Simplify
   "T20",   # Warn about prints
+  "TC",    # Type checking
   "UP",    # alert you when better syntax is available in your python version
+  "UP",    # Update syntax to newer versions
   "W",     # pycodestyle warnings
 ]
 

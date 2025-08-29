@@ -7,7 +7,7 @@ import multiprocessing
 from pathlib import Path
 from xml.sax.saxutils import escape
 
-import lxml.etree as etree
+from lxml import etree
 
 from fsfe_website_build.lib.misc import (
     get_basepath,

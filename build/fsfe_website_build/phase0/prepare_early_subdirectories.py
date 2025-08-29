@@ -20,7 +20,9 @@ def prepare_early_subdirectories(source_dir: Path, processes: int) -> None:
     ):
         logger.info("Preparing early subdirectory %s", subdir_path)
         sys.path.append(str(subdir_path.resolve()))
-        import early_subdir
+        # Ignore this very sensible warning, as we do evil things
+        # here for out subdir scripts
+        import early_subdir  # noqa: PLC0415
 
         early_subdir.run(processes, subdir_path)
         # Remove its path from where things can be imported

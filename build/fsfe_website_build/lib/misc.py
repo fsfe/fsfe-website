@@ -6,7 +6,7 @@ import logging
 import subprocess
 from pathlib import Path
 
-import lxml.etree as etree
+from lxml import etree
 
 logger = logging.getLogger(__name__)
 
@@ -75,7 +75,8 @@ def lang_from_filename(file: Path) -> str:
     lang = file.with_suffix("").suffix.removeprefix(".")
     # Lang codes should be the iso 631 2 letter codes,
     # but sometimes we use "nolang" to srop a file being built
-    if len(lang) != 2 and lang != "nolang":
+    lang_length = 2
+    if len(lang) != lang_length and lang != "nolang":
         message = f"Language {lang} from file {file} not of correct length"
         logger.error(message)
         raise RuntimeError(message)

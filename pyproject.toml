@@ -7,22 +7,22 @@ readme = "README.md"
 requires-python = "==3.13.*"
 dependencies = [
   # XML parser
-  "lxml==5.3.*",
+  "lxml",
   # For getting english language names of languages from two letter codes.
-  "python-iso639==2025.2.*",
+  "python-iso639",
   # For stopwords for the search index
-  "nltk==3.9.*",
+  "nltk",
   # For minification html css and js
-  "tdewolff-minify==2.23.*",
+  "tdewolff-minify",
   # For HTTP requests
-  "requests==2.32.*",
+  "requests",
 ]
 
 [project.scripts]
 build = "fsfe_website_build:main"
 
 [dependency-groups]
-dev = ["ruff== 0.12.10", "lefthook==1.12.3", "taplo==0.9.3"]
+dev = ["ruff", "lefthook", "taplo"]
 
 [build-system]
 requires = ["uv_build"]

@@ -22,7 +22,7 @@ dependencies = [
 build = "fsfe_website_build:main"
 
 [dependency-groups]
-dev = ["ruff", "lefthook", "taplo"]
+dev = ["ruff", "lefthook", "taplo", "pytest"]
 
 [build-system]
 requires = ["uv_build"]
@@ -46,3 +46,8 @@ select = [
   "W",   # pycodestyle warnings
   "Q",   # flake 8 quotes
 ]
+
+[tool.pytest.ini_options]
+testpaths = ["build/fsfe_website_build_tests"]
+python_files = ["*_test.py"]
+python_functions = ["*_test"]

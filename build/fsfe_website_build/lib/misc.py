@@ -4,7 +4,6 @@
 
 import logging
 import subprocess
-import sys
 from pathlib import Path
 
 import lxml.etree as etree
@@ -17,9 +16,7 @@ def keys_exists(element: dict, *keys: str) -> bool:
     Check if *keys (nested) exists in `element` (dict).
     """
     if not isinstance(element, dict):
-        raise AttributeError("keys_exists() expects dict as first argument.")
-    if len(keys) == 0:
-        raise AttributeError("keys_exists() expects at least two arguments, one given.")
+        raise TypeError("keys_exists() expects dict as first argument.")
 
     _element = element
     for key in keys:
@@ -79,10 +76,9 @@ def lang_from_filename(file: Path) -> str:
     # Lang codes should be the iso 631 2 letter codes,
     # but sometimes we use "nolang" to srop a file being built
     if len(lang) != 2 and lang != "nolang":
-        logger.critical(
-            f"Language {lang} from file {file} not of correct length, exiting"
-        )
-        sys.exit(1)
+        message = f"Language {lang} from file {file} not of correct length"
+        logger.error(message)
+        raise RuntimeError(message)
     else:
         return lang
 
@@ -103,7 +99,7 @@ def run_command(commands: list) -> str:
             f"\nstdout: {error.stdout}"
             f"\nstderr: {error.stderr}"
         )
-        sys.exit(1)
+        raise error
 
 
 def get_version(file: Path) -> int:
@@ -112,8 +108,8 @@ def get_version(file: Path) -> int:
     """
     xslt_tree = etree.parse(Path("build/xslt/get_version.xsl"))
     transform = etree.XSLT(xslt_tree)
-    result = transform(etree.parse(file))
-    result = str(result).strip()
+    result_tree = transform(etree.parse(file))
+    result = str(result_tree).strip()
     if result == "":
         result = str(0)
     logger.debug(f"Got version: {result}")

@@ -45,4 +45,4 @@ rsync -rlpgoDz --delete --checksum --filter=':- .gitignore' ./ /website-cached/s
 cd /website-cached/source
 
 # run build script expaning all args passed to this script
-uv run --reinstall-package build build "$@"
+uv run --reinstall-package fsfe_website_build build "$@"

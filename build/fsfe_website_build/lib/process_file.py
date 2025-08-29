@@ -180,7 +180,7 @@ def _build_xmlstream(infile: Path, parser: etree.XMLParser) -> etree.Element:
     return page
 
 
-def process_file(infile: Path, processor: Path) -> str:
+def process_file(infile: Path, processor: Path) -> etree._XSLTResultTree:
     """
     Process a given file using the correct xsl sheet
     """

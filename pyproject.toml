@@ -22,7 +22,7 @@ dependencies = [
 build = "fsfe_website_build:main"
 
 [dependency-groups]
-dev = ["ruff", "lefthook", "taplo"]
+dev = ["ruff", "lefthook", "taplo", "pytest"]
 
 [build-system]
 requires = ["uv_build"]
@@ -33,16 +33,42 @@ module-name = "fsfe_website_build"
 module-root = "build"
 
 [tool.ruff.lint]
+#  See https://docs.astral.sh/ruff/rules/ for information
 select = [
-  "A",   # prevent using keywords that clobber python builtins
-  "B",   # bugbear: security warnings
-  "E",   # pycodestyle
-  "F",   # pyflakes
-  "I",   # ordered import
-  "ISC", # implicit string concatenation
-  "N",   # pep 8 naming
-  "RUF", # the ruff developer's own rules
-  "UP",  # alert you when better syntax is available in your python version
-  "W",   # pycodestyle warnings
-  "Q",   # flake 8 quotes
+  "ANN",   # Flake 8 type annotations
+  "A",     # prevent using keywords that clobber python builtins
+  "ARG",   # Unused arguments
+  "ASYNC", # Flake 8 aysnc
+  "B",     # bugbear: security warnings
+  "C4",    # Comprehensions
+  "E",     # pycodestyle
+  "ERA",   # Commented out code
+  "F",     # pyflakes
+  "FURB",  # More upgrades to newer styles
+  "G",     # Logging Formatting
+  "I",     # ordered import
+  "ISC",   # implicit string concatenation
+  "LOG",   # Logging stuff
+  "N",     # pep 8 naming
+  "PERF",  # SOme performance stuff
+  "PIE",   # Some extra checks
+  "PL",    # Pylint
+  "PTH",   # Use pathlib
+  "PT",    # Pytest style
+  "Q",     # flake 8 quotes
+  "RET",   # Return types
+  "RSE",   # Unneeded exception parentheses
+  "RUF",   # the ruff developer's own rules
+  "SIM",   # Simplify
+  "T20",   # Warn about prints
+  "TC",    # Type checking
+  "TRY",   # Error handling stuff
+  "UP",    # alert you when better syntax is available in your python version
+  "UP",    # Update syntax to newer versions
+  "W",     # pycodestyle warnings
 ]
+
+[tool.pytest.ini_options]
+testpaths = ["build/fsfe_website_build_tests"]
+python_files = ["*_test.py"]
+python_functions = ["*_test"]

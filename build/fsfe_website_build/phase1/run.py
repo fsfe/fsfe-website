@@ -31,7 +31,7 @@ def phase1_run(
     languages: list[str] or None,
     processes: int,
     pool: multiprocessing.Pool,
-):
+) -> None:
     """
     Run all the necessary sub functions for phase1.
     """

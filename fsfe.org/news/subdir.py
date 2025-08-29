@@ -7,16 +7,20 @@ import multiprocessing
 from pathlib import Path
 from textwrap import dedent
 
-import lxml.etree as etree
 from fsfe_website_build.lib.misc import lang_from_filename, update_if_changed
+from lxml import etree
 
 logger = logging.getLogger(__name__)
 
 
-def _gen_archive_index(working_dir: Path, languages: list[str], directory: Path):
-    logger.debug(f"Operating on dir {directory}")
+def _gen_archive_index(
+    working_dir: Path,
+    languages: list[str],
+    directory: Path,
+) -> None:
+    logger.debug("Operating on dir %s", directory)
     for lang in languages:
-        logger.debug(f"Operating on lang {lang}")
+        logger.debug("Operating on lang %s", lang)
         template = working_dir.joinpath(f"archive-template.{lang}.xhtml")
         if template.exists():
             logger.debug("Template Exists!")
@@ -25,7 +29,7 @@ def _gen_archive_index(working_dir: Path, languages: list[str], directory: Path)
             update_if_changed(directory.joinpath(f"index.{lang}.xhtml"), content)
 
 
-def _gen_index_sources(directory: Path):
+def _gen_index_sources(directory: Path) -> None:
     update_if_changed(
         directory.joinpath("index.sources"),
         dedent(
@@ -33,13 +37,13 @@ def _gen_index_sources(directory: Path):
                 {directory}/news-*:[]
                 {directory}/.news-*:[]
                 {directory.parent}/.localmenu:[]
-            """
+            """,
         ),
     )
 
 
-def _gen_xml_files(working_dir: Path, file: Path):
-    logger.debug(f"Transforming {file}")
+def _gen_xml_files(working_dir: Path, file: Path) -> None:
+    logger.debug("Transforming %s", file)
     # Would be more efficient to pass this to the function,
     # but this causes a pickling error,
     # and  the faq seems to indicate passing around these objects
@@ -54,7 +58,7 @@ def _gen_xml_files(working_dir: Path, file: Path):
     )
     update_if_changed(
         file.parent.joinpath(
-            f".{file.with_suffix('').stem}{file.with_suffix('').suffix}.xml"
+            f".{file.with_suffix('').stem}{file.with_suffix('').suffix}.xml",
         ),
         str(result),
     )
@@ -65,7 +69,7 @@ def run(languages: list[str], processes: int, working_dir: Path) -> None:
     preparation for news subdirectory
     """
     with multiprocessing.Pool(processes) as pool:
-        years = list(sorted(working_dir.glob("[0-9][0-9][0-9][0-9]")))
+        years = sorted(working_dir.glob("[0-9][0-9][0-9][0-9]"))
         # Copy news archive template to each of the years
         pool.starmap(
             _gen_archive_index,

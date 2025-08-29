@@ -18,7 +18,7 @@ def _do_symlinking(directory: Path) -> None:
         while not working_dir.joinpath("default.xsl").exists():
             working_dir = working_dir.parent
         directory.joinpath(".default.xsl").symlink_to(
-            working_dir.joinpath("default.xsl").resolve()
+            working_dir.joinpath("default.xsl").resolve(),
         )
 
 
@@ -33,7 +33,7 @@ def update_defaultxsls(source_dir: Path, pool: multiprocessing.Pool) -> None:
     logger.info("Updating default xsl's")
 
     # Get a set of all directories containing .xhtml source files
-    directories = set(map(lambda path: path.parent, source_dir.glob("**/*.*.xhtml")))
+    directories = {path.parent for path in source_dir.glob("**/*.*.xhtml")}
 
     # Do all directories asynchronously
     pool.map(_do_symlinking, directories)

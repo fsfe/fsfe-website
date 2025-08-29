@@ -7,7 +7,7 @@ import multiprocessing
 from pathlib import Path
 from xml.sax.saxutils import escape
 
-import lxml.etree as etree
+from lxml import etree
 
 from fsfe_website_build.lib.misc import (
     get_basepath,
@@ -62,7 +62,11 @@ def _update_tag_sets(
             )
             if count > 0:
                 etree.SubElement(
-                    page, "tag", section=section, key=tag, count=str(count)
+                    page,
+                    "tag",
+                    section=section,
+                    key=tag,
+                    count=str(count),
                 ).text = label
     update_if_changed(
         site.joinpath(f"tags/.tags.{lang}.xml"),
@@ -71,7 +75,9 @@ def _update_tag_sets(
 
 
 def update_tags(
-    source_dir: Path, languages: list[str], pool: multiprocessing.Pool
+    source_dir: Path,
+    languages: list[str],
+    pool: multiprocessing.Pool,
 ) -> None:
     """
     Update Tag pages, xmllists and xmls
@@ -92,7 +98,7 @@ def update_tags(
     the tagged-* are correctly deleted.
     """
     if source_dir.joinpath("tags").exists():
-        logger.info(f"Updating tags for {source_dir}")
+        logger.info("Updating tags for %s", source_dir)
         # Create a complete and current map of which tag is used in which files
         files_by_tag = {}
         tags_by_lang = {}
@@ -140,18 +146,18 @@ def update_tags(
         logger.debug("Updating tag pages")
         pool.starmap(
             _update_tag_pages,
-            map(lambda tag: (source_dir, tag, languages), files_by_tag.keys()),
+            ((source_dir, tag, languages) for tag in files_by_tag),
         )
 
         logger.debug("Updating tag lists")
         pool.starmap(
             update_if_changed,
-            map(
-                lambda tag: (
+            (
+                (
                     Path(f"{source_dir}/tags/.tagged-{tag}.xmllist"),
-                    ("\n".join(map(lambda file: str(file), files_by_tag[tag])) + "\n"),
-                ),
-                files_by_tag.keys(),
+                    ("\n".join(str(file) for file in files_by_tag[tag]) + "\n"),
+                )
+                for tag in files_by_tag
             ),
         )
 
@@ -166,13 +172,13 @@ def update_tags(
                         filter(
                             lambda path: section in str(path.parent),
                             files_by_tag[tag],
-                        )
-                    )
+                        ),
+                    ),
                 )
         pool.starmap(
             _update_tag_sets,
-            map(
-                lambda lang: (source_dir, lang, filecount, files_by_tag, tags_by_lang),
-                filter(lambda lang: lang in languages, tags_by_lang.keys()),
+            (
+                (source_dir, lang, filecount, files_by_tag, tags_by_lang)
+                for lang in filter(lambda lang: lang in languages, tags_by_lang.keys())
             ),
         )

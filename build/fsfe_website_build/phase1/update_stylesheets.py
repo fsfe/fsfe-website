@@ -19,13 +19,12 @@ def _update_sheet(file: Path) -> None:
     Update a given xsl file if any of its dependant xsl files have been updated
     """
     xslt_root = etree.parse(file)
-    imports = map(
-        lambda imp: file.parent.joinpath(imp.get("href"))
-        .resolve()
-        .relative_to(Path(".").resolve()),
-        xslt_root.xpath(
-            "//xsl:import", namespaces={"xsl": "http://www.w3.org/1999/XSL/Transform"}
-        ),
+    imports = (
+        file.parent.joinpath(imp.get("href")).resolve().relative_to(Path.cwd())
+        for imp in xslt_root.xpath(
+            "//xsl:import",
+            namespaces={"xsl": "http://www.w3.org/1999/XSL/Transform"},
+        )
     )
     touch_if_newer_dep(file, imports)
 

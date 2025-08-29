@@ -13,13 +13,13 @@ def prepare_early_subdirectories(source_dir: Path, processes: int) -> None:
     """
     Find any early subdir scripts in subdirectories and run them
     """
-    logger.info(f"Preparing Early Subdirectories for site {source_dir}")
-    for subdir_path in map(
-        lambda path: path.parent, source_dir.glob("**/early_subdir.py")
-    ):
-        logger.info(f"Preparing early subdirectory {subdir_path}")
+    logger.info("Preparing Early Subdirectories for site %s", source_dir)
+    for subdir_path in (path.parent for path in source_dir.glob("**/early_subdir.py")):
+        logger.info("Preparing early subdirectory %s", subdir_path)
         sys.path.append(str(subdir_path.resolve()))
-        import early_subdir
+        # Ignore this very sensible warning, as we do evil things
+        # here for out subdir scripts
+        import early_subdir  # noqa: PLC0415
 
         early_subdir.run(processes, subdir_path)
         # Remove its path from where things can be imported

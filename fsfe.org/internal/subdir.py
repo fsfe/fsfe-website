@@ -8,25 +8,25 @@ import os
 from pathlib import Path
 from urllib.parse import urlparse
 
-import lxml.etree as etree
 import requests
 from fsfe_website_build.lib.misc import update_if_changed
+from lxml import etree
 
 logger = logging.getLogger(__name__)
 
 
-def run(languages: list[str], processes: int, working_dir: Path) -> None:
+def run(languages: list[str], processes: int, working_dir: Path) -> None:  # noqa: ARG001 # We allow unused args for subdirs
     """
     Internal subdir preparation
     """
     logger.info("Creating activities file")
     raw_url = urlparse(
-        "https://git.fsfe.org/FSFE/activities/raw/branch/master/activities.csv"
+        "https://git.fsfe.org/FSFE/activities/raw/branch/master/activities.csv",
     )
     git_token = os.environ.get("FSFE_WEBSITE_GIT_TOKEN")
     if git_token is None:
-        logger.warn(
-            "FSFE_WEBSITE_GIT_TOKEN is not set, skipping generation of activities file"
+        logger.warning(
+            "FSFE_WEBSITE_GIT_TOKEN is not set, skipping generation of activities file",
         )
         return
 
@@ -34,8 +34,9 @@ def run(languages: list[str], processes: int, working_dir: Path) -> None:
     r = requests.get(url)
 
     if not r.ok:
-        logger.error("Failed to retrieve activities file")
-        raise Exception("Failed to retrieve activities file")
+        message = "Failed to retrieve activities file"
+        logger.error(message)
+        raise RuntimeError(message)
 
     activities_csv = csv.reader(r.text.split("\n")[1:], delimiter="\t")
 

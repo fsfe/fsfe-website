@@ -10,8 +10,8 @@ import multiprocessing
 from pathlib import Path
 
 import iso639
-import lxml.etree as etree
 import nltk
+from lxml import etree
 from nltk.corpus import stopwords as nltk_stopwords
 
 from fsfe_website_build.lib.misc import update_if_changed
@@ -29,8 +29,9 @@ def _find_teaser(document: etree.ElementTree) -> str:
     :document: The parsed lxml ElementTree document
     :returns: The text of the teaser or an empty string
     """
+    trivial_length = 10
     for p in document.xpath("//body//p"):
-        if p.text and len(p.text.strip().split(" ")) > 10:
+        if p.text and len(p.text.strip().split(" ")) > trivial_length:
             return p.text
     return ""
 
@@ -39,11 +40,13 @@ def _process_file(file: Path, stopwords: set[str]) -> dict:
     """
     Generate the search index entry for a given file and set of stopwords
     """
-    logger.debug(f"Processing file {file}")
+    logger.debug("Processing file %s", file)
     xslt_root = etree.parse(file)
-    tags = map(
-        lambda tag: tag.get("key"),
-        filter(lambda tag: tag.get("key") != "front-page", xslt_root.xpath("//tag")),
+    tags = (
+        tag.get("key")
+        for tag in filter(
+            lambda tag: tag.get("key") != "front-page", xslt_root.xpath("//tag")
+        )
     )
     return {
         "url": f"/{file.with_suffix('.html').relative_to(file.parents[-2])}",
@@ -69,7 +72,9 @@ def _process_file(file: Path, stopwords: set[str]) -> dict:
 
 
 def index_websites(
-    source_dir: Path, languages: list[str], pool: multiprocessing.Pool
+    source_dir: Path,
+    languages: list[str],
+    pool: multiprocessing.Pool,
 ) -> None:
     """
     Generate a search index for all sites that have a search/search.js file
@@ -81,7 +86,7 @@ def index_websites(
     nltk.download("stopwords", download_dir=nltkdir, quiet=True)
     # Iterate over sites
     if source_dir.joinpath("search/search.js").exists():
-        logger.debug(f"Indexing {source_dir}")
+        logger.debug("Indexing %s", source_dir)
 
         # Get all xhtml files in languages to be processed
         # Create a list of tuples
@@ -90,28 +95,28 @@ def index_websites(
         # Use iso639 to get the english name of the language
         # from the two letter iso639-1 code we use to mark files.
         # Then if that language has stopwords from nltk, use those stopwords.
-        files_with_stopwords = map(
-            lambda file: (
+        files_with_stopwords = (
+            (
                 file,
                 (
                     set(
                         nltk_stopwords.words(
                             iso639.Language.from_part1(
-                                file.suffixes[0].removeprefix(".")
-                            ).name.lower()
-                        )
+                                file.suffixes[0].removeprefix("."),
+                            ).name.lower(),
+                        ),
                     )
                     if iso639.Language.from_part1(
-                        file.suffixes[0].removeprefix(".")
+                        file.suffixes[0].removeprefix("."),
                     ).name.lower()
                     in nltk_stopwords.fileids()
                     else set()
                 ),
-            ),
-            filter(
+            )
+            for file in filter(
                 lambda file: file.suffixes[0].removeprefix(".") in languages,
                 source_dir.glob("**/*.??.xhtml"),
-            ),
+            )
         )
 
         articles = pool.starmap(_process_file, files_with_stopwords)

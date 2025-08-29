@@ -13,14 +13,15 @@ logger = logging.getLogger(__name__)
 
 def _do_symlinking(target: Path) -> None:
     source = target.parent.joinpath(
-        f"index{target.with_suffix('').suffix}{target.suffix}"
+        f"index{target.with_suffix('').suffix}{target.suffix}",
     )
     if not source.exists():
         source.symlink_to(target.relative_to(source.parent))
 
 
 def create_index_symlinks(
-    source_dir: Path, pool: multiprocessing.Pool, target: Path
+    pool: multiprocessing.Pool,
+    target: Path,
 ) -> None:
     """
     Create index.* symlinks

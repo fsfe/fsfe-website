@@ -6,7 +6,7 @@ import logging
 import multiprocessing
 from pathlib import Path
 
-import lxml.etree as etree
+from lxml import etree
 
 from fsfe_website_build.lib.misc import get_basepath, update_if_changed
 
@@ -14,21 +14,18 @@ logger = logging.getLogger(__name__)
 
 
 def _write_localmenus(
-    directory: str, files_by_dir: dict[str, list[Path]], languages: list[str]
+    directory: str,
+    files_by_dir: dict[str, list[Path]],
+    languages: list[str],
 ) -> None:
     """
     Write localmenus for a given directory
     """
     # Set of files with no langcode or xhtml extension
-    base_files = set(
-        map(
-            lambda filter_file: get_basepath(filter_file),
-            files_by_dir[directory],
-        )
-    )
+    base_files = {get_basepath(filter_file) for filter_file in files_by_dir[directory]}
     for lang in languages:
         file = Path(directory).joinpath(f".localmenu.{lang}.xml")
-        logger.debug(f"Creating {file}")
+        logger.debug("Creating %s", file)
         page = etree.Element("feed")
 
         # Add the subelements
@@ -37,15 +34,15 @@ def _write_localmenus(
 
         for source_file in filter(
             lambda path: path is not None,
-            map(
-                lambda base_file: base_file.with_suffix(f".{lang}.xhtml")
+            (
+                base_file.with_suffix(f".{lang}.xhtml")
                 if base_file.with_suffix(f".{lang}.xhtml").exists()
                 else (
                     base_file.with_suffix(".en.xhtml")
                     if base_file.with_suffix(".en.xhtml").exists()
                     else None
-                ),
-                base_files,
+                )
+                for base_file in base_files
             ),
         ):
             for localmenu in etree.parse(source_file).xpath("//localmenu"):
@@ -65,8 +62,8 @@ def _write_localmenus(
                     link=(
                         str(
                             source_file.with_suffix(".html").relative_to(
-                                source_file.parents[0]
-                            )
+                                source_file.parents[0],
+                            ),
                         )
                     ),
                 ).text = localmenu.text
@@ -78,7 +75,9 @@ def _write_localmenus(
 
 
 def update_localmenus(
-    source_dir: Path, languages: list[str], pool: multiprocessing.Pool
+    source_dir: Path,
+    languages: list[str],
+    pool: multiprocessing.Pool,
 ) -> None:
     """
     Update all the .localmenu.*.xml files containing the local menus.
@@ -94,20 +93,20 @@ def update_localmenus(
         if xslt_root.xpath("//localmenu"):
             directory = xslt_root.xpath("//localmenu/@dir")
             directory = (
-                directory[0] if directory else str(file.parent.relative_to(Path(".")))
+                directory[0] if directory else str(file.parent.relative_to(Path()))
             )
             if directory not in files_by_dir:
                 files_by_dir[directory] = set()
             files_by_dir[directory].add(file)
-    for directory in files_by_dir:
-        files_by_dir[directory] = sorted(list(files_by_dir[directory]))
+    for directory, files in files_by_dir.items():
+        files_by_dir[directory] = sorted(files)
 
     # If any of the source files has been updated, rebuild all .localmenu.*.xml
     dirs = filter(
         lambda directory: (
             any(
-                map(
-                    lambda file: (
+                (
+                    (
                         (not Path(directory).joinpath(".localmenu.en.xml").exists())
                         or (
                             file.stat().st_mtime
@@ -116,14 +115,14 @@ def update_localmenus(
                             .stat()
                             .st_mtime
                         )
-                    ),
-                    files_by_dir[directory],
-                )
+                    )
+                    for file in files_by_dir[directory]
+                ),
             )
         ),
         files_by_dir,
     )
     pool.starmap(
         _write_localmenus,
-        map(lambda directory: (directory, files_by_dir, languages), dirs),
+        ((directory, files_by_dir, languages) for directory in dirs),
     )

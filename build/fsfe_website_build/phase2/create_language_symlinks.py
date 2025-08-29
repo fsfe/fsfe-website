@@ -16,7 +16,8 @@ def _do_symlinking(target: Path) -> None:
 
 
 def create_language_symlinks(
-    source_dir: Path, pool: multiprocessing.Pool, target: Path
+    pool: multiprocessing.Pool,
+    target: Path,
 ) -> None:
     """
     Create symlinks from file.<lang>.html to file.html.<lang>

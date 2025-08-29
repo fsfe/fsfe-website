@@ -6,10 +6,10 @@ import logging
 import multiprocessing
 from pathlib import Path
 
-import lxml.etree as etree
 from fsfe_website_build.lib.misc import (
     update_if_changed,
 )
+from lxml import etree
 
 logger = logging.getLogger(__name__)
 
@@ -31,19 +31,19 @@ def run(processes: int, working_dir: Path) -> None:
     head = etree.SubElement(page, "body")
 
     index_content = etree.tostring(page, xml_declaration=True, encoding="utf-8").decode(
-        "utf-8"
+        "utf-8",
     )
 
     with multiprocessing.Pool(processes) as pool:
         pool.starmap(
             update_if_changed,
-            map(
-                lambda path: (
+            (
+                (
                     working_dir.joinpath(
                         f"index.{path.name}.xhtml",
                     ),
                     index_content,
-                ),
-                Path().glob("global/languages/*"),
+                )
+                for path in Path().glob("global/languages/*")
             ),
         )

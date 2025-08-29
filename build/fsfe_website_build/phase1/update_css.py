@@ -27,14 +27,14 @@ def update_css(
             if directory.joinpath(name + ".less").exists() and (
                 not directory.joinpath(name + ".min.css").exists()
                 or any(
-                    map(
-                        lambda path: path.stat().st_mtime
-                        > directory.joinpath(name + ".min.css").stat().st_mtime,
-                        directory.glob("**/*.less"),
-                    )
+                    (
+                        path.stat().st_mtime
+                        > directory.joinpath(name + ".min.css").stat().st_mtime
+                        for path in directory.glob("**/*.less")
+                    ),
                 )
             ):
-                logger.info(f"Compiling {name}.less")
+                logger.info("Compiling %s.less", name)
                 result = run_command(
                     [
                         "lessc",

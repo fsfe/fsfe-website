@@ -18,13 +18,16 @@ logger = logging.getLogger(__name__)
 
 
 def phase2_run(
-    source_dir: Path, languages: list[str], pool: multiprocessing.Pool, target: Path
-):
+    source_dir: Path,
+    languages: list[str],
+    pool: multiprocessing.Pool,
+    target: Path,
+) -> None:
     """
     Run all the necessary sub functions for phase2.
     """
     logger.info("Starting Phase 2 - Generating output")
     process_files(source_dir, languages, pool, target)
-    create_index_symlinks(source_dir, pool, target)
-    create_language_symlinks(source_dir, pool, target)
+    create_index_symlinks(pool, target)
+    create_language_symlinks(pool, target)
     copy_files(source_dir, pool, target)

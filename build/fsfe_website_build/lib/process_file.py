@@ -7,7 +7,7 @@ import re
 from datetime import datetime
 from pathlib import Path
 
-import lxml.etree as etree
+from lxml import etree
 
 from fsfe_website_build.lib.misc import get_basename, get_version, lang_from_filename
 
@@ -70,12 +70,12 @@ def _get_set(action_file: Path, lang: str, parser: etree.XMLParser) -> etree.Ele
     """
     doc_set = etree.Element("set")
     list_file = action_file.with_stem(
-        f".{action_file.with_suffix('').stem}"
+        f".{action_file.with_suffix('').stem}",
     ).with_suffix(".xmllist")
 
     if list_file.exists():
         with list_file.open("r") as file:
-            for path in map(lambda line: Path(line.strip()), file):
+            for path in (Path(line.strip()) for line in file):
                 path_xml = (
                     path.with_suffix(f".{lang}.xml")
                     if path.with_suffix(f".{lang}.xml").exists()
@@ -87,10 +87,15 @@ def _get_set(action_file: Path, lang: str, parser: etree.XMLParser) -> etree.Ele
 
 
 def _get_document(
-    action_lang: str, action_file: Path, lang: str, parser: etree.XMLParser
+    action_lang: str,
+    action_file: Path,
+    lang: str,
+    parser: etree.XMLParser,
 ) -> etree.Element:
     document = etree.Element(
-        "document", language=action_lang, **_get_attributes(action_file)
+        "document",
+        language=action_lang,
+        **_get_attributes(action_file),
     )
     document.append(_get_set(action_file, lang, parser))
     document.extend(_get_xmls(action_file, parser))
@@ -103,15 +108,15 @@ def _build_xmlstream(infile: Path, parser: etree.XMLParser) -> etree.Element:
     the expected shortname and language flag indicate
     a single xhtml page to be built
     """
-    logger.debug(f"infile: {infile}")
+    logger.debug("infile: %s", infile)
     shortname = infile.with_suffix("")
     lang = lang_from_filename(infile)
     glob = infile.parent.joinpath(f"{get_basename(infile)}.??{infile.suffix}")
-    logger.debug(f"formed glob: {glob}")
+    logger.debug("formed glob: %s", glob)
     lang_lst = list(
         infile.parent.glob(f"{get_basename(infile)}.??{infile.suffix}"),
     )
-    logger.debug(f"file lang list: {lang_lst}")
+    logger.debug("file lang list: %s", lang_lst)
     original_lang = (
         "en"
         if infile.with_suffix("").with_suffix(f".en{infile.suffix}").exists()
@@ -132,7 +137,7 @@ def _build_xmlstream(infile: Path, parser: etree.XMLParser) -> etree.Element:
     if infile.exists():
         action_lang = lang
         original_version = get_version(
-            shortname.with_suffix(f".{original_lang}{infile.suffix}")
+            shortname.with_suffix(f".{original_lang}{infile.suffix}"),
         )
         lang_version = get_version(shortname.with_suffix(f".{lang}{infile.suffix}"))
         translation_state = (
@@ -149,7 +154,7 @@ def _build_xmlstream(infile: Path, parser: etree.XMLParser) -> etree.Element:
         translation_state = "untranslated"
 
     action_file = shortname.with_suffix(f".{action_lang}{infile.suffix}")
-    logger.debug(f"action_file: {action_file}")
+    logger.debug("action_file: %s", action_file)
     # Create the root element
     page = etree.Element(
         "buildinfo",
@@ -180,11 +185,11 @@ def _build_xmlstream(infile: Path, parser: etree.XMLParser) -> etree.Element:
     return page
 
 
-def process_file(infile: Path, processor: Path) -> str:
+def process_file(infile: Path, processor: Path) -> etree._XSLTResultTree:
     """
     Process a given file using the correct xsl sheet
     """
-    logger.debug(f"Processing {infile}")
+    logger.debug("Processing %s", infile)
     lang = lang_from_filename(infile)
     parser = etree.XMLParser(remove_blank_text=True, remove_comments=True)
     xmlstream = _build_xmlstream(infile, parser)
@@ -224,5 +229,5 @@ def process_file(infile: Path, processor: Path) -> str:
                 ),
             )
     except AssertionError:
-        logger.debug(f"Output generated for file {infile} is not valid xml")
+        logger.debug("Output generated for file %s is not valid xml", infile)
     return result

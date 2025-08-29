@@ -37,7 +37,7 @@ def serve_websites(serve_dir: str, base_port: int, increment_number: int) -> Non
     for index, directory in enumerate(dirs):
         port = base_port + (increment_number * index)
         url = f"http://127.0.0.1:{port}"
-        logging.info(f"{directory.name} served at {url}")
+        logger.info("%s served at %s", directory.name, url)
         if shutil.which("xdg-open") is not None:
             run_command(["xdg-open", url + "/index.en.html"])
         serves.append((str(directory), port))

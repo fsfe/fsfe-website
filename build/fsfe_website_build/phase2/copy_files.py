@@ -16,7 +16,7 @@ def _copy_file(target: Path, source_dir: Path, source_file: Path) -> None:
         not target_file.exists()
         or source_file.stat().st_mtime > target_file.stat().st_mtime
     ):
-        logger.debug(f"Copying {source_file} to {target_file}")
+        logger.debug("Copying %s to %s", source_file, target_file)
         target_file.parent.mkdir(parents=True, exist_ok=True)
         target_file.write_bytes(source_file.read_bytes())
         # preserve file modes
@@ -51,7 +51,7 @@ def copy_files(source_dir: Path, pool: multiprocessing.Pool, target: Path) -> No
                     ]
                     and path.name not in ["Makefile"],
                     source_dir.glob("**/*"),
-                )
+                ),
             )
             # Special case hard code pass over orde items xml required by cgi script
             + list(source_dir.glob("order/data/items.en.xml")),

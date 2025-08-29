@@ -39,7 +39,7 @@ def _process_file(file: Path, stopwords: set[str]) -> dict:
     """
     Generate the search index entry for a given file and set of stopwords
     """
-    logger.debug(f"Processing file {file}")
+    logger.debug("Processing file %s", file)
     xslt_root = etree.parse(file)
     tags = map(
         lambda tag: tag.get("key"),
@@ -69,7 +69,9 @@ def _process_file(file: Path, stopwords: set[str]) -> dict:
 
 
 def index_websites(
-    source_dir: Path, languages: list[str], pool: multiprocessing.Pool
+    source_dir: Path,
+    languages: list[str],
+    pool: multiprocessing.Pool,
 ) -> None:
     """
     Generate a search index for all sites that have a search/search.js file
@@ -81,7 +83,7 @@ def index_websites(
     nltk.download("stopwords", download_dir=nltkdir, quiet=True)
     # Iterate over sites
     if source_dir.joinpath("search/search.js").exists():
-        logger.debug(f"Indexing {source_dir}")
+        logger.debug("Indexing %s", source_dir)
 
         # Get all xhtml files in languages to be processed
         # Create a list of tuples
@@ -97,12 +99,12 @@ def index_websites(
                     set(
                         nltk_stopwords.words(
                             iso639.Language.from_part1(
-                                file.suffixes[0].removeprefix(".")
-                            ).name.lower()
-                        )
+                                file.suffixes[0].removeprefix("."),
+                            ).name.lower(),
+                        ),
                     )
                     if iso639.Language.from_part1(
-                        file.suffixes[0].removeprefix(".")
+                        file.suffixes[0].removeprefix("."),
                     ).name.lower()
                     in nltk_stopwords.fileids()
                     else set()

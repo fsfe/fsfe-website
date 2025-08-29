@@ -29,7 +29,7 @@ def parse_arguments() -> argparse.Namespace:
 
     """
     parser = argparse.ArgumentParser(
-        description="Python script to handle building of the fsfe webpage"
+        description="Python script to handle building of the fsfe webpage",
     )
     parser.add_argument(
         "--full",
@@ -82,11 +82,10 @@ def parse_arguments() -> argparse.Namespace:
         type=str,
         default="./output/final",
     )
-    args = parser.parse_args()
-    return args
+    return parser.parse_args()
 
 
-def main():
+def main() -> None:
     """
     Main process of the website builder
     """
@@ -123,8 +122,8 @@ def main():
                     list(
                         map(
                             lambda path: path.name,
-                            Path(".").glob("global/languages/??"),
-                        )
+                            Path().glob("global/languages/??"),
+                        ),
                     ),
                 )
             ),
@@ -132,14 +131,14 @@ def main():
         )
 
         stage_required = any(
-            [args.stage, "@" in args.target, ":" in args.target, "," in args.target]
+            [args.stage, "@" in args.target, ":" in args.target, "," in args.target],
         )
         working_target = Path("./output/stage" if stage_required else args.target)
         # the two middle phases are unconditional, and run on a per site basis
         for site in args.sites:
-            logger.info(f"Processing {site}")
+            logger.info("Processing %s", site)
             if not site.exists():
-                logger.critical(f"Site {site} does not exist, exiting")
+                logger.critical("Site %s does not exist, exiting", site)
                 sys.exit(1)
             # Early subdirs
             # for subdir actions that need to be performed
@@ -159,9 +158,9 @@ def main():
                             map(
                                 lambda path: lang_from_filename(path),
                                 site.glob("**/*.*.xhtml"),
-                            )
-                        )
-                    )
+                            ),
+                        ),
+                    ),
                 )
             )
             # Processes needed only for subdir stuff

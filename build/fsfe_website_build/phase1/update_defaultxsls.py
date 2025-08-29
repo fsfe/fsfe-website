@@ -18,7 +18,7 @@ def _do_symlinking(directory: Path) -> None:
         while not working_dir.joinpath("default.xsl").exists():
             working_dir = working_dir.parent
         directory.joinpath(".default.xsl").symlink_to(
-            working_dir.joinpath("default.xsl").resolve()
+            working_dir.joinpath("default.xsl").resolve(),
         )
 
 

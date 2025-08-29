@@ -15,18 +15,18 @@ from fsfe_website_build.lib.misc import update_if_changed
 logger = logging.getLogger(__name__)
 
 
-def run(languages: list[str], processes: int, working_dir: Path) -> None:
+def run(languages: list[str], processes: int, working_dir: Path) -> None:  # noqa: ARG001 # We allow unused args for subdirs
     """
     Internal subdir preparation
     """
     logger.info("Creating activities file")
     raw_url = urlparse(
-        "https://git.fsfe.org/FSFE/activities/raw/branch/master/activities.csv"
+        "https://git.fsfe.org/FSFE/activities/raw/branch/master/activities.csv",
     )
     git_token = os.environ.get("FSFE_WEBSITE_GIT_TOKEN")
     if git_token is None:
-        logger.warn(
-            "FSFE_WEBSITE_GIT_TOKEN is not set, skipping generation of activities file"
+        logger.warning(
+            "FSFE_WEBSITE_GIT_TOKEN is not set, skipping generation of activities file",
         )
         return
 

@@ -31,7 +31,7 @@ def run(processes: int, working_dir: Path) -> None:
     head = etree.SubElement(page, "body")
 
     index_content = etree.tostring(page, xml_declaration=True, encoding="utf-8").decode(
-        "utf-8"
+        "utf-8",
     )
 
     with multiprocessing.Pool(processes) as pool:

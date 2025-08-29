@@ -22,7 +22,11 @@ logger = logging.getLogger(__name__)
 
 
 def _update_for_base(
-    base: Path, all_xml: set[Path], nextyear: str, thisyear: str, lastyear: str
+    base: Path,
+    all_xml: set[Path],
+    nextyear: str,
+    thisyear: str,
+    lastyear: str,
 ) -> None:
     """
     Update the xmllist for a given base file
@@ -59,11 +63,11 @@ def _update_for_base(
                         any(
                             map(
                                 lambda xml_file_with_ending: etree.parse(
-                                    xml_file_with_ending
+                                    xml_file_with_ending,
                                 ).find(f".//tag[@key='{tag}']")
                                 is not None,
                                 xml_file.parent.glob(f"{xml_file.name}.*.xml"),
-                            )
+                            ),
                         )
                         if tag != ""
                         else True
@@ -74,7 +78,7 @@ def _update_for_base(
                 ):
                     matching_files.add(str(xml_file))
 
-    for file in Path("").glob(f"{base}.??.xhtml"):
+    for file in Path().glob(f"{base}.??.xhtml"):
         xslt_root = etree.parse(file)
         for module in xslt_root.xpath("//module"):
             matching_files.add(f"global/data/modules/{module.get('id')}".strip())
@@ -86,7 +90,9 @@ def _update_for_base(
 
 
 def _update_module_xmllists(
-    source_dir: Path, languages: list[str], pool: multiprocessing.Pool
+    source_dir: Path,
+    languages: list[str],
+    pool: multiprocessing.Pool,
 ) -> None:
     """
     Update .xmllist files for .sources and .xhtml containing <module>s
@@ -101,13 +107,13 @@ def _update_module_xmllists(
                 list(source_dir.glob("**/*.*.xml"))
                 + list(Path("global/").glob("**/*.*.xml")),
             ),
-        )
+        ),
     )
     source_bases = set(
         map(
             lambda path: path.with_suffix(""),
             source_dir.glob("**/*.sources"),
-        )
+        ),
     )
     module_bases = set(
         map(
@@ -117,7 +123,7 @@ def _update_module_xmllists(
                 and etree.parse(path).xpath("//module"),
                 source_dir.glob("**/*.*.xhtml"),
             ),
-        )
+        ),
     )
     all_bases = source_bases | module_bases
     nextyear = str(datetime.datetime.today().year + 1)
@@ -136,13 +142,14 @@ def _check_xmllist_deps(file: Path) -> None:
     xmls = set()
     with file.open(mode="r") as fileobj:
         for line in fileobj:
-            for newfile in Path("").glob(line.strip() + ".??.xml"):
+            for newfile in Path().glob(line.strip() + ".??.xml"):
                 xmls.add(newfile)
     touch_if_newer_dep(file, list(xmls))
 
 
 def _touch_xmllists_with_updated_deps(
-    source_dir: Path, languages: list[str], pool: multiprocessing.Pool
+    source_dir: Path,
+    pool: multiprocessing.Pool,
 ) -> None:
     """
     Touch all .xmllist files where one of the contained files has changed
@@ -152,7 +159,9 @@ def _touch_xmllists_with_updated_deps(
 
 
 def update_xmllists(
-    source_dir: Path, languages: list[str], pool: multiprocessing.Pool
+    source_dir: Path,
+    languages: list[str],
+    pool: multiprocessing.Pool,
 ) -> None:
     """
     Update XML filelists (*.xmllist)
@@ -172,4 +181,4 @@ def update_xmllists(
     the tagged-* are correctly deleted.
     """
     _update_module_xmllists(source_dir, languages, pool)
-    _touch_xmllists_with_updated_deps(source_dir, languages, pool)
+    _touch_xmllists_with_updated_deps(source_dir, pool)

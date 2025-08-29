@@ -42,7 +42,7 @@ def update_if_changed(path: Path, content: str) -> None:
     write content to the file.
     """
     if not path.exists() or path.read_text() != content:
-        logger.debug(f"Updating {path}")
+        logger.debug("Updating %s", path)
         path.write_text(content)
 
 
@@ -55,7 +55,7 @@ def touch_if_newer_dep(file: Path, deps: list[Path]) -> None:
     Essentially simple reimplementation of make deps for build targets.
     """
     if any(dep.stat().st_mtime > file.stat().st_mtime for dep in deps):
-        logger.info(f"Touching {file}")
+        logger.info("Touching %s", file)
         file.touch()
 
 
@@ -63,7 +63,7 @@ def delete_file(file: Path) -> None:
     """
     Delete given file using pathlib
     """
-    logger.debug(f"Removing file {file}")
+    logger.debug("Removing file %s", file)
     file.unlink()
 
 
@@ -79,8 +79,7 @@ def lang_from_filename(file: Path) -> str:
         message = f"Language {lang} from file {file} not of correct length"
         logger.error(message)
         raise RuntimeError(message)
-    else:
-        return lang
+    return lang
 
 
 def run_command(commands: list) -> str:
@@ -95,9 +94,11 @@ def run_command(commands: list) -> str:
         return result.stdout.strip()
     except subprocess.CalledProcessError as error:
         logger.error(
-            f"Command: {error.cmd} returned non zero exit code {error.returncode}"
-            f"\nstdout: {error.stdout}"
-            f"\nstderr: {error.stderr}"
+            "Command: %s returned non zero exit code %s\nstdout: %s\nstderr: %s",
+            error.cmd,
+            error.returncode,
+            error.stdout,
+            error.stderr,
         )
         raise error
 
@@ -112,7 +113,7 @@ def get_version(file: Path) -> int:
     result = str(result_tree).strip()
     if result == "":
         result = str(0)
-    logger.debug(f"Got version: {result}")
+    logger.debug("Got version: %s", result)
     return int(result)
 
 

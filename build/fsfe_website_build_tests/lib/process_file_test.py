@@ -23,14 +23,14 @@ def sample_xsl(tmp_path: Path) -> Path:
                 </xsl:copy>
               </xsl:template>
             </xsl:stylesheet>
-            """
-        ).strip()
+            """,
+        ).strip(),
     )
     return xsl_path
 
 
 @pytest.mark.parametrize(
-    "lang,link_in,link_out",
+    ("lang", "link_in", "link_out"),
     [
         ("en", "foo/bar.html", "foo/bar.en.html"),
         ("en", "/foo/bar.html", "/foo/bar.en.html"),
@@ -43,8 +43,12 @@ def sample_xsl(tmp_path: Path) -> Path:
     ],
 )
 def process_file_link_rewrites_test(
-    tmp_path: Path, sample_xsl: Path, lang: str, link_in: str, link_out: str
-):
+    tmp_path: Path,
+    sample_xsl: Path,
+    lang: str,
+    link_in: str,
+    link_out: str,
+) -> None:
     """Check that all link transformations work as expected."""
     xml_path = tmp_path / f"dummy.{lang}.xml"
     xml_path.write_text(
@@ -54,8 +58,8 @@ def process_file_link_rewrites_test(
             <root>
               <a href="{link_in}" test_url="true">link</a>
             </root>
-            """
-        ).strip()
+            """,
+        ).strip(),
     )
 
     result_doc = process_file(xml_path, sample_xsl)

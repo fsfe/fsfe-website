@@ -14,7 +14,9 @@ logger = logging.getLogger(__name__)
 
 
 def _write_localmenus(
-    directory: str, files_by_dir: dict[str, list[Path]], languages: list[str]
+    directory: str,
+    files_by_dir: dict[str, list[Path]],
+    languages: list[str],
 ) -> None:
     """
     Write localmenus for a given directory
@@ -24,11 +26,11 @@ def _write_localmenus(
         map(
             lambda filter_file: get_basepath(filter_file),
             files_by_dir[directory],
-        )
+        ),
     )
     for lang in languages:
         file = Path(directory).joinpath(f".localmenu.{lang}.xml")
-        logger.debug(f"Creating {file}")
+        logger.debug("Creating %s", file)
         page = etree.Element("feed")
 
         # Add the subelements
@@ -65,8 +67,8 @@ def _write_localmenus(
                     link=(
                         str(
                             source_file.with_suffix(".html").relative_to(
-                                source_file.parents[0]
-                            )
+                                source_file.parents[0],
+                            ),
                         )
                     ),
                 ).text = localmenu.text
@@ -78,7 +80,9 @@ def _write_localmenus(
 
 
 def update_localmenus(
-    source_dir: Path, languages: list[str], pool: multiprocessing.Pool
+    source_dir: Path,
+    languages: list[str],
+    pool: multiprocessing.Pool,
 ) -> None:
     """
     Update all the .localmenu.*.xml files containing the local menus.
@@ -94,7 +98,7 @@ def update_localmenus(
         if xslt_root.xpath("//localmenu"):
             directory = xslt_root.xpath("//localmenu/@dir")
             directory = (
-                directory[0] if directory else str(file.parent.relative_to(Path(".")))
+                directory[0] if directory else str(file.parent.relative_to(Path()))
             )
             if directory not in files_by_dir:
                 files_by_dir[directory] = set()
@@ -118,7 +122,7 @@ def update_localmenus(
                         )
                     ),
                     files_by_dir[directory],
-                )
+                ),
             )
         ),
         files_by_dir,

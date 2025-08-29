@@ -62,7 +62,11 @@ def _update_tag_sets(
             )
             if count > 0:
                 etree.SubElement(
-                    page, "tag", section=section, key=tag, count=str(count)
+                    page,
+                    "tag",
+                    section=section,
+                    key=tag,
+                    count=str(count),
                 ).text = label
     update_if_changed(
         site.joinpath(f"tags/.tags.{lang}.xml"),
@@ -71,7 +75,9 @@ def _update_tag_sets(
 
 
 def update_tags(
-    source_dir: Path, languages: list[str], pool: multiprocessing.Pool
+    source_dir: Path,
+    languages: list[str],
+    pool: multiprocessing.Pool,
 ) -> None:
     """
     Update Tag pages, xmllists and xmls
@@ -92,7 +98,7 @@ def update_tags(
     the tagged-* are correctly deleted.
     """
     if source_dir.joinpath("tags").exists():
-        logger.info(f"Updating tags for {source_dir}")
+        logger.info("Updating tags for %s", source_dir)
         # Create a complete and current map of which tag is used in which files
         files_by_tag = {}
         tags_by_lang = {}
@@ -166,8 +172,8 @@ def update_tags(
                         filter(
                             lambda path: section in str(path.parent),
                             files_by_tag[tag],
-                        )
-                    )
+                        ),
+                    ),
                 )
         pool.starmap(
             _update_tag_sets,

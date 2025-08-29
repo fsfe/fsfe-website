@@ -18,7 +18,7 @@ from fsfe_website_build.lib.misc import (
 logger = logging.getLogger(__name__)
 
 
-def _generate_translation_data(lang: str, priority: int, file: Path) -> dict:
+def _generate_translation_data(lang: str, file: Path) -> dict:
     page = get_basepath(file)
     ext = file.suffix.removeprefix(".")
     working_file = file.with_suffix("").with_suffix(f".{lang}.{ext}")
@@ -76,14 +76,14 @@ def _get_text_ids(file: Path) -> list[str]:
         filter(
             lambda text_id: text_id is not None,
             map(lambda elem: elem.get("id"), root.iter()),
-        )
+        ),
     )
 
 
 def _create_overview(
     target_dir: Path,
     data: dict[str : dict[int : list[dict]]],
-):
+) -> None:
     work_file = target_dir.joinpath("langs.en.xml")
     if not target_dir.exists():
         target_dir.mkdir(parents=True)
@@ -109,7 +109,7 @@ def _create_overview(
             )
 
     result_str = etree.tostring(page, xml_declaration=True, encoding="utf-8").decode(
-        "utf-8"
+        "utf-8",
     )
 
     update_if_changed(work_file, result_str)
@@ -152,7 +152,7 @@ def _create_translation_file(
 
     # Save to XML file
     result_str = etree.tostring(page, xml_declaration=True, encoding="utf-8").decode(
-        "utf-8"
+        "utf-8",
     )
 
     update_if_changed(work_file, result_str)
@@ -164,7 +164,7 @@ def run(languages: list[str], processes: int, working_dir: Path) -> None:
     Xmls are placed in target_dir, and only languages are processed.
     """
     target_dir = working_dir.joinpath("data/")
-    logger.debug(f"Building index of status of translations into dir {target_dir}")
+    logger.debug("Building index of status of translations into dir %s", target_dir)
 
     # TODO
     # Run generating all this stuff only if some xhtml|xml files have been changed
@@ -179,7 +179,7 @@ def run(languages: list[str], processes: int, working_dir: Path) -> None:
             lambda path: path.suffix in [".xhtml", ".xml"],
             # Split on null bytes, strip and then parse into path
             map(lambda line: Path(line.strip()), all_git_tracked_files.split("\x00")),
-        )
+        ),
     )
     priorities_and_searches = {
         "1": [
@@ -200,7 +200,6 @@ def run(languages: list[str], processes: int, working_dir: Path) -> None:
             "**/fsfe.org/contribute/*.en.xhtml",
         ],
         "5": ["**/fsfe.org/order/**/*.en.xml", "**/fsfe.org/order/**/*.en.xhtml"],
-        # "6": ["**/fsfe.org/**/*.en.xml", "**/fsfe.org/**/*.en.xhtml"],
     }
     with multiprocessing.Pool(processes) as pool:
         # Generate our file lists by priority
@@ -216,7 +215,7 @@ def run(languages: list[str], processes: int, working_dir: Path) -> None:
                     [
                         file.full_match(search)
                         for search in priorities_and_searches[priority]
-                    ]
+                    ],
                 ):
                     files_by_priority[priority].append(file)
                     continue
@@ -230,12 +229,9 @@ def run(languages: list[str], processes: int, working_dir: Path) -> None:
                         lambda result: result is not None,
                         pool.starmap(
                             _generate_translation_data,
-                            [
-                                (lang, priority, file)
-                                for file in files_by_priority[priority]
-                            ],
+                            [(lang, file) for file in files_by_priority[priority]],
                         ),
-                    )
+                    ),
                 )
 
         # sadly single treaded, as only one file being operated on

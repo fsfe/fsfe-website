@@ -17,24 +17,24 @@ from fsfe_website_build.lib.misc import (
 )
 
 
-def keys_exists_test():
+def keys_exists_test() -> None:
     nested = {"a": {"b": {"c": 42}}}
     assert keys_exists(nested, "a", "b", "c") is True
     assert keys_exists(nested, "a", "missing") is False
 
 
-def keys_exists_bad_input_test():
+def keys_exists_bad_input_test() -> None:
     with pytest.raises(TypeError):
         keys_exists([], "a")
     assert keys_exists({}, "a") is False
 
 
-def sort_dict_test():
+def sort_dict_test() -> None:
     src = {"b": 2, "a": 1, "c": 3}
     assert sort_dict(src) == {"a": 1, "b": 2, "c": 3}
 
 
-def update_if_changed_test(tmp_path: Path):
+def update_if_changed_test(tmp_path: Path) -> None:
     file = tmp_path / "foo.txt"
     content = "hello"
     update_if_changed(file, content)
@@ -49,7 +49,7 @@ def update_if_changed_test(tmp_path: Path):
 
 
 # ---------- touch_if_newer_dep ----------
-def touch_if_newer_dep_test(tmp_path: Path):
+def touch_if_newer_dep_test(tmp_path: Path) -> None:
     target = tmp_path / "target"
     target.write_text("target")
     # Ensure mtime of dep is later
@@ -62,50 +62,50 @@ def touch_if_newer_dep_test(tmp_path: Path):
     assert mtime_after > mtime_before
 
 
-def delete_file_test(tmp_path: Path):
+def delete_file_test(tmp_path: Path) -> None:
     f = tmp_path / "gone.txt"
     f.write_text("bye")
     delete_file(f)
     assert not f.exists()
 
 
-def lang_from_filename_test():
+def lang_from_filename_test() -> None:
     assert lang_from_filename(Path("index.en.html")) == "en"
     assert lang_from_filename(Path("index.nolang.html")) == "nolang"
 
 
-def lang_from_filename_bad_test():
+def lang_from_filename_bad_test() -> None:
     with pytest.raises(RuntimeError):
         lang_from_filename(Path("index.eng.html"))
 
 
-def run_command_test():
+def run_command_test() -> None:
     with pytest.raises(subprocess.CalledProcessError):
         run_command(["false"])
 
 
-def run_command_ok_test():
+def run_command_ok_test() -> None:
     out = run_command(["echo", "success"])
     assert out == "success"
 
 
-def get_version_valid_test(tmp_path: Path):
+def get_version_valid_test(tmp_path: Path) -> None:
     xml_file = tmp_path / "page.xml"
     xml_file.write_text("<root><version>3</version></root>")
     assert get_version(xml_file) == 3
 
 
-def get_version_no_version_test(tmp_path: Path):
+def get_version_no_version_test(tmp_path: Path) -> None:
     xml_file = tmp_path / "page.xml"
     xml_file.write_text("<root/>")
     assert get_version(xml_file) == 0
 
 
-def get_basepath_test():
+def get_basepath_test() -> None:
     assert get_basepath(Path("a.b.c")) == Path("a")
     assert get_basepath(Path("a/b.c.d")) == Path("a/b")
 
 
-def get_basename_test():
+def get_basename_test() -> None:
     assert get_basename(Path("a.b.c")) == "a"
     assert get_basename(Path("a/b.c.d")) == "b"

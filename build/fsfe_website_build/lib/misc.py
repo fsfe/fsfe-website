@@ -16,7 +16,9 @@ def keys_exists(element: dict, *keys: str) -> bool:
     Check if *keys (nested) exists in `element` (dict).
     """
     if not isinstance(element, dict):
-        raise TypeError("keys_exists() expects dict as first argument.")
+        message = "keys_exists() expects dict as first argument."
+        logger.error(message)
+        raise TypeError(message)
 
     _element = element
     for key in keys:
@@ -94,14 +96,14 @@ def run_command(commands: list) -> str:
         )
         return result.stdout.strip()
     except subprocess.CalledProcessError as error:
-        logger.error(
+        logger.exception(
             "Command: %s returned non zero exit code %s\nstdout: %s\nstderr: %s",
             error.cmd,
             error.returncode,
             error.stdout,
             error.stderr,
         )
-        raise error
+        raise
 
 
 def get_version(file: Path) -> int:

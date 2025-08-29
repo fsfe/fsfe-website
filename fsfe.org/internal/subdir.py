@@ -34,8 +34,9 @@ def run(languages: list[str], processes: int, working_dir: Path) -> None:  # noq
     r = requests.get(url)
 
     if not r.ok:
-        logger.error("Failed to retrieve activities file")
-        raise Exception("Failed to retrieve activities file")
+        message = "Failed to retrieve activities file"
+        logger.error(message)
+        raise RuntimeError(message)
 
     activities_csv = csv.reader(r.text.split("\n")[1:], delimiter="\t")
 

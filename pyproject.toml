@@ -62,6 +62,7 @@ select = [
   "SIM",   # Simplify
   "T20",   # Warn about prints
   "TC",    # Type checking
+  "TRY",   # Error handling stuff
   "UP",    # alert you when better syntax is available in your python version
   "UP",    # Update syntax to newer versions
   "W",     # pycodestyle warnings

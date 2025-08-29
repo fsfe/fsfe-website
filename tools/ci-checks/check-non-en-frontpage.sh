@@ -7,7 +7,7 @@ set -euo pipefail
 
 # select all items which have the front-page tag
 exit=0
-matched_files="$(grep "<tag.*front-page" --files-with-matches "$@")"
+matched_files="$(grep "<tag.*front-page" --files-with-matches "$@" || true)"
 
 for file in $matched_files; do
 	base="${file%.*}"  # file.xx

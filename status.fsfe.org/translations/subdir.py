@@ -18,7 +18,7 @@ from lxml import etree
 logger = logging.getLogger(__name__)
 
 
-def _generate_translation_data(lang: str, file: Path) -> dict:
+def _generate_translation_data(lang: str, file: Path) -> dict[str, str] | None:
     page = get_basepath(file)
     ext = file.suffix.removeprefix(".")
     working_file = file.with_suffix("").with_suffix(f".{lang}.{ext}")
@@ -72,17 +72,13 @@ def _generate_translation_data(lang: str, file: Path) -> dict:
 def _get_text_ids(file: Path) -> list[str]:
     texts_tree = etree.parse(file)
     root = texts_tree.getroot()
-    return list(
-        filter(
-            lambda text_id: text_id is not None,
-            (elem.get("id") for elem in root.iter()),
-        ),
-    )
+    elements = (elem.get("id") for elem in root.iter())
+    return [i for i in elements if i is not None]
 
 
 def _create_overview(
     target_dir: Path,
-    data: dict[str : dict[int : list[dict]]],
+    data: dict[str, dict[int, list[dict]]],
 ) -> None:
     work_file = target_dir.joinpath("langs.en.xml")
     if not target_dir.exists():
@@ -118,7 +114,7 @@ def _create_overview(
 def _create_translation_file(
     target_dir: Path,
     lang: str,
-    data: dict[int : list[dict]],
+    data: dict[int, list[dict]],
 ) -> None:
     work_file = target_dir.joinpath(f"translations.{lang}.xml")
     page = etree.Element("translation-status")

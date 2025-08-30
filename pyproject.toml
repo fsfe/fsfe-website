@@ -6,23 +6,25 @@ readme = "README.md"
 # Pinned to 3.12 as a known working version, that also has a prebuild wheel for tdewolff-minify
 requires-python = "==3.13.*"
 dependencies = [
-  # XML parser
-  "lxml",
-  # For getting english language names of languages from two letter codes.
-  "python-iso639",
-  # For stopwords for the search index
-  "nltk",
-  # For minification html css and js
-  "tdewolff-minify",
-  # For HTTP requests
-  "requests",
+  "lxml",            # XML parser
+  "nltk",            # For stopwords for the search index
+  "python-iso639",   # For getting english language names of languages from two letter codes.
+  "requests",        # For HTTP requests
+  "tdewolff-minify", # For minification html css and js
 ]
 
 [project.scripts]
 build = "fsfe_website_build:main"
 
 [dependency-groups]
-dev = ["ruff", "lefthook", "taplo", "pytest"]
+dev = [
+  "lefthook",   # pre-commit hook
+  "pyright",    # python typechecker
+  "pytest",     # python test runner
+  "ruff",       # python formatter and linter
+  "taplo",      # toml formatter
+  "types-lxml", # type stubs for lxml
+]
 
 [build-system]
 requires = ["uv_build"]

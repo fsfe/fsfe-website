@@ -14,7 +14,7 @@ from fsfe_website_build.lib.misc import get_basename, get_version, lang_from_fil
 logger = logging.getLogger(__name__)
 
 
-def _get_xmls(file: Path, parser: etree.XMLParser) -> etree.Element:
+def _get_xmls(file: Path, parser: etree.XMLParser) -> list:
     """
     include second level elements of a given XML file
     this emulates the behaviour of the original

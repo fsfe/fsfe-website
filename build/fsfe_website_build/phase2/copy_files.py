@@ -3,7 +3,7 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 
 import logging
-import multiprocessing
+import multiprocessing.pool
 import shutil
 from pathlib import Path
 
@@ -23,7 +23,7 @@ def _copy_file(target: Path, source_dir: Path, source_file: Path) -> None:
         shutil.copymode(source_file, target_file)
 
 
-def copy_files(source_dir: Path, pool: multiprocessing.Pool, target: Path) -> None:
+def copy_files(source_dir: Path, pool: multiprocessing.pool.Pool, target: Path) -> None:
     """
     Copy images, docments etc
     """

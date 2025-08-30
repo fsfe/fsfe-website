@@ -3,7 +3,7 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 
 import logging
-import multiprocessing
+import multiprocessing.pool
 from pathlib import Path
 from xml.sax.saxutils import escape
 
@@ -77,7 +77,7 @@ def _update_tag_sets(
 def update_tags(
     source_dir: Path,
     languages: list[str],
-    pool: multiprocessing.Pool,
+    pool: multiprocessing.pool.Pool,
 ) -> None:
     """
     Update Tag pages, xmllists and xmls

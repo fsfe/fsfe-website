@@ -3,7 +3,7 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 
 import logging
-import multiprocessing
+import multiprocessing.pool
 import re
 from pathlib import Path
 
@@ -19,17 +19,16 @@ def _update_sheet(file: Path) -> None:
     Update a given xsl file if any of its dependant xsl files have been updated
     """
     xslt_root = etree.parse(file)
-    imports = (
+    imports = [
         file.parent.joinpath(imp.get("href")).resolve().relative_to(Path.cwd())
         for imp in xslt_root.xpath(
-            "//xsl:import",
-            namespaces={"xsl": "http://www.w3.org/1999/XSL/Transform"},
+            "//xsl:import", namespaces={"xsl": "http://www.w3.org/1999/XSL/Transform"}
         )
-    )
+    ]
     touch_if_newer_dep(file, imports)
 
 
-def update_stylesheets(source_dir: Path, pool: multiprocessing.Pool) -> None:
+def update_stylesheets(source_dir: Path, pool: multiprocessing.pool.Pool) -> None:
     """
     This script is called from the phase 1 Makefile and touches all XSL files
     which depend on another XSL file that has changed since the last build run.

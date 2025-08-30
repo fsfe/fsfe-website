@@ -5,7 +5,7 @@
 import datetime
 import fnmatch
 import logging
-import multiprocessing
+import multiprocessing.pool
 import re
 from pathlib import Path
 
@@ -48,10 +48,9 @@ def _update_for_base(
                 if len(pattern) <= 0:
                     logger.debug("Pattern too short, continue!")
                     continue
+                search_result = re.search(r":\[(.*)\]", line)
                 tag = (
-                    re.search(r":\[(.*)\]", line).group(1).strip()
-                    if re.search(r":\[(.*)\]", line) is not None
-                    else ""
+                    search_result.group(1).strip() if search_result is not None else ""
                 )
 
                 for xml_file in filter(
@@ -94,7 +93,7 @@ def _update_for_base(
 def _update_module_xmllists(
     source_dir: Path,
     languages: list[str],
-    pool: multiprocessing.Pool,
+    pool: multiprocessing.pool.Pool,
 ) -> None:
     """
     Update .xmllist files for .sources and .xhtml containing <module>s
@@ -142,7 +141,7 @@ def _check_xmllist_deps(file: Path) -> None:
 
 def _touch_xmllists_with_updated_deps(
     source_dir: Path,
-    pool: multiprocessing.Pool,
+    pool: multiprocessing.pool.Pool,
 ) -> None:
     """
     Touch all .xmllist files where one of the contained files has changed
@@ -154,7 +153,7 @@ def _touch_xmllists_with_updated_deps(
 def update_xmllists(
     source_dir: Path,
     languages: list[str],
-    pool: multiprocessing.Pool,
+    pool: multiprocessing.pool.Pool,
 ) -> None:
     """
     Update XML filelists (*.xmllist)

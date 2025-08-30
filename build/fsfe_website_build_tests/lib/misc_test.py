@@ -24,8 +24,6 @@ def keys_exists_test() -> None:
 
 
 def keys_exists_bad_input_test() -> None:
-    with pytest.raises(TypeError):
-        keys_exists([], "a")
     assert keys_exists({}, "a") is False
 
 

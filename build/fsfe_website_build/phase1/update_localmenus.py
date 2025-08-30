@@ -3,7 +3,7 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 
 import logging
-import multiprocessing
+import multiprocessing.pool
 from pathlib import Path
 
 from lxml import etree
@@ -32,9 +32,9 @@ def _write_localmenus(
         version = etree.SubElement(page, "version")
         version.text = "1"
 
-        for source_file in filter(
-            lambda path: path is not None,
-            (
+        for source_file in [
+            path
+            for path in (
                 base_file.with_suffix(f".{lang}.xhtml")
                 if base_file.with_suffix(f".{lang}.xhtml").exists()
                 else (
@@ -43,8 +43,9 @@ def _write_localmenus(
                     else None
                 )
                 for base_file in base_files
-            ),
-        ):
+            )
+            if path is not None
+        ]:
             for localmenu in etree.parse(source_file).xpath("//localmenu"):
                 etree.SubElement(
                     page,
@@ -77,7 +78,7 @@ def _write_localmenus(
 def update_localmenus(
     source_dir: Path,
     languages: list[str],
-    pool: multiprocessing.Pool,
+    pool: multiprocessing.pool.Pool,
 ) -> None:
     """
     Update all the .localmenu.*.xml files containing the local menus.

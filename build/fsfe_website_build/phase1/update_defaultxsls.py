@@ -3,7 +3,7 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 
 import logging
-import multiprocessing
+import multiprocessing.pool
 from pathlib import Path
 
 logger = logging.getLogger(__name__)
@@ -22,7 +22,7 @@ def _do_symlinking(directory: Path) -> None:
         )
 
 
-def update_defaultxsls(source_dir: Path, pool: multiprocessing.Pool) -> None:
+def update_defaultxsls(source_dir: Path, pool: multiprocessing.pool.Pool) -> None:
     """
     Place a .default.xsl into each directory containing source files for
     HTML pages (*.xhtml). These .default.xsl are symlinks to the first

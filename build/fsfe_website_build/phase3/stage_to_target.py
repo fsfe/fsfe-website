@@ -3,7 +3,7 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 
 import logging
-import multiprocessing
+import multiprocessing.pool
 from pathlib import Path
 
 from fsfe_website_build.lib.misc import run_command
@@ -32,7 +32,9 @@ def _rsync(stagedir: Path, target: str, port: int) -> None:
     )
 
 
-def stage_to_target(stagedir: Path, targets: str, pool: multiprocessing.Pool) -> None:
+def stage_to_target(
+    stagedir: Path, targets: str, pool: multiprocessing.pool.Pool
+) -> None:
     """
     Use a multithreaded rsync to copy the stage dir to all targets.
     """

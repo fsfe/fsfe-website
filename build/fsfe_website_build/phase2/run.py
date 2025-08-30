@@ -6,7 +6,7 @@
 # script for FSFE website build, phase 2
 # -----------------------------------------------------------------------------
 import logging
-import multiprocessing
+import multiprocessing.pool
 from pathlib import Path
 
 from .copy_files import copy_files
@@ -20,7 +20,7 @@ logger = logging.getLogger(__name__)
 def phase2_run(
     source_dir: Path,
     languages: list[str],
-    pool: multiprocessing.Pool,
+    pool: multiprocessing.pool.Pool,
     target: Path,
 ) -> None:
     """

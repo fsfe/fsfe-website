@@ -3,7 +3,7 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 
 import logging
-import multiprocessing
+import multiprocessing.pool
 from pathlib import Path
 
 logger = logging.getLogger(__name__)
@@ -16,7 +16,7 @@ def _do_symlinking(target: Path) -> None:
 
 
 def create_language_symlinks(
-    pool: multiprocessing.Pool,
+    pool: multiprocessing.pool.Pool,
     target: Path,
 ) -> None:
     """

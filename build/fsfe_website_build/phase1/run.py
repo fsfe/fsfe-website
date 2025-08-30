@@ -11,7 +11,7 @@
 # directory tree and does not touch the target directory tree at all.
 # -----------------------------------------------------------------------------
 import logging
-import multiprocessing
+import multiprocessing.pool
 from pathlib import Path
 
 from .index_website import index_websites
@@ -28,9 +28,9 @@ logger = logging.getLogger(__name__)
 
 def phase1_run(
     source_dir: Path,
-    languages: list[str] or None,
+    languages: list[str],
     processes: int,
-    pool: multiprocessing.Pool,
+    pool: multiprocessing.pool.Pool,
 ) -> None:
     """
     Run all the necessary sub functions for phase1.

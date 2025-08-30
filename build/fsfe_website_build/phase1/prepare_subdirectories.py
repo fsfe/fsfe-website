@@ -23,7 +23,7 @@ def prepare_subdirectories(
         sys.path.append(str(subdir_path.resolve()))
         # Ignore this very sensible warning, as we do evil things
         # here for out subdir scripts
-        import subdir  # noqa: PLC0415
+        import subdir  # noqa: PLC0415 # pyright: ignore [reportMissingImports]
 
         subdir.run(languages, processes, subdir_path)
         # Remove its path from where things can be imported

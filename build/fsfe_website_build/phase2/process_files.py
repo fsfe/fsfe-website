@@ -3,7 +3,7 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 
 import logging
-import multiprocessing
+import multiprocessing.pool
 from pathlib import Path
 
 from fsfe_website_build.lib.misc import get_basepath
@@ -89,7 +89,7 @@ def _process_stylesheet(
 def process_files(
     source_dir: Path,
     languages: list[str],
-    pool: multiprocessing.Pool,
+    pool: multiprocessing.pool.Pool,
     target: Path,
 ) -> None:
     """

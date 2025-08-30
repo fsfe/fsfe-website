@@ -3,7 +3,7 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 
 import logging
-import multiprocessing
+import multiprocessing.pool
 from itertools import product
 from pathlib import Path
 
@@ -24,7 +24,7 @@ def _do_symlinking(link_type: str, lang: str) -> None:
         source.symlink_to(target.relative_to(source.parent))
 
 
-def global_symlinks(languages: list[str], pool: multiprocessing.Pool) -> None:
+def global_symlinks(languages: list[str], pool: multiprocessing.pool.Pool) -> None:
     """
     After this step, the following symlinks will exist:
     * global/data/texts/.texts.<lang>.xml for each language

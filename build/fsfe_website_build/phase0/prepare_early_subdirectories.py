@@ -19,7 +19,7 @@ def prepare_early_subdirectories(source_dir: Path, processes: int) -> None:
         sys.path.append(str(subdir_path.resolve()))
         # Ignore this very sensible warning, as we do evil things
         # here for out subdir scripts
-        import early_subdir  # noqa: PLC0415
+        import early_subdir  # noqa: PLC0415 # pyright: ignore [reportMissingImports]
 
         early_subdir.run(processes, subdir_path)
         # Remove its path from where things can be imported

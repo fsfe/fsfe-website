@@ -22,7 +22,7 @@ dependencies = [
 build = "fsfe_website_build:main"
 
 [dependency-groups]
-dev = ["ruff", "lefthook", "taplo", "pytest"]
+dev = ["ruff", "lefthook", "taplo", "pytest", "types-lxml", "pyright"]
 
 [build-system]
 requires = ["uv_build"]

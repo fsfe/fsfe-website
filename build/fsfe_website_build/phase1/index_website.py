@@ -6,7 +6,7 @@
 
 import json
 import logging
-import multiprocessing
+import multiprocessing.pool
 from pathlib import Path
 
 import iso639
@@ -74,7 +74,7 @@ def _process_file(file: Path, stopwords: set[str]) -> dict:
 def index_websites(
     source_dir: Path,
     languages: list[str],
-    pool: multiprocessing.Pool,
+    pool: multiprocessing.pool.Pool,
 ) -> None:
     """
     Generate a search index for all sites that have a search/search.js file

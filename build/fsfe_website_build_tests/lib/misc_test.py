@@ -46,7 +46,6 @@ def update_if_changed_test(tmp_path: Path) -> None:
     assert file.read_text() == new_content
 
 
-# ---------- touch_if_newer_dep ----------
 def touch_if_newer_dep_test(tmp_path: Path) -> None:
     target = tmp_path / "target"
     target.write_text("target")

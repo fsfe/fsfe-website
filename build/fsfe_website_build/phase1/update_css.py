@@ -17,31 +17,28 @@ def update_css(
 ) -> None:
     """
     If any less files have been changed, update the css.
-    Compile less found at website/look/(fsfe.less|valentine.less)
+    Compile less found at <website>/look/(main*less)
     Then minify it, and place it in the expected location for the build process.
     """
     logger.info("Updating css")
     directory = source_dir.joinpath("look")
     if directory.exists():
-        for name in ["fsfe", "valentine"]:
-            if directory.joinpath(name + ".less").exists() and (
-                not directory.joinpath(name + ".min.css").exists()
-                or any(
-                    (
-                        path.stat().st_mtime
-                        > directory.joinpath(name + ".min.css").stat().st_mtime
-                        for path in directory.glob("**/*.less")
-                    ),
-                )
+        for file in directory.glob("main*.less"):
+            minified_path = file.with_suffix(".min.css")
+            if not minified_path.exists() or any(
+                (
+                    path.stat().st_mtime > minified_path.stat().st_mtime
+                    for path in directory.glob("**/*.less")
+                ),
             ):
-                logger.info("Compiling %s.less", name)
+                logger.info("Compiling %s", file)
                 result = run_command(
                     [
                         "lessc",
-                        str(directory.joinpath(name + ".less")),
+                        str(file),
                     ],
                 )
                 update_if_changed(
-                    directory.joinpath(name + ".min.css"),
+                    minified_path,
                     minify.string("text/css", result),
                 )

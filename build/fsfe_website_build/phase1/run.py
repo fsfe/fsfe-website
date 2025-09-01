@@ -20,7 +20,6 @@ from .update_css import update_css
 from .update_defaultxsls import update_defaultxsls
 from .update_localmenus import update_localmenus
 from .update_stylesheets import update_stylesheets
-from .update_tags import update_tags
 from .update_xmllists import update_xmllists
 
 logger = logging.getLogger(__name__)
@@ -92,17 +91,6 @@ def phase1_run(
     # After this step, all .localmenu.??.xml files will be up to date.
 
     update_localmenus(source_dir, languages, pool)
-    # -----------------------------------------------------------------------------
-    # Update tags
-    # -----------------------------------------------------------------------------
-
-    # After this step, the following files will be up to date:
-    # * tags/tagged-<tags>.en.xhtml for each tag used. Apart from being
-    #   automatically created, these are regular source files for HTML pages, and
-    #   in phase 2 are built into pages listing all news items and events for a
-    #   tag.
-    # * tags/.tags.??.xml with a list of the tags used.
-    update_tags(source_dir, languages, pool)
     # -----------------------------------------------------------------------------
     # Update XML filelists
     # -----------------------------------------------------------------------------

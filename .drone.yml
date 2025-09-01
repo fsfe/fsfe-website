@@ -28,13 +28,13 @@ steps:
       REPO_NAME: fsfe-website
       SSH_PRIVATE_KEY:
         from_secret: docs_bot_private_key
-    when:
-      branch:
-        - master
-      event:
-        - push
-        - tag
-        - deployment
+    # when:
+    #   branch:
+    #     - master
+    #   event:
+    #     - push
+    #     - tag
+    #     - deployment
 
   - name: deploy-master
     image: docker:27.4.1
@@ -121,6 +121,6 @@ volumes:
       path: /run/user/1001/docker.sock
 ---
 kind: signature
-hmac: 3a0b8f279a2fa0cf0fb1ceb2bcb897755891e7d9d68c7a4ace89d3cac299f82f
+hmac: ff721d06ef60e8cb7c726f2636ffbb43c18265edac716e9097e23cf147a46579
 
 ...

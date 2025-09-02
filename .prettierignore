@@ -8,10 +8,8 @@ __pycache__
 .nltk_data
 
 # In repo external sources
-fsfe.org/look/bootstrap
-fsfe.org/scripts/bootstrap
-fsfe.org/scripts/data-tables
-fsfe.org/scripts/jquery.validate-localization
+*/look/thirdparty/
+*/scripts/thirdparty/
 
 # Minimised stuff
 *.min.*

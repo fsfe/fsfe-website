@@ -54,7 +54,7 @@
           <xsl:element name="link">
             <xsl:attribute name="rel">stylesheet</xsl:attribute>
             <xsl:attribute name="media">all</xsl:attribute>
-            <xsl:attribute name="href"><xsl:value-of select="$urlprefix"/>/look/valentine.min.css</xsl:attribute>
+            <xsl:attribute name="href"><xsl:value-of select="$urlprefix"/>/look/main.valentine.min.css</xsl:attribute>
             <xsl:attribute name="type">text/css</xsl:attribute>
           </xsl:element>
         </xsl:when>
@@ -63,7 +63,7 @@
           <xsl:element name="link">
             <xsl:attribute name="rel">stylesheet</xsl:attribute>
             <xsl:attribute name="media">all</xsl:attribute>
-            <xsl:attribute name="href"><xsl:value-of select="$urlprefix"/>/look/fsfe.min.css?20230215</xsl:attribute>
+            <xsl:attribute name="href"><xsl:value-of select="$urlprefix"/>/look/main.min.css?20230215</xsl:attribute>
             <xsl:attribute name="type">text/css</xsl:attribute>
           </xsl:element>
         </xsl:otherwise>
@@ -259,8 +259,8 @@
         </xsl:attribute>
       </xsl:element>
       <!-- / Sharing cards -->
-      <script src="{$urlprefix}/scripts/jquery-3.5.1.min.js"/>
-      <script src="{$urlprefix}/scripts/modernizr.custom.65251.js"/>
+      <script src="{$urlprefix}/scripts/thirdparty/jquery-3.5.1.min.js"/>
+      <script src="{$urlprefix}/scripts/thirdparty/modernizr.custom.65251.js"/>
       <!-- Copy head element from the xhtml source file (and possibly from external xsl rules) -->
       <xsl:apply-templates select="head/node()"/>
     </xsl:element>

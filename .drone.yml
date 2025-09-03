@@ -25,6 +25,7 @@ steps:
   - name: push-to-docs
     image: git.fsfe.org/fsfe-system-hackers/docs-centralizer:latest
     environment:
+      REPO_OWNER: FSFE
       REPO_NAME: fsfe-website
       SSH_PRIVATE_KEY:
         from_secret: docs_bot_private_key
@@ -121,6 +122,6 @@ volumes:
       path: /run/user/1001/docker.sock
 ---
 kind: signature
-hmac: ff721d06ef60e8cb7c726f2636ffbb43c18265edac716e9097e23cf147a46579
+hmac: c5ba8bd6022f4d6ec365b8d8c6dc7ecf53263fa803d80ae18a650cb6befab321
 
 ...

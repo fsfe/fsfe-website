@@ -3,6 +3,7 @@
     config = { };
     overlays = [ ];
   },
+  run ? "bash",
 }:
 let
   inherit (pkgs) lib;
@@ -55,6 +56,6 @@ in
     # install your git hooks
     lefthook install
     # hand control over to the caller (or start a shell)
-    exec ''\${@:-bash}
+    exec ${run}
   '';
 }).env

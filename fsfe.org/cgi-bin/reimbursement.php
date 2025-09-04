@@ -34,9 +34,9 @@ $mailopt = isset($_POST["mailopt"]) ? $_POST["mailopt"] : false;
 $receipt_dest = [];
 
 // Separate employee name parameters
-$who_verbose = explode('|', $who)[0];
-$who_empnumber = explode('|', $who)[2];
-$who = explode('|', $who)[1];
+$who_verbose = explode('||', $who)[0];
+$who_empnumber = explode('||', $who)[2];
+$who = explode('||', $who)[1];
 
 
 // FUNCTIONS

@@ -5,7 +5,6 @@
 import logging
 import multiprocessing.pool
 from pathlib import Path
-from xml.sax.saxutils import escape
 
 from fsfe_website_build.lib.misc import (
     get_basepath,
@@ -114,9 +113,7 @@ def run(languages: list[str], processes: int, working_dir: Path) -> None:
                     .strip()
                 )
                 # Get the label, and strip it.
-                label = (
-                    escape(tag.text.strip()) if tag.text and tag.text.strip() else None
-                )
+                label = tag.text.strip() if tag.text and tag.text.strip() else None
 
                 # Load into the dicts
                 if key not in files_by_tag:

@@ -27,12 +27,19 @@ def _run_webserver(path: str, port: int) -> None:
         httpd.serve_forever()
 
 
-def serve_websites(serve_dir: Path, base_port: int, increment_number: int) -> None:
+def serve_websites(
+    serve_dir: Path, sites: list, base_port: int, increment_number: int
+) -> None:
     """
     Takes a target directory, a base port and a number to increment port by per dir
     It then serves all directories over http on localhost
     """
-    dirs = sorted(filter(lambda path: path.is_dir(), Path(serve_dir).iterdir()))
+    site_names = [site.name for site in sites]
+    dirs = (
+        path
+        for path in Path(serve_dir).iterdir()
+        if (path.is_dir() and (path.name in site_names))
+    )
     serves = []
     for index, directory in enumerate(dirs):
         port = base_port + (increment_number * index)

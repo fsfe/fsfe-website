@@ -63,7 +63,7 @@ def parse_arguments() -> argparse.Namespace:
     parser.add_argument(
         "--sites",
         help="What site directories to build",
-        default=list(filter(lambda path: path.is_dir(), Path().glob("?*.??*"))),
+        default=[path for path in Path().glob("?*.??*") if path.is_dir()],
         type=lambda sites: [Path(site) for site in sites.split(",")],
     )
     parser.add_argument(
@@ -160,4 +160,4 @@ def main() -> None:
             stage_to_target(working_target, args.target, pool)
 
     if args.serve:
-        serve_websites(working_target, 2000, 100)
+        serve_websites(working_target, args.sites, 2000, 100)

@@ -14,7 +14,6 @@ import logging
 import multiprocessing.pool
 from pathlib import Path
 
-from .index_website import index_websites
 from .prepare_subdirectories import prepare_subdirectories
 from .update_css import update_css
 from .update_defaultxsls import update_defaultxsls
@@ -36,14 +35,6 @@ def phase1_run(
     """
     logger.info("Starting Phase 1 - Setup")
 
-    # -----------------------------------------------------------------------------
-    # Build search index
-    # -----------------------------------------------------------------------------
-
-    # This step runs a Python tool that creates an index of all news and
-    # articles. It extracts titles, teaser, tags, dates and potentially more.
-    # The result will be fed into a JS file.
-    index_websites(source_dir, languages, pool)
     # -----------------------------------------------------------------------------
     # Update CSS files
     # -----------------------------------------------------------------------------

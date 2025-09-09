@@ -13,6 +13,7 @@
 @import "elements/scrollbox";
 @import "elements/search-box";
 @import "elements/sharebuttons";
+@import "elements/sidebar.less";
 @import "elements/striped-table";
 @import "elements/table-of-contents";
 @import "elements/text-img-structure";
@@ -260,22 +261,6 @@ form.thankyou {
 /* Free Your Andoid pages */
 video#freeyourandroid {
   max-width: 500px;
-}
-
-.news-sidebar {
-  // there is no sidebar on mobile
-  display: none;
-}
-
-@media (min-width: @screen-md-min) {
-  .news-sidebar {
-    display: block;
-    padding-top: 5.1rem;
-  }
-
-  .news-follow-us {
-    display: none;
-  }
 }
 
 #formnl {

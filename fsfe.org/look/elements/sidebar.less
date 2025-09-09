@@ -1,0 +1,20 @@
+aside#sidebar {
+    position: sticky!important;
+    top: 0;
+}
+
+.news-sidebar {
+    // there is no sidebar on mobile
+    display: none;
+}
+
+@media (min-width: @screen-md-min) {
+    .news-sidebar {
+        display: block;
+        padding-top: 5.1rem;
+    }
+
+    .news-follow-us {
+        display: none;
+    }
+}

@@ -46,9 +46,9 @@ $lunch = isset($_POST["lunch"]) ? $_POST["lunch"] : false;
 $dinner = isset($_POST["dinner"]) ? $_POST["dinner"] : false;
 
 // Separate employee name parameters
-$who_verbose = explode('|', $who)[0];
-$who_empnumber = explode('|', $who)[2];
-$who = explode('|', $who)[1];
+$who_verbose = explode('||', $who)[0];
+$who_empnumber = explode('||', $who)[2];
+$who = explode('||', $who)[1];
 
 // FUNCTIONS
 function errexit($msg) {

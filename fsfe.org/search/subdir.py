@@ -2,8 +2,6 @@
 #
 # SPDX-License-Identifier: GPL-3.0-or-later
 
-# Build an index for the search engine based on the article titles and tags
-
 import json
 import logging
 import multiprocessing.pool
@@ -11,10 +9,9 @@ from pathlib import Path
 
 import iso639
 import nltk
+from fsfe_website_build.lib.misc import update_if_changed
 from lxml import etree
 from nltk.corpus import stopwords as nltk_stopwords
-
-from fsfe_website_build.lib.misc import update_if_changed
 
 logger = logging.getLogger(__name__)
 
@@ -40,7 +37,6 @@ def _process_file(file: Path, stopwords: set[str]) -> dict:
     """
     Generate the search index entry for a given file and set of stopwords
     """
-    logger.debug("Processing file %s", file)
     xslt_root = etree.parse(file)
     tags = (
         tag.get("key")
@@ -71,21 +67,18 @@ def _process_file(file: Path, stopwords: set[str]) -> dict:
     }
 
 
-def index_websites(
-    source_dir: Path,
-    languages: list[str],
-    pool: multiprocessing.pool.Pool,
-) -> None:
+def run(languages: list[str], processes: int, working_dir: Path) -> None:
     """
-    Generate a search index for all sites that have a search/search.js file
+    This step runs a Python tool that creates an index of all news and
+    articles. It extracts titles, teaser, tags, dates and potentially more.
+    The result will be fed into a JS file.
     """
-    logger.info("Creating search indexes")
     # Download all stopwords
     nltkdir = "./.nltk_data"
+    source_dir = working_dir.parent
     nltk.data.path = [nltkdir, *nltk.data.path]
     nltk.download("stopwords", download_dir=nltkdir, quiet=True)
-    # Iterate over sites
-    if source_dir.joinpath("search/search.js").exists():
+    with multiprocessing.Pool(processes) as pool:
         logger.debug("Indexing %s", source_dir)
 
         # Get all xhtml files in languages to be processed
@@ -122,6 +115,6 @@ def index_websites(
         articles = pool.starmap(_process_file, files_with_stopwords)
 
         update_if_changed(
-            source_dir.joinpath("search/index.js"),
+            working_dir.joinpath("index.js"),
             "var pages = " + json.dumps(articles, ensure_ascii=False),
         )

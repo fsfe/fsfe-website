@@ -8,6 +8,7 @@
   <xsl:template name="email" match="email">
     <xsl:param name="email" select="."/>
     <xsl:param name="mailto" select="@mailto"/>
+    <xsl:param name="subject" select="@subject"/>
     <!-- Split email on each character, creating a <token>character</token> element each -->
     <xsl:variable name="email-tokens">
       <xsl:call-template name="tokenize">
@@ -85,6 +86,11 @@
         -->
         <xsl:text disable-output-escaping="yes">&lt;a href="mailto:</xsl:text>
         <xsl:value-of select="$email-encoded" disable-output-escaping="yes"/>
+        <xsl:text>?</xsl:text>
+        <xsl:if test="$subject">
+          <xsl:text>subject=</xsl:text>
+          <xsl:value-of select="$subject"/>
+        </xsl:if>
         <xsl:text disable-output-escaping="yes">"&gt;</xsl:text>
         <xsl:value-of select="$email-encoded" disable-output-escaping="yes"/>
         <xsl:text disable-output-escaping="yes">&lt;/a&gt;</xsl:text>

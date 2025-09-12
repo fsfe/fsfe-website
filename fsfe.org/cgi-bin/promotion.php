@@ -139,11 +139,11 @@ $msg_to_staff .= "{$_POST['street']}\n" .
 # Default or custom package?
 if ($_POST['packagetype'] == 'basic_sticker') {
   $msg_to_staff .= "My Laptop: Basic Set of Stickers.\n";
-} else if ($_POST['packagetype'] == 'basic_combo') {
+} else if ($_POST['packagetype'] == 'basicpostcard') {
   $msg_to_staff .= "Postcards and Stickers.\n";
 } else if ($_POST['packagetype'] == 'basicsticker') {
   $msg_to_staff .= "Small package with stickers.\n";
-} else if ($_POST['packagetype'] == 'more_stickers') {
+} else if ($_POST['packagetype'] == 'morestickers') {
   $msg_to_staff .= "Stickers for me and my friend: Twice the amount of our most popular stickers.\n";
 } else if ($_POST['packagetype'] == 'standard') {
   $msg_to_staff .= "Standard Package.\n";

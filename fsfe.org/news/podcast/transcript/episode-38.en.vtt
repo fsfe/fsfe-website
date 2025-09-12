@@ -1,0 +1,947 @@
+WEBVTT
+
+00:00.000 --> 00:26.000
+All right. You ready? Yes. Perfect. Then let's dive into this. Hello and welcome to the Software Freedom Podcast.
+
+00:26.000 --> 00:32.000
+This podcast is presented to you by the Free Software Foundation Europe. We are a charity that
+
+00:32.000 --> 00:38.480
+empowers users to take control of technology. I am Bonnie Mehring and I am here with my colleague Alex
+
+00:38.480 --> 00:47.520
+today. Hello Bonnie. Nice to be here again. Nice to have you. So we have done this several times now.
+
+00:47.520 --> 00:53.440
+You want to tell us what the topic is today? Yes, we want to talk about Free Software stacks in Europe.
+
+00:53.440 --> 01:06.400
+You forgot a Free Software software stacks. Indeed. Okay. I am sorry. Not, just Free Software stacks. Yes.
+
+01:07.600 --> 01:17.520
+That's how we would call them the whole episode. That will be fun. Yes. Okay. But before we dive
+
+01:17.520 --> 01:25.120
+into this whole debate surrounding the Free Software software stacks, I would love for us to cover
+
+01:25.120 --> 01:31.280
+a bit of the framework and the background around them. Can you give us some idea what we are talking
+
+01:31.280 --> 01:38.560
+about when we are mentioning the word Free Software software stacks? Sure. So a couple of years ago,
+
+01:38.560 --> 01:46.000
+a debate about digital sovereignty started. And this digital sovereignty debate also came with some
+
+01:46.000 --> 01:52.640
+practical solutions, implementations, and one of those are software stacks. So all our administrations
+
+01:52.640 --> 02:01.680
+across Europe do need, let's say, core infrastructure and also on the other hand, software stacks that
+
+02:01.680 --> 02:08.800
+help them to follow their administrative tasks. So an office solution. And those kinds of office
+
+02:08.800 --> 02:17.680
+solutions are part of such a so-called software stack. So it comes with several solutions. You
+
+02:17.680 --> 02:23.040
+want to have video calls. You want to have a writer. You want to have a calendar and so on.
+
+02:23.760 --> 02:30.160
+And all of these solutions need to be like in the upper rebel. They need to be integrated so that you
+
+02:30.160 --> 02:36.720
+can from your calendar directly send the email or start a voice call with your colleagues. And this
+
+02:37.440 --> 02:44.240
+basically or could be basically such a software stack. And all of these software stacks in
+
+02:44.240 --> 02:50.960
+light of digital sovereignty are discussed in member states of the European Union as well as
+
+02:50.960 --> 02:55.520
+in the European Union itself by the European Commission as well in the parliament in the institutions.
+
+02:56.480 --> 03:04.880
+So and the institutions itself, but also administrations, EU, national, regional, local level,
+
+03:04.880 --> 03:12.960
+do need such office solutions. And they want to have digital sovereign solutions. And for this,
+
+03:12.960 --> 03:19.840
+we do recommend to use Free Software for obvious reasons. What French Free Software stack?
+
+03:21.200 --> 03:26.880
+The example for this, how this could look like as this is already very much implemented,
+
+03:26.880 --> 03:31.280
+can you give us some background here as well and maybe make this a bit more practical?
+
+03:31.760 --> 03:38.960
+Sure. So again, so the debate about digital sovereignty is not very new. It started with
+
+03:38.960 --> 03:45.520
+final lines first term. And there we started to debate this digital sovereignty and also already
+
+03:45.520 --> 03:51.200
+at this time, we have seen that there are initiatives in several member states where they started to
+
+03:51.920 --> 03:58.880
+develop or procure Free Software solutions, particularly made for administrations to allow them
+
+03:59.520 --> 04:07.440
+to work in a sovereign environment. And yeah, basically using their own solutions tailored to
+
+04:07.440 --> 04:14.080
+their own needs. And for this, they often used Free Software. And also at the same time,
+
+04:14.080 --> 04:20.000
+code repositories emerged. So we have seen, for example, in Italy that they came up as a free
+
+04:20.000 --> 04:27.040
+software code repository dedicated for administrations. So we are administrations that came up as a
+
+04:27.040 --> 04:33.360
+Free Software solution for a specific need, shared those solutions in such repositories that other
+
+04:33.360 --> 04:39.760
+administrations could pick them and also reuse them. Obviously, this needs to be Free Software
+
+04:39.760 --> 04:45.680
+since the four freedoms of Free Software to use study, share and improve, allow in the
+
+04:45.680 --> 04:52.320
+availability, allow sharing and allow that it could be used in as many workstations. Yeah, one
+
+04:52.400 --> 04:59.200
+one, for example. So, but also we have seen initiatives in France, in Germany and in other member
+
+04:59.200 --> 05:06.080
+states. However, all of this is mainly piecework. It's not really connected to each other. So Italy
+
+05:06.080 --> 05:11.360
+does it, France does it, Germany does it, but they do not really collaborate. So and that's one of
+
+05:11.360 --> 05:17.920
+the main issues we see that there are initiatives in member states that are quite okay, let's say it,
+
+05:18.560 --> 05:23.840
+but the thing is that they, yeah, they basically in their silo, they work on their own,
+
+05:24.640 --> 05:31.600
+and for this they are also practical reasons. The very first one is a language thing, but in general,
+
+05:31.600 --> 05:38.640
+I'd say a writer, if translated, could be used by every administration, right? So the needs
+
+05:38.640 --> 05:44.640
+and the back end is basically always the same. It's just about like making the front and
+
+05:44.640 --> 05:52.160
+the translated end to the language. Exactly, and also like it's also about design, so you want to
+
+05:52.160 --> 05:57.280
+change logos and stuff like this, right? So, but in general, the solution is always the same.
+
+05:57.920 --> 06:03.520
+So, and this is basically where we are. So in Germany, for example, the Center for Digital
+
+06:03.520 --> 06:09.360
+Sovereignty (ZenDiS), this is basically a company founded by the government itself, started to come up as
+
+06:09.840 --> 06:14.640
+office solution, which is called OpenDesk. We see similar approaches in France,
+
+06:15.600 --> 06:22.240
+last week is a call over there, and yeah, and as said, we see piece work here and there and every
+
+06:22.240 --> 06:28.240
+member state. We see in particular discussions in every member state, and these discussions have
+
+06:28.240 --> 06:37.040
+been speed up since the Trump administration and for obvious reasons. However, it often remains on
+
+06:37.040 --> 06:45.520
+such a discussion level, and also in particular, the collaboration cross-border remains more of an
+
+06:45.520 --> 06:53.280
+idea instead of like a practical approach at this stage. So, and here a debate, I'd say, one
+
+06:53.280 --> 07:00.080
+one and a half year ago, started in the U.K. Parliament, where the so-called EuroStack was
+
+07:00.080 --> 07:07.200
+debated initiative by Francesca Prier, for example, who came up with this idea to have such
+
+07:07.200 --> 07:13.200
+a European approach towards this, right? So, to like, let these member states initiatives
+
+07:13.200 --> 07:20.080
+collaborate and to come up with, yeah, obviously, a European stack, which is then available and
+
+07:20.080 --> 07:26.640
+usable and also useful for administrations across Europe, no matter if it's a European,
+
+07:26.640 --> 07:32.400
+national, regional, local level. And here the question is, how should such a stack look like?
+
+07:33.120 --> 07:39.440
+And here we can see that in the beginning of the debate, it was very much attached to the idea
+
+07:39.440 --> 07:43.680
+of coming up with a Free Software solution towards this. Since it's obvious, again, the four
+
+07:43.680 --> 07:50.800
+freedoms, you study share and improve, allow us that it's very easy and also basically the only
+
+07:50.800 --> 07:57.680
+practical approach towards allowing collaboration across border. However, in the last years,
+
+07:57.680 --> 08:04.960
+the debate slightly shifted away from the Free Software idea towards more like European
+
+08:04.960 --> 08:11.200
+ideas, let's say it, and there was like a slogan which came up just recently by European.
+
+08:11.840 --> 08:18.160
+So, and with this idea, it's more going into the direction that digital sovereignty is everything,
+
+08:18.160 --> 08:24.640
+but it's coming from Europe. And not that much if it should be Free Software anymore. So, and that's
+
+08:24.640 --> 08:30.800
+one of the main issues we see, but also on the other hand, again, that there is not really
+
+08:30.800 --> 08:36.880
+collaboration happening. So, we see in some parts, collaboration, for example, France and Germany
+
+08:36.880 --> 08:42.960
+try a collaboration with the last wheat and open desk, so these are solutions. And they want to come
+
+08:42.960 --> 08:51.040
+up as a right on solution, which is then shared between both steps, so to say, and could be
+
+08:51.040 --> 08:56.400
+integrated in open desk as well as in last week. But again, we see here only two member states
+
+08:56.400 --> 09:02.720
+collaborating. And we do not really know how this collaboration should further be enlarged. And
+
+09:02.720 --> 09:10.160
+also, we do not really see if it's going out of this like bilateral collaboration. And if it's
+
+09:10.160 --> 09:15.440
+we are going to more towards the European approach. This is the state of the debate at the moment.
+
+09:16.000 --> 09:23.760
+And what we are trying and also like in procurement and funding debates is to work towards the idea
+
+09:23.760 --> 09:31.520
+to stimulate and not subsidize and collaborations across Europe so that the European Union should see
+
+09:32.320 --> 09:39.920
+and analyze where in Europe we see developments of Free Software solutions and how they could
+
+09:39.920 --> 09:45.840
+collaborate with others doing something similar or who have similar needs at the same time,
+
+09:46.480 --> 09:53.360
+bringing them together and making them collaborate. Because this is the advantage of Free Software
+
+09:53.360 --> 09:58.320
+that we can collaborate, that we can share resources. And by that, not only come up with the best
+
+09:58.320 --> 10:03.760
+solution, but also like particularly on the mid and long run, this is how we can save money.
+
+10:03.760 --> 10:09.600
+And this is also how we can be ultimately digital sovereign, right? When we have our own free
+
+10:09.600 --> 10:16.080
+software solution, which we can adapt at any time, which we can make it available to every
+
+10:16.080 --> 10:22.480
+administration. And by that, we have the control over our own technology or administrations have
+
+10:22.480 --> 10:29.520
+the control over their own technology and are able to like change it and adapt it to the specific
+
+10:29.520 --> 10:35.680
+needs. So, and this is basically what we want to try to advocate for at the moment. The
+
+10:35.760 --> 10:42.000
+this collaboration is stimulated by the European Union and also that member states initiatives are
+
+10:42.000 --> 10:47.680
+not being closed down since we have a European solution for this. No, we want these initiatives
+
+10:47.680 --> 10:53.760
+in member states, but we want them to collaborate with others in order to have an indoor operable,
+
+10:54.480 --> 11:01.280
+European software stack. And that would be our idea of such a Free Software,
+
+11:01.920 --> 11:08.880
+software stack on the European level. I was so happy that you mentioned the word Free Software,
+
+11:08.880 --> 11:18.240
+software stack. Anyway, okay. So, you mentioned several arguments. Basically, it all comes down
+
+11:18.240 --> 11:28.080
+to that we are asking or demanding an coordinated effort. So, I do believe the coordination
+
+11:28.080 --> 11:35.600
+should be stimulated. So, it's not that we should start this, I don't know, an approach,
+
+11:35.600 --> 11:41.280
+where we say the next five years, we do this and this and this and this. It should still remain
+
+11:41.280 --> 11:48.880
+flexible. Also, member states should be able to do whatever they need at the moment. However,
+
+11:49.600 --> 11:56.400
+the core idea always must be that it's an indoor operable and that they at least know what's
+
+11:56.400 --> 12:01.520
+happening in other member states and that they try to collaborate whenever there is a need to
+
+12:01.520 --> 12:08.160
+collaborate. So, let's assume Germany and Italy are working on the same thing. Let's say a video
+
+12:08.160 --> 12:13.200
+conferencing tool at the moment and then the European Union knows about this and goes there and say,
+
+12:13.200 --> 12:18.000
+look, Italy, Germany, you are both working on the same thing. Don't you want to collaborate?
+
+12:18.000 --> 12:23.360
+So, why do you want to come up with two solutions that are different? Let's collaborate here.
+
+12:23.920 --> 12:29.840
+Like, if there are good reasons, for example, for Italy and France to say, on this, we
+
+12:30.640 --> 12:37.200
+don't want to collaborate that there's no force to do so. That's the one thing, but also,
+
+12:37.200 --> 12:43.280
+let's use the example of Jitsi and Big Blue Button. So, we want that Jitsi and Big Blue Button
+
+12:43.280 --> 12:48.320
+are out there for administrations and then administration can pick whatever they do believe is
+
+12:48.320 --> 12:53.520
+the best solution for them. However, it is important that both video conferencing solutions work
+
+12:53.520 --> 13:00.640
+together. So, there is a possibility for the ones using Big Blue Button also being able to
+
+13:00.640 --> 13:06.640
+communicate with the ones using Jitsi without any major issues, right? So, it should be easy
+
+13:07.280 --> 13:12.720
+to collaborate cross-border with other administrations even if they use other Free Software solutions.
+
+13:12.720 --> 13:18.080
+So, it's not, and this is, I think the core idea here, it's not about this one stack so that
+
+13:18.080 --> 13:24.720
+everyone uses this one and only solution. It's more about that we integrate all the existing
+
+13:24.720 --> 13:30.640
+solutions out there and making them in the upper level that both of them can communicate.
+
+13:30.640 --> 13:37.280
+And for this, we need open standards, we need open APIs, and ultimately Free Software in order to
+
+13:37.360 --> 13:43.600
+allow this collaboration. And this is what I mean, it's like stimulating it and making it happen
+
+13:43.600 --> 13:50.640
+that this cross-border collaboration could happen. And this means, let's say, Germany and France
+
+13:50.640 --> 13:55.040
+are working with the Jitsi solution Italy and Spain are working with Big Blue Button.
+
+13:55.600 --> 14:00.000
+Those two countries should come up with their Big Blue Button or Jitsi solution.
+
+14:00.000 --> 14:04.800
+And then the union should step in and make sure that both of these solutions can talk to each other.
+
+14:04.800 --> 14:17.040
+Now, I think I understood the thing or the frame. Let's say the idea. Now, I understood the idea.
+
+14:17.040 --> 14:22.640
+You have to be behind this argument of collaboration and stimulating collaboration.
+
+14:23.360 --> 14:29.280
+So, it's more about that there's still a wide choice, but that we can actually still work
+
+14:29.360 --> 14:36.000
+together and have the interoperability. Exactly. So, we don't procure this one European stack for
+
+14:36.000 --> 14:45.520
+every administration across all over Europe. We still allow national or regional or local ideas
+
+14:45.520 --> 14:52.160
+and also like depending on their needs, whatever they need. So, they should have, ultimately,
+
+14:52.160 --> 14:58.080
+every administration should have software tailored to their needs. However, this software still needs
+
+14:58.080 --> 15:05.360
+to be interoperable with other solutions of other administrations that have another focus,
+
+15:05.360 --> 15:10.320
+let's say. So, and for this, it's very important to not say like this is the one and only
+
+15:10.320 --> 15:18.800
+solution for everyone, but we want to have several solutions being able to compete, to be innovative
+
+15:19.360 --> 15:25.920
+and to allow also like further development. And then administrations can say, I am going to
+
+15:25.920 --> 15:30.480
+migrate my system now over to a GT because I've seen this is working way better for me.
+
+15:31.200 --> 15:36.480
+And this should be easy so they should be able to go to a code repository, for example,
+
+15:36.480 --> 15:41.200
+and say, let's integrate this and remove the big to button or the other way around.
+
+15:41.200 --> 15:46.480
+Or they say, I am totally happy with my big to button. However, I acknowledge that the people
+
+15:46.480 --> 15:51.280
+over there are using GT because they started the development, I don't know, five years ago.
+
+15:51.360 --> 15:56.240
+Why should they now switch everything? So, for this, they need to be interoperable. So,
+
+15:56.240 --> 16:05.200
+it needs to be able for them to still communicate via several software solutions. And this should
+
+16:05.200 --> 16:13.280
+be all part of the stack. So, now we talked about a bit about the arguments that VZ and the points
+
+16:13.360 --> 16:21.760
+that we demand or give voice to. How is this received and what's the current, how do you think
+
+16:21.760 --> 16:26.960
+it's going? Because we already talked about the current debate surrounding all of this by European
+
+16:26.960 --> 16:33.040
+dimension and all of this. Let's bring this together. Where are we heading Alex?
+
+16:33.920 --> 16:38.720
+So, and that's yeah, that's basically one of the issues I see at the moment. So, while it was like,
+
+16:38.800 --> 16:46.080
+let's say a couple of years ago, the idea to have such a European solution was very received.
+
+16:46.080 --> 16:51.600
+People understood why there is a need for this. But this also at the same time led to national
+
+16:51.600 --> 16:56.800
+debates. And we can see this very clearly in Germany at the moment where they want to come
+
+16:56.800 --> 17:04.480
+up with a German stack. So, and here I fear that we end up in silos instead of like collaborating.
+
+17:05.200 --> 17:12.000
+So, I said it's a good idea if every member state has their own approach to things. However,
+
+17:12.960 --> 17:19.200
+again, if someone is working on such a stack, let's say France and Germany need a writer,
+
+17:19.200 --> 17:25.920
+so why shouldn't they collaborate on this? So, and the more we go towards this, the more we can
+
+17:25.920 --> 17:31.280
+collaborate, the more we can have shared procurement, even cross-border shared procurement,
+
+17:31.280 --> 17:37.440
+and by thus we can build on the benefits of Free Software and, for example, save money on the
+
+17:37.440 --> 17:48.000
+mid and long run. But if we now go and say, we come up with 27, sorry, if we now start to come
+
+17:48.000 --> 17:54.080
+up with a own software stack in each member state, then it's very more difficult to achieve this
+
+17:54.080 --> 17:59.680
+collaboration, to achieve this interoperability, because then everyone is going back to the silo,
+
+18:00.560 --> 18:06.240
+working on their own, saying like, now we have this shiny national stack, but how is this
+
+18:06.240 --> 18:12.000
+interoperability with others? Why didn't you collaborate on the procurement or development of
+
+18:12.000 --> 18:18.560
+bits of these stacks where you see like other member states have similar needs at the moment?
+
+18:18.560 --> 18:24.800
+And this is what I fear at the moment, so this is shifting away from like this European idea,
+
+18:24.800 --> 18:31.440
+this European software stack, which is coming with several solutions. However, this could end up in,
+
+18:31.440 --> 18:37.760
+yeah, national software stacks that are maybe nice to have for this member state,
+
+18:38.400 --> 18:44.480
+but not too nice for like a European approach towards this, also the Buy European debate.
+
+18:44.480 --> 18:50.640
+So decision makers more and more want to be independent from in particular US tech,
+
+18:50.720 --> 18:57.440
+which is reasonable, and which is also good idea, I do believe. However, if we then just switch
+
+18:57.440 --> 19:04.720
+the vendor lock in from US to European union companies, that won't help us. So the simple idea of
+
+19:04.720 --> 19:10.560
+buying European doesn't mean that it's interoperable, but doesn't mean that it is Free Software.
+
+19:10.560 --> 19:16.240
+So and this is something which we see in the debate that there is a shift from a way of this
+
+19:16.240 --> 19:23.120
+Free Software thing towards a general by European idea. So and this by European doesn't mean that
+
+19:23.120 --> 19:27.680
+there is collaboration, it just means pick something from European company. And there are also
+
+19:27.680 --> 19:34.480
+European companies that do not really value the idea of Free Software, for example. So this means
+
+19:34.480 --> 19:40.400
+you can easily end up in another vendor lock in, which is a European vendor lock in,
+
+19:40.480 --> 19:46.400
+which won't help you in the mid and long run. It might help with some problems, for example,
+
+19:46.400 --> 19:52.720
+that it's hosted in the European union, which is a good idea, but however, it's not coming with
+
+19:52.720 --> 19:59.280
+four freedoms to use that to share and improve. But just this idea of like whatever comes from
+
+19:59.280 --> 20:05.520
+Europe is at the same time so right. And this is not the case. And this is something which we try to
+
+20:05.520 --> 20:12.400
+counter in the debate saying first Free Software as something global. Second, you do not want to run
+
+20:12.400 --> 20:19.040
+in a European vendor lock in. And for this, ultimately, you always have to say it needs to be free
+
+20:19.040 --> 20:25.680
+software. So best case is you buy Free Software in Europe. However, if the Free Software is coming
+
+20:25.680 --> 20:33.520
+from somewhere else, also fun. As there are the four freedoms and they guarantee the access to the
+
+20:34.080 --> 20:40.320
+software. Precisely. And also here we need to say we need to enlarge our capacities step by step.
+
+20:40.320 --> 20:46.000
+So it's also not that we have millions of companies in Europe that have competitive solutions.
+
+20:46.000 --> 20:51.360
+We have to stimulate that market in order to come up with Free Software companies in Europe.
+
+20:51.360 --> 20:56.960
+That can provide such solutions. And for this, we need to invest in Dutch companies and not
+
+20:56.960 --> 21:02.560
+in random European companies that bring you basically in another vendor lock.
+
+21:05.360 --> 21:12.480
+Do you have the feeling that those arguments are paid attention to or what do you think it's happening
+
+21:12.480 --> 21:21.680
+here? So this is it's very hard to say. I see that there are more and more arguments and more
+
+21:22.160 --> 21:29.920
+decision makers shifting away from the, let's say, openness towards the u-p-ness of something.
+
+21:29.920 --> 21:35.680
+So it's a slight shift at the moment. It's not that there is a majority for this already.
+
+21:36.240 --> 21:41.600
+At the same time, there's also not a majority for the Free Software idea. So this is our fight.
+
+21:41.600 --> 21:46.240
+We will definitely have this fight in the upcoming procurement reform. We also have this
+
+21:46.240 --> 21:52.640
+find around precisely those stacks. And also here, maybe this is a very interesting point.
+
+21:53.360 --> 22:01.520
+I think a couple of weeks ago, we discussed the NGI funding case where the funding for
+
+22:01.520 --> 22:08.160
+Free Software was removed to benefit AI. And this is also such a shift. However, here in the
+
+22:08.160 --> 22:13.760
+European Commission, they say we don't want to support Pittsburgh, but rather contribute to such a
+
+22:13.840 --> 22:19.840
+stack. So and then at the same time, we see that they are shifting money away from Free Software
+
+22:19.840 --> 22:28.160
+towards AI. So this is not to another thing that we often see mass births driving such debates
+
+22:28.160 --> 22:34.560
+from quite a while. So we have the bio-pinsing, we have everything needs to be AI. And by
+
+22:34.560 --> 22:40.480
+thus Free Software is pushed more and more out of the debate. So and this is something which we
+
+22:40.480 --> 22:48.400
+need to counter. And this is also why we whenever we talk about the stacks tell everyone it needs to be
+
+22:48.400 --> 22:54.240
+Free Software to end up in this one to basically one. So if you if you go to decision makers and talk
+
+22:54.240 --> 23:00.320
+to them what they basically want, they talk about Free Software. So they don't name it Free Software,
+
+23:00.320 --> 23:04.880
+but basically they want to have it in the upper levels. They want to have a server and solution
+
+23:04.880 --> 23:10.320
+and so on and so forth. However, they are more and more shifting away from the Free Software
+
+23:10.320 --> 23:16.160
+wording in this debate going towards other direction. And this could then ultimately mean if it's
+
+23:16.160 --> 23:22.960
+text that you then if you in administration that wants to procure something is ending up with something
+
+23:22.960 --> 23:28.240
+which is not Free Software, but coming from Europe and by thus it's all fine and they proceed.
+
+23:28.800 --> 23:34.480
+So here we need to be very close in the debate and make sure that these criteria
+
+23:35.040 --> 23:40.320
+at least always end up in a Free Software solution. So that it's not possible to procure
+
+23:40.320 --> 23:46.320
+something else, but that you need to procure or develop Free Software in order to come up as such
+
+23:46.320 --> 23:52.960
+as a rune solution. So we debate around the terms of Renate but it ultimately needs. And here we
+
+23:52.960 --> 23:58.560
+try to make sure that it's always connected to for freedoms and that's that the procurement always
+
+23:58.560 --> 24:02.800
+ends up in a Free Software solution. This will be a hard debate. I mean there are also players on the
+
+24:02.800 --> 24:09.680
+other side who have other ideas. In particular, we see that decision makers that are
+
+24:11.040 --> 24:19.760
+I'd say more familiar with the digital topics, more eager to understand our arguments.
+
+24:20.400 --> 24:25.040
+However, it's also debated on high level at the moment, right? So as said,
+
+24:25.040 --> 24:29.280
+also our final line commission president debates this in member states president,
+
+24:30.080 --> 24:35.200
+president and chancellor's debate about sovereignty. And here we have seen in the in the
+
+24:35.200 --> 24:42.640
+recent years we have seen shifts and these are coming basically from other lobbyists removing
+
+24:42.640 --> 24:49.760
+those Free Software words, bringing in more loopholes in order to allow procurement of other non
+
+24:49.760 --> 24:55.520
+Free Software solutions. And this is basically a problem and this will be a strong fight which we
+
+24:55.600 --> 25:03.360
+will take I guess for the next years. This is a short break for our own cause. Thank you for
+
+25:03.360 --> 25:09.040
+listening to the software freedom podcast, working for software freedom and producing podcasts
+
+25:09.040 --> 25:16.240
+costs money. Please consider supporting us with a donation on the fsfe.org slash donate and
+
+25:16.240 --> 25:24.160
+then the show notes. This will be a strong fight which we will take I guess for the next years
+
+25:24.160 --> 25:30.640
+and this is where we are also very close to like the developments of sorts such stacks so we
+
+25:30.640 --> 25:36.400
+closely follow what's happening in Germany for example or in France or in Italy to see
+
+25:36.400 --> 25:41.440
+what the ultimately come up with. And at the moment we have seen that they found a practical
+
+25:41.520 --> 25:47.120
+approach towards this. So they connected pretty much to their code repositories. So they say
+
+25:48.400 --> 25:54.720
+it needs to be procured and needs to be ultimately in the code repository available. And those
+
+25:54.720 --> 26:02.560
+code repositories then say look you can only bring in your solution if it's one of these licenses
+
+26:02.560 --> 26:08.720
+for example and all of them are Free Software licenses. So but what happens if those rules of
+
+26:08.800 --> 26:14.320
+these code repositories are changed. So it's a smart idea in the first place but it could also
+
+26:14.320 --> 26:22.160
+easily end up in oh now we see that there's a solution it's not fully Free Software but how do we
+
+26:22.160 --> 26:27.520
+print this in the code repository are we change the rules of the code repository. So if you attach
+
+26:28.560 --> 26:35.440
+software only to the code repository without coming up with further criteria then you might end up
+
+26:35.440 --> 26:42.320
+in a world where those code repositories might in the future also allow other non-Free Software
+
+26:43.040 --> 26:48.000
+in these repositories and that would be a problem. So and this is the level of detailed
+
+26:48.000 --> 26:54.640
+fight we are picking at the moment. So there are smart ideas to close loop holes but we also have
+
+26:54.640 --> 26:59.920
+to think about the future and make sure that those loop holes are closed forever. So and these are
+
+26:59.920 --> 27:05.280
+the debates we are running at the moment. So it's a lot of needy-queasy. We type over words we
+
+27:05.280 --> 27:12.640
+fight over ideas and trying to again go to decision makers and make them understand that Free Software
+
+27:12.640 --> 27:20.960
+is the only way how to come up is basically what they want. So this sounds like a lot of work to
+
+27:20.960 --> 27:26.880
+be honest to follow up and to safeguard Free Software. I mean that's the basic argument you
+
+27:26.880 --> 27:32.560
+brought forward is that we want to safeguard Free Software in all of those Free Software
+
+27:32.560 --> 27:39.200
+software stacks and make sure that the loop holes are closed and not celebrating small steps but
+
+27:39.200 --> 27:45.840
+being those who say stop. There is a potential weakness and we really need to pay attention
+
+27:45.840 --> 27:51.760
+to this and as you already said there are several debates and several member states going on.
+
+27:52.400 --> 28:01.520
+So well have fun Alex. Yeah yeah I do have. In this regard this is also a call to our listeners.
+
+28:02.000 --> 28:08.080
+If you see stack debates ongoing in your member states where you say here are upcoming loop holes
+
+28:08.720 --> 28:15.040
+please share them with us so that we can address them. So for us it's not too easy to follow
+
+28:15.040 --> 28:20.720
+like every minus step in every member state we try to do so but for this we always need the help
+
+28:20.720 --> 28:26.000
+of you guys and also our volunteers and for this please whenever you see something like this
+
+28:26.080 --> 28:33.280
+please share this with us. So because this helps us to address those issues and to also like yeah
+
+28:33.280 --> 28:38.480
+try to to modify those attempts. Also at the same time what we are doing is to look for best
+
+28:38.480 --> 28:45.760
+practices. So if you see a very good idea in your member state how a loop hole is addressed and fixed
+
+28:45.760 --> 28:50.400
+this is also something which is of high importance for us because then we can use this as a
+
+28:50.720 --> 28:56.160
+best practice for other member states and tell them look this could be a solution how you can fix
+
+28:56.160 --> 29:03.600
+this loop hole in your strategy in your law and make sure that you ultimately do come up as a free
+
+29:03.600 --> 29:13.520
+software software. I also have a call for action in this regard as it nicely fits in with our
+
+29:13.520 --> 29:19.360
+public money public code campaign. If you have not signed our open letter there please feel free
+
+29:19.360 --> 29:25.120
+to do so you find the link in the show notes. Alex you want to talk about why it fits in with
+
+29:25.120 --> 29:30.640
+public money public code. Sure I mean it's obvious it's with our public money public code initiative
+
+29:30.640 --> 29:38.320
+we try to convince decision makers, administrations across Europe to come up with rules and in particular
+
+29:38.320 --> 29:45.040
+also implement those rules that whenever taxpayers money is used the solution should be available
+
+29:45.120 --> 29:53.760
+for everyone and for us obviously again Free Software is the way to go and this initiative is
+
+29:53.760 --> 30:01.840
+very successful we even see references in laws and strategies towards this and I think it's also a
+
+30:01.840 --> 30:09.520
+good idea to follow these principles of public money public code in order to come up with a digital
+
+30:09.520 --> 30:14.960
+sovereign solution which is then not only tailored to your needs but where you have to control
+
+30:14.960 --> 30:22.640
+over technology and with this campaign it's an umbrella initiative if you like which is used to go
+
+30:22.640 --> 30:30.480
+in several different than precise debates around the stack but also about procurement funding
+
+30:30.480 --> 30:36.640
+even in the cyber resilience act we are using those kinds of arguments so and this initiative helps
+
+30:37.280 --> 30:43.360
+to first of all make it understandable for decision makers what this concept of Free Software means
+
+30:43.920 --> 30:50.960
+what are the benefits and then once they understood this go into the details of specific laws
+
+30:50.960 --> 30:58.240
+strategies whatever and try to come as close as possible towards those ideas of public money
+
+30:58.320 --> 31:06.880
+public code however we see that there are often rules with loopholes and now it's on us to close those
+
+31:06.880 --> 31:16.080
+loopholes so often it sets Free Software should be procured if there are not I don't know security
+
+31:16.080 --> 31:22.000
+reasons for example so it's very hard to get away from this wording however what we propose is
+
+31:22.720 --> 31:29.120
+if there are such security reasons then they should be explained in writing and should
+
+31:29.120 --> 31:35.680
+be checked by another institution if they are valid and also should be it should be possible to
+
+31:35.680 --> 31:42.240
+counter those and for this for example we can bring in the court of auditors who check if there is
+
+31:42.240 --> 31:48.160
+a really a need to not procure Free Software and this is what I mean this closing those loopholes
+
+31:48.160 --> 31:53.760
+so maybe we need to attach other loopholes so that we are going to this Free Software first approach
+
+31:54.400 --> 32:00.880
+and then if administrations for whatever reason do not procure or develop Free Software then they
+
+32:00.880 --> 32:07.600
+need to explain why they are not doing this and this this paperwork they will also understand step
+
+32:07.600 --> 32:12.160
+by step that there are not really those kind of arguments around and going more towards the
+
+32:12.160 --> 32:16.960
+direction of public money public code and this is why this campaign is so important and also a
+
+32:16.960 --> 32:23.040
+nice benefit for you if you sign it you can also register for email updates and but as we will
+
+32:23.040 --> 32:29.360
+keep you updated about our progress and also to push for public money public code across Europe.
+
+32:30.400 --> 32:35.440
+Perfect thank you very much I like thank you very much for the time I really hope that we
+
+32:36.000 --> 32:42.560
+get loads of best practices but I also know it's very important that we get a report of the
+
+32:42.560 --> 32:48.640
+programs and all but yeah maybe we have some very very positive news the next time hopefully
+
+32:49.520 --> 32:57.760
+we are working towards it yes you are okay in light of the time I would say we close it thank you
+
+32:57.760 --> 33:02.880
+so much for being here thank you so much for taking the time and yeah walking us through the free
+
+33:02.880 --> 33:11.840
+software software stack thanks for all these a pleasure all right this was the software freedom
+
+33:11.840 --> 33:17.200
+podcast if you liked this episode please recommend it to your friends and rated it
+
+33:18.320 --> 33:22.800
+stay tuned for more inspiring conversations that explore the importance of software freedom
+
+33:22.800 --> 33:29.120
+and its impact on our digital lives this podcast is presented to you by the Free Software Foundation
+
+33:29.120 --> 33:36.480
+Europe and we are a charity that works on promoting software freedom if you like our work like
+
+33:36.560 --> 33:44.000
+us following up and safeguarding Free Software in the Free Software stack so please support us
+
+33:45.120 --> 33:53.360
+you can do so by donating to us you find more information under fsfe.org/donate and if this
+
+33:53.360 --> 33:58.560
+is financially not possible for you you can share the podcast on social media rated or
+
+33:58.560 --> 34:05.440
+contribute to the fsfe.org as a volunteer by for example sending us best practice examples
+
+34:06.240 --> 34:12.240
+or reporting programs you see the Free Software software stack in your country thank you so
+
+34:12.240 --> 34:18.480
+much for listening to us and we will be back in your ears next month bye bye
+
+34:18.480 --> 34:28.720
+hi I am Øjvind I help out as one of the producers of the software freedom podcast
+
+34:29.600 --> 34:34.480
+along with Bonnie I work on the audio and editing for the software freedom podcast and try to make
+
+34:34.480 --> 34:41.600
+it as nice and shiny as possible for you all using Free Software tools of course I am doing this
+
+34:41.600 --> 34:47.600
+as a volunteer for the FSFE this is one of the ways I've found i can help with getting the message
+
+34:47.600 --> 34:54.080
+of software freedom out there I am dropping by here to encourage you to do the same volunteer your
+
+34:54.080 --> 34:59.840
+particular set of skills to the FSFE and help further the course of software freedom along with a great
+
+34:59.840 --> 35:06.080
+group of helpful and kind people you can find more information on how to contribute as a volunteer
+
+35:06.080 --> 35:25.760
+under fsfe.org/contribute see you out there
+

@@ -110,12 +110,9 @@ def get_version(file: Path) -> int:
     """
     Get the version tag of an xhtml|xml file
     """
-    xslt_tree = etree.parse(Path("build/xslt/get_version.xsl"))
-    transform = etree.XSLT(xslt_tree)
-    result_tree = transform(etree.parse(file))
-    result = str(result_tree).strip()
-    if result == "":
-        result = str(0)
+    xml = etree.parse(file)
+    result_list = xml.xpath("/*/version")
+    result = result_list[0].text if result_list else str(0)
     logger.debug("Got version: %s", result)
     return int(result)
 

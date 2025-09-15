@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- XSL stylesheet for generating podcast RSS feeds -->
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:dt="http://xsltsl.org/date-time" xmlns:weekdays="." xmlns:months="." xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:psc="http://podlove.org/simple-chapters" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:podcast="https://podcastindex.org/namespace/1.0" version="1.0">
-  <xsl:import href="../../build/xslt/gettext.xsl"/>
-  <xsl:import href="../../build/xslt/fsfe-cd.xsl"/>
+  <xsl:import href="../../global/xslt/internal/gettext.xsl"/>
+  <xsl:import href="../../global/xslt/internal/fsfe-cd.xsl"/>
   <xsl:output doctype-system="about:legacy-compat" encoding="utf-8" indent="no" method="xml" omit-xml-declaration="yes"/>
   <!-- ====== -->
   <!-- Months -->

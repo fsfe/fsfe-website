@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:dt="http://xsltsl.org/date-time" xmlns:weekdays="." xmlns:months="." xmlns:nl="." xmlns:str="http://xsltsl.org/string" version="1.0" exclude-result-prefixes="dt weekdays months nl str">
-  <xsl:import href="../../tools/xsltsl/string.xsl"/>
+  <xsl:import href="../thirdparty/string.xsl"/>
   <xsl:template name="subscribe-nl">
     <xsl:variable name="lang">
       <xsl:value-of select="/buildinfo/document/@language"/>

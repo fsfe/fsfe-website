@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:dt="http://xsltsl.org/date-time" version="1.0" exclude-result-prefixes="dt">
-  <xsl:import href="../../tools/xsltsl/date-time.xsl"/>
+  <xsl:import href="../thirdparty/date-time.xsl"/>
   <!-- ==================================================================== -->
   <!-- Event title with or without link                                     -->
   <!-- ==================================================================== -->

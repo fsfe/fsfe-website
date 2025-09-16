@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:dt="http://xsltsl.org/date-time" xmlns:str="http://xsltsl.org/string" version="1.0" exclude-result-prefixes="dt">
-  <xsl:import href="../../tools/xsltsl/date-time.xsl"/>
-  <xsl:import href="../../tools/xsltsl/string.xsl"/>
+  <xsl:import href="../thirdparty/date-time.xsl"/>
+  <xsl:import href="../thirdparty/string.xsl"/>
   <!-- ==================================================================== -->
   <!-- News image with or without link                                      -->
   <!-- ==================================================================== -->

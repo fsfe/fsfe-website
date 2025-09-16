@@ -137,14 +137,12 @@ $msg_to_staff .= "{$_POST['street']}\n" .
   "\n" .
   "Specifics of the Order:\n";
 # Default or custom package?
-if ($_POST['packagetype'] == 'basic_sticker') {
-  $msg_to_staff .= "My Laptop: Basic Set of Stickers.\n";
+if ($_POST['packagetype'] == 'basicsticker') {
+  $msg_to_staff .= "My Laptop: Basic set of stickers.\n";
 } else if ($_POST['packagetype'] == 'basicpostcard') {
-  $msg_to_staff .= "Postcards and Stickers.\n";
-} else if ($_POST['packagetype'] == 'basicsticker') {
-  $msg_to_staff .= "Small package with stickers.\n";
+  $msg_to_staff .= "I want postcards: Basic Stickers + Postcards.\n";
 } else if ($_POST['packagetype'] == 'morestickers') {
-  $msg_to_staff .= "Stickers for me and my friend: Twice the amount of our most popular stickers.\n";
+  $msg_to_staff .= "More Stickers: Twice the amount of stickers.\n";
 } else if ($_POST['packagetype'] == 'standard') {
   $msg_to_staff .= "Standard Package.\n";
 } else {

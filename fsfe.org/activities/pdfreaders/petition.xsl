@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
   <xsl:import href="../../fsfe.xsl"/>
-  <xsl:import href="../../../build/xslt/countries.xsl"/>
+  <xsl:import href="../../../global/xslt/internal/countries.xsl"/>
   <xsl:template match="/buildinfo/document/body/include-signatures">
     <xsl:apply-templates/>
     <h3 id="organisations"><xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'osig'"/></xsl:call-template>

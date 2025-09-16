@@ -62,7 +62,7 @@
         - /about/people/index.xsl: In this file, tags like <council-members /> are defined.
         - /about/people/index.sources: Where to look for people-files, translations of functions/activities/countries and so on
         - /about/people/avatars/: Place for all avatar pictures
-        - /build/xslt/people.xsl: The building of the team lists itself: Links, Background colors, inclusion of avatars etc
+        - /xslt/internal/people.xsl: The building of the team lists itself: Links, Background colors, inclusion of avatars etc
   -->
   <!--
     Improvement ideas:

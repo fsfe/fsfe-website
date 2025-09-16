@@ -2,10 +2,10 @@
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
   <!-- Prefix for links to FSFE's main website -->
   <xsl:variable name="urlprefix">https://fsfe.org</xsl:variable>
-  <xsl:include href="../../build/xslt/notifications.xsl"/>
-  <xsl:include href="../../build/xslt/translation_list.xsl"/>
-  <xsl:include href="../../build/xslt/gettext.xsl"/>
-  <xsl:include href="../../build/xslt/static-elements.xsl"/>
+  <xsl:include href="../../global/xslt/internal/notifications.xsl"/>
+  <xsl:include href="../../global/xslt/internal/translation_list.xsl"/>
+  <xsl:include href="../../global/xslt/internal/gettext.xsl"/>
+  <xsl:include href="../../global/xslt/internal/static-elements.xsl"/>
   <xsl:template name="page-body">
     <xsl:element name="body">
       <xsl:element name="header">

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
   <xsl:import href="../fsfe.xsl"/>
-  <xsl:import href="../../build/xslt/static-elements.xsl"/>
+  <xsl:import href="../../global/xslt/internal/static-elements.xsl"/>
   <xsl:template match="/buildinfo/document/body/include-newsletter">
     <xsl:apply-templates/>
     <xsl:for-each select="/buildinfo/document/set/news[         translate(@date, '-', '') &lt;= translate(/buildinfo/@date, '-', '')       ]">

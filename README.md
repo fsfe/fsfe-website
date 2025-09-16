@@ -39,9 +39,9 @@ This repository also contains the source files of other websites the FSFE hosts:
 
 Notable top level directories are:
 
-- `build`: Mostly custom Bash and XSL scripts to build the website
-- `global`: Globally used data files and modules, also the static translated strings.
-- `tools`: Contains miscellaneous XML, XSL, and SH files.
+- `build`: Python build tooling.
+- `global`: Globally used data files, modules, XSl, also the static translated strings. Generally contains data used in multiple sites, but not suitable to place in build process.
+- `tools`: Contains miscellaneous scripts and tools, usually not used as part of the build process. Rather for contributor use.
 
 And of course the different website folders.
 

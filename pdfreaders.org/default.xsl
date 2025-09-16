@@ -3,7 +3,7 @@
   <xsl:import href="xslt/pdfreaders_head.xsl"/>
   <xsl:import href="xslt/pdfreaders_body.xsl"/>
   <xsl:output doctype-system="about:legacy-compat" encoding="utf-8" indent="no" method="html" omit-xml-declaration="yes"/>
-  <xsl:include href="../build/xslt/fsfe_document.xsl"/>
+  <xsl:include href="../global/xslt/internal/fsfe_document.xsl"/>
   <xsl:include href="xslt/pdfreaders_list.xsl"/>
-  <xsl:include href="../build/xslt/fsfe_nolocal.xsl"/>
+  <xsl:include href="../global/xslt/internal/fsfe_nolocal.xsl"/>
 </xsl:stylesheet>

@@ -10,6 +10,9 @@
 # example:
 # odtfill template.odt out.odt repeat=2 Recipient="Fred Bloggs\nHope Road 17" Means="Credit card payment" Type="Pin" Type="T-Shirt, L"
 
+# That ODT file can be printed easily with
+#     libreoffice --headless -p out.odt
+
 if [ -z "$3" ]; then
   echo "Usage: $(basename $0) INFILE.odt OUTFILE.odt PLACEHOLDER=VALUE ..."
   exit 0

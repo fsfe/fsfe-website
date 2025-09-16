@@ -16,7 +16,7 @@ if [ -z "$3" ]; then
 fi
 
 infile=$(readlink --canonicalize-missing "$1"); shift
-outfile=$(readlink --canonicalize-missing "$2"); shift
+outfile=$(readlink --canonicalize-missing "$1"); shift
 
 # ------------------------------------------------------------------------------
 # Unpack the ODT file into a temporary directory

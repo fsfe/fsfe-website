@@ -145,6 +145,9 @@
           <podcast:remoteItem feedGuid="385183b8-8a23-5fa1-b9dc-3ed6c870f14a" feedUrl="https://media.fsfe.org/feeds/videos.xml?videoChannelId=3" title="FSFE Peertube Channel"/>
           <podcast:remoteItem feedGuid="de52ef44-69d3-565d-b7c6-255562cdcd4c" feedUrl="https://linuxinlaws.eu/inlaws_rss.xml" title="Linux Inlaws"/>
         </podcast:podroll>
+        <podcast:funding url="https://my.fsfe.org/donate?referrer=podcast-donation">Donation</podcast:funding>
+        <podcast:person group="Cast" role="Host" href="https://mastodon.social/@annabonnie" img="https://pics.fsfe.org/uploads/original/c3/9d/5c8132a9309f4655bd52570afbf7.png">Bonnie Mehring</podcast:person>
+        <podcast:person group="Audio Post-Production" role="Audio Editor" href="https://social.riversouldiers.dk/@fritjof" img="https://fsfe.org/about/people/avatars/slartibartfast.jpg">Øjvind Fritjof</podcast:person>
         <!-- Podcast episodes -->
         <xsl:for-each select="/buildinfo/document/set/news[             translate(@date, '-', '') &lt;= translate(/buildinfo/@date, '-', '')           ]">
           <xsl:sort select="@date" order="descending"/>

@@ -109,6 +109,7 @@ RewriteRule ^drm.info(/.*)? https://drm.info$1 [R=301,L]
 RewriteRule ^activities/yh4f/register https://share.fsfe.org/apps/forms/s/iqeXngDaatNeDd2z9jyCa8se [R=307,L]
 RewriteRule ^activities/yh4f/feedback https://share.fsfe.org/apps/forms/s/TD87s7Ze8566BJ4pQ76TxS7s [R=307,L]
 RewriteRule ^activities/yh4f/mediakit https://download.fsfe.org/YH4F/Youth_Hacking_4_Freedom_2025.pdf [R=301,L]
+RewriteRule ^activities/yh4f/award-ceremony https://share.fsfe.org/apps/forms/s/7KJ26dzyeeBZznZTBLqjLqrE [R=307,L]
 
 # Current ThankGNUs page
 # TODO each year: update redirect to current page

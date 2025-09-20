@@ -35,6 +35,7 @@ in
       file
       shfmt
       prettier
+      php84Packages.php-cs-fixer
     ]);
   # Installed for every architecture: only install the lib outputs
   multiPkgs =

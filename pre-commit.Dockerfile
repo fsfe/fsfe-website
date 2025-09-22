@@ -32,16 +32,21 @@ ENV PATH="/root/.composer/vendor/bin:$PATH"
 ENV UV_PROJECT_ENVIRONMENT=/root/.cache/uv/venv
 # Add vent to path
 ENV PATH="$UV_PROJECT_ENVIRONMENT/bin:$PATH"
+
 # Set the workdir
-WORKDIR /website-source
+WORKDIR /website-source-during-build
 
 # Copy the pyproject and build deps
 # Done in a seperate step for optimal docker caching
 COPY ./pyproject.toml ./uv.lock .
 RUN uv sync --no-install-package fsfe_website_build --group dev
-# Copy everything else
-COPY . .
 
-ENTRYPOINT ["bash", "./pre-commit.entrypoint.sh"]
+# Copy entrypoint
+COPY pre-commit.entrypoint.sh .
+
+# Set the workdir
+WORKDIR /website-source
+
+ENTRYPOINT ["bash", "/website-source-during-build/pre-commit.entrypoint.sh"]
 
 

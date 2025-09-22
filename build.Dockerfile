@@ -15,17 +15,21 @@ rsync
 
 # Set uv project env, to persist stuff moving dirs 
 ENV UV_PROJECT_ENVIRONMENT=/root/.cache/uv/venv
+
 # Set the workdir
-WORKDIR /website-source
+WORKDIR /website-source-during-build
 
 # Copy the pyproject and build deps
 # Done in a seperate step for optimal docker caching
 COPY ./pyproject.toml ./uv.lock .
 RUN uv sync --no-install-package fsfe_website_build
 
-# Copy everything else
-COPY . .
+# Copy entrypoint
+COPY build.entrypoint.sh .
 
-ENTRYPOINT ["bash", "./build.entrypoint.sh"]
+# Set the workdir
+WORKDIR /website-source
+
+ENTRYPOINT ["bash", "/website-source-during-build/build.entrypoint.sh"]
 
 

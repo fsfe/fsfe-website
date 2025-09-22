@@ -20,10 +20,11 @@ steps:
       cache_from: git.fsfe.org/fsfe/fsfe-website-build:latest
       dockerfile: build.Dockerfile
     when:
-      branch:
-        - master
+      # branch:
+      #   - master
       event:
         - push
+        - pull_request
 
   # Build and push pre-commit container on master
   - name: docker-build-push-pre-commit
@@ -38,10 +39,11 @@ steps:
       cache_from: git.fsfe.org/fsfe/fsfe-website-pre-commit:latest
       dockerfile: pre-commit.Dockerfile
     when:
-      branch:
-        - master
+      # branch:
+      #   - master
       event:
         - push
+        - pull_request
 
   # Build (with cache) but never push build container on PR
   - name: docker-build-pr-build
@@ -195,6 +197,6 @@ volumes:
       path: /run/user/1001/docker.sock
 ---
 kind: signature
-hmac: 7c48b0574ed99ae6cc7a3956b6d6e9f07c7ad8ca25e0297bbad5e80f2b62f7a9
+hmac: 75cf16134c1f77caf04567307128236b1e6a8989c3c7d204b0851f8142a84f85
 
 ...

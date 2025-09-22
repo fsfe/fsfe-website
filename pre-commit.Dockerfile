@@ -26,6 +26,8 @@ shfmt
 RUN npm install -g prettier
 # Install php cs fixer
 RUN composer global require friendsofphp/php-cs-fixer
+# Add composer to path
+ENV PATH="/root/.composer/vendor/bin:$PATH"
 # Set uv project env, to persist stuff moving dirs 
 ENV UV_PROJECT_ENVIRONMENT=/root/.cache/uv/venv
 # Add vent to path

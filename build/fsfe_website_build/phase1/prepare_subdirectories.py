@@ -10,6 +10,7 @@ logger = logging.getLogger(__name__)
 
 
 def prepare_subdirectories(
+    source: Path,
     source_dir: Path,
     languages: list[str],
     processes: int,
@@ -25,7 +26,7 @@ def prepare_subdirectories(
         # here for out subdir scripts
         import subdir  # noqa: PLC0415 # pyright: ignore [reportMissingImports]
 
-        subdir.run(languages, processes, subdir_path)
+        subdir.run(source, languages, processes, subdir_path)
         # Remove its path from where things can be imported
         sys.path.remove(str(subdir_path.resolve()))
         # Remove it from loaded modules

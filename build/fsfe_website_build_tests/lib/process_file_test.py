@@ -62,7 +62,7 @@ def process_file_link_rewrites_test(
         ).strip(),
     )
 
-    result_doc = process_file(xml_path, sample_xsl)
+    result_doc = process_file(Path(), xml_path, sample_xsl)
     assert isinstance(result_doc, etree._XSLTResultTree)
     # We get a list, but as we have only one link in the above sample
     # we only need to care about the first one

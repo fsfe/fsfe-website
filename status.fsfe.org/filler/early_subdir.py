@@ -14,7 +14,7 @@ from lxml import etree
 logger = logging.getLogger(__name__)
 
 
-def run(processes: int, working_dir: Path) -> None:
+def run(source: Path, processes: int, working_dir: Path) -> None:
     """
     Place filler indices to encourage the site to
     ensure that status pages for all langs are build.
@@ -44,6 +44,6 @@ def run(processes: int, working_dir: Path) -> None:
                     ),
                     index_content,
                 )
-                for path in Path().glob("global/languages/*")
+                for path in source.glob("global/languages/*")
             ),
         )

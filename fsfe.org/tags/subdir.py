@@ -72,7 +72,7 @@ def _update_tag_sets(
     )
 
 
-def run(languages: list[str], processes: int, working_dir: Path) -> None:
+def run(source: Path, languages: list[str], processes: int, working_dir: Path) -> None:  # noqa: ARG001
     """
     Update Tag pages, xmllists and xmls
 

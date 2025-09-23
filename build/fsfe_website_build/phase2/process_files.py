@@ -12,7 +12,8 @@ from fsfe_website_build.lib.process_file import process_file
 logger = logging.getLogger(__name__)
 
 
-def _run_process(
+def _run_process(  # noqa: PLR0913
+    source: Path,
     target_file: Path,
     processor: Path,
     source_file: Path,
@@ -38,19 +39,20 @@ def _run_process(
                         ".xmllist",
                     )
                 ),
-                Path(f"global/data/texts/.texts.{lang}.xml"),
-                Path(f"global/data/topbanner/.topbanner.{lang}.xml"),
-                Path("global/data/texts/texts.en.xml"),
+                source.joinpath(f"global/data/texts/.texts.{lang}.xml"),
+                source.joinpath(f"global/data/topbanner/.topbanner.{lang}.xml"),
+                source.joinpath("global/data/texts/texts.en.xml"),
             ]
         ),
     ):
         logger.debug("Building %s", target_file)
-        result = process_file(source_file, processor)
+        result = process_file(source, source_file, processor)
         target_file.parent.mkdir(parents=True, exist_ok=True)
         result.write_output(target_file)
 
 
 def _process_dir(
+    source: Path,
     source_dir: Path,
     languages: list[str],
     target: Path,
@@ -67,10 +69,11 @@ def _process_dir(
                 if basename.with_suffix(".xsl").exists()
                 else basename.parent.joinpath(".default.xsl")
             )
-            _run_process(target_file, processor, source_file, basename, lang)
+            _run_process(source, target_file, processor, source_file, basename, lang)
 
 
 def _process_stylesheet(
+    source: Path,
     source_dir: Path,
     languages: list[str],
     target: Path,
@@ -83,10 +86,11 @@ def _process_stylesheet(
             f".{lang}{processor.with_suffix('').suffix}",
         )
         source_file = basename.with_suffix(f".{lang}.xhtml")
-        _run_process(target_file, processor, source_file, basename, lang)
+        _run_process(source, target_file, processor, source_file, basename, lang)
 
 
 def process_files(
+    source: Path,
     source_dir: Path,
     languages: list[str],
     pool: multiprocessing.pool.Pool,
@@ -102,7 +106,7 @@ def process_files(
     pool.starmap(
         _process_dir,
         (
-            (source_dir, languages, target, directory)
+            (source, source_dir, languages, target, directory)
             for directory in {path.parent for path in source_dir.glob("**/*.*.xhtml")}
         ),
     )
@@ -110,7 +114,7 @@ def process_files(
     pool.starmap(
         _process_stylesheet,
         (
-            (source_dir, languages, target, processor)
+            (source, source_dir, languages, target, processor)
             for processor in source_dir.glob("**/*.rss.xsl")
         ),
     )
@@ -118,7 +122,7 @@ def process_files(
     pool.starmap(
         _process_stylesheet,
         (
-            (source_dir, languages, target, processor)
+            (source, source_dir, languages, target, processor)
             for processor in source_dir.glob("**/*.ics.xsl")
         ),
     )

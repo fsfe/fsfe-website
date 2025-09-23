@@ -15,7 +15,7 @@ from lxml import etree
 logger = logging.getLogger(__name__)
 
 
-def run(languages: list[str], processes: int, working_dir: Path) -> None:  # noqa: ARG001 # We allow unused args for subdirs
+def run(source: Path, languages: list[str], processes: int, working_dir: Path) -> None:  # noqa: ARG001 # We allow unused args for subdirs
     """
     Internal subdir preparation
     """

@@ -56,6 +56,12 @@ def parse_arguments() -> argparse.Namespace:
         default=multiprocessing.cpu_count(),
     )
     parser.add_argument(
+        "--source",
+        help="Source directory, that contains the sites and global data",
+        default=Path(),
+        type=Path,
+    )
+    parser.add_argument(
         "--serve",
         help="Serve the webpages after rebuild",
         action="store_true",
@@ -63,8 +69,8 @@ def parse_arguments() -> argparse.Namespace:
     parser.add_argument(
         "--sites",
         help="What site directories to build",
-        default=[path for path in Path().glob("?*.??*") if path.is_dir()],
-        type=lambda sites: [Path(site) for site in sites.split(",")],
+        default=None,
+        type=str,
     )
     parser.add_argument(
         "--stage",
@@ -80,9 +86,17 @@ def parse_arguments() -> argparse.Namespace:
         name@host:path?port.
         """),
         type=str,
-        default="./output/final",
+        default=None,
     )
-    return parser.parse_args()
+    args = parser.parse_args()
+    args.sites = (
+        [path for path in args.source.glob("?*.??*") if path.is_dir()]
+        if args.sites is None
+        else [args.source.joinpath(site) for site in args.sites.split(",")]
+    )
+    if args.target is None:
+        args.target = str(args.source.joinpath("output/final"))
+    return args
 
 
 def main() -> None:
@@ -102,7 +116,7 @@ def main() -> None:
 
         # TODO Should also be triggered whenever any build python file is changed
         if args.full:
-            full()
+            full(args.source)
         # -----------------------------------------------------------------------------
         # Create XML symlinks
         # -----------------------------------------------------------------------------
@@ -115,11 +129,12 @@ def main() -> None:
         # otherwise. This symlinks make sure that phase 2 can easily use the right file
         # for each language
         global_symlinks(
+            args.source,
             (
                 args.languages
                 if args.languages
                 else sorted(
-                    (path.name for path in Path().glob("global/languages/??")),
+                    (path.name for path in args.source.glob("global/languages/??")),
                 )
             ),
             pool,
@@ -128,7 +143,9 @@ def main() -> None:
         stage_required = any(
             [args.stage, "@" in args.target, ":" in args.target, "," in args.target],
         )
-        working_target = Path("./output/stage" if stage_required else args.target)
+        working_target = Path(
+            f"{args.source}/output/stage" if stage_required else args.target
+        )
         # the two middle phases are unconditional, and run on a per site basis
         for site in args.sites:
             logger.info("Processing %s", site)
@@ -141,6 +158,7 @@ def main() -> None:
             # Do not get access to languages to be built in,
             # and other benefits of being ran later.
             prepare_early_subdirectories(
+                args.source,
                 site,
                 args.processes,
             )
@@ -152,8 +170,14 @@ def main() -> None:
                 )
             )
             # Processes needed only for subdir stuff
-            phase1_run(site, languages, args.processes, pool)
-            phase2_run(site, languages, pool, working_target.joinpath(site))
+            phase1_run(args.source, site, languages, args.processes, pool)
+            phase2_run(
+                args.source,
+                site,
+                languages,
+                pool,
+                working_target.joinpath(site.name),
+            )
 
         logger.info("Starting Phase 3 - Global Conditional Finishing")
         if stage_required:

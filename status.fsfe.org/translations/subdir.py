@@ -154,7 +154,7 @@ def _create_translation_file(
     update_if_changed(work_file, result_str)
 
 
-def run(languages: list[str], processes: int, working_dir: Path) -> None:
+def run(source: Path, languages: list[str], processes: int, working_dir: Path) -> None:  # noqa: ARG001
     """
     Build translation-status xmls for languages where the status has changed.
     Xmls are placed in target_dir, and only languages are processed.

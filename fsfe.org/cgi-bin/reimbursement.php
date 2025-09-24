@@ -40,83 +40,91 @@ $who = explode('||', $who)[1];
 
 
 // FUNCTIONS
-function errexit($msg) {
-  exit("Error: " . $msg . "<br/><br/>To avoid losing your data, press the back button in your browser");
+function errexit($msg)
+{
+    exit("Error: " . $msg . "<br/><br/>To avoid losing your data, press the back button in your browser");
 }
-function replace_page($temp, $content){
-    $vars = array(':RESULT:'=>$content);
+function replace_page($temp, $content)
+{
+    $vars = array(':RESULT:' => $content);
     return str_replace(array_keys($vars), $vars, $temp);
 }
 /* Snippet Begin:
  * SPDX-SnippetLicenseConcluded: CC-BY-SA-4.0
  * SPDX-SnippetCopyrightText: mgutt <https://stackoverflow.com/users/318765/mgutt>
 */
-function filter_filename($filename, $beautify=true) {
-  // sanitize filename
-  $filename = preg_replace(
-    '~
+function filter_filename($filename, $beautify = true)
+{
+    // sanitize filename
+    $filename = preg_replace(
+        '~
     [<>:"/\\|?*]|            # file system reserved https://en.wikipedia.org/wiki/Filename#Reserved_characters_and_words
     [\x00-\x1F]|             # control characters http://msdn.microsoft.com/en-us/library/windows/desktop/aa365247%28v=vs.85%29.aspx
     [\x7F\xA0\xAD]|          # non-printing characters DEL, NO-BREAK SPACE, SOFT HYPHEN
     [#\[\]@!$&\'()+,;=]|     # URI reserved https://tools.ietf.org/html/rfc3986#section-2.2
     [{}^\~`]                 # URL unsafe characters https://www.ietf.org/rfc/rfc1738.txt
     ~x',
-    '-', $filename);
-  // avoids ".", ".." or ".hiddenFiles"
-  $filename = ltrim($filename, '.-');
-  // optional beautification
-  if ($beautify) $filename = beautify_filename($filename);
-  // maximize filename length to 255 bytes http://serverfault.com/a/9548/44086
-  $ext = pathinfo($filename, PATHINFO_EXTENSION);
-  $filename = mb_strcut(pathinfo($filename, PATHINFO_FILENAME), 0, 255 - ($ext ? strlen($ext) + 1 : 0), mb_detect_encoding($filename)) . ($ext ? '.' . $ext : '');
-  return $filename;
+        '-',
+        $filename
+    );
+    // avoids ".", ".." or ".hiddenFiles"
+    $filename = ltrim($filename, '.-');
+    // optional beautification
+    if ($beautify) {
+        $filename = beautify_filename($filename);
+    }
+    // maximize filename length to 255 bytes http://serverfault.com/a/9548/44086
+    $ext = pathinfo($filename, PATHINFO_EXTENSION);
+    $filename = mb_strcut(pathinfo($filename, PATHINFO_FILENAME), 0, 255 - ($ext ? strlen($ext) + 1 : 0), mb_detect_encoding($filename)) . ($ext ? '.' . $ext : '');
+    return $filename;
 }
-function beautify_filename($filename) {
-  // reduce consecutive characters
-  $filename = preg_replace(array(
-    // "file   name.zip" becomes "file-name.zip"
-    '/ +/',
-    // "file___name.zip" becomes "file-name.zip"
-    '/_+/',
-    // "file---name.zip" becomes "file-name.zip"
-    '/-+/'
-  ), '-', $filename);
-  $filename = preg_replace(array(
-    // "file--.--.-.--name.zip" becomes "file.name.zip"
-    '/-*\.-*/',
-    // "file...name..zip" becomes "file.name.zip"
-    '/\.{2,}/'
-  ), '.', $filename);
-  // lowercase for windows/unix interoperability http://support.microsoft.com/kb/100625
-  $filename = mb_strtolower($filename, mb_detect_encoding($filename));
-  // ".file-name.-" becomes "file-name"
-  $filename = trim($filename, '.-');
-  return $filename;
+function beautify_filename($filename)
+{
+    // reduce consecutive characters
+    $filename = preg_replace(array(
+      // "file   name.zip" becomes "file-name.zip"
+      '/ +/',
+      // "file___name.zip" becomes "file-name.zip"
+      '/_+/',
+      // "file---name.zip" becomes "file-name.zip"
+      '/-+/'
+    ), '-', $filename);
+    $filename = preg_replace(array(
+      // "file--.--.-.--name.zip" becomes "file.name.zip"
+      '/-*\.-*/',
+      // "file...name..zip" becomes "file.name.zip"
+      '/\.{2,}/'
+    ), '.', $filename);
+    // lowercase for windows/unix interoperability http://support.microsoft.com/kb/100625
+    $filename = mb_strtolower($filename, mb_detect_encoding($filename));
+    // ".file-name.-" becomes "file-name"
+    $filename = trim($filename, '.-');
+    return $filename;
 }
 /* Snippet End */
 
 // Sanity checks for parameters, and setting variables depending on type
 if ($type == "rc") {
-  if ( ! $rc_month || ! $rc_year ) {
-    errexit("You must provide month and year of the RC");
-  }
-  $type_verbose = "Reimbursement Claim";
-  $type_date = "$rc_year-$rc_month";
-} else if ($type == "cc") {
-  if ( ! $cc_month || ! $cc_year ) {
-    errexit("You must provide quarter and year of the CC statement");
-  }
-  $type_verbose = "Credit Card Statement";
-  $type_date = "$cc_year-$cc_month";
+    if (! $rc_month || ! $rc_year) {
+        errexit("You must provide month and year of the RC");
+    }
+    $type_verbose = "Reimbursement Claim";
+    $type_date = "$rc_year-$rc_month";
+} elseif ($type == "cc") {
+    if (! $cc_month || ! $cc_year) {
+        errexit("You must provide quarter and year of the CC statement");
+    }
+    $type_verbose = "Credit Card Statement";
+    $type_date = "$cc_year-$cc_month";
 } else {
-  errexit("You must provide a reimbursement type");
+    errexit("You must provide a reimbursement type");
 }
 
 // Prepare output table
 if ($mailopt === "onlyme") {
-  $html .= "<p><strong>ATTENTION: The email has only been sent to you, not to the financial team!</strong></p>";
-} else if ($mailopt === "none") {
-  $html .= "<p><strong>ATTENTION: You have configured to not send any email!</strong></p>";
+    $html .= "<p><strong>ATTENTION: The email has only been sent to you, not to the financial team!</strong></p>";
+} elseif ($mailopt === "none") {
+    $html .= "<p><strong>ATTENTION: You have configured to not send any email!</strong></p>";
 }
 $html .= "<p>This <strong>$type_verbose</strong> is made by <strong>$who_verbose</strong>.</p>
 <table class='table table-striped'>
@@ -151,65 +159,65 @@ $email->SetFrom($who . "@fsfe.org", $who_verbose);
 $email->CharSet = "UTF-8";
 $email->Subject     = "=?UTF-8?B?" . base64_encode("$type_verbose for $type_date by $who_verbose") . "?=";
 if ($mailopt === "normal") {
-  $email->addAddress("finance@lists.fsfe.org");
+    $email->addAddress("finance@lists.fsfe.org");
 }
 $email->addAddress($who . "@fsfe.org");
 
 foreach ($entry as $key => $date) {  // run over each row
-  // Get basic variable for each row
-  /* For receipts, following variables are set:
-   * tmp: the temporary path of the uploaded file
-   * error: any errors with the file
-   * name: the original name of the file
-   * size: file size
-   * rename: the format we want each file to have
-   * dest: the temporary but known location of the file
-  */
-  $receipt_tmp = $_FILES["receipt"]["tmp_name"][$key];
-  $receipt_error = $_FILES["receipt"]["error"][$key];
-  $receipt_name = basename($_FILES["receipt"]["name"][$key]);
-  $receipt_size = $_FILES["receipt"]["size"][$key];
-  $key1 = $key + 1;
-  $receipt_no = sprintf('%02d', $key1);
-  $activity_tag[$key] = explode("||", $activity[$key])[0];
-  $activity_text[$key] = explode("||", $activity[$key])[1];
-  $category_id[$key] = explode(":", $category[$key])[0];
-  $category_text[$key] = explode(":", $category[$key])[1];
-  $event[$key] = $event[$key];
+    // Get basic variable for each row
+    /* For receipts, following variables are set:
+     * tmp: the temporary path of the uploaded file
+     * error: any errors with the file
+     * name: the original name of the file
+     * size: file size
+     * rename: the format we want each file to have
+     * dest: the temporary but known location of the file
+    */
+    $receipt_tmp = $_FILES["receipt"]["tmp_name"][$key];
+    $receipt_error = $_FILES["receipt"]["error"][$key];
+    $receipt_name = basename($_FILES["receipt"]["name"][$key]);
+    $receipt_size = $_FILES["receipt"]["size"][$key];
+    $key1 = $key + 1;
+    $receipt_no = sprintf('%02d', $key1);
+    $activity_tag[$key] = explode("||", $activity[$key])[0];
+    $activity_text[$key] = explode("||", $activity[$key])[1];
+    $category_id[$key] = explode(":", $category[$key])[0];
+    $category_text[$key] = explode(":", $category[$key])[1];
+    $event[$key] = $event[$key];
 
-  // Sanity checks for receipt: upload, size, mime type
-  if (! $receipt_tmp) {
-    errexit("Something with $receipt_name went wrong, it has not been uploaded.");
-  }
-  if ($receipt_size > 2097152) {
-    errexit("File size of $receipt_name must not be larger than 2MB");
-  }
-  $receipt_mime = mime_content_type($receipt_tmp);
-  if(! in_array($receipt_mime, array('image/jpeg', 'image/png', 'application/pdf'))) {
-    errexit("Only PDF, JPG and PNG allowed. $receipt_name has $receipt_mime");
-  }
-
-  // Set name and temporary destination for attached receipt
-  $receipt_ext = pathinfo($receipt_name)['extension'];
-  $receipt_rename = filter_filename($type_date ."-". $type ."-". $who ."-receipt-". $receipt_no ."-". $activity_tag[$key] .".". "$receipt_ext");
-  $receipt_dest[$key] = "/tmp/" . $receipt_rename;
-
-  // Try to move file to temporary destination
-  if ($receipt_error == UPLOAD_ERR_OK) {
-    if ( ! move_uploaded_file($receipt_tmp, $receipt_dest[$key]) ) {
-      errexit("Could not move uploaded file '".$receipt_tmp."' to '".$receipt_dest."'<br/>\n");
+    // Sanity checks for receipt: upload, size, mime type
+    if (! $receipt_tmp) {
+        errexit("Something with $receipt_name went wrong, it has not been uploaded.");
     }
-  } else {
-    errexit("Upload error. [".$receipt_error."] on file '".$receipt_name."'<br/>\n");
-  }
+    if ($receipt_size > 2097152) {
+        errexit("File size of $receipt_name must not be larger than 2MB");
+    }
+    $receipt_mime = mime_content_type($receipt_tmp);
+    if (! in_array($receipt_mime, array('image/jpeg', 'image/png', 'application/pdf'))) {
+        errexit("Only PDF, JPG and PNG allowed. $receipt_name has $receipt_mime");
+    }
 
-  // Remove "-" when remark empty
-  if ($description[$key] === "-") {
-    $description[$key] = "";
-  }
+    // Set name and temporary destination for attached receipt
+    $receipt_ext = pathinfo($receipt_name)['extension'];
+    $receipt_rename = filter_filename($type_date ."-". $type ."-". $who ."-receipt-". $receipt_no ."-". $activity_tag[$key] .".". "$receipt_ext");
+    $receipt_dest[$key] = "/tmp/" . $receipt_rename;
 
-  // HTML output for this receipt
-  $html .= "
+    // Try to move file to temporary destination
+    if ($receipt_error == UPLOAD_ERR_OK) {
+        if (! move_uploaded_file($receipt_tmp, $receipt_dest[$key])) {
+            errexit("Could not move uploaded file '".$receipt_tmp."' to '".$receipt_dest."'<br/>\n");
+        }
+    } else {
+        errexit("Upload error. [".$receipt_error."] on file '".$receipt_name."'<br/>\n");
+    }
+
+    // Remove "-" when remark empty
+    if ($description[$key] === "-") {
+        $description[$key] = "";
+    }
+
+    // HTML output for this receipt
+    $html .= "
   <tr>
     <td>$date</td>
     <td>$amount[$key]</td>
@@ -224,16 +232,16 @@ foreach ($entry as $key => $date) {  // run over each row
     <td></td>
   </tr>";
 
-  // CSV for this receipt
-  $csv[$receipt_no] = array($who_empnumber, $who_verbose, $date, $amount[$key], $recipient[$key], $activity_tag[$key], $activity_text[$key], $category_id[$key], $category_text[$key], $event[$key], $description[$key], $receipt_no);
+    // CSV for this receipt
+    $csv[$receipt_no] = array($who_empnumber, $who_verbose, $date, $amount[$key], $recipient[$key], $activity_tag[$key], $activity_text[$key], $category_id[$key], $category_text[$key], $event[$key], $description[$key], $receipt_no);
 
-  // Add receipt as email attachment
-  $email->addAttachment($receipt_dest[$key], basename($receipt_dest[$key]));
+    // Add receipt as email attachment
+    $email->addAttachment($receipt_dest[$key], basename($receipt_dest[$key]));
 } // foreach
 
 // Write and attach temporary CSV file
 foreach ($csv as $fields) {
-  fputcsv($csvfile, $fields, ';', '"', '"');
+    fputcsv($csvfile, $fields, ';', '"', '"');
 }
 $email->addAttachment($csvfile_path, filter_filename($type_date ."-". $type ."-". $who . ".csv"));
 
@@ -248,9 +256,9 @@ Please find the expenses and their receipts attached.";
 // Finalise output table
 $html .= "</table>";
 if ($extra) {
-  $html .= "<p>Extra remarks: <br />$extra</p>";
+    $html .= "<p>Extra remarks: <br />$extra</p>";
 
-  $email_body .= "
+    $email_body .= "
 
 The sender added the following comment:
 
@@ -260,11 +268,11 @@ $extra";
 // Send email, and delete attachments
 $email->Body = $email_body;
 if ($mailopt === "normal" || $mailopt === "onlyme") {
-  $email->send();
-  $html .= $email->ErrorInfo;
+    $email->send();
+    $html .= $email->ErrorInfo;
 }
 foreach ($receipt_dest as $receipt) {
-  unlink($receipt);
+    unlink($receipt);
 }
 fclose($csvfile);
 
@@ -273,5 +281,3 @@ fclose($csvfile);
 $template = file_get_contents('../internal/rc-result.en.html', true);
 
 echo replace_page($template, $html);
-
-?>

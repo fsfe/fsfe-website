@@ -1,4 +1,5 @@
 <?php
+
 /* Copyright (C) 2012, Tobias Bengfort <tobias.bengfort@gmx.net> & Marius Jammes for FSFE e.V.
 
     This program is free software: you can redistribute it and/or modify
@@ -215,7 +216,7 @@ function calculate_information($data)
                 empty(
                     array_filter(
                         $decoded_response,
-                        fn($file) => $file["name"] === $filename
+                        fn ($file) => $file["name"] === $filename
                     )
                 )
             ) {
@@ -257,7 +258,7 @@ function calculate_information($data)
                 empty(
                     array_filter(
                         $decoded_response,
-                        fn($branch) => $branch["name"] === $branchname
+                        fn ($branch) => $branch["name"] === $branchname
                     )
                 )
             ) {

@@ -4,6 +4,7 @@ COPY --from=ghcr.io/astral-sh/uv:latest /uv /uvx /bin/
 
 # Install deps
 RUN apt-get update && apt-get install --yes --no-install-recommends \
+composer \
 coreutils \
 curl \
 file \
@@ -16,12 +17,17 @@ libxslt1.1 \
 mediainfo \
 npm \
 perl-base \
+php-zip \
 rsync \
 sed \
 shfmt
 
 # Install prettier
 RUN npm install -g prettier
+# Install php cs fixer
+RUN composer global require friendsofphp/php-cs-fixer
+# Add composer to path
+ENV PATH="/root/.composer/vendor/bin:$PATH"
 # Set uv project env, to persist stuff moving dirs 
 ENV UV_PROJECT_ENVIRONMENT=/root/.cache/uv/venv
 # Add vent to path

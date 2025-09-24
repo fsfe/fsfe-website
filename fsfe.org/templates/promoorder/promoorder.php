@@ -9,8 +9,8 @@
     tracking number.
   </p>
   <?php
-  if ( !empty($donationID) ) {
-  ?>
+  if (!empty($donationID)) {
+      ?>
   <p>If you have yet to make your donation, you may now do so by following
     this link: <a href=https://fsfe.org/order/payonline.<?=$lang?>/<?=$donationID?>> 
     https://fsfe.org/order/payonline.<?=$lang?>/<?=$donationID?></a>. Once the donation is

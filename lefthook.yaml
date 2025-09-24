@@ -19,6 +19,12 @@ pre-commit:
     pyright:
       glob: "*.py"
       run: pyright {staged_files}
+    php-cs-fixer:
+      glob: "*.php"
+      exclude:
+        - "fsfe.org/cgi-bin/PHPMailer/*.php"
+      run: for file in {staged_files}; do php-cs-fixer fix "$file"; done
+      stage_fixed: true
     pytest:
       glob:
         - "*.py"

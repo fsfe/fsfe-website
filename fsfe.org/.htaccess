@@ -79,7 +79,7 @@ RewriteRule ^news/podcast-opus.rss$ /news/podcast-opus.en.rss [L,R=301]
 # ILoveFS
 # TODO for new news-item: update links for latest news-item
 RewriteRule ^news/latest-news$ /news/2024/news-20240610-01.html [R=301,L]
-RewriteRule ^activities/ilovefs/toolkit$  https://download.fsfe.org/campaigns/ilovefs/toolkit/ [R=301,L]
+RewriteRule ^activities/ilovefs/toolkit$  https://download.fsfe.org/campaigns/ilovefs/toolkit/I%20Love%20Free%20Software%20Day%202026/ [R=307,L]
 
 # TODO each year: update links for latest report
 RewriteRule ^activities/ilovefs/latest-report$ /activities/ilovefs/report/report_2025.html [R=307,L]
@@ -109,6 +109,7 @@ RewriteRule ^drm.info(/.*)? https://drm.info$1 [R=301,L]
 RewriteRule ^activities/yh4f/register https://share.fsfe.org/apps/forms/s/iqeXngDaatNeDd2z9jyCa8se [R=307,L]
 RewriteRule ^activities/yh4f/feedback https://share.fsfe.org/apps/forms/s/TD87s7Ze8566BJ4pQ76TxS7s [R=307,L]
 RewriteRule ^activities/yh4f/mediakit https://download.fsfe.org/YH4F/Youth_Hacking_4_Freedom_2025.pdf [R=301,L]
+RewriteRule ^activities/yh4f/award-ceremony https://share.fsfe.org/apps/forms/s/7KJ26dzyeeBZznZTBLqjLqrE [R=307,L]
 
 # Current ThankGNUs page
 # TODO each year: update redirect to current page

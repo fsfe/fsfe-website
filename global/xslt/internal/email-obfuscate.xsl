@@ -3,7 +3,7 @@
 <!-- XML tag for obfuscating an email address against scaper bots           -->
 <!-- ====================================================================== -->
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:exsl="http://exslt.org/common" version="1.0">
-  <xsl:import href="../../tools/xsltsl/tokenize.xsl"/>
+  <xsl:import href="../thirdparty/tokenize.xsl"/>
   <!-- plain email is the input -->
   <xsl:template name="email" match="email">
     <xsl:param name="email" select="."/>

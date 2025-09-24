@@ -22,6 +22,21 @@ steps:
       - echo "DRONE_COMMIT_BRANCH ${DRONE_COMMIT_BRANCH}"
       - docker compose -p fsfe-website-pre-commit run --remove-orphans --build pre-commit "origin/${DRONE_COMMIT_BRANCH}"
 
+  - name: push-to-docs
+    image: git.fsfe.org/fsfe-system-hackers/docs-centralizer:latest
+    environment:
+      REPO_OWNER: FSFE
+      REPO_NAME: fsfe-website
+      SSH_PRIVATE_KEY:
+        from_secret: docs_bot_private_key
+    when:
+      branch:
+        - master
+      event:
+        - push
+        - tag
+        - deployment
+
   - name: deploy-master
     image: docker:27.4.1
     environment:
@@ -107,4 +122,4 @@ volumes:
       path: /run/user/1001/docker.sock
 ---
 kind: signature
-hmac: d01ec3f92e3e0261685c7c803c16002e809134015692d0cafb3eb8110365082f
+hmac: 90c89291c80d406e84622f2a018a05041e28584ea3cfa567d2db744a08d225d3

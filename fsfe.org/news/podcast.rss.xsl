@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- XSL stylesheet for generating podcast RSS feeds -->
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:dt="http://xsltsl.org/date-time" xmlns:weekdays="." xmlns:months="." xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:psc="http://podlove.org/simple-chapters" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:podcast="https://podcastindex.org/namespace/1.0" version="1.0">
-  <xsl:import href="../../build/xslt/gettext.xsl"/>
-  <xsl:import href="../../build/xslt/fsfe-cd.xsl"/>
+  <xsl:import href="../../global/xslt/internal/gettext.xsl"/>
+  <xsl:import href="../../global/xslt/internal/fsfe-cd.xsl"/>
   <xsl:output doctype-system="about:legacy-compat" encoding="utf-8" indent="no" method="xml" omit-xml-declaration="yes"/>
   <!-- ====== -->
   <!-- Months -->
@@ -145,6 +145,9 @@
           <podcast:remoteItem feedGuid="385183b8-8a23-5fa1-b9dc-3ed6c870f14a" feedUrl="https://media.fsfe.org/feeds/videos.xml?videoChannelId=3" title="FSFE Peertube Channel"/>
           <podcast:remoteItem feedGuid="de52ef44-69d3-565d-b7c6-255562cdcd4c" feedUrl="https://linuxinlaws.eu/inlaws_rss.xml" title="Linux Inlaws"/>
         </podcast:podroll>
+        <podcast:funding url="https://my.fsfe.org/donate?referrer=podcast-donation">Donation</podcast:funding>
+        <podcast:person group="Cast" role="Host" href="https://mastodon.social/@annabonnie" img="https://pics.fsfe.org/uploads/original/c3/9d/5c8132a9309f4655bd52570afbf7.png">Bonnie Mehring</podcast:person>
+        <podcast:person group="Audio Post-Production" role="Audio Editor" href="https://social.riversouldiers.dk/@fritjof" img="https://fsfe.org/about/people/avatars/slartibartfast.jpg">Øjvind Fritjof</podcast:person>
         <!-- Podcast episodes -->
         <xsl:for-each select="/buildinfo/document/set/news[             translate(@date, '-', '') &lt;= translate(/buildinfo/@date, '-', '')           ]">
           <xsl:sort select="@date" order="descending"/>

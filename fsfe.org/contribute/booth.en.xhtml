@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- @TRANSLATORS: PLEASE DON'T TRANSLATE THIS FILE YET. IT IS SUBJECT TO CHANGE DURING THE NEXT WEEKS -->
+<html>
+  <version>5</version>
+
+  <head>
+    <title>Organize a Booth</title>
+  </head>
+
+  <h1 id="intro">Organize a Booth</h1>
+
+  <p class="left break">
+    Find our <a href="https://docs.fsfe.org/en/KnowHow/Groups/OrganizeABooth">guide to organize a booth here</a>.<br/>
+    We strongly recommend to read it, as it contains knowledge we gathered
+    from previous events.
+  </p>
+
+  <p>
+    Are you presenting the FSFE at a booth, during a conference or another
+    larger event? Then this page is right for you!
+  </p>
+
+  <p>
+    If you do not plan to make a booth and just want a bit of infomaterial,
+    please <a href="https://fsfe.org/contribute/spreadtheword.html">follow
+    this link</a>.
+  </p>
+
+  <body class="form">
+    <p id="category"><a href="/contribute/">Contribute</a></p>
+
+    <h1 id="information">Tell us what you need.</h1>
+
+    <form class="highlight labeledform form-inline" id="orderbooth" method="post" action="/cgi-bin/booth.php" accept-charset="utf-8">
+      <add-language/>
+      <h3 class="noclear">Order promotional material</h3>
+      <p>Fields marked with * are mandatory.</p>
+      <fieldset>
+        <legend>Your address</legend>
+        <div>
+          <span class="formlabel">First name, Last name*:</span>
+          <input type="text" name="firstname" placeholder="First Name" size="15"/>
+          <input type="text" name="lastname" placeholder="Last Name" size="15" required="required"/>
+        </div>
+        <div>
+          <span class="formlabel">Email*:</span>
+          <input type="email" name="mail" placeholder="Email" size="20" required="required"/>
+        </div>
+        <div>
+          <span class="formlabel">Organisation*:</span>
+          <input type="text" name="org" placeholder="Organisation" size="20" required="required"/>
+        </div>
+        <div>
+          <span class="formlabel">Street, No.*:</span>
+          <input type="text" name="street" size="20" required="required"/>
+        </div>
+        <div>
+          <span class="formlabel">Zip*, City*:</span>
+          <input type="text" name="zip" size="5" required="required"/>
+          <input type="text" name="city" size="15" required="required"/>
+        </div>
+        <div>
+          <span class="formlabel">Country*:</span>
+          <country-list/>
+        </div>
+        <div>
+          <span class="formlabel">Specifics about your booth*:</span>
+          <textarea name="usage" rows="4" cols="40" placeholder="For example: Booth with 4 people
+          at the next Linux Conference in City XYZ..." required="required"/>
+        </div>
+      </fieldset>
+      <fieldset>
+        <div class="langselector">
+          <span class="formlabel">My language preferences (we cannot guarantee availability):</span>
+          <ul>
+            <!-- Translators: No need to translate here, we use the native names -->
+            <!-- If you want to extend, please iterate the number behind "lang" accordingly -->
+            <li><label for="lang1"><input type="checkbox" name="languages[]" id="lang1" value="en" checked="checked"/>English</label></li>
+            <li><label for="lang2"><input type="checkbox" name="languages[]" id="lang2" value="cn"/>中文</label></li>
+            <li><label for="lang3"><input type="checkbox" name="languages[]" id="lang3" value="de"/>Deutsch</label></li>
+            <li><label for="lang4"><input type="checkbox" name="languages[]" id="lang4" value="el"/>Eλληνικά</label></li>
+            <li><label for="lang5"><input type="checkbox" name="languages[]" id="lang5" value="es"/>Español</label></li>
+            <li><label for="lang6"><input type="checkbox" name="languages[]" id="lang6" value="fr"/>Français</label></li>
+            <li><label for="lang7"><input type="checkbox" name="languages[]" id="lang7" value="it"/>Italiano</label></li>
+            <li><label for="lang8"><input type="checkbox" name="languages[]" id="lang8" value="lt"/>Latviešu</label></li>
+            <li><label for="lang9"><input type="checkbox" name="languages[]" id="lang9" value="nl"/>Nederlands</label></li>
+            <li><label for="lang10"><input type="checkbox" name="languages[]" id="lang10" value="pl"/>Polski</label></li>
+            <li><label for="lang11"><input type="checkbox" name="languages[]" id="lang11" value="ru"/>Русский</label></li>
+            <li><label for="lang12"><input type="checkbox" name="languages[]" id="lang12" value="sq"/>Shqip</label></li>
+            <li><label for="lang13"><input type="checkbox" name="languages[]" id="lang13" value="sr"/> Српски / srpski</label></li>
+            <li><label for="lang14"><input type="checkbox" name="languages[]" id="lang14" value="fi"/>Suomi</label></li>
+            <li><label for="lang15"><input type="checkbox" name="languages[]" id="lang15" value="tr"/>Türkçe</label></li>
+          </ul>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Last steps</legend>
+        <div id="donate-group" class="form-group">
+          <span class="formlabel">Support our work with a voluntary donation*:</span>
+          <div class="input-group">
+            <input id="donate" name="donate" type="number" class="form-control " value="" placeholder="0 or ≥ 10 €" min="0" required="required"/>
+            <div class="input-group-addon">€</div>
+          </div>
+          <div id="donate-error" class="help-block" style="display: none;">
+            If you want to make a donation please enter at least 10 €.<br/>
+            If you don't want to donate please enter 0 €.
+          </div>
+        </div>
+      </fieldset>
+      <div>
+        <!-- Translators: please translate the label of this button (the value field) -->
+        <input type="submit" name="dothis" value="Order now!"/>
+      </div>
+    </form>
+
+    <h2 id="feedback" class="left break">Any feedback?</h2>
+
+    <p class="left break">
+      Did you experience any trouble with your order, found a typo in our text,
+      you have a remark or an idea for upcoming promotion material? Or you just
+      like to send us a motivating message? Please <email>contact@fsfe.org</email> to share your feedback with us.
+    </p>
+
+    <p class="left break">
+      We are always eager to hear some nice stories or to see pictures that you
+      have with our promotion material. Many people also share their experience
+      and pictures via social media with us.
+    </p>
+
+    <h2 id="archives" class="left break">Promotion Material Archive</h2>
+
+    <p class="left break">
+      Sometimes, parts of our promotion material section get outdated. This
+      might be the case, for example, when specific campaign runs out. However,
+      you can find and still download older material in our <a
+      href="/contribute/promotion-materials-archive">promotion material
+      archive.</a>
+    </p>
+
+    <h2 id="upcoming" class="left break">Upcoming promotion and campaigns</h2>
+
+    <p class="left break">
+      From time to time, have a look at this page again for new promotional
+      material - we will continue to update it. If you would like to help making
+      new designs or improve old ones, join the <a
+      href="/contribute/designers/designers">designers team</a>. Or if you would
+      like to add translations of pages or materials, join the <a
+      href="/contribute/translators/translators">translators team</a>.
+    </p>
+
+    <script src="/scripts/spreadtheword.js"/>
+
+  </body>
+<description>FSFE's Promotion Material</description>
+</html>

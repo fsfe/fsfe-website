@@ -1,22 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <eventset>
   <version>1</version>
-  <event start="2025-10-11T08:00:00Z" end="2025-10-11T10:00:00Z">
-        <title>Free your Android @ VIScon 2025 in Zurich, Switzerland</title>
+  <event start="2025-10-11T07:30:00Z" end="2025-10-11T17:00:00Z">
+        <title>FSFE @ VIScon 2025 in Zurich, Switzerland</title>
     <group>
      <name>Zurich</name> 
      <url></url>
     </group>
 
     <body>
-      <p>Representatives of the local group Zurich hold a &quot;Free your Android&quot; workshop as part of the VIScon 2025 at ETH Zurich.</p>
+      <p>The FSFE will be at the Zurich based VIScon 2025 conference. The local FSFE group of Zurich will join with a "Free your Android" workshop and Bonnie Mehring with a talk about our well know 
+N <a href="https://publiccode.eu/">"Public Money? Public Code!"</a> initiative  at the university, ETH Zurich.</p>
+
+<p>VIScon Hackathon will start on Friday, 10.10.2025 at 15:00 o'clock and end on Sunday, 12.10.2025 at 17:00 o'clock. The VIScon Symposium takes place on the 11.10.2025 from 08:30 till 18:00 o'clock.
+The <a href="https://git.fsfe.org/fsfe-zh/viscon25">Free your Android Workshop</a> is taking place on Saturday, 11.10.2025 at 10:00 o'clock. In this workshop Lioh Möller and Alex Pitsch will provide practical guidance to make the software on an Android mobile phone a bit
+freer. This includes gaining freedom from Google products as well as using Free Software. The workshop will be in the room HG E 21</p>
+
+<p>Bonnie Mehring will talk about '“Public Money? Public Code!” more than just public administrations' on Saturday, 11.10.2025 at 12:00 o'clock in the room E 1.1</p>
     </body>
 
-    <link>https://git.fsfe.org/fsfe-zh/viscon25</link>
+    <link>https://viscon.vis.ethz.ch/2025</link>
     <tags>
             <tag key="ch">
           Switzerland      </tag>
             <tag key="workshop"/>
+            <tag key="pmpc"/>
       <tag key="front-page"/>
     </tags>
   </event>

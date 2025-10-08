@@ -18,6 +18,7 @@ steps:
       - name: dockersock
         path: /run/user/1001/docker.sock
     commands:
+      - export FSFE_WEBSITE_HOST_SOURCE_CODE=$(docker container inspect "$HOSTNAME" --format '{{ range .Mounts }}{{ if eq .Destination "/drone/src" }}{{ .Source }}{{ end }}{{ end }}')
       - docker ps && echo "tampered with"
       - echo "DRONE_COMMIT_BRANCH ${DRONE_COMMIT_BRANCH}"
       - docker compose -p fsfe-website-pre-commit run --remove-orphans --build pre-commit "origin/${DRONE_COMMIT_BRANCH}"
@@ -57,6 +58,7 @@ steps:
       - name: dockersock
         path: /run/user/1001/docker.sock
     commands:
+      - export FSFE_WEBSITE_HOST_SOURCE_CODE=$(docker container inspect "$HOSTNAME" --format '{{ range .Mounts }}{{ if eq .Destination "/drone/src" }}{{ .Source }}{{ end }}{{ end }}')
       - docker ps && echo "tampered with"
       - docker compose -p "$PROJECT" down
       # If we are in a cron job, then do a full rebuild
@@ -90,6 +92,7 @@ steps:
       - name: dockersock
         path: /run/user/1001/docker.sock
     commands:
+      - export FSFE_WEBSITE_HOST_SOURCE_CODE=$(docker container inspect "$HOSTNAME" --format '{{ range .Mounts }}{{ if eq .Destination "/drone/src" }}{{ .Source }}{{ end }}{{ end }}')
       - docker ps && echo "tampered with"
       - docker compose -p "$PROJECT" down
       # If we are in a cron job, then do a full rebuild
@@ -122,4 +125,4 @@ volumes:
       path: /run/user/1001/docker.sock
 ---
 kind: signature
-hmac: 90c89291c80d406e84622f2a018a05041e28584ea3cfa567d2db744a08d225d3
+hmac: c6f966198e528086f4b1efc10336e9d3797cafbf430efaaa9194315cea1c75fa

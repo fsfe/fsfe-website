@@ -4,6 +4,8 @@ services:
       context: .
       dockerfile: pre-commit.Dockerfile
     image: fsfe-websites-pre-commit
+    volumes:
+      - ${FSFE_WEBSITE_HOST_SOURCE_CODE:-./}:/website-source
   build:
     build:
       context: .
@@ -22,6 +24,7 @@ services:
       - FSFE_WEBSITE_GIT_TOKEN
     volumes:
       - cache:/website-cached
+      - ${FSFE_WEBSITE_HOST_SOURCE_CODE:-./}:/website-source
 volumes:
   cache:
 secrets:

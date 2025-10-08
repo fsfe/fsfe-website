@@ -38,11 +38,11 @@ WORKDIR /website-source-during-build
 
 # Copy the pyproject and build deps
 # Done in a seperate step for optimal docker caching
-COPY ./pyproject.toml ./uv.lock .
+COPY ./pyproject.toml ./uv.lock ./
 RUN uv sync --no-install-package fsfe_website_build --group dev
 
 # Copy entrypoint
-COPY pre-commit.entrypoint.sh .
+COPY pre-commit.entrypoint.sh ./
 
 # Set the workdir
 WORKDIR /website-source

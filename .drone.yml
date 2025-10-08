@@ -7,6 +7,76 @@ clone:
   depth: 150
 
 steps:
+  # Build and push build container on master
+  - name: docker-build-push-build
+    image: plugins/docker
+    settings:
+      username: git-robot
+      password:
+        from_secret: git_robot_password
+      repo: git.fsfe.org/fsfe/fsfe-website-build
+      registry: git.fsfe.org/fsfe/fsfe-website-build
+      tags: latest
+      cache_from: git.fsfe.org/fsfe/fsfe-website-build:latest
+      dockerfile: build.Dockerfile
+    when:
+      branch:
+        - master
+      event:
+        - push
+
+  # Build and push pre-commit container on master
+  - name: docker-build-push-pre-commit
+    image: plugins/docker
+    settings:
+      username: git-robot
+      password:
+        from_secret: git_robot_password
+      repo: git.fsfe.org/fsfe/fsfe-website-pre-commit
+      registry: git.fsfe.org/fsfe/fsfe-website-pre-commit
+      tags: latest
+      cache_from: git.fsfe.org/fsfe/fsfe-website-pre-commit:latest
+      dockerfile: pre-commit.Dockerfile
+    when:
+      branch:
+        - master
+      event:
+        - push
+
+  # Build but do not push build container on PR
+  - name: docker-build-pr-build
+    image: plugins/docker
+    settings:
+      username: git-robot
+      password:
+        from_secret: git_robot_password
+      repo: git.fsfe.org/fsfe/fsfe-website-build
+      registry: git.fsfe.org/fsfe/fsfe-website-build
+      tags: latest
+      cache_from: git.fsfe.org/fsfe/fsfe-website-build:latest
+      dockerfile: build.Dockerfile
+      dry_run: true
+    when:
+      event:
+        - pull_request
+
+  # Build but do not push pre-commit container on PR
+  - name: docker-build-pr-pre-commit
+    image: plugins/docker
+    settings:
+      username: git-robot
+      password:
+        from_secret: git_robot_password
+      repo: git.fsfe.org/fsfe/fsfe-website-pre-commit
+      registry: git.fsfe.org/fsfe/fsfe-website-pre-commit
+      tags: latest
+      cache_from: git.fsfe.org/fsfe/fsfe-website-pre-commit:latest
+      dockerfile: pre-commit.Dockerfile
+      dry_run: true
+    when:
+      event:
+        - pull_request
+
   - name: pre-commit
     image: docker:27.4.1
     environment:
@@ -125,4 +195,4 @@ volumes:
       path: /run/user/1001/docker.sock
 ---
 kind: signature
-hmac: c6f966198e528086f4b1efc10336e9d3797cafbf430efaaa9194315cea1c75fa
+hmac: 25f45a057596782206dca10db43afd17972a5b42c799f242afcff9ae516808d5

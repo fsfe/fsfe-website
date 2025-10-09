@@ -7,76 +7,6 @@ clone:
   depth: 150
 
 steps:
-  # Build and push build container on master
-  - name: docker-build-push-build
-    image: plugins/docker
-    settings:
-      username: git-robot
-      password:
-        from_secret: git_robot_password
-      repo: git.fsfe.org/fsfe/fsfe-website-build
-      registry: git.fsfe.org/fsfe/fsfe-website-build
-      tags: latest
-      cache_from: git.fsfe.org/fsfe/fsfe-website-build:latest
-      dockerfile: build.Dockerfile
-    when:
-      branch:
-        - master
-      event:
-        - push
-
-  # Build and push pre-commit container on master
-  - name: docker-build-push-pre-commit
-    image: plugins/docker
-    settings:
-      username: git-robot
-      password:
-        from_secret: git_robot_password
-      repo: git.fsfe.org/fsfe/fsfe-website-pre-commit
-      registry: git.fsfe.org/fsfe/fsfe-website-pre-commit
-      tags: latest
-      cache_from: git.fsfe.org/fsfe/fsfe-website-pre-commit:latest
-      dockerfile: pre-commit.Dockerfile
-    when:
-      branch:
-        - master
-      event:
-        - push
-
-  # Build but do not push build container on PR
-  - name: docker-build-pr-build
-    image: plugins/docker
-    settings:
-      username: git-robot
-      password:
-        from_secret: git_robot_password
-      repo: git.fsfe.org/fsfe/fsfe-website-build
-      registry: git.fsfe.org/fsfe/fsfe-website-build
-      tags: latest
-      cache_from: git.fsfe.org/fsfe/fsfe-website-build:latest
-      dockerfile: build.Dockerfile
-      dry_run: true
-    when:
-      event:
-        - pull_request
-
-  # Build but do not push pre-commit container on PR
-  - name: docker-build-pr-pre-commit
-    image: plugins/docker
-    settings:
-      username: git-robot
-      password:
-        from_secret: git_robot_password
-      repo: git.fsfe.org/fsfe/fsfe-website-pre-commit
-      registry: git.fsfe.org/fsfe/fsfe-website-pre-commit
-      tags: latest
-      cache_from: git.fsfe.org/fsfe/fsfe-website-pre-commit:latest
-      dockerfile: pre-commit.Dockerfile
-      dry_run: true
-    when:
-      event:
-        - pull_request
-
   - name: pre-commit
     image: docker:27.4.1
     environment:
@@ -92,6 +22,23 @@ steps:
       - docker ps && echo "tampered with"
       - echo "DRONE_COMMIT_BRANCH ${DRONE_COMMIT_BRANCH}"
       - docker compose -p fsfe-website-pre-commit run --remove-orphans --build pre-commit "origin/${DRONE_COMMIT_BRANCH}"
+
+  # Test building the deploy docker image
+  - name: test-build-docker-image
+    image: docker:27.4.1
+    environment:
+      # Environment variables necessary for rootless Docker
+      XDG_RUNTIME_DIR: "/run/user/1001"
+      DOCKER_HOST: "unix:///run/user/1001/docker.sock"
+    volumes:
+      # Mounting Docker socket of rootless docker user
+      - name: dockersock
+        path: /run/user/1001/docker.sock
+    commands:
+      - docker compose build build
+    when:
+      event:
+        - pull_request
 
   - name: push-to-docs
     image: git.fsfe.org/fsfe-system-hackers/docs-centralizer:latest
@@ -195,4 +142,6 @@ volumes:
       path: /run/user/1001/docker.sock
 ---
 kind: signature
-hmac: 25f45a057596782206dca10db43afd17972a5b42c799f242afcff9ae516808d5
+hmac: 997582ae47807c3367efcda28920c2d0f84bfd05d6fddf224bf7440a636d91e1
+
+...

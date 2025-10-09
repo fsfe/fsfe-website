@@ -18,9 +18,27 @@ steps:
       - name: dockersock
         path: /run/user/1001/docker.sock
     commands:
+      - export FSFE_WEBSITE_HOST_SOURCE_CODE=$(docker container inspect "$HOSTNAME" --format '{{ range .Mounts }}{{ if eq .Destination "/drone/src" }}{{ .Source }}{{ end }}{{ end }}')
       - docker ps && echo "tampered with"
       - echo "DRONE_COMMIT_BRANCH ${DRONE_COMMIT_BRANCH}"
       - docker compose -p fsfe-website-pre-commit run --remove-orphans --build pre-commit "origin/${DRONE_COMMIT_BRANCH}"
+
+  # Test building the deploy docker image
+  - name: test-build-docker-image
+    image: docker:27.4.1
+    environment:
+      # Environment variables necessary for rootless Docker
+      XDG_RUNTIME_DIR: "/run/user/1001"
+      DOCKER_HOST: "unix:///run/user/1001/docker.sock"
+    volumes:
+      # Mounting Docker socket of rootless docker user
+      - name: dockersock
+        path: /run/user/1001/docker.sock
+    commands:
+      - docker compose build build
+    when:
+      event:
+        - pull_request
 
   - name: push-to-docs
     image: git.fsfe.org/fsfe-system-hackers/docs-centralizer:latest
@@ -57,6 +75,7 @@ steps:
       - name: dockersock
         path: /run/user/1001/docker.sock
     commands:
+      - export FSFE_WEBSITE_HOST_SOURCE_CODE=$(docker container inspect "$HOSTNAME" --format '{{ range .Mounts }}{{ if eq .Destination "/drone/src" }}{{ .Source }}{{ end }}{{ end }}')
       - docker ps && echo "tampered with"
       - docker compose -p "$PROJECT" down
       # If we are in a cron job, then do a full rebuild
@@ -90,6 +109,7 @@ steps:
       - name: dockersock
         path: /run/user/1001/docker.sock
     commands:
+      - export FSFE_WEBSITE_HOST_SOURCE_CODE=$(docker container inspect "$HOSTNAME" --format '{{ range .Mounts }}{{ if eq .Destination "/drone/src" }}{{ .Source }}{{ end }}{{ end }}')
       - docker ps && echo "tampered with"
       - docker compose -p "$PROJECT" down
       # If we are in a cron job, then do a full rebuild
@@ -122,4 +142,6 @@ volumes:
       path: /run/user/1001/docker.sock
 ---
 kind: signature
-hmac: 90c89291c80d406e84622f2a018a05041e28584ea3cfa567d2db744a08d225d3
+hmac: 997582ae47807c3367efcda28920c2d0f84bfd05d6fddf224bf7440a636d91e1
+
+...

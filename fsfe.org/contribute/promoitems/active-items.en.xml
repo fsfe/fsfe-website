@@ -30,6 +30,10 @@ Such an item doesn't need an image!
     <image imgsmall="/contribute/promopics/fsfe-since-2001-sticker-thumb.png" />
   </item>
   
+  <item type="fsfe" id="fsfe-blue-balloon" year="2025" order="02">
+    <image imgsmall="/contribute/promopics/fsfe-blue-balloon.jpg" />
+  </item>
+  
   <item type="fsfe" id="jtsfm-poster" year="2022" order="03">
     <image imgsmall="/contribute/promopics/jtfsm-poster-thumb.png" />
   </item>
@@ -52,7 +56,6 @@ Such an item doesn't need an image!
   <item type="fsfe" id="fsfe-modernise-your-it-2sided" year="2019" order="13">
     <image imgsmall="/contribute/promopics/fsfe-modernize-your-it-thumb.png" />
   </item>
-
 
   <!-- Free Software multilanguage -->
 
@@ -159,7 +162,7 @@ Such an item doesn't need an image!
     <image imgsmall="/contribute/promopics/ilovefs_poster_A2_thumb.png" />
   </item>
 
-  <item type="ilovefs" id="ilovefs-balloon" year="2015" order="5">
+  <item type="ilovefs" id="ilovefs-balloon" year="2015" order="2">
     <image imgsmall="/contribute/promopics/ilovefs-balloon-combined-thumb.png" />
   </item>
 
@@ -200,7 +203,7 @@ Such an item doesn't need an image!
   <item type="childrensbook" id="childrensbook-sticker-zangemann-2022" year="2022" order="4">
     <image imgsmall="/contribute/promopics/childrensbook-sticker-zangemann-2022-thumb.png" />
   </item>
-  
+
     <!-- Device neutrality -->
 
   <item type="device-neutrality" id="rf-sticker" year="2022" order="1">

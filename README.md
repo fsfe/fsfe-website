@@ -78,7 +78,7 @@ You can see the current status of translation progress of fsfe.org at [status.fs
 
 [See the docs for more comprehesive and beginner-friendly documentation](https://docs.fsfe.org/en/techdocs/mainpage/buildlocally).
 
-There are two ways to build and develop the directory locally. Initial builds of the webpages may take ~6 minutes, but subsequent builds should be much faster. Using the `--languages` flag to avoid building all supported languages can make this much faster. The `--sites` flag allows for building only some of the sites in this repo, which can also provide a speed boost to the developer experience. Run `uv run build.py --help` for more information.
+There are two ways to build and develop the directory locally. Initial builds of the webpages may take ~6 minutes, but subsequent builds should be much faster. Using the `--languages` flag to avoid building all supported languages can make this much faster. The `--sites` flag allows for building only some of the sites in this repo, which can also provide a speed boost to the developer experience. Run `uv run build --help` for more information.
 
 Alterations to build scripts or the files used site-wide will result in near full rebuilds.
 

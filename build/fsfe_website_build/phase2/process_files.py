@@ -6,6 +6,8 @@ import logging
 import multiprocessing.pool
 from pathlib import Path
 
+from lxml import etree
+
 from fsfe_website_build.lib.misc import get_basepath
 from fsfe_website_build.lib.process_file import process_file
 
@@ -14,7 +16,7 @@ logger = logging.getLogger(__name__)
 
 def _run_process(
     target_file: Path,
-    processor: Path,
+    processor_tuple: tuple[Path, etree.XSLT],
     source_file: Path,
     basepath: Path,
     lang: str,
@@ -32,7 +34,7 @@ def _run_process(
                     if source_file.exists()
                     else Path(str(basepath) + ".en.xhtml")
                 ),
-                processor,
+                processor_tuple[0],
                 (
                     source_file.parent.joinpath("." + basepath.name).with_suffix(
                         ".xmllist",
@@ -45,7 +47,7 @@ def _run_process(
         ),
     ):
         logger.debug("Building %s", target_file)
-        result = process_file(source_file, processor)
+        result = process_file(source_file, processor_tuple[1])
         target_file.parent.mkdir(parents=True, exist_ok=True)
         result.write_output(target_file)
 
@@ -57,6 +59,13 @@ def _process_set(
     processor: Path,
     files: set[Path],
 ) -> None:
+    # generate the transform func
+    # doing it here should mean that we use only one per thread,
+    # and also process each one only once
+    # Max memory and performance efficacy
+    parser = etree.XMLParser(remove_blank_text=True, remove_comments=True)
+    xslt_tree = etree.parse(processor.resolve(), parser)
+    transform = etree.XSLT(xslt_tree)
     for basepath in files:
         for lang in languages:
             source_file = Path(str(basepath) + f".{lang}.xhtml")
@@ -66,7 +75,9 @@ def _process_set(
             target_file = target.joinpath(
                 source_file.relative_to(source_dir),
             ).with_suffix(target_suffix)
-            _run_process(target_file, processor, source_file, basepath, lang)
+            _run_process(
+                target_file, (processor, transform), source_file, basepath, lang
+            )
 
 
 def process_files(

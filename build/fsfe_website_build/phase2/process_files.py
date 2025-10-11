@@ -16,7 +16,7 @@ def _run_process(
     target_file: Path,
     processor: Path,
     source_file: Path,
-    basename: Path,
+    basepath: Path,
     lang: str,
 ) -> None:
     # if the target file does not exist, we make it
@@ -30,11 +30,11 @@ def _run_process(
                 (
                     source_file
                     if source_file.exists()
-                    else basename.with_suffix(".en.xhtml")
+                    else Path(str(basepath) + ".en.xhtml")
                 ),
                 processor,
                 (
-                    source_file.parent.joinpath("." + basename.name).with_suffix(
+                    source_file.parent.joinpath("." + basepath.name).with_suffix(
                         ".xmllist",
                     )
                 ),
@@ -50,40 +50,23 @@ def _run_process(
         result.write_output(target_file)
 
 
-def _process_dir(
-    source_dir: Path,
-    languages: list[str],
-    target: Path,
-    directory: Path,
-) -> None:
-    for basename in {path.with_suffix("") for path in directory.glob("*.??.xhtml")}:
-        for lang in languages:
-            source_file = basename.with_suffix(f".{lang}.xhtml")
-            target_file = target.joinpath(
-                source_file.relative_to(source_dir),
-            ).with_suffix(".html")
-            processor = (
-                basename.with_suffix(".xsl")
-                if basename.with_suffix(".xsl").exists()
-                else basename.parent.joinpath(".default.xsl")
-            )
-            _run_process(target_file, processor, source_file, basename, lang)
-
-
-def _process_stylesheet(
+def _process_set(
     source_dir: Path,
     languages: list[str],
     target: Path,
     processor: Path,
+    files: set[Path],
 ) -> None:
-    basename = get_basepath(processor)
-    destination_base = target.joinpath(basename.relative_to(source_dir))
-    for lang in languages:
-        target_file = destination_base.with_suffix(
-            f".{lang}{processor.with_suffix('').suffix}",
-        )
-        source_file = basename.with_suffix(f".{lang}.xhtml")
-        _run_process(target_file, processor, source_file, basename, lang)
+    for basepath in files:
+        for lang in languages:
+            source_file = Path(str(basepath) + f".{lang}.xhtml")
+            target_suffix = (
+                ".html" if (len(processor.suffixes) == 1) else processor.suffixes[0]
+            )
+            target_file = target.joinpath(
+                source_file.relative_to(source_dir),
+            ).with_suffix(target_suffix)
+            _run_process(target_file, processor, source_file, basepath, lang)
 
 
 def process_files(
@@ -96,29 +79,48 @@ def process_files(
     Build .html, .rss and .ics files from .xhtml sources
 
     """
-    # TODO for performance it would be better to iterate by processor xls,
-    # and parse it only once and pass the xsl object to called function.
-    logger.info("Processing xhtml files")
+    logger.info("Processing xhtml, rss, ics files")
+    # generate a set of unique processing xsls
+    xsl_files = {
+        processor.resolve().relative_to(source_dir.parent.resolve())
+        for processor in source_dir.glob("**/*.xsl")
+    }
+
+    process_files_dict = {}
+    for processor in xsl_files:
+        process_files_dict[processor] = set()
+
+    # This gathers all the simple xhtml files for generating xhtml output
+    for file in source_dir.glob("**/*.*.xhtml"):
+        specific_processor = (
+            file.with_suffix("")
+            .with_suffix(".xsl")
+            .resolve()
+            .relative_to(source_dir.parent.resolve())
+        )
+        default_processor = (
+            file.parent.joinpath(".default.xsl")
+            .resolve()
+            .relative_to(source_dir.parent.resolve())
+        )
+        used_processor = (
+            specific_processor if specific_processor.exists() else default_processor
+        )
+        basepath = get_basepath(file)
+        process_files_dict[used_processor].add(basepath)
+
+    # And now for processors with additional suffixes we (eg events.rss.xsl)
+    # we add the basename
+    # this is for the generation of rss and ics files mainly,
+    # but is extensible by design
+    for processor, files in process_files_dict.items():
+        if len(processor.suffixes) > 1:
+            files.add(get_basepath(processor))
+
     pool.starmap(
-        _process_dir,
+        _process_set,
         (
-            (source_dir, languages, target, directory)
-            for directory in {path.parent for path in source_dir.glob("**/*.*.xhtml")}
-        ),
-    )
-    logger.info("Processing rss files")
-    pool.starmap(
-        _process_stylesheet,
-        (
-            (source_dir, languages, target, processor)
-            for processor in source_dir.glob("**/*.rss.xsl")
-        ),
-    )
-    logger.info("Processing ics files")
-    pool.starmap(
-        _process_stylesheet,
-        (
-            (source_dir, languages, target, processor)
-            for processor in source_dir.glob("**/*.ics.xsl")
+            (source_dir, languages, target, processor, files)
+            for processor, files in process_files_dict.items()
         ),
     )

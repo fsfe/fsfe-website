@@ -29,14 +29,16 @@ def _gen_archive_index(
             update_if_changed(directory.joinpath(f"index.{lang}.xhtml"), content)
 
 
-def _gen_index_sources(directory: Path) -> None:
+def _gen_index_sources(working_dir: Path, year: Path) -> None:
     update_if_changed(
-        directory.joinpath("index.sources"),
+        year.joinpath("index.sources"),
         dedent(
             f"""\
-                {directory}/news-*:[]
-                {directory}/.news-*:[]
-                {directory.parent}/.localmenu:[]
+                {working_dir}/.localmenu:[]
+                {working_dir}/podcast/{year.name}/episode-*:[]
+                {working_dir}/podcast/{year.name}/.episode-*:[]
+                {year}/news-*:[]
+                {year}/.news-*:[]
             """,
         ),
     )
@@ -54,7 +56,7 @@ def _gen_xml_files(working_dir: Path, file: Path) -> None:
     transform = etree.XSLT(xslt_tree)
     result = transform(
         etree.parse(file),
-        link=f"'/news/{file.with_suffix('').with_suffix('.html').relative_to(file.parent.parent)}'",
+        link=f"'/news/{file.with_suffix('').with_suffix('.html').relative_to(working_dir)}'",
     )
     update_if_changed(
         file.parent.joinpath(
@@ -77,7 +79,7 @@ def run(languages: list[str], processes: int, working_dir: Path) -> None:
         )
         logger.debug("Finished Archiving")
         # Generate index.sources for every year
-        pool.map(_gen_index_sources, years)
+        pool.starmap(_gen_index_sources, ((working_dir, year) for year in years))
         logger.debug("Finished generating sources")
         pool.starmap(
             _gen_xml_files,
@@ -86,7 +88,7 @@ def run(languages: list[str], processes: int, working_dir: Path) -> None:
                 for file in filter(
                     lambda path: lang_from_filename(path) in languages
                     and etree.parse(path).xpath("//html[@newsdate]"),
-                    working_dir.glob("*/*.??.xhtml"),
+                    working_dir.glob("**/*.??.xhtml"),
                 )
             ],
         )

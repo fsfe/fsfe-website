@@ -15,7 +15,8 @@ from fsfe_website_build.lib.process_file import process_file
 logger = logging.getLogger(__name__)
 
 
-def _process_set(
+def _process_set(  # noqa: PLR0913
+    source: Path,
     source_dir: Path,
     languages: list[str],
     target: Path,
@@ -63,12 +64,13 @@ def _process_set(
             ),
         ):
             logger.debug("Building %s", target_file)
-            result = process_file(source_file, transform)
+            result = process_file(source, source_file, transform)
             target_file.parent.mkdir(parents=True, exist_ok=True)
             result.write_output(target_file)
 
 
 def process_files(
+    source: Path,
     source_dir: Path,
     languages: list[str],
     pool: multiprocessing.pool.Pool,
@@ -103,13 +105,11 @@ def process_files(
             file.with_suffix("")
             .with_suffix(".xsl")
             .resolve()
-            .relative_to(source_dir.parent.resolve())
+            .relative_to(source.resolve())
         )
         # if that does not exist, default to
         xhtml_default_processor = (
-            file.parent.joinpath(".default.xsl")
-            .resolve()
-            .relative_to(source_dir.parent.resolve())
+            file.parent.joinpath(".default.xsl").resolve().relative_to(source.resolve())
         )
         xhtml_processor = (
             xhtml_named_processor
@@ -125,7 +125,7 @@ def process_files(
     pool.starmap(
         _process_set,
         (
-            (source_dir, languages, target, processor, files)
+            (source, source_dir, languages, target, processor, files)
             for processor, files in process_files_dict.items()
         ),
     )

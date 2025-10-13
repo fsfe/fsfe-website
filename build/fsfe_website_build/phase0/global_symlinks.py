@@ -10,21 +10,23 @@ from pathlib import Path
 logger = logging.getLogger(__name__)
 
 
-def _do_symlinking(link_type: str, lang: str) -> None:
+def _do_symlinking(source: Path, link_type: str, lang: str) -> None:
     """
     Helper function for global symlinking that is suitable for multithreading
     """
     target = (
-        Path(f"global/data/{link_type}/{link_type}.{lang}.xml")
-        if Path(f"global/data/{link_type}/{link_type}.{lang}.xml").exists()
-        else Path(f"global/data/{link_type}/{link_type}.en.xml")
+        source.joinpath(f"global/data/{link_type}/{link_type}.{lang}.xml")
+        if source.joinpath(f"global/data/{link_type}/{link_type}.{lang}.xml").exists()
+        else source.joinpath(f"global/data/{link_type}/{link_type}.en.xml")
     )
-    source = Path(f"global/data/{link_type}/.{link_type}.{lang}.xml")
-    if not source.exists():
-        source.symlink_to(target.relative_to(source.parent))
+    source_xml = source.joinpath(f"global/data/{link_type}/.{link_type}.{lang}.xml")
+    if not source_xml.exists():
+        source_xml.symlink_to(target.relative_to(source_xml.parent))
 
 
-def global_symlinks(languages: list[str], pool: multiprocessing.pool.Pool) -> None:
+def global_symlinks(
+    source: Path, languages: list[str], pool: multiprocessing.pool.Pool
+) -> None:
     """
     After this step, the following symlinks will exist:
     * global/data/texts/.texts.<lang>.xml for each language
@@ -36,4 +38,4 @@ def global_symlinks(languages: list[str], pool: multiprocessing.pool.Pool) -> No
     """
     logger.info("Creating global symlinks")
     link_types = ["texts", "topbanner"]
-    pool.starmap(_do_symlinking, product(link_types, languages))
+    pool.starmap(_do_symlinking, product([source], link_types, languages))

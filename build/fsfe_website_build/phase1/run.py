@@ -25,7 +25,8 @@ logger = logging.getLogger(__name__)
 
 
 def phase1_run(
-    source_dir: Path,
+    source: Path,
+    source_site: Path,
     languages: list[str],
     processes: int,
     pool: multiprocessing.pool.Pool,
@@ -41,9 +42,7 @@ def phase1_run(
 
     # This step recompiles the less files into the final CSS files to be
     # distributed to the web server.
-    update_css(
-        source_dir,
-    )
+    update_css(source_site)
     # -----------------------------------------------------------------------------
     # Update XSL stylesheets
     # -----------------------------------------------------------------------------
@@ -57,12 +56,12 @@ def phase1_run(
     # and events directories, the XSL files, if updated, will be copied for the
     # per-year archives.
 
-    update_stylesheets(source_dir, pool)
+    update_stylesheets(source_site, pool)
     # -----------------------------------------------------------------------------
     # Dive into subdirectories
     # -----------------------------------------------------------------------------
     # Find any makefiles in subdirectories and run them
-    prepare_subdirectories(source_dir, languages, processes)
+    prepare_subdirectories(source, source_site, languages, processes)
 
     # -----------------------------------------------------------------------------
     # Create XSL symlinks
@@ -74,14 +73,14 @@ def phase1_run(
     # determine which XSL script should be used to build a HTML page from a source
     # file.
 
-    update_defaultxsls(source_dir, pool)
+    update_defaultxsls(source_site, pool)
     # -----------------------------------------------------------------------------
     # Update local menus
     # -----------------------------------------------------------------------------
 
     # After this step, all .localmenu.??.xml files will be up to date.
 
-    update_localmenus(source_dir, languages, pool)
+    update_localmenus(source, source_site, languages, pool)
     # -----------------------------------------------------------------------------
     # Update XML filelists
     # -----------------------------------------------------------------------------
@@ -93,4 +92,4 @@ def phase1_run(
     #   correct XML files when generating the HTML pages. It is taken care that
     #   these files are only updated whenever their content actually changes, so
     #   they can serve as a prerequisite in the phase 2 Makefile.
-    update_xmllists(source_dir, languages, pool)
+    update_xmllists(source, source_site, languages, pool)

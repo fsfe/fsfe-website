@@ -47,7 +47,7 @@ def _get_attributes(file: Path) -> dict:
     return dict(attributes)
 
 
-def _get_trlist(file: Path) -> etree.Element:
+def _get_trlist(source: Path, file: Path) -> etree.Element:
     """
     list all languages a file exists in by globbing up
     the shortname (i.e. file path with file ending omitted)
@@ -58,12 +58,16 @@ def _get_trlist(file: Path) -> etree.Element:
     for path in file.parent.glob(f"{get_basename(file)}.??{file.suffix}"):
         tr = etree.SubElement(trlist, "tr", id=lang_from_filename(path))
         tr.text = (
-            Path(f"global/languages/{lang_from_filename(path)}").read_text().strip()
+            source.joinpath(f"global/languages/{lang_from_filename(path)}")
+            .read_text()
+            .strip()
         )
     return trlist
 
 
-def _get_set(action_file: Path, lang: str, parser: etree.XMLParser) -> etree.Element:
+def _get_set(
+    source: Path, action_file: Path, lang: str, parser: etree.XMLParser
+) -> etree.Element:
     """
     import elements from source files, add file name
     attribute to first element included from each file
@@ -75,7 +79,7 @@ def _get_set(action_file: Path, lang: str, parser: etree.XMLParser) -> etree.Ele
 
     if list_file.exists():
         with list_file.open("r") as file:
-            for path in (Path(line.strip()) for line in file):
+            for path in (source.joinpath(line.strip()) for line in file):
                 path_xml = (
                     path.with_suffix(f".{lang}.xml")
                     if path.with_suffix(f".{lang}.xml").exists()
@@ -87,6 +91,7 @@ def _get_set(action_file: Path, lang: str, parser: etree.XMLParser) -> etree.Ele
 
 
 def _get_document(
+    source: Path,
     action_lang: str,
     action_file: Path,
     lang: str,
@@ -97,12 +102,14 @@ def _get_document(
         language=action_lang,
         **_get_attributes(action_file),
     )
-    document.append(_get_set(action_file, lang, parser))
+    document.append(_get_set(source, action_file, lang, parser))
     document.extend(_get_xmls(action_file, parser))
     return document
 
 
-def _build_xmlstream(infile: Path, parser: etree.XMLParser) -> etree.Element:
+def _build_xmlstream(
+    source: Path, infile: Path, parser: etree.XMLParser
+) -> etree.Element:
     """
     assemble the xml stream for feeding into xsltproc
     the expected shortname and language flag indicate
@@ -128,8 +135,8 @@ def _build_xmlstream(infile: Path, parser: etree.XMLParser) -> etree.Element:
         .with_suffix("")
         .suffix.removeprefix(".")
     )
-    topbanner_xml = Path(f"global/data/topbanner/.topbanner.{lang}.xml")
-    texts_xml = Path(f"global/data/texts/.texts.{lang}.xml")
+    topbanner_xml = source.joinpath(f"global/data/topbanner/.topbanner.{lang}.xml")
+    texts_xml = source.joinpath(f"global/data/texts/.texts.{lang}.xml")
     date = str(datetime.now().date())
     action_lang = ""
     translation_state = ""
@@ -168,7 +175,7 @@ def _build_xmlstream(infile: Path, parser: etree.XMLParser) -> etree.Element:
     )
 
     # Add the subelements
-    page.append(_get_trlist(infile))
+    page.append(_get_trlist(source, infile))
 
     # Make the relevant subelmenets
     # and then add the relevant xmls to it
@@ -176,23 +183,27 @@ def _build_xmlstream(infile: Path, parser: etree.XMLParser) -> etree.Element:
     topbanner.extend(_get_xmls(topbanner_xml, parser))
 
     textsetbackup = etree.SubElement(page, "textsetbackup")
-    textsetbackup.extend(_get_xmls(Path("global/data/texts/texts.en.xml"), parser))
+    textsetbackup.extend(
+        _get_xmls(source.joinpath("global/data/texts/texts.en.xml"), parser)
+    )
 
     textset = etree.SubElement(page, "textset")
     textset.extend(_get_xmls(texts_xml, parser))
 
-    page.append(_get_document(action_lang, action_file, lang, parser))
+    page.append(_get_document(source, action_lang, action_file, lang, parser))
     return page
 
 
-def process_file(infile: Path, transform: etree.XSLT) -> etree._XSLTResultTree:
+def process_file(
+    source: Path, infile: Path, transform: etree.XSLT
+) -> etree._XSLTResultTree:
     """
     Process a given file using the correct xsl sheet
     """
     logger.debug("Processing %s", infile)
     lang = lang_from_filename(infile)
     parser = etree.XMLParser(remove_blank_text=True, remove_comments=True)
-    xmlstream = _build_xmlstream(infile, parser)
+    xmlstream = _build_xmlstream(source, infile, parser)
     result = transform(xmlstream)
     # And now a bunch of regexes to fix some links.
     # xx is the language code in all comments

@@ -67,7 +67,7 @@ def _process_file(file: Path, stopwords: set[str]) -> dict:
     }
 
 
-def run(languages: list[str], processes: int, working_dir: Path) -> None:
+def run(source: Path, languages: list[str], processes: int, working_dir: Path) -> None:  # noqa: ARG001
     """
     This step runs a Python tool that creates an index of all news and
     articles. It extracts titles, teaser, tags, dates and potentially more.

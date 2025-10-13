@@ -21,7 +21,8 @@ from fsfe_website_build.lib.misc import (
 logger = logging.getLogger(__name__)
 
 
-def _update_for_base(
+def _update_for_base(  # noqa: PLR0913
+    source: Path,
     base: Path,
     all_xml: set[Path],
     nextyear: str,
@@ -56,14 +57,14 @@ def _update_for_base(
                 for xml_file in filter(
                     lambda xml_file:
                     # Matches glob pattern
-                    fnmatch.fnmatchcase(str(xml_file), pattern)
+                    fnmatch.fnmatchcase(str(xml_file.relative_to(source)), pattern)
                     # contains tag if tag in pattern
                     and (
                         any(
                             (
-                                etree.parse(
-                                    xml_file_with_ending,
-                                ).find(f".//tag[@key='{tag}']")
+                                etree.parse(xml_file_with_ending).find(
+                                    f".//tag[@key='{tag}']"
+                                )
                                 is not None
                                 for xml_file_with_ending in xml_file.parent.glob(
                                     f"{xml_file.name}.*.xml"
@@ -77,12 +78,14 @@ def _update_for_base(
                     and len(str(xml_file)) > 0,
                     all_xml,
                 ):
-                    matching_files.add(str(xml_file))
+                    matching_files.add(str(xml_file.relative_to(source)))
 
-    for file in Path().glob(f"{base}.??.xhtml"):
+    for file in base.parent.glob(f"{base.name}.??.xhtml"):
         xslt_root = etree.parse(file)
         for module in xslt_root.xpath("//module"):
-            matching_files.add(f"global/data/modules/{module.get('id')}".strip())
+            matching_files.add(
+                f"{source}/global/data/modules/{module.get('id').strip()}"
+            )
     matching_files = sorted(matching_files)
     update_if_changed(
         Path(f"{base.parent}/.{base.name}.xmllist"),
@@ -91,6 +94,7 @@ def _update_for_base(
 
 
 def _update_module_xmllists(
+    source: Path,
     source_dir: Path,
     languages: list[str],
     pool: multiprocessing.pool.Pool,
@@ -105,7 +109,7 @@ def _update_module_xmllists(
         for path in filter(
             lambda path: lang_from_filename(path) in languages,
             list(source_dir.glob("**/*.*.xml"))
-            + list(Path("global/").glob("**/*.*.xml")),
+            + list(source.joinpath("global/").glob("**/*.*.xml")),
         )
     }
     source_bases = {path.with_suffix("") for path in source_dir.glob("**/*.sources")}
@@ -123,23 +127,25 @@ def _update_module_xmllists(
     lastyear = str(datetime.datetime.today().year - 1)
     pool.starmap(
         _update_for_base,
-        ((base, all_xml, nextyear, thisyear, lastyear) for base in all_bases),
+        ((source, base, all_xml, nextyear, thisyear, lastyear) for base in all_bases),
     )
 
 
-def _check_xmllist_deps(file: Path) -> None:
+def _check_xmllist_deps(source: Path, file: Path) -> None:
     """
     If any of the sources in an xmllist are newer than it, touch the xmllist
     """
     xmls = set()
     with file.open(mode="r") as fileobj:
         for line in fileobj:
-            for newfile in Path().glob(line.strip() + ".??.xml"):
+            path_line = source.joinpath(line.strip())
+            for newfile in path_line.parent.glob(path_line.name + ".??.xml"):
                 xmls.add(newfile)
     touch_if_newer_dep(file, list(xmls))
 
 
 def _touch_xmllists_with_updated_deps(
+    source: Path,
     source_dir: Path,
     pool: multiprocessing.pool.Pool,
 ) -> None:
@@ -147,10 +153,14 @@ def _touch_xmllists_with_updated_deps(
     Touch all .xmllist files where one of the contained files has changed
     """
     logger.info("Checking contents of XML lists")
-    pool.map(_check_xmllist_deps, source_dir.glob("**/.*.xmllist"))
+    pool.starmap(
+        _check_xmllist_deps,
+        [(source, path) for path in source_dir.glob("**/.*.xmllist")],
+    )
 
 
 def update_xmllists(
+    source: Path,
     source_dir: Path,
     languages: list[str],
     pool: multiprocessing.pool.Pool,
@@ -172,5 +182,5 @@ def update_xmllists(
     When a tag has been removed from the last XML file where it has been used,
     the tagged-* are correctly deleted.
     """
-    _update_module_xmllists(source_dir, languages, pool)
-    _touch_xmllists_with_updated_deps(source_dir, pool)
+    _update_module_xmllists(source, source_dir, languages, pool)
+    _touch_xmllists_with_updated_deps(source, source_dir, pool)

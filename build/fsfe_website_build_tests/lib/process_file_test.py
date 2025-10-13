@@ -7,7 +7,7 @@ from lxml import etree
 
 
 @pytest.fixture
-def sample_xsl(tmp_path: Path) -> Path:
+def sample_xsl_transformer(tmp_path: Path) -> etree.XSLT:
     """Minimal XSLT that just copies the input through."""
     xsl_path = tmp_path / "sample.xsl"
     xsl_path.write_text(
@@ -26,7 +26,9 @@ def sample_xsl(tmp_path: Path) -> Path:
             """,
         ).strip(),
     )
-    return xsl_path
+    parser = etree.XMLParser(remove_blank_text=True, remove_comments=True)
+    xslt_tree = etree.parse(xsl_path.resolve(), parser)
+    return etree.XSLT(xslt_tree)
 
 
 @pytest.mark.parametrize(
@@ -44,7 +46,7 @@ def sample_xsl(tmp_path: Path) -> Path:
 )
 def process_file_link_rewrites_test(
     tmp_path: Path,
-    sample_xsl: Path,
+    sample_xsl_transformer: etree.XSLT,
     lang: str,
     link_in: str,
     link_out: str,
@@ -61,8 +63,9 @@ def process_file_link_rewrites_test(
             """,
         ).strip(),
     )
+    assert isinstance(sample_xsl_transformer, etree.XSLT)
 
-    result_doc = process_file(xml_path, sample_xsl)
+    result_doc = process_file(xml_path, sample_xsl_transformer)
     assert isinstance(result_doc, etree._XSLTResultTree)
     # We get a list, but as we have only one link in the above sample
     # we only need to care about the first one

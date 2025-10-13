@@ -185,7 +185,7 @@ def _build_xmlstream(infile: Path, parser: etree.XMLParser) -> etree.Element:
     return page
 
 
-def process_file(infile: Path, processor: Path) -> etree._XSLTResultTree:
+def process_file(infile: Path, transform: etree.XSLT) -> etree._XSLTResultTree:
     """
     Process a given file using the correct xsl sheet
     """
@@ -193,8 +193,6 @@ def process_file(infile: Path, processor: Path) -> etree._XSLTResultTree:
     lang = lang_from_filename(infile)
     parser = etree.XMLParser(remove_blank_text=True, remove_comments=True)
     xmlstream = _build_xmlstream(infile, parser)
-    xslt_tree = etree.parse(processor.resolve(), parser)
-    transform = etree.XSLT(xslt_tree)
     result = transform(xmlstream)
     # And now a bunch of regexes to fix some links.
     # xx is the language code in all comments

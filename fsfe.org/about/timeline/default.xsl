@@ -48,9 +48,9 @@
                   <p>
                     <xsl:value-of select="body"/>
                     <!-- <xsl:if test="img"> -->
-                      <!-- <figure> -->
-                        <!-- <xsl:copy-of select="img"/> -->
-                      <!-- </figure> -->
+                    <!-- <figure> -->
+                    <!-- <xsl:copy-of select="img"/> -->
+                    <!-- </figure> -->
                     <!-- </xsl:if> -->
                   </p>
                   <a class="more-info">

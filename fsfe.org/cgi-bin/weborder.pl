@@ -18,9 +18,9 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>
 # -----------------------------------------------------------------------------
 
-use CGI '-utf8';
+use CGI;
 use CGI::Carp 'fatalsToBrowser';
-use Encode qw(decode decode_utf8 encode);
+use Encode qw(decode encode);
 use POSIX qw(strftime);
 use Digest::SHA qw(sha1_hex);
 use MIME::Lite;
@@ -33,8 +33,6 @@ use JSON;
 use strict;
 use warnings;
 use diagnostics;
-use open ':std', ':encoding(UTF-8)';
-binmode(STDOUT, ":utf8");
 
 # -----------------------------------------------------------------------------
 # Get parameters
@@ -54,13 +52,13 @@ if ( $query->param("url") ) {
     exit;
 }
 
-my $name    = decode_utf8( "utf-8", $query->param("name") );
-my $address = decode_utf8( "utf-8", $query->param("address") );
+my $name    = decode( "utf-8", $query->param("name") );
+my $address = decode( "utf-8", $query->param("address") );
 my $zip     = decode( "utf-8", $query->param("zip") );
-my $city    = decode_utf8( "utf-8", $query->param("city") );
+my $city    = decode( "utf-8", $query->param("city") );
 my $country = decode( "utf-8", $query->param("country") );
 my ( $country_code, $country_name ) = split( /\|/, $country );
-my $email    = decode_utf8( "utf-8", $query->param("email") );
+my $email    = decode( "utf-8", $query->param("email") );
 my $phone    = decode( "utf-8", $query->param("phone") );
 my $language = $query->param("language");
 my $notes    = decode( "utf-8", $query->param("notes") );
@@ -419,6 +417,7 @@ my $form =
 # -----------------------------------------------------------------------------
 # Lead user to "thankyou" page
 # -----------------------------------------------------------------------------
+binmode(STDOUT, ":utf8");
 
 print "Content-type: text/html\n\n";
 open TEMPLATE,

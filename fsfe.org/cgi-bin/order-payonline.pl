@@ -49,6 +49,7 @@ my $form = "      <!-- payment parameters -->\n" .
 # -----------------------------------------------------------------------------
 # Lead user to "thankyou" page
 # -----------------------------------------------------------------------------
+binmode(STDOUT, ":utf8");
 
 print "Content-type: text/html\n\n";
 open TEMPLATE,

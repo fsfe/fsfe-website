@@ -38,7 +38,7 @@ my $form = "      <!-- payment parameters -->\n" .
     "      <input type=\"hidden\" name=\"currency\"     value=\"EUR\"/>\n" .
     "      <input type=\"hidden\" name=\"language\"     value=\"$language\"/>\n" .
     "      <!-- interface template -->\n" .
-    "      <input type=\"hidden\" name=\"TP\"           value=\"https://fsfe.org/order/template-with-bank.html\"/>\n" .
+    "      <input type=\"hidden\" name=\"TP\"           value=\"payment-with-bank.html\"/>\n" .
     "      <input type=\"hidden\" name=\"PMListType\"   value=\"2\"/>\n" .
     "      <!-- post-payment redirection -->\n" .
     "      <input type=\"hidden\" name=\"accepturl\"    value=\"https://fsfe.org/order/thankyou.$lang.html\"/>\n" .

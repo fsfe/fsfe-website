@@ -20,7 +20,7 @@ def _update_sheet(file: Path) -> None:
     """
     xslt_root = etree.parse(file)
     imports = [
-        file.parent.joinpath(imp.get("href")).resolve().relative_to(Path.cwd())
+        file.parent.joinpath(imp.get("href")).resolve()
         for imp in xslt_root.xpath(
             "//xsl:import", namespaces={"xsl": "http://www.w3.org/1999/XSL/Transform"}
         )

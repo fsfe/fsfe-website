@@ -9,7 +9,9 @@ from pathlib import Path
 logger = logging.getLogger(__name__)
 
 
-def prepare_early_subdirectories(source_dir: Path, processes: int) -> None:
+def prepare_early_subdirectories(
+    source: Path, source_dir: Path, processes: int
+) -> None:
     """
     Find any early subdir scripts in subdirectories and run them
     """
@@ -21,7 +23,7 @@ def prepare_early_subdirectories(source_dir: Path, processes: int) -> None:
         # here for out subdir scripts
         import early_subdir  # noqa: PLC0415 # pyright: ignore [reportMissingImports]
 
-        early_subdir.run(processes, subdir_path)
+        early_subdir.run(source, processes, subdir_path)
         # Remove its path from where things can be imported
         sys.path.remove(str(subdir_path.resolve()))
         # Remove it from loaded modules

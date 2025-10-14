@@ -29,16 +29,14 @@ def _gen_archive_index(
             update_if_changed(directory.joinpath(f"index.{lang}.xhtml"), content)
 
 
-def _gen_index_sources(working_dir: Path, year: Path) -> None:
+def _gen_index_sources(source: Path, directory: Path) -> None:
     update_if_changed(
         year.joinpath("index.sources"),
         dedent(
             f"""\
-                {working_dir}/.localmenu:[]
-                {working_dir}/podcast/{year.name}/episode-*:[]
-                {working_dir}/podcast/{year.name}/.episode-*:[]
-                {year}/news-*:[]
-                {year}/.news-*:[]
+               {directory.relative_to(source)}/news-*:[]
+               {directory.relative_to(source)}/.news-*:[]
+               {directory.parent.relative_to(source)}/.localmenu:[]
             """,
         ),
     )
@@ -66,7 +64,7 @@ def _gen_xml_files(working_dir: Path, file: Path) -> None:
     )
 
 
-def run(languages: list[str], processes: int, working_dir: Path) -> None:
+def run(source: Path, languages: list[str], processes: int, working_dir: Path) -> None:
     """
     preparation for news subdirectory
     """
@@ -79,7 +77,7 @@ def run(languages: list[str], processes: int, working_dir: Path) -> None:
         )
         logger.debug("Finished Archiving")
         # Generate index.sources for every year
-        pool.starmap(_gen_index_sources, ((working_dir, year) for year in years))
+        pool.starmap(_gen_index_sources, [(source, year) for year in years])
         logger.debug("Finished generating sources")
         pool.starmap(
             _gen_xml_files,

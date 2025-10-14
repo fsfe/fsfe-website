@@ -28,20 +28,20 @@ def _gen_archive_index(
             update_if_changed(directory.joinpath(f"index.{lang}.xhtml"), content)
 
 
-def _gen_index_sources(directory: Path) -> None:
+def _gen_index_sources(source: Path, directory: Path) -> None:
     update_if_changed(
         directory.joinpath("index.sources"),
         dedent(
             f"""\
-                {directory}/event-*:[]
-                {directory}/.event-*:[]
-                {directory.parent}/.localmenu:[]
+                {directory.relative_to(source)}/event-*:[]
+                {directory.relative_to(source)}/.event-*:[]
+                {directory.parent.relative_to(source)}/.localmenu:[]
             """,
         ),
     )
 
 
-def run(languages: list[str], processes: int, working_dir: Path) -> None:
+def run(source: Path, languages: list[str], processes: int, working_dir: Path) -> None:
     """
     preparation for news subdirectory
     """
@@ -54,5 +54,5 @@ def run(languages: list[str], processes: int, working_dir: Path) -> None:
         )
         logger.debug("Finished Archiving")
         # Generate index.sources for every year
-        pool.map(_gen_index_sources, years)
+        pool.starmap(_gen_index_sources, [(source, year) for year in years])
         logger.debug("Finished generating sources")

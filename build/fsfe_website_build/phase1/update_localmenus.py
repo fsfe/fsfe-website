@@ -76,6 +76,7 @@ def _write_localmenus(
 
 
 def update_localmenus(
+    source: Path,
     source_dir: Path,
     languages: list[str],
     pool: multiprocessing.pool.Pool,
@@ -94,7 +95,9 @@ def update_localmenus(
         if xslt_root.xpath("//localmenu"):
             directory = xslt_root.xpath("//localmenu/@dir")
             directory = (
-                directory[0] if directory else str(file.parent.relative_to(Path()))
+                str(source.joinpath(directory[0]))
+                if directory
+                else str(file.parent.resolve())
             )
             if directory not in files_by_dir:
                 files_by_dir[directory] = set()

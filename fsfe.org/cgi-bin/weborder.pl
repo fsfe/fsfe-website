@@ -33,8 +33,6 @@ use JSON;
 use strict;
 use warnings;
 use diagnostics;
-use open qw(:encoding(UTF-8));
-binmode(STDOUT, ":utf8");
 
 # -----------------------------------------------------------------------------
 # Get parameters

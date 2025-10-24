@@ -395,7 +395,7 @@ my $shastring =
   . "PMLISTTYPE=2$passphrase"
   . "PSPID=40F00871$passphrase"
   . "TP=payment-with-bank.html$passphrase";
-my $shasum = uc sha1_hex(encode("utf-8", $shastring));
+my $shasum = uc sha1_hex($shastring);
 my $form =
     "      <!-- payment parameters -->\n"
   . "      <input type=\"hidden\" name=\"PSPID\"        value=\"40F00871\"/>\n"

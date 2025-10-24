@@ -35,6 +35,7 @@ use warnings;
 use diagnostics;
 
 binmode STDIN,  ":encoding(UTF-8)";
+binmode STDOUT,  ":encoding(UTF-8)";
 
 # -----------------------------------------------------------------------------
 # Get parameters

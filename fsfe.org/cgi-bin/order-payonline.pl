@@ -52,7 +52,7 @@ my $form = "      <!-- payment parameters -->\n" .
 binmode(STDOUT, ":utf8");
 
 print "Content-type: text/html\n\n";
-open TEMPLATE,
+open TEMPLATE,'<:raw:encoding(utf-8)',
   $ENV{"DOCUMENT_ROOT"} . "/order/tmpl-thankyou." . $lang . ".html";
 while (<TEMPLATE>) {
   s/:AMOUNT:/$amount_f/g;

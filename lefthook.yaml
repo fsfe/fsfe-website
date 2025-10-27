@@ -55,6 +55,12 @@ pre-commit:
       glob: "*.xsl"
       run: for file in {staged_files}; do xmllint --format "$file" --output "$file"; done
       stage_fixed: true
+    check-structure:
+      glob:
+        - "*.xml"
+        - "*.xhtml"
+      run: tools/ci-checks/compare-xml-structure.py {staged_files}
+      stage_fixed: true
     custom-check:
       glob:
         - "*.html"

@@ -422,7 +422,7 @@ my $form =
 # -----------------------------------------------------------------------------
 
 print "Content-type: text/html\n\n";
-open TEMPLATE,
+open TEMPLATE,'<:raw:encoding(utf-8)',
   $ENV{"DOCUMENT_ROOT"} . "/order/tmpl-thankyou." . $lang . ".html";
 while (<TEMPLATE>) {
     s/:AMOUNT:/$amount_f/g;

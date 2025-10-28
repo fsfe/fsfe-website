@@ -56,6 +56,10 @@ pre-commit:
       stage_fixed: true
 
     # CHECKS, does not alter any files
+    reuse:
+      glob:
+        - "*.py"
+      run: reuse lint-file {staged_files}
     pytest:
       glob:
         - "*.py"

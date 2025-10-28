@@ -20,6 +20,7 @@ dev = [
   "lefthook",   # pre-commit hook
   "pyright",    # python typechecker
   "pytest",     # python test runner
+  "reuse",      # for enforcing licensing
   "ruff",       # python formatter and linter
   "taplo",      # toml formatter
   "types-lxml", # type stubs for lxml

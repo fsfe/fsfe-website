@@ -1,3 +1,7 @@
+# SPDX-FileCopyrightText: Free Software Foundation Europe e.V. <https://fsfe.org>
+#
+# SPDX-License-Identifier: GPL-3.0-or-later
+
 import subprocess
 from pathlib import Path
 from time import sleep

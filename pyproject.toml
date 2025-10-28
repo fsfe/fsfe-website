@@ -3,7 +3,6 @@ name = "fsfe-website-build"
 version = "0.0.0"
 description = "Python tooling to build the fsfe websites"
 readme = "README.md"
-# Pinned to 3.12 as a known working version, that also has a prebuild wheel for tdewolff-minify
 requires-python = "==3.13.*"
 dependencies = [
   "lxml",            # XML parser

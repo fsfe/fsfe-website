@@ -1,6 +1,16 @@
 # SPDX-FileCopyrightText: Free Software Foundation Europe e.V. <https://fsfe.org>
 #
 # SPDX-License-Identifier: GPL-3.0-or-later
+"""Update XML filelists.
+
+After this step, the following files will be up to date:
+* <dir>/.<base>.xmllist for each <dir>/<base>.sources as well as for each
+  $site/tags/tagged-<tags>.en.xhtml.
+  These files are used in phase 2 to include the
+  correct XML files when generating the HTML pages. It is taken care that
+  these files are only updated whenever their content actually changes, so
+  they can serve as a prerequisite in the phase 2 Makefile.
+"""
 
 import datetime
 import fnmatch
@@ -29,9 +39,7 @@ def _update_for_base(  # noqa: PLR0913
     thisyear: str,
     lastyear: str,
 ) -> None:
-    """
-    Update the xmllist for a given base file
-    """
+    """Update the xmllist for a given base file."""
     matching_files = set()
     # If sources exist
     if base.with_suffix(".sources").exists():
@@ -99,9 +107,7 @@ def _update_module_xmllists(
     languages: list[str],
     pool: multiprocessing.pool.Pool,
 ) -> None:
-    """
-    Update .xmllist files for .sources and .xhtml containing <module>s
-    """
+    """Update .xmllist files for .sources and .xhtml containing <module>s."""
     logger.info("Updating XML lists")
     # Get all the bases and stuff before multithreading the update bit
     all_xml = {
@@ -132,9 +138,7 @@ def _update_module_xmllists(
 
 
 def _check_xmllist_deps(source: Path, file: Path) -> None:
-    """
-    If any of the sources in an xmllist are newer than it, touch the xmllist
-    """
+    """If any of the sources in an xmllist are newer than it, touch the xmllist."""
     xmls = set()
     with file.open(mode="r") as fileobj:
         for line in fileobj:
@@ -149,9 +153,7 @@ def _touch_xmllists_with_updated_deps(
     source_dir: Path,
     pool: multiprocessing.pool.Pool,
 ) -> None:
-    """
-    Touch all .xmllist files where one of the contained files has changed
-    """
+    """Touch all .xmllist files where one of the contained files has changed."""
     logger.info("Checking contents of XML lists")
     pool.starmap(
         _check_xmllist_deps,
@@ -165,8 +167,7 @@ def update_xmllists(
     languages: list[str],
     pool: multiprocessing.pool.Pool,
 ) -> None:
-    """
-    Update XML filelists (*.xmllist)
+    """Update XML filelists (*.xmllist).
 
      Creates/update the following files:
 
@@ -175,12 +176,6 @@ def update_xmllists(
       the correct XML files when generating the HTML pages. It is taken care that
       these files are only updated whenever their content actually changes, so
       they can serve as a prerequisite in the phase 2 Makefile.
-
-    Changing or removing tags in XML files is also considered, in which case a
-    file is removed from the .xmllist files.
-
-    When a tag has been removed from the last XML file where it has been used,
-    the tagged-* are correctly deleted.
     """
     _update_module_xmllists(source, source_dir, languages, pool)
     _touch_xmllists_with_updated_deps(source, source_dir, pool)

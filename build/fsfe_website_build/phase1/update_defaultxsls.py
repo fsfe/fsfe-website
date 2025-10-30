@@ -1,6 +1,14 @@
 # SPDX-FileCopyrightText: Free Software Foundation Europe e.V. <https://fsfe.org>
 #
 # SPDX-License-Identifier: GPL-3.0-or-later
+"""Create XSL symlinks.
+
+After this step, each directory with source files for HTML pages contains a
+symlink named .default.xsl and pointing to the default.xsl "responsible" for
+this directory. These symlinks make it easier for the phase 2 Makefile to
+determine which XSL script should be used to build a HTML page from a source
+file.
+"""
 
 import logging
 import multiprocessing.pool
@@ -10,9 +18,7 @@ logger = logging.getLogger(__name__)
 
 
 def _do_symlinking(directory: Path) -> None:
-    """
-    In each dir, place a .default.xsl symlink pointing to the nearest default.xsl
-    """
+    """In each dir, place a .default.xsl symlink pointing to the nearest default.xsl."""
     working_dir = directory
     if not directory.joinpath(".default.xsl").exists():
         while not working_dir.joinpath("default.xsl").exists():
@@ -23,9 +29,9 @@ def _do_symlinking(directory: Path) -> None:
 
 
 def update_defaultxsls(source_dir: Path, pool: multiprocessing.pool.Pool) -> None:
-    """
-    Place a .default.xsl into each directory containing source files for
-    HTML pages (*.xhtml). These .default.xsl are symlinks to the first
+    """Place a .default.xsl into each XHTML source directory.
+
+    These .default.xsl are symlinks to the first
     available actual default.xsl found when climbing the directory tree
     upwards, it's the xsl stylesheet to be used for building the HTML
     files from this directory.

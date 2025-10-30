@@ -1,6 +1,9 @@
 # SPDX-FileCopyrightText: Free Software Foundation Europe e.V. <https://fsfe.org>
 #
 # SPDX-License-Identifier: GPL-3.0-or-later
+
+"""Lib functions used mainly in checks mainly for testing a file."""
+
 import logging
 import sys
 from pathlib import Path
@@ -16,6 +19,7 @@ def compare_files(
     attr_whitelist: set[str] | None = None,
     _path: str = "",
 ) -> list[str]:
+    """Compare two xml files, passes as paths."""
     try:
         t1, t2 = etree.parse(file1), etree.parse(file2)
     except etree.XMLSyntaxError as e:
@@ -31,8 +35,8 @@ def compare_elements(
     attr_whitelist: set[str] | None = None,
     _path: str = "",
 ) -> list[str]:
-    """
-    Recursively compare two XML elements.
+    """Recursively compare two XML elements.
+
     Returns a list of short, informative error strings.
     """
     if attr_whitelist is None:

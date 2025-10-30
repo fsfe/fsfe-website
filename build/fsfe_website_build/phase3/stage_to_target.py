@@ -1,6 +1,7 @@
 # SPDX-FileCopyrightText: Free Software Foundation Europe e.V. <https://fsfe.org>
 #
 # SPDX-License-Identifier: GPL-3.0-or-later
+"""Use rsync to copy files to the targets."""
 
 import logging
 import multiprocessing.pool
@@ -35,9 +36,7 @@ def _rsync(stagedir: Path, target: str, port: int) -> None:
 def stage_to_target(
     stagedir: Path, targets: str, pool: multiprocessing.pool.Pool
 ) -> None:
-    """
-    Use a multithreaded rsync to copy the stage dir to all targets.
-    """
+    """Use a multithreaded rsync to copy the stage dir to all targets."""
     logger.info("Rsyncing from stage dir to target dir(s)")
     pool.starmap(
         _rsync,

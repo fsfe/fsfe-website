@@ -1,6 +1,7 @@
 # SPDX-FileCopyrightText: Free Software Foundation Europe e.V. <https://fsfe.org>
 #
 # SPDX-License-Identifier: GPL-3.0-or-later
+"""Load internal activities file if possible."""
 
 import csv
 import logging
@@ -16,9 +17,7 @@ logger = logging.getLogger(__name__)
 
 
 def run(source: Path, languages: list[str], processes: int, working_dir: Path) -> None:  # noqa: ARG001 # We allow unused args for subdirs
-    """
-    Internal subdir preparation
-    """
+    """Prepare internal subdirectory."""
     logger.info("Creating activities file")
     raw_url = urlparse(
         "https://git.fsfe.org/FSFE/activities/raw/branch/master/activities.csv",

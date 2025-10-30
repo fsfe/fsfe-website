@@ -2,9 +2,8 @@
 #
 # SPDX-License-Identifier: GPL-3.0-or-later
 
-# -----------------------------------------------------------------------------
-# script for FSFE website build, phase 2
-# -----------------------------------------------------------------------------
+"""Script for FSFE website build, phase 2."""
+
 import logging
 import multiprocessing.pool
 from pathlib import Path
@@ -24,9 +23,7 @@ def phase2_run(
     pool: multiprocessing.pool.Pool,
     target: Path,
 ) -> None:
-    """
-    Run all the necessary sub functions for phase2.
-    """
+    """Run all the necessary sub functions for phase2."""
     logger.info("Starting Phase 2 - Generating output")
     process_files(source, source_dir, languages, pool, target)
     create_index_symlinks(pool, target)

@@ -1,6 +1,7 @@
 # SPDX-FileCopyrightText: Free Software Foundation Europe e.V. <https://fsfe.org>
 #
 # SPDX-License-Identifier: GPL-3.0-or-later
+"""Create search index javascript file."""
 
 import json
 import logging
@@ -17,8 +18,7 @@ logger = logging.getLogger(__name__)
 
 
 def _find_teaser(document: etree.ElementTree) -> str:
-    """
-    Find a suitable teaser for indexation
+    """Find a suitable teaser for indexation.
 
     Get all the paragraphs in <body> and return the first which contains more
     than 10 words
@@ -34,9 +34,7 @@ def _find_teaser(document: etree.ElementTree) -> str:
 
 
 def _process_file(file: Path, stopwords: set[str]) -> dict:
-    """
-    Generate the search index entry for a given file and set of stopwords
-    """
+    """Generate the search index entry for a given file and set of stopwords."""
     xslt_root = etree.parse(file)
     tags = (
         tag.get("key")
@@ -68,9 +66,10 @@ def _process_file(file: Path, stopwords: set[str]) -> dict:
 
 
 def run(source: Path, languages: list[str], processes: int, working_dir: Path) -> None:  # noqa: ARG001
-    """
-    This step runs a Python tool that creates an index of all news and
-    articles. It extracts titles, teaser, tags, dates and potentially more.
+    """Create a search index.
+
+    Indexes all files, including news and articles.
+    It extracts titles, teaser, tags, dates and potentially more.
     The result will be fed into a JS file.
     """
     # Download all stopwords

@@ -2,6 +2,8 @@
 #
 # SPDX-License-Identifier: GPL-3.0-or-later
 
+"""Show what files have mismatched xml structures across languages."""
+
 import logging
 import multiprocessing
 from collections import defaultdict
@@ -31,8 +33,8 @@ def _job(
 
 
 def run(source: Path, languages: list[str], processes: int, working_dir: Path) -> None:  # noqa: ARG001
-    """
-    Build xml-structure log for displaying on a status page
+    """Build xml-structure log for displaying on a status page.
+
     Xmls are placed in target_dir, and only passed languages are processed.
     """
     target_dir = working_dir.joinpath("data/")

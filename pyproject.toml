@@ -43,6 +43,7 @@ select = [
   "ASYNC", # Flake 8 aysnc
   "B",     # bugbear: security warnings
   "C4",    # Comprehensions
+  "D",     # pydocstyle, recommended with pydoclint
   "E",     # pycodestyle
   "ERA",   # Commented out code
   "F",     # pyflakes
@@ -68,7 +69,14 @@ select = [
   "UP",    # Update syntax to newer versions
   "W",     # pycodestyle warnings
 ]
-
+ignore = [
+  "D203", # incorrect-blank-line-before-class, Conflicts with D211
+  "D213", # multi-line-summary-second-line, Conflicts with D212
+]
+[tool.ruff.lint.per-file-ignores]
+"build/fsfe_website_build_tests/*" = [
+  "D",
+] # We do not need to document the tests.
 [tool.pytest.ini_options]
 testpaths = ["build/fsfe_website_build_tests"]
 python_files = ["*_test.py"]

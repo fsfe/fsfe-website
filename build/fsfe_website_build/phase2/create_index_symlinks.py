@@ -1,6 +1,13 @@
 # SPDX-FileCopyrightText: Free Software Foundation Europe e.V. <https://fsfe.org>
 #
 # SPDX-License-Identifier: GPL-3.0-or-later
+"""Create index symlinks.
+
+For directories with no existing index,
+where there is a file with the same name as the parent folder,
+EG about/about.en.html
+generate a symlink from about/index.en.html to about.en.html
+"""
 
 import logging
 import multiprocessing.pool
@@ -23,9 +30,7 @@ def create_index_symlinks(
     pool: multiprocessing.pool.Pool,
     target: Path,
 ) -> None:
-    """
-    Create index.* symlinks
-    """
+    """Create index.* symlinks."""
     logger.info("Creating index symlinks")
     pool.map(
         _do_symlinking,

@@ -2,6 +2,8 @@
 #
 # SPDX-License-Identifier: GPL-3.0-or-later
 
+"""Generate tag pages for all tags used on the site."""
+
 import logging
 import multiprocessing.pool
 from pathlib import Path
@@ -19,9 +21,7 @@ logger = logging.getLogger(__name__)
 
 
 def _update_tag_pages(site: Path, tag: str, languages: list[str]) -> None:
-    """
-    Update the xhtml pages and xmllists for a given tag
-    """
+    """Update the xhtml pages and xmllists for a given tag."""
     for lang in languages:
         tagfile_source = site.joinpath(f"tags/tagged.{lang}.xhtml")
         if tagfile_source.exists():
@@ -37,9 +37,7 @@ def _update_tag_sets(
     files_by_tag: dict[str, list[Path]],
     tags_by_lang: dict[str, dict[str, str]],
 ) -> None:
-    """
-    Update the .tags.??.xml tagset xmls for a given tag
-    """
+    """Update the .tags.??.xml tagset xmls for a given tag."""
     # Add uout toplevel element
     page = etree.Element("tagset")
 
@@ -73,8 +71,7 @@ def _update_tag_sets(
 
 
 def run(source: Path, languages: list[str], processes: int, working_dir: Path) -> None:  # noqa: ARG001
-    """
-    Update Tag pages, xmllists and xmls
+    """Update Tag pages, xmllists and xmls.
 
      Creates/update the following files:
 
@@ -84,12 +81,6 @@ def run(source: Path, languages: list[str], processes: int, working_dir: Path) -
       tag.
 
     * */tags/.tags.??.xml with a list of the tags used.
-
-    Changing or removing tags in XML files is also considered, in which case a
-    file is removed from the .xmllist files.
-
-    When a tag has been removed from the last XML file where it has been used,
-    the tagged-* are correctly deleted.
     """
     with multiprocessing.Pool(processes) as pool:
         logger.debug("Updating tags for %s", working_dir)

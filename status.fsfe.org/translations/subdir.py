@@ -2,6 +2,8 @@
 #
 # SPDX-License-Identifier: GPL-3.0-or-later
 
+"""Generate the translation status of all files/texts."""
+
 import datetime
 import logging
 import multiprocessing
@@ -155,8 +157,8 @@ def _create_translation_file(
 
 
 def run(source: Path, languages: list[str], processes: int, working_dir: Path) -> None:  # noqa: ARG001
-    """
-    Build translation-status xmls for languages where the status has changed.
+    """Build translation-status xmls for languages where the status has changed.
+
     Xmls are placed in target_dir, and only languages are processed.
     """
     target_dir = working_dir.joinpath("data/")

@@ -1,6 +1,8 @@
 # SPDX-FileCopyrightText: Free Software Foundation Europe e.V. <https://fsfe.org>
 #
 # SPDX-License-Identifier: GPL-3.0-or-later
+#
+"""Misc functions. Mainly common non trivial path manipulations."""
 
 import logging
 import subprocess
@@ -12,9 +14,7 @@ logger = logging.getLogger(__name__)
 
 
 def keys_exists(element: dict, *keys: str) -> bool:
-    """
-    Check if *keys (nested) exists in `element` (dict).
-    """
+    """Check if *keys (nested) exists in `element` (dict)."""
     if not isinstance(element, dict):
         message = "keys_exists() expects dict as first argument."
         logger.error(message)
@@ -30,15 +30,13 @@ def keys_exists(element: dict, *keys: str) -> bool:
 
 
 def sort_dict(in_dict: dict) -> dict:
-    """
-    Sort dict by keys
-    """
+    """Sort dict by keys."""
     return dict(sorted(in_dict.items(), key=lambda ele: ele[0]))
 
 
 def update_if_changed(path: Path, content: str) -> None:
-    """
-    Compare the content of the file at path with the content.
+    """Compare the content of the file at path with the content.
+
     If the file does not exist,
     or its contents does not match content,
     write content to the file.
@@ -49,8 +47,8 @@ def update_if_changed(path: Path, content: str) -> None:
 
 
 def touch_if_newer_dep(file: Path, deps: list[Path]) -> None:
-    """
-    Takes a filepath , and a list of path of its dependencies.
+    """Take a filepath, and a list of path of its dependencies.
+
     If any of the dependencies has been altered more recently than the file,
     touch the file.
 
@@ -62,16 +60,15 @@ def touch_if_newer_dep(file: Path, deps: list[Path]) -> None:
 
 
 def delete_file(file: Path) -> None:
-    """
-    Delete given file using pathlib
-    """
+    """Delete given file using pathlib."""
     logger.debug("Removing file %s", file)
     file.unlink()
 
 
 def lang_from_filename(file: Path) -> str:
-    """
-    Get the lang code from a file, where the filename is of format
+    """Get the lang code from a file.
+
+    Where the filename is of format
     <name>.XX.<ending>, with xx being the lang code.
     """
     lang = file.with_suffix("").suffix.removeprefix(".")
@@ -86,6 +83,11 @@ def lang_from_filename(file: Path) -> str:
 
 
 def run_command(commands: list) -> str:
+    """Run the passed command.
+
+    Useful to standardise how we manage output,
+    and command error handling across the project.
+    """
     try:
         result = subprocess.run(
             commands,
@@ -107,9 +109,7 @@ def run_command(commands: list) -> str:
 
 
 def get_version(file: Path) -> int:
-    """
-    Get the version tag of an xhtml|xml file
-    """
+    """Get the version tag of an xhtml|xml file."""
     xml = etree.parse(file)
     result_list = xml.xpath("/*/version")
     result = result_list[0].text if result_list else str(0)
@@ -118,14 +118,10 @@ def get_version(file: Path) -> int:
 
 
 def get_basepath(file: Path) -> Path:
-    """
-    Return the file with the last two suffixes removed
-    """
+    """Return the file with the last two suffixes removed."""
     return file.with_suffix("").with_suffix("")
 
 
 def get_basename(file: Path) -> str:
-    """
-    Return the name of the file with the last two suffixes removed
-    """
+    """Return the name of the file with the last two suffixes removed."""
     return file.with_suffix("").with_suffix("").name

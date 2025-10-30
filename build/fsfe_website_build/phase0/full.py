@@ -2,6 +2,8 @@
 #
 # SPDX-License-Identifier: GPL-3.0-or-later
 
+"""Implementation of the full build logic."""
+
 import logging
 from pathlib import Path
 
@@ -11,9 +13,9 @@ logger = logging.getLogger(__name__)
 
 
 def full(source: Path) -> None:
-    """
-    Git clean the repo to remove all cached artifacts
-    Excluded the root .venv repo, as removing it mid build breaks the build, obviously
+    """Git clean the repo to remove all cached artifacts.
+
+    Excluding the root .venv repo, as removing it mid build breaks the build, obviously.
     """
     logger.info("Performing a full rebuild, git cleaning")
     run_command(

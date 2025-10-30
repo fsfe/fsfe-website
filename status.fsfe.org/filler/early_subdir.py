@@ -2,6 +2,12 @@
 #
 # SPDX-License-Identifier: GPL-3.0-or-later
 
+"""Fill the status directory with dummy files.
+
+By placing a dummy file for every lang code
+we ensure translation pages for all langs are built.
+"""
+
 import logging
 import multiprocessing
 from pathlib import Path
@@ -15,9 +21,9 @@ logger = logging.getLogger(__name__)
 
 
 def run(source: Path, processes: int, working_dir: Path) -> None:
-    """
-    Place filler indices to encourage the site to
-    ensure that status pages for all langs are build.
+    """Place filler indices to encourage the site.
+
+    This ensures that status pages for all langs are build.
     """
     # Create the root element
     page = etree.Element("html")

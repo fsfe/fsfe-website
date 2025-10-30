@@ -2,6 +2,8 @@
 #
 # SPDX-License-Identifier: GPL-3.0-or-later
 
+"""Show what files have improper style attributes."""
+
 import logging
 import multiprocessing
 from collections import defaultdict
@@ -34,9 +36,10 @@ def _worker(path: Path) -> tuple[str, Path, Path, list[tuple[str, str]]] | None:
 
 
 def run(source: Path, languages: list[str], processes: int, working_dir: Path) -> None:  # noqa: ARG001
-    """
-    Generate an XML index that contains every tracked file which has at
-    least one element carrying a style attribute.
+    """Generate an XML index of files with styles.
+
+    This contains every tracked file which has
+    at least one element carrying a style attribute.
     """
     target_dir = working_dir / "data"
     target_dir.mkdir(parents=True, exist_ok=True)

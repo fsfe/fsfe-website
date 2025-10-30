@@ -1,6 +1,7 @@
 # SPDX-FileCopyrightText: Free Software Foundation Europe e.V. <https://fsfe.org>
 #
 # SPDX-License-Identifier: GPL-3.0-or-later
+"""Global directory symlinking logic."""
 
 import logging
 import multiprocessing.pool
@@ -11,9 +12,7 @@ logger = logging.getLogger(__name__)
 
 
 def _do_symlinking(source: Path, link_type: str, lang: str) -> None:
-    """
-    Helper function for global symlinking that is suitable for multithreading
-    """
+    """Link a specific file."""
     target = (
         source.joinpath(f"global/data/{link_type}/{link_type}.{lang}.xml")
         if source.joinpath(f"global/data/{link_type}/{link_type}.{lang}.xml").exists()
@@ -27,7 +26,8 @@ def _do_symlinking(source: Path, link_type: str, lang: str) -> None:
 def global_symlinks(
     source: Path, languages: list[str], pool: multiprocessing.pool.Pool
 ) -> None:
-    """
+    """Do all the global symlinking.
+
     After this step, the following symlinks will exist:
     * global/data/texts/.texts.<lang>.xml for each language
     * global/data/topbanner/.topbanner.<lang>.xml for each language

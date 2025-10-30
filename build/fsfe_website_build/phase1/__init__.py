@@ -2,5 +2,11 @@
 #
 # SPDX-License-Identifier: GPL-3.0-or-later
 
-# __init__.py is a special Python file that allows a directory to become
-# a Python package so it can be accessed using the 'import' statement.
+"""Phase 1 logic.
+
+This phase should not touch the target directory.
+
+It should only update the slurce directory with gitignored setup stuff.
+All files should be updated conditioannly on it being changed.
+This ensures proper build caching for stage 2.
+"""

@@ -2,6 +2,8 @@
 #
 # SPDX-License-Identifier: GPL-3.0-or-later
 
+"""Transform a file using a given processor, souring sources and similar correctly."""
+
 import logging
 import re
 from datetime import datetime
@@ -15,9 +17,9 @@ logger = logging.getLogger(__name__)
 
 
 def _get_xmls(file: Path, parser: etree.XMLParser) -> list:
-    """
-    include second level elements of a given XML file
-    this emulates the behaviour of the original
+    """Include second level elements of a given XML file.
+
+    This emulates the behaviour of the original
     build script which wasn't able to load top
     level elements from any file
     """
@@ -37,10 +39,7 @@ def _get_xmls(file: Path, parser: etree.XMLParser) -> list:
 
 
 def _get_attributes(file: Path) -> dict:
-    """
-    get attributes of top level element in a given
-    XHTML file
-    """
+    """Get attributes of top level element in a given XHTML file."""
     tree = etree.parse(file)
     root = tree.getroot()
     attributes = root.items()
@@ -48,8 +47,9 @@ def _get_attributes(file: Path) -> dict:
 
 
 def _get_trlist(source: Path, file: Path) -> etree.Element:
-    """
-    list all languages a file exists in by globbing up
+    """List all languages a file exists.
+
+    Does so by globbing up
     the shortname (i.e. file path with file ending omitted)
     output is readily formatted for inclusion
     in xml stream
@@ -68,9 +68,9 @@ def _get_trlist(source: Path, file: Path) -> etree.Element:
 def _get_set(
     source: Path, action_file: Path, lang: str, parser: etree.XMLParser
 ) -> etree.Element:
-    """
-    import elements from source files, add file name
-    attribute to first element included from each file
+    """Import elements from source files.
+
+    Adds file name attribute to first element included from each file
     """
     doc_set = etree.Element("set")
     list_file = action_file.with_stem(
@@ -110,9 +110,9 @@ def _get_document(
 def _build_xmlstream(
     source: Path, infile: Path, parser: etree.XMLParser
 ) -> etree.Element:
-    """
-    assemble the xml stream for feeding into xsltproc
-    the expected shortname and language flag indicate
+    """Assemble the xml stream for feeding into the transform.
+
+    The expected shortname and language flag indicate
     a single xhtml page to be built
     """
     logger.debug("infile: %s", infile)
@@ -197,9 +197,7 @@ def _build_xmlstream(
 def process_file(
     source: Path, infile: Path, transform: etree.XSLT
 ) -> etree._XSLTResultTree:
-    """
-    Process a given file using the correct xsl sheet
-    """
+    """Process a given file using the correct xsl sheet."""
     logger.debug("Processing %s", infile)
     lang = lang_from_filename(infile)
     parser = etree.XMLParser(remove_blank_text=True, remove_comments=True)

@@ -2,5 +2,11 @@
 #
 # SPDX-License-Identifier: GPL-3.0-or-later
 
-# __init__.py is a special Python file that allows a directory to become
-# a Python package so it can be accessed using the 'import' statement.
+"""Lib functions used across the builder and external consumers.
+
+All files here are held to a higher quality than the rest of the builder.
+They should all be properly typehinted and commented.
+It is considered safe to use them in subdirectory scripts, and CI scripts.
+
+They are the only functions whose interface should not change.
+"""

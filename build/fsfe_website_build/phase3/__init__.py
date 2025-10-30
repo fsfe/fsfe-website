@@ -2,5 +2,9 @@
 #
 # SPDX-License-Identifier: GPL-3.0-or-later
 
-# __init__.py is a special Python file that allows a directory to become
-# a Python package so it can be accessed using the 'import' statement.
+"""FSFE website phase 3.
+
+Conditional finishing stuff.
+For example, copy the files from stage to final target(s).
+Or serve the build webpage on localhost.
+"""

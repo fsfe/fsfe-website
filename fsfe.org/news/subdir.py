@@ -2,6 +2,8 @@
 #
 # SPDX-License-Identifier: GPL-3.0-or-later
 
+"""Prepare news feed and archive."""
+
 import logging
 import multiprocessing
 from pathlib import Path
@@ -65,9 +67,7 @@ def _gen_xml_files(working_dir: Path, file: Path) -> None:
 
 
 def run(source: Path, languages: list[str], processes: int, working_dir: Path) -> None:
-    """
-    preparation for news subdirectory
-    """
+    """Prepare news subdirectory."""
     with multiprocessing.Pool(processes) as pool:
         years = sorted(working_dir.glob("[0-9][0-9][0-9][0-9]"))
         # Copy news archive template to each of the years

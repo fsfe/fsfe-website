@@ -2,6 +2,12 @@
 #
 # SPDX-License-Identifier: GPL-3.0-or-later
 
+"""Build the lists and pairs file processing.
+
+Takes care to iterate by processor file,
+which is useful to prevent reparsing the XSL multiple times.
+"""
+
 import logging
 import multiprocessing.pool
 from itertools import product
@@ -76,10 +82,7 @@ def process_files(
     pool: multiprocessing.pool.Pool,
     target: Path,
 ) -> None:
-    """
-    Build .html, .rss and .ics files from .xhtml sources
-
-    """
+    """Build .html, .rss and .ics files from .xhtml sources."""
     logger.info("Processing xhtml, rss, ics files")
     # generate a set of unique processing xsls
     xsl_files = {

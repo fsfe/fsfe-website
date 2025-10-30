@@ -1,6 +1,7 @@
 # SPDX-FileCopyrightText: Free Software Foundation Europe e.V. <https://fsfe.org>
 #
 # SPDX-License-Identifier: GPL-3.0-or-later
+"""Serve any websites in the output directory on localhost."""
 
 import http.server
 import logging
@@ -16,10 +17,7 @@ logger = logging.getLogger(__name__)
 
 
 def _run_webserver(path: str, port: int) -> None:
-    """
-    Given a path as a string and a port it will
-    serve that dir on that localhost:port for forever.
-    """
+    """Given a path and a port it will serve that dir on that localhost:port."""
     os.chdir(path)
     handler = http.server.CGIHTTPRequestHandler
 
@@ -30,8 +28,10 @@ def _run_webserver(path: str, port: int) -> None:
 def serve_websites(
     serve_dir: Path, sites: list, base_port: int, increment_number: int
 ) -> None:
-    """
-    Takes a target directory, a base port and a number to increment port by per dir
+    """Serve the sites in serve_dir from base port.
+
+    Each sites port is increment by increment_number.
+
     It then serves all directories over http on localhost
     """
     site_names = [site.name for site in sites]

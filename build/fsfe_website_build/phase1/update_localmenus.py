@@ -2,6 +2,11 @@
 #
 # SPDX-License-Identifier: GPL-3.0-or-later
 
+"""Update local menus.
+
+After this step, all .localmenu.??.xml files will be up to date.
+"""
+
 import logging
 import multiprocessing.pool
 from pathlib import Path
@@ -18,9 +23,7 @@ def _write_localmenus(
     files_by_dir: dict[str, list[Path]],
     languages: list[str],
 ) -> None:
-    """
-    Write localmenus for a given directory
-    """
+    """Write localmenus for a given directory."""
     # Set of files with no langcode or xhtml extension
     base_files = {get_basepath(filter_file) for filter_file in files_by_dir[directory]}
     for lang in languages:
@@ -81,9 +84,7 @@ def update_localmenus(
     languages: list[str],
     pool: multiprocessing.pool.Pool,
 ) -> None:
-    """
-    Update all the .localmenu.*.xml files containing the local menus.
-    """
+    """Update all the .localmenu.*.xml files containing the local menus."""
     logger.info("Updating local menus")
     # Get a dict of all source files containing local menus
     files_by_dir = {}

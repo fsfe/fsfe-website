@@ -2,6 +2,12 @@
 #
 # SPDX-License-Identifier: GPL-3.0-or-later
 
+"""Update CSS files.
+
+This step recompiles the less files into the final CSS files to be
+distributed to the web server.
+"""
+
 import logging
 from pathlib import Path
 
@@ -15,8 +21,8 @@ logger = logging.getLogger(__name__)
 def update_css(
     source_dir: Path,
 ) -> None:
-    """
-    If any less files have been changed, update the css.
+    """If any less files have been changed, update the css.
+
     Compile less found at <website>/look/(main*less)
     Then minify it, and place it in the expected location for the build process.
     """

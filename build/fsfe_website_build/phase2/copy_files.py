@@ -1,6 +1,10 @@
 # SPDX-FileCopyrightText: Free Software Foundation Europe e.V. <https://fsfe.org>
 #
 # SPDX-License-Identifier: GPL-3.0-or-later
+"""Copy source files to target directory.
+
+Uses a multithreaded pathlib copy.
+"""
 
 import logging
 import multiprocessing.pool
@@ -24,9 +28,7 @@ def _copy_file(target: Path, source_dir: Path, source_file: Path) -> None:
 
 
 def copy_files(source_dir: Path, pool: multiprocessing.pool.Pool, target: Path) -> None:
-    """
-    Copy images, docments etc
-    """
+    """Copy images, documents etc."""
     logger.info("Copying over media and misc files")
     pool.starmap(
         _copy_file,

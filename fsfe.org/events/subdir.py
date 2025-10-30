@@ -2,6 +2,8 @@
 #
 # SPDX-License-Identifier: GPL-3.0-or-later
 
+"""Generate the events page and archive."""
+
 import logging
 import multiprocessing
 from pathlib import Path
@@ -42,9 +44,7 @@ def _gen_index_sources(source: Path, directory: Path) -> None:
 
 
 def run(source: Path, languages: list[str], processes: int, working_dir: Path) -> None:
-    """
-    preparation for news subdirectory
-    """
+    """Prepare for events subdirectory."""
     with multiprocessing.Pool(processes) as pool:
         years = sorted(working_dir.glob("[0-9][0-9][0-9][0-9]"))
         # Copy news archive template to each of the years

@@ -1,8 +1,7 @@
-#!/usr/bin/env python3
-
 # SPDX-FileCopyrightText: Free Software Foundation Europe e.V. <https://fsfe.org>
 #
 # SPDX-License-Identifier: GPL-3.0-or-later
+"""Command line entrypoint to the build process."""
 
 import argparse
 import logging
@@ -24,10 +23,7 @@ logger = logging.getLogger(__name__)
 
 
 def parse_arguments() -> argparse.Namespace:
-    """
-    Parse the arguments of the website build process
-
-    """
+    """Parse the arguments of the website build process."""
     parser = argparse.ArgumentParser(
         description="Python script to handle building of the fsfe webpage",
     )
@@ -100,9 +96,7 @@ def parse_arguments() -> argparse.Namespace:
 
 
 def main() -> None:
-    """
-    Main process of the website builder
-    """
+    """Parse args and coordinate the website builder."""
     args = parse_arguments()
     logging.basicConfig(
         format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
@@ -117,17 +111,6 @@ def main() -> None:
         # TODO Should also be triggered whenever any build python file is changed
         if args.full:
             full(args.source)
-        # -----------------------------------------------------------------------------
-        # Create XML symlinks
-        # -----------------------------------------------------------------------------
-
-        # After this step, the following symlinks will exist:
-        # * global/data/texts/.texts.<lang>.xml for each language
-        # * global/data/topbanner/.topbanner.<lang>.xml for each language
-        # Each of these symlinks will point to the corresponding file without a dot at
-        # the beginning of the filename, if present, and to the English version
-        # otherwise. This symlinks make sure that phase 2 can easily use the right file
-        # for each language
         global_symlinks(
             args.source,
             (

@@ -3,6 +3,9 @@
 # SPDX-FileCopyrightText: Free Software Foundation Europe e.V. <https://fsfe.org>
 #
 # SPDX-License-Identifier: GPL-3.0-or-later
+#
+"""Check that the passed files match xml structure across languages."""
+
 import argparse
 import logging
 import multiprocessing
@@ -34,6 +37,7 @@ def _job(master: Path, other: Path, whitelist: set[str]) -> str | None:
 
 
 def main() -> None:
+    """Check that the passed files match xml structure across languages."""
     parser = argparse.ArgumentParser(
         description="Compare XML structure and attributes. "
         "Use --multi for space-separated list + parallel compares."

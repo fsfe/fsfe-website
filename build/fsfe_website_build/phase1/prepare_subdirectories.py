@@ -2,6 +2,12 @@
 #
 # SPDX-License-Identifier: GPL-3.0-or-later
 
+"""Prepare subdirectories, knowing what languages we have already.
+
+Will call the `run` function of any `subdir.py`
+found in the website to build source tree.
+"""
+
 import logging
 import sys
 from pathlib import Path
@@ -15,9 +21,7 @@ def prepare_subdirectories(
     languages: list[str],
     processes: int,
 ) -> None:
-    """
-    Find any subdir scripts in subdirectories and run them
-    """
+    """Find any subdir scripts in subdirectories and run them."""
     logger.info("Preparing Subdirectories")
     for subdir_path in (path.parent for path in source_dir.glob("**/subdir.py")):
         logger.info("Preparing subdirectory %s", subdir_path)

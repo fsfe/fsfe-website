@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <html>
   <version>3</version>
 
@@ -27,13 +27,7 @@
         </ol>
       </p>
     </div>
-    <form
-      action="/cgi-bin/registerevent.php"
-      method="POST"
-      class="fsfe-form"
-      enctype="multipart/form-data"
-      role="form"
-    >
+    <form action="/cgi-bin/registerevent.php" method="POST" class="fsfe-form" enctype="multipart/form-data" role="form">
       <!-- @TRANSLATORS: there is no need to translate the HTML
     attributes of the elements in this form, just the text between
     the '>' and '<'.
@@ -42,30 +36,24 @@
     can be translated to Spanish
     <label><input type="checkbox" name="tags[]" value="localgroup" />grupo local</label>
     Thank you! -->
-      <input name="register_event" type="hidden" />
+      <input name="register_event" type="hidden"/>
 
-      <label for="name" class="required"
-        >Uw naam<span class="star">*</span></label
-      >
-      <input name="name" value="" required="required" type="text" />
-      <label for="email" class="required"
-        >Uw e-mail<span class="star">*</span></label
-      >
-      <input name="email" value="" required="required" type="email" />
+      <label for="name" class="required">Uw naam<span class="star">*</span></label>
+      <input name="name" value="" required="required" type="text"/>
+      <label for="email" class="required">Uw e-mail<span class="star">*</span></label>
+      <input name="email" value="" required="required" type="email"/>
       <p class="help-block">
         Uw persoonlijke informatie zal nooit worden gedeeld of verkocht. Het
         wordt alleen gebruikt om contact met u op te nemen als er vragen of
         problemen zijn.
       </p>
       <div class="form-group">
-        <label for="lang"
-          >Taal van deze evenementregistratie<span class="star">*</span></label
-        >
+        <label for="lang">Taal van deze evenementregistratie<span class="star">*</span></label>
         <!-- @Translators: There is no need to translate the list below -->
         <select id="lang" name="lang" class="form-control" required="required">
-          <option></option>
+          <option/>
           <option value="ar">
-            &#1575;&#1604;&#1593;&#1585;&#1576;&#1610;&#1617;&#1577;
+            العربيّة
           </option>
           <option value="bg">Български</option>
           <option value="bs">Bosanski</option>
@@ -104,10 +92,8 @@
           Maak alstublieft de taal duidelijk van de tekst die u zult invoegen in
           de titel en beschrijving. Als u uw evenement in een andere taal dan
           Engels registreert,
-          <strong
-            >overweeg dan alstublieft om ook een Engelstalige versie te
-            uploaden</strong
-          >
+          <strong>overweeg dan alstublieft om ook een Engelstalige versie te
+            uploaden</strong>
           om er zeker van te zijn dat we het begrijpen. Wees er alstublieft van
           bewust dat een niet-Engelstalig evenement alleen zichbaar is op de
           vertaalde pagina van fsfe.org. Voorbeeld: een Italiaans evenement zou
@@ -121,59 +107,37 @@
       <table>
         <tr>
           <td>
-            <label for="title" class="required"
-              >Titel van het evenement<span class="star">*</span></label
-            >
-            <input name="title" value="" required="required" type="text" />
+            <label for="title" class="required">Titel van het evenement<span class="star">*</span></label>
+            <input name="title" value="" required="required" type="text"/>
           </td>
           <td>
-            <label for="startdate" class="required"
-              >Startdatum<span class="star">*</span></label
-            >
-            <input
-              name="startdate"
-              value=""
-              required="required"
-              type="datetime-local"
-              placeholder="YYYY-MM-DD HH:MM"
-            />
+            <label for="startdate" class="required">Startdatum<span class="star">*</span></label>
+            <input name="startdate" value="" required="required" type="datetime-local" placeholder="YYYY-MM-DD HH:MM"/>
           </td>
           <td>
             <label for="enddate">Einddatum</label>
-            <input
-              name="enddate"
-              value=""
-              required="required"
-              type="datetime-local"
-              placeholder="YYYY-MM-DD HH:MM"
-            />
+            <input name="enddate" value="" required="required" type="datetime-local" placeholder="YYYY-MM-DD HH:MM"/>
           </td>
         </tr>
       </table>
 
-      <label for="title" class="required"
-        >Titel van het evenement<span class="star">*</span></label
-      >
-      <input name="title" value="" required="required" type="text" />
+      <label for="title" class="required">Titel van het evenement<span class="star">*</span></label>
+      <input name="title" value="" required="required" type="text"/>
 
       <div class="help-block">
         <p>
-          <strong>Voor lezingen</strong>: &quot;Volledige titel van de
-          lezing&quot; lezing, bijv. &quot;Apparaatneutraliteit: De voordelen
-          van Vrije Software overbrengen naar Hardware&quot; talk
+          <strong>Voor lezingen</strong>: "Volledige titel van de
+          lezing" lezing, bijv. "Apparaatneutraliteit: De voordelen
+          van Vrije Software overbrengen naar Hardware" talk
         </p>
         <p>
-          <strong>Voor groepsontmoetingen</strong>: FSFE &quot;naam&quot; lokale
+          <strong>Voor groepsontmoetingen</strong>: FSFE "naam" lokale
           groep/landteam ontmoeting, bijv. FSFE Zürich lokale groepsontmoeting
         </p>
       </div>
 
-      <label for="description" class="required"
-        >Beschrijving (gewoon tekst, geen HTML)<span class="star"
-          >*</span
-        ></label
-      >
-      <textarea name="description" required="required"></textarea>
+      <label for="description" class="required">Beschrijving (gewoon tekst, geen HTML)<span class="star">*</span></label>
+      <textarea name="description" required="required"/>
       <div class="help-block">
         <p>Paragraaf 1: Bied <strong>context</strong>.</p>
         <p>
@@ -215,29 +179,20 @@
         <p>Tips:</p>
         <ul>
           <li>
-            Geef twee keer &#39;Enter&#39; om een nieuwe paragraaf te maken
+            Geef twee keer 'Enter' om een nieuwe paragraaf te maken
           </li>
           <li>Voeg voor online evenementen de tijd in CET toe</li>
           <li>
-            Stad-land/&#39;online&#39; en datum zijn al automatisch toegevoegd.
+            Stad-land/'online' en datum zijn al automatisch toegevoegd.
           </li>
         </ul>
       </div>
 
       <div class="form-group">
-        <label for="groupname"
-          >Groep voor deze evenementregistratie. Selecteer geen als het
-          evenement niet met een groep verbonden is.<span class="star"
-            >*</span
-          ></label
-        >
+        <label for="groupname">Groep voor deze evenementregistratie. Selecteer geen als het
+          evenement niet met een groep verbonden is.<span class="star">*</span></label>
         <!-- @Translators: There is no need to translate the list below -->
-        <select
-          id="groupname"
-          name="groupname"
-          class="form-control"
-          required="required"
-        >
+        <select id="groupname" name="groupname" class="form-control" required="required">
           <!-- None goes first -->
           <option value="None">None</option>
           <!-- Then thematic groups in alphabetical order -->
@@ -276,67 +231,43 @@
       <label for="tags">Kies een of meer trefwoorden:</label>*
       <div class="checkboxlist">
         <div class="checkbox">
-          <label
-            ><input type="checkbox" name="tags[]" value="talk" />lezing</label
-          >
+          <label><input type="checkbox" name="tags[]" value="talk"/>lezing</label>
         </div>
         <div class="checkbox">
-          <label
-            ><input type="checkbox" name="tags[]" value="panel" />panel</label
-          >
+          <label><input type="checkbox" name="tags[]" value="panel"/>panel</label>
         </div>
         <div class="checkbox">
-          <label
-            ><input
-              type="checkbox"
-              name="tags[]"
-              value="infobooth"
-            />infokraam</label
-          >
+          <label><input type="checkbox" name="tags[]" value="infobooth"/>infokraam</label>
         </div>
         <div class="checkbox">
-          <label
-            ><input type="checkbox" name="tags[]" value="localgroup" />lokale
-            groep</label
-          >
+          <label><input type="checkbox" name="tags[]" value="localgroup"/>lokale
+            groep</label>
         </div>
         <div class="checkbox">
-          <label
-            ><input
-              type="checkbox"
-              name="tags[]"
-              value="workshop"
-            />werkgroep</label
-          >
+          <label><input type="checkbox" name="tags[]" value="workshop"/>werkgroep</label>
         </div>
         <div class="checkbox">
-          <label
-            ><input
-              type="checkbox"
-              name="tags[]"
-              value="meeting"
-            />ontmoeting</label
-          >
+          <label><input type="checkbox" name="tags[]" value="meeting"/>ontmoeting</label>
         </div>
       </div>
       <label for="url">Evenement URL (indien beschikbaar)</label>
-      <input name="url" value="" type="text" />
+      <input name="url" value="" type="text"/>
       <label for="online">Online/virtueel evenement</label>
       <div class="checkbox">
         <label>
-          <input type="checkbox" name="online" value="yes" />
+          <input type="checkbox" name="online" value="yes"/>
           Dit is een online evenement. Als u deze aanvinkt type/selecteer dan
           alstublieft een willekeurige waarde bij "Stad" en "Land" omdat deze
           dan niet zullen worden getoond.
         </label>
       </div>
       <label for="city">Stad<span class="star">*</span></label>
-      <input name="city" value="" required="required" type="text" />
+      <input name="city" value="" required="required" type="text"/>
       <div class="form-group">
         <label for="country">Land<span class="star">*</span></label>
-        <country-list />
+        <country-list/>
       </div>
-      <input value="Voeg evenement toe" name="submit" type="submit" />
+      <input value="Voeg evenement toe" name="submit" type="submit"/>
       <p class="help-block"><span class="star">*</span> = required fields</p>
     </form>
     <p>Bedankt voor het registreren van uw evenement!</p>

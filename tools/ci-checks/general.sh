@@ -38,6 +38,7 @@ RETURN_ABS_LINK=0
 RETURN_CSS_ATTR=0
 RETURN_CSS_ELEMENT=0
 RETURN_EMAIL=0
+RETURN_EMPTY_PARAGRAPH=0
 RETURN_ENC=0
 RETURN_FIX_LANG=0
 RETURN_HTML=0
@@ -56,6 +57,7 @@ FILES_ABS_LINK=""
 FILES_CSS_ATTR=""
 FILES_CSS_ELEMENT=""
 FILES_EMAIL=""
+FILES_EMPTY_PARAGRAPH=""
 FILES_ENC=""
 FILES_FIX_LANG=""
 FILES_HTML=""
@@ -199,6 +201,18 @@ for f in $files_all; do
 		if ! [[ $(file -b --mime-encoding "$(realpath "${f}")") =~ $regex ]]; then
 			RETURN_ENC=$((RETURN_ENC + 1))
 			FILES_ENC="${FILES_ENC}|${f}"
+		fi
+	fi
+
+	# ---------------------------------------------------------------------------
+	# Empty paragraph
+	# ---------------------------------------------------------------------------
+	fileregex="(\.xhtml$|\.xml$|\.xsl$)"
+	if matchfile "${f}" "${fileregex}"; then
+		# XPath: “is there a <p> whose normalized string value is empty?”
+		if ! xmllint --xpath '//p[normalize-space(.)=""]' "$f" --quiet; then
+			RETURN_EMPTY_PARAGRAPH=$((RETURN_EMPTY_PARAGRAPH + 1))
+			FILES_EMPTY_PARAGRAPH="${FILES_EMPTY_PARAGRAPH}|${f}"
 		fi
 	fi
 
@@ -464,6 +478,19 @@ if [ $RETURN_ENC -gt 0 ]; then
   Everything else creates problems. Please change the file encoding in
   your text editor or with a special tool.
 
+EOF
+fi
+
+if [ $RETURN_EMPTY_PARAGRAPH -gt 0 ]; then
+	cat <<EOF >&2
+  =======================================
+  || [CRIT] FILE EMPTY PARAGRAPH ERROR ||
+  =======================================
+  The following ${RETURN_EMPTY_PARAGRAPH} file(s) in your commit have an empty <p> element, which is bad for accessibility and formatting.
+
+  $(filelisting "${RETURN_EMPTY_PARAGRAPH}")
+
+  Please remove the empty paragraphs, and use <br/> if using them for a linebreak.
 EOF
 fi
 

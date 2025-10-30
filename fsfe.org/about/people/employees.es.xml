@@ -1,12 +1,11 @@
-<?xml version="1.0"?>
-
+<?xml version="1.0" encoding="utf-8"?>
 <employeeset>
   <version>2</version>
 
-  <employee id="full/m">Empleado&#160;jornada-completa</employee>
-  <employee id="full/f">Empleada&#160;jornada-completa</employee>
-  <employee id="part/m">Empleado&#160;tiempo-parcial</employee>
-  <employee id="part/f">Empleada&#160;tiempo-parcial</employee>
+  <employee id="full/m">Empleado jornada-completa</employee>
+  <employee id="full/f">Empleada jornada-completa</employee>
+  <employee id="part/m">Empleado tiempo-parcial</employee>
+  <employee id="part/f">Empleada tiempo-parcial</employee>
   <employee id="intern/m">Becario</employee>
   <employee id="intern/f">Becaria</employee>
   <!--You should use the intern function rather than this, but maybe this will be needed-->

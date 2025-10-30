@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
+<?xml version="1.0" encoding="utf-8"?>
 <!--	see http://www.iso.org/iso/country_codes/iso_3166_code_lists.htm
 	for code updates
 	see http://www.un.org/en/members/index.shtml for a list of
@@ -8,9 +7,7 @@
         Short versions of country from http://klassifikators.ru/oksm
         ("Общероссийский классификатор стран мира") were used.
 	-->
-
-  <!-- promo is European Economic Area plus a few manual additions where we want to send to -->
-
+<!-- promo is European Economic Area plus a few manual additions where we want to send to -->
 <countryset>
   <version>1</version>
 

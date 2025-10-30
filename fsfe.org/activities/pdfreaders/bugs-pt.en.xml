@@ -1,160 +1,31 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
+<?xml version="1.0" encoding="utf-8"?>
 <set>
   <version>1</version>
 
 <buglist country="PT">
-<bug institution-name="Ministerio das Financas"
-     institution-address="Av. Infante D. Henrique, 1 1149-009 Lisboa"
-     institution-url="http://www.min-financas.pt/download.asp?num_links=0&amp;link=legislacao/Desp5510_10.pdf"
-     opened="2010-09-13"
-     closed="2015-04-29"
-     closedby="Nicola Feltrin"
-     name="Nuno Miguel dos Santos Baeta"
-     group=""
-     />
-<bug institution-name="Instituto Nacional de Estatistica"
-     institution-address="Av. Antonio José de Almeida 1000-043 LISBOA "
-     institution-url="http://www.ine.pt/xportal/xmain?xpid=INE&amp;xpgid=ine_estudos"
-     opened="2010-09-13"
-     closed="2010-12-07"
-     name="Nuno Miguel dos Santos Baeta"
-     group="added a link to pdfreaders"
-     />
-<bug institution-name="DGES - Direcção Geral do Ensino Superior"
-     institution-address="Av. Duque d'Ávila, 137 1069-016 LISBOA"
-     institution-url="http://www.dges.mctes.pt/DGES/pt/Estudantes/Acesso/ConcursoNacionalPublico/Guias/"
-     opened="2010-09-15"
-     closed=""
-     name="Nuno Miguel dos Santos Baeta"
-     group=""
-     comment="Original link broken. Link updated on 2015-04-29 by Nicola Feltrin"
-     />
+<bug institution-name="Ministerio das Financas" institution-address="Av. Infante D. Henrique, 1 1149-009 Lisboa" institution-url="http://www.min-financas.pt/download.asp?num_links=0&amp;link=legislacao/Desp5510_10.pdf" opened="2010-09-13" closed="2015-04-29" closedby="Nicola Feltrin" name="Nuno Miguel dos Santos Baeta" group=""/>
+<bug institution-name="Instituto Nacional de Estatistica" institution-address="Av. Antonio José de Almeida 1000-043 LISBOA " institution-url="http://www.ine.pt/xportal/xmain?xpid=INE&amp;xpgid=ine_estudos" opened="2010-09-13" closed="2010-12-07" name="Nuno Miguel dos Santos Baeta" group="added a link to pdfreaders"/>
+<bug institution-name="DGES - Direcção Geral do Ensino Superior" institution-address="Av. Duque d'Ávila, 137 1069-016 LISBOA" institution-url="http://www.dges.mctes.pt/DGES/pt/Estudantes/Acesso/ConcursoNacionalPublico/Guias/" opened="2010-09-15" closed="" name="Nuno Miguel dos Santos Baeta" group="" comment="Original link broken. Link updated on 2015-04-29 by Nicola Feltrin"/>
 
-<bug institution-name="FCT - Fundação para a Ciência e a Tecnologia"
-     institution-address="Av. D. Carlos I, 126 1249-074 LISBOA"
-     institution-url="https://www.fct.pt/apoios/cooptrans/capes/formulario.phtml.en"
-     opened="2010-09-15"
-     closed=""
-     name="Nuno Miguel dos Santos Baeta"
-     group=""
-     comment="Reference to proprietary software removed from the original link. Reference still present elsewhere in the website. Link updated on 2015-04-29 by Nicola Feltrin"
-     />
+<bug institution-name="FCT - Fundação para a Ciência e a Tecnologia" institution-address="Av. D. Carlos I, 126 1249-074 LISBOA" institution-url="https://www.fct.pt/apoios/cooptrans/capes/formulario.phtml.en" opened="2010-09-15" closed="" name="Nuno Miguel dos Santos Baeta" group="" comment="Reference to proprietary software removed from the original link. Reference still present elsewhere in the website. Link updated on 2015-04-29 by Nicola Feltrin"/>
 
-<bug institution-name="GEP - Gabinete de Estratégia e Planeamento (MTSS)"
-     institution-address="Rua Castilho, n.º 24
-1250-069 Lisboa"
-     institution-url="http://www.gep.mtss.gov.pt/edicoes/bte/"
-     opened="2010-09-15"
-     closed="2015-04-29"
-     closedby="Nicola Feltrin"
-     name="Nuno Miguel dos Santos Baeta"
-     group=""
-     comment=""
-     />
-<bug institution-name="Simplex (GSEMA – Gabinete da Secretária de Estado da Modernização Administrativa)"
-     institution-address="Rua Prof. Gomes Teixeira, 2, 5.º 1399-022 LISBOA"
-     institution-url="http://www.simplex.pt/2009relatorio/index.html"
-     opened="2010-09-16"
-     closed="2010-12-09"
-     name="Nuno Miguel dos Santos Baeta"
-     group=""
-     comment=""
-     />
+<bug institution-name="GEP - Gabinete de Estratégia e Planeamento (MTSS)" institution-address="Rua Castilho, n.º 24 1250-069 Lisboa" institution-url="http://www.gep.mtss.gov.pt/edicoes/bte/" opened="2010-09-15" closed="2015-04-29" closedby="Nicola Feltrin" name="Nuno Miguel dos Santos Baeta" group="" comment=""/>
+<bug institution-name="Simplex (GSEMA – Gabinete da Secretária de Estado da Modernização Administrativa)" institution-address="Rua Prof. Gomes Teixeira, 2, 5.º 1399-022 LISBOA" institution-url="http://www.simplex.pt/2009relatorio/index.html" opened="2010-09-16" closed="2010-12-09" name="Nuno Miguel dos Santos Baeta" group="" comment=""/>
 
-<bug institution-name="BTE - Boletim do Trabalho e Emprego"
-     institution-address="Rua Castilho, n.º 24
-1250-069 Lisboa"
-     institution-url="http://bte.gep.mtss.gov.pt/"
-     opened="2010-09-16"
-     closed="2015-04-29"
-     closedby="Nicola Feltrin"
-     name="Nuno Miguel dos Santos Baeta"
-     group=""
-     comment="Original website empty."
-     />
+<bug institution-name="BTE - Boletim do Trabalho e Emprego" institution-address="Rua Castilho, n.º 24 1250-069 Lisboa" institution-url="http://bte.gep.mtss.gov.pt/" opened="2010-09-16" closed="2015-04-29" closedby="Nicola Feltrin" name="Nuno Miguel dos Santos Baeta" group="" comment="Original website empty."/>
 
-<bug institution-name="Governo de Portugal"
-     institution-address="Rua da Imprensa à Estrela, 4 - 1200-888 Lisboa"
-     institution-url="http://www.portugal.gov.pt/pt/GC18/Governo/Composicao/Pages/Composicao.aspx"
-     opened="2010-09-16"
-     closed="2011-02-17"
-     name="Nuno Miguel dos Santos Baeta"
-     group=""
-     comment=""
-     />
+<bug institution-name="Governo de Portugal" institution-address="Rua da Imprensa à Estrela, 4 - 1200-888 Lisboa" institution-url="http://www.portugal.gov.pt/pt/GC18/Governo/Composicao/Pages/Composicao.aspx" opened="2010-09-16" closed="2011-02-17" name="Nuno Miguel dos Santos Baeta" group="" comment=""/>
 
-<bug institution-name="Plano Tecnológico"
-     institution-address="Rua da Horta Seca, 15 1200-221 LISBOA"
-     institution-url="http://www.planotecnologico.pt/InnerPage.aspx?idCat=34&amp;idMasterCat=30&amp;idLang=1&amp;site=planotecnologico"
-     opened="2010-09-17"
-     closed="2015-04-29"
-     closedby="Nicola Feltrin"
-     name="Nuno Miguel dos Santos Baeta"
-     group=""
-     comment="The website doesn't seem to exist anymore."
-     />
-<bug institution-name="MTSS -Ministério do Trabalho e da Solidariedade Social - Novas Oportunidades"
-     institution-address="Praça de Londres nº2 -16º
- 1049-056 LISBOA "
-     institution-url="http://www.novasoportunidades.gov.pt/outerFrame.jsp?link=http%3A//www.catalogo.anq.gov.pt/"
-     opened="2010-09-19"
-     closed="2010-12-09"
-     name="Nuno Miguel dos Santos Baeta"
-     group=""
-     comment="nothing to see on the website"
-     />
-<bug institution-name="Câmara Municipal de Coimbra"
-     institution-address="Praça 8 de Maio 3000-300 COIMBRA"
-     institution-url="https://www.cm-coimbra.pt/biblioteca/b220.htm"
-     opened="2010-09-25"
-     closed=""
-     name="Nuno Miguel dos Santos Baeta"
-     group=""
-     comment="Original link broken. Link updated on 2015-04-29 by Nicola Feltrin"
-     />
-<bug institution-name="Universidade de Coimbra"
-     institution-address="Palácio dos Grilos Rua da Ilha 3004-531 Coimbra"
-     institution-url="http://www1.ci.uc.pt/ciberscopio/index.php?area=projecto"
-     opened="2010-10-03"
-     closed=""
-     name="Tun Luek"
-     group=""
-     comment="Original link broken. Link updated on 2015-04-29 by Nicola Feltrin"
-     />
+<bug institution-name="Plano Tecnológico" institution-address="Rua da Horta Seca, 15 1200-221 LISBOA" institution-url="http://www.planotecnologico.pt/InnerPage.aspx?idCat=34&amp;idMasterCat=30&amp;idLang=1&amp;site=planotecnologico" opened="2010-09-17" closed="2015-04-29" closedby="Nicola Feltrin" name="Nuno Miguel dos Santos Baeta" group="" comment="The website doesn't seem to exist anymore."/>
+<bug institution-name="MTSS -Ministério do Trabalho e da Solidariedade Social - Novas Oportunidades" institution-address="Praça de Londres nº2 -16º  1049-056 LISBOA " institution-url="http://www.novasoportunidades.gov.pt/outerFrame.jsp?link=http%3A//www.catalogo.anq.gov.pt/" opened="2010-09-19" closed="2010-12-09" name="Nuno Miguel dos Santos Baeta" group="" comment="nothing to see on the website"/>
+<bug institution-name="Câmara Municipal de Coimbra" institution-address="Praça 8 de Maio 3000-300 COIMBRA" institution-url="https://www.cm-coimbra.pt/biblioteca/b220.htm" opened="2010-09-25" closed="" name="Nuno Miguel dos Santos Baeta" group="" comment="Original link broken. Link updated on 2015-04-29 by Nicola Feltrin"/>
+<bug institution-name="Universidade de Coimbra" institution-address="Palácio dos Grilos Rua da Ilha 3004-531 Coimbra" institution-url="http://www1.ci.uc.pt/ciberscopio/index.php?area=projecto" opened="2010-10-03" closed="" name="Tun Luek" group="" comment="Original link broken. Link updated on 2015-04-29 by Nicola Feltrin"/>
 
-<bug institution-name="Direcção Geral dos Impostos"
-     institution-address="Rua do Comércio n.º 49,  1149-017 LISBOA, Portugal"
-     institution-url="http://www.portaldasfinancas.gov.pt/pt/menu.action?pai=348"
-     opened="2010-10-11"
-     closed=""
-     name="Paulo Gomes"
-     group=""
-     comment=""
-     />
+<bug institution-name="Direcção Geral dos Impostos" institution-address="Rua do Comércio n.º 49,  1149-017 LISBOA, Portugal" institution-url="http://www.portaldasfinancas.gov.pt/pt/menu.action?pai=348" opened="2010-10-11" closed="" name="Paulo Gomes" group="" comment=""/>
 
-<bug institution-name="Instituto Camões"
-     institution-address="Av. da Liberdade 270, 1250-149 Lisboa, Portugal "
-     institution-url="http://cvc.instituto-camoes.pt/reccultura/autorestraduzidos/autores_cat.html"
-     opened="2010-10-11"
-     closed=""
-     name="Paulo Gomes"
-     group=""
-     comment="Original link broken. Link updated on 2015-04-29 by Nicola Feltrin"
-     />
+<bug institution-name="Instituto Camões" institution-address="Av. da Liberdade 270, 1250-149 Lisboa, Portugal " institution-url="http://cvc.instituto-camoes.pt/reccultura/autorestraduzidos/autores_cat.html" opened="2010-10-11" closed="" name="Paulo Gomes" group="" comment="Original link broken. Link updated on 2015-04-29 by Nicola Feltrin"/>
 
-<bug institution-name="Universidade da Beira Interior"
-     institution-address="Convento de Sto. António 6201-001 COVILHÃ"
-     institution-url="https://www.ubi.pt/Pagina.aspx?p=Orgaos_da_Universidade"
-     opened="2010-10-11"
-     closed="2015-04-29"
-     closedby="Nicola Feltrin"
-     name="Nuno Miguel dos Santos Baeta"
-     group=""
-     comment="Original link broken. No further reference to proprietary software found."
-     />
+<bug institution-name="Universidade da Beira Interior" institution-address="Convento de Sto. António 6201-001 COVILHÃ" institution-url="https://www.ubi.pt/Pagina.aspx?p=Orgaos_da_Universidade" opened="2010-10-11" closed="2015-04-29" closedby="Nicola Feltrin" name="Nuno Miguel dos Santos Baeta" group="" comment="Original link broken. No further reference to proprietary software found."/>
 
   </buglist>
 </set>
-
-

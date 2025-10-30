@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-
+<?xml version="1.0" encoding="utf-8"?>
 <html>
   <version>2</version>
 
@@ -29,13 +28,7 @@
       </p>
     </div>
 
-    <form
-      action="/cgi-bin/registerevent.php"
-      method="POST"
-      class="fsfe-form"
-      enctype="multipart/form-data"
-      role="form"
-    >
+    <form action="/cgi-bin/registerevent.php" method="POST" class="fsfe-form" enctype="multipart/form-data" role="form">
       <!-- @TRANSLATORS: there is no need to translate the HTML
     attributes of the elements in this form, just the text between
     the '>' and '<'.
@@ -49,17 +42,13 @@
     <label><input type="checkbox" name="tags[]" value="localgroup" />grupo local</label>
 
     Thank you! -->
-      <input name="register_event" type="hidden" />
+      <input name="register_event" type="hidden"/>
 
-      <label for="name" class="required"
-        >Il tuo nome<span class="star">*</span></label
-      >
-      <input name="name" value="" required="required" type="text" />
+      <label for="name" class="required">Il tuo nome<span class="star">*</span></label>
+      <input name="name" value="" required="required" type="text"/>
 
-      <label for="email" class="required"
-        >La tua email<span class="star">*</span></label
-      >
-      <input name="email" value="" required="required" type="email" />
+      <label for="email" class="required">La tua email<span class="star">*</span></label>
+      <input name="email" value="" required="required" type="email"/>
 
       <p class="help-block">
         Le tue informazioni personali non verranno mai condivise né vendute.
@@ -68,16 +57,12 @@
       </p>
 
       <div class="form-group">
-        <label for="lang"
-          >Lingua per la registrazione di questo evento<span class="star"
-            >*</span
-          ></label
-        >
+        <label for="lang">Lingua per la registrazione di questo evento<span class="star">*</span></label>
         <!-- @Translators: There is no need to translate the list below -->
         <select id="lang" name="lang" class="form-control" required="required">
-          <option></option>
+          <option/>
           <option value="ar">
-            &#1575;&#1604;&#1593;&#1585;&#1576;&#1610;&#1617;&#1577;
+            العربيّة
           </option>
           <option value="bg">Български</option>
           <option value="bs">Bosanski</option>
@@ -124,10 +109,8 @@
         </p>
       </div>
 
-      <label for="title" class="required"
-        >Titolo dell'evento<span class="star">*</span></label
-      >
-      <input name="title" value="" required="required" type="text" />
+      <label for="title" class="required">Titolo dell'evento<span class="star">*</span></label>
+      <input name="title" value="" required="required" type="text"/>
 
       <p class="help-block">
         Si prega di notare che i tempi di entrata sono in UTC.
@@ -135,26 +118,12 @@
       <table>
         <tr>
           <td>
-            <label for="startdate" class="required"
-              >Data di inizio<span class="star">*</span></label
-            >
-            <input
-              name="startdate"
-              value=""
-              required="required"
-              type="datetime-local"
-              placeholder="YYYY-MM-DD HH:MM"
-            />
+            <label for="startdate" class="required">Data di inizio<span class="star">*</span></label>
+            <input name="startdate" value="" required="required" type="datetime-local" placeholder="YYYY-MM-DD HH:MM"/>
           </td>
           <td>
             <label for="enddate">Data di conclusione</label>
-            <input
-              name="enddate"
-              value=""
-              required="required"
-              type="datetime-local"
-              placeholder="YYYY-MM-DD HH:MM"
-            />
+            <input name="enddate" value="" required="required" type="datetime-local" placeholder="YYYY-MM-DD HH:MM"/>
           </td>
         </tr>
       </table>
@@ -174,24 +143,15 @@
       </ol>
       <p class="help-block">Grazie per la registrazione del tuo evento!</p>
 
-      <label for="description" class="required"
-        >Descrizione (solo testo, no HTML)<span class="star">*</span></label
-      >
-      <textarea name="description" required="required"></textarea>
+      <label for="description" class="required">Descrizione (solo testo, no HTML)<span class="star">*</span></label>
+      <textarea name="description" required="required"/>
 
       <div class="form-group">
-        <label for="groupname"
-          >Gruppo locale per la registrazione di questo evento, selezionare
+        <label for="groupname">Gruppo locale per la registrazione di questo evento, selezionare
           nessuno se l'evento non è affiliato a un gruppo.
-          <span class="star">*</span></label
-        >
+          <span class="star">*</span></label>
         <!-- @Translators: There is no need to translate the list below -->
-        <select
-          id="groupname"
-          name="groupname"
-          class="form-control"
-          required="required"
-        >
+        <select id="groupname" name="groupname" class="form-control" required="required">
           <!-- None goes first -->
           <option value="None">None</option>
           <!-- Then thematic groups in alphabetical order -->
@@ -231,59 +191,35 @@
 
       <div class="checkboxlist">
         <div class="checkbox">
-          <label
-            ><input
-              type="checkbox"
-              name="tags[]"
-              value="talk"
-            />relazione</label
-          >
+          <label><input type="checkbox" name="tags[]" value="talk"/>relazione</label>
         </div>
         <div class="checkbox">
-          <label
-            ><input type="checkbox" name="tags[]" value="panel" />tavola
-            rotonda</label
-          >
+          <label><input type="checkbox" name="tags[]" value="panel"/>tavola
+            rotonda</label>
         </div>
         <div class="checkbox">
-          <label
-            ><input type="checkbox" name="tags[]" value="infobooth" />banchetto
-            informativo</label
-          >
+          <label><input type="checkbox" name="tags[]" value="infobooth"/>banchetto
+            informativo</label>
         </div>
         <div class="checkbox">
-          <label
-            ><input type="checkbox" name="tags[]" value="localgroup" />gruppo
-            locale</label
-          >
+          <label><input type="checkbox" name="tags[]" value="localgroup"/>gruppo
+            locale</label>
         </div>
         <div class="checkbox">
-          <label
-            ><input
-              type="checkbox"
-              name="tags[]"
-              value="workshop"
-            />seminario</label
-          >
+          <label><input type="checkbox" name="tags[]" value="workshop"/>seminario</label>
         </div>
         <div class="checkbox">
-          <label
-            ><input
-              type="checkbox"
-              name="tags[]"
-              value="meeting"
-            />meeting</label
-          >
+          <label><input type="checkbox" name="tags[]" value="meeting"/>meeting</label>
         </div>
       </div>
 
       <label for="url">URL per l'evento (se disponibile)</label>
-      <input name="url" value="" type="text" />
+      <input name="url" value="" type="text"/>
 
       <label for="online">Evento online/virtuale</label>
       <div class="checkbox">
         <label>
-          <input type="checkbox" name="online" value="yes" />
+          <input type="checkbox" name="online" value="yes"/>
           Questo è un evento online. Se metti qui un segno di spunta, metti pure
           un valore a caso per "Città" e "Paese", perché non verranno
           visualizzati.
@@ -291,14 +227,14 @@
       </div>
 
       <label for="city">Città<span class="star">*</span></label>
-      <input name="city" value="" required="required" type="text" />
+      <input name="city" value="" required="required" type="text"/>
 
       <div class="form-group">
         <label for="country">Paese<span class="star">*</span></label>
-        <country-list />
+        <country-list/>
       </div>
 
-      <input value="Aggiungi evento" name="submit" type="submit" />
+      <input value="Aggiungi evento" name="submit" type="submit"/>
       <p class="help-block"><span class="star">*</span> = campi richiesti</p>
     </form>
 

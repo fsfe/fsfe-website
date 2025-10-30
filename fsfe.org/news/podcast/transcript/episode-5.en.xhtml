@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-
+<?xml version="1.0" encoding="utf-8"?>
 <html>
  <version>3</version>
 <head>
@@ -15,1696 +14,1696 @@
 <pre class="transcript">
 WEBVTT
 
-00:00.000 --> 00:17.960
+00:00.000 --&gt; 00:17.960
 Welcome to the fifth episode of the Software Freedom Podcast.
 
-00:17.960 --> 00:21.320
+00:17.960 --&gt; 00:21.320
 This podcast is presented to you by the Free Software Foundation Europe.
 
-00:21.320 --> 00:25.120
+00:21.320 --&gt; 00:25.120
 We are a charity that empowers users to control technology.
 
-00:25.120 --> 00:26.120
+00:25.120 --&gt; 00:26.120
 I'm Matthias Kirschner.
 
-00:26.120 --> 00:28.680
+00:26.120 --&gt; 00:28.680
 I'm the President of the Free Software Foundation Europe.
 
-00:28.720 --> 00:31.200
+00:28.720 --&gt; 00:31.200
 I'm doing this podcast today with Katarina Nokun.
 
-00:31.200 --> 00:32.040
+00:31.200 --&gt; 00:32.040
 Hello.
 
-00:32.040 --> 00:34.880
+00:32.040 --&gt; 00:34.880
 We are very happy to welcome today Lauren Slasik.
 
-00:34.880 --> 00:37.200
+00:34.880 --&gt; 00:37.200
 He's the inventor of creative comments
 
-00:37.200 --> 00:41.080
+00:37.200 --&gt; 00:41.080
 and a former board member of the Electronic Frontier Foundation.
 
-00:41.080 --> 00:44.080
+00:41.080 --&gt; 00:44.080
 He was also on the board of our sister organization
 
-00:44.080 --> 00:46.200
+00:44.080 --&gt; 00:46.200
 with the Free Software Foundation.
 
-00:46.200 --> 00:48.680
+00:46.200 --&gt; 00:48.680
 And he just recently published a new book.
 
-00:48.680 --> 00:52.040
+00:48.680 --&gt; 00:52.040
 They don't represent us, we're claiming our democracy.
 
-00:52.040 --> 00:56.520
+00:52.040 --&gt; 00:56.520
 And he's the author of the book Code and Adder Laws of Cyberspace from 1999,
 
-00:56.520 --> 00:59.080
+00:56.520 --&gt; 00:59.080
 which was for myself the most influential book
 
-00:59.080 --> 01:01.200
+00:59.080 --&gt; 01:01.200
 for my thinking about software freedom.
 
-01:01.200 --> 01:03.120
+01:01.200 --&gt; 01:03.120
 Nice to have you in our podcast.
 
-01:03.120 --> 01:05.920
+01:03.120 --&gt; 01:05.920
 We are very happy to have friends to get a slot with you.
 
-01:05.920 --> 01:07.480
+01:05.920 --&gt; 01:07.480
 And we are huge fans.
 
-01:07.480 --> 01:08.960
+01:07.480 --&gt; 01:08.960
 We read your books.
 
-01:08.960 --> 01:13.680
+01:08.960 --&gt; 01:13.680
 And when we prepare for the podcast or when we prepare for the question,
 
-01:13.680 --> 01:16.880
+01:13.680 --&gt; 01:16.880
 I ask myself all those specific moments in your life
 
-01:16.880 --> 01:22.880
+01:16.880 --&gt; 01:22.880
 when you realize that software freedom is important to you.
 
-01:22.880 --> 01:28.360
+01:22.880 --&gt; 01:28.360
 Well, I don't pretend that I had this insight
 
-01:28.360 --> 01:31.920
+01:28.360 --&gt; 01:31.920
 before hearing Richard Stallman talk.
 
-01:31.920 --> 01:36.520
+01:31.920 --&gt; 01:36.520
 And so Richard Stallman, when I don't remember exactly whether it was
 
-01:36.520 --> 01:38.120
+01:36.520 --&gt; 01:38.120
 I had read something and then saw him speak
 
-01:38.120 --> 01:39.760
+01:38.120 --&gt; 01:39.760
 or it saw him speak and then read something.
 
-01:39.760 --> 01:42.640
+01:39.760 --&gt; 01:42.640
 But the point is that was the experience
 
-01:42.640 --> 01:47.240
+01:42.640 --&gt; 01:47.240
 that forced me to begin to think about the character
 
-01:47.240 --> 01:50.560
+01:47.240 --&gt; 01:50.560
 of the infrastructure of this social world
 
-01:50.560 --> 01:54.280
+01:50.560 --&gt; 01:54.280
 that was being constructed by technology.
 
-01:54.280 --> 01:58.080
+01:54.280 --&gt; 01:58.080
 And so that was the cause, that was the trigger.
 
-01:58.080 --> 02:00.640
+01:58.080 --&gt; 02:00.640
 And that then led me to think about a lot of things
 
-02:00.640 --> 02:04.800
+02:00.640 --&gt; 02:04.800
 which produced that book and then a bunch of stuff afterwards.
 
-02:04.800 --> 02:08.640
+02:04.800 --&gt; 02:08.640
 In this book which is Code and Adder Laws of Cyberspace,
 
-02:08.640 --> 02:12.720
+02:08.640 --&gt; 02:12.720
 you explain how individuals are regulated by different mechanisms.
 
-02:12.720 --> 02:18.320
+02:12.720 --&gt; 02:18.320
 Though you separate between the market, social norms, law and architecture,
 
-02:18.320 --> 02:21.760
+02:18.320 --&gt; 02:21.760
 can you briefly explain how these kinds of regulation
 
-02:21.760 --> 02:25.240
+02:21.760 --&gt; 02:25.240
 differ from one another and how they affect us in our daily life?
 
-02:25.240 --> 02:27.680
+02:25.240 --&gt; 02:27.680
 Right, so the law is the one that's most intuitive.
 
-02:27.680 --> 02:32.120
+02:27.680 --&gt; 02:32.120
 If you have a sense that it says if you speed, you will be penalized
 
-02:32.120 --> 02:35.840
+02:32.120 --&gt; 02:35.840
 or if you commit murder, you will be sent to jail.
 
-02:35.840 --> 02:40.920
+02:35.840 --&gt; 02:40.920
 So this is an ex-post punishment, punishment after the fact,
 
-02:40.920 --> 02:43.200
+02:40.920 --&gt; 02:43.200
 imposed by the state.
 
-02:43.200 --> 02:45.720
+02:43.200 --&gt; 02:45.720
 But you can distinguish that from norms.
 
-02:45.760 --> 02:51.200
+02:45.760 --&gt; 02:51.200
 So if you're in a society that's governed by significant norms,
 
-02:51.200 --> 02:54.520
+02:51.200 --&gt; 02:54.520
 the norms also are subject to punishment.
 
-02:54.520 --> 02:58.040
+02:54.520 --&gt; 02:58.040
 If you violate the norms, but their punishment comes from the community,
 
-02:58.040 --> 02:59.160
+02:58.040 --&gt; 02:59.160
 it doesn't come from the state.
 
-02:59.160 --> 03:02.600
+02:59.160 --&gt; 03:02.600
 So it's decentralized enforcement of that rule.
 
-03:02.600 --> 03:05.320
+03:02.600 --&gt; 03:05.320
 So both of them are rules, but ones can force by the state,
 
-03:05.320 --> 03:07.400
+03:05.320 --&gt; 03:07.400
 ones in force by our community.
 
-03:07.400 --> 03:11.320
+03:07.400 --&gt; 03:11.320
 The market, of course, which itself is constructed by law and norms,
 
-03:11.320 --> 03:13.640
+03:11.320 --&gt; 03:13.640
 I don't mean to say that they're not intermixed,
 
-03:13.640 --> 03:18.200
+03:13.640 --&gt; 03:18.200
 but the market sets the conditions on you having access to certain things.
 
-03:18.200 --> 03:20.960
+03:18.200 --&gt; 03:20.960
 So if I sing, you'll pay me a certain amount.
 
-03:20.960 --> 03:23.120
+03:20.960 --&gt; 03:23.120
 If I sing less, you'll pay me more, right?
 
-03:23.120 --> 03:25.280
+03:23.120 --&gt; 03:25.280
 Because if I sing, it's just like that.
 
-03:25.280 --> 03:29.200
+03:25.280 --&gt; 03:29.200
 But the point is there's a conditionality, which is the price,
 
-03:29.200 --> 03:31.360
+03:29.200 --&gt; 03:31.360
 and that's the way the market regulates.
 
-03:31.360 --> 03:35.760
+03:31.360 --&gt; 03:35.760
 And then the one that's most important in thinking about the internet
 
-03:35.760 --> 03:39.440
+03:35.760 --&gt; 03:39.440
 is the way that architecture can regulate.
 
-03:39.440 --> 03:43.320
+03:39.440 --&gt; 03:43.320
 So in real space, we understand that whenever you go over a speed bump,
 
-03:43.320 --> 03:45.560
+03:43.320 --&gt; 03:45.560
 speed bump is trying to force you to slow down.
 
-03:45.560 --> 03:50.880
+03:45.560 --&gt; 03:50.880
 It's using the physics of automobiles and roads to do that.
 
-03:50.880 --> 03:54.240
+03:50.880 --&gt; 03:54.240
 Lecture halls don't typically have beautiful windows
 
-03:54.240 --> 03:56.440
+03:54.240 --&gt; 03:56.440
 that you can look at and see what's going on the outside,
 
-03:56.440 --> 04:00.280
+03:56.440 --&gt; 04:00.280
 because professor wants you to be focused on the professor.
 
-04:00.280 --> 04:03.120
+04:00.280 --&gt; 04:03.120
 Those are uses of architecture in real space,
 
-04:03.120 --> 04:06.840
+04:03.120 --&gt; 04:06.840
 but when you think about that and you see the way the net is,
 
-04:06.840 --> 04:11.800
+04:06.840 --&gt; 04:11.800
 you can begin to recognize that the net is architected, too.
 
-04:11.800 --> 04:14.520
+04:11.800 --&gt; 04:14.520
 It's architected to enable certain things,
 
-04:14.520 --> 04:15.880
+04:14.520 --&gt; 04:15.880
 and to disable certain things.
 
-04:15.880 --> 04:18.840
+04:15.880 --&gt; 04:18.840
 And when the internet was first architected,
 
-04:18.840 --> 04:21.160
+04:18.840 --&gt; 04:21.160
 it was architected to enable innovation.
 
-04:21.160 --> 04:22.920
+04:21.160 --&gt; 04:22.920
 It was architected to enable privacy.
 
-04:22.920 --> 04:25.720
+04:22.920 --&gt; 04:25.720
 It was architected to enable free speech.
 
-04:25.720 --> 04:29.400
+04:25.720 --&gt; 04:29.400
 And the creativity that would create.
 
-04:29.400 --> 04:31.760
+04:29.400 --&gt; 04:31.760
 And the point of my book code was to say,
 
-04:31.760 --> 04:36.080
+04:31.760 --&gt; 04:36.080
 all of those characteristics were contingent.
 
-04:36.080 --> 04:38.600
+04:36.080 --&gt; 04:38.600
 We can imagine the internet being architected
 
-04:38.600 --> 04:41.400
+04:38.600 --&gt; 04:41.400
 to take away the opportunity to innovate,
 
-04:41.400 --> 04:44.600
+04:41.400 --&gt; 04:44.600
 to take away privacy, to take away the capacity
 
-04:44.600 --> 04:47.120
+04:44.600 --&gt; 04:47.120
 to engage in free speech, take away the opportunity
 
-04:47.120 --> 04:49.680
+04:47.120 --&gt; 04:49.680
 for creativity on top.
 
-04:49.680 --> 04:52.040
+04:49.680 --&gt; 04:52.040
 When I wrote that, people said, oh, no, no, no.
 
-04:52.040 --> 04:54.200
+04:52.040 --&gt; 04:54.200
 You're misunderstanding it's the nature of the net.
 
-04:54.200 --> 04:56.280
+04:54.200 --&gt; 04:56.280
 It has to protect these things.
 
-04:56.280 --> 04:58.360
+04:56.280 --&gt; 04:58.360
 And my point was there's no nature here.
 
-04:58.360 --> 04:59.360
+04:58.360 --&gt; 04:59.360
 It's just built.
 
-04:59.360 --> 05:00.720
+04:59.360 --&gt; 05:00.720
 It could be built differently.
 
-05:00.720 --> 05:02.800
+05:00.720 --&gt; 05:02.800
 And the governments in business have an incentive
 
-05:02.800 --> 05:04.400
+05:02.800 --&gt; 05:04.400
 to build it differently.
 
-05:04.400 --> 05:06.960
+05:04.400 --&gt; 05:06.960
 Governments in business want a world
 
-05:06.960 --> 05:11.120
+05:06.960 --&gt; 05:11.120
 where innovation can be controlled in favor of the incumbents.
 
-05:11.120 --> 05:13.040
+05:11.120 --&gt; 05:13.040
 Where privacy is gone, because we
 
-05:13.040 --> 05:15.840
+05:13.040 --&gt; 05:15.840
 surveil you in no exactly what you think and care about.
 
-05:15.840 --> 05:19.160
+05:15.840 --&gt; 05:19.160
 So we can sell things to you or punish you.
 
-05:19.160 --> 05:22.240
+05:19.160 --&gt; 05:22.240
 Where speech is conditional, like your freedom to speak,
 
-05:22.240 --> 05:24.520
+05:22.240 --&gt; 05:24.520
 can be punished based on what you say.
 
-05:24.520 --> 05:26.600
+05:24.520 --&gt; 05:26.600
 And where creativity is regulated
 
-05:26.600 --> 05:30.320
+05:26.600 --&gt; 05:30.320
 to control by the creator, maybe the copyright holders
 
-05:30.320 --> 05:31.440
+05:30.320 --&gt; 05:31.440
 and the like.
 
-05:31.440 --> 05:34.040
+05:31.440 --&gt; 05:34.040
 So that was the point of the recognition
 
-05:34.040 --> 05:35.440
+05:34.040 --&gt; 05:35.440
 of the way architecture regulates.
 
-05:35.440 --> 05:37.880
+05:35.440 --&gt; 05:37.880
 But the general point, which we continue
 
-05:37.880 --> 05:40.040
+05:37.880 --&gt; 05:40.040
 to use outside of the study of cyber law,
 
-05:40.040 --> 05:42.480
+05:40.040 --&gt; 05:42.480
 the general point about how they interact
 
-05:42.480 --> 05:43.600
+05:42.480 --&gt; 05:43.600
 is the important point here.
 
-05:43.600 --> 05:47.840
+05:43.600 --&gt; 05:47.840
 So you want to regulate smoking, which I want to regulate,
 
-05:47.840 --> 05:49.760
+05:47.840 --&gt; 05:49.760
 because I think it's a terrible, terrible thing.
 
-05:49.760 --> 05:52.240
+05:49.760 --&gt; 05:52.240
 You know, the law could forbid people
 
-05:52.240 --> 05:53.960
+05:52.240 --&gt; 05:53.960
 under the age of 18 from smoking
 
-05:53.960 --> 05:57.240
+05:53.960 --&gt; 05:57.240
 and in most many places in the states it does.
 
-05:57.240 --> 05:59.440
+05:57.240 --&gt; 05:59.440
 The law could try to stigmatize smokers.
 
-05:59.440 --> 06:01.880
+05:59.440 --&gt; 06:01.880
 California had an extraordinary campaign
 
-06:01.880 --> 06:04.280
+06:01.880 --&gt; 06:04.280
 where they tried to make smokers seem like weak people,
 
-06:04.280 --> 06:05.520
+06:04.280 --&gt; 06:05.520
 like pathetic people.
 
-06:05.520 --> 06:08.680
+06:05.520 --&gt; 06:08.680
 So it was like rallying norms against smokers.
 
-06:08.680 --> 06:10.520
+06:08.680 --&gt; 06:10.520
 You can use the market to regulate smoking.
 
-06:10.520 --> 06:12.040
+06:10.520 --&gt; 06:12.040
 You can tax cigarettes.
 
-06:12.040 --> 06:14.320
+06:12.040 --&gt; 06:14.320
 Of course, we tax cigarettes and we subsidize tobacco
 
-06:14.320 --> 06:15.160
+06:14.320 --&gt; 06:15.160
 in the United States.
 
-06:15.160 --> 06:16.720
+06:15.160 --&gt; 06:16.720
 It's a little confused, but the point is,
 
-06:16.720 --> 06:19.600
+06:16.720 --&gt; 06:19.600
 you can make it so the price makes it harder to smoke.
 
-06:19.600 --> 06:21.720
+06:19.600 --&gt; 06:21.720
 And you can regulate the architecture of cigarettes.
 
-06:21.720 --> 06:24.240
+06:21.720 --&gt; 06:24.240
 The FDA for a while was considering
 
-06:24.240 --> 06:27.400
+06:24.240 --&gt; 06:27.400
 deeming cigarettes nicotine delivery devices
 
-06:27.400 --> 06:29.680
+06:27.400 --&gt; 06:29.680
 so that they would be drugs so that they could regulate
 
-06:29.680 --> 06:31.600
+06:29.680 --&gt; 06:31.600
 the quantity of nicotine that was in a cigarette.
 
-06:31.600 --> 06:33.320
+06:31.600 --&gt; 06:33.320
 And if you could lower the nicotine,
 
-06:33.320 --> 06:35.480
+06:33.320 --&gt; 06:35.480
 you would lower the addictiveness of the cigarettes.
 
-06:35.480 --> 06:37.520
+06:35.480 --&gt; 06:37.520
 The point is, regulators kind of think of those things
 
-06:37.520 --> 06:38.560
+06:37.520 --&gt; 06:38.560
 together.
 
-06:38.560 --> 06:40.640
+06:38.560 --&gt; 06:40.640
 And always get it to say, what's the right mix?
 
-06:40.640 --> 06:42.440
+06:40.640 --&gt; 06:42.440
 Like, should I use architecture?
 
-06:42.440 --> 06:43.440
+06:42.440 --&gt; 06:43.440
 Should I use law?
 
-06:43.440 --> 06:44.720
+06:43.440 --&gt; 06:44.720
 Should I use norms?
 
-06:44.720 --> 06:47.360
+06:44.720 --&gt; 06:47.360
 Or how do I bring them all together?
 
-06:47.360 --> 06:49.800
+06:47.360 --&gt; 06:49.800
 Do you have other examples of how government
 
-06:49.800 --> 06:52.040
+06:49.800 --&gt; 06:52.040
 are regulating with architecture?
 
-06:52.040 --> 06:55.520
+06:52.040 --&gt; 06:55.520
 I mean, if software or other architecture as well?
 
-06:55.520 --> 06:57.280
+06:55.520 --&gt; 06:57.280
 Well, sure.
 
-06:57.280 --> 07:00.080
+06:57.280 --&gt; 07:00.080
 In real space, there are great regulations
 
-07:00.080 --> 07:01.640
+07:00.080 --&gt; 07:01.640
 the government makes about architecture.
 
-07:01.640 --> 07:04.240
+07:01.640 --&gt; 07:04.240
 For example, the physically disabled
 
-07:04.240 --> 07:07.200
+07:04.240 --&gt; 07:07.200
 have enormous freedom now relative to what they had
 
-07:07.200 --> 07:09.720
+07:07.200 --&gt; 07:09.720
 50 years ago, because governments have regulated
 
-07:09.720 --> 07:11.480
+07:09.720 --&gt; 07:11.480
 literally architecture of buildings to say,
 
-07:11.480 --> 07:13.440
+07:11.480 --&gt; 07:13.440
 you can't build a building unless you have ramps
 
-07:13.440 --> 07:16.920
+07:13.440 --&gt; 07:16.920
 or you have access for people who are in wheelchairs.
 
-07:16.920 --> 07:21.240
+07:16.920 --&gt; 07:21.240
 Or you build it so that ATM so that blind people can use the ATM.
 
-07:21.240 --> 07:24.640
+07:21.240 --&gt; 07:24.640
 So those are specific regulations directed at that.
 
-07:24.640 --> 07:28.520
+07:24.640 --&gt; 07:28.520
 And the internet context, we're seeing all sorts of eagerness
 
-07:28.520 --> 07:31.520
+07:28.520 --&gt; 07:31.520
 to regulate in the context of the emergence of blockchain
 
-07:31.520 --> 07:33.760
+07:31.520 --&gt; 07:33.760
 technology, because there's a fear of governments
 
-07:33.760 --> 07:37.400
+07:33.760 --&gt; 07:37.400
 that's the opportunity of a generalized
 
-07:37.400 --> 07:40.320
+07:37.400 --&gt; 07:40.320
 like Ethereum-like blockchain technology
 
-07:40.320 --> 07:43.120
+07:40.320 --&gt; 07:43.120
 could begin to displace a lot of a sovereignty
 
-07:43.120 --> 07:45.520
+07:43.120 --&gt; 07:45.520
 or sovereign power of governments.
 
-07:45.520 --> 07:50.000
+07:45.520 --&gt; 07:50.000
 And in the context of the war on, quote, war on terror,
 
-07:50.000 --> 07:53.280
+07:50.000 --&gt; 07:53.280
 there's significant evidence that the government explicitly
 
-07:53.280 --> 07:57.240
+07:53.280 --&gt; 07:57.240
 required technology companies to build technical backdoors
 
-07:57.240 --> 08:01.640
+07:57.240 --&gt; 08:01.640
 into their security technologies
 
-08:01.640 --> 08:04.400
+08:01.640 --&gt; 08:04.400
 to enable the government to get in, in case there were
 
-08:04.400 --> 08:05.960
+08:04.400 --&gt; 08:05.960
 some reason the government had to be in.
 
-08:05.960 --> 08:08.240
+08:05.960 --&gt; 08:08.240
 Now, of course, what that did was render
 
-08:08.240 --> 08:11.200
+08:08.240 --&gt; 08:11.200
 most of these technologies vulnerable to Chinese hackers.
 
-08:11.200 --> 08:13.840
+08:11.200 --&gt; 08:13.840
 So businesses in the United States who believe
 
-08:13.840 --> 08:15.960
+08:13.840 --&gt; 08:15.960
 they bought, quote, security software
 
-08:15.960 --> 08:18.080
+08:15.960 --&gt; 08:18.080
 have found that they've bought insecurity software
 
-08:18.080 --> 08:20.920
+08:18.080 --&gt; 08:20.920
 because it's been architected to be insecure.
 
-08:20.920 --> 08:23.360
+08:20.920 --&gt; 08:23.360
 But those are imperfect examples.
 
-08:23.360 --> 08:25.920
+08:23.360 --&gt; 08:25.920
 The methodology, though, I think is certainly what we think
 
-08:25.920 --> 08:28.960
+08:25.920 --&gt; 08:28.960
 is the future of regulation.
 
-08:28.960 --> 08:32.440
+08:28.960 --&gt; 08:32.440
 As a user, I often don't know what a certain software
 
-08:32.440 --> 08:35.280
+08:32.440 --&gt; 08:35.280
 exactly does on my computer because the code itself
 
-08:35.280 --> 08:37.520
+08:35.280 --&gt; 08:37.520
 is regarded as a business secret.
 
-08:37.520 --> 08:40.560
+08:37.520 --&gt; 08:40.560
 Do you think that a such a generous structure
 
-08:40.560 --> 08:43.760
+08:40.560 --&gt; 08:43.760
 of how software is built in our society
 
-08:43.760 --> 08:47.400
+08:43.760 --&gt; 08:47.400
 and how it is protected by copyright and patents
 
-08:47.400 --> 08:50.400
+08:47.400 --&gt; 08:50.400
 also affects the general distribution of power
 
-08:50.400 --> 08:52.320
+08:50.400 --&gt; 08:52.320
 in a digitalized society?
 
-08:52.320 --> 08:53.920
+08:52.320 --&gt; 08:53.920
 Absolutely.
 
-08:53.920 --> 08:56.680
+08:53.920 --&gt; 08:56.680
 So the most obvious troubling example of this
 
-08:56.680 --> 09:01.320
+08:56.680 --&gt; 09:01.320
 is, for example, California is contracting out
 
-09:01.320 --> 09:05.440
+09:01.320 --&gt; 09:05.440
 with technology companies for AI technologies
 
-09:05.440 --> 09:07.840
+09:05.440 --&gt; 09:07.840
 to help decide whether somebody should stay in prison
 
-09:07.840 --> 09:09.480
+09:07.840 --&gt; 09:09.480
 or somebody should get parole.
 
-09:09.480 --> 09:12.280
+09:09.480 --&gt; 09:12.280
 These algorithms look at a billion different things
 
-09:12.280 --> 09:15.400
+09:12.280 --&gt; 09:15.400
 and then you decide you should get out and you should not.
 
-09:15.400 --> 09:18.840
+09:15.400 --&gt; 09:18.840
 When civil rights, civil liberties advocates
 
-09:18.840 --> 09:21.160
+09:18.840 --&gt; 09:21.160
 have said, what's the algorithm?
 
-09:21.160 --> 09:22.920
+09:21.160 --&gt; 09:22.920
 How's the algorithm making that decision?
 
-09:22.920 --> 09:24.280
+09:22.920 --&gt; 09:24.280
 Like, what are the factors?
 
-09:24.280 --> 09:25.960
+09:24.280 --&gt; 09:25.960
 The companies have said, we're not going to tell you.
 
-09:25.960 --> 09:28.320
+09:25.960 --&gt; 09:28.320
 It's a trade secret.
 
-09:28.320 --> 09:32.920
+09:28.320 --&gt; 09:32.920
 And astonishingly, so far there's no strong position
 
-09:32.920 --> 09:35.680
+09:32.920 --&gt; 09:35.680
 from the government or from the courts to say, you can't do that.
 
-09:35.680 --> 09:38.480
+09:35.680 --&gt; 09:38.480
 You can't regulate with secret rules.
 
-09:38.480 --> 09:40.680
+09:38.480 --&gt; 09:40.680
 Yet that's effectively what they're doing.
 
-09:40.680 --> 09:44.400
+09:40.680 --&gt; 09:44.400
 So I'm not sure I would go so far as saying
 
-09:44.400 --> 09:48.080
+09:44.400 --&gt; 09:48.080
 that you should not permit proprietary software.
 
-09:48.080 --> 09:49.680
+09:48.080 --&gt; 09:49.680
 I certainly support free software,
 
-09:49.680 --> 09:52.320
+09:49.680 --&gt; 09:52.320
 but I'm not sure we should ban proprietary software.
 
-09:52.320 --> 09:55.720
+09:52.320 --&gt; 09:55.720
 But I would say that if there is software
 
-09:55.760 --> 09:58.720
+09:55.760 --&gt; 09:58.720
 that is effectively regulating, especially
 
-09:58.720 --> 10:01.200
+09:58.720 --&gt; 10:01.200
 through the government, we need to have a way
 
-10:01.200 --> 10:03.280
+10:01.200 --&gt; 10:03.280
 to understand how it's regulating.
 
-10:03.280 --> 10:08.360
+10:03.280 --&gt; 10:08.360
 And so whether that's building sophisticated auditing
 
-10:08.360 --> 10:10.920
+10:08.360 --&gt; 10:10.920
 structures like we have financial auditing,
 
-10:10.920 --> 10:14.600
+10:10.920 --&gt; 10:14.600
 you can imagine technology audits that have a capacity
 
-10:14.600 --> 10:18.280
+10:14.600 --&gt; 10:18.280
 for evaluating what's going on or requiring source code
 
-10:18.280 --> 10:19.240
+10:18.280 --&gt; 10:19.240
 to be revealed to somebody.
 
-10:19.240 --> 10:22.240
+10:19.240 --&gt; 10:22.240
 I don't know exactly how to do it, but I do know the principle.
 
-10:22.240 --> 10:25.680
+10:22.240 --&gt; 10:25.680
 There can't be regulation of people in a free society
 
-10:25.680 --> 10:28.360
+10:25.680 --&gt; 10:28.360
 that can't justify itself.
 
-10:28.360 --> 10:31.680
+10:28.360 --&gt; 10:31.680
 And proprietary software that is being used to determine
 
-10:31.680 --> 10:34.560
+10:31.680 --&gt; 10:34.560
 whether you get out of jail or not is regulating us
 
-10:34.560 --> 10:36.960
+10:34.560 --&gt; 10:36.960
 without justifying itself, and that can't be allowed.
 
-10:36.960 --> 10:41.200
+10:36.960 --&gt; 10:41.200
 I mean, this example of our judges in some US states
 
-10:41.200 --> 10:43.400
+10:41.200 --&gt; 10:43.400
 make decisions as Emmy for us Europeans
 
-10:43.400 --> 10:45.880
+10:43.400 --&gt; 10:45.880
 is very clear that you should forbid such a thing
 
-10:45.880 --> 10:49.120
+10:45.880 --&gt; 10:49.120
 or even you should not allow to do such things.
 
-10:49.120 --> 10:53.160
+10:49.120 --&gt; 10:53.160
 But do you think it makes also a general difference of code
 
-10:53.160 --> 10:55.360
+10:53.160 --&gt; 10:55.360
 that is used by government institutions
 
-10:55.360 --> 10:59.520
+10:55.360 --&gt; 10:59.520
 is proprietary or free software in other contexts?
 
-10:59.520 --> 11:03.640
+10:59.520 --&gt; 11:03.640
 So I think it's stupid for governments
 
-11:03.640 --> 11:07.440
+11:03.640 --&gt; 11:07.440
 to deploy proprietary code in most important governmental
 
-11:07.440 --> 11:08.400
+11:07.440 --&gt; 11:08.400
 function contexts.
 
-11:08.400 --> 11:11.560
+11:08.400 --&gt; 11:11.560
 And the reason for that is most of the functions
 
-11:11.560 --> 11:13.200
+11:11.560 --&gt; 11:13.200
 that governments perform around the world
 
-11:13.200 --> 11:15.400
+11:13.200 --&gt; 11:15.400
 are pretty redundant.
 
-11:15.400 --> 11:18.160
+11:15.400 --&gt; 11:18.160
 I mean, you've got welfare systems in every major country.
 
-11:18.160 --> 11:20.760
+11:18.160 --&gt; 11:20.760
 They all figure out who's entitled to a welfare who's not.
 
-11:20.760 --> 11:21.560
+11:20.760 --&gt; 11:21.560
 How do you distribute it?
 
-11:21.560 --> 11:23.320
+11:21.560 --&gt; 11:23.320
 You have social security systems.
 
-11:23.320 --> 11:27.080
+11:23.320 --&gt; 11:27.080
 You have systems for checking imports, whatever.
 
-11:27.080 --> 11:29.680
+11:27.080 --&gt; 11:29.680
 It would be much better to be in a world
 
-11:29.680 --> 11:34.080
+11:29.680 --&gt; 11:34.080
 where you opted into the free software of those systems
 
-11:34.080 --> 11:37.720
+11:34.080 --&gt; 11:37.720
 and could build and add to the free software of those systems.
 
-11:37.720 --> 11:42.720
+11:37.720 --&gt; 11:42.720
 So that the advantages that are embedded in any place
 
-11:43.240 --> 11:45.840
+11:43.240 --&gt; 11:45.840
 that this is being deployed get shared everywhere.
 
-11:45.840 --> 11:48.280
+11:45.840 --&gt; 11:48.280
 That would be an ecology that would be
 
-11:48.280 --> 11:51.240
+11:48.280 --&gt; 11:51.240
 in the long run better, more robust and cheaper.
 
-11:51.240 --> 11:55.720
+11:51.240 --&gt; 11:55.720
 The problem is that too many government policy makers
 
-11:55.720 --> 11:59.240
+11:55.720 --&gt; 11:59.240
 don't have any clue about the underlying technologies.
 
-11:59.240 --> 12:03.840
+11:59.240 --&gt; 12:03.840
 And it always is the, we used to say, 30 years ago,
 
-12:03.840 --> 12:07.480
+12:03.840 --&gt; 12:07.480
 the simplest decision was to choose IBM.
 
-12:07.480 --> 12:10.200
+12:07.480 --&gt; 12:10.200
 The simplest decision today is to choose Microsoft.
 
-12:10.200 --> 12:12.840
+12:10.200 --&gt; 12:12.840
 Like who could disagree with choosing Microsoft?
 
-12:12.840 --> 12:16.000
+12:12.840 --&gt; 12:16.000
 But obviously, there are so many advantages
 
-12:16.000 --> 12:18.040
+12:16.000 --&gt; 12:18.040
 to beginning to move in a direction
 
-12:18.040 --> 12:21.240
+12:18.040 --&gt; 12:21.240
 that is enabling more competition
 
-12:21.240 --> 12:24.920
+12:21.240 --&gt; 12:24.920
 and free software is obviously one of those dimensions.
 
-12:24.920 --> 12:26.680
+12:24.920 --&gt; 12:26.680
 When I argue for software freedom,
 
-12:26.680 --> 12:29.640
+12:26.680 --&gt; 12:29.640
 some people sometimes say, we don't need more regulation
 
-12:29.640 --> 12:32.320
+12:29.640 --&gt; 12:32.320
 because I think it's, I'm talking about regulating
 
-12:32.320 --> 12:33.160
+12:32.320 --&gt; 12:33.160
 in this aspect.
 
-12:33.160 --> 12:34.840
+12:33.160 --&gt; 12:34.840
 And I think it's a strange aspect
 
-12:34.840 --> 12:37.400
+12:34.840 --&gt; 12:37.400
 because there are already lots of regulation
 
-12:37.400 --> 12:39.160
+12:37.400 --&gt; 12:39.160
 in favor of proprietary software
 
-12:39.160 --> 12:42.240
+12:39.160 --&gt; 12:42.240
 like governments often support keeping the workings
 
-12:42.240 --> 12:45.120
+12:42.240 --&gt; 12:45.120
 of software secret by forbidding to analyze
 
-12:45.120 --> 12:47.440
+12:45.120 --&gt; 12:47.440
 how it works in publishing results.
 
-12:47.440 --> 12:51.440
+12:47.440 --&gt; 12:51.440
 They grant monopolies on long copyright terms on software
 
-12:51.440 --> 12:53.760
+12:51.440 --&gt; 12:53.760
 and they allow software to be patented.
 
-12:53.760 --> 12:56.200
+12:53.760 --&gt; 12:56.200
 Do you think that we have too much
 
-12:56.200 --> 12:58.320
+12:56.200 --&gt; 12:58.320
 or just a wrong kind of regulation in place
 
-12:58.320 --> 13:00.200
+12:58.320 --&gt; 13:00.200
 when it comes to software?
 
-13:00.200 --> 13:03.160
+13:00.200 --&gt; 13:03.160
 Well, I certainly think that in the context of copyright,
 
-13:03.160 --> 13:05.800
+13:03.160 --&gt; 13:05.800
 which is what I know in this field
 
-13:05.800 --> 13:07.480
+13:05.800 --&gt; 13:07.480
 of so-called intellectual property,
 
-13:07.480 --> 13:09.640
+13:07.480 --&gt; 13:09.640
 obviously Richard Solomon would be very upset
 
-13:09.640 --> 13:11.920
+13:09.640 --&gt; 13:11.920
 with that word, but in that field,
 
-13:11.920 --> 13:13.320
+13:11.920 --&gt; 13:13.320
 I know a lot about copyright.
 
-13:13.320 --> 13:17.240
+13:13.320 --&gt; 13:17.240
 It's certainly the case that copyright is a regulation
 
-13:17.240 --> 13:21.000
+13:17.240 --&gt; 13:21.000
 that is wildly more punitive and expansive
 
-13:21.000 --> 13:24.840
+13:21.000 --&gt; 13:24.840
 than it needs to be to achieve its own objectives.
 
-13:24.840 --> 13:27.320
+13:24.840 --&gt; 13:27.320
 The copyright term now is life of the author
 
-13:27.320 --> 13:29.600
+13:27.320 --&gt; 13:29.600
 plus 70 years in the United States
 
-13:29.600 --> 13:32.480
+13:29.600 --&gt; 13:32.480
 for 95 years for corporate works.
 
-13:32.480 --> 13:35.760
+13:32.480 --&gt; 13:35.760
 There is no corporation that decides whether or not
 
-13:35.760 --> 13:39.280
+13:35.760 --&gt; 13:39.280
 to invest in a project based on getting a return
 
-13:39.280 --> 13:40.880
+13:39.280 --&gt; 13:40.880
 for 95 years.
 
-13:40.880 --> 13:42.000
+13:40.880 --&gt; 13:42.000
 Nobody does that.
 
-13:42.000 --> 13:44.480
+13:42.000 --&gt; 13:44.480
 And even worse is where you have countries
 
-13:44.520 --> 13:47.440
+13:44.520 --&gt; 13:47.440
 which basically Europe just went through this craziness,
 
-13:47.440 --> 13:50.760
+13:47.440 --&gt; 13:50.760
 extending the term for existing copyrights.
 
-13:50.760 --> 13:53.440
+13:50.760 --&gt; 13:53.440
 If the purpose of a copyright is to create an incentive
 
-13:53.440 --> 13:57.960
+13:53.440 --&gt; 13:57.960
 to produce something, not even the EU parliament
 
-13:57.960 --> 14:01.120
+13:57.960 --&gt; 14:01.120
 can create the incentive to do something in the past.
 
-14:01.120 --> 14:03.600
+14:01.120 --&gt; 14:03.600
 So no matter what, George Gershwin
 
-14:03.600 --> 14:05.080
+14:03.600 --&gt; 14:05.080
 is not going to produce anything more.
 
-14:05.080 --> 14:06.840
+14:05.080 --&gt; 14:06.840
 So there's no reason to extend the copyrights
 
-14:06.840 --> 14:08.720
+14:06.840 --&gt; 14:08.720
 from the 1920s and 1930s.
 
-14:08.720 --> 14:11.880
+14:08.720 --&gt; 14:11.880
 Yet this seems like an automatic thing to policy makers
 
-14:11.880 --> 14:14.560
+14:11.880 --&gt; 14:14.560
 because again, they have this image that property is good
 
-14:14.560 --> 14:16.600
+14:14.560 --&gt; 14:16.600
 and more property is better.
 
-14:16.600 --> 14:18.520
+14:16.600 --&gt; 14:18.520
 That is wrong in a thousand ways
 
-14:18.520 --> 14:21.760
+14:18.520 --&gt; 14:21.760
 when we talk about the regulation of called copyright.
 
-14:21.760 --> 14:27.000
+14:21.760 --&gt; 14:27.000
 And I think a good dose of libertarian anti-government instinct
 
-14:27.000 --> 14:28.840
+14:27.000 --&gt; 14:28.840
 would do a lot of good here, right?
 
-14:28.840 --> 14:30.480
+14:28.840 --&gt; 14:30.480
 So if you want to be anti, you know,
 
-14:30.480 --> 14:33.320
+14:30.480 --&gt; 14:33.320
 this is where, you know, I'm not a libertarian,
 
-14:33.320 --> 14:36.240
+14:33.320 --&gt; 14:36.240
 but I find a lot of allies who are libertarians
 
-14:36.240 --> 14:39.440
+14:36.240 --&gt; 14:39.440
 anti-government types about copyright regulation
 
-14:39.440 --> 14:40.600
+14:39.440 --&gt; 14:40.600
 because they can see.
 
-14:40.600 --> 14:43.400
+14:40.600 --&gt; 14:43.400
 It's just basically crony capitalists
 
-14:43.400 --> 14:46.120
+14:43.400 --&gt; 14:46.120
 capturing a corrupted political process
 
-14:46.120 --> 14:48.320
+14:46.120 --&gt; 14:48.320
 to leverage their power into protecting
 
-14:48.320 --> 14:51.520
+14:48.320 --&gt; 14:51.520
 their own against future competitors.
 
-14:51.520 --> 14:55.320
+14:51.520 --&gt; 14:55.320
 And even beyond competition,
 
-14:55.320 --> 14:57.480
+14:55.320 --&gt; 14:57.480
 they're protecting against criticism
 
-14:57.480 --> 15:01.400
+14:57.480 --&gt; 15:01.400
 or use of their work in ways that they don't like the speech
 
-15:01.400 --> 15:03.080
+15:01.400 --&gt; 15:03.080
 component as it relates to them.
 
-15:03.080 --> 15:05.800
+15:03.080 --&gt; 15:05.800
 And I just, you know, can't begin to see
 
-15:05.800 --> 15:07.560
+15:05.800 --&gt; 15:07.560
 what the justification for that is yet
 
-15:07.560 --> 15:10.360
+15:07.560 --&gt; 15:10.360
 we still have governments that do it again and again.
 
-15:11.360 --> 15:12.560
+15:11.360 --&gt; 15:12.560
 In your recent work,
 
-15:12.560 --> 15:16.760
+15:12.560 --&gt; 15:16.760
 you often address the problem of lobbying and corruption.
 
-15:16.760 --> 15:19.440
+15:16.760 --&gt; 15:19.440
 And would you say that without the lobbying efforts
 
-15:19.440 --> 15:22.880
+15:19.440 --&gt; 15:22.880
 of companies such as Disney, me, today might have
 
-15:22.880 --> 15:26.440
+15:22.880 --&gt; 15:26.440
 a totally different copyright regime as we have now?
 
-15:26.440 --> 15:27.440
+15:26.440 --&gt; 15:27.440
 Of course we would.
 
-15:27.440 --> 15:30.120
+15:27.440 --&gt; 15:30.120
 And the evidence for that is that, you know,
 
-15:30.120 --> 15:31.920
+15:30.120 --&gt; 15:31.920
 until there was the heavy lobbying
 
-15:31.920 --> 15:34.040
+15:31.920 --&gt; 15:34.040
 in the United States around copyright extension
 
-15:34.320 --> 15:37.640
+15:34.320 --&gt; 15:37.640
 in the mid-1970s, the general view,
 
-15:37.640 --> 15:39.680
+15:37.640 --&gt; 15:39.680
 the general length of copyright and the general view
 
-15:39.680 --> 15:41.560
+15:39.680 --&gt; 15:41.560
 about copyright was very balanced.
 
-15:41.560 --> 15:44.960
+15:41.560 --&gt; 15:44.960
 It was not, there was no extremists like you have today.
 
-15:44.960 --> 15:49.040
+15:44.960 --&gt; 15:49.040
 And the extremism was built by this incredibly powerful
 
-15:49.040 --> 15:52.520
+15:49.040 --&gt; 15:52.520
 industry which spent an enormous amount of money
 
-15:52.520 --> 15:55.200
+15:52.520 --&gt; 15:55.200
 basically buying off members of Congress,
 
-15:55.200 --> 15:58.720
+15:55.200 --&gt; 15:58.720
 not in a crude corrupt way, nobody bribes anybody.
 
-15:58.720 --> 16:00.400
+15:58.720 --&gt; 16:00.400
 But just by creating this atmosphere
 
-16:00.400 --> 16:03.600
+16:00.400 --&gt; 16:03.600
 where it just seems obvious that you would support
 
-16:03.680 --> 16:06.560
+16:03.680 --&gt; 16:06.560
 massive protections called copyright.
 
-16:06.560 --> 16:09.120
+16:06.560 --&gt; 16:09.120
 And I think that, you know, what we have to do
 
-16:09.120 --> 16:12.240
+16:09.120 --&gt; 16:12.240
 is to build obviousness in the other way
 
-16:12.240 --> 16:16.720
+16:12.240 --&gt; 16:16.720
 and force them to justify their regulations on my speech.
 
-16:16.720 --> 16:19.280
+16:16.720 --&gt; 16:19.280
 You begin to see this back and forth
 
-16:19.280 --> 16:21.960
+16:19.280 --&gt; 16:21.960
 developing in a productive way around YouTube.
 
-16:21.960 --> 16:25.800
+16:21.960 --&gt; 16:25.800
 So for example, you know, YouTube develops
 
-16:25.800 --> 16:29.840
+16:25.800 --&gt; 16:29.840
 and the copyright extremists are angry at YouTube
 
-16:29.840 --> 16:31.760
+16:29.840 --&gt; 16:31.760
 because there's so many copyright violations
 
-16:31.760 --> 16:33.600
+16:31.760 --&gt; 16:33.600
 they say going on on YouTube.
 
-16:33.600 --> 16:37.000
+16:33.600 --&gt; 16:37.000
 So YouTube and Google developed this technology content ID
 
-16:37.000 --> 16:40.320
+16:37.000 --&gt; 16:40.320
 that is basically able to take fingerprints of
 
-16:40.320 --> 16:44.520
+16:40.320 --&gt; 16:44.520
 copyrighted music and then compare it to any content
 
-16:44.520 --> 16:45.800
+16:44.520 --&gt; 16:45.800
 that's uploaded on YouTube.
 
-16:45.800 --> 16:48.400
+16:45.800 --&gt; 16:48.400
 And then give a notice to the person who uploads
 
-16:48.400 --> 16:50.640
+16:48.400 --&gt; 16:50.640
 the copyrighted content that, you know,
 
-16:50.640 --> 16:52.320
+16:50.640 --&gt; 16:52.320
 we're gonna take your stuff down
 
-16:52.320 --> 16:53.760
+16:52.320 --&gt; 16:53.760
 or we're gonna monetize your stuff
 
-16:53.760 --> 16:55.360
+16:53.760 --&gt; 16:55.360
 because you violate the copyrights.
 
-16:55.360 --> 16:59.600
+16:55.360 --&gt; 16:59.600
 Okay, so, you know, I've had many fights
 
-16:59.600 --> 17:01.680
+16:59.600 --&gt; 17:01.680
 where I will upload a lecture,
 
-17:01.680 --> 17:04.320
+17:01.680 --&gt; 17:04.320
 where in the middle of a lecture I will do a demonstration
 
-17:04.320 --> 17:06.520
+17:04.320 --&gt; 17:06.520
 of like some point I'm making about copyright
 
-17:06.520 --> 17:08.160
+17:06.520 --&gt; 17:08.160
 and I will use a snippet of a song
 
-17:08.160 --> 17:11.320
+17:08.160 --&gt; 17:11.320
 and that snippet will be caught by content ID
 
-17:11.320 --> 17:13.120
+17:11.320 --&gt; 17:13.120
 and they'll say we're gonna take your lecture down.
 
-17:13.120 --> 17:15.120
+17:13.120 --&gt; 17:15.120
 It happens in Germany all the time.
 
-17:15.120 --> 17:19.120
+17:15.120 --&gt; 17:19.120
 Germany is the most extreme, outrageous black box copyright.
 
-17:20.400 --> 17:22.520
+17:20.400 --&gt; 17:22.520
 I can't use the word fascist in Germany
 
-17:22.520 --> 17:24.360
+17:22.520 --&gt; 17:24.360
 but, you know, the point is that's what we would call it
 
-17:24.360 --> 17:25.880
+17:24.360 --&gt; 17:25.880
 in the United States.
 
-17:25.880 --> 17:27.240
+17:25.880 --&gt; 17:27.240
 But it happens in Germany all the time
 
-17:27.240 --> 17:30.200
+17:27.240 --&gt; 17:30.200
 and it seems natural to them, that's the way it should be.
 
-17:30.200 --> 17:31.920
+17:30.200 --&gt; 17:31.920
 Now, for me, you know, it doesn't matter
 
-17:31.920 --> 17:35.040
+17:31.920 --&gt; 17:35.040
 because my livelihood does not depend on YouTube.
 
-17:35.040 --> 17:37.240
+17:35.040 --&gt; 17:37.240
 I don't get money for my stuff being put up there
 
-17:37.240 --> 17:39.640
+17:37.240 --&gt; 17:39.640
 and run ads against my stuff, so that's fine.
 
-17:39.640 --> 17:42.480
+17:39.640 --&gt; 17:42.480
 But there are these creators who are building YouTube channels.
 
-17:42.480 --> 17:44.440
+17:42.480 --&gt; 17:44.440
 There was a really great one recently
 
-17:44.440 --> 17:47.280
+17:44.440 --&gt; 17:47.280
 where this guy who basically teaches guitar lessons
 
-17:47.280 --> 17:50.560
+17:47.280 --&gt; 17:50.560
 on using YouTube and he'll do these demonstrations
 
-17:50.560 --> 17:53.560
+17:50.560 --&gt; 17:53.560
 of techniques and, you know, he's very careful
 
-17:53.560 --> 17:57.240
+17:53.560 --&gt; 17:57.240
 not to copy songs, but he'll do like four or five bars
 
-17:57.240 --> 17:58.520
+17:57.240 --&gt; 17:58.520
 to show a certain technique.
 
-17:58.520 --> 18:01.680
+17:58.520 --&gt; 18:01.680
 And those four or five bars will then be attributed
 
-18:01.680 --> 18:04.120
+18:01.680 --&gt; 18:04.120
 to some copyright owner and then he's informed
 
-18:04.120 --> 18:06.960
+18:04.120 --&gt; 18:06.960
 that all of the advertising rammative from his videos
 
-18:06.960 --> 18:10.000
+18:06.960 --&gt; 18:10.000
 will be given to the collective who then just,
 
-18:10.000 --> 18:12.760
+18:10.000 --&gt; 18:12.760
 and of course, that means as he can't produce,
 
-18:12.760 --> 18:16.160
+18:12.760 --&gt; 18:16.160
 he can't be a creator and what good is coming from this?
 
-18:16.160 --> 18:17.520
+18:16.160 --&gt; 18:17.520
 I mean, it's not even copying.
 
-18:17.520 --> 18:19.240
+18:17.520 --&gt; 18:19.240
 He's not even saying, here's the Beatles.
 
-18:19.240 --> 18:20.640
+18:19.240 --&gt; 18:20.640
 Let me tell you how the Beatles play.
 
-18:20.640 --> 18:23.880
+18:20.640 --&gt; 18:23.880
 It's, here's an opening of blah, blah, blah that, you know,
 
-18:23.880 --> 18:26.960
+18:23.880 --&gt; 18:26.960
 every single artist in history of guitar has used,
 
-18:26.960 --> 18:30.200
+18:26.960 --&gt; 18:30.200
 but just because it now is in the content ID database,
 
-18:30.200 --> 18:33.080
+18:30.200 --&gt; 18:33.080
 he can't do it or do it and make any money from it.
 
-18:33.080 --> 18:37.000
+18:33.080 --&gt; 18:37.000
 This is stifling new creators to benefit
 
-18:37.000 --> 18:39.240
+18:37.000 --&gt; 18:39.240
 these collecting rights societies or to benefit
 
-18:39.240 --> 18:42.240
+18:39.240 --&gt; 18:42.240
 these old monopolists and there's no justification for it.
 
-18:42.240 --> 18:47.440
+18:42.240 --&gt; 18:47.440
 When we transform this debate to the whole free software debate,
 
-18:47.440 --> 18:50.240
+18:47.440 --&gt; 18:50.240
 some people argue that we need software patents
 
-18:50.240 --> 18:52.560
+18:50.240 --&gt; 18:52.560
 in order to protect products from being copied
 
-18:52.560 --> 18:56.080
+18:52.560 --&gt; 18:56.080
 and that the current system encourages investments
 
-18:56.080 --> 18:57.480
+18:56.080 --&gt; 18:57.480
 in innovation.
 
-18:57.480 --> 18:59.920
+18:57.480 --&gt; 18:59.920
 What do you think about this argument?
 
-18:59.920 --> 19:03.240
+18:59.920 --&gt; 19:03.240
 Well, it's a theoretically good argument
 
-19:03.240 --> 19:05.120
+19:03.240 --&gt; 19:05.120
 in the sense that it fits the form
 
-19:05.120 --> 19:06.960
+19:05.120 --&gt; 19:06.960
 of why we would want patents.
 
-19:06.960 --> 19:09.680
+19:06.960 --&gt; 19:09.680
 You know, we want patents where it's creating
 
-19:09.680 --> 19:12.520
+19:09.680 --&gt; 19:12.520
 an incentive to invest that otherwise wouldn't be there.
 
-19:12.520 --> 19:14.360
+19:12.520 --&gt; 19:14.360
 So this fits the form.
 
-19:14.360 --> 19:16.360
+19:14.360 --&gt; 19:16.360
 It turns out not to be true though, right?
 
-19:16.360 --> 19:18.800
+19:16.360 --&gt; 19:18.800
 You don't need patents in the context of software
 
-19:18.800 --> 19:21.040
+19:18.800 --&gt; 19:21.040
 to create the incentive to make the software.
 
-19:21.040 --> 19:25.320
+19:21.040 --&gt; 19:25.320
 And we don't have an absence of software innovation
 
-19:25.320 --> 19:27.480
+19:25.320 --&gt; 19:27.480
 where we have an absence of software patents.
 
-19:27.480 --> 19:29.360
+19:27.480 --&gt; 19:29.360
 In fact, it's to the contrary,
 
-19:29.360 --> 19:32.360
+19:29.360 --&gt; 19:32.360
 where you've got a field of software patents.
 
-19:32.360 --> 19:35.320
+19:32.360 --&gt; 19:35.320
 What that does is concentrate software innovation
 
-19:35.320 --> 19:37.960
+19:35.320 --&gt; 19:37.960
 in companies that can afford the lawyers necessary
 
-19:37.960 --> 19:40.200
+19:37.960 --&gt; 19:40.200
 to defend against the patent claims.
 
-19:40.200 --> 19:42.000
+19:40.200 --&gt; 19:42.000
 And we've seen this not just in software,
 
-19:42.000 --> 19:44.480
+19:42.000 --&gt; 19:44.480
 we've seen this in agribusiness, for example.
 
-19:44.520 --> 19:49.440
+19:44.520 --&gt; 19:49.440
 As you've created patents on agricultural innovations,
 
-19:49.440 --> 19:52.480
+19:49.440 --&gt; 19:52.480
 the only companies that can afford to be in the business
 
-19:52.480 --> 19:57.040
+19:52.480 --&gt; 19:57.040
 are companies that can aggregate all these patent portfolios
 
-19:57.040 --> 19:58.160
+19:57.040 --&gt; 19:58.160
 so that when they're in a fight,
 
-19:58.160 --> 20:01.520
+19:58.160 --&gt; 20:01.520
 they have like 10,000 patents to launch against
 
-20:01.520 --> 20:04.200
+20:01.520 --&gt; 20:04.200
 your 2,000 patents and you'll have to give into them.
 
-20:04.200 --> 20:08.920
+20:04.200 --&gt; 20:08.920
 It's all a game of consolidation and support
 
-20:08.920 --> 20:12.200
+20:08.920 --&gt; 20:12.200
 for these big businesses that want to stifle the opportunity
 
-20:12.200 --> 20:13.280
+20:12.200 --&gt; 20:13.280
 for new innovators.
 
-20:13.280 --> 20:15.280
+20:13.280 --&gt; 20:15.280
 So we imagine the internet was going to be the space
 
-20:15.280 --> 20:17.720
+20:15.280 --&gt; 20:17.720
 where anybody anywhere could become a coder.
 
-20:17.720 --> 20:21.040
+20:17.720 --&gt; 20:21.040
 Well, until you code something, that's worth something,
 
-20:21.040 --> 20:22.800
+20:21.040 --&gt; 20:22.800
 and then you've got to confront the patents
 
-20:22.800 --> 20:24.080
+20:22.800 --&gt; 20:24.080
 that are running on this code.
 
-20:24.080 --> 20:27.560
+20:24.080 --&gt; 20:27.560
 And it's not that you've copied anything from anybody
 
-20:27.560 --> 20:29.640
+20:27.560 --&gt; 20:29.640
 because patent law doesn't require you copy,
 
-20:29.640 --> 20:32.680
+20:29.640 --&gt; 20:32.680
 a copy readily, you have to affirmatively copy something.
 
-20:32.680 --> 20:34.320
+20:32.680 --&gt; 20:34.320
 But patent law, if you just are practicing
 
-20:34.320 --> 20:36.720
+20:34.320 --&gt; 20:36.720
 the same invention that somebody else has patented,
 
-20:36.720 --> 20:38.120
+20:36.720 --&gt; 20:38.120
 even if you came up with it yourself,
 
-20:38.120 --> 20:39.760
+20:38.120 --&gt; 20:39.760
 you still are violating the patent.
 
-20:39.760 --> 20:41.920
+20:39.760 --&gt; 20:41.920
 So you come up with a great new technology,
 
-20:41.920 --> 20:42.840
+20:41.920 --&gt; 20:42.840
 you want to deploy it,
 
-20:42.840 --> 20:45.080
+20:42.840 --&gt; 20:45.080
 you then have to hire a patent firm
 
-20:45.080 --> 20:46.520
+20:45.080 --&gt; 20:46.520
 to be able to clear the patents.
 
-20:46.520 --> 20:48.920
+20:46.520 --&gt; 20:48.920
 If there are other patents reading on your invention,
 
-20:48.920 --> 20:50.840
+20:48.920 --&gt; 20:50.840
 then you've got to negotiate for the right to do that.
 
-20:50.840 --> 20:53.000
+20:50.840 --&gt; 20:53.000
 Well, if you're just a software developer,
 
-20:53.000 --> 20:54.400
+20:53.000 --&gt; 20:54.400
 you can't negotiate.
 
-20:54.400 --> 20:55.760
+20:54.400 --&gt; 20:55.760
 You don't have any leverage.
 
-20:55.760 --> 20:57.560
+20:55.760 --&gt; 20:57.560
 So you have to sell it to a company
 
-20:57.560 --> 21:00.880
+20:57.560 --&gt; 21:00.880
 who then can leverage because they have their own patents.
 
-21:00.880 --> 21:03.080
+21:00.880 --&gt; 21:03.080
 Who is this benefiting?
 
-21:03.080 --> 21:04.520
+21:03.080 --&gt; 21:04.520
 It's not benefiting innovation.
 
-21:04.520 --> 21:06.320
+21:04.520 --&gt; 21:06.320
 It's just benefiting the opportunity
 
-21:06.320 --> 21:08.760
+21:06.320 --&gt; 21:08.760
 to consolidate these large companies
 
-21:08.760 --> 21:12.800
+21:08.760 --&gt; 21:12.800
 as the Uber innovators.
 
-21:12.800 --> 21:15.160
+21:12.800 --&gt; 21:15.160
 And obviously, I think that stifles
 
-21:15.160 --> 21:17.160
+21:15.160 --&gt; 21:17.160
 the opportunity for innovation.
 
-21:17.160 --> 21:20.080
+21:17.160 --&gt; 21:20.080
 Then one last question from my side.
 
-21:20.080 --> 21:21.600
+21:20.080 --&gt; 21:21.600
 How would a society look like
 
-21:21.600 --> 21:23.760
+21:21.600 --&gt; 21:23.760
 when we don't have those software patents
 
-21:23.760 --> 21:26.240
+21:23.760 --&gt; 21:26.240
 and all the code out there regulating people
 
-21:26.240 --> 21:28.040
+21:26.240 --&gt; 21:28.040
 would be free software?
 
-21:28.040 --> 21:30.800
+21:28.040 --&gt; 21:30.800
 Well, I think if you didn't have a software patents,
 
-21:30.800 --> 21:33.560
+21:30.800 --&gt; 21:33.560
 you'd have an opportunity for a wider range of innovators.
 
-21:33.560 --> 21:36.200
+21:33.560 --&gt; 21:36.200
 I just think intuitively more innovation
 
-21:36.200 --> 21:38.080
+21:36.200 --&gt; 21:38.080
 is better in this space.
 
-21:38.080 --> 21:40.680
+21:38.080 --&gt; 21:40.680
 If it were free software that were regulating people,
 
-21:40.680 --> 21:45.160
+21:40.680 --&gt; 21:45.160
 the opportunity to surface the improper regulations
 
-21:45.160 --> 21:46.120
+21:45.160 --&gt; 21:46.120
 would be greater.
 
-21:46.120 --> 21:48.800
+21:46.120 --&gt; 21:48.800
 The opportunity to challenge regulations
 
-21:48.800 --> 21:50.360
+21:48.800 --&gt; 21:50.360
 that were improper would be greater.
 
-21:50.360 --> 21:54.760
+21:50.360 --&gt; 21:54.760
 And you would feed an industry of kind of lawyer types
 
-21:54.760 --> 21:58.720
+21:54.760 --&gt; 21:58.720
 who could begin to test whether this type of software regulation
 
-21:58.720 --> 22:01.800
+21:58.720 --&gt; 22:01.800
 is consistent with the values of a society.
 
-22:01.800 --> 22:05.000
+22:01.800 --&gt; 22:05.000
 Now, fortunately now we have many more lawyers
 
-22:05.000 --> 22:08.680
+22:05.000 --&gt; 22:08.680
 who are actually technologists, too, actually coders as well.
 
-22:08.680 --> 22:13.200
+22:08.680 --&gt; 22:13.200
 If we had a platform open for them to investigate
 
-22:13.200 --> 22:14.520
+22:13.200 --&gt; 22:14.520
 the way they can go investigate
 
-22:14.520 --> 22:17.160
+22:14.520 --&gt; 22:17.160
 whether a bureaucracy is following the law,
 
-22:17.160 --> 22:20.600
+22:17.160 --&gt; 22:20.600
 I think we could begin to force the infrastructure
 
-22:20.600 --> 22:24.640
+22:20.600 --&gt; 22:24.640
 of regulation called code to conform more fundamentally
 
-22:24.640 --> 22:27.000
+22:24.640 --&gt; 22:27.000
 to the values that we say are fundamental
 
-22:27.000 --> 22:29.640
+22:27.000 --&gt; 22:29.640
 values of a society.
 
-22:29.640 --> 22:31.320
+22:29.640 --&gt; 22:31.320
 So now my last question.
 
-22:31.320 --> 22:33.480
+22:31.320 --&gt; 22:33.480
 Imagine you could travel back in time
 
-22:33.480 --> 22:36.720
+22:33.480 --&gt; 22:36.720
 and change history, in which time would you travel
 
-22:36.720 --> 22:38.840
+22:36.720 --&gt; 22:38.840
 and what would you like to change?
 
-22:41.920 --> 22:46.640
+22:41.920 --&gt; 22:46.640
 Well, you know that since 2007, since Anne Aaron Swartz
 
-22:46.640 --> 22:49.280
+22:46.640 --&gt; 22:49.280
 sort of forced me to give up my work on copyright
 
-22:49.280 --> 22:52.600
+22:49.280 --&gt; 22:52.600
 and the internet and take up this corruption work
 
-22:52.600 --> 22:54.280
+22:52.600 --&gt; 22:54.280
 at a corruption of our democracy.
 
-22:54.280 --> 22:56.120
+22:54.280 --&gt; 22:56.120
 That's been my obsession.
 
-22:56.120 --> 22:59.480
+22:56.120 --&gt; 22:59.480
 So it's about a dozen years now that this is what I've been
 
-22:59.480 --> 23:00.920
+22:59.480 --&gt; 23:00.920
 thinking about every day I wake up.
 
-23:00.960 --> 23:04.640
+23:00.960 --&gt; 23:04.640
 I'm publishing my sixth book about this year.
 
-23:04.640 --> 23:06.080
+23:04.640 --&gt; 23:06.080
 So I want to solve that problem
 
-23:06.080 --> 23:08.200
+23:06.080 --&gt; 23:08.200
 because I'm tired of fighting it.
 
-23:08.200 --> 23:09.800
+23:08.200 --&gt; 23:09.800
 So what would I do to solve it?
 
-23:09.800 --> 23:13.360
+23:09.800 --&gt; 23:13.360
 Well, you know, we could go back in any number of places
 
-23:13.360 --> 23:17.800
+23:13.360 --&gt; 23:17.800
 and talk about inserting into our constitution
 
-23:17.800 --> 23:19.800
+23:17.800 --&gt; 23:19.800
 something I think the framers of our constitution
 
-23:19.800 --> 23:24.080
+23:19.800 --&gt; 23:24.080
 took for granted, which is that everyone is an equal citizen
 
-23:24.080 --> 23:26.560
+23:24.080 --&gt; 23:26.560
 with equal political rights.
 
-23:26.560 --> 23:29.080
+23:26.560 --&gt; 23:29.080
 Because every problem with the American democracy right now
 
-23:29.080 --> 23:31.160
+23:29.080 --&gt; 23:31.160
 is a problem of equality.
 
-23:31.160 --> 23:36.400
+23:31.160 --&gt; 23:36.400
 So the way we fund campaigns with a tiny fraction
 
-23:36.400 --> 23:40.520
+23:36.400 --&gt; 23:40.520
 of the 1% funding the campaigns that candidates gather
 
-23:40.520 --> 23:45.320
+23:40.520 --&gt; 23:45.320
 to get to office is in inequality of political power.
 
-23:45.320 --> 23:47.040
+23:45.320 --&gt; 23:47.040
 The way that systems are gerrymandered
 
-23:47.040 --> 23:49.720
+23:47.040 --&gt; 23:49.720
 is in equality of political inequality of political power.
 
-23:49.720 --> 23:52.640
+23:49.720 --&gt; 23:52.640
 The way votes get suppressed if you happen to be black
 
-23:52.640 --> 23:54.760
+23:52.640 --&gt; 23:54.760
 or if you happen to be a Democrat and a Republican state
 
-23:54.760 --> 23:57.120
+23:54.760 --&gt; 23:57.120
 is in inequality in political power.
 
-23:57.160 --> 24:00.280
+23:57.160 --&gt; 24:00.280
 These are all ways that we've allowed a core promise
 
-24:00.280 --> 24:04.480
+24:00.280 --&gt; 24:04.480
 of a representative democracy that it is equal to be corrupted.
 
-24:04.480 --> 24:06.440
+24:04.480 --&gt; 24:06.440
 So I would at any number of points,
 
-24:06.440 --> 24:10.360
+24:06.440 --&gt; 24:10.360
 we could say I have a 1787 or 1936
 
-24:10.360 --> 24:12.440
+24:10.360 --&gt; 24:12.440
 or when the 14th Amendment was passed,
 
-24:12.440 --> 24:16.080
+24:12.440 --&gt; 24:16.080
 I would just add three or four words into those texts
 
-24:16.080 --> 24:19.840
+24:16.080 --&gt; 24:19.840
 that would have made this fundamental point enforceable
 
-24:19.840 --> 24:22.680
+24:19.840 --&gt; 24:22.680
 so that we wouldn't live in this deeply corrupted
 
-24:22.680 --> 24:24.640
+24:22.680 --&gt; 24:24.640
 so-called democracy that still pretends
 
-24:24.640 --> 24:26.360
+24:24.640 --&gt; 24:26.360
 like it's the greatest democracy in the world
 
-24:26.360 --> 24:31.360
+24:26.360 --&gt; 24:31.360
 yet is corrupted the core commitment of a democracy.
 
-24:32.640 --> 24:34.000
+24:32.640 --&gt; 24:34.000
 Larry, thank you very much.
 
-24:34.000 --> 24:34.720
+24:34.000 --&gt; 24:34.720
 Thank you for your time.
 
-24:34.720 --> 24:35.720
+24:34.720 --&gt; 24:35.720
 Thank you for your work.
 
-24:35.720 --> 24:39.520
+24:35.720 --&gt; 24:39.520
 I am such an admirer of the work of the Free Software Foundation
 
-24:39.520 --> 24:42.120
+24:39.520 --&gt; 24:42.120
 especially the work in Europe of what you've been doing,
 
-24:42.120 --> 24:45.160
+24:42.120 --&gt; 24:45.160
 building here and I've admired the fight against software
 
-24:45.160 --> 24:46.520
+24:45.160 --&gt; 24:46.520
 patents when you were winning it
 
-24:46.520 --> 24:48.360
+24:46.520 --&gt; 24:48.360
 and I've been sad at the moments
 
-24:48.360 --> 24:51.520
+24:48.360 --&gt; 24:51.520
 where it seems like the other side has mustard more power
 
-24:51.520 --> 24:52.360
+24:51.520 --&gt; 24:52.360
 than you.
 
-24:52.360 --> 24:53.360
+24:52.360 --&gt; 24:53.360
 Thank you, Derry.
 
-24:53.400 --> 24:57.400
+24:53.400 --&gt; 24:57.400
 This was the fifth episode of the Software Freedom Podcast.
 
-24:57.400 --> 25:00.440
+24:57.400 --&gt; 25:00.440
 If you liked this episode, please recommend it to your friends
 
-25:00.440 --> 25:04.240
+25:00.440 --&gt; 25:04.240
 and subscribe to make sure you also get the next episode.
 
-25:04.240 --> 25:06.040
+25:04.240 --&gt; 25:06.040
 And if you are listening to this podcast
 
-25:06.040 --> 25:09.320
+25:06.040 --&gt; 25:09.320
 on a platform where you can give us a rating, please do so.
 
-25:09.320 --> 25:10.920
+25:09.320 --&gt; 25:10.920
 This podcast is presented to you
 
-25:10.920 --> 25:13.000
+25:10.920 --&gt; 25:13.000
 by the Free Software Foundation Europe.
 
-25:13.000 --> 25:16.000
+25:13.000 --&gt; 25:16.000
 We are a charity that works on promoting software freedom.
 
-25:16.000 --> 25:17.440
+25:16.000 --&gt; 25:17.440
 If you like our work,
 
-25:17.440 --> 25:19.680
+25:17.440 --&gt; 25:19.680
 please consider supporting us with a donation.
 
-25:19.680 --> 25:23.720
+25:19.680 --&gt; 25:23.720
 You find more information on your fsfe.org/donate.
 
-25:23.720 --> 25:25.000
+25:23.720 --&gt; 25:25.000
 Thank you for your support.
 
-25:25.000 --> 25:26.320
+25:25.000 --&gt; 25:26.320
 See you next time, bye.
 
-25:26.320 --> 25:27.160
+25:26.320 --&gt; 25:27.160
 Bye bye.
 
-25:27.160 --> 25:45.160
+25:27.160 --&gt; 25:45.160
 Here's another voice from our large community.
 
-25:45.160 --> 25:46.440
+25:45.160 --&gt; 25:46.440
 Hi, I'm Bjorn Schiesler.
 
-25:46.440 --> 25:49.760
+25:46.440 --&gt; 25:49.760
 I came to the FSFE 13 years ago as a volunteer
 
-25:49.760 --> 25:51.440
+25:49.760 --&gt; 25:51.440
 where I started translating the web page
 
-25:51.440 --> 25:53.680
+25:51.440 --&gt; 25:53.680
 and stayed as a volunteer since then.
 
-25:53.680 --> 25:55.600
+25:53.680 --&gt; 25:55.600
 I think FSFE is really important
 
-25:55.600 --> 25:57.960
+25:55.600 --&gt; 25:57.960
 to have an independent voice in Europe
 
-25:57.960 --> 25:59.440
+25:57.960 --&gt; 25:59.440
 to talk about free software costs.
 
-25:59.440 --> 26:01.760
+25:59.440 --&gt; 26:01.760
 It becomes more and more important in a digital society.
 
 </pre>
@@ -1716,4 +1715,4 @@ It becomes more and more important in a digital society.
 
 </sidebar>
   
-</html> 
+</html>

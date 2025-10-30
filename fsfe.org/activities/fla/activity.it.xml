@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-
+<?xml version="1.0" encoding="utf-8"?>
 <activityset>
   <version>1</version>
 
@@ -8,13 +7,11 @@
         <description>
     Il Fiduciary License Agreement (FLA) permette di assegnare e consolidare il diritto d'autore ad una fiduciaria nominata, per l'effettiva gestione del proprio copyright da parte di questa fiduciaria. Ciò permette agli sviluppatori di concentrarsi nel creare delle eccellenti applicazioni, anziché spendere il loro tempo nella gestione delle questioni legali. Benché la FSFE non accetti più nuovi progetti nel Programma Fiduciario, continua ad offrire versioni personalizzate del Fiduciary License Agreement (FLA) per l'utilizzo in proprio.
         </description>
-        <link href="/activities/fla/fiduciary.html" />
-        <image url="/graphics/logos/fla.png" />
-        <order priority="6" highlight="no" />
+        <link href="/activities/fla/fiduciary.html"/>
+        <image url="/graphics/logos/fla.png"/>
+        <order priority="6" highlight="no"/>
     <tags>
-      <tag key="legal" />
+      <tag key="legal"/>
     </tags>
   </activity>
 </activityset>
-
-

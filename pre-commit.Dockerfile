@@ -20,7 +20,8 @@ perl-base \
 php-zip \
 rsync \
 sed \
-shfmt
+shfmt \
+xsltproc
 
 # Install prettier
 RUN npm install -g prettier

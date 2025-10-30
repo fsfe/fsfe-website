@@ -1,26 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
+<?xml version="1.0" encoding="utf-8"?>
 <set>
   <version>1</version>
 
 <buglist country="PL">
 
-<bug institution-name="Łódzki Urząd Wojewódzki"
-     institution-address="ul. Piotrkowska 104, 90-926 Łódź"
-     institution-url="lodz.uw.gov.pl/data/auctions/siwz_serwis.pdf"
-     opened="2010-09-13"
-     closed=""
-     name="Mariusz Adamski"
-     group=""
-     />
-<bug institution-name="Agencja Rynku Rolnego"
-     institution-address="ul. Nowy Świat 6/12, 00-400, Warszawa"
-     institution-url="http://www.arr.gov.pl/aplikacja-elf"
-     opened="2010-09-13"
-     closed=""
-     name="Mariusz Adamski"
-     group=""
-     />
+<bug institution-name="Łódzki Urząd Wojewódzki" institution-address="ul. Piotrkowska 104, 90-926 Łódź" institution-url="lodz.uw.gov.pl/data/auctions/siwz_serwis.pdf" opened="2010-09-13" closed="" name="Mariusz Adamski" group=""/>
+<bug institution-name="Agencja Rynku Rolnego" institution-address="ul. Nowy Świat 6/12, 00-400, Warszawa" institution-url="http://www.arr.gov.pl/aplikacja-elf" opened="2010-09-13" closed="" name="Mariusz Adamski" group=""/>
   </buglist>
 </set>
-

@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-
+<?xml version="1.0" encoding="utf-8"?>
 <activityset>
   <version>2</version>
 
@@ -8,11 +7,11 @@
     <description>
      The FSFE’s Licence Questions mailing list is our group of volunteers dedicated to provide help with Free Software licences and compliance. If you need advice on what Free Software licence you should use, or if you want to know more about what rights you have over a piece of Free Software, you can contact us. 
     </description>
-    <link href="/freesoftware/legal/faq.html" />
-    <image url="/graphics/logos/licencequestions.png" />
-    <order priority="3" highlight="yes" />
+    <link href="/freesoftware/legal/faq.html"/>
+    <image url="/graphics/logos/licencequestions.png"/>
+    <order priority="3" highlight="yes"/>
     <tags>
-      <tag key="legal" />
+      <tag key="legal"/>
     </tags>
   </activity>
 </activityset>

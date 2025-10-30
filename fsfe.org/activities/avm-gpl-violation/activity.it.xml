@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-
+<?xml version="1.0" encoding="utf-8"?>
 <activityset>
   <version>1</version>
 
@@ -16,10 +15,10 @@
       installato anche se fornito come parte del firmware di un dispositivo
       embedded.
     </description>
-    <link href="/activities/avm-gpl-violation/avm-gpl-violation.html" />
-    <order priority="1" />
+    <link href="/activities/avm-gpl-violation/avm-gpl-violation.html"/>
+    <order priority="1"/>
     <tags>
-      <tag key="legal" />
+      <tag key="legal"/>
     </tags>
   </activity>
 </activityset>

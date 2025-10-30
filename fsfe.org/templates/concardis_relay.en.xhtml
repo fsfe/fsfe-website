@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
+<?xml version="1.0" encoding="utf-8"?>
 <html>
   <version>1</version>
 
@@ -21,33 +20,32 @@
     </div>
       <form name="donate" action="https://secure.payengine.de/ncol/prod/orderstandard_utf8.asp" method="post">
         <!-- payment parameters -->
-	<tpl name="PSPID"></tpl>
-        <tpl name="orderID"></tpl>
-        <tpl name="amount"></tpl>
+	<tpl name="PSPID"/>
+        <tpl name="orderID"/>
+        <tpl name="amount"/>
 	<!-- input type="hidden" name="com"   value="Donation" /-->
-	<input type="hidden" name="currency"   value="EUR" />
-        <tpl name="language"></tpl>
+	<input type="hidden" name="currency" value="EUR"/>
+        <tpl name="language"/>
         <!-- tpl name="CN"></tpl-->
-        <tpl name="EMAIL"></tpl>
+        <tpl name="EMAIL"/>
         <!-- interface template -->
-	<tpl name="TP"></tpl>
-	<input type="hidden" name="PMListType" value="2" />
+	<tpl name="TP"/>
+	<input type="hidden" name="PMListType" value="2"/>
         <!-- post-payment redirection -->
-	<tpl name="accepturl"></tpl>
-	<tpl name="cancelurl"></tpl>
+	<tpl name="accepturl"/>
+	<tpl name="cancelurl"/>
         <!-- SHA1 signature -->
-        <tpl name="SHASign"></tpl>
+        <tpl name="SHASign"/>
         <!-- Javascript submit() method only works if no submit button is active -->
         <noscript>
           <!-- submit button -->
-          <input type="submit" name="submit"       value="OK" />
+          <input type="submit" name="submit" value="OK"/>
         </noscript>
       </form>
       <script type="text/javascript">document.donate.submit()</script>
   </body>
 
-</html>
-<!--
+</html><!--
 Local Variables: ***
 mode: xml ***
 End: ***

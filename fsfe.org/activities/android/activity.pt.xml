@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-
+<?xml version="1.0" encoding="utf-8"?>
 <activityset>
   <version>1</version>
 
@@ -8,11 +7,11 @@
     <description>
 Android é um sistema operacional majoritariamente livre, desenvolvido majoritariamente pelo "Google". Infelizmente, os "drivers" para a maioria dos dispositivos e dos aplicativos na sua loja embutida (Play Store) não são Software Livre. Esta atividade ajuda você a reconquistar o controle de seu dispositivo Android e seus dados. Coletamos informação sobre como rodar um sistema Android da forma mais livre possível e tentamos coordenar os esforços nessa área.
     </description>
-    <link href="/activities/android/android.html" />
-    <image url="/graphics/logos/android.png" />
-    <order priority="4" highlight="yes" />
+    <link href="/activities/android/android.html"/>
+    <image url="/graphics/logos/android.png"/>
+    <order priority="4" highlight="yes"/>
     <tags>
-      <tag key="awareness" />
+      <tag key="awareness"/>
     </tags>
   </activity>
 </activityset>

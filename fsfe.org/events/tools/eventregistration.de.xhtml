@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-
+<?xml version="1.0" encoding="utf-8"?>
 <html>
   <version>2</version>
 
@@ -30,13 +29,7 @@
       </p>
     </div>
 
-    <form
-      action="/cgi-bin/registerevent.php"
-      method="POST"
-      class="fsfe-form"
-      enctype="multipart/form-data"
-      role="form"
-    >
+    <form action="/cgi-bin/registerevent.php" method="POST" class="fsfe-form" enctype="multipart/form-data" role="form">
       <!-- @TRANSLATORS: there is no need to translate the HTML
     attributes of the elements in this form, just the text between
     the '>' and '<'.
@@ -50,17 +43,13 @@
     <label><input type="checkbox" name="tags[]" value="localgroup" />grupo local</label>
 
     Thank you! -->
-      <input name="register_event" type="hidden" />
+      <input name="register_event" type="hidden"/>
 
-      <label for="name" class="required"
-        >Dein Name<span class="star">*</span></label
-      >
-      <input name="name" value="" required="required" type="text" />
+      <label for="name" class="required">Dein Name<span class="star">*</span></label>
+      <input name="name" value="" required="required" type="text"/>
 
-      <label for="email" class="required"
-        >Deine Email<span class="star">*</span></label
-      >
-      <input name="email" value="" required="required" type="email" />
+      <label for="email" class="required">Deine Email<span class="star">*</span></label>
+      <input name="email" value="" required="required" type="email"/>
 
       <p class="help-block">
         Deine persönlichen Informationen werden nicht verbreitet oder verkauft.
@@ -69,14 +58,12 @@
       </p>
 
       <div class="form-group">
-        <label for="lang"
-          >Sprache dieser Eventregistrierung<span class="star">*</span></label
-        >
+        <label for="lang">Sprache dieser Eventregistrierung<span class="star">*</span></label>
         <!-- @Translators: There is no need to translate the list below -->
         <select id="lang" name="lang" class="form-control" required="required">
-          <option></option>
+          <option/>
           <option value="ar">
-            &#1575;&#1604;&#1593;&#1585;&#1576;&#1610;&#1617;&#1577;
+            العربيّة
           </option>
           <option value="bg">Български</option>
           <option value="bs">Bosanski</option>
@@ -115,10 +102,8 @@
           Bitte teile uns mit, in welcher Sprache du den Titel und die
           Beschreibung verfassen wirst. Falls Du Deine Veranstaltung in einer
           anderen Sprache als Englisch registrierst,
-          <strong
-            >bitte erwäge auch eine englische Version derselben Veranstaltung zu
-            registrieren</strong
-          >, um sicher zu sein, dass wir die Beschreibung verstehen. Bitte nehme
+          <strong>bitte erwäge auch eine englische Version derselben Veranstaltung zu
+            registrieren</strong>, um sicher zu sein, dass wir die Beschreibung verstehen. Bitte nehme
           auch zur Kenntnis, dass ein nicht englisches Event nur auf der
           übersetzten fsfe.org Seite sichtbar ist. Zum Beispiel ein
           italienisches Event ist nur auf fsfe.org/index.it.html sichtbar.
@@ -126,36 +111,20 @@
         </p>
       </div>
 
-      <label for="title" class="required"
-        >Name der Veranstaltung<span class="star">*</span></label
-      >
-      <input name="title" value="" required="required" type="text" />
+      <label for="title" class="required">Name der Veranstaltung<span class="star">*</span></label>
+      <input name="title" value="" required="required" type="text"/>
       <p class="help-block">
         Bitte beachte die Eingabezeiten sind in UTC
       </p>
       <table>
         <tr>
           <td>
-            <label for="startdate" class="required"
-              >Beginn<span class="star">*</span></label
-            >
-            <input
-              name="startdate"
-              value=""
-              required="required"
-              type="datetime-local"
-              placeholder="YYYY-MM-DD HH:MM"
-            />
+            <label for="startdate" class="required">Beginn<span class="star">*</span></label>
+            <input name="startdate" value="" required="required" type="datetime-local" placeholder="YYYY-MM-DD HH:MM"/>
           </td>
           <td>
             <label for="enddate">Ende</label>
-            <input
-              name="enddate"
-              value=""
-              required="required"
-              type="datetime-local"
-              placeholder="YYYY-MM-DD HH:MM"
-            />
+            <input name="enddate" value="" required="required" type="datetime-local" placeholder="YYYY-MM-DD HH:MM"/>
           </td>
         </tr>
       </table>
@@ -186,24 +155,15 @@
       </ol>
       <p class="help-block">Danke für die Registrierung Deines Events!</p>
 
-      <label for="description" class="required"
-        >Beschreibung (nur Text, kein HTML)<span class="star">*</span></label
-      >
-      <textarea name="description" required="required"></textarea>
+      <label for="description" class="required">Beschreibung (nur Text, kein HTML)<span class="star">*</span></label>
+      <textarea name="description" required="required"/>
 
       <div class="form-group">
-        <label for="groupname"
-          >Gruppe für diese Veranstaltung. Wähle keine wenn die Veranstaltung
+        <label for="groupname">Gruppe für diese Veranstaltung. Wähle keine wenn die Veranstaltung
           keiner Gruppe der FSFE zugeordnet ist.
-          <span class="star">*</span></label
-        >
+          <span class="star">*</span></label>
         <!-- @Translators: There is no need to translate the list below -->
-        <select
-          id="groupname"
-          name="groupname"
-          class="form-control"
-          required="required"
-        >
+        <select id="groupname" name="groupname" class="form-control" required="required">
           <!-- None goes first -->
           <option value="None">None</option>
           <!-- Then thematic groups in alphabetical order -->
@@ -240,62 +200,37 @@
         </p>
       </div>
 
-      <label for="tags">Wähle einen oder mehrere der untenstehenden Tags</label
-      >*
+      <label for="tags">Wähle einen oder mehrere der untenstehenden Tags</label>*
 
       <div class="checkboxlist">
         <div class="checkbox">
-          <label
-            ><input type="checkbox" name="tags[]" value="talk" />Vortrag</label
-          >
+          <label><input type="checkbox" name="tags[]" value="talk"/>Vortrag</label>
         </div>
         <div class="checkbox">
-          <label
-            ><input type="checkbox" name="tags[]" value="panel" />Panel</label
-          >
+          <label><input type="checkbox" name="tags[]" value="panel"/>Panel</label>
         </div>
         <div class="checkbox">
-          <label
-            ><input
-              type="checkbox"
-              name="tags[]"
-              value="infobooth"
-            />Infostand</label
-          >
+          <label><input type="checkbox" name="tags[]" value="infobooth"/>Infostand</label>
         </div>
         <div class="checkbox">
-          <label
-            ><input type="checkbox" name="tags[]" value="localgroup" />Lokale
-            Gruppe</label
-          >
+          <label><input type="checkbox" name="tags[]" value="localgroup"/>Lokale
+            Gruppe</label>
         </div>
         <div class="checkbox">
-          <label
-            ><input
-              type="checkbox"
-              name="tags[]"
-              value="workshop"
-            />Workshop</label
-          >
+          <label><input type="checkbox" name="tags[]" value="workshop"/>Workshop</label>
         </div>
         <div class="checkbox">
-          <label
-            ><input
-              type="checkbox"
-              name="tags[]"
-              value="meeting"
-            />Treffen</label
-          >
+          <label><input type="checkbox" name="tags[]" value="meeting"/>Treffen</label>
         </div>
       </div>
 
       <label for="url">URL zur Veranstaltung (wenn verfügbar)</label>
-      <input name="url" value="" type="text" />
+      <input name="url" value="" type="text"/>
 
       <label for="online">Online-/virtuelles Event</label>
       <div class="checkbox">
         <label>
-          <input type="checkbox" name="online" value="yes" />
+          <input type="checkbox" name="online" value="yes"/>
           Dies ist ein Online-Event. Wenn Du das anhakst, gib bitte einen
           zufälligen Wert für "Stadt" und "Land" an, da diese Felder dann gar
           nicht angezeigt werden.
@@ -303,14 +238,14 @@
       </div>
 
       <label for="city">Stadt<span class="star">*</span></label>
-      <input name="city" value="" required="required" type="text" />
+      <input name="city" value="" required="required" type="text"/>
 
       <div class="form-group">
         <label for="country">Land<span class="star">*</span></label>
-        <country-list />
+        <country-list/>
       </div>
 
-      <input value="Veranstaltung hinzufügen" name="submit" type="submit" />
+      <input value="Veranstaltung hinzufügen" name="submit" type="submit"/>
       <p class="help-block"><span class="star">*</span> = benötigte Felder</p>
     </form>
 

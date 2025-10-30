@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
+<?xml version="1.0" encoding="utf-8"?>
 <html>
   <version>1</version>
 
@@ -24,7 +23,7 @@
     Le fait qu'à la réunion de vote (Ballot Resolution Meeting - BRM) de l'ISO sur la spécification proposée, plus de 1 000 problèmes techniques et dispositions proposées ont requis une discussion, n'allège aucun des problèmes posés. En effet, les participants n'ont pu discuter qu'entre 20 et 30 dispositions et n'ont accepté qu'environ 200 corrections éditoriales mineures dans le temps imparti. 900 dispositions environ n'ont pu donner lieu à discussion.<sup><a href="#2">2</a></sup>
     </p>
 
-<h2>Exemple 1&#160; les contenus binaires sans spécifications des fichiers MS-OOXML générés par MS Office 2007 empêchent l'interopérabilité</h2>
+<h2>Exemple 1  les contenus binaires sans spécifications des fichiers MS-OOXML générés par MS Office 2007 empêchent l'interopérabilité</h2>
 
     <p>
     L'analyse a montré que les documents XLSX créés par MS Office 2007 possèdent des contenus binaires en sus des contenus décrits dans la spécification MS-OOXML proposée. Ce fait gêne l'interopérabilité et réduit potentiellement la fidélité du document généré par rapport à l'original. L'analyse a été conduite en téléchargeant un document XSLSX depuis microsoft.com et en décompressant l'archive zip afin d'en découvrir la structure interne.<sup><a href="#3">3</a></sup> <sup><a href="#4">4</a></sup>
@@ -39,7 +38,7 @@
     Référencer un format de papier dans un fichier binaire défini par l'implémentation est problématique. En effet, le format du papier est critique pour assurer la mise en page correcte d'un document. Des applications européennes qui n'auraient pas accès à ces informations binaires pourraient par exemple utililser le format A4 à la place de Letter pour afficher le document, permettant ainsi de placer plus de contenu sur chaque page. Deux utilisateurs différents pourraient alors avoir l'impression de discuter de deux documents très différents en constatant que les numéros de page ne correspondent pas.
     </p>
 
-<h2>Exemple 2&#160;: la clause de conformité n'a pas de sens</h2>
+<h2>Exemple 2 : la clause de conformité n'a pas de sens</h2>
 
     <p>
     La spécification proposée possède une clause aux termes évasifs pour déterminer la conformité d'une application. Elle énonce qu'un lecteur conforme a besoin d'ouvrir un document conforme sans générer d'erreur et qu'un producteur conforme doit être capable de créer un seul document conforme. Toute fonctionnalité de la spécification implémentée par l'application doit se conformer aux définitions de la spécification proposée.<sup><a href="#5">5</a></sup>  Ces termes permettent de considérer des applications qui n'utilisent même pas de documents comme conformes.
@@ -53,7 +52,7 @@
     La clause de conformité de la spécification proposée est insuffisante parce que virtuellement toute application qui ouvre ou enregistre des fichiers peut être considérée comme conforme. Le degré d'utilisation des documents de chaque application n'est pas jugé, et cela permet des déclarations erronées sur la prise en charge de la spécification.<sup><a href="#7">7</a></sup>  La clause de conformité est l'une des parties les plus importantes d'une norme et le texte utilisé dans DIS-29500 est effectivement vide de sens.
     </p>
 
-<h2>Exemple 3&#160;: l'engagement sur une spécification ouverte (Open Specification Promise - OSP) de Microsoft ne constitue pas une couverture juridique suffisante à une interopérabilité complète</h2>
+<h2>Exemple 3 : l'engagement sur une spécification ouverte (Open Specification Promise - OSP) de Microsoft ne constitue pas une couverture juridique suffisante à une interopérabilité complète</h2>
 
     <p>
     Les fichiers MS-OOXML générés par MS Office 2007 sont porteurs de contenus qui sont définis par l'implémentation. Ceci est une cause de problèmes car le contenu non décrit dans la spécification proposée a un statut pour le moins opaque vis-à-vis de l'OSP. La couverture de l'OSP est limitée aux brevets «nécessaires à l'implémentation des portions des spécifications couvertes qui sont décrites en détail, et pas simplement référencées par une telle spécification.»<sup><a href="#8">8</a></sup>
@@ -78,19 +77,19 @@
     </p>
 
     <p>
-    De notre point de vue, il n'y a qu'une réponse possible de la part des organismes nationaux&#160;: sortir DIS-29500 du processus par voie express en votant «NON, avec commentaires», et sugérer des méthodes pour prendre en compte la spécification proposée par le processus ISO normal, idéalement par une convergence vers l'ISO/IEC 26300, le Format Open Document (ODF).
+    De notre point de vue, il n'y a qu'une réponse possible de la part des organismes nationaux : sortir DIS-29500 du processus par voie express en votant «NON, avec commentaires», et sugérer des méthodes pour prendre en compte la spécification proposée par le processus ISO normal, idéalement par une convergence vers l'ISO/IEC 26300, le Format Open Document (ODF).
     </p>
 
          <h2>Lectures complémentaires</h2>
 
     <ul>
       <li><a href="/activities/msooxml/msooxml-interoperability.html">Les misères de l'interopérabilité avec MS-OOXML</a></li>
-      <li><a href="/activities/msooxml/msooxml-idiosyncrasies.html">DIS-29500: Obsolète avant même d'avoir été utilisé&#160;?</a></li>
+      <li><a href="/activities/msooxml/msooxml-idiosyncrasies.html">DIS-29500: Obsolète avant même d'avoir été utilisé ?</a></li>
       <li><a href="/activities/msooxml/msooxml-converter-hoax.html">Le canular du convertisseur</a></li>
       <li><a href="/activities/msooxml/msooxml-questions-for-ms.html">Questions à Microsoft sur les Formats Ouverts</a></li>
     </ul>
 
-    <hr />
+    <hr/>
 
     <p class="footnote">
       [<a name="1">1</a>] Voir par exemple http://www.grokdoc.net/index.php/EOOXML_objections
@@ -105,12 +104,12 @@
     </p>
 
     <p class="footnote">
-      [<a name="4">4</a>] Le conteneur zip comprenait les fichiers suivants&#160;: 
+      [<a name="4">4</a>] Le conteneur zip comprenait les fichiers suivants : 
 ./Content_Types].xml, ./_rels/.rels, ./docProps/app.xml, ./docProps/core.xml, ./docProps/custom.xml, ./xl/_rels/workbook.xml.rels, ./xl/calcChain.xml, ./xl/printerSettings/printerSettings1.bin, ./xl/printerSettings/printerSettings2.bin, ./xl/printerSettings/printerSettings3.bin, ./xl/sharedStrings.xml, ./xl/styles.xml, ./xl/tables/table1.xml, ./xl/theme/theme1.xml, ./xl/workbook.xml, ./xl/worksheets/_rels/sheet1.xml.rels, ./xl/worksheets/_rels/sheet2.xml.rels, ./xl/worksheets/_rels/sheet3.xml.rels, ./xl/worksheets/sheet1.xml, ./xl/worksheets/sheet2.xml, ./xl/worksheets/sheet3.xml 
     </p>
 
     <p class="footnote">
-      [<a name="5">5</a>] Les mots exacts utilisés sont&#160;: «A conforming consumer shall not reject any conforming documents of at least one document conformance class. the document type (§4) expected by that application. A conforming producer shall be able to produce conforming documents of at least one document conformance class. A conforming application shall treat the information in Office Open XML documents in a manner consistent with the semantic definitions given in this Specification. An application's intended behavior need not require that application to process all of the information in an Office Open XML document. However, the information that it does process shall be processed in a manner that is consistent with the semantic definitions given in this Specification.», que l'on peut traduire par&#160;: «Un lecteur conforme ne devrait rejeter aucun document conforme à au moins l'une des classes de conformité. Le type de document(§4) attendu par cette application. Un producteur conforme devrait être capable de produire des documents conformes à au moins une des classes de conformité. Une application conforme devra traiter l'information des documents Office Open XML d'une ménière consistante avec les définitions sémantiques données dans cette spécification. Un comportement attendu d'une application ne doit pas requérir cette application pour traiter toute l'information contenue dans un document Office Open XML. Toutefois, l'information qu'elle traite devra l'être de manière sémantiquement consistante avec les définitions données dans cette spécification.»
+      [<a name="5">5</a>] Les mots exacts utilisés sont : «A conforming consumer shall not reject any conforming documents of at least one document conformance class. the document type (§4) expected by that application. A conforming producer shall be able to produce conforming documents of at least one document conformance class. A conforming application shall treat the information in Office Open XML documents in a manner consistent with the semantic definitions given in this Specification. An application's intended behavior need not require that application to process all of the information in an Office Open XML document. However, the information that it does process shall be processed in a manner that is consistent with the semantic definitions given in this Specification.», que l'on peut traduire par : «Un lecteur conforme ne devrait rejeter aucun document conforme à au moins l'une des classes de conformité. Le type de document(§4) attendu par cette application. Un producteur conforme devrait être capable de produire des documents conformes à au moins une des classes de conformité. Une application conforme devra traiter l'information des documents Office Open XML d'une ménière consistante avec les définitions sémantiques données dans cette spécification. Un comportement attendu d'une application ne doit pas requérir cette application pour traiter toute l'information contenue dans un document Office Open XML. Toutefois, l'information qu'elle traite devra l'être de manière sémantiquement consistante avec les définitions données dans cette spécification.»
     </p>
 
     <p class="footnote">
@@ -118,7 +117,7 @@
     </p>
 
     <p class="footnote">
-      [<a name="7">7</a>] Les exemples d'applications nommées par Microsoft comme prenant en charge la spécification proposée incluent&#160;: Apple Mac OS X, qui n'offre aucune prise en charge des images et des objets inclus. iWork, qui n'offre aucune prise en charge des feuilles de calcul, ne peut importer qu'un ensemble limité de documents et n'a aucune possibilité de les enregistrer. Google (Recherche/Prévisualisation) qui prend en charge les contenus texte, mais n'offre aucune prise en charge des mises en page, images ou objets inclus.
+      [<a name="7">7</a>] Les exemples d'applications nommées par Microsoft comme prenant en charge la spécification proposée incluent : Apple Mac OS X, qui n'offre aucune prise en charge des images et des objets inclus. iWork, qui n'offre aucune prise en charge des feuilles de calcul, ne peut importer qu'un ensemble limité de documents et n'a aucune possibilité de les enregistrer. Google (Recherche/Prévisualisation) qui prend en charge les contenus texte, mais n'offre aucune prise en charge des mises en page, images ou objets inclus.
     </p>
 
     <p class="footnote">
@@ -132,8 +131,7 @@
   </body>
 
       <translator>Michel Roche (Vercors - France)</translator>
-</html>
-<!--
+</html><!--
 Local Variables: ***
 mode: xml ***
 End: ***

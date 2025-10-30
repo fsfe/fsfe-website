@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <html>
   <version>2</version>
 
@@ -42,7 +42,7 @@
 
     <form action="/cgi-bin/perdiem.php" method="post" enctype="multipart/form-data" accept-charset="utf-8">
       <!-- Define default settings and rates. Currently Germany -->
-      <input type="hidden" name="defaults" value="€/0.2/0.4/0.4" />
+      <input type="hidden" name="defaults" value="€/0.2/0.4/0.4"/>
 
       <h2>1. Set general options</h2>
 
@@ -50,8 +50,8 @@
         <label class="col-sm-3">Employee:</label>
         <div class="col-sm-9">
           <select class="form-control col-sm-9" name="who" size="1" required="required">
-            <option />
-            <module id="fsfe-employee-options" />
+            <option/>
+            <module id="fsfe-employee-options"/>
           </select>
         </div>
       </div>
@@ -60,9 +60,9 @@
         <label class="col-sm-3">Activity:</label>
         <div class="col-sm-9">
           <select class="form-control col-sm-9" name="activity" id="activity" size="1" required="required" onChange="the_event = document.getElementById('activity').options[ document.getElementById('activity').selectedIndex ].dataset.event || ''; document.getElementById('event').value = the_event;">
-            <option />
-            <module id="fsfe-activities-options" />
-            <module id="fsfe-employeeactivity-options" />
+            <option/>
+            <module id="fsfe-activities-options"/>
+            <module id="fsfe-employeeactivity-options"/>
           </select>
         </div>
       </div>
@@ -70,7 +70,7 @@
       <div class="row form-group">
         <label class="col-sm-3" label-for="event">Event:</label>
         <div class="col-sm-9">
-          <input type="text" id="event" name="event" class="form-control" required="required" />
+          <input type="text" id="event" name="event" class="form-control" required="required"/>
         </div>
         <div id="event-help" class="col-sm-offset-3 col-sm-9">
           For activities involving more than one trip (e.g. multiple meetings),
@@ -83,22 +83,22 @@
       <!-- you can add new countries. For the individual amounts, set value="CC=$travel/$full,[...]" -->
       <div class="form-group">
         <label class="radio-inline">
-          <input type="radio" name="dest" value="14/28" checked="checked" /> Germany
+          <input type="radio" name="dest" value="14/28" checked="checked"/> Germany
         </label>
         <label class="radio-inline">
-          <input type="radio" name="dest" value="40/59" /> Belgium
+          <input type="radio" name="dest" value="40/59"/> Belgium
         </label>
         <label class="radio-inline">
-          <input type="radio" name="dest" value="28/42" /> Italy (except Milan)
+          <input type="radio" name="dest" value="28/42"/> Italy (except Milan)
         </label>
         <label class="radio-inline">
-          <input type="radio" name="dest" value="44/66" /> Sweden
+          <input type="radio" name="dest" value="44/66"/> Sweden
         </label>
         <label class="radio-inline">
-          <input type="radio" name="dest" value="other" id="destOther" /> Other
+          <input type="radio" name="dest" value="other" id="destOther"/> Other
         </label>
-        <input type="text" name="dest_other" placeholder="14/28" onchange="document.getElementById('destOther').checked='checked'" />
-        <p>(Other: per diem travel/full (e.g. "14/28" for Germany -> Germany). <a href="https://www.bundesfinanzministerium.de/Content/DE/Downloads/BMF_Schreiben/Steuerarten/Lohnsteuer/2024-12-02-steuerliche-behandlung-reisekosten-2025.pdf?__blob=publicationFile&amp;v=12">(See the different rates per country.)</a> [PDF]</p>
+        <input type="text" name="dest_other" placeholder="14/28" onchange="document.getElementById('destOther').checked='checked'"/>
+        <p>(Other: per diem travel/full (e.g. "14/28" for Germany -&gt; Germany). <a href="https://www.bundesfinanzministerium.de/Content/DE/Downloads/BMF_Schreiben/Steuerarten/Lohnsteuer/2024-12-02-steuerliche-behandlung-reisekosten-2025.pdf?__blob=publicationFile&amp;v=12">(See the different rates per country.)</a> [PDF]</p>
       </div>
 
       <h2>3. Which meal did you pay yourself?</h2>
@@ -112,7 +112,7 @@
         </tr>
         <tr class="descr">
           <td>Calculate this day</td>
-          <td>Name the day (e.g. by date) <br />Leave blank to autoname them</td>
+          <td>Name the day (e.g. by date) <br/>Leave blank to autoname them</td>
           <td>Did you pay this meal yourself?</td>
           <td>Did you pay this meal yourself?</td>
           <td>Did you pay this meal yourself?</td>
@@ -126,11 +126,11 @@
         </tr>
 
         <tr>
-          <td><input type="checkbox" name="use[out]" value="yes" checked="checked" /></td>
-          <td><input type="date" name="date[out]" /></td>
-          <td><input type="checkbox" name="break[out]" value="yes" checked="checked" /></td>
-          <td><input type="checkbox" name="lunch[out]" value="yes" checked="checked" /></td>
-          <td><input type="checkbox" name="dinner[out]" value="yes" checked="checked" /></td>
+          <td><input type="checkbox" name="use[out]" value="yes" checked="checked"/></td>
+          <td><input type="date" name="date[out]"/></td>
+          <td><input type="checkbox" name="break[out]" value="yes" checked="checked"/></td>
+          <td><input type="checkbox" name="lunch[out]" value="yes" checked="checked"/></td>
+          <td><input type="checkbox" name="dinner[out]" value="yes" checked="checked"/></td>
         </tr>
 
         <tr>
@@ -141,53 +141,53 @@
         </tr>
 
         <tr>
-          <td><input type="checkbox" name="use[1]" value="yes" /></td>
-          <td><input type="date" name="date[1]" /></td>
-          <td><input type="checkbox" name="break[1]" value="yes" checked="checked" /></td>
-          <td><input type="checkbox" name="lunch[1]" value="yes" checked="checked" /></td>
-          <td><input type="checkbox" name="dinner[1]" value="yes" checked="checked" /></td>
+          <td><input type="checkbox" name="use[1]" value="yes"/></td>
+          <td><input type="date" name="date[1]"/></td>
+          <td><input type="checkbox" name="break[1]" value="yes" checked="checked"/></td>
+          <td><input type="checkbox" name="lunch[1]" value="yes" checked="checked"/></td>
+          <td><input type="checkbox" name="dinner[1]" value="yes" checked="checked"/></td>
         </tr>
         <tr>
-          <td><input type="checkbox" name="use[2]" value="yes" /></td>
-          <td><input type="date" name="date[2]" /></td>
-          <td><input type="checkbox" name="break[2]" value="yes" checked="checked" /></td>
-          <td><input type="checkbox" name="lunch[2]" value="yes" checked="checked" /></td>
-          <td><input type="checkbox" name="dinner[2]" value="yes" checked="checked" /></td>
+          <td><input type="checkbox" name="use[2]" value="yes"/></td>
+          <td><input type="date" name="date[2]"/></td>
+          <td><input type="checkbox" name="break[2]" value="yes" checked="checked"/></td>
+          <td><input type="checkbox" name="lunch[2]" value="yes" checked="checked"/></td>
+          <td><input type="checkbox" name="dinner[2]" value="yes" checked="checked"/></td>
         </tr>
         <tr>
-          <td><input type="checkbox" name="use[3]" value="yes" /></td>
-          <td><input type="date" name="date[3]" /></td>
-          <td><input type="checkbox" name="break[3]" value="yes" checked="checked" /></td>
-          <td><input type="checkbox" name="lunch[3]" value="yes" checked="checked" /></td>
-          <td><input type="checkbox" name="dinner[3]" value="yes" checked="checked" /></td>
+          <td><input type="checkbox" name="use[3]" value="yes"/></td>
+          <td><input type="date" name="date[3]"/></td>
+          <td><input type="checkbox" name="break[3]" value="yes" checked="checked"/></td>
+          <td><input type="checkbox" name="lunch[3]" value="yes" checked="checked"/></td>
+          <td><input type="checkbox" name="dinner[3]" value="yes" checked="checked"/></td>
         </tr>
         <tr>
-          <td><input type="checkbox" name="use[4]" value="yes" /></td>
-          <td><input type="date" name="date[4]" /></td>
-          <td><input type="checkbox" name="break[4]" value="yes" checked="checked" /></td>
-          <td><input type="checkbox" name="lunch[4]" value="yes" checked="checked" /></td>
-          <td><input type="checkbox" name="dinner[4]" value="yes" checked="checked" /></td>
+          <td><input type="checkbox" name="use[4]" value="yes"/></td>
+          <td><input type="date" name="date[4]"/></td>
+          <td><input type="checkbox" name="break[4]" value="yes" checked="checked"/></td>
+          <td><input type="checkbox" name="lunch[4]" value="yes" checked="checked"/></td>
+          <td><input type="checkbox" name="dinner[4]" value="yes" checked="checked"/></td>
         </tr>
         <tr>
-          <td><input type="checkbox" name="use[5]" value="yes" /></td>
-          <td><input type="date" name="date[5]" /></td>
-          <td><input type="checkbox" name="break[5]" value="yes" checked="checked" /></td>
-          <td><input type="checkbox" name="lunch[5]" value="yes" checked="checked" /></td>
-          <td><input type="checkbox" name="dinner[5]" value="yes" checked="checked" /></td>
+          <td><input type="checkbox" name="use[5]" value="yes"/></td>
+          <td><input type="date" name="date[5]"/></td>
+          <td><input type="checkbox" name="break[5]" value="yes" checked="checked"/></td>
+          <td><input type="checkbox" name="lunch[5]" value="yes" checked="checked"/></td>
+          <td><input type="checkbox" name="dinner[5]" value="yes" checked="checked"/></td>
         </tr>
         <tr>
-          <td><input type="checkbox" name="use[6]" value="yes" /></td>
-          <td><input type="date" name="date[6]" /></td>
-          <td><input type="checkbox" name="break[6]" value="yes" checked="checked" /></td>
-          <td><input type="checkbox" name="lunch[6]" value="yes" checked="checked" /></td>
-          <td><input type="checkbox" name="dinner[6]" value="yes" checked="checked" /></td>
+          <td><input type="checkbox" name="use[6]" value="yes"/></td>
+          <td><input type="date" name="date[6]"/></td>
+          <td><input type="checkbox" name="break[6]" value="yes" checked="checked"/></td>
+          <td><input type="checkbox" name="lunch[6]" value="yes" checked="checked"/></td>
+          <td><input type="checkbox" name="dinner[6]" value="yes" checked="checked"/></td>
         </tr>
         <tr>
-          <td><input type="checkbox" name="use[7]" value="yes" /></td>
-          <td><input type="date" name="date[7]" /></td>
-          <td><input type="checkbox" name="break[7]" value="yes" checked="checked" /></td>
-          <td><input type="checkbox" name="lunch[7]" value="yes" checked="checked" /></td>
-          <td><input type="checkbox" name="dinner[7]" value="yes" checked="checked" /></td>
+          <td><input type="checkbox" name="use[7]" value="yes"/></td>
+          <td><input type="date" name="date[7]"/></td>
+          <td><input type="checkbox" name="break[7]" value="yes" checked="checked"/></td>
+          <td><input type="checkbox" name="lunch[7]" value="yes" checked="checked"/></td>
+          <td><input type="checkbox" name="dinner[7]" value="yes" checked="checked"/></td>
         </tr>
 
         <tr>
@@ -198,11 +198,11 @@
         </tr>
 
         <tr>
-          <td><input type="checkbox" name="use[return]" value="yes" /></td>
-          <td><input type="date" name="date[return]" /></td>
-          <td><input type="checkbox" name="break[return]" value="yes" checked="checked" /></td>
-          <td><input type="checkbox" name="lunch[return]" value="yes" checked="checked" /></td>
-          <td><input type="checkbox" name="dinner[return]" value="yes" checked="checked" /></td>
+          <td><input type="checkbox" name="use[return]" value="yes"/></td>
+          <td><input type="date" name="date[return]"/></td>
+          <td><input type="checkbox" name="break[return]" value="yes" checked="checked"/></td>
+          <td><input type="checkbox" name="lunch[return]" value="yes" checked="checked"/></td>
+          <td><input type="checkbox" name="dinner[return]" value="yes" checked="checked"/></td>
         </tr>
       </table>
 
@@ -211,7 +211,7 @@
       <p>If necessary, you can add additional remarks and notes to the statement you send.</p>
 
       <div class="form-group">
-        <textarea name="extra" class="form-control" rows="3"></textarea>
+        <textarea name="extra" class="form-control" rows="3"/>
       </div>
 
       <h2>5. Submit per diem report</h2>
@@ -223,13 +223,13 @@
 
       <div class="form-group">
         <label class="radio-inline">
-          <input type="radio" name="mailopt" value="normal" required="required" checked="checked" /> Send emails to finance team and me
+          <input type="radio" name="mailopt" value="normal" required="required" checked="checked"/> Send emails to finance team and me
         </label>
         <label class="radio-inline">
-          <input type="radio" name="mailopt" value="onlyme" required="required" /> Send email only to me
+          <input type="radio" name="mailopt" value="onlyme" required="required"/> Send email only to me
         </label>
         <label class="radio-inline">
-          <input type="radio" name="mailopt" value="none" required="required" /> Do not send any email at all
+          <input type="radio" name="mailopt" value="none" required="required"/> Do not send any email at all
         </label>
       </div>
 

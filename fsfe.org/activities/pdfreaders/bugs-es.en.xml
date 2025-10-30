@@ -1,575 +1,109 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
+<?xml version="1.0" encoding="utf-8"?>
 <set>
   <version>1</version>
 
 <buglist country="ES">
-<bug institution-name="Communidad Autónoma de la Región de Murcia"
-     institution-address="C/ Acisclo Díaz, s/n , Murcia"
-     institution-url="http://www.carm.es/neweb2/servlet/integra.servlets.ControlPublico?IDCONTENIDO=1621&amp;IDTIPO=100&amp;RASTRO=c$m1620"
-     opened="2010-09-13"
-     closed=""
-     name="Lucas Braun"
-     group=""
-     />
+<bug institution-name="Communidad Autónoma de la Región de Murcia" institution-address="C/ Acisclo Díaz, s/n , Murcia" institution-url="http://www.carm.es/neweb2/servlet/integra.servlets.ControlPublico?IDCONTENIDO=1621&amp;IDTIPO=100&amp;RASTRO=c$m1620" opened="2010-09-13" closed="" name="Lucas Braun" group=""/>
 
-<bug institution-name="Junta de Andalucía"
-     institution-address="Avenida Diego Martínez Barrio, 10. 41071 Sevilla"
-     institution-url="http://www.juntadeandalucia.es/fundacionprogresoysalud/index.php?option=com_content&amp;task=view&amp;id=10&amp;Itemid=66"
-     opened="2012-09-18"
-     closed=""
-     name="Pablo Castellano"
-     group=""
-     comment=""
-     />
+<bug institution-name="Junta de Andalucía" institution-address="Avenida Diego Martínez Barrio, 10. 41071 Sevilla" institution-url="http://www.juntadeandalucia.es/fundacionprogresoysalud/index.php?option=com_content&amp;task=view&amp;id=10&amp;Itemid=66" opened="2012-09-18" closed="" name="Pablo Castellano" group="" comment=""/>
 
-<bug institution-name="Ministerio del Interior"
-     institution-address="Paseo de la Castellana 5, Madrid"
-     institution-url="https://sede.mir.gob.es/procedimientos/Ayuda/requisitos_tecnicos.html"
-     opened="2012-09-18"
-     closed=""
-     name="Pablo Castellano"
-     group=""
-     comment=""
-     />
+<bug institution-name="Ministerio del Interior" institution-address="Paseo de la Castellana 5, Madrid" institution-url="https://sede.mir.gob.es/procedimientos/Ayuda/requisitos_tecnicos.html" opened="2012-09-18" closed="" name="Pablo Castellano" group="" comment=""/>
 
 
-<bug institution-name="Biblioteca Nacional"
-     institution-address="Pº de Recoletos, 20-22 28071 Madrid"
-     institution-url="http://www.bne.es"
-     opened="2012-09-18"
-     closed=""
-     name="Ana Galán"
-     group="FSFE"
-     comment="Though it is doing Ok on its virtual branch"
-     />
+<bug institution-name="Biblioteca Nacional" institution-address="Pº de Recoletos, 20-22 28071 Madrid" institution-url="http://www.bne.es" opened="2012-09-18" closed="" name="Ana Galán" group="FSFE" comment="Though it is doing Ok on its virtual branch"/>
 
-<bug institution-name="Universidad de Málaga"
-     institution-address="Avda. Cervantes,2 - 29071 MÁLAGA"
-     institution-url="http://www.uma.es/servicio-de-investigacion/info/19996/problemas-frecuentes-con-los-formularios-pdf/"
-     opened="2010-09-14"
-     closed=""
-     name="Pablo Castellano"
-     group=""
-     comment="Updated link (above it was broken) 2015-05-03"
-     />
+<bug institution-name="Universidad de Málaga" institution-address="Avda. Cervantes,2 - 29071 MÁLAGA" institution-url="http://www.uma.es/servicio-de-investigacion/info/19996/problemas-frecuentes-con-los-formularios-pdf/" opened="2010-09-14" closed="" name="Pablo Castellano" group="" comment="Updated link (above it was broken) 2015-05-03"/>
 
-<bug institution-name="Ministerio de Cultura"
-     institution-address="Plaza del Rey, 1 28004 Madrid"
-     institution-url="http://www.mecd.gob.es/servicios-al-ciudadano-mecd/catalogo/cultura/biblioteca-y-centros-de-documentacion/cdcul/publicaciones/guia-lector.html"
-     opened="2012-09-18"
-     closed=""
-     name="Pablo Castellano"
-     group=""
-     comment="Updated link (above it was broken) 2015-05-03"
-     />
+<bug institution-name="Ministerio de Cultura" institution-address="Plaza del Rey, 1 28004 Madrid" institution-url="http://www.mecd.gob.es/servicios-al-ciudadano-mecd/catalogo/cultura/biblioteca-y-centros-de-documentacion/cdcul/publicaciones/guia-lector.html" opened="2012-09-18" closed="" name="Pablo Castellano" group="" comment="Updated link (above it was broken) 2015-05-03"/>
 
-<bug institution-name="Ministerio de Defensa"
-     institution-address="Paseo de la Castellana, 109 Madrid"
-     institution-url="http://sede.defensa.gob.es/acceda/prehome.html"
-     opened="2012-09-18"
-     closed="2015-05-03"
-     name="Pablo Castellano"
-     group=""
-     closedby="Linda Martinez"
-     comment="Verified reference to the page pdfreaders.org"
-     />
+<bug institution-name="Ministerio de Defensa" institution-address="Paseo de la Castellana, 109 Madrid" institution-url="http://sede.defensa.gob.es/acceda/prehome.html" opened="2012-09-18" closed="2015-05-03" name="Pablo Castellano" group="" closedby="Linda Martinez" comment="Verified reference to the page pdfreaders.org"/>
 
-<bug institution-name="Ministerio de Industria, Turismo y Comercio"
-     institution-address="P. de la Castellana 162. 28046 , Madrid"
-     institution-url="http://www.comercio.gob.es/en/Pages/accesibilidad.aspx"
-     opened="2010-09-14"
-     closed="2012-09-25"
-     name="Pablo Castellano"
-     group=""
-     comment="added a comment about free PDF readers and FSFE"
-     />
+<bug institution-name="Ministerio de Industria, Turismo y Comercio" institution-address="P. de la Castellana 162. 28046 , Madrid" institution-url="http://www.comercio.gob.es/en/Pages/accesibilidad.aspx" opened="2010-09-14" closed="2012-09-25" name="Pablo Castellano" group="" comment="added a comment about free PDF readers and FSFE"/>
 
-<bug institution-name="Ministerio de Sanidad y Política Social"
-     institution-address="Paseo del Prado, 18-20, planta baja, esquina con Lope de Vega. 28014 Madrid."
-     institution-url="http://www.msps.es/accesibilidad/home.htm"
-     opened="2010-09-14"
-     closed=""
-     name="Pablo Castellano"
-     group=""
-     comment=""
-     />
+<bug institution-name="Ministerio de Sanidad y Política Social" institution-address="Paseo del Prado, 18-20, planta baja, esquina con Lope de Vega. 28014 Madrid." institution-url="http://www.msps.es/accesibilidad/home.htm" opened="2010-09-14" closed="" name="Pablo Castellano" group="" comment=""/>
 
-<bug institution-name="Generalitat de catalunya"
-     institution-address="Pg. de Gràcia, 105 08008 Barcelona"
-     institution-url="http://www.gencat.cat/web/cas/accessibilitat/connectors.htm"
-     opened="2010-09-14"
-     closed="2011-09-20"
-     name="josep gallart"
-     group=""
-     comment="added a link to Evince, Okular and PDFreaders.org"
-     />
+<bug institution-name="Generalitat de catalunya" institution-address="Pg. de Gràcia, 105 08008 Barcelona" institution-url="http://www.gencat.cat/web/cas/accessibilitat/connectors.htm" opened="2010-09-14" closed="2011-09-20" name="josep gallart" group="" comment="added a link to Evince, Okular and PDFreaders.org"/>
 
-<bug institution-name="Xunta de Galicia"
-     institution-address="R/ San Caetano s/n 15704 Santiago de Compostela (A Coruña)"
-     institution-url="https://sede.xunta.es/accesibilidade"
-     opened="2010-09-15"
-     closed=""
-     name="Alberto Nuñez Feijóo"
-     group=""
-     comment="Updated link (above it was broken) 2015-05-03"
-     />
+<bug institution-name="Xunta de Galicia" institution-address="R/ San Caetano s/n 15704 Santiago de Compostela (A Coruña)" institution-url="https://sede.xunta.es/accesibilidade" opened="2010-09-15" closed="" name="Alberto Nuñez Feijóo" group="" comment="Updated link (above it was broken) 2015-05-03"/>
 
-<bug institution-name="Consellería de Medioambiente (Xunta de Galicia)"
-     institution-address="R/ San Lázaro s/n 15707 Santiago de Compostela (A Coruña)"
-     institution-url="http://www.cmati.xunta.es/conformidade-a-estandares-e-accesibilidade-desta-web"
-     opened="2010-09-15"
-     closed=""
-     name="Agustín Hernández Fernández de Rojas"
-     group=""
-     comment="Updated link (above it was broken) 2015-05-03"
-     />
+<bug institution-name="Consellería de Medioambiente (Xunta de Galicia)" institution-address="R/ San Lázaro s/n 15707 Santiago de Compostela (A Coruña)" institution-url="http://www.cmati.xunta.es/conformidade-a-estandares-e-accesibilidade-desta-web" opened="2010-09-15" closed="" name="Agustín Hernández Fernández de Rojas" group="" comment="Updated link (above it was broken) 2015-05-03"/>
 
-<bug institution-name="Consellería de Economía e Industria (Xunta de Galicia)"
-     institution-address="San Caetano, s/n, bloque 5-planta 4ª. 15781 - Santiago de Compostela (A Coruña)"
-     institution-url="http://economiaeindustria.xunta.es/accesibilidade"
-     opened="2010-09-15"
-     closed=""
-     name="Javier Jorge Guerra Fernández"
-     group=""
-     comment="Updated link (above it was broken) 2015-05-03"
-     />
+<bug institution-name="Consellería de Economía e Industria (Xunta de Galicia)" institution-address="San Caetano, s/n, bloque 5-planta 4ª. 15781 - Santiago de Compostela (A Coruña)" institution-url="http://economiaeindustria.xunta.es/accesibilidade" opened="2010-09-15" closed="" name="Javier Jorge Guerra Fernández" group="" comment="Updated link (above it was broken) 2015-05-03"/>
 
-<bug institution-name="Consellería de Educación e Ordenación Universitaria (Xunta de Galicia)"
-     institution-address="Edificios Administrativos San Caetano, s/n 15704 Santiago de Compostela (A Coruña)"
-     institution-url="http://www.edu.xunta.es/web/accesibility"
-     opened="2010-09-15"
-     closed=""
-     name="Jesús Vázquez Abad"
-     group=""
-     comment="Updated link (above it was broken) 2015-05-04"
-     />
+<bug institution-name="Consellería de Educación e Ordenación Universitaria (Xunta de Galicia)" institution-address="Edificios Administrativos San Caetano, s/n 15704 Santiago de Compostela (A Coruña)" institution-url="http://www.edu.xunta.es/web/accesibility" opened="2010-09-15" closed="" name="Jesús Vázquez Abad" group="" comment="Updated link (above it was broken) 2015-05-04"/>
 
-<bug institution-name="SERGAS - Consellería de Sanidade (Xunta de Galicia)"
-     institution-address="San Lázaro, s/n 15703 Santiago de Compostela (A Coruña)"
-     institution-url="http://www.sergas.es/MostrarContidos_N3_T01.aspx?IdPaxina=40080"
-     opened="2010-09-15"
-     closed=""
-     name="Pilar Farjas Abadía"
-     group=""
-     comment="Updated link (above it was broken) 2015-05-04"
-     />
+<bug institution-name="SERGAS - Consellería de Sanidade (Xunta de Galicia)" institution-address="San Lázaro, s/n 15703 Santiago de Compostela (A Coruña)" institution-url="http://www.sergas.es/MostrarContidos_N3_T01.aspx?IdPaxina=40080" opened="2010-09-15" closed="" name="Pilar Farjas Abadía" group="" comment="Updated link (above it was broken) 2015-05-04"/>
 
-<bug institution-name="Consellería de Traballo e Benestar (Xunta de Galicia)"
-     institution-address="San Lázaro, s/n 15781 Santiago de Compostela  (A Coruña)"
-     institution-url="http://traballo.xunta.es/pautas-accesibilidade"
-     opened="2010-09-15"
-     closed=""
-     name="Beatriz Mato Otero"
-     group=""
-     comment="Updated link (above it was broken) 2015-05-04"
-     />
+<bug institution-name="Consellería de Traballo e Benestar (Xunta de Galicia)" institution-address="San Lázaro, s/n 15781 Santiago de Compostela  (A Coruña)" institution-url="http://traballo.xunta.es/pautas-accesibilidade" opened="2010-09-15" closed="" name="Beatriz Mato Otero" group="" comment="Updated link (above it was broken) 2015-05-04"/>
 
-<bug institution-name="Ministerio de Educación "
-     institution-address="maria josefa 5 4d 33209 gijon"
-     institution-url="http://www.mecd.gob.es/accesibilidad-mecd/"
-     opened="2010-09-15"
-     closed=""
-     name="Fernando Jose Gonzalez blanco"
-     group="fsfe.org"
-     comment="Updated link (above it was broken) 2015-05-04"
-     />
+<bug institution-name="Ministerio de Educación " institution-address="maria josefa 5 4d 33209 gijon" institution-url="http://www.mecd.gob.es/accesibilidad-mecd/" opened="2010-09-15" closed="" name="Fernando Jose Gonzalez blanco" group="fsfe.org" comment="Updated link (above it was broken) 2015-05-04"/>
 
-<bug institution-name="Consellería de Facenda (Xunta de Galicia)"
-     institution-address="San Caetano, s/n 15704 Santiago de Compostela (A Coruña)"
-     institution-url="http://www.conselleriadefacenda.es/web/portal/oficina-virtual-requisitos-acceso"
-     opened="2010-09-15"
-     closed=""
-     name="Marta Fernández Currás"
-     group=""
-     comment=""
-     />
-<bug institution-name="Euskal Herriko Agintaritzaren Aldizkaria - EHAA :: Boletín Oficial del País Vasco - BOPV "
-     institution-address="PUERTO AZÁZETA, S/N, 01013 VITORIA-GASTEIZ"
-     institution-url="http://www.euskadi.net/cgi-bin_k54/verhtml?c&amp;help02"
-     opened="2010-09-16"
-     closed=""
-     name="anonym"
-     group=""
-     comment=""
-     />
-<bug institution-name="Universidad de Extremadura"
-     institution-address="Avda. de Elvas s/n 06006 Badajoz"
-     institution-url="http://www.unex.es/organizacion/servicios-universitarios/servicios/siue/archivos/ficheros/correo/descarga"
-     opened="2010-09-18"
-     closed=""
-     name="Pablo Castellano"
-     group=""
-     comment="Updated link (above it was broken) 2015-05-04"
-     />
+<bug institution-name="Consellería de Facenda (Xunta de Galicia)" institution-address="San Caetano, s/n 15704 Santiago de Compostela (A Coruña)" institution-url="http://www.conselleriadefacenda.es/web/portal/oficina-virtual-requisitos-acceso" opened="2010-09-15" closed="" name="Marta Fernández Currás" group="" comment=""/>
+<bug institution-name="Euskal Herriko Agintaritzaren Aldizkaria - EHAA :: Boletín Oficial del País Vasco - BOPV " institution-address="PUERTO AZÁZETA, S/N, 01013 VITORIA-GASTEIZ" institution-url="http://www.euskadi.net/cgi-bin_k54/verhtml?c&amp;help02" opened="2010-09-16" closed="" name="anonym" group="" comment=""/>
+<bug institution-name="Universidad de Extremadura" institution-address="Avda. de Elvas s/n 06006 Badajoz" institution-url="http://www.unex.es/organizacion/servicios-universitarios/servicios/siue/archivos/ficheros/correo/descarga" opened="2010-09-18" closed="" name="Pablo Castellano" group="" comment="Updated link (above it was broken) 2015-05-04"/>
 
-<bug institution-name="Ministerio del Interior"
-     institution-address="C/ Sagasta, 22 28004 - Madrid"
-     institution-url="http://www.interior.gob.es/web/interior/accesibilidad"
-     opened="2010-09-19"
-     closed=""
-     name="Pablo Machon"
-     group="FSFE &amp; Free Knowledge Foundation"
-     comment="Updated link (above it was broken) 2015-05-04"
-     />
+<bug institution-name="Ministerio del Interior" institution-address="C/ Sagasta, 22 28004 - Madrid" institution-url="http://www.interior.gob.es/web/interior/accesibilidad" opened="2010-09-19" closed="" name="Pablo Machon" group="FSFE &amp; Free Knowledge Foundation" comment="Updated link (above it was broken) 2015-05-04"/>
 
-<bug institution-name="MINISTERIO DE SANIDAD Y POLÍTICA SOCIAL"
-     institution-address="Pº del Prado, 18-20 E-28071 - Madrid"
-     institution-url="http://registrotelematico.msps.es/"
-     opened="2010-09-19"
-     closed=""
-     name="Pablo Machon"
-     group="FSFE &amp; Free Knowledge Foundation"
-     comment=""
-     />
+<bug institution-name="MINISTERIO DE SANIDAD Y POLÍTICA SOCIAL" institution-address="Pº del Prado, 18-20 E-28071 - Madrid" institution-url="http://registrotelematico.msps.es/" opened="2010-09-19" closed="" name="Pablo Machon" group="FSFE &amp; Free Knowledge Foundation" comment=""/>
 
-<bug institution-name="Ministerio de Asuntos Exteriores y de Cooperación de España"
-     institution-address="c/Juan de Mena, 4. MADRID, 28014"
-     institution-url="http://www.exteriores.gob.es/portal/es/paginas/accesibilidad.aspx"
-     opened="2010-09-19"
-     closed=""
-     name="Pablo Machon"
-     group="FSFE &amp; Free Knowledge Foundation"
-     comment="Updated link (above it was broken) 2015-05-04"
-     />
+<bug institution-name="Ministerio de Asuntos Exteriores y de Cooperación de España" institution-address="c/Juan de Mena, 4. MADRID, 28014" institution-url="http://www.exteriores.gob.es/portal/es/paginas/accesibilidad.aspx" opened="2010-09-19" closed="" name="Pablo Machon" group="FSFE &amp; Free Knowledge Foundation" comment="Updated link (above it was broken) 2015-05-04"/>
 
-<bug institution-name="Ministerio de Economía y Hacienda"
-     institution-address="Alcalá, 9 - Madrid"
-     institution-url="http://www.icac.meh.es/guianavegacion.aspx"
-     opened="2010-09-19"
-     closed=""
-     name="Pablo Machon"
-     group="FSFE &amp; Free Knowledge Foundation"
-     comment="Updated link (above it was broken) 2015-05-04"
-     />
-<bug institution-name="Consejería Educación Madrid / DAT Norte"
-     institution-address="Avenida de Valencia s/n 28702 - San Sebastián de los Reyes - Madrid"
-     institution-url="http://www.madrid.org/dat_norte/WEBDATMARCOS/sie/normativa_loe/normativa_loe.htm"
-     opened="2010-09-19"
-     closed=""
-     name="Pablo Machon"
-     group="FSFE &amp; Free Knowledge Foundation"
-     comment=""
-     />
+<bug institution-name="Ministerio de Economía y Hacienda" institution-address="Alcalá, 9 - Madrid" institution-url="http://www.icac.meh.es/guianavegacion.aspx" opened="2010-09-19" closed="" name="Pablo Machon" group="FSFE &amp; Free Knowledge Foundation" comment="Updated link (above it was broken) 2015-05-04"/>
+<bug institution-name="Consejería Educación Madrid / DAT Norte" institution-address="Avenida de Valencia s/n 28702 - San Sebastián de los Reyes - Madrid" institution-url="http://www.madrid.org/dat_norte/WEBDATMARCOS/sie/normativa_loe/normativa_loe.htm" opened="2010-09-19" closed="" name="Pablo Machon" group="FSFE &amp; Free Knowledge Foundation" comment=""/>
 
-<bug institution-name="Comunidad de Madrid"
-     institution-address="C/ Gran Vía, 3. Madrid 28013"
-     institution-url="http://www.madrid.org/cs/Satellite?idPaginaAsociada=1142319763485&amp;pagename=PortalInmigrante%2FPage%2FINMI_pintarContenidoFinal&amp;language=en&amp;cid=1142319763485"
-     opened="2010-09-19"
-     closed=""
-     name="Pablo Machon"
-     group="FSFE &amp; Free Knowledge Foundation"
-     comment=""
-     />
-<bug institution-name="Universidad de Castilla-La Mancha"
-     institution-address="C/ Altagracia, 50 13003 Ciudad Real"
-     institution-url="http://automatricula.uclm.es"
-     opened="2010-09-20"
-     closed=""
-     name="Pablo Castellano"
-     group=""
-     comment=""
-     />
-<bug institution-name="Universidad Politécnica de Madrid"
-     institution-address="C/ Ramiro de Maeztu, 7 28040, Madrid"
-     institution-url="https://www.upm.es/preinscripcion_pas/"
-     opened="2010-09-20"
-     closed=""
-     name="Pablo Castellano"
-     group=""
-     comment=""
-     />
+<bug institution-name="Comunidad de Madrid" institution-address="C/ Gran Vía, 3. Madrid 28013" institution-url="http://www.madrid.org/cs/Satellite?idPaginaAsociada=1142319763485&amp;pagename=PortalInmigrante%2FPage%2FINMI_pintarContenidoFinal&amp;language=en&amp;cid=1142319763485" opened="2010-09-19" closed="" name="Pablo Machon" group="FSFE &amp; Free Knowledge Foundation" comment=""/>
+<bug institution-name="Universidad de Castilla-La Mancha" institution-address="C/ Altagracia, 50 13003 Ciudad Real" institution-url="http://automatricula.uclm.es" opened="2010-09-20" closed="" name="Pablo Castellano" group="" comment=""/>
+<bug institution-name="Universidad Politécnica de Madrid" institution-address="C/ Ramiro de Maeztu, 7 28040, Madrid" institution-url="https://www.upm.es/preinscripcion_pas/" opened="2010-09-20" closed="" name="Pablo Castellano" group="" comment=""/>
 
-<bug institution-name="Universidad Complutense de Madrid"
-     institution-address="Ciudad Universitaria - 28040 Madrid"
-     institution-url="https://metanet.ucm.es/profesor/"
-     opened="2010-09-20"
-     closed=""
-     name="Pablo Castellano"
-     group=""
-     comment=""
-     />
+<bug institution-name="Universidad Complutense de Madrid" institution-address="Ciudad Universitaria - 28040 Madrid" institution-url="https://metanet.ucm.es/profesor/" opened="2010-09-20" closed="" name="Pablo Castellano" group="" comment=""/>
 
-<bug institution-name="Universidad Rey Juan Carlos"
-     institution-address="C/ Tulipán, s/n Móstoles 28933"
-     institution-url="https://gestion.urjc.es/Redcampus/faq.htm"
-     opened="2010-09-20"
-     closed=""
-     name="Pablo Castellano"
-     group=""
-     comment=""
-     />
+<bug institution-name="Universidad Rey Juan Carlos" institution-address="C/ Tulipán, s/n Móstoles 28933" institution-url="https://gestion.urjc.es/Redcampus/faq.htm" opened="2010-09-20" closed="" name="Pablo Castellano" group="" comment=""/>
 
-<bug institution-name="Universidad Autónoma de Madrid"
-     institution-address="Ciudad Universitaria de Cantoblanco Ctra. de Colmenar km. 15 28049, Madrid"
-     institution-url="http://biblioteca.uam.es/derecho/examenes.html"
-     opened="2010-09-20"
-     closed=""
-     name="Pablo Castellano"
-     group=""
-     comment=""
-     />
+<bug institution-name="Universidad Autónoma de Madrid" institution-address="Ciudad Universitaria de Cantoblanco Ctra. de Colmenar km. 15 28049, Madrid" institution-url="http://biblioteca.uam.es/derecho/examenes.html" opened="2010-09-20" closed="" name="Pablo Castellano" group="" comment=""/>
 
-<bug institution-name="Universidad Politécnica de Cataluña"
-     institution-address="C. Jordi Girona, 31. 08034 Barcelona."
-     institution-url="http://aransa.upc.es/tmma/node6.html"
-     opened="2010-09-20"
-     closed=""
-     name="Pablo Castellano"
-     group=""
-     comment=""
-     />
+<bug institution-name="Universidad Politécnica de Cataluña" institution-address="C. Jordi Girona, 31. 08034 Barcelona." institution-url="http://aransa.upc.es/tmma/node6.html" opened="2010-09-20" closed="" name="Pablo Castellano" group="" comment=""/>
 
-<bug institution-name="Universidad Autónoma de Barcelona"
-     institution-address="Plaza Cívica, Campus de la UAB Bellaterra Barcelona"
-     institution-url="https://cv.uab.es/?service=&amp;pagina=preguntes#faqALM1"
-     opened="2010-09-20"
-     closed=""
-     name="Pablo Castellano"
-     group=""
-     comment=""
-     />
+<bug institution-name="Universidad Autónoma de Barcelona" institution-address="Plaza Cívica, Campus de la UAB Bellaterra Barcelona" institution-url="https://cv.uab.es/?service=&amp;pagina=preguntes#faqALM1" opened="2010-09-20" closed="" name="Pablo Castellano" group="" comment=""/>
 
-<bug institution-name="Universidad de Valencia"
-     institution-address="Av. Blasco Ibáñez, 13 46010 Valencia"
-     institution-url="http://biblioteca.uv.es/castellano/recursos_electronicos/llibres/guias/manual_netlibrary.htm"
-     opened="2010-09-20"
-     closed=""
-     name="Pablo Castellano"
-     group=""
-     comment=""
-     />
+<bug institution-name="Universidad de Valencia" institution-address="Av. Blasco Ibáñez, 13 46010 Valencia" institution-url="http://biblioteca.uv.es/castellano/recursos_electronicos/llibres/guias/manual_netlibrary.htm" opened="2010-09-20" closed="" name="Pablo Castellano" group="" comment=""/>
 
-<bug institution-name="Universidad de Valladolid"
-     institution-address="Plaza de Sta. Cruz, nº 8 47002. Valladolid"
-     institution-url="http://www.uva.es/cocoon_uva/impe/uva/contenido?pag=/portal/administracion/ayuda"
-     opened="2010-09-20"
-     closed="2010-12-09"
-     name="Pablo Castellano"
-     group=""
-     comment="listed BePDF Evince ePDFView psview pdfreaders.org"
-     />
+<bug institution-name="Universidad de Valladolid" institution-address="Plaza de Sta. Cruz, nº 8 47002. Valladolid" institution-url="http://www.uva.es/cocoon_uva/impe/uva/contenido?pag=/portal/administracion/ayuda" opened="2010-09-20" closed="2010-12-09" name="Pablo Castellano" group="" comment="listed BePDF Evince ePDFView psview pdfreaders.org"/>
 
-<bug institution-name="Universidad de Sevilla"
-     institution-address="C/ San Fernando, 4 41004 Sevilla"
-     institution-url="http://www.us.es/accesibilidad"
-     opened="2010-09-20"
-     closed=""
-     name="Pablo Castellano"
-     group=""
-     comment="Updated link (above it was broken) 2015-05-04"
-     />
+<bug institution-name="Universidad de Sevilla" institution-address="C/ San Fernando, 4 41004 Sevilla" institution-url="http://www.us.es/accesibilidad" opened="2010-09-20" closed="" name="Pablo Castellano" group="" comment="Updated link (above it was broken) 2015-05-04"/>
 
-<bug institution-name="Universidad de Granada"
-     institution-address="Hospital Real. Cuesta del Hospicio, s/n. Granada 18071"
-     institution-url="http://www.ugr.es/~dpto_prev/revista/adobe.html"
-     opened="2010-09-20"
-     closed=""
-     name="Pablo Castellano"
-     group=""
-     comment=""
-     />
-<bug institution-name="Radiotelevisión Española"
-     institution-address="Prado del Rey, Avenida de la Radio Televisión 4, Pozuelo de Alarcón, Madrid"
-     institution-url="http://www.rtve.es/oficial/orquesta_coro/convocatorias.htm"
-     opened="2010-09-21"
-     closed=""
-     name="Pablo Castellano"
-     group=""
-     comment=""
-     />
+<bug institution-name="Universidad de Granada" institution-address="Hospital Real. Cuesta del Hospicio, s/n. Granada 18071" institution-url="http://www.ugr.es/~dpto_prev/revista/adobe.html" opened="2010-09-20" closed="" name="Pablo Castellano" group="" comment=""/>
+<bug institution-name="Radiotelevisión Española" institution-address="Prado del Rey, Avenida de la Radio Televisión 4, Pozuelo de Alarcón, Madrid" institution-url="http://www.rtve.es/oficial/orquesta_coro/convocatorias.htm" opened="2010-09-21" closed="" name="Pablo Castellano" group="" comment=""/>
 
-<bug institution-name="Aeropuertos Españoles y Navegación Aérea (AENA)"
-     institution-address="C/ Arturo Soria 109, 28043 Madrid"
-     institution-url="http://www.aena.es/csee/Satellite/PopUp_Aena/es/NotaAdicional_FA/1237550600713//Accesibilidad.html?nameliteral=Accesibilidad"
-     opened="2010-09-21"
-     closed=""
-     name="Pablo Castellano"
-     group=""
-     comment="Updated link (above it was broken) 2015-05-04"
-     />
+<bug institution-name="Aeropuertos Españoles y Navegación Aérea (AENA)" institution-address="C/ Arturo Soria 109, 28043 Madrid" institution-url="http://www.aena.es/csee/Satellite/PopUp_Aena/es/NotaAdicional_FA/1237550600713//Accesibilidad.html?nameliteral=Accesibilidad" opened="2010-09-21" closed="" name="Pablo Castellano" group="" comment="Updated link (above it was broken) 2015-05-04"/>
 
-<bug institution-name="Comisión Nacional de Energía"
-     institution-address="C/ Alcalá, 47 - 28014 Madrid"
-     institution-url="http://www.cne.es/cne/contenido.jsp?id_nodo=191"
-     opened="2010-09-21"
-     closed=""
-     name="Pablo Castellano"
-     group=""
-     comment=""
-     />
+<bug institution-name="Comisión Nacional de Energía" institution-address="C/ Alcalá, 47 - 28014 Madrid" institution-url="http://www.cne.es/cne/contenido.jsp?id_nodo=191" opened="2010-09-21" closed="" name="Pablo Castellano" group="" comment=""/>
 
-<bug institution-name="Agencia Española de Protección de Datos"
-     institution-address="C/ Jorge Juan 6, 28001, Madrid."
-     institution-url="http://www.agpd.es/portalwebAGPD/canaldocumentacion/recomendaciones/index-ides-idphp.php"
-     opened="2010-09-21"
-     closed=""
-     name="Pablo Castellano"
-     group=""
-     comment="Updated link (above it was broken) 2015-05-04"
-     />
+<bug institution-name="Agencia Española de Protección de Datos" institution-address="C/ Jorge Juan 6, 28001, Madrid." institution-url="http://www.agpd.es/portalwebAGPD/canaldocumentacion/recomendaciones/index-ides-idphp.php" opened="2010-09-21" closed="" name="Pablo Castellano" group="" comment="Updated link (above it was broken) 2015-05-04"/>
 
-<bug institution-name="Fábrica Nacional de Moneda y Timbre - Real Casa de la Moneda"
-     institution-address="c/ Jorge Juan, 106. 28009 Madrid"
-     institution-url="http://www.fnmt.es/descarga-de-software-de-ayuda"
-     opened="2010-09-21"
-     closed=""
-     name="Pablo Castellano"
-     group=""
-     comment="Updated link (above it was broken) 2015-05-04"
-     />
+<bug institution-name="Fábrica Nacional de Moneda y Timbre - Real Casa de la Moneda" institution-address="c/ Jorge Juan, 106. 28009 Madrid" institution-url="http://www.fnmt.es/descarga-de-software-de-ayuda" opened="2010-09-21" closed="" name="Pablo Castellano" group="" comment="Updated link (above it was broken) 2015-05-04"/>
 
-<bug institution-name="Universidad de León"
-     institution-address="Avda. de la Facultad de Veterinaria 25, 24071 León"
-     institution-url="http://www.unileon.es/index.php?elementoID=677"
-     opened="2010-09-21"
-     closed=""
-     name="Pablo Castellano"
-     group=""
-     comment=""
-     />
+<bug institution-name="Universidad de León" institution-address="Avda. de la Facultad de Veterinaria 25, 24071 León" institution-url="http://www.unileon.es/index.php?elementoID=677" opened="2010-09-21" closed="" name="Pablo Castellano" group="" comment=""/>
 
-<bug institution-name="Ministerio de la Presidencia"
-     institution-address="Avenida Puerta De Hierro, S/n 28040 Madrid"
-     institution-url="http://www.mpr.gob.es/Paginas/index.aspx"
-     opened="2010-09-21"
-     closed=""
-     name="Pablo Castellano"
-     group=""
-     comment="Updated link (above it was broken) 2015-05-04"
-     />
-<bug institution-name="Universidad Jaime I"
-     institution-address="Av. de Vicent Sos Baynat s/n, 12071 Castelló de la Plana"
-     institution-url="http://www.uji.es/sw/acrobatreader/"
-     opened="2010-09-22"
-     closed=""
-     name="Pablo Castellano"
-     group=""
-     comment=""
-     />
+<bug institution-name="Ministerio de la Presidencia" institution-address="Avenida Puerta De Hierro, S/n 28040 Madrid" institution-url="http://www.mpr.gob.es/Paginas/index.aspx" opened="2010-09-21" closed="" name="Pablo Castellano" group="" comment="Updated link (above it was broken) 2015-05-04"/>
+<bug institution-name="Universidad Jaime I" institution-address="Av. de Vicent Sos Baynat s/n, 12071 Castelló de la Plana" institution-url="http://www.uji.es/sw/acrobatreader/" opened="2010-09-22" closed="" name="Pablo Castellano" group="" comment=""/>
 
-<bug institution-name="Deputación de Pontevedra"
-     institution-address="Pazo Deputación Provincial. Avda. Montero Ríos, s/n., C.P. 36071, Pontevedra"
-     institution-url="http://bop.depontevedra.es/html/ga/"
-     opened="2010-09-25"
-     closed=""
-     name="Pablo César Galdo Regueiro"
-     group=""
-     comment=""
-     />
-<bug institution-name="Deputación de Lugo"
-     institution-address="R/ San Marcos nº 8 - C.P. 27001, Lugo"
-     institution-url="http://ws2.deputacionlugo.org/LugO2/boletin.html"
-     opened="2010-09-25"
-     closed=""
-     name="Pablo César Galdo Regueiro"
-     group=""
-     comment=""
-     />
+<bug institution-name="Deputación de Pontevedra" institution-address="Pazo Deputación Provincial. Avda. Montero Ríos, s/n., C.P. 36071, Pontevedra" institution-url="http://bop.depontevedra.es/html/ga/" opened="2010-09-25" closed="" name="Pablo César Galdo Regueiro" group="" comment=""/>
+<bug institution-name="Deputación de Lugo" institution-address="R/ San Marcos nº 8 - C.P. 27001, Lugo" institution-url="http://ws2.deputacionlugo.org/LugO2/boletin.html" opened="2010-09-25" closed="" name="Pablo César Galdo Regueiro" group="" comment=""/>
 
-<bug institution-name="Concello de Narón"
-     institution-address="Praza de Galicia, s.n. C.P. 15570 - NARÓN"
-     institution-url="http://www.naronconcello.org/web/cat/web/gal/cat/concello/concello_online/documentos"
-     opened="2010-09-25"
-     closed=""
-     name="Pablo César Galdo Regueiro"
-     group=""
-     comment=""
-     />
-<bug institution-name="Concello de Valdoviño"
-     institution-address="Porta do Sol, s/n, C.P. 15552, Valdoviño"
-     institution-url="http://www.concellodevaldovino.com/index.php?option=com_content&amp;task=view&amp;id=24&amp;Itemid=116&amp;lang=ga&amp;date=2010-04-01"
-     opened="2010-09-25"
-     closed=""
-     name="Pablo César Galdo Regueiro"
-     group=""
-     comment=""
-     />
-<bug institution-name="Junta de Extremadura"
-     institution-address="Plz. de la Concepción Nº1 / 5ºA, 10003, Cáceres"
-     institution-url="http://sede.juntaex.es/web/portal/tramites-detalle-entidades/3548"
-     opened="2010-10-01"
-     closed="2011-06-27"
-     name="Jorge Timón Morillo-Velarde"
-     group=""
-     comment="Moved to advertising evince"
-     />
-<bug institution-name="Biblioteca Universidad de Málaga"
-     institution-address="29071"
-     institution-url="http://www.uma.es/ficha.php?id=74091"
-     opened="2010-10-02"
-     closed=""
-     name="Tun Luek"
-     group=""
-     comment=""
-     />
+<bug institution-name="Concello de Narón" institution-address="Praza de Galicia, s.n. C.P. 15570 - NARÓN" institution-url="http://www.naronconcello.org/web/cat/web/gal/cat/concello/concello_online/documentos" opened="2010-09-25" closed="" name="Pablo César Galdo Regueiro" group="" comment=""/>
+<bug institution-name="Concello de Valdoviño" institution-address="Porta do Sol, s/n, C.P. 15552, Valdoviño" institution-url="http://www.concellodevaldovino.com/index.php?option=com_content&amp;task=view&amp;id=24&amp;Itemid=116&amp;lang=ga&amp;date=2010-04-01" opened="2010-09-25" closed="" name="Pablo César Galdo Regueiro" group="" comment=""/>
+<bug institution-name="Junta de Extremadura" institution-address="Plz. de la Concepción Nº1 / 5ºA, 10003, Cáceres" institution-url="http://sede.juntaex.es/web/portal/tramites-detalle-entidades/3548" opened="2010-10-01" closed="2011-06-27" name="Jorge Timón Morillo-Velarde" group="" comment="Moved to advertising evince"/>
+<bug institution-name="Biblioteca Universidad de Málaga" institution-address="29071" institution-url="http://www.uma.es/ficha.php?id=74091" opened="2010-10-02" closed="" name="Tun Luek" group="" comment=""/>
 
-<bug institution-name="Universidad de Alicante"
-     institution-address="03690 San Vicente del Raspeig - Alicante"
-     institution-url="http://www.cde.ua.es/cde/pdf.htm"
-     opened="2010-10-03"
-     closed="2010-12-09"
-     name="Tun Luek"
-     group=""
-     comment="added a link to PDFreaders.org"
-     />
-<bug institution-name="Ayuntamiento de San Sebastian"
-     institution-address="Ijentea 1, 20003 Donostia-San Sebastián"
-     institution-url="http://www.ssreyes.org/"
-     opened="2010-10-04"
-     closed=""
-     name="Andres"
-     group=""
-     comment="Updated link (above it was broken) 2015-05-04"
-     />
-<bug institution-name="Ayuntamiento de Gijon"
-     institution-address="Plaza Mayor nº1 - 33201 Gijón"
-     institution-url="http://www.gijon.es/Contenido.aspx?id=34665&amp;leng=es"
-     opened="2010-10-04"
-     closed=""
-     name="Andres"
-     group=""
-     comment=""
-     />
+<bug institution-name="Universidad de Alicante" institution-address="03690 San Vicente del Raspeig - Alicante" institution-url="http://www.cde.ua.es/cde/pdf.htm" opened="2010-10-03" closed="2010-12-09" name="Tun Luek" group="" comment="added a link to PDFreaders.org"/>
+<bug institution-name="Ayuntamiento de San Sebastian" institution-address="Ijentea 1, 20003 Donostia-San Sebastián" institution-url="http://www.ssreyes.org/" opened="2010-10-04" closed="" name="Andres" group="" comment="Updated link (above it was broken) 2015-05-04"/>
+<bug institution-name="Ayuntamiento de Gijon" institution-address="Plaza Mayor nº1 - 33201 Gijón" institution-url="http://www.gijon.es/Contenido.aspx?id=34665&amp;leng=es" opened="2010-10-04" closed="" name="Andres" group="" comment=""/>
 
-<bug institution-name="Ayuntamiento de Leon"
-     institution-address="Av. Ordoño II nº 10, 24001, León "
-     institution-url="http://www.aytoleon.es/searchcenter/Results.aspx?k=acrobat"
-     opened="2010-10-04"
-     closed=""
-     name="Andres"
-     group=""
-     comment=""
-     />
+<bug institution-name="Ayuntamiento de Leon" institution-address="Av. Ordoño II nº 10, 24001, León " institution-url="http://www.aytoleon.es/searchcenter/Results.aspx?k=acrobat" opened="2010-10-04" closed="" name="Andres" group="" comment=""/>
 
-<bug institution-name="Ayuntamiento de Madrid"
-     institution-address="PLAZA CIBELES, 1 ; 28014 MADRID "
-     institution-url="http://www.madrid.es/portales/munimadrid/es/Inicio/Buscador-Simple?vgnextfmt=default&amp;vgnextchannel=8db7566813946010VgnVCM100000dc0ca8c0RCRD&amp;texto=acrobat&amp;action=com.munimadrid.waf.portlet.action.SearchAction&amp;botonBusqueda=Buscar"
-     opened="2010-10-04"
-     closed="2011-09-20"
-     name="Andres"
-     group=""
-     comment="added a link to PDFreaders.org"
-     />
+<bug institution-name="Ayuntamiento de Madrid" institution-address="PLAZA CIBELES, 1 ; 28014 MADRID " institution-url="http://www.madrid.es/portales/munimadrid/es/Inicio/Buscador-Simple?vgnextfmt=default&amp;vgnextchannel=8db7566813946010VgnVCM100000dc0ca8c0RCRD&amp;texto=acrobat&amp;action=com.munimadrid.waf.portlet.action.SearchAction&amp;botonBusqueda=Buscar" opened="2010-10-04" closed="2011-09-20" name="Andres" group="" comment="added a link to PDFreaders.org"/>
 
-<bug institution-name="Ayuntamiento de Ourense"
-     institution-address="Concello de Ourense| Praza Maior nº1 | 32005 Ourense "
-     institution-url="http://www.ourense.es/portalOurense/home.jsp?language=es"
-     opened="2010-10-17"
-     closed="2010-12-09"
-     name="Juan A. Añel"
-     group=""
-     comment="added a link to PDFreaders.org"
-     />
-<bug institution-name="Ajuntament de Valencia"
-     institution-address="Ajuntament de València, Pl. de l'Ajuntament 1, 46002 València, España"
-     institution-url="http://www.valencia.es/twav/ordenanzas.nsf/fCategoriaVistaAcc_busqueda?readForm&amp;lang=1&amp;nivel=1_3&amp;Vista=vCategoriasAccMunicipales&amp;Categoria=Sin_categoria&amp;tipoordenanza=Municipal&amp;bdorigen=twav/tramites_acc09.nsf"
-     opened="2012-02-04"
-     closed=""
-     name="Lucas Braun"
-     group=""
-     comment=""
-     />
+<bug institution-name="Ayuntamiento de Ourense" institution-address="Concello de Ourense| Praza Maior nº1 | 32005 Ourense " institution-url="http://www.ourense.es/portalOurense/home.jsp?language=es" opened="2010-10-17" closed="2010-12-09" name="Juan A. Añel" group="" comment="added a link to PDFreaders.org"/>
+<bug institution-name="Ajuntament de Valencia" institution-address="Ajuntament de València, Pl. de l'Ajuntament 1, 46002 València, España" institution-url="http://www.valencia.es/twav/ordenanzas.nsf/fCategoriaVistaAcc_busqueda?readForm&amp;lang=1&amp;nivel=1_3&amp;Vista=vCategoriasAccMunicipales&amp;Categoria=Sin_categoria&amp;tipoordenanza=Municipal&amp;bdorigen=twav/tramites_acc09.nsf" opened="2012-02-04" closed="" name="Lucas Braun" group="" comment=""/>
   </buglist>
 </set>
-

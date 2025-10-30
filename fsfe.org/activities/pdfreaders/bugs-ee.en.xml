@@ -1,177 +1,26 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
+<?xml version="1.0" encoding="utf-8"?>
 <set>
   <version>1</version>
 
 <buglist country="EE">
-<bug institution-name="Tallinn"
-     institution-address="Vabaduse väljak 7, 15199 Tallinn"
-     institution-url="http://www.tallinn.ee/Maaga-seonduvate-avalduste-vormid"
-     opened="2010-09-17"
-     closed="2012-01-11"
-     name="MM"
-     group=""
-     comment="They have finally removed the advertisement."
-     closedby="Repentinus"
-     />
-<bug institution-name="Tartu"
-     institution-address="Raekoda, 50089 Tartu"
-     institution-url="http://tartu.ee/?pro_id=1&amp;lang_id=1&amp;menu_id=2&amp;page_id=324"
-     opened="2011-12-04"
-     closed="2012-02-22"
-     name="Repentinus"
-     group=""
-     comment="The advertisement has been removed."
-     />
-<bug institution-name="Maksu- ja Tolliamet"
-     institution-address=""
-     institution-url="http://www.emta.ee/index.php?id=1714"
-     opened="2011-12-14"
-     closed="2011-12-30"
-     name="Repentinus"
-     group=""
-     comment="They removed the advertisement for Adobe Reader. They also responded fast."
-     />
-<bug institution-name="Tööinspektsioon"
-     institution-address="Gonsiori 29, 10147 Tallinn"
-     institution-url="http://www.ti.ee/index.php?page=743"
-     opened="2012-02-05"
-     closed="2012-02-08"
-     name="Repentinus"
-     group=""
-     comment="They removed the advertisement. And they responded very fast."
-     />
-<bug institution-name="Hugo Treffneri Gümnaasium"
-     institution-address="Munga 12, Tartu 51007"
-     institution-url="http://www.htg.tartu.ee/?flt=2&amp;sub=dokod"
-     opened="2012-07-04"
-     closed="2012-08-20"
-     name="Repentinus"
-     group="Akademy 2012"
-     comment="This fine educational establishment has fortunately removed the advertisements."
-     />
-<bug institution-name="Politsei- ja Piirivalveamet"
-     institution-address="Pärnu mnt 139, Tallinn 15060"
-     institution-url="http://www.politsei.ee/en/teenused/lingid/ankeedi-allkirjastamise-ja-salvestamise-juhend/index.dot"
-     opened="2012-07-04"
-     closed=""
-     name="Repentinus"
-     group="Akademy 2012"
-     />
-<bug institution-name="Justiitsministeeriumi kohtulahendite register"
-     institution-address="Tõnismägi 5a, 15191 Tallinn"
-     institution-url="http://kola.just.ee/"
-     opened="2012-07-04"
-     closed="2012-08-25"
-     name="Repentinus"
-     group="Akademy 2012"
-     comment="The website has been independently shut down."
-     />
-<bug institution-name="Riigikantselei"
-     institution-address="Riigikantselei, Stenbocki maja, Rahukohtu 3, 15161 Tallinn"
-     institution-url="http://valitsus.ee/et/riigikantselei/euroopa-liit/teavitustoo-ja-infomaterjalid/olulisemad-infomaterjalid"
-     opened="2012-07-04"
-     closed="2012-09-12"
-     name="Repentinus"
-     group="Akademy 2012"
-     comment="The advertisement has been replaced with a generic reference to PDF readers."
-     />
-<bug institution-name="Keskkonnaministeerium"
-     institution-address="Narva mnt 7a, 15172 Tallinn"
-     institution-url="http://www.ippc.envir.ee/estonian/ippcdirektiivitolge.htm"
-     opened="2012-07-04"
-     closed="2012-11-17"
-     name="Repentinus"
-     group="Akademy 2012"
-     />
-<bug institution-name="Vidruka Kool"
-     institution-address="Mõisa tee 5, Vidruka küla, Taebla vald, 90818, Lääne maakond"
-     institution-url="http://www.vidruka.edu.ee/hoolekogu.html"
-     opened="2012-07-04"
-     closed="2012-09-19"
-     name="tramm"
-     group="Akademy 2012"
-     closedby="Repentinus"
-     />
-<bug institution-name="Eesti Reformierakond"
-     institution-address="Tõnismägi 9, Tallinn 10119"
-     institution-url="http://www.reform.ee/aruanded"
-     opened="2012-07-04"
-     closed=""
-     name="tramm"
-     group="Akademy 2012"
-     comment="Reference to proprietary software removed from the original link. Reference still present elsewhere in the website. Link updated on 2015-05-07 by Nicola Feltrin"
-     />
-<bug institution-name="Eesti Keele Instituut"
-     institution-address="Roosikrantsi 6, Tallinn 10119"
-     institution-url="http://www.eki.ee/knab/valik/index2.htm"
-     opened="2012-07-04"
-     closed="2012-11-17"
-     name="Repentinus"
-     group="Akademy 2012"
-     comment="Probably fixed earlier."
-     />
-<bug institution-name="Tartu Ülikooli Raamatukogu"
-     institution-address="W. Struve 1, Tartu 50091"
-     institution-url="http://www.utlib.ee/index.php?e_id=10&amp;e=1&amp;s_id=440"
-     opened="2012-07-04"
-     closed=""
-     name="tramm"
-     group="Akademy 2012"
-     comment="Original link broken. Link updated on 2015-05-07 by Nicola Feltrin"
-     />
-<bug institution-name="Tartu Ülikool"
-     institution-address="Ülikooli 18, 50090 TARTU"
-     institution-url="http://www.ut.ee/et/4891"
-     opened="2012-07-04"
-     closed=""
-     name="tramm"
-     group="Akademy 2012"
-     />
-<bug institution-name="Tallinna Ülikool"
-     institution-address="Narva mnt 25, 10120 Tallinn"
-     institution-url="http://www.tlu.ee/~teap/nhdr/2002/eng/contents.html"
-     opened="2012-07-04"
-     closed=""
-     name="Repentinus"
-     group="Akademy 2012"
-     />
-<bug institution-name="Tallinna Tehnikaülikool"
-     institution-address="Ehitajate tee 5, 19086 Tallinn"
-     institution-url="http://cs.ttu.ee/kursused/itv0010/maxmon/datainfo.htm"
-     opened="2012-07-04"
-     closed="2015-05-07"
-     closedby="Nicola Feltrin"
-     name="Repentinus"
-     group="Akademy 2012"
-     comment="Original link broken. No further reference to proprietary PDF software found"
-     />
-<bug institution-name="Eesti Haigekassa"
-     institution-address="Lembitu 10, 10114 Tallinn"
-     institution-url="https://www.haigekassa.ee/et/blanketid-koik-teemad"
-     opened="2012-07-04"
-     closed=""
-     name="tramm"
-     group="Akademy 2012"
-     comment="Reference to proprietary software removed from the original link. Reference still present elsewhere in the website. Link updated on 2015-05-07 by Nicola Feltrin"
-     />
-<bug institution-name="Eesti Maaülikool"
-     institution-address="Kreutzwaldi 1a, Tartu 51014"
-     institution-url="http://ph.emu.ee/~enei/koordinaatide-maaramine/"
-     opened="2012-07-04"
-     closed=""
-     name="Repentinus"
-     group="Akademy 2012"
-     />
-<bug institution-name="Eesti Statistikaamet"
-     institution-address="Endla 15, 15174 Tallinn"
-     institution-url="https://www.stat.ee/15264"
-     opened="2012-07-09"
-     closed=""
-     name="tramm"
-     group="Akademy 2012"
-     comment="Original link broken. Link updated on 2015-05-07 by Nicola Feltrin"
-     />
+<bug institution-name="Tallinn" institution-address="Vabaduse väljak 7, 15199 Tallinn" institution-url="http://www.tallinn.ee/Maaga-seonduvate-avalduste-vormid" opened="2010-09-17" closed="2012-01-11" name="MM" group="" comment="They have finally removed the advertisement." closedby="Repentinus"/>
+<bug institution-name="Tartu" institution-address="Raekoda, 50089 Tartu" institution-url="http://tartu.ee/?pro_id=1&amp;lang_id=1&amp;menu_id=2&amp;page_id=324" opened="2011-12-04" closed="2012-02-22" name="Repentinus" group="" comment="The advertisement has been removed."/>
+<bug institution-name="Maksu- ja Tolliamet" institution-address="" institution-url="http://www.emta.ee/index.php?id=1714" opened="2011-12-14" closed="2011-12-30" name="Repentinus" group="" comment="They removed the advertisement for Adobe Reader. They also responded fast."/>
+<bug institution-name="Tööinspektsioon" institution-address="Gonsiori 29, 10147 Tallinn" institution-url="http://www.ti.ee/index.php?page=743" opened="2012-02-05" closed="2012-02-08" name="Repentinus" group="" comment="They removed the advertisement. And they responded very fast."/>
+<bug institution-name="Hugo Treffneri Gümnaasium" institution-address="Munga 12, Tartu 51007" institution-url="http://www.htg.tartu.ee/?flt=2&amp;sub=dokod" opened="2012-07-04" closed="2012-08-20" name="Repentinus" group="Akademy 2012" comment="This fine educational establishment has fortunately removed the advertisements."/>
+<bug institution-name="Politsei- ja Piirivalveamet" institution-address="Pärnu mnt 139, Tallinn 15060" institution-url="http://www.politsei.ee/en/teenused/lingid/ankeedi-allkirjastamise-ja-salvestamise-juhend/index.dot" opened="2012-07-04" closed="" name="Repentinus" group="Akademy 2012"/>
+<bug institution-name="Justiitsministeeriumi kohtulahendite register" institution-address="Tõnismägi 5a, 15191 Tallinn" institution-url="http://kola.just.ee/" opened="2012-07-04" closed="2012-08-25" name="Repentinus" group="Akademy 2012" comment="The website has been independently shut down."/>
+<bug institution-name="Riigikantselei" institution-address="Riigikantselei, Stenbocki maja, Rahukohtu 3, 15161 Tallinn" institution-url="http://valitsus.ee/et/riigikantselei/euroopa-liit/teavitustoo-ja-infomaterjalid/olulisemad-infomaterjalid" opened="2012-07-04" closed="2012-09-12" name="Repentinus" group="Akademy 2012" comment="The advertisement has been replaced with a generic reference to PDF readers."/>
+<bug institution-name="Keskkonnaministeerium" institution-address="Narva mnt 7a, 15172 Tallinn" institution-url="http://www.ippc.envir.ee/estonian/ippcdirektiivitolge.htm" opened="2012-07-04" closed="2012-11-17" name="Repentinus" group="Akademy 2012"/>
+<bug institution-name="Vidruka Kool" institution-address="Mõisa tee 5, Vidruka küla, Taebla vald, 90818, Lääne maakond" institution-url="http://www.vidruka.edu.ee/hoolekogu.html" opened="2012-07-04" closed="2012-09-19" name="tramm" group="Akademy 2012" closedby="Repentinus"/>
+<bug institution-name="Eesti Reformierakond" institution-address="Tõnismägi 9, Tallinn 10119" institution-url="http://www.reform.ee/aruanded" opened="2012-07-04" closed="" name="tramm" group="Akademy 2012" comment="Reference to proprietary software removed from the original link. Reference still present elsewhere in the website. Link updated on 2015-05-07 by Nicola Feltrin"/>
+<bug institution-name="Eesti Keele Instituut" institution-address="Roosikrantsi 6, Tallinn 10119" institution-url="http://www.eki.ee/knab/valik/index2.htm" opened="2012-07-04" closed="2012-11-17" name="Repentinus" group="Akademy 2012" comment="Probably fixed earlier."/>
+<bug institution-name="Tartu Ülikooli Raamatukogu" institution-address="W. Struve 1, Tartu 50091" institution-url="http://www.utlib.ee/index.php?e_id=10&amp;e=1&amp;s_id=440" opened="2012-07-04" closed="" name="tramm" group="Akademy 2012" comment="Original link broken. Link updated on 2015-05-07 by Nicola Feltrin"/>
+<bug institution-name="Tartu Ülikool" institution-address="Ülikooli 18, 50090 TARTU" institution-url="http://www.ut.ee/et/4891" opened="2012-07-04" closed="" name="tramm" group="Akademy 2012"/>
+<bug institution-name="Tallinna Ülikool" institution-address="Narva mnt 25, 10120 Tallinn" institution-url="http://www.tlu.ee/~teap/nhdr/2002/eng/contents.html" opened="2012-07-04" closed="" name="Repentinus" group="Akademy 2012"/>
+<bug institution-name="Tallinna Tehnikaülikool" institution-address="Ehitajate tee 5, 19086 Tallinn" institution-url="http://cs.ttu.ee/kursused/itv0010/maxmon/datainfo.htm" opened="2012-07-04" closed="2015-05-07" closedby="Nicola Feltrin" name="Repentinus" group="Akademy 2012" comment="Original link broken. No further reference to proprietary PDF software found"/>
+<bug institution-name="Eesti Haigekassa" institution-address="Lembitu 10, 10114 Tallinn" institution-url="https://www.haigekassa.ee/et/blanketid-koik-teemad" opened="2012-07-04" closed="" name="tramm" group="Akademy 2012" comment="Reference to proprietary software removed from the original link. Reference still present elsewhere in the website. Link updated on 2015-05-07 by Nicola Feltrin"/>
+<bug institution-name="Eesti Maaülikool" institution-address="Kreutzwaldi 1a, Tartu 51014" institution-url="http://ph.emu.ee/~enei/koordinaatide-maaramine/" opened="2012-07-04" closed="" name="Repentinus" group="Akademy 2012"/>
+<bug institution-name="Eesti Statistikaamet" institution-address="Endla 15, 15174 Tallinn" institution-url="https://www.stat.ee/15264" opened="2012-07-09" closed="" name="tramm" group="Akademy 2012" comment="Original link broken. Link updated on 2015-05-07 by Nicola Feltrin"/>
 </buglist>
 </set>
-

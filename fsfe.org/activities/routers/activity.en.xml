@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-
+<?xml version="1.0" encoding="utf-8"?>
 <activityset>
   <version>3</version>
 
@@ -8,11 +7,11 @@
     <description>
       Although we should be free to choose the technical devices we use in our private lives, some European Internet Service Providers are dictating which device their customers have to use to connect to the Internet, or discriminating against owners of alternative devices. This undermines our basic freedom of choice.  
 </description>
-    <link href="/activities/routers/routers.html" />
-    <image url="/graphics/logos/RouterFreedom-logo.png" />
-    <order priority="4" highlight="yes" />
+    <link href="/activities/routers/routers.html"/>
+    <image url="/graphics/logos/RouterFreedom-logo.png"/>
+    <order priority="4" highlight="yes"/>
     <tags>
-      <tag key="policy" />
+      <tag key="policy"/>
     </tags>
   </activity>
 </activityset>

@@ -54,6 +54,12 @@ pre-commit:
       glob: "*.xsl"
       run: for file in {staged_files}; do xmllint --format "$file" --output "$file"; done
       stage_fixed: true
+    remove-empty-paragraphs:
+      glob:
+        - "*.xml"
+        - "*.xhtml"
+      run: for file in {staged_files}; do xsltproc --output "$file" ./tools/ci-checks/remove-empty-paragraphs.xsl "$file"; done
+      stage_fixed: true
 
     # CHECKS, does not alter any files
     reuse:
@@ -72,7 +78,6 @@ pre-commit:
         - "*.xml"
         - "*.xhtml"
       run: tools/ci-checks/compare-xml-structure.py {staged_files}
-      stage_fixed: true
     general:
       glob:
         - "*.html"

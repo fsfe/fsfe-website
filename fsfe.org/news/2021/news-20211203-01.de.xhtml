@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <html newsdate="2021-12-03">
 <version>1</version>
 
@@ -37,9 +37,7 @@
 </p>
 
 <figure>
-  <img
-    src="https://pics.fsfe.org/uploads/medium/a9669e241527f1769e2fe67418a77f0d.jpg"
-    alt="Die vier Freiheiten und die Freie-Software obendrauf" />
+  <img src="https://pics.fsfe.org/uploads/medium/a9669e241527f1769e2fe67418a77f0d.jpg" alt="Die vier Freiheiten und die Freie-Software obendrauf"/>
 </figure>
 
 <p>
@@ -51,11 +49,7 @@
 
 <p>
   Lassen Sie sich daher von uns auf eine Reise durch unsere Infrastruktur und
-  ihre Prinzipien mitnehmen, von den glänzenden Benutzeroberflächen unserer <a
-  href="#services">Dienste</a> über die <a
-  href="#virtualisation">Virtualisierungsmethoden</a> und die <a
-  href="#monitoring">Systemüberwachung</a> bis hin zu den <a
-  href="#servers">physischen Servern</a>, auf denen sie laufen. Dies ist eine
+  ihre Prinzipien mitnehmen, von den glänzenden Benutzeroberflächen unserer <a href="#services">Dienste</a> über die <a href="#virtualisation">Virtualisierungsmethoden</a> und die <a href="#monitoring">Systemüberwachung</a> bis hin zu den <a href="#servers">physischen Servern</a>, auf denen sie laufen. Dies ist eine
   Geschichte nicht nur für Technikbegeisterte, sondern für alle, der daran
   interessiert sind, eine NGO unabhängig von proprietären Dienstanbietern zu
   machen oder zu halten.
@@ -64,8 +58,7 @@
 <h2 id="team">Ein Team und seine Prinzipien</h2>
 
 <p>
-  Die gesamte Infrastruktur der FSFE wird von den <a
-  href="https://wiki.fsfe.org/Teams/System-Hackers">System Hackers</a>
+  Die gesamte Infrastruktur der FSFE wird von den <a href="https://wiki.fsfe.org/Teams/System-Hackers">System Hackers</a>
   verwaltet. Noch vor ein paar Jahren, in einer Zeit größerer technischer
   Altlasten und Umstrukturierungen, bestand das Team nur aus drei Personen.
   Glücklicherweise haben wir seither einen stetigen Zuwachs an Mitgliedern
@@ -75,9 +68,7 @@
 </p>
 
 <figure>
-  <img
-    src="https://pics.fsfe.org/uploads/medium/04ff9b7b037924fa522e2a1e47ac3a94.JPG"
-    alt="Ein Gruppenbild der System Hackers aus 2020" />
+  <img src="https://pics.fsfe.org/uploads/medium/04ff9b7b037924fa522e2a1e47ac3a94.JPG" alt="Ein Gruppenbild der System Hackers aus 2020"/>
   <figcaption>
     Bild vom Treffen der System Hackers 2020 in Lyon
   </figcaption>
@@ -115,13 +106,12 @@
   umfasst mindestens 12 Dienste, die nahtlos zusammenarbeiten müssen.
 </p>
 
-<module id="banner-become-supporter" />
+<module id="banner-become-supporter"/>
 
 <p>
   Die derzeit wichtigsten und meistgenutzten Dienste sind Mailman für
   Mailinglisten oder Gitea als unser Git-Versionskontrollsystem. Um den
-  Austausch und die Speicherung von Wissen zu ermöglichen, pflegen unsere <a
-  href="https://wiki.fsfe.org/Teams/WikiCaretakers">Wiki-Betreuer</a> MoinMoin,
+  Austausch und die Speicherung von Wissen zu ermöglichen, pflegen unsere <a href="https://wiki.fsfe.org/Teams/WikiCaretakers">Wiki-Betreuer</a> MoinMoin,
   während Björn sich um Nextcloud kümmert, um Dateien auszutauschen, Aufgaben zu
   koordinieren und Dokumente gemeinsam zu bearbeiten. Wir betreiben unsere
   eigenen Instanzen von BigBlueButton und Jitsi für Videokonferenzen und
@@ -132,10 +122,8 @@
 </p>
 
 <p>
-  Die Liste der Dienste ist <a
-  href="https://wiki.fsfe.org/TechDocs/Services">noch viel länger</a> und
-  enthält auch fundamentale Systeme wie das von <a
-  href="/news/2021/news-20210305-01.html">Reinhard</a> entwickelte
+  Die Liste der Dienste ist <a href="https://wiki.fsfe.org/TechDocs/Services">noch viel länger</a> und
+  enthält auch fundamentale Systeme wie das von <a href="/news/2021/news-20210305-01.html">Reinhard</a> entwickelte
   Account-Management-System und die Community-Datenbank, unsere eigenen
   DNS-Server oder Drone als CI/CD-System, welches Daten aus Gitea verarbeitet,
   prüft und auf andere Server produktiv stellt.
@@ -187,8 +175,7 @@
 
 <p>
   Einige andere wiederum hosten selbst eine Reihe von verschiedenen Diensten.
-  Seit 2017 setzen wir <a
-  href="https://git.fsfe.org/explore/repos?q=docker&amp;topic=1">Docker</a> als
+  Seit 2017 setzen wir <a href="https://git.fsfe.org/explore/repos?q=docker&amp;topic=1">Docker</a> als
   Container-Engine ein. Das war keine leichte Entscheidung, da die Technologie
   viel Komplexität mit sich bringt und manchmal verblüffende Workarounds
   erfordert, um sicher betrieben werden zu können. Andererseits ist es vor allem
@@ -210,8 +197,7 @@
 
 <p>
   Zum initialen Aufsetzen virtueller Maschinen und zur reproduzierbaren
-  Bereitstellung von Diensten, die nicht aus Containern bestehen, <a
-  href="https://git.fsfe.org/explore/repos?q=ansible&amp;topic=1">verlassen wir uns
+  Bereitstellung von Diensten, die nicht aus Containern bestehen, <a href="https://git.fsfe.org/explore/repos?q=ansible&amp;topic=1">verlassen wir uns
   in hohem Maße auf Ansible</a>, ein Tool für Provisionierung und
   Konfigurationsverwaltung. Obwohl Ansible-Deployments auch ihre Schwächen haben
   können, schätzen wir den Infrastructure-as-Code-Ansatz, der von jedem Computer
@@ -228,8 +214,7 @@
   Dutzende von Servern und Diensten: Woher weiß man, wenn es bei einem von ihnen
   ein Problem gibt? Wir müssen zugeben, dass wir bis vor zwei Jahren manchmal
   nur durch eine E-Mail eines zufälligen freundlichen Community-Mitglieds von
-  einem abgestürzten Server erfahren haben. Jetzt kümmert sich ein auf <a
-  href="https://git.fsfe.org/fsfe-system-hackers/monitoring">Icinga2 basierendes
+  einem abgestürzten Server erfahren haben. Jetzt kümmert sich ein auf <a href="https://git.fsfe.org/fsfe-system-hackers/monitoring">Icinga2 basierendes
   Überwachungssystem</a> darum. Derzeit werden 50 Hosts und 690 Dienste
   kontinuierlich überprüft, zum Beispiel auf anstehende Upgrades des
   Betriebssystems, systemd-Dienste, fehlgeschlagene Backups, Speicherplatz oder
@@ -239,8 +224,7 @@
 <p>
   Dies wird durch andere Aspekte unserer Strategie erleichtert: Bis auf 4
   virtuelle Maschinen laufen alle unter Debian GNU/Linux. Nach der anfänglichen
-  Erstellung erfährt eine neue Maschine ein <a
-  href="https://git.fsfe.org/fsfe-system-hackers/baseline">Basis-Setup</a>, das
+  Erstellung erfährt eine neue Maschine ein <a href="https://git.fsfe.org/fsfe-system-hackers/baseline">Basis-Setup</a>, das
   sich um grundlegende Sicherheitseinstellungen, Überwachung, Backup und
   automatische Upgrades kümmert. Dadurch beschränkt sich die Wartung eines
   Servers meist auf den Dienst, der auf ihm läuft, und andere Verbesserungen
@@ -250,16 +234,13 @@
 
 <p>
   Um die Verwaltung und Wartung weiter zu erleichtern, schreiben wir manchmal
-  unsere eigenen Tools. So bietet beispielsweise <a
-  href="https://git.fsfe.org/fsfe-system-hackers/ssh-key-distributor">ssh-key-distributor</a>
+  unsere eigenen Tools. So bietet beispielsweise <a href="https://git.fsfe.org/fsfe-system-hackers/ssh-key-distributor">ssh-key-distributor</a>
   eine einfache Schnittstelle und Bereitstellungsmethode, um den Zugang über SSH
-  auf unseren Servern zu verwalten und zu dokumentieren. Oder <a
-  href="https://git.fsfe.org/fsfe-system-hackers/docker-utils">docker-utils</a>,
+  auf unseren Servern zu verwalten und zu dokumentieren. Oder <a href="https://git.fsfe.org/fsfe-system-hackers/docker-utils">docker-utils</a>,
   das auf unsere Docker-Infrastruktur zugeschnitten ist und sich um die Analyse
   und Aktualisierung von Docker-Images und -Containern kümmert. Beide Tools
   wurden von unserem Werkstudenten Linus entwickelt. Weitere Tools und generell
-  den meisten Ansible/Docker Deployment Code finden Sie in der <a
-  href="https://git.fsfe.org/fsfe-system-hackers">Git-Organisation der System
+  den meisten Ansible/Docker Deployment Code finden Sie in der <a href="https://git.fsfe.org/fsfe-system-hackers">Git-Organisation der System
   Hackers</a>.
 </p>
 
@@ -278,8 +259,7 @@
 
 <p>
   Als zusätzliches Sicherheitsnetz sind die drei Cluster und eine Solomaschine
-  auf vier verschiedene Rechenzentren verteilt, die uns <a
-  href="/donate/hardware.html">freundlicherweise die Colocation zur Verfügung
+  auf vier verschiedene Rechenzentren verteilt, die uns <a href="/donate/hardware.html">freundlicherweise die Colocation zur Verfügung
   stellen</a>.
 </p>
 
@@ -312,7 +292,7 @@
   viele Fehler gemacht, aber vor allem haben wir viel daraus gelernt.
 </p>
 
-<module id="banner-subscribe" />
+<module id="banner-subscribe"/>
 
 <p>
   Im Moment stehen wir vor neuen Hürden. Zum Beispiel können wir bei der großen
@@ -320,12 +300,9 @@
   IPv4-Adresse zuweisen. Leider unterstützen viele Technologien und
   Internetdienste, selbst große proprietäre und vermeintlich professionelle
   Unternehmen, immer noch nicht das modernere, zukunftssichere und bereits 20
-  Jahre alte IPv6-Protokoll. Daher müssen wir uns mit einigen Hacks wie <a
-  href="https://git.fsfe.org/fsfe-system-hackers/ip-proxy/">Reverse Proxies</a>,
-  <a
-  href="https://git.fsfe.org/fsfe-system-hackers/docker2caddy/">Container-Discovery-Diensten</a>,
-  <a href="https://git.fsfe.org/fsfe-system-hackers/fsfe-gw">NAT</a> und <a
-  href="https://git.fsfe.org/fsfe-system-hackers/innernet-playbook">VPNs</a>
+  Jahre alte IPv6-Protokoll. Daher müssen wir uns mit einigen Hacks wie <a href="https://git.fsfe.org/fsfe-system-hackers/ip-proxy/">Reverse Proxies</a>,
+  <a href="https://git.fsfe.org/fsfe-system-hackers/docker2caddy/">Container-Discovery-Diensten</a>,
+  <a href="https://git.fsfe.org/fsfe-system-hackers/fsfe-gw">NAT</a> und <a href="https://git.fsfe.org/fsfe-system-hackers/innernet-playbook">VPNs</a>
   herumschlagen.
 </p>
 
@@ -333,8 +310,7 @@
   Eine weitere interessante Entscheidung, die ansteht, ist die der
   Kommunikationskanäle. Während Klartext-E-Mail und seit 2004 XMPP/Jabber den
   De-facto-Standard innerhalb der FSFE bilden, bevorzugen viele Leute inzwischen
-  <a href="https://wiki.fsfe.org/TechDocs/Matrix">Matrix</a>, <a
-  href="https://community.fsfe.org/">Discourse</a> oder immer noch das
+  <a href="https://wiki.fsfe.org/TechDocs/Matrix">Matrix</a>, <a href="https://community.fsfe.org/">Discourse</a> oder immer noch das
   traditionelle IRC. Während wir für alle Vor- und Nachteile sehen, wollen wir
   auch eine Fragmentierung unserer Community vermeiden. Dies ist keine rein
   technische Frage, sondern ein gutes Beispiel für die Notwendigkeit einer guten
@@ -390,8 +366,8 @@
   <tag key="tech-teams">Technische Teams</tag>
 </tags>
 
-<author id="dengg" />
-<author id="mehl" />
+<author id="dengg"/>
+<author id="mehl"/>
 
 
 <image url="https://pics.fsfe.org/uploads/medium/a9669e241527f1769e2fe67418a77f0d.jpg" alt="Die vier Freiheiten und die Freie-Software obendrauf"/>

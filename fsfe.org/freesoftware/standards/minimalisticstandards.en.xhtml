@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-
+<?xml version="1.0" encoding="utf-8"?>
 <html>
   <version>1</version>
 
@@ -50,13 +49,11 @@
     in for the next pricing negotiation.  Occasionally, whole countries have
     managed to maneuver themselves into the losing end of this situation.  </p>
 
-    <p>As you can see, a good data-format can only be an <a
-      href="/freesoftware/standards/def.html">Open Standard</a>.  This requirement
+    <p>As you can see, a good data-format can only be an <a href="/freesoftware/standards/def.html">Open Standard</a>.  This requirement
     alone, however, is not enough. The data-format needs to solve a problem
     adequately: It should be a good fit from a functional point of view, as
     well as on a technical level.  In order to judge this, there are a number
-    of things to consider. The <a
-    href="http://www.w3.org/People/Bos/DesignGuide/introduction">Essay by Bert
+    of things to consider. The <a href="http://www.w3.org/People/Bos/DesignGuide/introduction">Essay by Bert
   Bos</a> explains the design principles of the W3C - the organisation which
 develops the formats of the world wide web. He mentions efficiency,
 maintainability, accessibility, extensibility, learnability, simplicity,
@@ -75,13 +72,11 @@ longevity and a few more.</p>
     possible and as complicated as necessary? It is very hard to design or
     choose a data-format which follows this principle of minimalism.</p>
 
-    <p>Firstly, there is the anti-pattern of <a
-    href="http://sourcemaking.com/antipatterns/design-by-committee">“Design
+    <p>Firstly, there is the anti-pattern of <a href="http://sourcemaking.com/antipatterns/design-by-committee">“Design
     by Committee”</a>, where several decision makers participate in each decision.
     Decisions about which software product to use within an organisation – especially in public ones – are also often made by large committees. 
     Then it easily happens that too many cooks spoil the broth and add more into the standards than is
-    actually necessary. The W3C at least <a
-    href="http://www.w3.org/People/Bos/DesignGuide/committee.html">
+    actually necessary. The W3C at least <a href="http://www.w3.org/People/Bos/DesignGuide/committee.html">
 	    is aware of this pattern</a>. Many groups are not.</p>
 
 
@@ -146,12 +141,10 @@ longevity and a few more.</p>
     might have when looking at the source code of a software.  With the 256
     cases of Latin-9 she could. With Unicode the possibility of overview gets
     lost.  A clever attacker might find combinations the developer did not
-    think of.  This happens on a regular basis. Here are two examples: 1. <a
-    href="http://en.wikipedia.org/wiki/IDN_homograph_attack">the IDN homograph
+    think of.  This happens on a regular basis. Here are two examples: 1. <a href="http://en.wikipedia.org/wiki/IDN_homograph_attack">the IDN homograph
   attack</a> plays tricks on the users with similar looking Internet addresses.
 Cyrillic from the Unicode-Fonts is well suited to this.  2. The developers of a
-well known webserver fell prey to <a
-href="http://web.nvd.nist.gov/view/vuln/detail?vulnId=CAN-2000-0884" >the
+well known webserver fell prey to <a href="http://web.nvd.nist.gov/view/vuln/detail?vulnId=CAN-2000-0884">the
 possibilities of Unicode in URLs</a>.</p>
 
     <p>Unsurprisingly there are more applications out there that can handle
@@ -168,8 +161,7 @@ possibilities of Unicode in URLs</a>.</p>
     It is likely the complexity grows with the number.  Certainly there are
     many cases where using the features of version 1.0 would be completely
     okay.  But the default probably is to save files in the newest version the
-    software supports.  For PDF this problem is even more significant. Some <a
-    href="http://pdfreaders.org/os.en.html">versions or parts of PDFs</a> do
+    software supports.  For PDF this problem is even more significant. Some <a href="http://pdfreaders.org/os.en.html">versions or parts of PDFs</a> do
   not even make an open standard.</p>
 
     <p>Who wants to understand how computers work, one of the first things they
@@ -183,8 +175,7 @@ possibilities of Unicode in URLs</a>.</p>
     data,  also contain instructions for automatic execution ("macros") or
     interactive elements (e.g. Javascript). This turns a regular file into a
     potential application controlling your computer. Naturally attackers try to
-      take advantage of this. Like with the <a
-        href="http://www.cert.org/tech_tips/Melissa_FAQ.html" >Melissa Macro
+      take advantage of this. Like with the <a href="http://www.cert.org/tech_tips/Melissa_FAQ.html">Melissa Macro
         Virus from 1999</a>.</p>
 
     <p>Most texts that are being exchanged only need a small fraction of that
@@ -192,8 +183,7 @@ possibilities of Unicode in URLs</a>.</p>
     layout.  A simple file composed of Latin-9 characters can be edited since
     decades on every computer by means of a simple text editor or any word
     processor.  A small subset of HTML 2 could cater for advanced needs like
-    headlines, bullet-lists and hyperlinks. Alternatively any <a
-    href="http://en.wikipedia.org/wiki/Creole_%28markup%29">simple textbased
+    headlines, bullet-lists and hyperlinks. Alternatively any <a href="http://en.wikipedia.org/wiki/Creole_%28markup%29">simple textbased
     markup language</a> like used by Wikis would work for many tasks.  The
     Wikipedia pages and web-logs ("blogs") of the world are proof that lot of
     content can be expressed by simple means.</p>
@@ -202,8 +192,7 @@ possibilities of Unicode in URLs</a>.</p>
     different software products competing which each other, while being secure
     and interoperable.  The minimal principle for data-formats promotes all
     this.  It just has one rule: Remove everything that is not absolutely
-    necessary.  Aim for your design to be <a
-    href="http://www.paulgraham.com/taste.html">simple and elegant</a>.  A good
+    necessary.  Aim for your design to be <a href="http://www.paulgraham.com/taste.html">simple and elegant</a>.  A good
     solution resembles a set of building blocks where an infinite number of
     buildings can be made, just by combining a few types of elements.</p>
 
@@ -216,7 +205,7 @@ possibilities of Unicode in URLs</a>.</p>
       <li id="fn-complexity">"Complexity is the main enemy of security",
     Ferguson, Niels, and Schneier, Bruce - Practical Cryptography, Wiley, 2003,
     ISBN 0-471-22357-3. p146 "9.4.1 Simplicity", pp365- "23 Standards"
-    <a href="https://www.schneier.com/book-practical.html">https://www.schneier.com/book-practical.html</a>  [<a href="#ref-complexity">&#8626;</a>]</li>
+    <a href="https://www.schneier.com/book-practical.html">https://www.schneier.com/book-practical.html</a>  [<a href="#ref-complexity">↲</a>]</li>
   </ol>
 
 Thanks for suggestions, proof reading and translation work to Peter Bubestinger, Philipp Kammerer, the folks from the FSFE DE mailinglist and 
@@ -226,9 +215,9 @@ Anna F J Morris .
 <legal type="cc-license">
  <license>https://creativecommons.org/licenses/by-sa/3.0/</license><notice>Neben der Standardlizenz der Webseite steht dieser Artikel unter der Creative Commons Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)</notice>
 </legal>
-<author id="reiter" />
+<author id="reiter"/>
 <date>
-  <original content="2014-02-27" />
+  <original content="2014-02-27"/>
 </date>
 <sidebar/>
 <translator>Philipp Kammerer</translator>

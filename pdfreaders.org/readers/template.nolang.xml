@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
+<?xml version="1.0" encoding="utf-8"?>
 <!--
  When setting up a new reader for display, you can use this file as a template
 
@@ -10,7 +9,6 @@
 
  Here is an explanation of the fields to fill out.
 -->
-
 <!-- For historical reasons: the top level xml element in a file can be arbitrary, but
      I recommend, to choose "readers". The second level element is important as it will
      be processed by the build system.

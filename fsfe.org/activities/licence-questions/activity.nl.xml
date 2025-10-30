@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-
-    <activityset>
+<?xml version="1.0" encoding="utf-8"?>
+<activityset>
       <version>2</version>
 
       <activity id="licence-questions" date="2015-11-25" status="active">
@@ -8,9 +7,9 @@
         <description>
           FSFE's e-maillijst over licentievragen is onze groep vrijwilligers die zijn toegewijd aan het bieden van help bij vragen over Vrije Softwarelicenties en de naleving ervan. Als u advies nodig heeft over welke Vrije Softwarelicentie u zou moeten gebruiken of meer wil weten over welke rechten u heeft over een stuk Vrije Software dan kunt u contact met ons opnemen.
         </description>
-        <link href="/freesoftware/legal/faq.html" />
-        <image url="/graphics/logos/licencequestions.png" />
-        <order priority="3" highlight="yes" />
+        <link href="/freesoftware/legal/faq.html"/>
+        <image url="/graphics/logos/licencequestions.png"/>
+        <order priority="3" highlight="yes"/>
         <tags>
           <tag key="legal">juridisch</tag>
         </tags>

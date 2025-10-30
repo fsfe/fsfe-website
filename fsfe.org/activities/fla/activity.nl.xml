@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-
+<?xml version="1.0" encoding="utf-8"?>
 <activityset>
   <version>1</version>
 
@@ -8,11 +7,11 @@
         <description>
                 De Fiduciaire Licentieovereenkomst ("Fiduciary License Agreement" of FLA) stelt softwareprojecten in staat auteursrechten toe te wijzen en te consolideren aan een met name genoemde fiduciair, zodat deze  hun auteursrechtstatus effectief kan beheren. Hierdoor kunnen ontwikkelaars zich concentreren op het maken van goede applicaties, in plaats van hun tijd te besteden aan juridisch beheer. Hoewel de FSFE geen nieuwe projecten meer aanvaardt in het kader van het Fiduciaire Programma, blijven we aangepaste versies van de Fiduciaire Licentieovereenkomst (FLA) aanbieden.
         </description>
-        <link href="/activities/fla/fiduciary.html" />
-        <image url="/graphics/logos/fla.png" />
-        <order priority="6" highlight="no" />
+        <link href="/activities/fla/fiduciary.html"/>
+        <image url="/graphics/logos/fla.png"/>
+        <order priority="6" highlight="no"/>
     <tags>
-      <tag key="juridisch" />
+      <tag key="juridisch"/>
     </tags>
   </activity>
 </activityset>

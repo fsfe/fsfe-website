@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <activityset>
   <version>1</version>
   <activity id="devices" date="2021-11-01" status="active">
@@ -9,12 +9,11 @@
       De Verordening Digitale Markten (DMA) regelt de economische activiteit van grote
       digitale platforms en introduceert apparaatneutraliteit in de EU-wetgeving, waardoor de toegang tot Vrije Software op apparaten wordt bevorderd.
     </description>
-    <link href="/activities/dma/dma.html" />
-    <image url="/graphics/logos/dma-logo.png" />
-    <order priority="5" highlight="yes" />
+    <link href="/activities/dma/dma.html"/>
+    <image url="/graphics/logos/dma-logo.png"/>
+    <order priority="5" highlight="yes"/>
     <tags>
         <tag key="policy">Beleid</tag>
     </tags>
   </activity>
 </activityset>
-

@@ -1,418 +1,79 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
+<?xml version="1.0" encoding="utf-8"?>
 <set>
   <version>1</version>
 
 <buglist country="GB">
-<bug institution-name="Food Standards Agency"
-     institution-address="125 Kingsway, WC2B 6NH, London"
-     institution-url="http://www.food.gov.uk/science/researchpolicy/qacopres/"
-     opened="2010-09-10"
-     closed=""
-     name="Sam Tuke"
-     group=""
-     />
+<bug institution-name="Food Standards Agency" institution-address="125 Kingsway, WC2B 6NH, London" institution-url="http://www.food.gov.uk/science/researchpolicy/qacopres/" opened="2010-09-10" closed="" name="Sam Tuke" group=""/>
 
-<bug institution-name="Companies House"
-     institution-address="Crown Way, CF14 3UZ, Cardiff"
-     institution-url="https://ewf.companieshouse.gov.uk/help/en/stdwf/adobeDisclaimer.html"
-     opened="2010-09-10"
-     closed=""
-     name="Sam Tuke"
-     group=""
-     />
+<bug institution-name="Companies House" institution-address="Crown Way, CF14 3UZ, Cardiff" institution-url="https://ewf.companieshouse.gov.uk/help/en/stdwf/adobeDisclaimer.html" opened="2010-09-10" closed="" name="Sam Tuke" group=""/>
 
-<bug institution-name="HM Revenue and Customs"
-     institution-address="Complaint form: http://www.hmrc.gov.uk/factsheets/complaints-factsheet.pdf - or write to any tax office"
-     institution-url="http://www.hmrc.gov.uk/acrobat/index.htm"
-     opened="2010-09-13"
-     closed=""
-     name="Guillaume Pasquet"
-     group=""
-     />
+<bug institution-name="HM Revenue and Customs" institution-address="Complaint form: http://www.hmrc.gov.uk/factsheets/complaints-factsheet.pdf - or write to any tax office" institution-url="http://www.hmrc.gov.uk/acrobat/index.htm" opened="2010-09-13" closed="" name="Guillaume Pasquet" group=""/>
 
-<bug institution-name="Driver and Vehicle Licensing Agency"
-     institution-address="DVLA, SA6 7JL, Swansea"
-     institution-url="http://www.dft.gov.uk/dvla/forms.aspx"
-     opened="2010-09-13"
-     closed="2015-05-07"
-     closedby="Nicola Feltrin"
-     name="Sam Tuke"
-     group=""
-     comment="Original website has been merged with gov.uk AFAICT no further reference to proprietary PDF readers can be found on DVLA pages."
-     />
+<bug institution-name="Driver and Vehicle Licensing Agency" institution-address="DVLA, SA6 7JL, Swansea" institution-url="http://www.dft.gov.uk/dvla/forms.aspx" opened="2010-09-13" closed="2015-05-07" closedby="Nicola Feltrin" name="Sam Tuke" group="" comment="Original website has been merged with gov.uk AFAICT no further reference to proprietary PDF readers can be found on DVLA pages."/>
 
-<bug institution-name="Barnet - London borough"
-     institution-address="North London Business Park (NLBP), Oakleigh Road South, London. N11 1NP"
-     institution-url="https://www.barnet.gov.uk/citizen-home/council-and-democracy/policy-and-performance/website-policies/Accessibility-.html"
-     opened="2010-09-14"
-     closed=""
-     name="Carlo Stemberger"
-     group=""
-     comment="Original link broken. Link updated on 2015-05-07 by Nicola Feltrin"
-     />
+<bug institution-name="Barnet - London borough" institution-address="North London Business Park (NLBP), Oakleigh Road South, London. N11 1NP" institution-url="https://www.barnet.gov.uk/citizen-home/council-and-democracy/policy-and-performance/website-policies/Accessibility-.html" opened="2010-09-14" closed="" name="Carlo Stemberger" group="" comment="Original link broken. Link updated on 2015-05-07 by Nicola Feltrin"/>
 
-<bug institution-name="West Sussex County Council"
-     institution-address="County Hall, Chichester PO19 1RQ"
-     institution-url="http://www.westsussex.gov.uk/system_pages/top_nav/help/downloading_documents_adobe.aspx"
-     opened="2010-09-14"
-     closed=""
-     name="Carlo Stemberger"
-     group=""
-     comment=""
-     />
+<bug institution-name="West Sussex County Council" institution-address="County Hall, Chichester PO19 1RQ" institution-url="http://www.westsussex.gov.uk/system_pages/top_nav/help/downloading_documents_adobe.aspx" opened="2010-09-14" closed="" name="Carlo Stemberger" group="" comment=""/>
 
-<bug institution-name="Home Office"
-     institution-address="Direct Communications Unit - 2 Marsham Street London SW1P 4DF"
-     institution-url="https://www.gov.uk/government/publications/home-office-business-plan-2012-to-2015-may-2012"
-     opened="2010-09-14"
-     closed=""
-     name="Carlo Stemberger"
-     group=""
-     comment="Original link broken. Link updated on 2015-05-07 by Nicola Feltrin"
-     />
+<bug institution-name="Home Office" institution-address="Direct Communications Unit - 2 Marsham Street London SW1P 4DF" institution-url="https://www.gov.uk/government/publications/home-office-business-plan-2012-to-2015-may-2012" opened="2010-09-14" closed="" name="Carlo Stemberger" group="" comment="Original link broken. Link updated on 2015-05-07 by Nicola Feltrin"/>
 
-<bug institution-name="Royal Borough of Kensington and Chelsea"
-     institution-address="The Town Hall - Hornton Street, W8 7NX"
-     institution-url="http://www.rbkc.gov.uk/footerlinks/helpwithpdfs.aspx"
-     opened="2010-09-14"
-     closed=""
-     name="Carlo Stemberger"
-     group=""
-     comment=""
-     />
+<bug institution-name="Royal Borough of Kensington and Chelsea" institution-address="The Town Hall - Hornton Street, W8 7NX" institution-url="http://www.rbkc.gov.uk/footerlinks/helpwithpdfs.aspx" opened="2010-09-14" closed="" name="Carlo Stemberger" group="" comment=""/>
 
-<bug institution-name="Department of Health"
-     institution-address="Richmond House, 79 Whitehall, London SW1A 2NS"
-     institution-url="http://www.dh.gov.uk/en/Help/DH_062758"
-     opened="2010-09-14"
-     closed="2015-05-07"
-     closedby="Nicola Feltrin"
-     name="Carlo Stemberger"
-     group=""
-     comment="Original website has been merged with gov.uk AFAICT no further reference to proprietary PDF readers can be found on Department of Health pages"
-     />
+<bug institution-name="Department of Health" institution-address="Richmond House, 79 Whitehall, London SW1A 2NS" institution-url="http://www.dh.gov.uk/en/Help/DH_062758" opened="2010-09-14" closed="2015-05-07" closedby="Nicola Feltrin" name="Carlo Stemberger" group="" comment="Original website has been merged with gov.uk AFAICT no further reference to proprietary PDF readers can be found on Department of Health pages"/>
 
-<bug institution-name="Employment Tribunals"
-     institution-address="The Secretary to the Tribunals - First Floor - 100 Southgate Street Bury St Edmunds IP33 2AQ"
-     institution-url="http://www.employmenttribunals.gov.uk/index.htm"
-     opened="2010-09-14"
-     closed="2015-05-07"
-     closedby="Nicola Feltrin"
-     name="Carlo Stemberger"
-     group=""
-     comment="Original website has been merged with gov.uk AFAICT no further reference to proprietary PDF readers can be found on Employment Tribunals pages"
-     />
+<bug institution-name="Employment Tribunals" institution-address="The Secretary to the Tribunals - First Floor - 100 Southgate Street Bury St Edmunds IP33 2AQ" institution-url="http://www.employmenttribunals.gov.uk/index.htm" opened="2010-09-14" closed="2015-05-07" closedby="Nicola Feltrin" name="Carlo Stemberger" group="" comment="Original website has been merged with gov.uk AFAICT no further reference to proprietary PDF readers can be found on Employment Tribunals pages"/>
 
-<bug institution-name="Leicestershire County Council"
-     institution-address="County Hall,  Glenfield,  Leicester  LE3 8RA"
-     institution-url="http://www.leics.gov.uk/index/help/fileformats.htm"
-     opened="2010-09-14"
-     closed=""
-     name="Carlo Stemberger"
-     group=""
-     comment=""
-     />
+<bug institution-name="Leicestershire County Council" institution-address="County Hall,  Glenfield,  Leicester  LE3 8RA" institution-url="http://www.leics.gov.uk/index/help/fileformats.htm" opened="2010-09-14" closed="" name="Carlo Stemberger" group="" comment=""/>
 
-<bug institution-name="Legal Services Commission"
-     institution-address="Atos Origin - 4th Floor, 4 Triton Square, Regents Place 	London 	NW1 3HG"
-     institution-url="http://www.legalservices.gov.uk/help/pdf.asp"
-     opened="2010-09-14"
-     closed="2015-05-07"
-     closedby="Nicola Feltrin"
-     name="Carlo Stemberger"
-     group=""
-     comment="Original website has been merged with gov.uk AFAICT no further reference to proprietary PDF readers can be found on Legal Services Commission pages"
-     />
+<bug institution-name="Legal Services Commission" institution-address="Atos Origin - 4th Floor, 4 Triton Square, Regents Place  London  NW1 3HG" institution-url="http://www.legalservices.gov.uk/help/pdf.asp" opened="2010-09-14" closed="2015-05-07" closedby="Nicola Feltrin" name="Carlo Stemberger" group="" comment="Original website has been merged with gov.uk AFAICT no further reference to proprietary PDF readers can be found on Legal Services Commission pages"/>
 
-<bug institution-name="Basildon District Council"
-     institution-address="The Basildon Centre, St. Martin's Square, Basildon, Essex, SS14 1DL"
-     institution-url="http://www.basildon.gov.uk/article/2630/Adobe-Acrobat-PDF-files"
-     opened="2010-09-14"
-     closed=""
-     name="Carlo Stemberger"
-     group=""
-     comment="Original link broken. Link updated on 2015-05-07 by Nicola Feltrin"
-     />
-<bug institution-name="Newham Council"
-     institution-address="London Borough of Newham  Newham Dockside  1000 Dockside Road  London, E16 2QU"
-     institution-url="http://powered.jobsgopublic.com/newham"
-     opened="2010-09-15"
-     closed="2015-05-07"
-     closedby="Nicola Feltrin"
-     name="Richard Turton"
-     group=""
-     comment="Original link broken. No further reference to proprietary PDF software found"
-     />
-<bug institution-name="Foreign and Commonwealth Office"
-     institution-address="St John's Road, London N15 6QL"
-     institution-url="https://www.gov.uk/government/speeches/police-grant-report"
-     opened="2010-09-15"
-     closed=""
-     name="Chris Webster"
-     group=""
-     comment="Original link broken. Link updated on 2015-05-07 by Nicola Feltrin"
-     />
+<bug institution-name="Basildon District Council" institution-address="The Basildon Centre, St. Martin's Square, Basildon, Essex, SS14 1DL" institution-url="http://www.basildon.gov.uk/article/2630/Adobe-Acrobat-PDF-files" opened="2010-09-14" closed="" name="Carlo Stemberger" group="" comment="Original link broken. Link updated on 2015-05-07 by Nicola Feltrin"/>
+<bug institution-name="Newham Council" institution-address="London Borough of Newham  Newham Dockside  1000 Dockside Road  London, E16 2QU" institution-url="http://powered.jobsgopublic.com/newham" opened="2010-09-15" closed="2015-05-07" closedby="Nicola Feltrin" name="Richard Turton" group="" comment="Original link broken. No further reference to proprietary PDF software found"/>
+<bug institution-name="Foreign and Commonwealth Office" institution-address="St John's Road, London N15 6QL" institution-url="https://www.gov.uk/government/speeches/police-grant-report" opened="2010-09-15" closed="" name="Chris Webster" group="" comment="Original link broken. Link updated on 2015-05-07 by Nicola Feltrin"/>
 
-<bug institution-name="London Borough of Barking and Dagenham   "
-     institution-address="Civic Centre - Rainham Road North - Dagenham RM10 7BN"
-     institution-url="http://www.lbbd.gov.uk/7-hr/schools/schools-main.html"
-     opened="2010-09-15"
-     closed="2015-05-07"
-     closedby="Nicola Feltrin"
-     name="Richard Turton"
-     group=""
-     comment="Original link broken. No further reference to proprietary PDF software found"
-     />
+<bug institution-name="London Borough of Barking and Dagenham   " institution-address="Civic Centre - Rainham Road North - Dagenham RM10 7BN" institution-url="http://www.lbbd.gov.uk/7-hr/schools/schools-main.html" opened="2010-09-15" closed="2015-05-07" closedby="Nicola Feltrin" name="Richard Turton" group="" comment="Original link broken. No further reference to proprietary PDF software found"/>
 
-<bug institution-name="Leeds City Council"
-     institution-address="Hawksworth Grove, LS5 3NB, Leeds"
-     institution-url="http://leeds.gov.uk/Life_Events/Starting_a_business.aspx"
-     opened="2010-09-15"
-     closed="2015-05-07"
-     closedby="Nicola Feltrin"
-     name="Martyn Ranyard"
-     group=""
-     comment="The website doesn't seem to exist anymore"
-     />
+<bug institution-name="Leeds City Council" institution-address="Hawksworth Grove, LS5 3NB, Leeds" institution-url="http://leeds.gov.uk/Life_Events/Starting_a_business.aspx" opened="2010-09-15" closed="2015-05-07" closedby="Nicola Feltrin" name="Martyn Ranyard" group="" comment="The website doesn't seem to exist anymore"/>
 
-<bug institution-name="Worcestershire County Council"
-     institution-address="County Hall, Spetchley Road, Worcester, WR5 2NP"
-     institution-url="http://e-services.worcestershire.gov.uk/myparish/OtherMeetings.aspx?ParishID=115&amp;PostCode=WR74QP&amp;Prop=0&amp;partner=wdc??&amp;MarriedTo=0"
-     opened="2010-09-15"
-     closed=""
-     name="Withheld"
-     group=""
-     comment="Original link broken. Link updated on 2015-05-07 by Nicola Feltrin"
-     />
+<bug institution-name="Worcestershire County Council" institution-address="County Hall, Spetchley Road, Worcester, WR5 2NP" institution-url="http://e-services.worcestershire.gov.uk/myparish/OtherMeetings.aspx?ParishID=115&amp;PostCode=WR74QP&amp;Prop=0&amp;partner=wdc??&amp;MarriedTo=0" opened="2010-09-15" closed="" name="Withheld" group="" comment="Original link broken. Link updated on 2015-05-07 by Nicola Feltrin"/>
 
-<bug institution-name="Worcestershire County Council"
-     institution-address="County Hall, Spetchley Road, Worcester, WR5 2NP"
-     institution-url="http://www.worcestershire.gov.uk/cms/environment-and-planning/archaeology/information-and-advice/historic-environment-record/tithe-and-inclosure-map-project/help.aspx"
-     opened="2010-09-15"
-     closed="2015-05-07"
-     closedby="Nicola Feltrin"
-     name="Anon"
-     group=""
-     comment="Duplicate bug"
-     />
+<bug institution-name="Worcestershire County Council" institution-address="County Hall, Spetchley Road, Worcester, WR5 2NP" institution-url="http://www.worcestershire.gov.uk/cms/environment-and-planning/archaeology/information-and-advice/historic-environment-record/tithe-and-inclosure-map-project/help.aspx" opened="2010-09-15" closed="2015-05-07" closedby="Nicola Feltrin" name="Anon" group="" comment="Duplicate bug"/>
 
-<bug institution-name="HM Revenue &amp; Customs"
-     institution-address="Cumberland Road, BS1 6UF, Bristol"
-     institution-url="http://www.hmrc.gov.uk/menus/help-technical.htm"
-     opened="2010-09-16"
-     closed="2015-05-07"
-     closedby="Nicola Feltrin"
-     name="Kevan Harding"
-     group=""
-     comment="Duplicate bug"
-     />
-<bug institution-name="Met office"
-     institution-address="HR Customer Services, Met Office, FitzRoy Road, Exeter, EX1 3PB"
-     institution-url="http://www.metoffice.gov.uk/aviation/national-responsibilities/caa-verification"
-     opened="2010-09-16"
-     closed=""
-     name="Craig Barnes"
-     group=""
-     comment="Original link broken. Link updated on 2015-05-07 by Nicola Feltrin"
-     />
+<bug institution-name="HM Revenue &amp; Customs" institution-address="Cumberland Road, BS1 6UF, Bristol" institution-url="http://www.hmrc.gov.uk/menus/help-technical.htm" opened="2010-09-16" closed="2015-05-07" closedby="Nicola Feltrin" name="Kevan Harding" group="" comment="Duplicate bug"/>
+<bug institution-name="Met office" institution-address="HR Customer Services, Met Office, FitzRoy Road, Exeter, EX1 3PB" institution-url="http://www.metoffice.gov.uk/aviation/national-responsibilities/caa-verification" opened="2010-09-16" closed="" name="Craig Barnes" group="" comment="Original link broken. Link updated on 2015-05-07 by Nicola Feltrin"/>
 
-<bug institution-name="Loch Lomond and The Trossachs National Park"
-     institution-address="Loch Lomond &amp; The Trossachs National Park Headquarters, Carrochan, Carrochan Road, Balloch, G83 8EG"
-     institution-url="http://www.lochlomond-trossachs.org/accessibility/menu-id-502.html"
-     opened="2010-09-17"
-     closed=""
-     name="Alice Kaerast"
-     group=""
-     comment=""
-     />
-<bug institution-name="Steeton with Eastburn Parish Council"
-     institution-address="Contact Address: Fold House, 6 The Fold, Lothersdale, Keighley, BD20 8HD"
-     institution-url="http://www.steeton-with-eastburnparishcouncil.gov.uk/Core/Steeton-Eastburn-PC/Pages/Newsletters_1.aspx"
-     opened="2010-09-17"
-     closed=""
-     name="Alice Kaerast"
-     group=""
-     comment=""
-     />
+<bug institution-name="Loch Lomond and The Trossachs National Park" institution-address="Loch Lomond &amp; The Trossachs National Park Headquarters, Carrochan, Carrochan Road, Balloch, G83 8EG" institution-url="http://www.lochlomond-trossachs.org/accessibility/menu-id-502.html" opened="2010-09-17" closed="" name="Alice Kaerast" group="" comment=""/>
+<bug institution-name="Steeton with Eastburn Parish Council" institution-address="Contact Address: Fold House, 6 The Fold, Lothersdale, Keighley, BD20 8HD" institution-url="http://www.steeton-with-eastburnparishcouncil.gov.uk/Core/Steeton-Eastburn-PC/Pages/Newsletters_1.aspx" opened="2010-09-17" closed="" name="Alice Kaerast" group="" comment=""/>
 
-<bug institution-name="Bradford Metropolitan District Council"
-     institution-address="City Hall, Centenary Square, Bradford, BD1 1HY"
-     institution-url="http://www.bradford.gov.uk/bmdc/economics_and_finance/tax/business_rates/business_rates.htm"
-     opened="2010-09-17"
-     closed="2015-05-07"
-     closedby="Nicola Feltrin"
-     name="Alice Kaerast"
-     group=""
-     comment="Duplicate bug"
-     />
+<bug institution-name="Bradford Metropolitan District Council" institution-address="City Hall, Centenary Square, Bradford, BD1 1HY" institution-url="http://www.bradford.gov.uk/bmdc/economics_and_finance/tax/business_rates/business_rates.htm" opened="2010-09-17" closed="2015-05-07" closedby="Nicola Feltrin" name="Alice Kaerast" group="" comment="Duplicate bug"/>
 
-<bug institution-name="Harrogate Borough Council"
-     institution-address="Council Offices, Crescent Gardens, Harrogate, North Yorkshire, HG1 2SG"
-     institution-url="http://www.harrogate.gov.uk/localdemocracy/links.asp"
-     opened="2010-09-17"
-     closed=""
-     name="Alice Kaerast"
-     group=""
-     comment=""
-     />
+<bug institution-name="Harrogate Borough Council" institution-address="Council Offices, Crescent Gardens, Harrogate, North Yorkshire, HG1 2SG" institution-url="http://www.harrogate.gov.uk/localdemocracy/links.asp" opened="2010-09-17" closed="" name="Alice Kaerast" group="" comment=""/>
 
-<bug institution-name="Yorkshire Dales National Park Authority"
-     institution-address="Yorkshire Dales National Park Authority, Yoredale, Bainbridge, Leyburn, North Yorkshire, DL8 3EL"
-     institution-url="http://www.yorkshiredales.org.uk/visit-the-dales/things-to-see-and-do/get-outdoors-dales/walking/yorkshire-three-peaks/three-peaks-certificates"
-     opened="2010-09-17"
-     closed=""
-     name="Alice Kaerast"
-     group=""
-     comment="Original link broken. Link updated on 2015-05-07 by Nicola Feltrin"
-     />
+<bug institution-name="Yorkshire Dales National Park Authority" institution-address="Yorkshire Dales National Park Authority, Yoredale, Bainbridge, Leyburn, North Yorkshire, DL8 3EL" institution-url="http://www.yorkshiredales.org.uk/visit-the-dales/things-to-see-and-do/get-outdoors-dales/walking/yorkshire-three-peaks/three-peaks-certificates" opened="2010-09-17" closed="" name="Alice Kaerast" group="" comment="Original link broken. Link updated on 2015-05-07 by Nicola Feltrin"/>
 
-<bug institution-name="Dartmoor National Park Authority"
-     institution-address="Parke, Bovey Tracey, Newton Abbot, Devon, TQ13 9JQ"
-     institution-url="http://www.dartmoor-npa.gov.uk/index/acessibility#PDF"
-     opened="2010-09-17"
-     closed=""
-     name="Alice Kaerast"
-     group=""
-     comment=""
-     />
-<bug institution-name="Lancashire County Council Environment Directorate"
-     institution-address="County Hall, Fishergate, Preston, Lancashire, PR1 8XJ"
-     institution-url="http://www3.lancashire.gov.uk/corporate/web/?Adult_Services_Health_and_Wellbeing_Directorate/43457"
-     opened="2010-09-20"
-     closed=""
-     name="Nick Wallis"
-     group=""
-     comment="Original link broken. Link updated on 2015-05-07 by Nicola Feltrin"
-     />
-<bug institution-name="Winchester City Council"
-     institution-address="71 May Tree Close, Winchester SO22 4JF"
-     institution-url="http://www.winchester.gov.uk/planning-policy/local-plan-review-adopted-2006/local-plan-review-background-documents/winchester-review-deposit-local-plan-2001/"
-     opened="2010-09-21"
-     closed=""
-     name="Julian Wald"
-     group=""
-     comment="Original link broken. Link updated on 2015-05-07 by Nicola Feltrin"
-     />
-<bug institution-name="Essex County Council"
-     institution-address="County Hall, CM1 1QH,  Chelmsford "
-     institution-url="http://www.essexcc.gov.uk/vip8/ecc/ECCWebsite/dis/gui.jsp?channelOid=64010&amp;guideOid=131309"
-     opened="2010-09-23"
-     closed="2015-05-07"
-     closedby="Nicola Feltrin"
-     name="Ryan Cartwright"
-     group=""
-     comment="The link shows how to read their documents and includes links to Acrobat and MS products. Which leads me to believe that documents on the site are in a range of proprietary formats - The website doesn't seem to exist anymore"
-     />
-<bug institution-name="DirectGov"
-     institution-address="Unknown"
-     institution-url="https://www.gov.uk/government/publications/corporation-tax-change-adobe-reader-settings"
-     opened="2010-10-02"
-     closed=""
-     name="Malcolm Waterman"
-     group=""
-     comment="Original link broken. Link updated on 2015-05-07 by Nicola Feltrin"
-     />
+<bug institution-name="Dartmoor National Park Authority" institution-address="Parke, Bovey Tracey, Newton Abbot, Devon, TQ13 9JQ" institution-url="http://www.dartmoor-npa.gov.uk/index/acessibility#PDF" opened="2010-09-17" closed="" name="Alice Kaerast" group="" comment=""/>
+<bug institution-name="Lancashire County Council Environment Directorate" institution-address="County Hall, Fishergate, Preston, Lancashire, PR1 8XJ" institution-url="http://www3.lancashire.gov.uk/corporate/web/?Adult_Services_Health_and_Wellbeing_Directorate/43457" opened="2010-09-20" closed="" name="Nick Wallis" group="" comment="Original link broken. Link updated on 2015-05-07 by Nicola Feltrin"/>
+<bug institution-name="Winchester City Council" institution-address="71 May Tree Close, Winchester SO22 4JF" institution-url="http://www.winchester.gov.uk/planning-policy/local-plan-review-adopted-2006/local-plan-review-background-documents/winchester-review-deposit-local-plan-2001/" opened="2010-09-21" closed="" name="Julian Wald" group="" comment="Original link broken. Link updated on 2015-05-07 by Nicola Feltrin"/>
+<bug institution-name="Essex County Council" institution-address="County Hall, CM1 1QH,  Chelmsford " institution-url="http://www.essexcc.gov.uk/vip8/ecc/ECCWebsite/dis/gui.jsp?channelOid=64010&amp;guideOid=131309" opened="2010-09-23" closed="2015-05-07" closedby="Nicola Feltrin" name="Ryan Cartwright" group="" comment="The link shows how to read their documents and includes links to Acrobat and MS products. Which leads me to believe that documents on the site are in a range of proprietary formats - The website doesn't seem to exist anymore"/>
+<bug institution-name="DirectGov" institution-address="Unknown" institution-url="https://www.gov.uk/government/publications/corporation-tax-change-adobe-reader-settings" opened="2010-10-02" closed="" name="Malcolm Waterman" group="" comment="Original link broken. Link updated on 2015-05-07 by Nicola Feltrin"/>
 
-<bug institution-name="Surrey County Council"
-     institution-address="Contact Centre, Floor 3, Conquest House, Wood Street, Kingston upon Thames, KT1 1AB"
-     institution-url="http://www.surreycc.gov.uk/sccwebsite/sccwspublications.nsf/docidLookupFileResourcesByUNID/docid2A3BE0E5F5DA8CA2802572D0002FA957?openDocument"
-     opened="2010-10-02"
-     closed=""
-     name="Malcolm Waterman"
-     group=""
-     comment=""
-     />
+<bug institution-name="Surrey County Council" institution-address="Contact Centre, Floor 3, Conquest House, Wood Street, Kingston upon Thames, KT1 1AB" institution-url="http://www.surreycc.gov.uk/sccwebsite/sccwspublications.nsf/docidLookupFileResourcesByUNID/docid2A3BE0E5F5DA8CA2802572D0002FA957?openDocument" opened="2010-10-02" closed="" name="Malcolm Waterman" group="" comment=""/>
 
-<bug institution-name="Nottinghamshire County Council"
-     institution-address="County Hall, West Bridgford, Nottingham, NG2 7QP"
-     institution-url="http://www.nottinghamshire.gov.uk/plug-ins-and-viewers/"
-     opened="2010-10-03"
-     closed="2015-05-07"
-     closedby="Nicola Feltrin"
-     name="Gregory Waters"
-     group=""
-     comment="Original link broken. Link updated. Added reference to pdfreaders.org"
-     />
-<bug institution-name="Cambridge University"
-     institution-address="Cambridge University Press The Edinburgh Building Shaftesbury Road Cambridge CB2 8RU United Kingdom"
-     institution-url="http://cco.cambridge.org/pages/guided_tour"
-     opened="2010-10-03"
-     closed="2015-05-07"
-     closedby="Nicola Feltrin"
-     name="Max-B"
-     group="LUG Scandiano"
-     comment="Original link broken. No further reference to proprietary PDF software found"
-     />
-<bug institution-name="Brighton &amp; Hove City Council"
-     institution-address="Kings House, Grand Avenue, Hove BN3 2LS"
-     institution-url="http://www.brighton-hove.gov.uk/index.cfm?request=c1199915"
-     opened="2010-10-04"
-     closed=""
-     name="Cllr Jason Kitcat"
-     group="Green Party"
-     comment=""
-     />
+<bug institution-name="Nottinghamshire County Council" institution-address="County Hall, West Bridgford, Nottingham, NG2 7QP" institution-url="http://www.nottinghamshire.gov.uk/plug-ins-and-viewers/" opened="2010-10-03" closed="2015-05-07" closedby="Nicola Feltrin" name="Gregory Waters" group="" comment="Original link broken. Link updated. Added reference to pdfreaders.org"/>
+<bug institution-name="Cambridge University" institution-address="Cambridge University Press The Edinburgh Building Shaftesbury Road Cambridge CB2 8RU United Kingdom" institution-url="http://cco.cambridge.org/pages/guided_tour" opened="2010-10-03" closed="2015-05-07" closedby="Nicola Feltrin" name="Max-B" group="LUG Scandiano" comment="Original link broken. No further reference to proprietary PDF software found"/>
+<bug institution-name="Brighton &amp; Hove City Council" institution-address="Kings House, Grand Avenue, Hove BN3 2LS" institution-url="http://www.brighton-hove.gov.uk/index.cfm?request=c1199915" opened="2010-10-04" closed="" name="Cllr Jason Kitcat" group="Green Party" comment=""/>
 
-<bug institution-name="National Physical Laboratory"
-     institution-address="Hampton Road, TW10 0LW"
-     institution-url="http://www.npl.co.uk/carbon-measurement/etv/"
-     opened="2010-10-04"
-     closed=""
-     name="Andres"
-     group=""
-     comment="Original link broken. Link updated on 2015-05-07 by Nicola Feltrin"
-     />
+<bug institution-name="National Physical Laboratory" institution-address="Hampton Road, TW10 0LW" institution-url="http://www.npl.co.uk/carbon-measurement/etv/" opened="2010-10-04" closed="" name="Andres" group="" comment="Original link broken. Link updated on 2015-05-07 by Nicola Feltrin"/>
 
-<bug institution-name="Oxford university"
-     institution-address="Wellington Square, OX1 2JD, Oxford"
-     institution-url="http://www.ox.ac.uk/accessibility"
-     opened="2010-10-04"
-     closed=""
-     name="Andres"
-     group=""
-     comment="Original link broken. Link updated on 2015-05-07 by Nicola Feltrin"
-     />
+<bug institution-name="Oxford university" institution-address="Wellington Square, OX1 2JD, Oxford" institution-url="http://www.ox.ac.uk/accessibility" opened="2010-10-04" closed="" name="Andres" group="" comment="Original link broken. Link updated on 2015-05-07 by Nicola Feltrin"/>
 
-<bug institution-name="Mayor of  London"
-     institution-address="The Queen’s Walk More London London SE1 2AA"
-     institution-url="http://static.london.gov.uk/mayor/strategies/sds/towards_lon_plan.jsp"
-     opened="2010-10-04"
-     closed=""
-     name="Andres"
-     group=""
-     comment=""
-     />
+<bug institution-name="Mayor of  London" institution-address="The Queen’s Walk More London London SE1 2AA" institution-url="http://static.london.gov.uk/mayor/strategies/sds/towards_lon_plan.jsp" opened="2010-10-04" closed="" name="Andres" group="" comment=""/>
 
-<bug institution-name="Oxford City Council"
-     institution-address="Town Hall, St Aldates, Oxford, OX1 1BX"
-     institution-url="http://consultation.oxford.gov.uk/consult.ti/system/text?page=accessibility"
-     opened="2010-10-12"
-     closed=""
-     name="C Harvey"
-     group=""
-     comment=""
-     />
+<bug institution-name="Oxford City Council" institution-address="Town Hall, St Aldates, Oxford, OX1 1BX" institution-url="http://consultation.oxford.gov.uk/consult.ti/system/text?page=accessibility" opened="2010-10-12" closed="" name="C Harvey" group="" comment=""/>
 
-<bug institution-name="London Borough of Camden"
-     institution-address="Judd Street, London, WC1H 9JE"
-     institution-url="http://planningonline.camden.gov.uk/MULTIWAM/showCaseFile.do?appType=Planning&amp;appNumber=2010%2F4721%2FP"
-     opened="2010-10-14"
-     closed=""
-     name="Sebastian Tennant"
-     group=""
-     comment=""
-     />
+<bug institution-name="London Borough of Camden" institution-address="Judd Street, London, WC1H 9JE" institution-url="http://planningonline.camden.gov.uk/MULTIWAM/showCaseFile.do?appType=Planning&amp;appNumber=2010%2F4721%2FP" opened="2010-10-14" closed="" name="Sebastian Tennant" group="" comment=""/>
 
-<bug institution-name="Sheffield City Council"
-     institution-address=""
-     institution-url="https://www.sheffield.gov.uk/search-result.html?queryStr=walks&amp;n=10&amp;content_type=application/pdf&amp;siteuuid=7d81089b-c621-4116-b63f-d7ba56a5fbac"
-     opened="2010-10-14"
-     closed="almost"
-     name="Simon L."
-     group=""
-     comment="Sometimes the files are referred to as PDF/$name_of_proprietary_software, but no link or further mention of proprietary PDF software is made."
-     />
+<bug institution-name="Sheffield City Council" institution-address="" institution-url="https://www.sheffield.gov.uk/search-result.html?queryStr=walks&amp;n=10&amp;content_type=application/pdf&amp;siteuuid=7d81089b-c621-4116-b63f-d7ba56a5fbac" opened="2010-10-14" closed="almost" name="Simon L." group="" comment="Sometimes the files are referred to as PDF/$name_of_proprietary_software, but no link or further mention of proprietary PDF software is made."/>
 
   </buglist>
 </set>

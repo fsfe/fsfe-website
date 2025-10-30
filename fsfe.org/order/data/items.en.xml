@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!-- Do not translate this file! -->
 <itemset>
   <version>1</version>
@@ -37,11 +37,11 @@
       large="data/pictures/tshirt-nocloud-black-back-large.jpg"/>
   </item -->
   <item type="tshirt" id="tshirt-hacking-4-freedom" price="25.00" date="2024-01-12">
-    <available size="XS"  a="48" b="68"/>
-    <available size="S"   a="50" b="70"/>
-    <available size="M"   a="53" b="70"/>
-    <available size="L"   a="57" b="72"/>
-    <available size="XL"  a="55" b="75"/>
+    <available size="XS" a="48" b="68"/>
+    <available size="S" a="50" b="70"/>
+    <available size="M" a="53" b="70"/>
+    <available size="L" a="57" b="72"/>
+    <available size="XL" a="55" b="75"/>
     <available size="XXL" a="57" b="77"/>
     <available size="3XL" a="65" b="79"/>
     <available size="4XL" a="70" b="82"/>
@@ -120,11 +120,11 @@
   </item>
   <item type="other" id="ada-zangemann-tattoos" price="4.00" date="2025-10-07">
     <available size="#"/>
-    <image small="data/pictures/ada-zangemann-tattoos.jpg"  large="data/pictures/ada-zangemann-tattoos.jpg"/>
+    <image small="data/pictures/ada-zangemann-tattoos.jpg" large="data/pictures/ada-zangemann-tattoos.jpg"/>
   </item>
   <item type="other" id="fsfe-tattoos" price="4.00" date="2025-10-07">
     <available size="#"/>
-    <image small="data/pictures/fsfe-tattoos.jpg"  large="data/pictures/fsfe-tattoos.jpg"/>
+    <image small="data/pictures/fsfe-tattoos.jpg" large="data/pictures/fsfe-tattoos.jpg"/>
   </item>
   <!-- item type="other" id="pin-fsfe-white" price="5.00" date="2019-11-22">
     <available size="#"/>

@@ -1,215 +1,37 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
+<?xml version="1.0" encoding="utf-8"?>
 <set>
   <version>1</version>
 
   <buglist country="NO">
-    <bug institution-name="Royal Norwegian Ministry of Education and Research"
-     institution-address="P.box 8119 Dep, 0032 Oslo"
-     institution-url="http://www.regjeringen.no/en/dep/kd/About-the-Ministry/organisation/organizational-chart.html?id=612"
-     opened="2010-09-13"
-     closed="2011-02-17"
-     name="Andreas Tolf Tolfsen"
-     group=""
+    <bug institution-name="Royal Norwegian Ministry of Education and Research" institution-address="P.box 8119 Dep, 0032 Oslo" institution-url="http://www.regjeringen.no/en/dep/kd/About-the-Ministry/organisation/organizational-chart.html?id=612" opened="2010-09-13" closed="2011-02-17" name="Andreas Tolf Tolfsen" group=""/>
+   <bug institution-name="Tysnes municipality" institution-address="Rådhuset, 5685 Uggdal" institution-url="http://www.tysnes.kommune.no/nettstadkart.323938.nn.html" opened="2010-09-13" closed="" name="Andreas Tolf Tolfsen" group="" comment="Original link broken. Link updated on 2015-04-29 by Nicola Feltrin"/>
+   <bug institution-name="Alta municipality" institution-address="P.box 1403, 9506 Alta" institution-url="http://www.alta.kommune.no/hjelp.72121.no.html" opened="2010-09-13" closed="" name="Andreas Tolf Tolfsen" group=""/>
+   <bug institution-name="Agency for Outdoor Recreation and Nature      Management in Oslo municipality" institution-address="P.box 1443 Vika, 0115 Oslo" institution-url="https://www.oslo.kommune.no/dognapne-vakttjenester/legevakt/legevakt-storgata/" opened="2010-09-13" closed="" name="Andreas Tolf Tolfsen" group="" comment="Original link broken. Link updated on 2015-04-29 by Nicola Feltrin"/>
+   <bug institution-name="Sogndal municipality" institution-address="P.box 153, 6851 Sogndal" institution-url="http://www.sogndal.kommune.no/sogn/sogndal/sogndalk.nsf/id/397FCBD30086ED33C1256E5A0033F1B5" opened="2010-09-13" closed="2011-02-17" name="Andreas Tolf Tolfsen" group=""/>
+   <bug institution-name="Skjåk municipality" institution-address="2690 Sjåk" institution-url="http://www.skj@k.kommune.no/index.gan?id=1892" opened="2010-09-13" closed="2015-04-29" closedby="Nicola Feltrin" name="Andreas Tolf Tolfsen" group="" comment="Original link broken. No further reference to proprietary software found on the new site."/>
+   <bug institution-name="Gjøvik municipality" institution-address="P.box 630, 2810 Gjøvik" institution-url="https://www.gjovik.kommune.no/plan-og-utbygging/oppmaling/kart/" opened="2010-09-13" closed="" name="Andreas Tolf Tolfsen" group="" comment="Original link broken. Link updated on 2015-04-29 by Nicola Feltrin"/>
+<bug institution-name="Akershus fylkeskommune" institution-address="Postboks 1200 Sentrum, 0107 Oslo" institution-url="http://www.akershus.no/politikk/skjema/" opened="2010-09-13" closed="2015-04-29" closedby="Nicola Feltrin" name="Stian Ellingsen" group=""/>
+<bug institution-name="Oppland fylkeskommune" institution-address="Postboks 988, 2626 Lillehammer" institution-url="http://www.oppland.no/Aktuelt/Ansattportalen/Elektroniske-skjema/Bruksanvisning-for-bruk-av-pdf-skjema/" opened="2010-09-14" closed="" name="Stian Ellingsen" group="" comment="Reference to proprietary software removed from the original link. Reference still present elsewhere in the website. Link updated on 2015-04-29 by Nicola Feltrin"/>
+<bug institution-name="Hedmark fylkeskommune" institution-address="Postboks 4404 Bedriftssenteret, 2325 Hamar" institution-url="http://www.hedmark.org/Om-fylkeskommunen/Fag-stab-og-serviceenheter/Samferdsel-kulturminner-og-plan/Samferdsel/Transportloeyver/Soeknadsskjemaer-saksgang-for-loeyver" opened="2010-09-14" closed="" name="Stian Ellingsen" group="" comment="Original link broken. Link updated on 2015-04-29 by Nicola Feltrin"/>
+<bug institution-name="Telemark fylkeskommune" institution-address="Postboks 2844, NO-3702 Skien" institution-url="http://www.telemark.no/Fylkeskommunen/AArsrapport" opened="2010-09-14" closed="" name="Stian Ellingsen" group="" comment="Original link broken. Link updated on 2015-04-29 by Nicola Feltrin"/>
 
-     />
-   <bug institution-name="Tysnes municipality"
-     institution-address="Rådhuset, 5685 Uggdal"
-     institution-url="http://www.tysnes.kommune.no/nettstadkart.323938.nn.html"
-     opened="2010-09-13"
-     closed=""
-     name="Andreas Tolf Tolfsen"
-     group=""
-     comment="Original link broken. Link updated on 2015-04-29 by Nicola Feltrin"
-     />
-   <bug institution-name="Alta municipality"
-     institution-address="P.box 1403, 9506 Alta"
-     institution-url="http://www.alta.kommune.no/hjelp.72121.no.html"
-     opened="2010-09-13"
-     closed=""
-     name="Andreas Tolf Tolfsen"
-     group=""
-     />
-   <bug institution-name="Agency for Outdoor Recreation and Nature
-     Management in Oslo municipality"
-     institution-address="P.box 1443 Vika, 0115 Oslo"
-     institution-url="https://www.oslo.kommune.no/dognapne-vakttjenester/legevakt/legevakt-storgata/"
-     opened="2010-09-13"
-     closed=""
-     name="Andreas Tolf Tolfsen"
-     group=""
-     comment="Original link broken. Link updated on 2015-04-29 by Nicola Feltrin"
-     />
-   <bug institution-name="Sogndal municipality"
-     institution-address="P.box 153, 6851 Sogndal"
-     institution-url="http://www.sogndal.kommune.no/sogn/sogndal/sogndalk.nsf/id/397FCBD30086ED33C1256E5A0033F1B5"
-     opened="2010-09-13"
-     closed="2011-02-17"
-     name="Andreas Tolf Tolfsen"
-     group=""
-     />
-   <bug institution-name="Skjåk municipality"
-     institution-address="2690 Sjåk"
-     institution-url="http://www.skj@k.kommune.no/index.gan?id=1892"
-     opened="2010-09-13"
-     closed="2015-04-29"
-     closedby="Nicola Feltrin"
-     name="Andreas Tolf Tolfsen"
-     group=""
-     comment="Original link broken. No further reference to proprietary software found on the new site."
-     />
-   <bug institution-name="Gjøvik municipality"
-     institution-address="P.box 630, 2810 Gjøvik"
-     institution-url="https://www.gjovik.kommune.no/plan-og-utbygging/oppmaling/kart/"
-     opened="2010-09-13"
-     closed=""
-     name="Andreas Tolf Tolfsen"
-     group=""
-     comment="Original link broken. Link updated on 2015-04-29 by Nicola Feltrin"
-     />
-<bug institution-name="Akershus fylkeskommune"
-     institution-address="Postboks 1200 Sentrum, 0107 Oslo"
-     institution-url="http://www.akershus.no/politikk/skjema/"
-     opened="2010-09-13"
-     closed="2015-04-29"
-     closedby="Nicola Feltrin"
-     name="Stian Ellingsen"
-     group=""
-     />
-<bug institution-name="Oppland fylkeskommune"
-     institution-address="Postboks 988, 2626 Lillehammer"
-     institution-url="http://www.oppland.no/Aktuelt/Ansattportalen/Elektroniske-skjema/Bruksanvisning-for-bruk-av-pdf-skjema/"
-     opened="2010-09-14"
-     closed=""
-     name="Stian Ellingsen"
-     group=""
-     comment="Reference to proprietary software removed from the original link. Reference still present elsewhere in the website. Link updated on 2015-04-29 by Nicola Feltrin"
-     />
-<bug institution-name="Hedmark fylkeskommune"
-     institution-address="Postboks 4404 Bedriftssenteret, 2325 Hamar"
-     institution-url="http://www.hedmark.org/Om-fylkeskommunen/Fag-stab-og-serviceenheter/Samferdsel-kulturminner-og-plan/Samferdsel/Transportloeyver/Soeknadsskjemaer-saksgang-for-loeyver"
-     opened="2010-09-14"
-     closed=""
-     name="Stian Ellingsen"
-     group=""
-     comment="Original link broken. Link updated on 2015-04-29 by Nicola Feltrin"
-     />
-<bug institution-name="Telemark fylkeskommune"
-     institution-address="Postboks 2844, NO-3702 Skien"
-     institution-url="http://www.telemark.no/Fylkeskommunen/AArsrapport"
-     opened="2010-09-14"
-     closed=""
-     name="Stian Ellingsen"
-     group=""
-     comment="Original link broken. Link updated on 2015-04-29 by Nicola Feltrin"
-     />
+<bug institution-name="Hordaland fylkeskommune" institution-address="Postboks 7900, 5020 Bergen" institution-url="http://www.hordaland.no/Hordaland-fylkeskommune/Politikk/iSak/Kom-i-gang-med-a-bruke-iPad/" opened="2010-09-14" closed="" name="Stian Ellingsen" group="" comment="Original link broken. Link updated on 2015-04-29 by Nicola Feltrin"/>
 
-<bug institution-name="Hordaland fylkeskommune"
-     institution-address="Postboks 7900, 5020 Bergen"
-     institution-url="http://www.hordaland.no/Hordaland-fylkeskommune/Politikk/iSak/Kom-i-gang-med-a-bruke-iPad/"
-     opened="2010-09-14"
-     closed=""
-     name="Stian Ellingsen"
-     group=""
-     comment="Original link broken. Link updated on 2015-04-29 by Nicola Feltrin"
-     />
+<bug institution-name="Sogn og Fjordane fylkeskommune" institution-address="Askedalen 2, 6863 Leikanger" institution-url="http://www.sfj.no/sff/k2pub.nsf/frmFrontPage" opened="2010-09-14" closed="" name="Stian Ellingsen" group="" comment="Original link broken. Link updated on 2015-04-29 by Nicola Feltrin"/>
 
-<bug institution-name="Sogn og Fjordane fylkeskommune"
-     institution-address="Askedalen 2, 6863 Leikanger"
-     institution-url="http://www.sfj.no/sff/k2pub.nsf/frmFrontPage"
-     opened="2010-09-14"
-     closed=""
-     name="Stian Ellingsen"
-     group=""
-     comment="Original link broken. Link updated on 2015-04-29 by Nicola Feltrin"
-     />
+<bug institution-name="NAV" institution-address="Postboks 5 St. Olavs Plass, N-0130 OSLO" institution-url="https://www.nav.no/no/NAV+og+samfunn/Kontakt+NAV/Teknisk+brukerstotte/Hjelp+til+personbruker.398747.cms?kap=398773" opened="2010-09-14" closed="" name="Stian Ellingsen" group="" comment="Original link broken. Link updated on 2015-04-29 by Nicola Feltrin"/>
 
-<bug institution-name="NAV"
-     institution-address="Postboks 5 St. Olavs Plass, N-0130 OSLO"
-     institution-url="https://www.nav.no/no/NAV+og+samfunn/Kontakt+NAV/Teknisk+brukerstotte/Hjelp+til+personbruker.398747.cms?kap=398773"
-     opened="2010-09-14"
-     closed=""
-     name="Stian Ellingsen"
-     group=""
-     comment="Original link broken. Link updated on 2015-04-29 by Nicola Feltrin"
-     />
+<bug institution-name="Departementenes servicesenter" institution-address="Postboks 8129 Dep, 0032 OSLO" institution-url="http://www.regjeringen.no/nb/Om-nettstedet/Hjelp/om-pdf-filer-pa-regjeringenno.html?id=450435" opened="2010-09-14" closed="" name="Stian Ellingsen" group="" comment=""/>
+<bug institution-name="Hedmark fylkeskommune" institution-address="Postboks 4404 Bedriftssenteret, 2325 Hamar" institution-url="http://www.hedmark.org/dt_saker.aspx?m=37" opened="2010-09-14" closed="2015-04-29" closedby="Nicola Feltrin" name="Stian Ellingsen" group="" comment="Duplicate bug."/>
 
-<bug institution-name="Departementenes servicesenter"
-     institution-address="Postboks 8129 Dep, 0032 OSLO"
-     institution-url="http://www.regjeringen.no/nb/Om-nettstedet/Hjelp/om-pdf-filer-pa-regjeringenno.html?id=450435"
-     opened="2010-09-14"
-     closed=""
-     name="Stian Ellingsen"
-     group=""
-     comment=""
-     />
-<bug institution-name="Hedmark fylkeskommune"
-     institution-address="Postboks 4404 Bedriftssenteret, 2325 Hamar"
-     institution-url="http://www.hedmark.org/dt_saker.aspx?m=37"
-     opened="2010-09-14"
-     closed="2015-04-29"
-     closedby="Nicola Feltrin"
-     name="Stian Ellingsen"
-     group=""
-     comment="Duplicate bug."
-     />
+<bug institution-name="Sandnes municipality" institution-address="4319 Sandnes" institution-url="https://www.sandnes.kommune.no/Globalmeny/politikk/Politisk-hovedstruktur/" opened="2010-09-20" closed="" name="Cato Auestad" group="" comment="Reference to proprietary software removed from the original link. Reference still present elsewhere in the website. Link updated on 2015-04-29 by Nicola Feltrin"/>
 
-<bug institution-name="Sandnes municipality"
-     institution-address="4319 Sandnes"
-     institution-url="https://www.sandnes.kommune.no/Globalmeny/politikk/Politisk-hovedstruktur/"
-     opened="2010-09-20"
-     closed=""
-     name="Cato Auestad"
-     group=""
-     comment="Reference to proprietary software removed from the original link. Reference still present elsewhere in the website. Link updated on 2015-04-29 by Nicola Feltrin"
-     />
+<bug institution-name="Stavanger municipality" institution-address="4068 Stavanger" institution-url="http://www.stavanger.kommune.no/Publikasjoner/Stavangerinfo/" opened="2010-09-20" closed="" name="Cato Auestad" group="" comment=""/>
 
-<bug institution-name="Stavanger municipality"
-     institution-address="4068 Stavanger"
-     institution-url="http://www.stavanger.kommune.no/Publikasjoner/Stavangerinfo/"
-     opened="2010-09-20"
-     closed=""
-     name="Cato Auestad"
-     group=""
-     comment=""
-     />
+<bug institution-name="Time municipality" institution-address="4349 Bryne" institution-url="http://time.kommune.no/artikkel.aspx?MId1=13007&amp;AId=3313" opened="2010-09-20" closed="" name="Cato Auestad" group="" comment=""/>
+<bug institution-name="Skatteetaten (Skattedirektoratet)" institution-address="Postboks 9200 Grønland, 0134 Oslo" institution-url="http://www.skatteetaten.no/en/Bedrift-og-organisasjon/Starte-bedrift/Jeg-vil-i-gang/Starte-egen-bedrift1/Arbeidstaker-eller-naringsdrivende/?chapter=3516" opened="2010-10-06" closed="" name="Paul Boddie" group="" comment="This is just one example, since everywhere a PDF is offered there's a link to download Acrobat Reader - Original link broken. Link updated on 2015-04-29 by Nicola Feltrin"/>
 
-<bug institution-name="Time municipality"
-     institution-address="4349 Bryne"
-     institution-url="http://time.kommune.no/artikkel.aspx?MId1=13007&amp;AId=3313"
-     opened="2010-09-20"
-     closed=""
-     name="Cato Auestad"
-     group=""
-     comment=""
-     />
-<bug institution-name="Skatteetaten (Skattedirektoratet)"
-     institution-address="Postboks 9200 Grønland, 0134 Oslo"
-     institution-url="http://www.skatteetaten.no/en/Bedrift-og-organisasjon/Starte-bedrift/Jeg-vil-i-gang/Starte-egen-bedrift1/Arbeidstaker-eller-naringsdrivende/?chapter=3516"
-     opened="2010-10-06"
-     closed=""
-     name="Paul Boddie"
-     group=""
-     comment="This is just one example, since everywhere a PDF is offered there's a link to download Acrobat Reader - Original link broken. Link updated on 2015-04-29 by Nicola Feltrin"
-     />
-
-<bug institution-name="Universitetet i Oslo"
-     institution-address="Boks 1072 Blindern, 0316 Oslo"
-     institution-url="http://www.uio.no/tjenester/it/maskin/programvare/mer-om/om-inst/windows/adobereader/adobe_reader7.0e.html"
-     opened="2010-10-06"
-     closed=""
-     name="Paul Boddie"
-     group=""
-     comment="Although this page is perhaps aimed at university users, it's striking that the page is about open formats and yet they deem it necessary only to advertise Acrobat Reader as a reader. (And yes, since I use the only supported flavour of GNU/Linux at UiO, I know it wouldn't hurt to mention the programs that are actually installed on such platforms and to mention alternatives for other platforms.) - Original link broken. Link updated on 2015-04-29 by Nicola Feltrin"
-     />
-<bug institution-name="Den Norske Nobelkomite"
-     institution-address="Henrik Ibsens gate 51, NO-0255 Oslo"
-     institution-url="http://www.nobelprize.org/nobel_organizations/nobelmedia/nobelprize_org/tech_support/acrobat.html"
-     opened="2010-10-11"
-     closed=""
-     name="Harry Zisopoulos"
-     group=""
-     comment="Original link broken. Link updated on 2015-04-29 by Nicola Feltrin"
-     />
+<bug institution-name="Universitetet i Oslo" institution-address="Boks 1072 Blindern, 0316 Oslo" institution-url="http://www.uio.no/tjenester/it/maskin/programvare/mer-om/om-inst/windows/adobereader/adobe_reader7.0e.html" opened="2010-10-06" closed="" name="Paul Boddie" group="" comment="Although this page is perhaps aimed at university users, it's striking that the page is about open formats and yet they deem it necessary only to advertise Acrobat Reader as a reader. (And yes, since I use the only supported flavour of GNU/Linux at UiO, I know it wouldn't hurt to mention the programs that are actually installed on such platforms and to mention alternatives for other platforms.) - Original link broken. Link updated on 2015-04-29 by Nicola Feltrin"/>
+<bug institution-name="Den Norske Nobelkomite" institution-address="Henrik Ibsens gate 51, NO-0255 Oslo" institution-url="http://www.nobelprize.org/nobel_organizations/nobelmedia/nobelprize_org/tech_support/acrobat.html" opened="2010-10-11" closed="" name="Harry Zisopoulos" group="" comment="Original link broken. Link updated on 2015-04-29 by Nicola Feltrin"/>
   </buglist>
 </set>

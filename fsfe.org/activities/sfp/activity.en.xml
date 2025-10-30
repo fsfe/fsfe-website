@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-
+<?xml version="1.0" encoding="utf-8"?>
 <activityset>
   <version>1</version>
 
@@ -12,12 +11,12 @@
      legal and financial risks to software development and distribution, and by 
      giving patent holders the legal power to completely prohibit software 
      developers from using the patented ideas.      </description>
-    <link href="/news/podcast.html" />
-    <image url="/graphics/podcast-logo.png" />
-    <order priority="1" highlight="no" />
+    <link href="/news/podcast.html"/>
+    <image url="/graphics/podcast-logo.png"/>
+    <order priority="1" highlight="no"/>
     <tags>
-      <tag key="awareness" />
-        <tag key="hide" />
+      <tag key="awareness"/>
+        <tag key="hide"/>
     </tags>
   </activity>
 </activityset>

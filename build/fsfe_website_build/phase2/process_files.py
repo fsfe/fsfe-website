@@ -73,7 +73,7 @@ def _process_set(  # noqa: PLR0913
             logger.debug("Building %s", target_file)
             result = process_file(source, source_file, transform)
             target_file.parent.mkdir(parents=True, exist_ok=True)
-            result.write_output(target_file)
+            target_file.write_text(result)
 
 
 def process_files(

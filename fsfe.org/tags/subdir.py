@@ -5,9 +5,8 @@
 """Generate tag pages for all tags used on the site."""
 
 import logging
-import multiprocessing.pool
+import multiprocessing
 from collections import defaultdict
-from functools import partial
 from pathlib import Path
 
 from fsfe_website_build.lib.misc import (
@@ -88,9 +87,7 @@ def run(source: Path, languages: list[str], processes: int, working_dir: Path) -
         logger.debug("Updating tags for %s", working_dir)
         # Create a complete and current map of which tag is used in which files
         files_by_tag: dict[str, set[Path]] = defaultdict(set)
-        tags_by_lang: dict[str, dict[str, str | None]] = defaultdict(
-            partial(defaultdict, None)
-        )
+        tags_by_lang: defaultdict[str, dict[str, str | None]] = defaultdict(dict)
         # Fill out files_by_tag and tags_by_lang
         for file in filter(
             lambda file:
@@ -143,7 +140,7 @@ def run(source: Path, languages: list[str], processes: int, working_dir: Path) -
 
         logger.debug("Updating tag sets")
         # Get count of files with each tag in each section
-        filecount: dict[str, dict[str, int]] = defaultdict(partial(defaultdict, int))
+        filecount: dict[str, dict[str, int]] = defaultdict(dict)
         for section in ["news", "events"]:
             for tag in files_by_tag:
                 filecount[section][tag] = len(

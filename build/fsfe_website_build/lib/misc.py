@@ -14,14 +14,9 @@ from lxml import etree
 logger = logging.getLogger(__name__)
 
 
-def keys_exists(element: dict, *keys: str) -> bool:
+def keys_exists(element: dict[Any, Any], *keys: str) -> bool:
     """Check if *keys (nested) exists in `element` (dict)."""
-    if not isinstance(element, dict):
-        message = "keys_exists() expects dict as first argument."
-        logger.error(message)
-        raise TypeError(message)
-
-    _element = element
+    _element = element  # make a copy to prevent manipulating up the scope
     for key in keys:
         try:
             _element = _element[key]
@@ -83,7 +78,7 @@ def lang_from_filename(file: Path) -> str:
     return lang
 
 
-def run_command(commands: list) -> str:
+def run_command(commands: list[str]) -> str:
     """Run the passed command.
 
     Useful to standardise how we manage output,

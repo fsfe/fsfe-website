@@ -19,14 +19,14 @@ logger = logging.getLogger(__name__)
 def _run_webserver(path: str, port: int) -> None:
     """Given a path and a port it will serve that dir on that localhost:port."""
     os.chdir(path)
-    handler = http.server.CGIHTTPRequestHandler
+    handler = http.server.SimpleHTTPRequestHandler
 
     with socketserver.TCPServer(("", port), handler) as httpd:
         httpd.serve_forever()
 
 
 def serve_websites(
-    serve_dir: Path, sites: list, base_port: int, increment_number: int
+    serve_dir: Path, sites: list[Path], base_port: int, increment_number: int
 ) -> None:
     """Serve the sites in serve_dir from base port.
 
@@ -40,7 +40,7 @@ def serve_websites(
         for path in Path(serve_dir).iterdir()
         if (path.is_dir() and (path.name in site_names))
     )
-    serves = []
+    serves: list[tuple[str, int]] = []
     for index, directory in enumerate(dirs):
         port = base_port + (increment_number * index)
         url = f"http://127.0.0.1:{port}"

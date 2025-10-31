@@ -40,7 +40,7 @@ def _update_for_base(  # noqa: PLR0913
     lastyear: str,
 ) -> None:
     """Update the xmllist for a given base file."""
-    matching_files = set()
+    matching_files: set[str] = set()
     # If sources exist
     if base.with_suffix(".sources").exists():
         # Load every file that matches the pattern
@@ -94,7 +94,7 @@ def _update_for_base(  # noqa: PLR0913
             matching_files.add(
                 f"{source}/global/data/modules/{module.get('id').strip()}"
             )
-    matching_files = sorted(matching_files)
+    matching_files = set(sorted(matching_files))  # noqa: C414
     update_if_changed(
         Path(f"{base.parent}/.{base.name}.xmllist"),
         ("\n".join(matching_files) + "\n") if matching_files else "",
@@ -139,7 +139,7 @@ def _update_module_xmllists(
 
 def _check_xmllist_deps(source: Path, file: Path) -> None:
     """If any of the sources in an xmllist are newer than it, touch the xmllist."""
-    xmls = set()
+    xmls: set[Path] = set()
     with file.open(mode="r") as fileobj:
         for line in fileobj:
             path_line = source.joinpath(line.strip())

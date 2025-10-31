@@ -77,6 +77,8 @@ ignore = [
 "build/fsfe_website_build_tests/*" = [
   "D",
 ] # We do not need to document the tests.
+[tool.pyright]
+typeCheckingMode = "strict"
 [tool.pytest.ini_options]
 testpaths = ["build/fsfe_website_build_tests"]
 python_files = ["*_test.py"]

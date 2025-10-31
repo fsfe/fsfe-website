@@ -7,6 +7,7 @@
 import datetime
 import logging
 import multiprocessing
+from collections import defaultdict
 from pathlib import Path
 
 from fsfe_website_build.lib.misc import (
@@ -80,7 +81,7 @@ def _get_text_ids(file: Path) -> list[str]:
 
 def _create_overview(
     target_dir: Path,
-    data: dict[str, dict[int, list[dict]]],
+    data: dict[str, dict[str, list[dict[str, str]]]],
 ) -> None:
     work_file = target_dir.joinpath("langs.en.xml")
     if not target_dir.exists():
@@ -179,7 +180,7 @@ def run(source: Path, languages: list[str], processes: int, working_dir: Path) -
             (Path(line.strip()) for line in all_git_tracked_files.split("\x00")),
         ),
     )
-    priorities_and_searches = {
+    priorities_and_searches: dict[str, list[str]] = {
         "1": [
             "**/fsfe.org/index.en.xhtml",
             "**/fsfe.org/freesoftware/freesoftware.en.xhtml",
@@ -202,29 +203,27 @@ def run(source: Path, languages: list[str], processes: int, working_dir: Path) -
     with multiprocessing.Pool(processes) as pool:
         # Generate our file lists by priority
         # Super hardcoded unfortunately
-        files_by_priority = {}
+        files_by_priority: dict[str, list[Path]] = defaultdict(list)
         for file in all_files_with_translations:
             for priority, searches in priorities_and_searches.items():
-                if priority not in files_by_priority:
-                    files_by_priority[priority] = []
                 # If any search matches,
                 # add it to that priority and skip all subsequent priorities
                 if any(file.full_match(search) for search in searches):
                     files_by_priority[priority].append(file)
                     continue
 
-        files_by_lang_by_prio = {}
+        files_by_lang_by_prio: dict[str, dict[str, list[dict[str, str]]]] = defaultdict(
+            lambda: defaultdict(list)
+        )
         for lang in languages:
-            files_by_lang_by_prio[lang] = {}
             for priority in sorted(files_by_priority.keys()):
-                files_by_lang_by_prio[lang][priority] = list(
-                    filter(
-                        lambda result: result is not None,
-                        pool.starmap(
-                            _generate_translation_data,
-                            [(lang, file) for file in files_by_priority[priority]],
-                        ),
-                    ),
+                files_by_lang_by_prio[lang][priority].extend(
+                    result
+                    for result in pool.starmap(
+                        _generate_translation_data,
+                        [(lang, file) for file in files_by_priority[priority]],
+                    )
+                    if result is not None
                 )
 
         # sadly single treaded, as only one file being operated on

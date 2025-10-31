@@ -9,11 +9,12 @@ After this step, all .localmenu.??.xml files will be up to date.
 
 import logging
 import multiprocessing.pool
+from collections import defaultdict
 from pathlib import Path
 
 from lxml import etree
 
-from fsfe_website_build.lib.misc import get_basepath, update_if_changed
+from fsfe_website_build.lib.misc import get_basepath, sort_dict, update_if_changed
 
 logger = logging.getLogger(__name__)
 
@@ -87,24 +88,21 @@ def update_localmenus(
     """Update all the .localmenu.*.xml files containing the local menus."""
     logger.info("Updating local menus")
     # Get a dict of all source files containing local menus
-    files_by_dir = {}
+    files_by_dir: dict[str, set[Path]] = defaultdict(set)
     for file in filter(
-        lambda path: "-template" not in str(path),
+        lambda path: "-template" not in path.name,
         source_dir.glob("**/*.??.xhtml"),
     ):
         xslt_root = etree.parse(file)
         if xslt_root.xpath("//localmenu"):
-            directory = xslt_root.xpath("//localmenu/@dir")
-            directory = (
-                str(source.joinpath(directory[0]))
-                if directory
-                else str(file.parent.resolve())
+            directory_xpath = xslt_root.xpath("//localmenu/@dir")
+            directory = str(
+                source.joinpath(directory_xpath[0])
+                if directory_xpath
+                else file.parent.resolve()
             )
-            if directory not in files_by_dir:
-                files_by_dir[directory] = set()
             files_by_dir[directory].add(file)
-    for directory, files in files_by_dir.items():
-        files_by_dir[directory] = sorted(files)
+    files_by_dir = sort_dict(files_by_dir)
 
     # If any of the source files has been updated, rebuild all .localmenu.*.xml
     dirs = filter(

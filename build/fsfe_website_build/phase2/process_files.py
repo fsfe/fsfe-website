@@ -10,6 +10,7 @@ which is useful to prevent reparsing the XSL multiple times.
 
 import logging
 import multiprocessing.pool
+from collections import defaultdict
 from itertools import product
 from pathlib import Path
 
@@ -84,15 +85,8 @@ def process_files(
 ) -> None:
     """Build .html, .rss and .ics files from .xhtml sources."""
     logger.info("Processing xhtml, rss, ics files")
-    # generate a set of unique processing xsls
-    xsl_files = {
-        processor.resolve().relative_to(source_dir.parent.resolve())
-        for processor in source_dir.glob("**/*.xsl")
-    }
 
-    process_files_dict = {}
-    for processor in xsl_files:
-        process_files_dict[processor] = set()
+    process_files_dict: dict[Path, set[Path]] = defaultdict(set)
 
     # This gathers all the simple xhtml files for generating xhtml output
     for file in source_dir.glob("**/*.*.xhtml"):

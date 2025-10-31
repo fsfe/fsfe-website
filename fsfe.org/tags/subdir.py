@@ -6,6 +6,8 @@
 
 import logging
 import multiprocessing.pool
+from collections import defaultdict
+from functools import partial
 from pathlib import Path
 
 from fsfe_website_build.lib.misc import (
@@ -35,7 +37,7 @@ def _update_tag_sets(
     lang: str,
     filecount: dict[str, dict[str, int]],
     files_by_tag: dict[str, list[Path]],
-    tags_by_lang: dict[str, dict[str, str]],
+    tags_by_lang: dict[str, dict[str, str | None]],
 ) -> None:
     """Update the .tags.??.xml tagset xmls for a given tag."""
     # Add uout toplevel element
@@ -85,8 +87,10 @@ def run(source: Path, languages: list[str], processes: int, working_dir: Path) -
     with multiprocessing.Pool(processes) as pool:
         logger.debug("Updating tags for %s", working_dir)
         # Create a complete and current map of which tag is used in which files
-        files_by_tag = {}
-        tags_by_lang = {}
+        files_by_tag: dict[str, set[Path]] = defaultdict(set)
+        tags_by_lang: dict[str, dict[str, str | None]] = defaultdict(
+            partial(defaultdict, None)
+        )
         # Fill out files_by_tag and tags_by_lang
         for file in filter(
             lambda file:
@@ -107,21 +111,14 @@ def run(source: Path, languages: list[str], processes: int, working_dir: Path) -
                 label = tag.text.strip() if tag.text and tag.text.strip() else None
 
                 # Load into the dicts
-                if key not in files_by_tag:
-                    files_by_tag[key] = set()
                 files_by_tag[key].add(get_basepath(file))
                 lang = lang_from_filename(file)
-                if lang not in tags_by_lang:
-                    tags_by_lang[lang] = {}
-                tags_by_lang[lang][key] = (
-                    tags_by_lang[lang][key]
-                    if key in tags_by_lang[lang] and tags_by_lang[lang][key]
-                    else label
-                )
+                if key not in tags_by_lang[lang] or not tags_by_lang[lang][key]:
+                    tags_by_lang[lang][key] = label
         # Sort dicts to ensure that they are stable between runs
         files_by_tag = sort_dict(files_by_tag)
         for tag in files_by_tag:
-            files_by_tag[tag] = sorted(files_by_tag[tag])
+            files_by_tag[tag] = set(sorted(files_by_tag[tag]))  # noqa: C414
         tags_by_lang = sort_dict(tags_by_lang)
         for lang in tags_by_lang:
             tags_by_lang[lang] = sort_dict(tags_by_lang[lang])
@@ -146,9 +143,8 @@ def run(source: Path, languages: list[str], processes: int, working_dir: Path) -
 
         logger.debug("Updating tag sets")
         # Get count of files with each tag in each section
-        filecount = {}
+        filecount: dict[str, dict[str, int]] = defaultdict(partial(defaultdict, int))
         for section in ["news", "events"]:
-            filecount[section] = {}
             for tag in files_by_tag:
                 filecount[section][tag] = len(
                     list(

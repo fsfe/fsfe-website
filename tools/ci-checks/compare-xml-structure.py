@@ -47,7 +47,11 @@ def main() -> None:
         "-w",
         "--whitelist",
         type=lambda attributes: set(attributes.split(",")),
-        default={"alt"},
+        default={
+            "alt",  # Image alt text
+            "srclang",  # Languages, used in some track elements
+            "label",  # Language label, used in some track elements
+        },
         help="Comma-separated list of attributes to ignore",
     )
     parser.add_argument(

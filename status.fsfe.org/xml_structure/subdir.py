@@ -7,6 +7,7 @@
 import logging
 import multiprocessing
 from collections import defaultdict
+from collections.abc import Iterable
 from pathlib import Path
 
 from fsfe_website_build.lib.checks import compare_files
@@ -23,7 +24,7 @@ logger = logging.getLogger(__name__)
 
 
 def _job(
-    master: Path, other: Path, whitelist: set[str]
+    master: Path, other: Path, whitelist: Iterable[str]
 ) -> tuple[Path, Path, str] | None:
     """Return a one-line result string for starmap."""
     if get_version(master) != get_version(other):
@@ -55,13 +56,26 @@ def run(source: Path, languages: list[str], processes: int, working_dir: Path) -
             and lang_from_filename(path) in languages
         }
     )
-    whitelist = {"alt"}
+    all_files = {
+        # Split on null bytes, strip and then parse into path
+        path
+        for path in (Path(line.strip()) for line in all_git_tracked_files.split("\x00"))
+        if path.suffix in [".xhtml", ".xml"]
+        and len(path.suffixes) >= 2  # noqa: PLR2004
+        and lang_from_filename(path) in languages
+    }
+    whitelist = [
+        "//img[@alt]",  # Image alt text
+        "//track[@srclang]",  # Languages, used in some track elements
+        "//track[@label]",  # Language label, used in some track elements
+        "/html/translator",  # the translator
+    ]
     groups: defaultdict[Path, list[Path]] = defaultdict(list)
     for file in all_files:
         path = Path(file)
         groups[get_basepath(path)].append(path)
 
-    tasks: list[tuple[Path, Path, set[str]]] = []
+    tasks: list[tuple[Path, Path, Iterable[str]]] = []
     for basepath, paths in groups.items():
         master = next(
             (path for path in paths if lang_from_filename(path) == "en"),

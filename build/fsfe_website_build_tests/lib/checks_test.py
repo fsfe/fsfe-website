@@ -60,9 +60,11 @@ class TestCompareElements:
         assert len(diff) == 1
 
     def whitelisted_attribute_ignored_test(self) -> None:
-        e1 = etree.Element("root", x="1")
-        e2 = etree.Element("root", x="2")
-        assert compare_elements(e1, e2, attr_whitelist={"x"}) == []
+        e1 = etree.Element("root")
+        etree.SubElement(e1, "test", x="1")
+        e2 = etree.Element("root")
+        etree.SubElement(e2, "test", x="2")
+        assert compare_elements(e1, e2, ["//*[@x]"]) == []
 
     def child_count_mismatch_test(self) -> None:
         e1 = etree.Element("root")

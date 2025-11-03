@@ -4,6 +4,7 @@
 """Load internal activities file if possible."""
 
 import csv
+import datetime
 import logging
 import os
 from pathlib import Path
@@ -53,6 +54,14 @@ def run(source: Path, languages: list[str], processes: int, working_dir: Path) -
         tag = row[0]
         description = row[1]
         event = row[2]
+
+        try:
+            enddate = datetime.datetime.strptime(row[5], "%Y-%m-%d")
+        except ValueError:
+            enddate = datetime.datetime.today () + datetime.timedelta (days=7)
+
+        if datetime.datetime.today() > enddate:
+            continue
 
         option = etree.SubElement(module, "option", value=f"{tag}||{description}")
         if event:

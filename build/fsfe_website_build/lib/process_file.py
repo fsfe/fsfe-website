@@ -8,6 +8,7 @@ import logging
 import re
 from datetime import datetime
 from pathlib import Path
+from typing import Any
 
 from lxml import etree
 
@@ -16,14 +17,14 @@ from fsfe_website_build.lib.misc import get_basename, get_version, lang_from_fil
 logger = logging.getLogger(__name__)
 
 
-def _get_xmls(file: Path, parser: etree.XMLParser) -> list:
+def _get_xmls(file: Path, parser: etree.XMLParser) -> list[etree.Element]:
     """Include second level elements of a given XML file.
 
     This emulates the behaviour of the original
     build script which wasn't able to load top
     level elements from any file
     """
-    elements = []
+    elements: list[etree.Element] = []
     if file.exists():
         tree = etree.parse(file, parser)
         root = tree.getroot()
@@ -38,7 +39,7 @@ def _get_xmls(file: Path, parser: etree.XMLParser) -> list:
     return elements
 
 
-def _get_attributes(file: Path) -> dict:
+def _get_attributes(file: Path) -> dict[str, Any]:
     """Get attributes of top level element in a given XHTML file."""
     tree = etree.parse(file)
     root = tree.getroot()
@@ -194,9 +195,7 @@ def _build_xmlstream(
     return page
 
 
-def process_file(
-    source: Path, infile: Path, transform: etree.XSLT
-) -> etree._XSLTResultTree:
+def process_file(source: Path, infile: Path, transform: etree.XSLT) -> str:
     """Process a given file using the correct xsl sheet."""
     logger.debug("Processing %s", infile)
     lang = lang_from_filename(infile)
@@ -237,4 +236,4 @@ def process_file(
             )
     except AssertionError:
         logger.debug("Output generated for file %s is not valid xml", infile)
-    return result
+    return str(result)

@@ -5,15 +5,20 @@
 
 import json
 import logging
-import multiprocessing.pool
+import multiprocessing
 from pathlib import Path
+from typing import TYPE_CHECKING
 
 import iso639
-import nltk
+import nltk  # pyright: ignore[reportMissingTypeStubs]
 from fsfe_website_build.lib.misc import update_if_changed
 from lxml import etree
-from nltk.corpus import stopwords as nltk_stopwords
+from nltk.corpus import (  # pyright: ignore[reportMissingTypeStubs]
+    stopwords as nltk_stopwords,  # pyright: ignore[reportMissingTypeStubs]
+)
 
+if TYPE_CHECKING:
+    from collections.abc import Generator
 logger = logging.getLogger(__name__)
 
 
@@ -33,14 +38,13 @@ def _find_teaser(document: etree.ElementTree) -> str:
     return ""
 
 
-def _process_file(file: Path, stopwords: set[str]) -> dict:
+def _process_file(file: Path, stopwords: set[str]) -> dict[str, str | None]:
     """Generate the search index entry for a given file and set of stopwords."""
     xslt_root = etree.parse(file)
     tags = (
-        tag.get("key")
-        for tag in filter(
-            lambda tag: tag.get("key") != "front-page", xslt_root.xpath("//tag")
-        )
+        str(tag.get("key"))
+        for tag in xslt_root.xpath("//tag")
+        if tag.get("key") != "front-page"
     )
     return {
         "url": f"/{file.with_suffix('.html').relative_to(file.parents[-2])}",
@@ -75,8 +79,8 @@ def run(source: Path, languages: list[str], processes: int, working_dir: Path) -
     # Download all stopwords
     nltkdir = "./.nltk_data"
     source_dir = working_dir.parent
-    nltk.data.path = [nltkdir, *nltk.data.path]
-    nltk.download("stopwords", download_dir=nltkdir, quiet=True)
+    nltk.data.path = [nltkdir, *nltk.data.path]  # pyright: ignore [(reportUnknownMemberType)]
+    nltk.download("stopwords", download_dir=nltkdir, quiet=True)  # pyright: ignore [(reportUnknownMemberType)]
     with multiprocessing.Pool(processes) as pool:
         logger.debug("Indexing %s", source_dir)
 
@@ -87,12 +91,12 @@ def run(source: Path, languages: list[str], processes: int, working_dir: Path) -
         # Use iso639 to get the english name of the language
         # from the two letter iso639-1 code we use to mark files.
         # Then if that language has stopwords from nltk, use those stopwords.
-        files_with_stopwords = (
+        files_with_stopwords: Generator[tuple[Path, set[str]]] = (
             (
                 file,
                 (
                     set(
-                        nltk_stopwords.words(
+                        nltk_stopwords.words(  # pyright: ignore [(reportUnknownMemberType)]
                             iso639.Language.from_part1(
                                 file.suffixes[0].removeprefix("."),
                             ).name.lower(),
@@ -101,7 +105,7 @@ def run(source: Path, languages: list[str], processes: int, working_dir: Path) -
                     if iso639.Language.from_part1(
                         file.suffixes[0].removeprefix("."),
                     ).name.lower()
-                    in nltk_stopwords.fileids()
+                    in nltk_stopwords.fileids()  # pyright: ignore [(reportUnknownMemberType)]
                     else set()
                 ),
             )

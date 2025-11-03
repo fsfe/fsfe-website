@@ -26,7 +26,7 @@ def _generate_translation_data(lang: str, file: Path) -> dict[str, str] | None:
     ext = file.suffix.removeprefix(".")
     working_file = file.with_suffix("").with_suffix(f".{lang}.{ext}")
 
-    result = run_command(["git", "log", '--pretty="%ct"', "-1", file]).strip('"')
+    result = run_command(["git", "log", '--pretty="%ct"', "-1", str(file)]).strip('"')
     time = int(result)
     original_date = datetime.datetime.fromtimestamp(time)
 
@@ -117,7 +117,7 @@ def _create_overview(
 def _create_translation_file(
     target_dir: Path,
     lang: str,
-    data: dict[int, list[dict]],
+    data: dict[int, list[dict[str, str]]],
 ) -> None:
     work_file = target_dir.joinpath(f"translations.{lang}.xml")
     page = etree.Element("translation-status")
@@ -126,7 +126,7 @@ def _create_translation_file(
     for priority, file_data_list in data.items():
         prio = etree.SubElement(page, "priority", value=str(priority))
         for file_data in file_data_list:
-            etree.SubElement(prio, "file", **file_data)
+            etree.SubElement(prio, "file", attrib=file_data)
 
     en_texts_file = Path("global/data/texts/texts.en.xml")
     lang_texts_file = Path(f"global/data/texts/texts.{lang}.xml")

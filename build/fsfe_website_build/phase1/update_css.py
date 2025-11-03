@@ -11,7 +11,7 @@ distributed to the web server.
 import logging
 from pathlib import Path
 
-import minify
+import minify  # pyright: ignore [reportMissingTypeStubs]
 
 from fsfe_website_build.lib.misc import run_command, update_if_changed
 

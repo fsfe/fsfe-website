@@ -26,7 +26,7 @@ def prepare_early_subdirectories(
         # here for out subdir scripts
         import early_subdir  # noqa: PLC0415 # pyright: ignore [reportMissingImports]
 
-        early_subdir.run(source, processes, subdir_path)
+        early_subdir.run(source, processes, subdir_path)  # pyright: ignore [reportUnknownMemberType]
         # Remove its path from where things can be imported
         sys.path.remove(str(subdir_path.resolve()))
         # Remove it from loaded modules

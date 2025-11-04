@@ -6,6 +6,7 @@
 import csv
 import datetime
 import logging
+import operator
 import os
 from pathlib import Path
 from urllib.parse import urlparse
@@ -38,7 +39,8 @@ def run(source: Path, languages: list[str], processes: int, working_dir: Path) -
         logger.error(message)
         raise RuntimeError(message)
 
-    activities_csv = csv.reader(r.text.split("\n")[1:], delimiter="\t")
+    activities_csv = csv.reader(r.text.split("\n")[1:-1], delimiter="\t")
+    activities = sorted(activities_csv, key=operator.itemgetter(0))
 
     page = etree.Element("data")
     # Add a version tag
@@ -47,7 +49,7 @@ def run(source: Path, languages: list[str], processes: int, working_dir: Path) -
     # add a module element to hold activities
     module = etree.SubElement(page, "module")
 
-    for row in activities_csv:
+    for row in activities:
         if len(row) == 0:
             continue
 

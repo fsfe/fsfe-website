@@ -15,6 +15,7 @@ libxml2 \
 libxml2-utils \
 libxslt1.1 \
 mediainfo \
+node-less \
 npm \
 perl-base \
 php-zip \

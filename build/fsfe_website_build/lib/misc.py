@@ -109,7 +109,6 @@ def get_version(file: Path) -> int:
     xml = etree.parse(file)
     result_list = xml.xpath("/*/version")
     result = result_list[0].text if result_list else str(0)
-    logger.debug("Got version: %s", result)
     return int(result)
 
 

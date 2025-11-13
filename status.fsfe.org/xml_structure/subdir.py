@@ -43,14 +43,18 @@ def run(source: Path, languages: list[str], processes: int, working_dir: Path) -
         ["git", "ls-files", "-z"],
     )
 
-    all_files = {
-        # Split on null bytes, strip and then parse into path
-        path
-        for path in (Path(line.strip()) for line in all_git_tracked_files.split("\x00"))
-        if path.suffix in [".xhtml", ".xml"]
-        and len(path.suffixes) >= 2  # noqa: PLR2004
-        and lang_from_filename(path) in languages
-    }
+    all_files = sorted(
+        {
+            # Split on null bytes, strip and then parse into path
+            path
+            for path in (
+                Path(line.strip()) for line in all_git_tracked_files.split("\x00")
+            )
+            if path.suffix in [".xhtml", ".xml"]
+            and len(path.suffixes) >= 2  # noqa: PLR2004
+            and lang_from_filename(path) in languages
+        }
+    )
     whitelist = {"alt"}
     groups: defaultdict[Path, list[Path]] = defaultdict(list)
     for file in all_files:
@@ -86,15 +90,10 @@ def run(source: Path, languages: list[str], processes: int, working_dir: Path) -
     version_el = etree.SubElement(root, "version")
     version_el.text = "1"
 
-    for master, details in tree.items():
+    for master, details in sorted(tree.items()):
         master_el = etree.SubElement(root, "master", name=str(master))
-        for other, msg in details:
-            etree.SubElement(
-                master_el,
-                "detail",
-                name=str(other),
-                error=msg,
-            )
+        for other, msg in sorted(details):
+            etree.SubElement(master_el, "detail", name=str(other), error=msg)
 
     xml_bytes = etree.tostring(root, xml_declaration=True, encoding="utf-8")
     update_if_changed(work_file, xml_bytes.decode("utf-8"))

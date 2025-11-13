@@ -54,12 +54,14 @@ def _update_for_base(  # noqa: PLR0913
                     .replace("$lastyear", lastyear)
                     .strip()
                 )
-                if len(pattern) <= 0:
-                    logger.debug("Pattern too short, continue!")
+                if not pattern:
+                    logger.debug("Pattern match empty, continue!")
                     continue
-                search_result = re.search(r":\[(.*)\]", line)
+                tag_search_result = re.search(r":\[(.*)\]", line)
                 tag = (
-                    search_result.group(1).strip() if search_result is not None else ""
+                    tag_search_result.group(1).strip()
+                    if tag_search_result is not None
+                    else ""
                 )
 
                 for xml_file in filter(
@@ -81,9 +83,7 @@ def _update_for_base(  # noqa: PLR0913
                         )
                         if tag != ""
                         else True
-                    )
-                    # Not just matching an empty xml_file
-                    and len(str(xml_file)) > 0,
+                    ),
                     all_xml,
                 ):
                     matching_files.add(str(xml_file.relative_to(source)))
@@ -94,10 +94,9 @@ def _update_for_base(  # noqa: PLR0913
             matching_files.add(
                 f"{source}/global/data/modules/{module.get('id').strip()}"
             )
-    matching_files = set(sorted(matching_files))  # noqa: C414
     update_if_changed(
         Path(f"{base.parent}/.{base.name}.xmllist"),
-        ("\n".join(matching_files) + "\n") if matching_files else "",
+        ("\n".join(sorted(matching_files)) + "\n"),
     )
 
 
@@ -112,10 +111,14 @@ def _update_module_xmllists(
     # Get all the bases and stuff before multithreading the update bit
     all_xml = {
         get_basepath(path)
-        for path in filter(
-            lambda path: lang_from_filename(path) in languages,
-            list(source_dir.glob("**/*.*.xml"))
-            + list(source.joinpath("global/").glob("**/*.*.xml")),
+        for path in sorted(
+            filter(
+                lambda path: lang_from_filename(path) in languages,
+                (
+                    *source_dir.glob("**/*.*.xml"),
+                    *source.joinpath("global/").glob("**/*.*.xml"),
+                ),
+            )
         )
     }
     source_bases = {path.with_suffix("") for path in source_dir.glob("**/*.sources")}

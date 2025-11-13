@@ -22,7 +22,7 @@ from .phase3.stage_to_target import stage_to_target
 logger = logging.getLogger(__name__)
 
 
-def parse_arguments() -> argparse.Namespace:
+def _parse_arguments() -> argparse.Namespace:
     """Parse the arguments of the website build process."""
     parser = argparse.ArgumentParser(
         description="Python script to handle building of the fsfe webpage",
@@ -95,9 +95,8 @@ def parse_arguments() -> argparse.Namespace:
     return args
 
 
-def main() -> None:
-    """Parse args and coordinate the website builder."""
-    args = parse_arguments()
+def build(args: argparse.Namespace) -> None:
+    """Coordinate the website builder."""
     logging.basicConfig(
         format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
         datefmt="%Y-%m-%d %H:%M:%S",
@@ -168,3 +167,9 @@ def main() -> None:
 
     if args.serve:
         serve_websites(working_target, args.sites, 2000, 100)
+
+
+def main() -> None:
+    """Parse args and run build."""
+    args = _parse_arguments()
+    build(args)

@@ -41,7 +41,7 @@ def _find_teaser(document: etree.ElementTree) -> str:
 def _process_file(file: Path, stopwords: set[str]) -> dict[str, str | None]:
     """Generate the search index entry for a given file and set of stopwords."""
     xslt_root = etree.parse(file)
-    tags = (
+    tags = sorted(
         str(tag.get("key"))
         for tag in xslt_root.xpath("//tag")
         if tag.get("key") != "front-page"
@@ -56,7 +56,7 @@ def _process_file(file: Path, stopwords: set[str]) -> dict[str, str | None]:
         ),
         "teaser": " ".join(
             w
-            for w in _find_teaser(xslt_root).strip().split(" ")
+            for w in sorted(_find_teaser(xslt_root).strip().split(" "))
             if w.lower() not in stopwords
         ),
         "type": "news" if "news/" in str(file) else "page",
@@ -115,7 +115,10 @@ def run(source: Path, languages: list[str], processes: int, working_dir: Path) -
             )
         )
 
-        articles = pool.starmap(_process_file, files_with_stopwords)
+        articles = sorted(
+            pool.starmap(_process_file, files_with_stopwords),
+            key=lambda article: tuple(article.values()),
+        )
 
         update_if_changed(
             working_dir.joinpath("index.js"),

@@ -86,7 +86,7 @@ def run(source: Path, languages: list[str], processes: int, working_dir: Path) -
     with multiprocessing.Pool(processes) as pool:
         logger.debug("Updating tags for %s", working_dir)
         # Create a complete and current map of which tag is used in which files
-        files_by_tag: dict[str, set[Path]] = defaultdict(set)
+        files_by_tag: dict[str, list[Path]] = defaultdict(list)
         tags_by_lang: defaultdict[str, dict[str, str | None]] = defaultdict(dict)
         # Fill out files_by_tag and tags_by_lang
         for file in filter(
@@ -108,14 +108,14 @@ def run(source: Path, languages: list[str], processes: int, working_dir: Path) -
                 label = tag.text.strip() if tag.text and tag.text.strip() else None
 
                 # Load into the dicts
-                files_by_tag[key].add(get_basepath(file))
+                files_by_tag[key].append(get_basepath(file))
                 lang = lang_from_filename(file)
                 if key not in tags_by_lang[lang] or not tags_by_lang[lang][key]:
                     tags_by_lang[lang][key] = label
         # Sort dicts to ensure that they are stable between runs
         files_by_tag = sort_dict(files_by_tag)
         for tag in files_by_tag:
-            files_by_tag[tag] = set(sorted(files_by_tag[tag]))  # noqa: C414
+            files_by_tag[tag] = sorted(files_by_tag[tag])
         tags_by_lang = sort_dict(tags_by_lang)
         for lang in tags_by_lang:
             tags_by_lang[lang] = sort_dict(tags_by_lang[lang])
@@ -127,17 +127,14 @@ def run(source: Path, languages: list[str], processes: int, working_dir: Path) -
         )
 
         logger.debug("Updating tag lists")
-        pool.starmap(
-            update_if_changed,
+        for path, content in (
             (
-                (
-                    Path(f"{working_dir}/.tagged-{tag}.xmllist"),
-                    ("\n".join(str(file) for file in files_by_tag[tag]) + "\n"),
-                )
-                for tag in files_by_tag
-            ),
-        )
-
+                Path(f"{working_dir}/.tagged-{tag}.xmllist"),
+                ("\n".join(str(file) for file in files_by_tag[tag]) + "\n"),
+            )
+            for tag in files_by_tag
+        ):
+            update_if_changed(path, content)
         logger.debug("Updating tag sets")
         # Get count of files with each tag in each section
         filecount: dict[str, dict[str, int]] = defaultdict(dict)

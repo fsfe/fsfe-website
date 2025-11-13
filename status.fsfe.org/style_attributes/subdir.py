@@ -24,9 +24,9 @@ def _worker(path: Path) -> tuple[str, Path, Path, list[tuple[str, str]]] | None:
     doc = etree.parse(path)
 
     # all elements that carry a style attribute
-    results = [
-        (element.tag, element.get("style")) for element in doc.xpath("//*[@style]")
-    ]
+    results = sorted(
+        [(element.tag, element.get("style")) for element in doc.xpath("//*[@style]")]
+    )
     if not results:
         return None
 
@@ -62,9 +62,9 @@ def run(source: Path, languages: list[str], processes: int, working_dir: Path) -
 
     # concurrent filtering
     with multiprocessing.Pool(processes) as pool:
-        filtered = [
-            result for result in pool.map(_worker, candidates) if result is not None
-        ]
+        filtered = sorted(
+            [result for result in pool.map(_worker, candidates) if result is not None]
+        )
 
     # dict to sort values by type, basepath, finalpath
     data: defaultdict[str, defaultdict[Path, dict[Path, list[tuple[str, str]]]]] = (

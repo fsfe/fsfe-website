@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <timeline>
-  <version>1</version>
+  <version>2</version>
   <year value="2017">
-    <event month="11" type="legal">
+    <event month="11" type="legal-education">
       <title>REUSE Initiative is launched</title>
       <url>https://reuse.software/</url>
       <body>
@@ -10,7 +10,7 @@
         for Free Software licensing compliance.
       </body>
     </event>
-    <event month="11" type="internal">
+    <event month="11" type="volunteer-engagement">
       <title>Community Meeting in Berlin</title>
       <url>http://blog.3rik.cc/2017/12/report-about-the-fsfe-community-meeting-2017/</url>
       <body>
@@ -18,7 +18,7 @@
         order to share knowledge, grow projects, and discuss code.
       </body>
     </event>
-    <event month="10" type="legal">
+    <event month="10" type="legal-education">
       <title>Fiduciary Licensing Agreement 2.0 is released</title>
       <url>https://fsfe.org/activities/ln/ln.html</url>
       <body>
@@ -26,7 +26,7 @@
         FSFE joins forces with ContributorAgreements.org to produce FLA-2.0.
       </body>
     </event>
-    <event month="09" type="policy">
+    <event month="09" type="pmpc">
       <title>Launch of 'Public Money? Public Code!'</title>
       <url>https://publiccode.eu/</url>
       <body>
@@ -34,7 +34,7 @@
         modernise their infrastructure in digital with Free Software.
       </body>
     </event>
-    <event month="06" type="public">
+    <event month="06" type="volunteer-engagement">
       <title>Launch of git.fsfe.org</title>
       <url>https://git.fsfe.org/</url>
       <body>
@@ -42,7 +42,7 @@
         volunteers.
       </body>
     </event>
-    <event month="09" type="policy">
+    <event month="09" type="pmpc">
       <title>Launch of Save Code Share</title>
       <url>https://savecodeshare.eu/</url>
       <body>
@@ -52,7 +52,7 @@
     </event>
   </year>
   <year value="2016">
-    <event month="09" type="public">
+    <event month="09" type="volunteer-engagement">
       <title>The FSFE organises its 2016 summit</title>
       <url>https://fsfe.org/news/2016/news-20160804-01.html</url>
       <body>
@@ -60,7 +60,7 @@
         together under one roof for the first FSFE Summit.
       </body>
     </event>
-    <event month="08" type="policy">
+    <event month="08" type="device-neutrality">
       <title>Compulsory Routers abolished in Germany</title>
       <url>https://fsfe.org/news/2016/news-20160725-01.html</url>
       <body>
@@ -69,7 +69,7 @@
         connections.
       </body>
     </event>
-    <event month="03" type="public">
+    <event month="03" type="device-neutrality">
       <title>DFD campaign run by Digital Freedom Foundation</title>
       <url>https://fsfe.org/news/2016/news-20160126-01.html</url>
       <body>
@@ -80,15 +80,15 @@
     </event>
   </year>
   <year value="2015">
-    <event month="11" type="legal">
-      <title>Legal network reaches 400 participants</title>
+    <event month="11" type="legal-education">
+      <title>legal-education network reaches 400 participants</title>
       <url>https://fsfe.org/activities/ln/ln.html</url>
       <body>
-        The FSFE's Legal network launched in 2006, reaches 400 participants from
+        The FSFE's legal-education network launched in 2006, reaches 400 participants from
         all over the world.
       </body>
     </event>
-    <event month="10" type="public">
+    <event month="10" type="volunteer-engagement">
       <title>
         The FSFE convinces 1125 public administration to remove proprietary
         software ads
@@ -100,7 +100,7 @@
         software from their web pages.
       </body>
     </event>
-    <event month="09" type="internal">
+    <event month="09" type="volunteer-engagement">
       <title>Matthias Kirschner is elected as new president</title>
       <url>https://fsfe.org/news/2015/news-20150922-01.html</url>
       <body>
@@ -108,7 +108,7 @@
         president together with Alessandro Rubini as vice president.
       </body>
     </event>
-    <event month="02" type="policy">
+    <event month="02" type="pmpc">
       <title>The FSFE issues a position paper on OER</title>
       <url>https://fsfe.org/news/2015/news-20150210-01.html</url>
       <body>
@@ -118,7 +118,7 @@
     </event>
   </year>
   <year value="2014">
-    <event month="05" type="policy">
+    <event month="05" type="pmpc">
       <title>
         33 Free Software Pact supporters elected to the EU Parliament
       </title>
@@ -129,7 +129,7 @@
         during their time in Parliament.
       </body>
     </event>
-    <event month="01" type="policy">
+    <event month="01" type="pmpc">
       <title>Italy puts Free Software first</title>
       <url>https://fsfe.org/news/2014/news-20140116-01.html</url>
       <body>
@@ -140,7 +140,7 @@
     </event>
   </year>
   <year value="2013">
-    <event month="09" type="internal">
+    <event month="09" type="volunteer-engagement">
       <title>First European Coordinators Meeting</title>
       <url>https://blogs.fsfe.org/eal/2013/10/08/fsfes-first-european-coordinators-meeting/</url>
       <body>
@@ -149,7 +149,7 @@
       </body>
       <img src="https://pics.fsfe.org/uploads/big/6e459b4ea03aceb6456a2ccb5c17d8f3.jpg" alt="Group picture of the first European Coordinators meeting"/>
     </event>
-    <event month="06" type="policy">
+    <event month="06" type="pmpc">
       <title>German parliament unanimous against Software Patents</title>
       <url>https://fsfe.org/news/2013/news-20130612-01.html</url>
       <body>
@@ -160,15 +160,15 @@
     </event>
   </year>
   <year value="2012">
-    <event month="11" type="legal">
+    <event month="11" type="legal-education">
       <title>Analysis of warranty after flashing phones</title>
       <url>https://fsfe.org/news/2012/news-20121106-01.html</url>
       <body>
-        FSFE's Legal team clarifies that flashing your phone in order to install
+        FSFE's legal-education team clarifies that flashing your phone in order to install
         Free Software doesn't void your warranty in the EU.
       </body>
     </event>
-    <event month="11" type="policy">
+    <event month="11" type="device-neutrality">
       <title>German Government's White Paper on Secure Boot</title>
       <url>https://fsfe.org/news/2012/news-20121120-01.html</url>
       <body>
@@ -176,7 +176,7 @@
         of Interior, echoing FSFE's core demands.
       </body>
     </event>
-    <event month="06" type="legal">
+    <event month="06" type="legal-education">
       <title>Promoting fair public procurement in Finland</title>
       <url>https://fsfe.org/news/2012/news-20120619-01.html</url>
       <body>
@@ -184,7 +184,7 @@
         contact public bodies that put Free Software at a disadvantage.
       </body>
     </event>
-    <event month="05" type="policy">
+    <event month="05" type="pmpc">
       <title>Open Standards consultation in the UK</title>
       <url>https://fsfe.org/news/2012/news-20121101-02.html</url>
       <body>
@@ -192,7 +192,7 @@
         on Open Standards.
       </body>
     </event>
-    <event month="03" type="legal">
+    <event month="03" type="legal-education">
       <title>Microsoft fined for violating settlement</title>
       <url>https://fsfe.org/news/2013/news-20130312-01.html</url>
       <body>
@@ -201,7 +201,7 @@
         settlement's lack of a monitoring mechanism.
       </body>
     </event>
-    <event month="03" type="public">
+    <event month="03" type="volunteer-engagement">
       <title>Launch of Free Your Android</title>
       <url>https://fsfe.org/news/2012/news-20120228-01.html</url>
       <body>
@@ -211,7 +211,7 @@
       </body>
       <img src="/graphics/logos/android.png" alt="Free Your Android Logo"/>
     </event>
-    <event month="02" type="legal">
+    <event month="02" type="legal-education">
       <title>The FSFE warns the US Department of Justice</title>
       <url>https://fsfe.org/news/2012/news-20120214-01.html</url>
       <body>
@@ -220,7 +220,7 @@
         November 2013, as Rockstar sues Google over Android.
       </body>
     </event>
-    <event month="02" type="legal">
+    <event month="02" type="young-generation">
       <title>First "Hacking for compliance" workshop</title>
       <url>https://fsfe.org/news/2013/news-20130626-01.html</url>
       <body>
@@ -231,7 +231,7 @@
   </year>
   <year value="2011"/>
   <year value="2010">
-    <event month="05" type="internal">
+    <event month="05" type="volunteer-engagement">
       <title>The FSFE is awarded the Theodor Heuss Medal</title>
       <url>https://fsfe.org/news/2010/news-20100510-01.html</url>
       <body>
@@ -240,7 +240,7 @@
       </body>
       <img src="/graphics/theodor-heuss-medal.png" alt=" The Theodor Heuss Medal, a small medal depicting Theodor Heuss"/>
     </event>
-    <event month="04" type="internal">
+    <event month="04" type="volunteer-engagement">
       <title>
         German Merrit Cross on Ribbon for the FSFE's founding president
       </title>
@@ -251,7 +251,7 @@
       </body>
       <img src="/graphics/ribbonofmerit.png" alt="German Merrit Cross on Ribbon"/>
     </event>
-    <event month="02" type="public">
+    <event month="02" type="volunteer-engagement">
       <title>First "I love Free Software" Day</title>
       <url>https://fsfe.org/activities/ilovefs/</url>
       <body>
@@ -263,7 +263,7 @@
     </event>
   </year>
   <year value="2009">
-    <event month="09" type="policy">
+    <event month="09" type="pmpc">
       <title>First "Ask Your Candidates"</title>
       <url>https://fsfe.org/news/2009/news-20090908-01.html</url>
       <body>
@@ -272,7 +272,7 @@
         ideas for more freedom.
       </body>
     </event>
-    <event month="02" type="public">
+    <event month="02" type="volunteer-engagement">
       <title>Launch of the PDFReaders campaign</title>
       <url>https://fsfe.org/news/2009/news-20090202-01.html</url>
       <body>
@@ -287,7 +287,7 @@
     </event>
   </year>
   <year value="2008">
-    <event month="03" type="public">
+    <event month="03" type="volunteer-engagement">
       <title>Document Freedom Day campaign launched</title>
       <url>https://fsfe.org/news/2008/news-20080220-01.html</url>
       <body>
@@ -297,19 +297,19 @@
       </body>
       <img src="/graphics/dfd.logo.png" alt="Document Freedom Day Logo"/>
     </event>
-    <event month="02" type="legal">
-      <title>First European Free Software Licensing and Legal Workshop</title>
+    <event month="02" type="legal-education">
+      <title>First European Free Software Licensing and legal-education Workshop</title>
       <url>https://fsfe.org/news/2008/news-20080214-01.html</url>
       <body>
         FSFE offers a workshop focused on medium to large projects and
         enterprises to discuss their existing license compliance processes. Our
-        legal experts and external partners help to deliver training and
+        legal-education experts and external partners help to deliver training and
         consultancy for Free Software.
       </body>
     </event>
   </year>
   <year value="2007">
-    <event month="09" type="legal">
+    <event month="09" type="legal-education">
       <title>Winning Microsoft antitrust case</title>
       <url>https://fsfe.org/activities/ms-vs-eu/ms-vs-eu.html</url>
       <body>
@@ -318,7 +318,7 @@
         Microsoft is now required to publish interoperability information.
       </body>
     </event>
-    <event month="07" type="public">
+    <event month="07" type="volunteer-engagement">
       <title>Fighting against MS-OOXML</title>
       <url>https://fsfe.org/activities/msooxml/msooxml.html</url>
       <body>
@@ -328,17 +328,17 @@
         not establish well enough to be a danger anymore.
       </body>
     </event>
-    <event month="02" type="legal">
+    <event month="02" type="legal-education">
       <title>Fiduciary License Agreement</title>
       <url>https://lists.fsfe.org/pipermail/press-release/2007q1/000168.html</url>
       <body>
-        FSFE releases the FLA to ensure legal maintability of Free Software
+        FSFE releases the FLA to ensure legal-education maintability of Free Software
         projects and rights in court. In 2008, KDE is adopting it as well.
       </body>
     </event>
   </year>
   <year value="2006">
-    <event month="11" type="public">
+    <event month="11" type="volunteer-engagement">
       <title>First Fellowship conference</title>
       <url>https://wiki.fsfe.org/Migrated/Bolzano2006</url>
       <body>
@@ -346,17 +346,17 @@
         draws a wide range of Fellows from the community.
       </body>
     </event>
-    <event month="11" type="legal">
-      <title>Launch of the FSFE's Legal Team</title>
+    <event month="11" type="legal-education">
+      <title>Launch of the FSFE's legal-education Team</title>
       <url>https://lists.fsfe.org/pipermail/press-release/2006q4/000159.html</url>
       <body>
         Established and operating in close collaboration with
-        gpl-violations.org, "FSFE Legal" educates and supports Free Software
-        developers with the legal aspects, including enforcement in the case of
+        gpl-violations.org, "FSFE legal-education" educates and supports Free Software
+        developers with the legal-education aspects, including enforcement in the case of
         license violations.
       </body>
     </event>
-    <event month="10" type="public">
+    <event month="10" type="device-neutrality">
       <title>DRM.info campaign launched</title>
       <url>https://fsfe.org/activities/drm/</url>
       <body>
@@ -366,7 +366,7 @@
     </event>
   </year>
   <year value="2005">
-    <event month="11" type="legal">
+    <event month="11" type="legal-education">
       <title>Intervening EC's antitrust lawsuit against Microsoft</title>
       <url>https://lists.fsfe.org/pipermail/press-release/2005q4/000122.html</url>
       <body>
@@ -374,7 +374,7 @@
         application for leave to intervene in this important case.
       </body>
     </event>
-    <event month="06" type="policy">
+    <event month="06" type="pmpc">
       <title>EU Parliament votes against Software Patents</title>
       <url>https://lists.fsfe.org/pipermail/press-release/2005q3/000109.html</url>
       <body>
@@ -382,7 +382,7 @@
         European Parliament rejects the new Software Patent initiative.
       </body>
     </event>
-    <event month="06" type="policy">
+    <event month="06" type="pmpc">
       <title>Karlsruhe Memorandumagainst Software Patents</title>
       <url>https://fsfe.org/activities/swpat/memorandum.html</url>
       <body>
@@ -391,7 +391,7 @@
         Parliament
       </body>
     </event>
-    <event month="02" type="internal">
+    <event month="02" type="volunteer-engagement">
       <title>Creation of the Fellowship of the FSFE</title>
       <url>https://lists.fsfe.org/pipermail/press-release/2005q1/000094.html</url>
       <body>
@@ -403,7 +403,7 @@
     </event>
   </year>
   <year value="2004">
-    <event month="11" type="policy">
+    <event month="11" type="pmpc">
       <title>European Interoperability Framework</title>
       <url>https://fsfe.org/freesoftware/standards/eifv2.html</url>
       <body>
@@ -412,7 +412,7 @@
         groups for properietary software vendors.
       </body>
     </event>
-    <event month="05" type="public">
+    <event month="05" type="volunteer-engagement">
       <title>Action week against Software patents</title>
       <url>https://lists.fsfe.org/pipermail/press-release/2004q2/000057.html</url>
       <body>
@@ -421,7 +421,7 @@
         discussions and several demonstrations.
       </body>
     </event>
-    <event month="05" type="policy">
+    <event month="05" type="pmpc">
       <title>Definition of Open Standards</title>
       <url>https://fsfe.org/freesoftware/standards/def.html</url>
       <body>
@@ -431,7 +431,7 @@
     </event>
   </year>
   <year value="2003">
-    <event month="07" type="public">
+    <event month="07" type="volunteer-engagement">
       <title>Launch of Education Task Force</title>
       <url>https://fsfe.org/freesoftware/education/education.html</url>
       <body>
@@ -442,7 +442,7 @@
   </year>
   <year value="2002"/>
   <year value="2001">
-    <event month="11" type="public">
+    <event month="11" type="volunteer-engagement">
       <title>We speak about Free Software campaign</title>
       <url>https://fsfe.org/activities/whyfs/whyfs.html</url>
       <body>
@@ -450,7 +450,7 @@
         Source". Several companies and Bruce Perens supported the campaign.
       </body>
     </event>
-    <event month="04" type="internal">
+    <event month="04" type="volunteer-engagement">
       <title>Foundation of the FSFE</title>
       <url>https://lists.fsfe.org/pipermail/press-release/2001q2/000003.html</url>
       <body>

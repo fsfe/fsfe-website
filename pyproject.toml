@@ -17,13 +17,14 @@ build = "fsfe_website_build:main"
 
 [dependency-groups]
 dev = [
-  "lefthook",   # pre-commit hook
-  "pyright",    # python typechecker
-  "pytest",     # python test runner
-  "reuse",      # for enforcing licensing
-  "ruff",       # python formatter and linter
-  "taplo",      # toml formatter
-  "types-lxml", # type stubs for lxml
+  "lefthook",    # pre-commit hook
+  "pyright",     # python typechecker
+  "pytest",      # python test runner
+  "pytest-mock", # helper for mocking in pytest
+  "reuse",       # for enforcing licensing
+  "ruff",        # python formatter and linter
+  "taplo",       # toml formatter
+  "types-lxml",  # type stubs for lxml
 ]
 
 [build-system]
@@ -75,11 +76,13 @@ ignore = [
 ]
 [tool.ruff.lint.per-file-ignores]
 "build/fsfe_website_build_tests/*" = [
-  "D",
-] # We do not need to document the tests.
+  "D",      # We do not need to document the tests.
+  "TRY003", # Dont worry about big exceptions in tests
+]
 [tool.pyright]
 typeCheckingMode = "strict"
 [tool.pytest.ini_options]
-testpaths = ["build/fsfe_website_build_tests"]
+addopts = ["--import-mode=importlib"]
 python_files = ["*_test.py"]
 python_functions = ["*_test"]
+testpaths = ["build/fsfe_website_build_tests"]

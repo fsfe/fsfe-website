@@ -204,7 +204,7 @@ def run(source: Path, languages: list[str], processes: int, working_dir: Path) -
         # Generate our file lists by priority
         # Super hardcoded unfortunately
         files_by_priority: dict[str, list[Path]] = defaultdict(list)
-        for file in all_files_with_translations:
+        for file in sorted(all_files_with_translations):
             for priority, searches in priorities_and_searches.items():
                 # If any search matches,
                 # add it to that priority and skip all subsequent priorities

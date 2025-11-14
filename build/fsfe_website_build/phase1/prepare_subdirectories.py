@@ -23,7 +23,12 @@ def prepare_subdirectories(
 ) -> None:
     """Find any subdir scripts in subdirectories and run them."""
     logger.info("Preparing Subdirectories")
-    for subdir_path in (path.parent for path in source_dir.glob("**/subdir.py")):
+    for subdir_path in sorted(
+        (path.parent for path in source_dir.glob("**/subdir.py")),
+        key=lambda directory: directory.joinpath("subdir-prio.txt").read_text().strip()
+        if directory.joinpath("subdir-prio.txt").exists()
+        else "0",
+    ):
         logger.info("Preparing subdirectory %s", subdir_path)
         sys.path.append(str(subdir_path.resolve()))
         # Ignore this very sensible warning, as we do evil things

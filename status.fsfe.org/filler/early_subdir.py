@@ -9,7 +9,6 @@ we ensure translation pages for all langs are built.
 """
 
 import logging
-import multiprocessing
 from pathlib import Path
 
 from fsfe_website_build.lib.misc import (
@@ -20,7 +19,7 @@ from lxml import etree
 logger = logging.getLogger(__name__)
 
 
-def run(source: Path, processes: int, working_dir: Path) -> None:
+def run(source: Path, processes: int, working_dir: Path) -> None:  # noqa: ARG001
     """Place filler indices to encourage the site.
 
     This ensures that status pages for all langs are build.
@@ -39,17 +38,10 @@ def run(source: Path, processes: int, working_dir: Path) -> None:
     index_content = etree.tostring(page, xml_declaration=True, encoding="utf-8").decode(
         "utf-8",
     )
-
-    with multiprocessing.Pool(processes) as pool:
-        pool.starmap(
-            update_if_changed,
-            (
-                (
-                    working_dir.joinpath(
-                        f"index.{path.name}.xhtml",
-                    ),
-                    index_content,
-                )
-                for path in source.glob("global/languages/*")
-            ),
+    for path in (
+        working_dir.joinpath(
+            f"index.{path.name}.xhtml",
         )
+        for path in source.glob("global/languages/*")
+    ):
+        update_if_changed(path, index_content)

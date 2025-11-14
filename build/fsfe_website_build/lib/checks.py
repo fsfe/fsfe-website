@@ -21,7 +21,8 @@ def compare_files(
 ) -> list[str]:
     """Compare two xml files, passes as paths."""
     try:
-        t1, t2 = etree.parse(file1), etree.parse(file2)
+        parser = etree.XMLParser(remove_comments=True)
+        t1, t2 = etree.parse(file1, parser), etree.parse(file2, parser)
     except etree.XMLSyntaxError as e:
         logger.critical("XML parse error: %s", e)
         sys.exit(1)
@@ -54,14 +55,14 @@ def compare_elements(
     attributes_of_elem1 = dict(elem1.attrib.items())
     attributes_of_elem2 = dict(elem2.attrib.items())
 
-    only_in_elem1 = set(attributes_of_elem1) - set(attributes_of_elem2)
-    only_in_elem2 = set(attributes_of_elem2) - set(attributes_of_elem1)
-    common = set(attributes_of_elem1) & set(attributes_of_elem2)
+    only_in_elem1 = sorted(set(attributes_of_elem1) - set(attributes_of_elem2))
+    only_in_elem2 = sorted(set(attributes_of_elem2) - set(attributes_of_elem1))
+    common = sorted(set(attributes_of_elem1) & set(attributes_of_elem2))
 
     if only_in_elem1 or only_in_elem2:
         errors.append(
             f"Attribute delta at <{elem1.tag}>"
-            f"  only 1: {list(only_in_elem1)}  only 2: {list(only_in_elem2)}"
+            f"  only 1: {only_in_elem1}  only 2: {only_in_elem2}"
         )
     for key in common:
         if (
@@ -87,4 +88,5 @@ def compare_elements(
             compare_elements(child1, child2, attr_whitelist, _path=f"{tag_path}[{idx}]")
         )
 
+    # this should be stable from the sorts above, so no need to sort it here
     return errors

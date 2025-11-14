@@ -15,6 +15,7 @@ def no_rebuild_twice_test(mocker: MockFixture) -> None:
         languages=[
             "en",
             "nl",
+            "de",
         ],
         log_level="CRITICAL",  # by only logging critical messages
         # the build should be faster, as evaluating less trhings to strings

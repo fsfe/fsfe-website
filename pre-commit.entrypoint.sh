@@ -15,3 +15,4 @@ done
 # run pre-commit
 #shellcheck disable=2086 # We want to expand the string as args
 uv run lefthook run pre-commit $files_args
+uv run lefthook run ci-checks

@@ -29,10 +29,11 @@
                 <div class="topline">
                   <div class="icon">
                     <xsl:choose>
-                      <xsl:when test="@type = 'internal'">🤝︎</xsl:when>
-                      <xsl:when test="@type = 'policy'">🏛︎</xsl:when>
-                      <xsl:when test="@type = 'legal'">⚖︎</xsl:when>
-                      <xsl:when test="@type = 'public'">📣︎</xsl:when>
+                      <xsl:when test="@type = 'device-neutrality'">🕻</xsl:when>
+                      <xsl:when test="@type = 'legal-education'">⚖︎</xsl:when>
+                      <xsl:when test="@type = 'pmpc'">🏛︎</xsl:when>
+                      <xsl:when test="@type = 'volunteer-engagement'">🤝︎</xsl:when>
+                      <xsl:when test="@type = 'young-generation'">📣︎</xsl:when>
                       <xsl:otherwise>???</xsl:otherwise>
                     </xsl:choose>
                   </div>

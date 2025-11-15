@@ -3,7 +3,7 @@ name = "fsfe-website-build"
 version = "0.0.0"
 description = "Python tooling to build the fsfe websites"
 readme = "README.md"
-requires-python = "==3.13.*"
+requires-python = "==3.14.*"
 dependencies = [
   "lxml",            # XML parser
   "nltk",            # For stopwords for the search index

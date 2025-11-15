@@ -7,7 +7,7 @@
 }:
 let
   inherit (pkgs) lib;
-  python = pkgs.python313;
+  python = pkgs.python314;
 in
 (pkgs.buildFHSEnv {
   name = "fsfe-website-env";

@@ -13,14 +13,12 @@ def no_rebuild_twice_test(mocker: MockFixture) -> None:
     args = Namespace(
         full=True,
         languages=[
-            "ar",
-            "de",
             "en",
-            "es",
-            "fr",
-            "it",
+            "nl",
+            "de",
         ],
-        log_level="DEBUG",
+        log_level="CRITICAL",  # by only logging critical messages
+        # the build should be faster, as evaluating less trhings to strings
         processes=8,
         source=Path(),
         serve=False,

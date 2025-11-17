@@ -69,7 +69,7 @@ pre-commit:
     pytest:
       glob:
         - "*.py"
-      run: pytest
+      run: pytest ./build/fsfe_website_build_tests_pre_commit
     pyright:
       glob: "*.py"
       run: pyright {staged_files}
@@ -95,3 +95,8 @@ pre-commit:
         - "*.xhtml"
         - "*.xsl"
       run: xmllint --noout {staged_files}
+# for checks too slow to run all the time
+ci-checks:
+  commands:
+    pytest:
+      run: pytest

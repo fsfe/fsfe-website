@@ -9,15 +9,18 @@ which is useful to prevent reparsing the XSL multiple times.
 """
 
 import logging
-import multiprocessing.pool
 from collections import defaultdict
 from itertools import product
 from pathlib import Path
+from typing import TYPE_CHECKING
 
 from lxml import etree
 
 from fsfe_website_build.lib.misc import get_basepath
 from fsfe_website_build.lib.process_file import process_file
+
+if TYPE_CHECKING:
+    import multiprocessing.pool
 
 logger = logging.getLogger(__name__)
 

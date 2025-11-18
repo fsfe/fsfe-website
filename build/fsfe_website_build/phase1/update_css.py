@@ -9,11 +9,14 @@ distributed to the web server.
 """
 
 import logging
-from pathlib import Path
+from typing import TYPE_CHECKING
 
 import minify  # pyright: ignore [reportMissingTypeStubs]
 
 from fsfe_website_build.lib.misc import run_command, update_if_changed
+
+if TYPE_CHECKING:
+    from pathlib import Path
 
 logger = logging.getLogger(__name__)
 

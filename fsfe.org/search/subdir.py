@@ -6,7 +6,6 @@
 import json
 import logging
 import multiprocessing
-from pathlib import Path
 from typing import TYPE_CHECKING
 
 import iso639
@@ -19,6 +18,7 @@ from nltk.corpus import (  # pyright: ignore[reportMissingTypeStubs]
 
 if TYPE_CHECKING:
     from collections.abc import Generator
+    from pathlib import Path
 logger = logging.getLogger(__name__)
 
 

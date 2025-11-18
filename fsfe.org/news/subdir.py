@@ -6,11 +6,14 @@
 
 import logging
 import multiprocessing
-from pathlib import Path
 from textwrap import dedent
+from typing import TYPE_CHECKING
 
 from fsfe_website_build.lib.misc import lang_from_filename, update_if_changed
 from lxml import etree
+
+if TYPE_CHECKING:
+    from pathlib import Path
 
 logger = logging.getLogger(__name__)
 

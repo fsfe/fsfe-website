@@ -4,11 +4,16 @@
 
 """Lib functions used mainly in checks mainly for testing a file."""
 
+import copy
 import logging
 import sys
-from pathlib import Path
+from typing import TYPE_CHECKING
 
 from lxml import etree
+
+if TYPE_CHECKING:
+    from collections.abc import Iterable
+    from pathlib import Path
 
 logger = logging.getLogger(__name__)
 
@@ -16,7 +21,7 @@ logger = logging.getLogger(__name__)
 def compare_files(
     file1: Path,
     file2: Path,
-    attr_whitelist: set[str] | None = None,
+    xpaths_to_ignore: Iterable[str] | None = None,
     _path: str = "",
 ) -> list[str]:
     """Compare two xml files, passes as paths."""
@@ -27,21 +32,50 @@ def compare_files(
         logger.critical("XML parse error: %s", e)
         sys.exit(1)
 
-    return compare_elements(t1.getroot(), t2.getroot(), attr_whitelist)
+    return compare_elements(t1.getroot(), t2.getroot(), xpaths_to_ignore)
+
+
+def _delete_by_xpaths(root: etree.Element, xpaths: Iterable[str]) -> None:
+    """Remove every element/attribute that matches any of the xpaths."""
+    for xpath in xpaths:
+        # Distinguish attribute XPaths (ending with /@attr) from element XPaths
+        if xpath.endswith(("/@*", "/@x")):  # attribute path
+            parent_xpath = xpath.rsplit("/@", 1)[0] or "."  # default to root
+            for parent in root.xpath(parent_xpath):
+                if isinstance(parent, etree.Element):
+                    attr = xpath.rsplit("/", 1)[1].lstrip("@")
+                    if attr == "*":
+                        parent.attrib.clear()
+                    else:
+                        parent.attrib.pop(attr, None)
+        else:  # element path
+            for el in root.xpath(xpath):
+                if isinstance(el, etree.Element):
+                    parent = el.getparent()
+                    if parent is not None:
+                        parent.remove(el)
 
 
 def compare_elements(
-    elem1: etree.Element,
-    elem2: etree.Element,
-    attr_whitelist: set[str] | None = None,
+    elem_input1: etree.Element,
+    elem_input2: etree.Element,
+    xpaths_to_ignore: Iterable[str] | None = None,
     _path: str = "",
 ) -> list[str]:
     """Recursively compare two XML elements.
 
     Returns a list of short, informative error strings.
     """
-    if attr_whitelist is None:
-        attr_whitelist = set()
+    if xpaths_to_ignore is None:
+        xpaths_to_ignore = ()
+
+    # make a copy to prevent modifying parent scope
+    elem1 = copy.deepcopy(elem_input1)
+    elem2 = copy.deepcopy(elem_input2)
+
+    # Prune ignored parts
+    _delete_by_xpaths(elem1, xpaths_to_ignore)
+    _delete_by_xpaths(elem2, xpaths_to_ignore)
 
     errors: list[str] = []
     tag_path = f"{_path}/{elem1.tag}" if _path else elem1.tag
@@ -65,10 +99,7 @@ def compare_elements(
             f"  only 1: {only_in_elem1}  only 2: {only_in_elem2}"
         )
     for key in common:
-        if (
-            attributes_of_elem1[key] != attributes_of_elem2[key]
-            and key not in attr_whitelist
-        ):
+        if attributes_of_elem1[key] != attributes_of_elem2[key]:
             error_msg = (
                 f"Attribute value diff at <{elem1.tag} {key}>:"
                 f" {attributes_of_elem1[key]!r} ≠ {attributes_of_elem2[key]!r}"
@@ -85,7 +116,9 @@ def compare_elements(
     # and then recurse into children
     for idx, (child1, child2) in enumerate(zip(kids1, kids2, strict=False), start=1):
         errors.extend(
-            compare_elements(child1, child2, attr_whitelist, _path=f"{tag_path}[{idx}]")
+            compare_elements(
+                child1, child2, xpaths_to_ignore=(), _path=f"{tag_path}[{idx}]"
+            )
         )
 
     # this should be stable from the sorts above, so no need to sort it here

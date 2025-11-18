@@ -10,8 +10,7 @@ directory tree and does not touch the target directory tree at all.
 """
 
 import logging
-import multiprocessing.pool
-from pathlib import Path
+from typing import TYPE_CHECKING
 
 from .prepare_subdirectories import prepare_subdirectories
 from .update_css import update_css
@@ -19,6 +18,10 @@ from .update_defaultxsls import update_defaultxsls
 from .update_localmenus import update_localmenus
 from .update_stylesheets import update_stylesheets
 from .update_xmllists import update_xmllists
+
+if TYPE_CHECKING:
+    import multiprocessing.pool
+    from pathlib import Path
 
 logger = logging.getLogger(__name__)
 

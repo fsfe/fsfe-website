@@ -3,9 +3,12 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 from argparse import Namespace
 from pathlib import Path
+from typing import TYPE_CHECKING
 
 from fsfe_website_build.build import build
-from pytest_mock import MockFixture
+
+if TYPE_CHECKING:
+    from pytest_mock import MockFixture
 
 
 def no_rebuild_twice_test(mocker: MockFixture) -> None:

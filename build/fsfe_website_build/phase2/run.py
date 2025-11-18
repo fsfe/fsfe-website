@@ -5,13 +5,16 @@
 """Script for FSFE website build, phase 2."""
 
 import logging
-import multiprocessing.pool
-from pathlib import Path
+from typing import TYPE_CHECKING
 
 from .copy_files import copy_files
 from .create_index_symlinks import create_index_symlinks
 from .create_language_symlinks import create_language_symlinks
 from .process_files import process_files
+
+if TYPE_CHECKING:
+    import multiprocessing.pool
+    from pathlib import Path
 
 logger = logging.getLogger(__name__)
 

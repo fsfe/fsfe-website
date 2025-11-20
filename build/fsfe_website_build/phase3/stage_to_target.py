@@ -4,10 +4,13 @@
 """Use rsync to copy files to the targets."""
 
 import logging
-import multiprocessing.pool
-from pathlib import Path
+from typing import TYPE_CHECKING
 
 from fsfe_website_build.lib.misc import run_command
+
+if TYPE_CHECKING:
+    import multiprocessing.pool
+    from pathlib import Path
 
 logger = logging.getLogger(__name__)
 

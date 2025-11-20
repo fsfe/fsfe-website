@@ -14,13 +14,16 @@ per-year archives.
 """
 
 import logging
-import multiprocessing.pool
 import re
-from pathlib import Path
+from typing import TYPE_CHECKING
 
 from lxml import etree
 
 from fsfe_website_build.lib.misc import touch_if_newer_dep
+
+if TYPE_CHECKING:
+    import multiprocessing.pool
+    from pathlib import Path
 
 logger = logging.getLogger(__name__)
 

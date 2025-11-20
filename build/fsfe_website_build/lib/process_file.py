@@ -7,12 +7,14 @@
 import logging
 import re
 from datetime import datetime
-from pathlib import Path
-from typing import Any
+from typing import TYPE_CHECKING, Any
 
 from lxml import etree
 
 from fsfe_website_build.lib.misc import get_basename, get_version, lang_from_filename
+
+if TYPE_CHECKING:
+    from pathlib import Path
 
 logger = logging.getLogger(__name__)
 

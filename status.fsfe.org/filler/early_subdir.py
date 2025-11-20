@@ -9,12 +9,15 @@ we ensure translation pages for all langs are built.
 """
 
 import logging
-from pathlib import Path
+from typing import TYPE_CHECKING
 
 from fsfe_website_build.lib.misc import (
     update_if_changed,
 )
 from lxml import etree
+
+if TYPE_CHECKING:
+    from pathlib import Path
 
 logger = logging.getLogger(__name__)
 

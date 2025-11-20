@@ -10,10 +10,13 @@ generate a symlink from about/index.en.html to about.en.html
 """
 
 import logging
-import multiprocessing.pool
-from pathlib import Path
+from typing import TYPE_CHECKING
 
 from fsfe_website_build.lib.misc import get_basename
+
+if TYPE_CHECKING:
+    import multiprocessing.pool
+    from pathlib import Path
 
 logger = logging.getLogger(__name__)
 

@@ -5,9 +5,12 @@
 """Implementation of the full build logic."""
 
 import logging
-from pathlib import Path
+from typing import TYPE_CHECKING
 
 from fsfe_website_build.lib.misc import run_command
+
+if TYPE_CHECKING:
+    from pathlib import Path
 
 logger = logging.getLogger(__name__)
 

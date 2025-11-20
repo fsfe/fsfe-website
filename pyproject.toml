@@ -3,7 +3,7 @@ name = "fsfe-website-build"
 version = "0.0.0"
 description = "Python tooling to build the fsfe websites"
 readme = "README.md"
-requires-python = "==3.13.*"
+requires-python = "==3.14.*"
 dependencies = [
   "lxml",            # XML parser
   "nltk",            # For stopwords for the search index
@@ -75,7 +75,7 @@ ignore = [
   "D213", # multi-line-summary-second-line, Conflicts with D212
 ]
 [tool.ruff.lint.per-file-ignores]
-"build/fsfe_website_build_tests/*" = [
+"build/fsfe_website_build_tests*/*" = [
   "D",      # We do not need to document the tests.
   "TRY003", # Dont worry about big exceptions in tests
 ]
@@ -85,4 +85,4 @@ typeCheckingMode = "strict"
 addopts = ["--import-mode=importlib"]
 python_files = ["*_test.py"]
 python_functions = ["*_test"]
-testpaths = ["build/fsfe_website_build_tests"]
+testpaths = ["build/fsfe_website_build_tests*"]

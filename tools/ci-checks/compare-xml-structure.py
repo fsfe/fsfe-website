@@ -47,8 +47,13 @@ def main() -> None:
         "-w",
         "--whitelist",
         type=lambda attributes: set(attributes.split(",")),
-        default={"alt"},
-        help="Comma-separated list of attributes to ignore",
+        default=[
+            "//img[@alt]",  # Image alt text
+            "//track[@srclang]",  # Languages, used in some track elements
+            "//track[@label]",  # Language label, used in some track elements
+            "/html/translator",  # the translator
+        ],
+        help="Comma-separated list xpaths that we then ignore.",
     )
     parser.add_argument(
         "--log-level",

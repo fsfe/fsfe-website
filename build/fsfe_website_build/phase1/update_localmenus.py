@@ -8,13 +8,16 @@ After this step, all .localmenu.??.xml files will be up to date.
 """
 
 import logging
-import multiprocessing.pool
 from collections import defaultdict
 from pathlib import Path
+from typing import TYPE_CHECKING
 
 from lxml import etree
 
 from fsfe_website_build.lib.misc import get_basepath, sort_dict, update_if_changed
+
+if TYPE_CHECKING:
+    import multiprocessing.pool
 
 logger = logging.getLogger(__name__)
 

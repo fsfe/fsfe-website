@@ -11,8 +11,11 @@ file.
 """
 
 import logging
-import multiprocessing.pool
-from pathlib import Path
+from typing import TYPE_CHECKING
+
+if TYPE_CHECKING:
+    import multiprocessing.pool
+    from pathlib import Path
 
 logger = logging.getLogger(__name__)
 

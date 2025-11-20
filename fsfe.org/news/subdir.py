@@ -6,11 +6,14 @@
 
 import logging
 import multiprocessing
-from pathlib import Path
 from textwrap import dedent
+from typing import TYPE_CHECKING
 
 from fsfe_website_build.lib.misc import lang_from_filename, update_if_changed
 from lxml import etree
+
+if TYPE_CHECKING:
+    from pathlib import Path
 
 logger = logging.getLogger(__name__)
 
@@ -31,14 +34,16 @@ def _gen_archive_index(
             update_if_changed(directory.joinpath(f"index.{lang}.xhtml"), content)
 
 
-def _gen_index_sources(source: Path, directory: Path) -> None:
+def _gen_index_sources(working_dir: Path, year: Path) -> None:
     update_if_changed(
-        directory.joinpath("index.sources"),
+        year.joinpath("index.sources"),
         dedent(
             f"""\
-               {directory.relative_to(source)}/news-*:[]
-               {directory.relative_to(source)}/.news-*:[]
-               {directory.parent.relative_to(source)}/.localmenu:[]
+                {working_dir}/.localmenu:[]
+                {working_dir}/podcast/{year.name}/episode-*:[]
+                {working_dir}/podcast/{year.name}/.episode-*:[]
+                {year}/news-*:[]
+                {year}/.news-*:[]
             """,
         ),
     )
@@ -56,7 +61,7 @@ def _gen_xml_files(working_dir: Path, file: Path) -> None:
     transform = etree.XSLT(xslt_tree)
     result = transform(
         etree.parse(file),
-        link=f"'/news/{file.with_suffix('').with_suffix('.html').relative_to(file.parent.parent)}'",
+        link=f"'/news/{file.with_suffix('').with_suffix('.html').relative_to(working_dir)}'",
     )
     update_if_changed(
         file.parent.joinpath(
@@ -66,7 +71,7 @@ def _gen_xml_files(working_dir: Path, file: Path) -> None:
     )
 
 
-def run(source: Path, languages: list[str], processes: int, working_dir: Path) -> None:
+def run(source: Path, languages: list[str], processes: int, working_dir: Path) -> None:  # noqa: ARG001
     """Prepare news subdirectory."""
     with multiprocessing.Pool(processes) as pool:
         years = sorted(working_dir.glob("[0-9][0-9][0-9][0-9]"))
@@ -77,7 +82,7 @@ def run(source: Path, languages: list[str], processes: int, working_dir: Path) -
         )
         logger.debug("Finished Archiving")
         # Generate index.sources for every year
-        pool.starmap(_gen_index_sources, [(source, year) for year in years])
+        pool.starmap(_gen_index_sources, ((working_dir, year) for year in years))
         logger.debug("Finished generating sources")
         pool.starmap(
             _gen_xml_files,
@@ -86,7 +91,7 @@ def run(source: Path, languages: list[str], processes: int, working_dir: Path) -
                 for file in filter(
                     lambda path: lang_from_filename(path) in languages
                     and etree.parse(path).xpath("//html[@newsdate]"),
-                    working_dir.glob("*/*.??.xhtml"),
+                    working_dir.glob("**/*.??.xhtml"),
                 )
             ],
         )

@@ -15,9 +15,9 @@ After this step, the following files will be up to date:
 import datetime
 import fnmatch
 import logging
-import multiprocessing.pool
 import re
 from pathlib import Path
+from typing import TYPE_CHECKING
 
 from lxml import etree
 
@@ -27,6 +27,9 @@ from fsfe_website_build.lib.misc import (
     touch_if_newer_dep,
     update_if_changed,
 )
+
+if TYPE_CHECKING:
+    import multiprocessing.pool
 
 logger = logging.getLogger(__name__)
 

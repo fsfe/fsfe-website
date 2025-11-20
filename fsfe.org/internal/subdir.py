@@ -8,12 +8,15 @@ import datetime
 import logging
 import operator
 import os
-from pathlib import Path
+from typing import TYPE_CHECKING
 from urllib.parse import urlparse
 
 import requests
 from fsfe_website_build.lib.misc import update_if_changed
 from lxml import etree
+
+if TYPE_CHECKING:
+    from pathlib import Path
 
 logger = logging.getLogger(__name__)
 
@@ -60,7 +63,7 @@ def run(source: Path, languages: list[str], processes: int, working_dir: Path) -
         try:
             enddate = datetime.datetime.strptime(row[5], "%Y-%m-%d")
         except ValueError:
-            enddate = datetime.datetime.today () + datetime.timedelta (days=7)
+            enddate = datetime.datetime.today() + datetime.timedelta(days=7)
 
         if datetime.datetime.today() > enddate:
             continue

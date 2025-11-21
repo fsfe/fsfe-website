@@ -1,3 +1,5 @@
+# build cache stuff
+.cache
 global/data/texts/.texts.??.xml
 global/data/topbanner/.topbanner.??.xml
 .default.xsl
@@ -8,10 +10,10 @@ output
 # Python stuff
 .venv
 __pycache__
-#Nltk
-.nltk_data
 #phpcsfixer cache
 .php-cs-fixer.cache
+#Nltk
+.nltk_data
 # Secrets
 # docker compose
 .env

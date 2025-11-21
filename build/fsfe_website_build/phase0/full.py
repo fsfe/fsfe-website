@@ -27,7 +27,7 @@ def full(source: Path) -> None:
             "--git-dir",
             str(source) + "/.git",
             "clean",
-            "-fdx",
+            "-ffdx",
             "--exclude",
             "/.venv",
             "--exclude",

@@ -12,6 +12,7 @@ directory tree and does not touch the target directory tree at all.
 import logging
 from typing import TYPE_CHECKING
 
+from .get_dependencies import get_dependencies
 from .prepare_subdirectories import prepare_subdirectories
 from .update_css import update_css
 from .update_defaultxsls import update_defaultxsls
@@ -35,6 +36,7 @@ def phase1_run(
 ) -> None:
     """Run all the necessary sub functions for phase1."""
     logger.info("Starting Phase 1 - Setup")
+    get_dependencies(source_site)
     update_css(source_site)
     update_stylesheets(source_site, pool)
     prepare_subdirectories(source, source_site, languages, processes)

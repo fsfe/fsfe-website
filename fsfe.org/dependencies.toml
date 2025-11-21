@@ -1,0 +1,7 @@
+# Sources for the website
+[bootstrap]
+repo = "https://github.com/twbs/bootstrap"
+rev = "v3.0.3"
+file_sets = [
+  # { source = "dist/js/bootstrap.min.js", target = "scripts/thirdparty/bootstrap.min.js" },
+]

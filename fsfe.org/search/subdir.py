@@ -77,9 +77,9 @@ def run(source: Path, languages: list[str], processes: int, working_dir: Path) -
     The result will be fed into a JS file.
     """
     # Download all stopwords
-    nltkdir = "./.nltk_data"
+    nltkdir = working_dir / ".cache" / ".nltk_data"
     source_dir = working_dir.parent
-    nltk.data.path = [nltkdir, *nltk.data.path]  # pyright: ignore [(reportUnknownMemberType)]
+    nltk.data.path = [nltkdir]
     nltk.download("stopwords", download_dir=nltkdir, quiet=True)  # pyright: ignore [(reportUnknownMemberType)]
     with multiprocessing.Pool(processes) as pool:
         logger.debug("Indexing %s", source_dir)

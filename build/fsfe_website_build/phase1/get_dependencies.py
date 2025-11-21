@@ -43,12 +43,13 @@ def fetch_sparse(
         src = clone_dir / mapping["source"]
         dest_path = Path(mapping["dest"])
         dest_path.parent.mkdir(parents=True, exist_ok=True)
+
         run_command(
             [
                 "rsync",
                 "-avz",
                 "--del",
-                str(src),
+                str(src) if not src.is_dir() else str(src) + "/",
                 str(dest_path),
             ]
         )

@@ -9,21 +9,37 @@
  </date>
 	<head>
  <title>Αποτελέσματα: Δοκιμή Ελεύθερου Λογισμικού για φωνή &amp; βίντεο </title>
-		
-		<script type="text/javascript" src="/scripts/thirdparty/data-tables/media/js/jquery.js"/>
-		<script type="text/javascript" src="/scripts/thirdparty/data-tables/media/js/jquery.dataTables.js"/>
-		<script type="text/javascript">
-		$(document).ready(function() {
-			$('#results').dataTable( {
-			"aoColumnDefs": [
-				{ "bVisible": false, "aTargets": [ 2 ] },
-				{ "bVisible": false, "aTargets": [ 4 ] },
-				{ "bVisible": false, "aTargets": [ 11 ] },
-				{ "bVisible": false, "aTargets": [ 12 ] },
-				{ "bVisible": false, "aTargets": [ 13 ] }
-			] } );
-		} );
-		</script>
+  <script type="text/javascript">
+  //
+    function hideTableColumns() {
+      var table = document.getElementById('results');
+      if (!table) return;
+
+      // Column indices to hide (0-based)
+      var colsToHide = [2, 4, 11, 12, 13];
+
+      // Get all rows (including header)
+      var rows = table.getElementsByTagName('tr');
+
+      for (var i = 0; i &lt; rows.length; i++) {
+        var cells = rows[i].cells;
+        for (var j = 0; j &lt; colsToHide.length; j++) {
+          var colIndex = colsToHide[j];
+          if (cells[colIndex]) {
+            cells[colIndex].style.display = 'none';
+          }
+        }
+      }
+    }
+
+    // Run on load
+    if (window.addEventListener) {
+      window.addEventListener('load', hideTableColumns, false);
+    } else {
+      window.attachEvent('onload', hideTableColumns);
+    }
+  //
+  </script>
 	</head>
 	
 	<body>

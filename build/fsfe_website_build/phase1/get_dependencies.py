@@ -37,7 +37,11 @@ def fetch_sparse(
         # Extract all paths for sparse checkout
         paths = [mapping["source"] for mapping in file_mappings]
         sparse_checkout_path = clone_dir / ".git" / "info" / "sparse-checkout"
-        sparse_checkout_path.write_text("\n".join(paths) + "\n")
+        # If any source is ".", interpret as "entire repo"
+        if any(p == "." for p in paths):
+            sparse_checkout_path.write_text("/*\n")  # Full checkout
+        else:
+            sparse_checkout_path.write_text("\n".join(paths) + "\n")
 
         # Fetch only the required revision (tag, commit, or branch) with depth 1
         run_command(["git", "-C", str(clone_dir), "fetch", "--depth=1", "origin", rev])
@@ -56,6 +60,7 @@ def fetch_sparse(
                 "rsync",
                 "-avz",
                 "--del",
+                "--exclude=.git",
                 str(src) if not src.is_dir() else str(src) + "/",
                 str(dest_path),
             ]

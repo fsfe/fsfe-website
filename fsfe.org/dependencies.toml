@@ -10,6 +10,13 @@ file_sets = [
 repo = "https://github.com/DataTables/DataTables"
 rev = "1.9.2"
 file_sets = [{ source = ".", target = "scripts/thirdparty/data-tables" }]
+[jquery]
+repo = "https://github.com/jquery/jquery"
+rev = "3.5.1"
+file_sets = [
+  { source = "dist/jquery.min.js", target = "scripts/thirdparty/" },
+  { source = "dist/jquery.min.map", target = "scripts/thirdparty/" },
+]
 # STYLING
 #
 # CGI

@@ -5,7 +5,16 @@ rev = "v3.0.3"
 file_sets = [
   # { source = "dist/js/bootstrap.min.js", target = "scripts/thirdparty/bootstrap.min.js" },
 ]
-
+[jquery]
+repo = "https://github.com/jquery/jquery"
+rev = "3.5.1"
+file_sets = [
+  { source = "dist/jquery.min.js", target = "scripts/thirdparty/" },
+  { source = "dist/jquery.min.map", target = "scripts/thirdparty/" },
+]
+# STYLING
+#
+# CGI
 [phpmailer]
 repo = "https://github.com/PHPMailer/PHPMailer"
 rev = "v6.10.0"

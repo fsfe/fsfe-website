@@ -1,5 +1,6 @@
 # Sources for the website
 # SCRIPTS
+# Actually, this one is scripts and styling
 [bootstrap]
 repo = "https://github.com/twbs/bootstrap"
 rev = "v3.0.3"
@@ -16,6 +17,12 @@ rev = "3.5.1"
 file_sets = [
   { source = "dist/jquery.min.js", target = "scripts/thirdparty/" },
   { source = "dist/jquery.min.map", target = "scripts/thirdparty/" },
+]
+[jquery-localization]
+repo = "https://github.com/jquery-validation/jquery-validation"
+rev = "1.21.0"
+file_sets = [
+  { source = "src/localization", target = "scripts/thirdparty/jquery.validate-localization" },
 ]
 # STYLING
 #

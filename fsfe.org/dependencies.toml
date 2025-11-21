@@ -24,6 +24,10 @@ rev = "1.21.0"
 file_sets = [
   { source = "src/localization", target = "scripts/thirdparty/jquery.validate-localization" },
 ]
+[lunr]
+repo = "https://github.com/olivernn/lunr.js"
+rev = "v2.3.9"
+file_sets = [{ source = "lunr.js", target = "scripts/thirdparty/lunr.min.js" }]
 # STYLING
 #
 # CGI

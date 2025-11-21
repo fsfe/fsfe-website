@@ -19,3 +19,6 @@ internal/fsfe-activities-options.*.xml
 # thirdpary stuff fetched by deps
 # once all deps are managed this way we can make this a more general pattern
 cgi-bin/thirdparty
+scripts/thirdparty/data-tables
+scripts/thirdparty/jquery.min*
+scripts/thirdparty/jquery.validate-localization

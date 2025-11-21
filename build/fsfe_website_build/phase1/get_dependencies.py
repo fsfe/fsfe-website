@@ -25,7 +25,10 @@ def fetch_sparse(
 
     if not (clone_dir / ".git").exists():
         clone_dir.mkdir(exist_ok=True)
-        run_command(["git", "-C", str(clone_dir), "init", "--quiet"])
+        # Initialize repo without creating a default branch
+        run_command(
+            ["git", "-C", str(clone_dir), "init", "--quiet", "--no-initial-branch"]
+        )
         run_command(["git", "-C", str(clone_dir), "remote", "add", "origin", repo])
         run_command(
             ["git", "-C", str(clone_dir), "config", "core.sparseCheckout", "true"]
@@ -33,10 +36,14 @@ def fetch_sparse(
 
         # Extract all paths for sparse checkout
         paths = [mapping["source"] for mapping in file_mappings]
-        (clone_dir / ".git" / "info" / "sparse-checkout").write_text(
-            "\n".join(paths) + "\n"
-        )
-        run_command(["git", "-C", str(clone_dir), "pull", "--depth=1", "origin", rev])
+        sparse_checkout_path = clone_dir / ".git" / "info" / "sparse-checkout"
+        sparse_checkout_path.write_text("\n".join(paths) + "\n")
+
+        # Fetch only the required revision (tag, commit, or branch) with depth 1
+        run_command(["git", "-C", str(clone_dir), "fetch", "--depth=1", "origin", rev])
+
+        # Check out the fetched revision (this works for tags, commits, branches)
+        run_command(["git", "-C", str(clone_dir), "checkout", "FETCH_HEAD"])
 
     # Copy each file to its destination
     for mapping in file_mappings:

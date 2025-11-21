@@ -35,28 +35,28 @@ class SMTP
      *
      * @var string
      */
-    const VERSION = '6.10.0';
+    public const VERSION = '6.10.0';
 
     /**
      * SMTP line break constant.
      *
      * @var string
      */
-    const LE = "\r\n";
+    public const LE = "\r\n";
 
     /**
      * The SMTP port to use if one is not specified.
      *
      * @var int
      */
-    const DEFAULT_PORT = 25;
+    public const DEFAULT_PORT = 25;
 
     /**
      * The SMTPs port to use if one is not specified.
      *
      * @var int
      */
-    const DEFAULT_SECURE_PORT = 465;
+    public const DEFAULT_SECURE_PORT = 465;
 
     /**
      * The maximum line length allowed by RFC 5321 section 4.5.3.1.6,
@@ -66,7 +66,7 @@ class SMTP
      *
      * @var int
      */
-    const MAX_LINE_LENGTH = 998;
+    public const MAX_LINE_LENGTH = 998;
 
     /**
      * The maximum line length allowed for replies in RFC 5321 section 4.5.3.1.5,
@@ -76,42 +76,42 @@ class SMTP
      *
      * @var int
      */
-    const MAX_REPLY_LENGTH = 512;
+    public const MAX_REPLY_LENGTH = 512;
 
     /**
      * Debug level for no output.
      *
      * @var int
      */
-    const DEBUG_OFF = 0;
+    public const DEBUG_OFF = 0;
 
     /**
      * Debug level to show client -> server messages.
      *
      * @var int
      */
-    const DEBUG_CLIENT = 1;
+    public const DEBUG_CLIENT = 1;
 
     /**
      * Debug level to show client -> server and server -> client messages.
      *
      * @var int
      */
-    const DEBUG_SERVER = 2;
+    public const DEBUG_SERVER = 2;
 
     /**
      * Debug level to show connection status, client -> server and server -> client messages.
      *
      * @var int
      */
-    const DEBUG_CONNECTION = 3;
+    public const DEBUG_CONNECTION = 3;
 
     /**
      * Debug level to show all messages.
      *
      * @var int
      */
-    const DEBUG_LOWLEVEL = 4;
+    public const DEBUG_LOWLEVEL = 4;
 
     /**
      * Debug output level.
@@ -320,7 +320,7 @@ class SMTP
                 $str = preg_replace('/\r\n|\r/m', "\n", $str);
                 echo gmdate('Y-m-d H:i:s'),
                 "\t",
-                    //Trim trailing space
+                //Trim trailing space
                 trim(
                     //Indent for readability, except for trailing break
                     str_replace(
@@ -498,9 +498,9 @@ class SMTP
         }
 
         //Begin encrypted connection
-            set_error_handler(function () {
-                call_user_func_array([$this, 'errorHandler'], func_get_args());
-            });
+        set_error_handler(function () {
+            call_user_func_array([$this, 'errorHandler'], func_get_args());
+        });
         $crypto_ok = stream_socket_enable_crypto(
             $this->smtp_conn,
             true,

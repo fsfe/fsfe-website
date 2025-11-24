@@ -99,7 +99,7 @@ def _update_for_base(  # noqa: PLR0913
             )
     update_if_changed(
         Path(f"{base.parent}/.{base.name}.xmllist"),
-        ("\n".join(sorted(matching_files)) + "\n"),
+        "\n".join(sorted(matching_files)) + "\n" if matching_files else "",
     )
 
 

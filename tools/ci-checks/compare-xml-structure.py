@@ -52,6 +52,7 @@ def main() -> None:
             "//track[@srclang]",  # Languages, used in some track elements
             "//track[@label]",  # Language label, used in some track elements
             "/html/translator",  # the translator
+            "//discussion[@href]", # Mastodon links can be in different langs
         ],
         help="Comma-separated list xpaths that we then ignore.",
     )

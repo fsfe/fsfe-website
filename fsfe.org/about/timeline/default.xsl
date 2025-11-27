@@ -27,7 +27,7 @@
                   <xsl:value-of select="@type"/>
                 </xsl:attribute>
                 <div class="topline">
-                  <div class="icon">
+                  <h3>
                     <xsl:choose>
                       <xsl:when test="@type = 'internal'">🤝︎</xsl:when>
                       <xsl:when test="@type = 'policy-advocacy'">🏛︎</xsl:when>
@@ -35,14 +35,9 @@
                       <xsl:when test="@type = 'public-awareness'">📣︎</xsl:when>
                       <xsl:otherwise>???</xsl:otherwise>
                     </xsl:choose>
-                  </div>
-                  <div class="header">
-                    <h3>
-                      <!-- <xsl:value-of select="@month"/> -->
-                      <!-- <xsl:text>: </xsl:text> -->
-                      <xsl:value-of select="title"/>
-                    </h3>
-                  </div>
+                    <xsl:text> </xsl:text>
+                    <xsl:value-of select="title"/>
+                  </h3>
                 </div>
                 <div class="description">
                   <p>

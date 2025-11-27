@@ -30,9 +30,9 @@
                   <div class="icon">
                     <xsl:choose>
                       <xsl:when test="@type = 'internal'">🤝︎</xsl:when>
-                      <xsl:when test="@type = 'policy'">🏛︎</xsl:when>
-                      <xsl:when test="@type = 'legal'">⚖︎</xsl:when>
-                      <xsl:when test="@type = 'public'">📣︎</xsl:when>
+                      <xsl:when test="@type = 'policy-advocacy'">🏛︎</xsl:when>
+                      <xsl:when test="@type = 'legal-support'">⚖︎</xsl:when>
+                      <xsl:when test="@type = 'public-awareness'">📣︎</xsl:when>
                       <xsl:otherwise>???</xsl:otherwise>
                     </xsl:choose>
                   </div>

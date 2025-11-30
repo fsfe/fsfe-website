@@ -271,7 +271,7 @@ HTML
 my @odtfill = qw();
 
 # odtfill script
-push @odtfill, $ENV{"DOCUMENT_ROOT"} . "/cgi-bin/odtfill";
+push @odtfill, $ENV{"DOCUMENT_ROOT"} . "/cgi-bin/odtfill.sh";
 
 # template file
 if ( !$pickup ) {

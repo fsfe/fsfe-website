@@ -87,10 +87,11 @@ def copy_files(source_dir: Path, pool: multiprocessing.pool.Pool, target: Path) 
                     ".less",
                     ".py",
                     ".pyc",
+                    ".typed",
                     # and the things we can minify
                     *minifiable_content.keys(),
                 ]
-                and path.name not in ["Makefile"]
+                and path.name not in ["Makefile", "subdir-prio.txt"]
             ]
             # Special case hard code pass over order items xml required by cgi script
             + list(source_dir.glob("order/data/items.en.xml"))

@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html>
+  <version>1</version>
+  <head>
+    <title>Why Your Phone Isn’t as Free as Your PC - Free Your Android!</title>
+  </head>
+  <body>
+    <p id="category">
+      <a href="/activities/android/android.html">Free Your Android</a>
+    </p>
+    <h1 id="why-your-phone-isnt-as-free-as-your-pc">Why your phone isn’t as
+free as your PC</h1>
+    <p>In the Free Software community, we often point out that phones are
+also regular computers, just smaller. This is technically true, but if
+you’ve ever tried to install a free operating system on your phone, you
+know it’s far more difficult than doing the same on a PC. Why is this?
+The answer lies not in fundamental technological differences, but in a
+combination of business decisions, lack of standardisation, and
+deliberately locked down ecosystems. That’s the root cause of problems
+around software freedom on phones.</p>
+    <p>This article examines the specific barriers that make smartphones
+resistant to software freedom, even though the underlying technology
+could support it. Let’s walk through what makes your PC relatively free
+and your phone decidedly less so.</p>
+    <h2 id="how-the-pc-stumbled-into-freedom">How the PC stumbled into
+freedom</h2>
+    <h3 id="your-device-your-rules-for-the-boot-process">Your device, your
+rules for the boot process</h3>
+    <p>One big difference between PCs and phones is who controls the boot
+process. On PCs, the answer is mostly “you”; on phones, the answer is
+usually “the manufacturer (plus the OS vendor, carriers, modem vendors,
+and a whole range of other gatekeepers).”</p>
+    <p>Very early on, the PC became a device that can be modified by its
+owner, and also a range of so-called IBM clones made standardisation
+necessary. This also affected the boot process. The fundamental freedom
+of the PC starts the moment you press the power button. Your typical PC
+firmware (BIOS or UEFI) presents you with a menu in which you can choose
+your boot device, whether it’s a hard disk, USB stick, or even a network
+location. The firmware doesn’t care about the operating system. If the
+disk has a valid bootloader, the firmware will try to boot it.</p>
+    <p>Even when Secure Boot is enabled, the PC world has maintained user
+control. You can disable it completely, enrol your own cryptographic
+keys, or use distributions that use keys the firmware already trusts.
+The default design philosophy is simple: “Here’s a machine. You decide
+what to boot.” It’s not perfect, but it’s flexible enough that different
+operating systems can coexist without begging each vendor for
+permission.</p>
+    <h3 id="standards-the-boring-miracle-behind-user-freedom">Standards: the
+boring miracle behind user freedom</h3>
+    <p>The same factors that required standardisation around the boot
+process, also required standardisation around other components. Over the
+years, the PC managed to advance these standards and develop new ones.
+Inside your PC, you’ll find components following those long-established
+standards. The CPU is almost always x86_64. The buses are PCI, PCIe,
+USB, SATA, or NVMe. Graphics cards, network adapters, sound cards, and
+so on, all present themselves through these standard buses with standard
+identification schemes. This standardisation creates two enormous
+advantages for software freedom.</p>
+    <p>First, a single kernel image can boot on thousands of different
+machines. The Linux kernel and other free kernels don’t need to know
+about every specific motherboard. The firmware exposes which devices are
+present through standard mechanisms like ACPI. Drivers are written
+against stable abstractions (PCI IDs, USB device classes, ACPI methods).
+A “generic” kernel often just works.</p>
+    <p>Many hardware vendors often contribute their drivers upstream or at
+least publish specifications. These drivers then live in the mainline
+Linux kernel, shipped by every distribution. Even proprietary drivers
+follow relatively standard installation patterns. The result is
+typically a simple, freedom-respecting workflow: download an ISO, write
+it to USB, boot, install, and you’re done. That workflow exists because
+the platform is broadly standardised and designed for user control.</p>
+    <h2 id="smartphones-the-dark-corner-of-software-freedom">Smartphones:
+the dark corner of software freedom</h2>
+    <p>Now let’s talk about smartphones. Technically, inside you’ll find an
+ARM System-on-Chip (SoC), a cellular modem, a GPU, an image signal
+processor, DSPs for audio and “AI” acceleration, and a constellation of
+other components. Nothing about ARM or SoCs inherently prevents freedom
+as illustrated by the Raspberry Pi. But the way phones are engineered
+and shipped enables a host of restrictions.</p>
+    <h3 id="the-cryptographic-cage">The cryptographic cage</h3>
+    <p>A phone’s boot path starts with a piece of code burned into the SoC
+at the factory. This code is called the Boot ROM. This ROM has the
+manufacturer’s public keys literally fused into the chip’s hardware. It
+then loads primary bootloaders, which must be signed by the
+manufacturer. The Boot ROM refuses to run anything lacking the correct
+signature. These primary bootloaders load the Android bootloader,
+fastboot mode, and eventually the kernel and each stage enforces
+signature checks on the next.</p>
+    <p>While this is in principle a good security model, the critical
+reality is: your device will refuse to boot arbitrary code unless the
+manufacturer gives you a way to unlock the bootloader, install your own
+keys, or disable verification. Some vendors offer an “OEM unlock”
+option. Others don’t offer it at all, require online account approval,
+impose time limits, or simply stop offering unlock codes for new models
+or specific regions. Unlike PCs, where Secure Boot is roughly a security
+feature you control, on phones verified boot is often a control feature
+you may or may not be allowed to bypass.</p>
+    <p>Manufacturers sometimes invoke regulatory requirements as
+justification for this lockdown. The EU’s Radio Equipment Directive from
+2014, for instance, was designed to ensure radio compliance. Yet some
+manufacturers like Samsung have cited it to justify disabling bootloader
+unlocking. This interpretation is disputed by legal experts and
+contradicted by the continued availability of unlockable, compliant
+smartphones. The directive appears to have been convenient cover for
+business decisions manufacturers would make regardless, particularly
+since the EU’s broader right-to-repair policies push in the opposite
+direction toward user control and device longevity. You legally own the
+hardware, but you don’t own the root of trust. The manufacturer decides
+what code is allowed to run first and thereby controls everything that
+follows.</p>
+    <h3 id="a-thousand-slightly-different-phones">A thousand slightly
+different phones</h3>
+    <p>For PCs, you can think “x86 plus PCI plus ACPI” and you’re 80% of the
+way to booting a generic kernel. For phones, every model is almost its
+own unique piece of hardware. There are different SoC vendors with
+different specifications, each phone has a different board layout,
+different power management wiring, different combinations of sensors,
+touchscreen controllers, cameras, modems, power management ICs, and
+fingerprint readers. In addition, the glue logic connecting them is
+often undocumented.</p>
+    <p>Even phones built on the same SoC can differ so dramatically that
+they need separate kernel configurations, unique device trees, and
+model-specific patches. Instead of one ISO that boots everywhere, you
+get into a situation where each phone needs a tailored kernel, device
+tree, and userspace stack, often forked from a vendor’s tree. That’s why
+there’s no generic phone distribution you can put on an SD card and
+expect to boot on a random device.</p>
+    <h3 id="trapped-in-time-the-vendor-kernel-problem">Trapped in time: the
+vendor kernel problem</h3>
+    <p>Under the GPL, phone manufacturers must release their kernel source,
+and they usually do. What you get, however, is often a Frankenstein’s
+monster: a heavily patched fork of an ancient kernel loaded with
+board-specific hacks, out-of-tree drivers, and binary blobs awkwardly
+glued into the build. The code comes with minimal documentation, little
+upstreaming to mainline Linux, and no long-term maintenance.</p>
+    <p>Porting that device to a modern, mainline kernel becomes
+archaeological work. You must reverse-engineer hardware behaviour from
+incomplete vendor code, re-implement drivers correctly against current
+kernel APIs, and deal with proprietary firmware blobs that expect the
+old kernel environment. On PCs, you rarely think about any of this
+because the kernel already supports the hardware through upstream
+drivers. On phones, the community must recover that support after the
+fact, essentially redoing the vendor’s job properly.</p>
+    <p>This is why many Android distributions can ship newer Android
+versions on a phone but still remain tied to the ancient vendor kernel
+that shipped with it. From a software freedom perspective, you might be
+running free userspace software on top of a fossilised, vendor-locked
+kernel stack. That means it’s free in theory, but compromised and full
+of critical security vulnerabilities in practice.</p>
+    <p>The situation has recently gotten worse. In June 2025, Google
+released Android 16 but intentionally omitted Pixel device trees and
+driver binaries from the Android Open Source Project. Instead of
+supporting Pixel phones as the reference implementation of Android,
+Google now targets “Cuttlefish”, a virtual device that runs on PCs. This
+forces developers of other Android distributions to reverse-engineer
+changes from prebuilt binaries rather than using Google’s publicly
+available configurations. Later that same year, Google partially
+reversed its decision and released preliminary device trees for their
+devices, but the direction still stays the same: It’s a deliberate move
+away from transparency, making freedom harder to achieve even on
+Google’s own hardware.</p>
+    <h3 id="binary-blob-nightmares">Binary blob nightmares</h3>
+    <p>While PCs certainly require proprietary firmware for some components,
+smartphones take this to another dimension entirely. Critical parts of
+your phone depend on a web of proprietary components.</p>
+    <p>The GPU drivers are often proprietary, deeply integrated into
+Android’s Hardware Abstraction Layer (HAL), its memory allocation
+systems, and specific kernel interfaces. The camera system is even
+worse: it may seem like phone cameras have gotten really good, but the
+hardware improvements are not that big at all; the actual magic of
+taking a beautiful picture in low light lives in firmware and
+proprietary libraries, often deeply integrated with the vendor’s camera
+stack. Try using the camera on another OS and you’ll quickly discover
+that the hardware can technically take photos, but without those blobs,
+they’ll look terrible.</p>
+    <p>Then there are the DSPs for audio processing that are exposed through
+opaque APIs and firmware blobs. And finally, the cellular modem, almost
+universally non-free, often running on a separate chip, interacting with
+the main CPU over shared memory or high-speed interconnects.</p>
+    <p>You can build systems that isolate the modem more strongly, but
+mainstream phones are not designed that way. The result: if you want
+hardware acceleration, a usable camera, decent battery life, and working
+cellular connectivity, you often end up depending on a stack of
+proprietary components that are undocumented, not meant to be reused
+outside the vendor’s Android build, and sometimes explicitly locked to
+specific kernel versions.</p>
+    <p>For anyone trying to run a fully free GNU+Linux distribution, this is
+a nightmare. You either accept the blobs and mimic Android’s
+environment, you rewrite huge chunks of functionality, or you simply
+live without major features that make the phone a phone. This is why
+these approaches typically have working wifi, but no camera support, or
+vice versa.</p>
+    <h3 id="firmware-the-frozen-core-of-your-phone">Firmware: the frozen
+core of your phone</h3>
+    <p>Even if you successfully install a free operating system, there’s a
+deeper problem that becomes apparent over time: device firmware. Beyond
+the drivers and blobs we’ve discussed, your phone contains firmware for
+critical subsystems such as bootloaders, radio components, and power
+management. This firmware must be cryptographically signed by the
+manufacturer to be accepted by the hardware.</p>
+    <p>Here’s the catch: when manufacturers stop supporting a device, the
+private keys used to sign firmware never get released. This means that
+even with a thriving community maintaining your specific OS, critical
+firmware components become frozen in time. You can update your operating
+system, but the underlying firmware remains locked at whatever version
+the manufacturer last provided.</p>
+    <p>The EU’s Ecodesign and Energy Labelling Regulations adopted in 2023,
+which came into force in 2025, now obligate device manufacturers to
+provide at least five years of software updates. Some manufacturers have
+responded by promising up to eight years of support. But without a
+change in how firmware-signing keys are handled for end-of-life devices,
+there’s no complete path to prolonging device life indefinitely. Your
+phone becomes e-waste not because the hardware failed, but because the
+manufacturer decided to stop signing updates.</p>
+    <h2 id="how-airwaves-chain-your-phone">How airwaves chain your
+phone</h2>
+    <p>Phones are radio devices, subject to strict government regulations
+worldwide. Vendors are under intense pressure to ensure the modem
+behaves within spectrum rules, that emergency calling works reliably,
+and that lawful interception hooks are present where legally
+required.</p>
+    <p>Instead of designing systems where the main CPU runs a fully free
+operating system and communicates with a well-specified but separate
+modem module, the industry largely went with highly integrated SoCs. The
+baseband processor is very capable, deeply closed, and often has more
+hardware privileges than the application CPU. This architecture is
+partly for performance and power efficiency, partly a deliberate
+decision to prevent users from interacting with the radio stack.</p>
+    <p>The security implications of this design are serious. Security
+researchers have repeatedly found vulnerabilities in baseband
+processors, some of which are severe enough to be called backdoors. A
+developer working on Replicant, a free software build of Android,
+discovered a disturbing example in Samsung Galaxy devices: the
+proprietary software running on the application processor would allow
+the baseband processor to perform remote file operations on the
+filesystem. This behaviour can be classified as a backdoor.</p>
+    <p>This isn’t theoretical. The baseband is a powerful, opaque computer
+within your computer, running unauditable code with privileged access to
+your system. From a freedom standpoint, this architecture pushes vendors
+to lock down more of the system. It makes it nearly impossible to argue
+for a design where users can freely replace the entire operating system
+while still having a certified, legally compliant radio. The modem
+becomes both a technical necessity and a convenient excuse for
+control.</p>
+    <h2 id="integrity-scores-and-invisible-handcuffs">Integrity scores and
+invisible handcuffs</h2>
+    <p>In addition to the problems with the hardware, the software ecosystem
+actively fights back as well. Banking apps, streaming services,
+contactless payment systems, and corporate mobile device management all
+rely on verified boot, hardware-backed key storage in secure execution
+environments (TrustZone), and device integrity APIs like Google’s Play
+Integrity, SafetyNet, or OEM-specific equivalents.</p>
+    <p>Google’s Play Integrity API deserves particular attention. Marketed
+as a security enhancement, it allows developers to verify that an app is
+running unmodified, installed through Google Play, and executing on a
+“genuine Android device.” For developers, enabling this check is easy,
+perhaps too easy, as many may not fully understand the implications. For
+users of custom Android builds, the consequences are severe.</p>
+    <p>If you unlock your bootloader or install a different Android
+distribution, Play Integrity checks often fail. You lose access to apps
+entirely or lose features such as NFC payments, video streaming, or even
+the all-important banking app access. The system can detect whether your
+operating system is “Play Protect certified,” a process requiring
+manufacturers to ship Google’s proprietary apps and pass compatibility
+testing. Operating systems with advanced security features may fail
+these checks despite being more secure than stock Android. This shows
+that security is not actually the criterion, compliance is.</p>
+    <p>This creates powerful social and economic pressure to keep devices as
+the manufacturer provides them. You can change the software, but say
+goodbye to essential services. On a PC we are used to installing
+whatever operating system we want and then installing applications
+without any central authority deciding whether our system is allowed to
+connect to our bank. The smartphone world has normalised the opposite:
+constant surveillance of your software stack, with punishment for those
+who dare to exercise control over their own devices. Ownership is taken
+away, for a false promise of security.</p>
+    <h2 id="a-tale-of-two-computers">A tale of two computers</h2>
+    <p>The contrasts crystallise into a clear pattern. PCs have boot chains
+usually controllable through BIOS/UEFI menus where you can toggle Secure
+Boot. Phones have boot chains cryptographically locked from the ROM
+onward, with unlocking at the manufacturer’s mercy. PCs have
+standardised hardware where one kernel and distribution image supports
+many devices. Phones are highly fragmented, with each device needing its
+own kernel build and device tree.</p>
+    <p>On PCs, a large portion of drivers are upstream in mainline Linux,
+with vendors often cooperating or at least documenting the basics. On
+phones, essential drivers are vendor forks or binary blobs tied to
+specific kernel and userspace combinations. PCs have no central app
+gatekeeper enforcing a specific OS or integrity score. Phones have an
+ecosystem where important applications and services depend on
+attestation that actively punishes software freedom.</p>
+    <p>The cellular modem issue looms over everything: closed baseband
+firmware with deep integration into the system, regulatory requirements
+that give vendors legal cover for lockdown and potential backdoors, and
+an industry with no interest in changing course.</p>
+    <h2 id="what-this-means-for-your-freedom">What this means for your
+freedom</h2>
+    <p>If you care about software freedom, the practical consequences are
+stark. On a PC, you can usually start with a generic free operating
+system such as Debian, Arch, Fedora, or dozens of others and expect it
+to work on most machines. On a phone, you must choose hardware
+explicitly with freedom in mind: an unlockable bootloader, good progress
+on mainline kernel support, documented components, or at least
+cooperative vendors.</p>
+    <p>Even then, you face trade-offs. You may need to accept some
+proprietary firmware, incomplete hardware support, or the loss of
+certain locked-down services. Developers of free Android distributions
+and GNU+Linux distributions on phones are doing immensely important work
+to bring true software freedom to mobile devices. Some hardware projects
+are building phones designed for freedom from the ground up. But they’re
+fighting against economies of scale, network effects, and the
+concentrated power of a few vendors who control the mobile
+ecosystem.</p>
+    <p>The gap isn’t about raw computing power or architecture. Both PCs and
+phones have powerful processors, ample memory, and sophisticated
+operating systems. The gap is about who holds the keys to the boot
+chain, how standardised the platform is, and whether the ecosystem
+assumes that you, the user, are in charge or a threat to be
+controlled.</p>
+    <p>Your PC is more free not because it’s inherently superior technology,
+but because decades ago, the industry made different choices. The fight
+for mobile freedom is about bringing those same principles of user
+control, standardisation, and transparency to the computers we carry in
+our pockets. Every unlocked bootloader, every mainlined device driver,
+and every free software phone project brings us closer. The dream of
+user control is still alive; it’s simply waiting for us to claim it on
+our phones.</p>
+  </body>
+  <description>If your phone is just a computer, then why is it so much harder to install
+		  Free Software on it? Learn about the differences between your phone and your
+		  PC and how these differences affect your freedom.</description>
+  <legal type="cc-license">
+    <license>http://creativecommons.org/licenses/by/4.0/</license>
+  </legal>
+</html>

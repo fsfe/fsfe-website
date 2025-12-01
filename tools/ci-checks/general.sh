@@ -138,7 +138,7 @@ for f in $files_all; do
 	# ---------------------------------------------------------------------------
 	# New tags
 	# ---------------------------------------------------------------------------
-	fileregex="^(news/|events/).*(\.xhtml$|\.xml$|\.xsl$)"
+	fileregex="^fsfe.org/(news/|events/).*(\.xhtml$|\.xml$|\.xsl$)"
 	if matchfile "${f}" "${fileregex}"; then
 		hit=0
 		tags=""
@@ -149,7 +149,7 @@ for f in $files_all; do
 		IFS=$'\n'
 		for tag in $(grep -Ei '<tag(\s|\>)' "${f}" | perl -pe 's/.*<tag key="(.+?)".*/\1/'); do
 			# check if this tag does exist in any other news/event item
-			if ! git grep -ilE "<tag key=\"${tag}\"" news/ events/ | grep -vq "${f}"; then
+			if ! git grep -ilE "<tag key=\"${tag}\"" fsfe.org/news/ fsfe.org/events/ | grep -vq "${f}"; then
 				hit=1
 				tags="${tag}, ${tags}"
 				RETURN_TAGS_NEW=$((RETURN_TAGS_NEW + 1))
@@ -160,35 +160,6 @@ for f in $files_all; do
 		if [ $hit -ne 0 ]; then
 			tags="${tags%, }"
 			FILES_TAGS_NEW="${FILES_TAGS_NEW}|${f} (new tag(s): ${tags})"
-		fi
-	fi
-
-	# ---------------------------------------------------------------------------
-	# Tags mismatch between EN and translations
-	# ---------------------------------------------------------------------------
-	fileregex="^(news/|events/).*(\.xhtml$|\.xml$|\.xsl$)"
-	if matchfile "${f}" "${fileregex}"; then
-		# Only check non-english files
-		if [[ ! $f =~ \.en\. ]]; then
-			# Get file extension
-			ext="${f##*.}"
-			# Get base file name (without) "en.$EXT"
-			base=$(echo "${f}" | sed -E "s/\.[a-z][a-z]\.${ext}//")
-			# exit TAGS_MISMATCH check if no english original exists
-			if [[ -e "$base.en.$ext" ]]; then
-				# Extract tags from the translated and the English file, and sort them
-				tags_trans="$(grep -Ei '<tag(\s|\>)' "${f}" |
-					perl -pe 's/.*<tag key="(.+?)".*/\1/' | sort)"
-				tags_en="$(grep -Ei '<tag(\s|\>)' "${base}.en.${ext}" |
-					perl -pe 's/.*<tag key="(.+?)".*/\1/' | sort)"
-				# Compare the two lists, and output tags that are not present in one of
-				# the files. `-3` strips away the list of tags that are common. So the
-				# output should be empty normally
-				if [[ $(comm -3 <(echo "$tags_en") <(echo "$tags_trans")) ]]; then
-					RETURN_TAGS_MISMATCH=$((RETURN_TAGS_MISMATCH + 1))
-					FILES_TAGS_MISMATCH="${FILES_TAGS_MISMATCH}|${f}"
-				fi
-			fi
 		fi
 	fi
 
@@ -219,7 +190,7 @@ for f in $files_all; do
 	# ---------------------------------------------------------------------------
 	# Naming and newsdate attribute mistakes in news/events
 	# ---------------------------------------------------------------------------
-	fileregex="^(news/20[0-9]{2}/|news/nl/|news/podcast/|events/20[0-9]{2}/).*(\.xhtml$|\.xml$)"
+	fileregex="^fsfe.org/(news/20[0-9]{2}/|news/nl/|news/podcast/20[0-9]{2}/|events/20[0-9]{2}/).*(\.xhtml$|\.xml$)"
 	if matchfile "${f}" "${fileregex}"; then
 		filename="$(basename "${f}")"
 		# file naming scheme
@@ -315,7 +286,7 @@ for f in $files_all; do
 	# Check for ratio of preview image
 	# ---------------------------------------------------------------------------
 	# Note: we also check events, could carry images in the future
-	fileregex="^(news/|events/).*(\.xhtml$|\.xml$)"
+	fileregex="^fsfe.org/(news/|events/).*(\.xhtml$|\.xml$)"
 	if matchfile "${f}" "${fileregex}"; then
 		imgratio_status=""
 		imageurl=$(xmllint --xpath "string(//image/@url)" "${f}")

@@ -1,11 +1,3 @@
-output:
-  - meta # Print lefthook version
-  - summary # Print summary block (successful and failed steps)
-  - empty_summary # Print summary heading when there are no steps to run
-  - success # Print successful steps
-  - failure # Print failed steps printing
-  - skips # Print "skip" (i.e. no files matched)
-
 pre-commit:
   commands:
     # FORMATTING, changes files

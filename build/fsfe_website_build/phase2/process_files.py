@@ -37,9 +37,18 @@ def _process_set(  # noqa: PLR0913
     # doing it here should mean that we use only one per thread,
     # and also process each one only once
     # Max memory and performance efficacy
-    parser = etree.XMLParser(remove_blank_text=True, remove_comments=True)
-    xslt_tree = etree.parse(processor.resolve(), parser)
-    transform = etree.XSLT(xslt_tree)
+    parser = None
+    try:
+        parser = etree.XMLParser(remove_blank_text=True, remove_comments=True)
+        xslt_tree = etree.parse(processor.resolve(), parser)
+        transform = etree.XSLT(xslt_tree)
+    except Exception:
+        # Print any errors captured by the parser
+        if parser is not None and parser.error_log:
+            for error in parser.error_log:
+                logger.exception("Parser error: %s", error)
+        logger.exception("Exception occurred")
+        raise
     for basepath, lang in product(files, languages):
         source_file = Path(str(basepath) + f".{lang}.xhtml")
         target_suffix = (

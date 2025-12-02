@@ -5,8 +5,8 @@
 """Clean global cache."""
 
 import logging
+import shutil
 from pathlib import Path
-from shutil import rmtree
 
 from platformdirs import user_cache_dir
 
@@ -17,4 +17,9 @@ def clean_cache() -> None:
     """Remove the global cache folder."""
     logger.info("Cleaning global cache")
     cache = Path(user_cache_dir("fsfe-website-build", "fsfe"))
-    rmtree(cache)
+    # Slightly more complex logic to handle the cache dir being a mount in docker
+    for item in cache.iterdir():
+        if item.is_file() or item.is_symlink():
+            item.unlink()
+        elif item.is_dir():
+            shutil.rmtree(item)

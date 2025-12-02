@@ -23,10 +23,12 @@ services:
       - FSFE_WEBSITE_KEY_PASSWORD
       - FSFE_WEBSITE_GIT_TOKEN
     volumes:
-      - cache:/website-cached
+      - website-cache:/website-cached
+      - dependency-cache:/root/.cache/fsfe-website-build
       - ${FSFE_WEBSITE_HOST_SOURCE_CODE:-./}:/website-source
 volumes:
-  cache:
+  website-cache:
+  dependency-cache:
 secrets:
   FSFE_WEBSITE_KEY_PRIVATE:
     environment: FSFE_WEBSITE_KEY_PRIVATE

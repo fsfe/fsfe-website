@@ -84,7 +84,7 @@ steps:
       - docker compose -p "$PROJECT" down
       # If we are in a cron job, then do a full rebuild
       # Ideally the cron would set the flag itself, but drone does not support that.
-      - if [ "$DRONE_BUILD_EVENT" = "cron" ]; then EXTRA_FLAGS="--full"; fi
+      - if [ "$DRONE_BUILD_EVENT" = "cron" ]; then EXTRA_FLAGS="--full --clean-cache"; fi
       - docker compose -p "$PROJECT" run --remove-orphans --build build --target "$TARGET" $EXTRA_FLAGS
       - docker compose -p "$PROJECT" down
     when:
@@ -119,7 +119,7 @@ steps:
       - docker compose -p "$PROJECT" down
       # If we are in a cron job, then do a full rebuild
       # Ideally the cron would set the flag itself, but drone does not support that.
-      - if [ "$DRONE_BUILD_EVENT" = "cron" ]; then EXTRA_FLAGS="--full"; fi
+      - if [ "$DRONE_BUILD_EVENT" = "cron" ]; then EXTRA_FLAGS="--full --clean-cache"; fi
       - docker compose -p "$PROJECT" run --remove-orphans --build build --target "$TARGET" $EXTRA_FLAGS
       - docker compose -p "$PROJECT" down
     when:
@@ -148,6 +148,6 @@ volumes:
       path: /run/user/1001/docker.sock
 ---
 kind: signature
-hmac: aa5d8fd7cd515e165b861345495517924992c4e1ff86e16c9b1ed293fed7a565
+hmac: eabb8bba0a2cd21c31b1365bf97d3b48f24e665080812fed6f6f9abe24812f7f
 
 ...

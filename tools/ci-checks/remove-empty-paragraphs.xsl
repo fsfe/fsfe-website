@@ -7,6 +7,6 @@
       <xsl:apply-templates select="@* | node()"/>
     </xsl:copy>
   </xsl:template>
-  <!-- Remove empty <p> elements (no attributes, whitespace only content) -->
-  <xsl:template match="p[not(@*) and not(node()[self::*]) and normalize-space(.) = '']"/>
+  <!-- Remove empty <p> elements (whitespace only content) -->
+  <xsl:template match="p[not(node()[self::*]) and normalize-space(.) = '']"/>
 </xsl:stylesheet>

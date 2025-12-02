@@ -8,6 +8,8 @@ import tomllib
 from collections import defaultdict
 from pathlib import Path
 
+from platformdirs import user_cache_dir
+
 from fsfe_website_build.lib.misc import run_command
 
 logger = logging.getLogger(__name__)
@@ -67,7 +69,7 @@ def get_dependencies(
 ) -> None:
     """Download and put in place all website dependencies."""
     logger.info("Getting Dependencies")
-    cache = source_dir / ".cache" / "repos"
+    cache = Path(user_cache_dir("fsfe-website-build", "fsfe")) / "repos"
     cache.mkdir(parents=True, exist_ok=True)
     deps_file = source_dir / "dependencies.toml"
     if deps_file.exists():

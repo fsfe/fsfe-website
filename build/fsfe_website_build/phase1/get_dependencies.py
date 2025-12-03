@@ -8,8 +8,7 @@ import tomllib
 from collections import defaultdict
 from pathlib import Path
 
-from platformdirs import user_cache_dir
-
+from fsfe_website_build.globals import CACHE_DIR
 from fsfe_website_build.lib.misc import run_command
 
 logger = logging.getLogger(__name__)
@@ -48,7 +47,11 @@ def fetch_sparse(
         run_command(["git", "-C", str(clone_dir), "checkout", "FETCH_HEAD"])
     # Copy each file to its destination
     for mapping in file_mappings:
-        src = clone_dir / mapping["source"]
+        # create our source path
+        # the source syntax is that of .gitignore, and so may have a leading /
+        # to say to interpret it only relative to the root
+        # and so we remove that so joining gives us a proper path
+        src = clone_dir / mapping["source"].lstrip("/")
         dest_path = Path(mapping["dest"])
         dest_path.parent.mkdir(parents=True, exist_ok=True)
 
@@ -69,7 +72,7 @@ def get_dependencies(
 ) -> None:
     """Download and put in place all website dependencies."""
     logger.info("Getting Dependencies")
-    cache = Path(user_cache_dir("fsfe-website-build", "fsfe")) / "repos"
+    cache = CACHE_DIR / "repos"
     cache.mkdir(parents=True, exist_ok=True)
     deps_file = source_dir / "dependencies.toml"
     if deps_file.exists():

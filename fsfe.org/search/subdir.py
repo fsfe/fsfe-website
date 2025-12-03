@@ -10,6 +10,7 @@ from typing import TYPE_CHECKING
 
 import iso639
 import nltk  # pyright: ignore[reportMissingTypeStubs]
+from fsfe_website_build.globals import CACHE_DIR
 from fsfe_website_build.lib.misc import update_if_changed
 from lxml import etree
 from nltk.corpus import (  # pyright: ignore[reportMissingTypeStubs]
@@ -77,7 +78,7 @@ def run(source: Path, languages: list[str], processes: int, working_dir: Path) -
     The result will be fed into a JS file.
     """
     # Download all stopwords
-    nltkdir = working_dir / ".cache" / ".nltk_data"
+    nltkdir = CACHE_DIR / "nltk_data"
     source_dir = working_dir.parent
     nltk.data.path = [nltkdir]
     nltk.download("stopwords", download_dir=nltkdir, quiet=True)  # pyright: ignore [(reportUnknownMemberType)]

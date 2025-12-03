@@ -33,9 +33,10 @@ This is a little bit of a messy list of things we have found that are not perhap
 
 - When doing manipulation of stuff, have a look in the lib functions to see if it is already present. If you find a common pattern, perhaps functionise it.
 - In phase 1, only update files using the `update_if_changed` function. This function will, as expected, take a file path and a string, and only update the file with the string if there is a difference. Not doing this means a file will always be updated, and hence anything depending on it will always be rebuild, even if the file has not actually changed.
+- When fetching things from the internet (avoid if possible), such as dependencies and such during the build, please make sure and cache them in a global cache directory, as provided by `fsfe_website_build.globals.CACHE_DIR`. This ensures that full builds can be done without internet access, only needing internet for a run with `--clean-cache`.
 - When generating lists that end up in files, take care that they are stable to prevent unnecessary rebuilding.
 - All steps are largely considered to be synchronous, and must be finished before the next step can start. Therefore, async must unfortunately be avoided. There are some steps where performance benefits could be achieved by allowing the next step to run concurrently, but the design complications make this unattractive.
 - We use a single process pool to multithread with. This gives a small performance benefit over making and deleting pools continuously.
 - All paths are to be handled with `pathlib`, not as strings.
 - XML code should be generated with LXML instead of string templating. This is to ensure that we generate valid XML every time, and prevents issues with escaping, etc.
-- Where possibly, type hint stuff. We try and keep the codebase reasonably typed to make it comprehensible
+- This codebase is strictly typed using pyright, and all code should be compliant with pyright strict.

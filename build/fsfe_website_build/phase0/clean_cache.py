@@ -6,9 +6,8 @@
 
 import logging
 import shutil
-from pathlib import Path
 
-from platformdirs import user_cache_dir
+from fsfe_website_build.globals import CACHE_DIR
 
 logger = logging.getLogger(__name__)
 
@@ -16,9 +15,8 @@ logger = logging.getLogger(__name__)
 def clean_cache() -> None:
     """Remove the global cache folder."""
     logger.info("Cleaning global cache")
-    cache = Path(user_cache_dir("fsfe-website-build", "fsfe"))
     # Slightly more complex logic to handle the cache dir being a mount in docker
-    for item in cache.iterdir():
+    for item in CACHE_DIR.iterdir():
         if item.is_file() or item.is_symlink():
             item.unlink()
         elif item.is_dir():

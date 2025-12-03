@@ -1,6 +1,6 @@
 <html>
 <body>
-  <p>Dear <?=$name?>,</p>
+  <p>Dear <?php echo $name; ?>,</p>
   <p>
     thank you for your recent request of promotional material from the FSFE!
     We've received your request and will normally be sending this to you
@@ -12,8 +12,8 @@
   if (!empty($donationID)) {
       ?>
   <p>If you have yet to make your donation, you may now do so by following
-    this link: <a href=https://fsfe.org/order/payonline.<?=$lang?>/<?=$donationID?>> 
-    https://fsfe.org/order/payonline.<?=$lang?>/<?=$donationID?></a>. Once the donation is
+    this link: <a href=https://fsfe.org/order/payonline.<?php echo $lang; ?>/<?php echo $donationID; ?>> 
+    https://fsfe.org/order/payonline.<?php echo $lang; ?>/<?php echo $donationID; ?></a>. Once the donation is
     confirmed the promotional material will be send.</p>
     <p>In case you prefer to pay by bank transfer, please use the following data:</p>
     <p>Recipient: Free Software Foundation Europe e.V.<br>
@@ -21,8 +21,8 @@
     IBAN: DE47 4306 0967 2059 7908 01<br>
     Bank: GLS Gemeinschaftsbank eG, 44774 Bochum, Germany<br>
     BIC: GENODEM1GLS<br>
-    Payment reference: <?=$donationID?><br>
-    Payment amount: <?=$donate?> Euro</p>
+    Payment reference: <?php echo $donationID; ?><br>
+    Payment amount: <?php echo $donate; ?> Euro</p>
   <?php
   }
   ?>

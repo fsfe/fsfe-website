@@ -9,7 +9,7 @@
 * Upstream: https://git.fsfe.org/FSFE/share-buttons
 */
 
-/* load config. You normally don't want to edit something here */
+// load config. You normally don't want to edit something here
 require_once 'share-config.php';
 $fediverseuser = $config['fediverseuser'];
 $diasporauser = $config['diasporauser'];
@@ -32,107 +32,124 @@ if (empty($service) || empty($url)) {
     $url = urlencode($url);
     $title = urlencode($title);
 
-    /* Special referrers for FSFE campaigns */
-    if ($ref == "pmpc-side" || $ref == "pmpc-spread") {
-        $via_fed = "";
-        $via_tw = "";
-        $via_dia = "";
-        $sharepic = "https://sharepic.fsfe.org/pmpc";
-        $supporturl = "https://my.fsfe.org/donate?referrer=pmpc";
+    // Special referrers for FSFE campaigns
+    if ('pmpc-side' == $ref || 'pmpc-spread' == $ref) {
+        $via_fed = '';
+        $via_tw = '';
+        $via_dia = '';
+        $sharepic = 'https://sharepic.fsfe.org/pmpc';
+        $supporturl = 'https://my.fsfe.org/donate?referrer=pmpc';
     } else {
-        $via_fed = " via " . $fediverseuser;
-        $via_tw = "&via=" . $twitteruser;
-        $via_dia = " via " . $diasporauser;
+        $via_fed = ' via '.$fediverseuser;
+        $via_tw = '&via='.$twitteruser;
+        $via_dia = ' via '.$diasporauser;
     }
 
-    if ($service === "fediverse") {
+    if ('fediverse' === $service) {
         $fediversepod = validateurl($fediversepod);
         $fediverse = which_fediverse($fediversepod);
-        if ($fediverse === "mastodon") {
+        if ('mastodon' === $fediverse) {
             // Mastodon
-            header("Location: " . $fediversepod . "/share?text=" . $title . " " . $url . $via_fed);
-        } elseif ($fediverse === "diaspora") {
+            header('Location: '.$fediversepod.'/share?text='.$title.' '.$url.$via_fed);
+        } elseif ('diaspora' === $fediverse) {
             // Diaspora
-            header("Location: " . $fediversepod . "/bookmarklet?url=" . $url . "&title=" . $title . $via_dia);
-        } elseif ($fediverse === "gnusocial") {
+            header('Location: '.$fediversepod.'/bookmarklet?url='.$url.'&title='.$title.$via_dia);
+        } elseif ('gnusocial' === $fediverse) {
             // GNU Social
-            header("Location: " . $fediversepod . "/notice/new?status_textarea=" . $title . " " . $url . $via_fed);
+            header('Location: '.$fediversepod.'/notice/new?status_textarea='.$title.' '.$url.$via_fed);
         } else {
             echo 'Your Fediverse instance is unknown. We cannot find out which service it belongs to, sorry.';
         }
-        die();
-    } elseif ($service === "reddit") {
-        header("Location: https://reddit.com/submit?url=" . $url . "&title=" . $title);
-        die();
-    } elseif ($service === "flattr") {
-        header("Location: https://flattr.com/submit/auto?user_id=" . $flattruser . "&url=" . $url . "&title=" . $title);
-        die();
-    } elseif ($service === "hnews") {
-        header("Location: https://news.ycombinator.com/submitlink?u=" . $url . "&t=" . $title);
-        die();
-    } elseif ($service === "twitter") {
-        header("Location: https://twitter.com/share?url=" . $url . "&text=" . $title . $via_tw);
-        die();
-    } elseif ($service === "facebook") {
-        header("Location: https://www.facebook.com/sharer/sharer.php?u=" . $url);
-        die();
-    } elseif ($service === "gplus") {
-        header("Location: https://plus.google.com/share?url=" . $url);
-        die();
-    } elseif ($service === "sharepic") {
-        header("Location: " . $sharepic);
-        die();
-    } elseif ($service === "support") {
-        header("Location: " . $supporturl);
-        die();
-    } else {
-        echo 'Social network unknown.';
+
+        exit;
     }
+    if ('reddit' === $service) {
+        header('Location: https://reddit.com/submit?url='.$url.'&title='.$title);
+
+        exit;
+    }
+    if ('flattr' === $service) {
+        header('Location: https://flattr.com/submit/auto?user_id='.$flattruser.'&url='.$url.'&title='.$title);
+
+        exit;
+    }
+    if ('hnews' === $service) {
+        header('Location: https://news.ycombinator.com/submitlink?u='.$url.'&t='.$title);
+
+        exit;
+    }
+    if ('twitter' === $service) {
+        header('Location: https://twitter.com/share?url='.$url.'&text='.$title.$via_tw);
+
+        exit;
+    }
+    if ('facebook' === $service) {
+        header('Location: https://www.facebook.com/sharer/sharer.php?u='.$url);
+
+        exit;
+    }
+    if ('gplus' === $service) {
+        header('Location: https://plus.google.com/share?url='.$url);
+
+        exit;
+    }
+    if ('sharepic' === $service) {
+        header('Location: '.$sharepic);
+
+        exit;
+    }
+    if ('support' === $service) {
+        header('Location: '.$supporturl);
+
+        exit;
+    }
+    echo 'Social network unknown.';
 }
 
 // Sanitise URLs
 function validateurl($url)
 {
     // If Fediverse pod has been typed without http(s):// prefix, add it
-    if (preg_match('#^https?://#i', $url) === 0) {
-        $url = 'https://' . $url;
+    if (0 === preg_match('#^https?://#i', $url)) {
+        $url = 'https://'.$url;
     }
-    // remove trailing spaces and slashes
-    $url = trim($url, " /");
 
-    return $url;
+    // remove trailing spaces and slashes
+    return trim($url, ' /');
 }
 
 // Is $pod a Mastodon instance or a GNU Social server?
 function getFediverseNetwork($pod)
 {
-    $curl = curl_init($pod . "/api/statusnet/version.xml");
+    $curl = curl_init($pod.'/api/statusnet/version.xml');
     curl_exec($curl);
     $code = curl_getinfo($curl, CURLINFO_HTTP_CODE);
     curl_close($curl);
-    if ($code == 200) {
+    if (200 == $code) {
         // GNU social server
         return 0;
-    } else {
-        // Mastodon server
-        return 1;
     }
+
+    // Mastodon server
+    return 1;
 }
 
 function which_fediverse($pod)
 {
-    if (check_httpstatus($pod . "/api/v1/instance")) {
+    if (check_httpstatus($pod.'/api/v1/instance')) {
         // Mastodon
-        return "mastodon";
-    } elseif (check_httpstatus($pod . "/api/statusnet/version.xml")) {
-        // GNU social
-        return "gnusocial";
-    } elseif (check_httpstatus($pod . "/users/sign_in")) {
-        // Diaspora
-        return "diaspora";
-    } else {
-        return "none";
+        return 'mastodon';
     }
+    if (check_httpstatus($pod.'/api/statusnet/version.xml')) {
+        // GNU social
+        return 'gnusocial';
+    }
+    if (check_httpstatus($pod.'/users/sign_in')) {
+        // Diaspora
+        return 'diaspora';
+    }
+
+    return 'none';
 }
 
 function check_httpstatus($url)
@@ -147,9 +164,9 @@ function check_httpstatus($url)
         $httpstatus = $headers[0];
     }
     // check if HTTP status is 200
-    if (strpos($httpstatus, '200 OK') !== false) {
+    if (false !== strpos($httpstatus, '200 OK')) {
         return true;
-    } else {
-        return false;
     }
+
+    return false;
 }

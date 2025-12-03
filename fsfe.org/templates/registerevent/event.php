@@ -9,12 +9,12 @@
   } else {
       echo htmlspecialchars($startdate);
   } ?>">
-    <?php if ($online === "yes") {
-        $location = " ($location)";
+    <?php if ('yes' === $online) {
+        $location = " ({$location})";
     } else {
-        $location = " in " . $location;
+        $location = ' in '.$location;
     } ?>
-    <title><?php echo htmlspecialchars($title) . $location; ?></title>
+    <title><?php echo htmlspecialchars($title).$location; ?></title>
     <group>
      <name><?php echo htmlspecialchars($groupname); ?></name> 
      <url><?php echo htmlspecialchars($groupurl); ?></url>
@@ -22,12 +22,12 @@
 
     <body>
       <p><?php echo str_replace(
-          "</p><p>",
+          '</p><p>',
           "</p>\n     <p>",
           nl2br(
               preg_replace(
                   "/(\r?\n){2,}/",
-                  "</p><p>",
+                  '</p><p>',
                   htmlspecialchars($description)
               )
           )
@@ -35,17 +35,17 @@
     </body>
 
     <?php if ($url) {
-        echo "<link>" . htmlspecialchars($url) . "</link>";
+        echo '<link>'.htmlspecialchars($url).'</link>';
     } ?>
 
     <tags>
-      <?php if ($online !== "yes") { ?>
+      <?php if ('yes' !== $online) { ?>
       <tag key="<?php echo strtolower(htmlspecialchars($countrycode)); ?>">
           <?php echo htmlspecialchars($countryname); ?>
       </tag>
       <?php } ?>
       <?php foreach ($tags as $tag) {
-          echo sprintf('<tag key="%s"/>', htmlspecialchars($tag)) . "\n";
+          echo sprintf('<tag key="%s"/>', htmlspecialchars($tag))."\n";
       } ?>
       <tag key="front-page"/>
     </tags>

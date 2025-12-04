@@ -38,6 +38,7 @@ def _update_for_base(  # noqa: PLR0913
     source: Path,
     base: Path,
     all_xml: set[Path],
+    source_wildcard_sub_pattern: re.Pattern[str],
     nextyear: str,
     thisyear: str,
     lastyear: str,
@@ -51,7 +52,7 @@ def _update_for_base(  # noqa: PLR0913
         with base.with_suffix(".sources").open(mode="r") as file:
             for line in file:
                 pattern = (
-                    re.sub(r"(\*)?:\[.*\]$", "*", line)
+                    source_wildcard_sub_pattern.sub("*", line)
                     .replace("$nextyear", nextyear)
                     .replace("$thisyear", thisyear)
                     .replace("$lastyear", lastyear)
@@ -124,12 +125,24 @@ def _update_module_xmllists(
         if lang_from_filename(path) in languages and etree.parse(path).xpath("//module")
     }
     all_bases = source_bases | module_bases
+    source_wildcard_sub_pattern: re.Pattern[str] = re.compile(r"(\*)?:\[.*\]$")
     nextyear = str(datetime.datetime.today().year + 1)
     thisyear = str(datetime.datetime.today().year)
     lastyear = str(datetime.datetime.today().year - 1)
     pool.starmap(
         _update_for_base,
-        ((source, base, all_xml, nextyear, thisyear, lastyear) for base in all_bases),
+        (
+            (
+                source,
+                base,
+                all_xml,
+                source_wildcard_sub_pattern,
+                nextyear,
+                thisyear,
+                lastyear,
+            )
+            for base in all_bases
+        ),
     )
 
 

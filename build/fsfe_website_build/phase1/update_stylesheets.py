@@ -47,7 +47,7 @@ def update_stylesheets(source_dir: Path, pool: multiprocessing.pool.Pool) -> Non
     pool.map(
         _update_sheet,
         filter(
-            lambda file: re.match(banned, str(file)) is None,
+            lambda file: banned.match(str(file)) is None,
             source_dir.glob("**/*.xsl"),
         ),
     )

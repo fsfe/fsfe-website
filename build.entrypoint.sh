@@ -15,10 +15,13 @@ if [ -f /run/secrets/FSFE_WEBSITE_KEY_PRIVATE ] && [ "$(cat /run/secrets/FSFE_WE
 	# Tighten permissions to keep ssh-add happy
 	chmod 400 /run/secrets/FSFE_WEBSITE_KEY_*
 	PASSWORD="$(cat "/run/secrets/FSFE_WEBSITE_KEY_PASSWORD")"
-	# For some reason reading the key from private path fails.
+	PRIVATE="$(cat "/run/secrets/FSFE_WEBSITE_KEY_PRIVATE")"
+	# Really should be able to just read from the private path, but for some reason ssh-add fails when using the actual path
+	# But works when you cat the path into another file and then load it
+	# Or cat the file and pipe it in through stdin
 	# Piping stdin to an expect command is quite complex, so we just make and remove a temporary key file.
 	# Absolutely bizarre, and not quite ideal security wise
-	cp /run/secrets/FSFE_WEBSITE_KEY_PRIVATE /tmp/key
+	echo "$PRIVATE" >/tmp/key
 	chmod 600 /tmp/key
 
 	# Use our wrapper expect script to handle interactive input

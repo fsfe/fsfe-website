@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 set -e
 # Ran by dockerfile as entrypoint
 # Ran from the volume of the website source mounted at /website-source

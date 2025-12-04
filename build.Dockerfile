@@ -30,6 +30,6 @@ COPY build.entrypoint.sh ./
 # Set the workdir
 WORKDIR /website-source
 
-ENTRYPOINT ["sh", "/website-source-during-build/build.entrypoint.sh"]
+ENTRYPOINT ["bash", "/website-source-during-build/build.entrypoint.sh"]
 
 

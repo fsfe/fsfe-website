@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-set -eu
+set -e
 
 # Get the changed files
 target_branch="${1:-master}"

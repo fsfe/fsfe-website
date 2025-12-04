@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-set -eo pipefail
+set -e
 # Ran by dockerfile as entrypoint
 # Ran from the volume of the website source mounted at /website-source
 

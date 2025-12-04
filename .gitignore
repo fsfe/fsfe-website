@@ -12,8 +12,6 @@ output
 __pycache__
 #phpcsfixer cache
 .php-cs-fixer.cache
-#Nltk
-.nltk_data
 # Secrets
 # docker compose
 .env

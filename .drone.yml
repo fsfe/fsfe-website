@@ -21,7 +21,11 @@ steps:
       - export FSFE_WEBSITE_HOST_SOURCE_CODE=$(docker container inspect "$HOSTNAME" --format '{{ range .Mounts }}{{ if eq .Destination "/drone/src" }}{{ .Source }}{{ end }}{{ end }}')
       - docker ps && echo "tampered with"
       - echo "DRONE_COMMIT_BRANCH ${DRONE_COMMIT_BRANCH}"
-      - docker compose -p fsfe-website-pre-commit run --remove-orphans --build pre-commit "origin/${DRONE_COMMIT_BRANCH}"
+      - echo "DRONE_COMMIT_REF ${DRONE_COMMIT_REF}"
+      - PROJECT="$(echo "fsfe-website-pre-commit-${DRONE_COMMIT_REF}" | tr "/" "-")"
+      - docker compose -p "$PROJECT" down
+      - docker compose -p "$PROJECT" run --remove-orphans --build pre-commit "origin/${DRONE_COMMIT_BRANCH}"
+      - docker compose -p "$PROJECT" down
 
   # Test building the deploy docker image
   - name: test-build-docker-image
@@ -82,6 +86,7 @@ steps:
       # Ideally the cron would set the flag itself, but drone does not support that.
       - if [ "$DRONE_BUILD_EVENT" = "cron" ]; then EXTRA_FLAGS="--full"; fi
       - docker compose -p "$PROJECT" run --remove-orphans --build build --target "$TARGET" $EXTRA_FLAGS
+      - docker compose -p "$PROJECT" down
     when:
       branch:
         - master
@@ -116,6 +121,7 @@ steps:
       # Ideally the cron would set the flag itself, but drone does not support that.
       - if [ "$DRONE_BUILD_EVENT" = "cron" ]; then EXTRA_FLAGS="--full"; fi
       - docker compose -p "$PROJECT" run --remove-orphans --build build --target "$TARGET" $EXTRA_FLAGS
+      - docker compose -p "$PROJECT" down
     when:
       branch:
         - test
@@ -142,6 +148,6 @@ volumes:
       path: /run/user/1001/docker.sock
 ---
 kind: signature
-hmac: 3db8e2103b4160f172248b54c7e21aabd22956f2b3fbf6492e38f9bd5d338e8f
+hmac: aa5d8fd7cd515e165b861345495517924992c4e1ff86e16c9b1ed293fed7a565
 
 ...

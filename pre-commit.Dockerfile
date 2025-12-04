@@ -5,12 +5,9 @@ COPY --from=ghcr.io/astral-sh/uv:latest /uv /uvx /bin/
 # Install deps
 RUN apt-get update && apt-get install --yes --no-install-recommends \
 composer \
-coreutils \
 curl \
 file \
-findutils \
 git \
-grep \
 libxml2 \
 libxml2-utils \
 libxslt1.1 \
@@ -20,7 +17,6 @@ npm \
 perl-base \
 php-zip \
 rsync \
-sed \
 shfmt \
 xsltproc
 

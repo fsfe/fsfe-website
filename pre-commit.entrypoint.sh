@@ -8,7 +8,7 @@ files="$(git diff --name-only "$source_branch" "$target_branch")"
 files_args=""
 for file in $files; do
 	if [ -f "$file" ]; then
-		files_args+="--file $file "
+		files_args="$files_args --file $file"
 	fi
 done
 

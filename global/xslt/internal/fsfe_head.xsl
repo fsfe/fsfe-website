@@ -54,7 +54,7 @@
           <xsl:element name="link">
             <xsl:attribute name="rel">stylesheet</xsl:attribute>
             <xsl:attribute name="media">all</xsl:attribute>
-            <xsl:attribute name="href"><xsl:value-of select="$urlprefix"/>/look/main.valentine.min.css</xsl:attribute>
+            <xsl:attribute name="href"><xsl:value-of select="$urlprefix"/>/look/main.valentine.css</xsl:attribute>
             <xsl:attribute name="type">text/css</xsl:attribute>
           </xsl:element>
         </xsl:when>
@@ -63,7 +63,7 @@
           <xsl:element name="link">
             <xsl:attribute name="rel">stylesheet</xsl:attribute>
             <xsl:attribute name="media">all</xsl:attribute>
-            <xsl:attribute name="href"><xsl:value-of select="$urlprefix"/>/look/main.min.css?20230215</xsl:attribute>
+            <xsl:attribute name="href"><xsl:value-of select="$urlprefix"/>/look/main.css?20230215</xsl:attribute>
             <xsl:attribute name="type">text/css</xsl:attribute>
           </xsl:element>
         </xsl:otherwise>

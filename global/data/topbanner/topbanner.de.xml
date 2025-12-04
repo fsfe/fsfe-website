@@ -1,13 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <data>
-  <version>5</version>
+  <version>6</version>
   <div class="text-button-box">
     <div class="row">
-      <div class="col-xs-12 col-sm-12 col-md-12">
-        <p>Apple: eine ganze Horde an Anwälten. FSFE: EIN Anwalt. Aber, wir haben es trotzdem geschafft einen Sieg zu erringen! Unterstütze uns heute, damit wir auch weiterhin deine Nutzerrechte gegen Apple verteidigen können!</p>
+      <div class="col-xs-12 col-sm-9 col-md-10">
+        <p>
+            <a href="https://my.fsfe.org/donate?referrer=topbanner">Werde heute ein FSFE-Supporter</a> damit wir
+unsere langfristige Vision umsetzen können, dass:
+  	        <ul>
+	            <li>Alle Menschen das Recht haben, jede Software auf allen ihrer Geräte zu installieren oder zu deinstallieren!</li>
+	            <li>Alle öffentlichen Mittel für Software nur für Freie Software verwendet werden!</li> 
+  	            <li>Alle rechtlichen Rahmenbedingungen den Einsatz und die Entwicklung von Freier Software fördern</li> 
+	            <li>Rechtliche und lizenzrechtliche Entscheidungen auf Fakten anstelle auf Angst, Unsicherheit und Zweifel beruhen.</li> 
+	            <li>Junge Menschen die Möglichkeit haben, zu basteln, zu experimentieren und zu programmieren, wobei Freie Software dabei der Standard ist.</li>
+	        </ul>
+	    </p>
       </div>
       <div class="col-xs-12 col-sm-3 col-md-2">
-        <a class="btn btn-lg btn-success" href="https://my.fsfe.org/donate?referrer=topbanner">Spenden jetzt</a>
+        <a class="btn btn-lg btn-success" href="https://my.fsfe.org/donate?referrer=topbanner">Donate Now</a>
       </div>
     </div>
   </div>

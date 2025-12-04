@@ -206,36 +206,29 @@ def process_file(source: Path, infile: Path, transform: etree.XSLT) -> str:
     result = transform(xmlstream)
     # And now a bunch of regexes to fix some links.
     # xx is the language code in all comments
+
+    # Change links from /foo/bar.html into /foo/bar.xx.html
+    # Change links from foo/bar.html into foo/bar.xx.html
+    # Same for .rss and .ics links
+    link_lang_regex = re.compile(
+        r"""^(/?([^:>]+/)?[^:/.]{3,}\.)(html|rss|ics)""",
+        flags=re.IGNORECASE,
+    )
+    # Change links from /foo/bar/ into /foo/bar/index.xx.html
+    # Change links from foo/bar/ into foo/bar/index.xx.html
+    link_index_regex = re.compile(
+        r"""^(/?[^:>]+/)$""",
+        flags=re.IGNORECASE,
+    )
     try:
         for linkelem in result.xpath("//*[@href]"):
+            new_href = linkelem.get("href")
             # remove any spurious whitespace
-            linkelem.set(
-                "href",
-                linkelem.get("href").strip(),
-            )
-            # Change links from /foo/bar.html into /foo/bar.xx.html
-            # Change links from foo/bar.html into foo/bar.xx.html
-            # Same for .rss and .ics links
-            linkelem.set(
-                "href",
-                re.sub(
-                    r"""^(/?([^:>]+/)?[^:/.]{3,}\.)(html|rss|ics)""",
-                    rf"""\1{lang}.\3""",
-                    linkelem.get("href"),
-                    flags=re.IGNORECASE,
-                ),
-            )
-            # Change links from /foo/bar/ into /foo/bar/index.xx.html
-            # Change links from foo/bar/ into foo/bar/index.xx.html
-            linkelem.set(
-                "href",
-                re.sub(
-                    r"""^(/?[^:>]+/)$""",
-                    rf"""\1index.{lang}.html""",
-                    linkelem.get("href"),
-                    flags=re.IGNORECASE,
-                ),
-            )
+            new_href = new_href.strip()
+            new_href = link_lang_regex.sub(rf"""\1{lang}.\3""", new_href)
+            new_href = link_index_regex.sub(rf"""\1index.{lang}.html""", new_href)
+            linkelem.set("href", new_href)
+
     except AssertionError:
         logger.debug("Output generated for file %s is not valid xml", infile)
     return str(result)

@@ -38,6 +38,7 @@ def _update_for_base(  # noqa: PLR0913
     source: Path,
     base: Path,
     all_xml: set[Path],
+    source_wildcard_sub_pattern: re.Pattern[str],
     nextyear: str,
     thisyear: str,
     lastyear: str,
@@ -51,7 +52,7 @@ def _update_for_base(  # noqa: PLR0913
         with base.with_suffix(".sources").open(mode="r") as file:
             for line in file:
                 pattern = (
-                    re.sub(r"(\*)?:\[.*\]$", "*", line)
+                    source_wildcard_sub_pattern.sub("*", line)
                     .replace("$nextyear", nextyear)
                     .replace("$thisyear", thisyear)
                     .replace("$lastyear", lastyear)
@@ -66,37 +67,34 @@ def _update_for_base(  # noqa: PLR0913
                     if tag_search_result is not None
                     else ""
                 )
-
-                for xml_file in filter(
-                    lambda xml_file:
+                matching_files.update(
+                    str(xml_file.relative_to(source))
+                    for xml_file in all_xml
+                    if
                     # Matches glob pattern
                     fnmatch.fnmatchcase(str(xml_file.relative_to(source)), pattern)
                     # contains tag if tag in pattern
                     and (
                         any(
-                            (
-                                etree.parse(xml_file_with_ending).find(
-                                    f".//tag[@key='{tag}']"
-                                )
-                                is not None
-                                for xml_file_with_ending in xml_file.parent.glob(
-                                    f"{xml_file.name}.*.xml"
-                                )
-                            ),
+                            etree.parse(xml_file_with_ending).find(
+                                f".//tag[@key='{tag}']"
+                            )
+                            is not None
+                            for xml_file_with_ending in xml_file.parent.glob(
+                                f"{xml_file.name}.*.xml"
+                            )
                         )
                         if tag != ""
                         else True
-                    ),
-                    all_xml,
-                ):
-                    matching_files.add(str(xml_file.relative_to(source)))
+                    )
+                )
 
     for file in base.parent.glob(f"{base.name}.??.xhtml"):
         xslt_root = etree.parse(file)
-        for module in xslt_root.xpath("//module"):
-            matching_files.add(
-                f"{source}/global/data/modules/{module.get('id').strip()}"
-            )
+        matching_files.update(
+            f"{source}/global/data/modules/{module.get('id').strip()}"
+            for module in xslt_root.xpath("//module")
+        )
     update_if_changed(
         Path(f"{base.parent}/.{base.name}.xmllist"),
         "\n".join(sorted(matching_files)) + "\n" if matching_files else "",
@@ -114,32 +112,37 @@ def _update_module_xmllists(
     # Get all the bases and stuff before multithreading the update bit
     all_xml = {
         get_basepath(path)
-        for path in sorted(
-            filter(
-                lambda path: lang_from_filename(path) in languages,
-                (
-                    *source_dir.glob("**/*.*.xml"),
-                    *source.joinpath("global/").glob("**/*.*.xml"),
-                ),
-            )
+        for path in (
+            *source_dir.glob("**/*.*.xml"),
+            *source.joinpath("global/").glob("**/*.*.xml"),
         )
+        if lang_from_filename(path) in languages
     }
     source_bases = {path.with_suffix("") for path in source_dir.glob("**/*.sources")}
     module_bases = {
         get_basepath(path)
-        for path in filter(
-            lambda path: lang_from_filename(path) in languages
-            and etree.parse(path).xpath("//module"),
-            source_dir.glob("**/*.*.xhtml"),
-        )
+        for path in source_dir.glob("**/*.*.xhtml")
+        if lang_from_filename(path) in languages and etree.parse(path).xpath("//module")
     }
     all_bases = source_bases | module_bases
+    source_wildcard_sub_pattern: re.Pattern[str] = re.compile(r"(\*)?:\[.*\]$")
     nextyear = str(datetime.datetime.today().year + 1)
     thisyear = str(datetime.datetime.today().year)
     lastyear = str(datetime.datetime.today().year - 1)
     pool.starmap(
         _update_for_base,
-        ((source, base, all_xml, nextyear, thisyear, lastyear) for base in all_bases),
+        (
+            (
+                source,
+                base,
+                all_xml,
+                source_wildcard_sub_pattern,
+                nextyear,
+                thisyear,
+                lastyear,
+            )
+            for base in all_bases
+        ),
     )
 
 
@@ -149,8 +152,7 @@ def _check_xmllist_deps(source: Path, file: Path) -> None:
     with file.open(mode="r") as fileobj:
         for line in fileobj:
             path_line = source.joinpath(line.strip())
-            for newfile in path_line.parent.glob(path_line.name + ".??.xml"):
-                xmls.add(newfile)
+            xmls.update(path_line.parent.glob(path_line.name + ".??.xml"))
     touch_if_newer_dep(file, list(xmls))
 
 

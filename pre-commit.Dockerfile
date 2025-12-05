@@ -46,5 +46,3 @@ COPY pre-commit.entrypoint.sh ./
 WORKDIR /website-source
 
 ENTRYPOINT ["bash", "/website-source-during-build/pre-commit.entrypoint.sh"]
-
-

@@ -19,7 +19,6 @@ steps:
         path: /run/user/1001/docker.sock
     commands:
       - export FSFE_WEBSITE_HOST_SOURCE_CODE=$(docker container inspect "$HOSTNAME" --format '{{ range .Mounts }}{{ if eq .Destination "/drone/src" }}{{ .Source }}{{ end }}{{ end }}')
-      - docker ps && echo "tampered with"
       - echo "DRONE_COMMIT_BRANCH ${DRONE_COMMIT_BRANCH}"
       - echo "DRONE_COMMIT_REF ${DRONE_COMMIT_REF}"
       - PROJECT="$(echo "fsfe-website-pre-commit-${DRONE_COMMIT_REF}" | tr "/" "-")"
@@ -80,7 +79,6 @@ steps:
         path: /run/user/1001/docker.sock
     commands:
       - export FSFE_WEBSITE_HOST_SOURCE_CODE=$(docker container inspect "$HOSTNAME" --format '{{ range .Mounts }}{{ if eq .Destination "/drone/src" }}{{ .Source }}{{ end }}{{ end }}')
-      - docker ps && echo "tampered with"
       - docker compose -p "$PROJECT" down
       # If we are in a cron job, then do a full rebuild
       # Ideally the cron would set the flag itself, but drone does not support that.
@@ -115,7 +113,6 @@ steps:
         path: /run/user/1001/docker.sock
     commands:
       - export FSFE_WEBSITE_HOST_SOURCE_CODE=$(docker container inspect "$HOSTNAME" --format '{{ range .Mounts }}{{ if eq .Destination "/drone/src" }}{{ .Source }}{{ end }}{{ end }}')
-      - docker ps && echo "tampered with"
       - docker compose -p "$PROJECT" down
       # If we are in a cron job, then do a full rebuild
       # Ideally the cron would set the flag itself, but drone does not support that.
@@ -148,6 +145,4 @@ volumes:
       path: /run/user/1001/docker.sock
 ---
 kind: signature
-hmac: eabb8bba0a2cd21c31b1365bf97d3b48f24e665080812fed6f6f9abe24812f7f
-
-...
+hmac: bf4442d7b1d521c54a432ad435d55f6d7c7a4b2d90b0f88a8c8d345309641c8a

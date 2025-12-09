@@ -31,5 +31,3 @@ COPY build.entrypoint.sh ./
 WORKDIR /website-source
 
 ENTRYPOINT ["bash", "/website-source-during-build/build.entrypoint.sh"]
-
-

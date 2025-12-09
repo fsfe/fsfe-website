@@ -16,7 +16,7 @@ pre-commit:
       glob: "*.php"
       exclude:
         - "fsfe.org/cgi-bin/PHPMailer/*.php"
-      run: for file in {staged_files}; do php-cs-fixer fix "$file"; done
+      run: for file in {staged_files}; do php-cs-fixer --no-interaction fix "$file"; done
       stage_fixed: true
       fail_on_changes: "ci"
     shfmt:

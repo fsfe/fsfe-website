@@ -34,13 +34,10 @@ ENV PATH="$UV_PROJECT_ENVIRONMENT/bin:$PATH"
 # Set the workdir
 WORKDIR /website-source-during-build
 
-# Copy the pyproject and build deps
-# Done in a seperate step for optimal docker caching
-COPY ./pyproject.toml ./uv.lock ./
-RUN uv sync --no-install-package fsfe_website_build --group dev
+# Copy pyproject, build deps & entrypoint
+COPY ./pyproject.toml ./uv.lock pre-commit.entrypoint.sh ./
 
-# Copy entrypoint
-COPY pre-commit.entrypoint.sh ./
+RUN uv sync --no-install-package fsfe_website_build --group dev
 
 # Set the workdir
 WORKDIR /website-source

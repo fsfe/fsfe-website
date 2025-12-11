@@ -45,4 +45,4 @@ COPY pre-commit.entrypoint.sh ./
 # Set the workdir
 WORKDIR /website-source
 
-ENTRYPOINT ["bash", "/website-source-during-build/pre-commit.entrypoint.sh"]
+ENTRYPOINT ["sh", "/website-source-during-build/pre-commit.entrypoint.sh"]

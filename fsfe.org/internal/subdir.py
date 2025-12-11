@@ -35,7 +35,7 @@ def run(source: Path, languages: list[str], processes: int, working_dir: Path) -
         return
 
     url = raw_url._replace(query=f"token={git_token}").geturl()
-    r = requests.get(url)
+    r = requests.get(url, timeout=10)
 
     if not r.ok:
         message = "Failed to retrieve activities file"

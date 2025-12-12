@@ -6,6 +6,7 @@
 
 import copy
 import logging
+import re
 import sys
 from typing import TYPE_CHECKING
 
@@ -37,9 +38,10 @@ def compare_files(
 
 def _delete_by_xpaths(root: etree.Element, xpaths: Iterable[str]) -> None:
     """Remove every element/attribute that matches any of the xpaths."""
+    attr_xpath_pattern = re.compile(r"/@[^/]*$")
     for xpath in xpaths:
-        # Distinguish attribute XPaths (ending with /@attr) from element XPaths
-        if xpath.endswith(("/@*", "/@x")):  # attribute path
+        # if an attribute xpath
+        if attr_xpath_pattern.search(xpath):
             parent_xpath = xpath.rsplit("/@", 1)[0] or "."  # default to root
             for parent in root.xpath(parent_xpath):
                 if isinstance(parent, etree.Element):
@@ -48,7 +50,8 @@ def _delete_by_xpaths(root: etree.Element, xpaths: Iterable[str]) -> None:
                         parent.attrib.clear()
                     else:
                         parent.attrib.pop(attr, None)
-        else:  # element path
+        # else its an element
+        else:
             for el in root.xpath(xpath):
                 if isinstance(el, etree.Element):
                     parent = el.getparent()

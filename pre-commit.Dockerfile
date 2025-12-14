@@ -1,6 +1,6 @@
 FROM debian:13
 
-COPY --from=ghcr.io/astral-sh/uv:latest /uv /uvx /bin/
+COPY --from=ghcr.io/astral-sh/uv /uv /uvx /bin/
 
 # Install deps
 RUN apt-get update && apt-get install --yes --no-install-recommends \

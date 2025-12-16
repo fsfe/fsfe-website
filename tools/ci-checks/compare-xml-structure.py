@@ -53,6 +53,7 @@ def main() -> None:
             "//track[@label]",  # Language label, used in some track elements
             "/html/translator",  # the translator
             "//discussion[@href]", # Mastodon links can be in different langs
+            "//image[@alt]", # Image alt text for title image
         ],
         help="Comma-separated list xpaths that we then ignore.",
     )

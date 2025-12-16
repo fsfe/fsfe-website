@@ -23,6 +23,7 @@ logger = logging.getLogger(__name__)
 
 
 def _write_localmenus(
+    source_dir: Path,
     directory: str,
     files_by_dir: dict[str, list[Path]],
     languages: list[str],
@@ -68,10 +69,9 @@ def _write_localmenus(
                         else "default"
                     ),
                     link=(
-                        str(
-                            source_file.with_suffix(".html").relative_to(
-                                source_file.parents[0],
-                            ),
+                        "/"
+                        + str(
+                            source_file.with_suffix(".html").relative_to(source_dir),
                         )
                     ),
                 ).text = localmenu.text
@@ -102,7 +102,7 @@ def update_localmenus(
             directory = str(
                 source.joinpath(directory_xpath[0])
                 if directory_xpath
-                else file.parent.resolve()
+                else file.parent.resolve().relative_to(source.resolve())
             )
             files_by_dir[directory].add(file)
     files_by_dir = sort_dict(files_by_dir)
@@ -130,5 +130,5 @@ def update_localmenus(
     )
     pool.starmap(
         _write_localmenus,
-        ((directory, files_by_dir, languages) for directory in dirs),
+        ((source_dir, directory, files_by_dir, languages) for directory in dirs),
     )

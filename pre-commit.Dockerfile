@@ -1,6 +1,6 @@
 FROM debian:13
 
-COPY --from=ghcr.io/astral-sh/uv:latest /uv /uvx /bin/
+COPY --from=ghcr.io/astral-sh/uv /uv /uvx /bin/
 
 # Install deps
 RUN apt-get update && apt-get install --yes --no-install-recommends \
@@ -45,4 +45,4 @@ COPY pre-commit.entrypoint.sh ./
 # Set the workdir
 WORKDIR /website-source
 
-ENTRYPOINT ["bash", "/website-source-during-build/pre-commit.entrypoint.sh"]
+ENTRYPOINT ["/website-source-during-build/pre-commit.entrypoint.sh"]

@@ -27,7 +27,7 @@ def _copy_file(target: Path, source_dir: Path, source_file: Path) -> None:
     ):
         logger.debug("Copying %s to %s", source_file, target_file)
         target_file.parent.mkdir(parents=True, exist_ok=True)
-        target_file.write_bytes(source_file.read_bytes())
+        shutil.copyfile(source_file, target_file)
         # preserve file modes
         shutil.copymode(source_file, target_file)
 
@@ -47,7 +47,7 @@ def _copy_minify_file(
             minify.file(mime, str(source_file), str(target_file))
         else:
             # Instead just copy them into place
-            target_file.write_bytes(source_file.read_bytes())
+            shutil.copyfile(source_file, target_file)
         # preserve file modes
         shutil.copymode(source_file, target_file)
 

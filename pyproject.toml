@@ -64,6 +64,7 @@ select = [
   "RSE",   # Unneeded exception parentheses
   "RUF",   # the ruff developer's own rules
   "SIM",   # Simplify
+  "S",     # flake8-bandit, more secutiry checks
   "T20",   # Warn about prints
   "TC",    # Type checking
   "TRY",   # Error handling stuff
@@ -78,6 +79,7 @@ ignore = [
 "build/fsfe_website_build_tests*/*" = [
   "D",      # We do not need to document the tests.
   "TRY003", # Dont worry about big exceptions in tests
+  "S101",   # Allow asserts in tests
 ]
 [tool.pyright]
 typeCheckingMode = "strict"

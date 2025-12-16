@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<service-status-data>
+  <version>1</version>
+  <incident name="Network problems in one datacenter">
+    <update date="2025-12-07">
+      At one datacenter of our server locations we experience network problems after they did some maintenance work on Sunday Dec. 7th. Services located in the DC include email, email lists, Nextcloud, git, XMPP. The DC support is looking into the problem
+    </update>
+    <update date="2025-12-09">
+         Functionality for IMAP and Nextcloud services have been patched. Mailingslist delivery queue has reduced to normal values, delivery of emails should be as usual.
+    </update>
+    <update date="2025-12-10">
+        Functionality for XMPP has been patched.
+    </update>
+  </incident>
+  <incident name="planet.fsfe.org">
+    <update date="2025-09-01">
+      The blog aggregator is currently not available. Reasons are being investigated.
+    </update>
+  </incident>
+  <incident name="Mailinglist">
+    <update date="2025-06-07" resolved="true">
+    The mailing lists are fully operational again, including the
+    web interface.
+    </update>
+  </incident>
+  <incident name="wiki.fsfe.org">
+    <update date="2025-05-30">
+    After a DDoS to the service we temporarily forbit some event listings.
+    </update>
+  </incident>
+  <incident name="git.fsfe.org">
+    <update date="2025-03-14">
+    We are having issues with AI scrapers overloading the git server.
+    </update>
+    <update date="2025-08-21" resolved="true">
+    We have deployed anubis in front of the git service. Depending on the development of AI DDoS you may be redirected to the login page to access certain functionality or pages/files.
+    </update>
+  </incident>
+</service-status-data>

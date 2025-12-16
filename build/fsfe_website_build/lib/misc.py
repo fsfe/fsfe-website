@@ -123,3 +123,24 @@ def get_basepath(file: Path) -> Path:
 def get_basename(file: Path) -> str:
     """Return the name of the file with the last two suffixes removed."""
     return file.with_suffix("").with_suffix("").name
+
+
+def get_localised_file(base_file: Path, lang: str, suffix: str) -> Path | None:
+    """Return basefile localised if exists, else fallback if exists, else none."""
+    # ensure the suffix has a leading .
+    normalised_suffix = "." + suffix.removeprefix(".")
+    return (
+        localised
+        if (
+            localised := base_file.with_suffix(
+                base_file.suffix + f".{lang}" + normalised_suffix
+            )
+        ).exists()
+        else fallback
+        if (
+            fallback := base_file.with_suffix(
+                base_file.suffix + ".en" + normalised_suffix
+            )
+        ).exists()
+        else None
+    )

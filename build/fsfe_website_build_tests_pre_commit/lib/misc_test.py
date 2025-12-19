@@ -10,6 +10,7 @@ from fsfe_website_build.lib.misc import (
     delete_file,
     get_basename,
     get_basepath,
+    get_localised_file,
     get_version,
     keys_exists,
     lang_from_filename,
@@ -111,3 +112,68 @@ def get_basepath_test() -> None:
 def get_basename_test() -> None:
     assert get_basename(Path("a.b.c")) == "a"
     assert get_basename(Path("a/b.c.d")) == "b"
+
+
+def get_localised_file_localized__test(tmp_path: Path) -> None:
+    base_file = tmp_path / "test"
+    base_file.write_text("content")
+
+    localized_file = tmp_path / "test.fr.xhtml"
+    localized_file.write_text("french content")
+
+    result = get_localised_file(base_file, "fr", "xhtml")
+    assert result == localized_file
+    assert result is not None
+    assert result.exists()
+
+
+def get_localised_file_localized_missing_test(
+    tmp_path: Path,
+) -> None:
+    base_file = tmp_path / "test"
+    base_file.write_text("content")
+
+    fallback_file = tmp_path / "test.en.xhtml"
+    fallback_file.write_text("english content")
+
+    result = get_localised_file(base_file, "de", "xhtml")
+    assert result == fallback_file
+    assert result is not None
+    assert result.exists()
+
+
+def get_localised_file_neither_exists_test(tmp_path: Path) -> None:
+    base_file = tmp_path / "test"
+    base_file.write_text("content")
+
+    result = get_localised_file(base_file, "fr", "xhtml")
+    assert result is None
+
+
+def get_localised_file_existing_suffix_test(tmp_path: Path) -> None:
+    base_file = tmp_path / "test.suffix.test"
+    base_file.write_text("content")
+
+    localized_file = tmp_path / "test.suffix.test.fr.xml"
+    localized_file.write_text("xml content")
+
+    result = get_localised_file(base_file, "fr", "xml")
+    assert result == localized_file
+    assert result is not None
+    assert result.exists()
+
+
+def get_localised_file_suffix_normalization_test(tmp_path: Path) -> None:
+    base_file = tmp_path / "test"
+    base_file.write_text("content")
+
+    localized_file = tmp_path / "test.fr.xml"
+    localized_file.write_text("xml content")
+
+    result = get_localised_file(base_file, "fr", "xml")
+    assert result == localized_file
+    assert result is not None
+    assert result.exists()
+
+    result2 = get_localised_file(base_file, "fr", ".xml")
+    assert result2 == localized_file

@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<data>
+  <version>2</version>
+
+
+<!-- ALL STATIC TEXTS -->
+
+  <!-- Spreadtheword page -->
+  <text id="stw-type">סוג</text>
+  <text id="stw-size">גודל</text>
+  <text id="stw-context">פרטי הקשר</text>
+  <text id="stw-printed"><a href="#how-to-order">הזמנה מהמלאי שלנו</a> ב</text>
+  <text id="stw-printed-tooltip">אפשר להזמין את הגרסאות המודפסות האלה מאיתנו באמצעות טופס ההזמנה.</text>
+  <text id="stw-languages">זמין להורדה ב</text>
+  <text id="stw-languages-tooltip">כדי להפיץ את המידע וחומרי הקידום שלנו באינטרנט, אפשר להוריד אותם בשפות הזמינות.</text>
+  <text id="stw-license">רישיון</text>
+  <text id="stw-author">מחבר</text>
+  <text id="stw-year">שנה</text>
+  <text id="stw-source">קובצי מקור</text>
+  <text id="stw-source-tooltip">ניתן להוריד את קובצי המקור של פריט הקידום הזה כדי לשנות או לתרגם אותו. נא לכבד את הרישיון שלו.</text>
+  <text id="stw-printready">קבצים מוכנים להדפסה</text>
+  <text id="stw-printready-tooltip">אלו הקבצים המוכנים להדפסה שאנו שולחים למדפסת שלנו, כולל חיתוך ומשתנים נקודתיים למדפסת. הקבצים יכולים להיות גדולים מאוד (~5‏-25 מ״ב).</text>
+
+  <!-- Basic texts -->
+  <text id="fsfe">FSFE</text> <!-- only change this for non-latin character sets -->
+  <text id="fsfeurope">המוסד לתוכנה חופשית האירופי</text>
+  <text id="fsfnetwork">
+	  ל־FSFE יש <a href="/about/fsfnetwork.html">ארגוני אחות</a> ב־<a href="//www.fsf.org/">אמריקה הצפונית</a>, <a href="http://fsf.org.in/">הודו</a> ו־<a href="http://www.fsfla.org/">אמריקה הלטינית</a>.
+  </text>
+
+
+  <!-- Footer -->
+  <text id="translator1a">אנו מודים ל</text>
+  <text id="translator1b"> על התרגום הזה. </text>
+  <text id="translator2">זה תרגום לא רשמי. </text>
+  <text id="translator3a">נא לעיין גם ב </text>
+  <text id="translator3b">טקסט המקורי</text>
+  <text id="translator3c"> של העמוד הזה.</text>
+  <text id="permission">
+    העתקה והפצה מפורשת של המאמר הזה בשלמותו מותרת בכל אמצעי
+    תקשורת שהוא, כל עוד ההודעה הזאת נשמרת כמו שהיא.
+  </text>
+  <text id="js-licences">רישיונות JavaScript</text>
+
+
+  <!-- Warning info boxes -->
+  <text id="outdated-1">
+    כנראה שהתרגום הזה אינו עדכני ביחס ל־
+  </text><!-- followed by "translator3b" -->
+  <text id="outdated-2">
+     <a href="/contribute/translators/translators.html">נא לסייע לנו
+     לתרגם</a> את העמוד הזה ועמודים נוספים ב־fsfe.org, כדי שאנשים יוכלו לקרוא
+	   את המסרים שלנו שלנו בשפת האם שלהם.
+  </text>
+  <text id="notranslation">
+    העמוד הזה לא תורגם עדיין. <a href="/contribute/translators/translators.html">נא לסייע לנו
+    לתרגם</a> את העמוד הזה ועמודים נוספים ב־fsfe.org, כדי שאנשים יוכלו לקרוא
+    את המסרים שלנו שלנו בשפת האם שלהם.
+  </text>
+  <text id="very-outdated">
+    התרגום של העמוד הזה מאוד לא עדכני, ולכן עברנו לאנגלית במקום. <a href="/contribute/translators/translators.html">נא לסייע לנו
+    לתרגם</a> את העמוד הזה ועמודים נוספים ב־fsfe.org, כדי שאנשים יוכלו לקרוא
+    את המסרים שלנו שלנו בשפת האם שלהם.
+  </text>
+    <text id="under-construction">
+    <strong>אזהרה: </strong>העמוד הזה בתהליכי עריכה. נא <strong>לא להפיץ</strong> או לנסות לתרגם אותו מכיוון שהתוכן שלו עשוי להשתנות.
+  </text>
+    <text id="project-complete">המיזם הזה הושלם בהצלחה. העמודים האלה נשמרים כאן למטרות ארכיון.</text>
+
+
+  <!-- Menu, Navigation, Buttons -->
+  <text id="fsfe/about">על אודות</text>
+
+
+  <text id="fsfe/activities">פעילויות</text>
+  <text id="fsfe/help">תרומה</text>
+  <text id="fsfe/press">עיתונות</text>
+
+  <text id="support/become">הצטרפות לתמיכה</text>
+  <text id="fellowship/login">כניסה</text>
+  <text id="news/news">חדשות עדכניות</text>
+  <text id="news/events">אירועים קרובים</text>
+  <text id="news/press">חדר עיתונות</text>
+  <text id="news/nl">עלוני חדשות</text>
+  <text id="news/planet">פלנטת הבלוגים</text>
+  <text id="fs/basics">יסודות התוכנה החופשית</text>
+  <text id="community/discuss">דיונים על תוכנה חופשית</text>
+
+  <text id="learn-more">מידע נוסף</text>
+  <text id="newsletter">רשימת דיוור</text>
+  <text id="podcast">הסכת</text>
+
+  <text id="go-to">מעבר אל:</text>
+
+  <text id="yourname">השם שלך</text>
+  <text id="subscribe">הרשמה</text>
+  <text id="email">כתובת דוא״ל</text>
+  <text id="news">חדשות</text>
+  <text id="breadcrumb-news">חדשות</text>
+  <text id="pages">עמודים</text>
+  <text id="receive-newsletter">הרשמה לרשימת הדיוור החודשים של FSFE</text>
+  <text id="subscribe-newsletter">הרשמה לעדכונים שלנו בדוא״ל</text>
+  <text id="subscribe-newsletter-text">המומחים שלנו מעדכנים אותך בחדשות, אירועים, פעילויות, ואיך אפשר לתרום.</text>
+  
+
+
+
+
+  <text id="contact">יצירת קשר</text>
+  <text id="team">צוות</text>
+
+
+
+  <text id="change-lang">החלפת שפה</text>
+  <text id="menu">תפריט</text>
+  <text id="content">תוכן</text>
+  <text id="page-info">פרטים על העמוד</text>
+
+  <text id="go-top">קפיצה לראש העמוד</text>
+  <text id="source">קוד מקור</text>
+  <text id="contact-us">יצירת קשר</text>
+  <text id="jobs">משרות</text>
+  <text id="translate">לתרגם את העמוד הזה?</text>
+  <text id="contribute-web">תרומה לצוות האתרים</text>
+  <text id="imprint">Imprint</text>
+  <text id="privacy-policy">מדיניות פרטיות</text>
+  <text id="transparency-commitment">מחויבות לשקיפות</text>
+  <text id="tags">תגיות</text>
+  <text id="discuss-article">לדון על הנושא הזה</text>
+  <text id="finished">הסתיים</text>
+
+
+  <!-- Article metadata -->
+  <text id="author">מחבר/ת</text>
+  <text id="writtenby">נכתב על ידי</text>
+  <text id="published">ב־</text>
+  <text id="revision">עודכן ב־</text>
+  <text id="download">הורדה</text>
+  <text id="and">וגם</text>
+
+
+  <!-- Petitions -->
+  <text id="osig">ארגונים</text>
+  <text id="isig">פרטיים</text>
+  <text id="bsig">עסקים</text>
+
+
+  <!-- News and event feeds -->
+  <text id="related-news">חדשות תואמות</text>
+  <text id="related-events">אירועים תואמים</text>
+  <text id="related-all">כל החדשות והאירועים התואמים</text>
+
+
+  <!-- Sidebars -->
+  <text id="our-work">העבודה שלנו</text>
+  <text id="our-work-intro">
+    <p>כמוסד צדקה שמעצים משתמשים לשלוט בטכנולוגיה, אנו מספקים רקע
+      כללי שעוזר להתחבר לייעוד של התוכנה החופשית, משפרים את זכויות המשתמשים,
+      מעודדים אנשים להשתמש ולפתח תוכנה חופשית, ומספקים משאבים
+      לקידום חופש התוכנה.</p>
+  </text>
+  <text id="about-fsfe">על FSFE</text>
+  <text id="about-fsfe-intro">
+    <p>
+      המוסד לתוכנה חופשית האירופי (FSFE) הוא ארגון צדקה שמעצים משתמשים
+      לשלוט בטכנולוגיה.
+    </p>
+    <p>
+      תוכנה חופשית מעורבת עמוקות בכל היבטי החיים שלנו. חשוב שהטכנולוגיה הזו
+      תעצים אותנו במקום שתגביל אותנו. תוכנה חופשית מעניקה לכל אחד ואחת
+      את הזכויות להשתמש, ללמוד, לשתף ולשפר תוכנות. הזכויות אלה מסייעות
+      לתמוך בזכויות יסוד אחרות כמו חופש הביטוי, חופש העיתונות ופרטיות.
+    </p>
+  </text>
+
+
+  <!-- Motivational texts for fellowship, support or donations -->
+
+  <text id="support">תמיכה ב־FSFE</text>
+  <text id="show-support">הבעת התמיכה שלך!</text>
+  <text id="show-support-paragraph">ה־FSFE זקוקה לתמיכתך כדי שקולה יישמע! כל לחיצה חשובה!</text>
+  <text id="support-fsfe">אני בעד ה־FSFE!</text>
+  <text id="support-paragraph">חופש בחברה עתירת הידע שלנו דורש את התרומה הכספית שלך.</text>
+
+  <text id="donate">תרומה כספית</text>
+  <text id="donate-paragraph">
+    מוסד התוכנה החופשית האירופי הוא ארגון לא למטרות רווח ולא ממשלתי.
+    <a href="/about/ourwork.html">העבודה שלנו</a> מתאפשרת הודות לקהילה של
+    <a href="/contribute/contribute.html">מתנדבים</a>
+    ו<a href="/donate/thankgnus.html">תורמים</a>. התרומות שלך הכרחיות ליכולת ההשפעה שלנו
+    והעצמאות שלנו. הן מאפשרות לנו להמשיך לפעול למען תוכנה חופשית
+    בכל מקום שצריך, ולקבל ייצוג וקול עצמאיים.
+  </text>
+
+  <text id="followup/press-header">להישאר בעניינים</text>
+  <text id="followup/press-paragraph">הדרך הטובה ביותר להתעדכן היא להירשם ל<a href="/press/press.html">הודעות לעיתונות</a> או ל<a href="/news/index.html">עדכוני החדשות</a> שלנו. אפשר גם ליצור קשר עם צוות העיתונות שלנו דרך <email mailto="yes">press@fsfe.org</email>.</text>
+
+  <!-- pdfreaders.org -->
+  <text id="pdfreaders-head-readers">הקוראים</text>
+  <text id="pdfreaders-head-standards">תקנים פתוחים</text>
+  <text id="pdfreaders-head-graphics">גרפיקה</text>
+  <text id="pdfreaders-head-about">על אודות</text>
+  <text id="pdfreaders-body-platforms">פלטפורמות:</text>
+
+  <!-- Share and support buttons -->
+  <text id="share-head">שיתוף ותמיכה</text>
+  <text id="share-page">שיתוף העמוד הזה דרך</text>
+  <text id="share-microdonation">תרומה של סכום קטן דרך</text>
+  <text id="share-warning">חלק מהשירותים עשויים להיות לא ידידותיים לתוכנה חופשית ולפגוע בפרטיות שלך.</text>
+
+  <!-- Sponsoring buttons -->
+  <text id="donation-buttons">כפתורים</text>
+
+
+
+
+  <text id="size/huge">ענק</text>
+  <text id="size/large">גדול</text>
+  <text id="size/medium">בינוני</text>
+  <text id="size/small">קטן</text>
+  <text id="background/white">רקע לבן</text>
+  <text id="background/transparent">רקע שקוף</text>
+
+  <!-- Search function -->
+  <text id="search">חיפוש</text>
+  <text id="search/placeholder">מונחי חיפוש…</text>
+  <text id="search/notfound">לא נמצאו תוצאות חיפוש. נא לנסח את השאילתה שלך מחדש.</text>
+  <text id="search/empty">שאילתת החיפוש שלך ריקה.</text>
+
+  <!-- Progressbar -->
+  <text id="progressbar-of">מתוך</text>
+
+</data>

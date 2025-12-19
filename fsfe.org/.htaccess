@@ -24,6 +24,7 @@ RewriteRule ^graphics/fsfeurope.ico /graphics/fsfe.ico [R=301,L]
 # Redirect
 RewriteRule ^translate/?$ /contribute/translators/ [R=301,L]
 RewriteRule ^apple/?$ /activities/apple-litigation/ [R=301,L]
+RewriteRule ^at(ccc|CCC)/?$ /news/2025/news-20251214-01.html [R=302,L]
 
 # Promotion material order
 RewriteRule ^promo(/.*)?  /contribute/spreadtheword$1 [R=301,L]

@@ -79,8 +79,8 @@ def main() -> None:
     )
 
     groups: defaultdict[Path, list[Path]] = defaultdict(list)
-    for file in args.files:
-        path = Path(file).resolve()
+    for f in args.files:
+        path = Path(f).resolve()
         groups[get_basepath(path)].append(path)
 
     tasks: list[tuple[Path, Path, set[str]]] = []

@@ -107,8 +107,8 @@ def main() -> None:
                 logger.info(result)
             logger.info("Some comparisons failed, exiting as error")
             sys.exit(1)
-        else:
-            logger.info("All comparisons succeeded, success")
+
+        logger.info("All comparisons succeeded, success")
 
 
 if __name__ == "__main__":

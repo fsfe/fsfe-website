@@ -1,15 +1,15 @@
-<p>Hi <?=$name?>,<br /> 
+<p>Hi <?php echo $name; ?>,<br /> 
 You have registered an event on https://fsfe.org/events/tools/eventregistration</p>
 
 <p>Below is the list of the information you gave.</p>
 <ul>
-	<li>Name: <?=$name?></li>
-	<li>Email: <?=$email?></li>
-	<li>Event Title: <?=$title?></li>
-	<li>Location: <?=$location?></li>
+	<li>Name: <?php echo $name; ?></li>
+	<li>Email: <?php echo $email; ?></li>
+	<li>Event Title: <?php echo $title; ?></li>
+	<li>Location: <?php echo $location; ?></li>
 </ul>
  
-<p> You can review the information you have submitted at the automatically generated pull request <a href=<?=$pr_url?>>here</a>.
+<p> You can review the information you have submitted at the automatically generated pull request <a href=<?php echo $pr_url; ?>>here</a>.
 If you like to withdraw your event or in case you like to change some information,
 please contact contact@fsfe.org</p>
 

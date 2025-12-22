@@ -1,13 +1,13 @@
 #format wiki
 #language en
 
-= <?=$title?> =
- Start:: <?=$startdate?> 
- End:: <?=$enddate?> 
- Location:: <?=$location?> 
- Link:: <?=$url?> 
+= <?php echo $title; ?> =
+ Start:: <?php echo $startdate; ?> 
+ End:: <?php echo $enddate; ?> 
+ Location:: <?php echo $location; ?> 
+ Link:: <?php echo $url; ?> 
  bgcolor:: #FFFFFF
- Description:: <?=$description?> 
+ Description:: <?php echo $description; ?> 
 
 ----
 [[Category/FellowshipEvents]]

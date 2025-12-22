@@ -105,7 +105,7 @@ def main() -> None:
         if filtered_results:
             for result in filtered_results:
                 logger.info(result)
-            logger.info("Some comparisons failed, exiting as error")
+            logger.error("Some comparisons failed, exiting")
             sys.exit(1)
         else:
             logger.info("All comparisons succeeded, success")

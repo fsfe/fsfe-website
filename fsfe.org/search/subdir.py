@@ -6,7 +6,7 @@
 import json
 import logging
 import multiprocessing
-from typing import TYPE_CHECKING
+from typing import TYPE_CHECKING, TypedDict
 
 import iso639
 import nltk  # pyright: ignore[reportMissingTypeStubs]
@@ -20,6 +20,15 @@ if TYPE_CHECKING:
     from collections.abc import Generator
     from pathlib import Path
 logger = logging.getLogger(__name__)
+
+
+class _SearchIndexEntry(TypedDict):
+    url: str
+    tags: str
+    title: str
+    teaser: str
+    type: str
+    date: str | None
 
 
 def _find_teaser(document: etree.ElementTree) -> str:
@@ -38,7 +47,7 @@ def _find_teaser(document: etree.ElementTree) -> str:
     return ""
 
 
-def _process_file(file: Path, stopwords: set[str]) -> dict[str, str | None]:
+def _process_file(file: Path, stopwords: set[str]) -> _SearchIndexEntry:
     """Generate the search index entry for a given file and set of stopwords."""
     xslt_root = etree.parse(file)
     tags = sorted(
@@ -46,27 +55,27 @@ def _process_file(file: Path, stopwords: set[str]) -> dict[str, str | None]:
         for tag in xslt_root.xpath("//tag")
         if tag.get("key") != "front-page"
     )
-    return {
-        "url": f"/{file.with_suffix('.html').relative_to(file.parents[-2])}",
-        "tags": " ".join(tags),
-        "title": (
+    return _SearchIndexEntry(
+        url=f"/{file.with_suffix('.html').relative_to(file.parents[-2])}",
+        tags=" ".join(tags),
+        title=(
             xslt_root.xpath("//html//title")[0].text
             if xslt_root.xpath("//html//title")
             else ""
         ),
-        "teaser": " ".join(
+        teaser=" ".join(
             w
             for w in sorted(_find_teaser(xslt_root).strip().split(" "))
             if w.lower() not in stopwords
         ),
-        "type": "news" if "news/" in str(file) else "page",
+        type="news" if "news/" in str(file) else "page",
         # Get the date of the file if it has one
-        "date": (
+        date=(
             xslt_root.xpath("//news[@newsdate]").get("newsdate")
             if xslt_root.xpath("//news[@newsdate]")
             else None
         ),
-    }
+    )
 
 
 def run(source: Path, languages: list[str], processes: int, working_dir: Path) -> None:  # noqa: ARG001

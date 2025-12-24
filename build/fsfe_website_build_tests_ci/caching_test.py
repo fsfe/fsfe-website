@@ -1,11 +1,12 @@
 # SPDX-FileCopyrightText: Free Software Foundation Europe e.V. <https://fsfe.org>
 #
 # SPDX-License-Identifier: GPL-3.0-or-later
-from argparse import Namespace
+import dataclasses
 from pathlib import Path
 from typing import TYPE_CHECKING
 
 from fsfe_website_build.build import build
+from fsfe_website_build.lib.build_config import GlobalBuildConfig
 
 if TYPE_CHECKING:
     from pytest_mock import MockFixture
@@ -13,16 +14,19 @@ if TYPE_CHECKING:
 
 def no_rebuild_twice_test(mocker: MockFixture) -> None:
     # first, run a full build
-    args = Namespace(
-        full=True,
+    gbc = GlobalBuildConfig(
+        all_languages=[
+            "en",
+            "de",
+            "fr",
+        ],
         clean_cache=False,
+        full=True,
         languages=[
             "en",
         ],
-        log_level="CRITICAL",  # by only logging critical messages
-        # the build should be faster, as evaluating less things to strings
+        log_level="CRITICAL",
         processes=8,
-        source=Path(),
         serve=False,
         sites=[
             Path("drm.info"),
@@ -30,10 +34,12 @@ def no_rebuild_twice_test(mocker: MockFixture) -> None:
             Path("pdfreaders.org"),
             Path("status.fsfe.org"),
         ],
+        source=Path(),
         stage=False,
         target="output/final",
+        working_target=Path("output/final"),
     )
-    build(args)
+    build(gbc)
 
     # replace update_if_changed with
     # mocked one that exceptions if the file would be changed
@@ -47,5 +53,7 @@ def no_rebuild_twice_test(mocker: MockFixture) -> None:
         "fsfe_website_build.lib.misc.update_if_changed", side_effect=fail_if_update
     )
     # now, run a normal build
-    args.full = False
-    build(args)
+    args_dict = dataclasses.asdict(gbc)
+    args_dict["full"] = False
+    new_gbc = GlobalBuildConfig(**args_dict)
+    build(new_gbc)

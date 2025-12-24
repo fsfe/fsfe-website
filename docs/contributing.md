@@ -21,7 +21,7 @@ To run it in the project using the project config, please use `uv run ruff`.
 
 We try to keep to some design patterns to keep things manageable.
 
-Firstly, each phase as described in [the overview](./overview.md) should handle a meaningfully different kind of interaction. Each phase should be structured, to the greatest degree possible, as a sequence of steps. We consider that each phase should have a `run.py` file that exposes a `ipahse_*run` function that takes the arguments needed for its phase.
+Firstly, each phase as described in [the overview](./overview.md) should handle a meaningfully different kind of interaction. Each phase should be structured, to the greatest degree possible, as a sequence of steps. We consider that each phase should have a `run.py` file that exposes a `phase_?run` function that takes the arguments needed for its phase.
 
 Each run function then calls a sequence of functions that are defined in the other files in the `phase*` folder. Each other file in the folder should expose one function, with the same name as the file, minus file extension. For example, `create_files.py` should expose the function `create_files`. It is a common pattern for the first expose function to generate a list of files or things to act on, and then multithread this using another function.
 

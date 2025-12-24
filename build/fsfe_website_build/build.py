@@ -28,10 +28,11 @@ from .phase3.stage_to_target import stage_to_target
 logger = logging.getLogger(__name__)
 
 
-def _parse_arguments() -> argparse.Namespace:
+def _build_config_from_arguments() -> GlobalBuildConfig:
     """Parse the arguments of the website build process."""
     parser = argparse.ArgumentParser(
-        description="Python script to handle building of the fsfe webpage",
+        description="Python script to handle building of the fsfe webpages",
+        formatter_class=argparse.ArgumentDefaultsHelpFormatter,
     )
     parser.add_argument(
         "--full",
@@ -46,7 +47,7 @@ def _parse_arguments() -> argparse.Namespace:
     parser.add_argument(
         "--languages",
         help="Languages to build website in.",
-        default=[],
+        nargs="+",
         type=lambda langs: sorted(langs.split(",")),
     )
     parser.add_argument(
@@ -54,7 +55,7 @@ def _parse_arguments() -> argparse.Namespace:
         type=str,
         default="INFO",
         choices=["DEBUG", "INFO", "WARNING", "ERROR", "CRITICAL"],
-        help="Set the logging level (default: INFO)",
+        help="Set the logging level",
     )
     parser.add_argument(
         "--processes",
@@ -77,6 +78,7 @@ def _parse_arguments() -> argparse.Namespace:
         "--sites",
         help="What site directories to build",
         default=None,
+        nargs="+",
         type=str,
     )
     parser.add_argument(
@@ -96,56 +98,56 @@ def _parse_arguments() -> argparse.Namespace:
         default=None,
     )
     args = parser.parse_args()
+    # Now, update any args that need to default based on other arguments
     args.sites = (
         [path for path in args.source.glob("?*.??*") if path.is_dir()]
         if args.sites is None
-        else [args.source.joinpath(site) for site in args.sites.split(",")]
+        else args.sites
     )
     if args.target is None:
         args.target = str(args.source.joinpath("output/final"))
-    return args
+    args.stage = args.stage or any(char in args.target for char in "@:,")
+    # And our derived settings we do not have as an argument
+    working_target = Path(
+        args.source / "output/stage" if args.stage_required else args.target
+    )
+    all_languages = sorted(
+        (path.name for path in args.source.glob("global/languages/??")),
+    )
+    return GlobalBuildConfig(
+        **args.vars(), working_target=working_target, all_languages=all_languages
+    )
 
 
-def build(args: argparse.Namespace) -> None:
+def build(global_build_config: GlobalBuildConfig) -> None:
     """Coordinate the website builder."""
     logging.basicConfig(
         format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
         datefmt="%Y-%m-%d %H:%M:%S",
-        level=args.log_level,
+        level=global_build_config.log_level,
     )
+    logger.debug(global_build_config)
 
-    with multiprocessing.Pool(args.processes) as pool:
+    with multiprocessing.Pool(global_build_config.processes) as pool:
         logger.info("Starting phase 0 - Global Conditional Setup")
         # These are simple conditional steps that interact directly with args
-        if args.clean_cache:
+        if global_build_config.clean_cache:
             clean_cache()
         # TODO Should also be triggered whenever any build python file is changed
-        if args.full:
-            full(args.source)
+        if global_build_config.full:
+            full(global_build_config.source)
         global_symlinks(
-            args.source,
+            global_build_config.source,
             (
-                args.languages
-                if args.languages
-                else sorted(
-                    (path.name for path in args.source.glob("global/languages/??")),
-                )
+                global_build_config.languages
+                if global_build_config.languages
+                else global_build_config.all_languages
             ),
             pool,
         )
-        # Work out some settings
-        stage_required = any(
-            [args.stage, "@" in args.target, ":" in args.target, "," in args.target],
-        )
-        working_target = Path(
-            args.source / "output/stage" if stage_required else args.target
-        )
         # Create our stable config across all sites
-        global_build_config = GlobalBuildConfig(
-            args.source, pool, args.processes, working_target
-        )
         # the two middle phases are unconditional, and run on a per site basis
-        for site in args.sites:
+        for site in global_build_config.sites:
             logger.info("Processing %s", site)
             if not site.exists():
                 logger.critical("Site %s does not exist, exiting", site)
@@ -159,15 +161,15 @@ def build(args: argparse.Namespace) -> None:
                 global_build_config,
                 site,
             )
-            languages = (
-                args.languages
-                if args.languages
+            languages: list[str] = (
+                global_build_config.languages
+                if global_build_config.languages
                 else sorted(
                     {lang_from_filename(path) for path in site.glob("**/*.*.xhtml")},
                 )
             )
             # Now we know our languages, build our site build config
-            site_build_config = SiteBuildConfig(site, languages)
+            site_build_config = SiteBuildConfig(languages, site)
             # And build our config that is saved inside the site
             site_config = (
                 from_dict(
@@ -180,20 +182,26 @@ def build(args: argparse.Namespace) -> None:
             )
 
             # Processes needed only for subdir stuff
-            phase1_run(global_build_config, site_build_config, site_config)
-            site_target = working_target / site.name
+            phase1_run(global_build_config, site_build_config, site_config, pool)
+            site_target = global_build_config.working_target / site.name
 
-            phase2_run(global_build_config, site_build_config, site_config, site_target)
+            phase2_run(
+                global_build_config, site_build_config, site_config, site_target, pool
+            )
 
         logger.info("Starting Phase 3 - Global Conditional Finishing")
-        if stage_required:
-            stage_to_target(working_target, args.target, pool)
+        if global_build_config.stage:
+            stage_to_target(
+                global_build_config.working_target, global_build_config.target, pool
+            )
 
-    if args.serve:
-        serve_websites(working_target, args.sites, 2000, 100)
+    if global_build_config.serve:
+        serve_websites(
+            global_build_config.working_target, global_build_config.sites, 2000, 100
+        )
 
 
 def main() -> None:
     """Parse args and run build."""
-    args = _parse_arguments()
-    build(args)
+    global_build_config = _build_config_from_arguments()
+    build(global_build_config)

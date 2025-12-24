@@ -13,6 +13,7 @@ from .create_language_symlinks import create_language_symlinks
 from .process_files import process_files
 
 if TYPE_CHECKING:
+    import multiprocessing.pool
     from pathlib import Path
 
     from fsfe_website_build.lib.build_config import GlobalBuildConfig, SiteBuildConfig
@@ -26,6 +27,7 @@ def phase2_run(
     site_build_config: SiteBuildConfig,
     site_config: SiteConfig,
     site_target: Path,
+    pool: multiprocessing.pool.Pool,
 ) -> None:
     """Run all the necessary sub functions for phase2."""
     logger.info("Starting Phase 2 - Generating output")
@@ -33,14 +35,14 @@ def phase2_run(
         global_build_config.source,
         site_build_config.site,
         site_build_config.languages,
-        global_build_config.pool,
+        pool,
         site_target,
     )
-    create_index_symlinks(global_build_config.pool, site_target)
-    create_language_symlinks(global_build_config.pool, site_target)
+    create_index_symlinks(pool, site_target)
+    create_language_symlinks(pool, site_target)
     copy_files(
         site_build_config.site,
-        global_build_config.pool,
+        pool,
         site_target,
         site_config.deployment,
     )

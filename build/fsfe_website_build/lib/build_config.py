@@ -4,10 +4,9 @@
 """Classes for holding build process config."""
 
 from dataclasses import dataclass
-from typing import TYPE_CHECKING
+from typing import TYPE_CHECKING, Literal
 
 if TYPE_CHECKING:
-    import multiprocessing.pool
     from pathlib import Path
 
 
@@ -15,15 +14,38 @@ if TYPE_CHECKING:
 class GlobalBuildConfig:
     """Immutable global configuration as part of a build."""
 
-    source: Path
-    pool: multiprocessing.pool.Pool
+    all_languages: list[str]
+    clean_cache: bool
+    full: bool
+    languages: list[str]
+    log_level: Literal["DEBUG", "INFO", "WARNING", "ERROR", "CRITICAL"]
     processes: int
+    serve: bool
+    sites: list[Path]
+    source: Path
+    stage: bool
+    target: str
     working_target: Path
+
+    def __post_init__(self) -> None:
+        """Validate build settings."""
+        # All languages are two letter codes
+        for lang in self.languages:
+            if len(lang) != 2 or not lang.isalpha():  # noqa: PLR2004
+                message = (
+                    f"Language code '{lang}' must be a two-letter alphabetic string."
+                )
+                raise ValueError(message)
+
+        # All languages should exist in the global config
+        if any(lang not in self.all_languages for lang in self.languages):
+            message = "All languages must be in the 'all_languages' list."
+            raise ValueError(message)
 
 
 @dataclass(frozen=True)
 class SiteBuildConfig:
     """Immutable Build config specific to a site."""
 
-    site: Path
     languages: list[str]
+    site: Path

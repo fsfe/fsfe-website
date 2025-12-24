@@ -14,12 +14,14 @@
 #     libreoffice --headless -p out.odt
 
 if [ -z "$3" ]; then
-  echo "Usage: $(basename $0) INFILE.odt OUTFILE.odt PLACEHOLDER=VALUE ..."
-  exit 0
+	echo "Usage: $(basename $0) INFILE.odt OUTFILE.odt PLACEHOLDER=VALUE ..."
+	exit 0
 fi
 
-infile=$(readlink --canonicalize-missing "$1"); shift
-outfile=$(readlink --canonicalize-missing "$1"); shift
+infile=$(readlink --canonicalize-missing "$1")
+shift
+outfile=$(readlink --canonicalize-missing "$1")
+shift
 
 # ------------------------------------------------------------------------------
 # Unpack the ODT file into a temporary directory
@@ -38,45 +40,45 @@ unzip -q "${infile}"
 # ------------------------------------------------------------------------------
 
 while [ "$1" ]; do
-  # Split parameter name=value into name and value parts
-  name="${1%=*}"
-  value="${1#*=}"
+	# Split parameter name=value into name and value parts
+	name="${1%=*}"
+	value="${1#*=}"
 
-  if [ "${name}" == "$1" ]; then
-    echo "WARNING: ignoring invalid parameter '$1' (not in required format PLACEHOLDER=VALUE)"
-    shift
-    continue
-  fi
+	if [ "${name}" == "$1" ]; then
+		echo "WARNING: ignoring invalid parameter '$1' (not in required format PLACEHOLDER=VALUE)"
+		shift
+		continue
+	fi
 
-  if [ "${name}" == "repeat" ]; then
-    replacement=""
-    for i in $(seq ${value}); do
-      replacement="${replacement}<table:table-row\\1</table:table-row>"
-    done
-    # Insert special marker after the first </table:table-row>, needed because
-    # sed is always greedy and would replace up to the last table-row in the
-    # whole document
-    sed --in-place --expression="s%</table:table-row>%&HERE%" content.xml
-    sed --in-place --expression="s%<table:table-row\\(.*\\)</table:table-row>HERE%${replacement}%" content.xml
-    shift
-    continue
-  fi
+	if [ "${name}" == "repeat" ]; then
+		replacement=""
+		for i in $(seq ${value}); do
+			replacement="${replacement}<table:table-row\\1</table:table-row>"
+		done
+		# Insert special marker after the first </table:table-row>, needed because
+		# sed is always greedy and would replace up to the last table-row in the
+		# whole document
+		sed --in-place --expression="s%</table:table-row>%&HERE%" content.xml
+		sed --in-place --expression="s%<table:table-row\\(.*\\)</table:table-row>HERE%${replacement}%" content.xml
+		shift
+		continue
+	fi
 
-  # Replace some special characters with what they need to be in ODT
-  value="${value//&/&amp;}"
-  value="${value//</&lt;}"
-  value="${value//>/&gt;}"
-  value="${value//\\n/<text:line-break/>}"
+	# Replace some special characters with what they need to be in ODT
+	value="${value//&/&amp;}"
+	value="${value//</&lt;}"
+	value="${value//>/&gt;}"
+	value="${value//\\n/<text:line-break/>}"
 
-  # Escape % and & for sed
-  value="${value//%/\\%}"
-  value="${value//&/\\&}"
+	# Escape % and & for sed
+	value="${value//%/\\%}"
+	value="${value//&/\\&}"
 
-  # Now do the replacement
-  sed --in-place --expression="s%<text:placeholder[^>]*>&lt;${name}&gt;</text:placeholder>%${value}%" content.xml
+	# Now do the replacement
+	sed --in-place --expression="s%<text:placeholder[^>]*>&lt;${name}&gt;</text:placeholder>%${value}%" content.xml
 
-  # Next please...
-  shift
+	# Next please...
+	shift
 done
 
 # ------------------------------------------------------------------------------

@@ -5,7 +5,7 @@ run
 
 Where year is the the year for which the buttons should be generated, preferably a 4 digit number but something lile "Mar 18" or 2018/03 would work as well (and probably break the template layout).
 
-Where outputdir is the name of a directory where the files will be generated. If outputdir is not given, it defaults to the current dir. The directory must already exist, it will *not* be automatically created by the script.
+Where outputdir is the name of a directory where the files will be generated. If outputdir is not given, it defaults to the current dir. The directory must already exist, it will _not_ be automatically created by the script.
 
 Make sure that button_template.svg is available when you run the script.
 

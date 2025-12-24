@@ -16,19 +16,22 @@ if TYPE_CHECKING:
     import multiprocessing.pool
     from pathlib import Path
 
+    from fsfe_website_build.lib.classes import SiteConfig
+
 logger = logging.getLogger(__name__)
 
 
-def phase2_run(
+def phase2_run(  # noqa: PLR0913
     source: Path,
     source_dir: Path,
     languages: list[str],
     pool: multiprocessing.pool.Pool,
     target: Path,
+    config: SiteConfig,
 ) -> None:
     """Run all the necessary sub functions for phase2."""
     logger.info("Starting Phase 2 - Generating output")
     process_files(source, source_dir, languages, pool, target)
     create_index_symlinks(pool, target)
     create_language_symlinks(pool, target)
-    copy_files(source_dir, pool, target)
+    copy_files(source_dir, pool, target, config.deployment)

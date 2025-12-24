@@ -7,9 +7,13 @@ import argparse
 import logging
 import multiprocessing
 import sys
+import tomllib
 from pathlib import Path
 from textwrap import dedent
 
+from dacite import Config, from_dict
+
+from .lib.classes import SiteConfig
 from .lib.misc import lang_from_filename
 from .phase0.clean_cache import clean_cache
 from .phase0.full import full
@@ -139,6 +143,15 @@ def build(args: argparse.Namespace) -> None:
         # the two middle phases are unconditional, and run on a per site basis
         for site in args.sites:
             logger.info("Processing %s", site)
+            config = (
+                from_dict(
+                    SiteConfig,
+                    tomllib.loads(config_file.read_text()),
+                    Config(strict=True, cast=[Path]),
+                )
+                if (config_file := site / "config.toml").exists()
+                else SiteConfig()
+            )
             if not site.exists():
                 logger.critical("Site %s does not exist, exiting", site)
                 sys.exit(1)
@@ -160,13 +173,14 @@ def build(args: argparse.Namespace) -> None:
                 )
             )
             # Processes needed only for subdir stuff
-            phase1_run(args.source, site, languages, args.processes, pool)
+            phase1_run(args.source, site, languages, args.processes, pool, config)
             phase2_run(
                 args.source,
                 site,
                 languages,
                 pool,
                 working_target.joinpath(site.name),
+                config,
             )
 
         logger.info("Starting Phase 3 - Global Conditional Finishing")

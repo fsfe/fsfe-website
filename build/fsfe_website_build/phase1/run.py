@@ -24,19 +24,22 @@ if TYPE_CHECKING:
     import multiprocessing.pool
     from pathlib import Path
 
+    from fsfe_website_build.lib.classes import SiteConfig
+
 logger = logging.getLogger(__name__)
 
 
-def phase1_run(
+def phase1_run(  # noqa: PLR0913
     source: Path,
     source_site: Path,
     languages: list[str],
     processes: int,
     pool: multiprocessing.pool.Pool,
+    config: SiteConfig,
 ) -> None:
     """Run all the necessary sub functions for phase1."""
     logger.info("Starting Phase 1 - Setup")
-    get_dependencies(source_site)
+    get_dependencies(source_site, config.dependencies)
     update_css(source_site)
     update_stylesheets(source_site, pool)
     prepare_subdirectories(source, source_site, languages, processes)

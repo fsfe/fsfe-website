@@ -1,3 +1,0 @@
-# This files contains relative paths we want to deploy even if they would be blocked by the copy_files method.
-# Special case hard code pass over order items xml required by cgi script
-order/data/items.en.xml

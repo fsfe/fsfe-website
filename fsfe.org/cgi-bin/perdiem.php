@@ -16,11 +16,9 @@
 
 use PHPMailer\PHPMailer\PHPMailer;
 
-require 'PHPMailer/Exception.php';
-
-require 'PHPMailer/PHPMailer.php';
-
-require 'PHPMailer/SMTP.php';
+require 'thirdparty/PHPMailer/Exception.php';
+require 'thirdparty/PHPMailer/PHPMailer.php';
+require 'thirdparty/PHPMailer/SMTP.php';
 
 $html = ''; // create empty variable
 $csv = [['Employee number', 'Employee name', 'Date', 'Amount (EUR)', 'Recipient name', 'Activity Tag', 'Activity Text', 'Category ID', 'Category Text', 'Event', 'Description', 'Receipt number']]; // create array for CSV

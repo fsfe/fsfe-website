@@ -13,8 +13,8 @@ from textwrap import dedent
 
 from dacite import Config, from_dict
 
-from .lib.classes import SiteConfig
 from .lib.misc import lang_from_filename
+from .lib.site_config import SiteConfig
 from .phase0.clean_cache import clean_cache
 from .phase0.full import full
 from .phase0.global_symlinks import global_symlinks

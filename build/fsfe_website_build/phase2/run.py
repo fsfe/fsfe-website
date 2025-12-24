@@ -16,7 +16,7 @@ if TYPE_CHECKING:
     import multiprocessing.pool
     from pathlib import Path
 
-    from fsfe_website_build.lib.classes import SiteConfig
+    from fsfe_website_build.lib.site_config import SiteConfig
 
 logger = logging.getLogger(__name__)
 

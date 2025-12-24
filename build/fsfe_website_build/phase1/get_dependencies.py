@@ -11,7 +11,7 @@ from fsfe_website_build.globals import CACHE_DIR
 from fsfe_website_build.lib.misc import run_command
 
 if TYPE_CHECKING:
-    from fsfe_website_build.lib.classes import Dependency
+    from fsfe_website_build.lib.site_config import Dependency
 
 logger = logging.getLogger(__name__)
 

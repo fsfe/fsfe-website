@@ -13,6 +13,7 @@ from textwrap import dedent
 
 from dacite import Config, from_dict
 
+from .lib.build_config import GlobalBuildConfig, SiteBuildConfig
 from .lib.misc import lang_from_filename
 from .lib.site_config import SiteConfig
 from .phase0.clean_cache import clean_cache
@@ -112,11 +113,10 @@ def build(args: argparse.Namespace) -> None:
         datefmt="%Y-%m-%d %H:%M:%S",
         level=args.log_level,
     )
-    logger.debug(args)
 
     with multiprocessing.Pool(args.processes) as pool:
         logger.info("Starting phase 0 - Global Conditional Setup")
-
+        # These are simple conditional steps that interact directly with args
         if args.clean_cache:
             clean_cache()
         # TODO Should also be triggered whenever any build python file is changed
@@ -133,25 +133,20 @@ def build(args: argparse.Namespace) -> None:
             ),
             pool,
         )
-
+        # Work out some settings
         stage_required = any(
             [args.stage, "@" in args.target, ":" in args.target, "," in args.target],
         )
         working_target = Path(
-            f"{args.source}/output/stage" if stage_required else args.target
+            args.source / "output/stage" if stage_required else args.target
+        )
+        # Create our stable config across all sites
+        global_build_config = GlobalBuildConfig(
+            args.source, pool, args.processes, working_target
         )
         # the two middle phases are unconditional, and run on a per site basis
         for site in args.sites:
             logger.info("Processing %s", site)
-            config = (
-                from_dict(
-                    SiteConfig,
-                    tomllib.loads(config_file.read_text()),
-                    Config(strict=True, cast=[Path]),
-                )
-                if (config_file := site / "config.toml").exists()
-                else SiteConfig()
-            )
             if not site.exists():
                 logger.critical("Site %s does not exist, exiting", site)
                 sys.exit(1)
@@ -161,9 +156,8 @@ def build(args: argparse.Namespace) -> None:
             # Do not get access to languages to be built in,
             # and other benefits of being ran later.
             prepare_early_subdirectories(
-                args.source,
+                global_build_config,
                 site,
-                args.processes,
             )
             languages = (
                 args.languages
@@ -172,16 +166,24 @@ def build(args: argparse.Namespace) -> None:
                     {lang_from_filename(path) for path in site.glob("**/*.*.xhtml")},
                 )
             )
-            # Processes needed only for subdir stuff
-            phase1_run(args.source, site, languages, args.processes, pool, config)
-            phase2_run(
-                args.source,
-                site,
-                languages,
-                pool,
-                working_target.joinpath(site.name),
-                config,
+            # Now we know our languages, build our site build config
+            site_build_config = SiteBuildConfig(site, languages)
+            # And build our config that is saved inside the site
+            site_config = (
+                from_dict(
+                    SiteConfig,
+                    tomllib.loads(config_file.read_text()),
+                    Config(strict=True, cast=[Path]),
+                )
+                if (config_file := site / "config.toml").exists()
+                else SiteConfig()
             )
+
+            # Processes needed only for subdir stuff
+            phase1_run(global_build_config, site_build_config, site_config)
+            site_target = working_target / site.name
+
+            phase2_run(global_build_config, site_build_config, site_config, site_target)
 
         logger.info("Starting Phase 3 - Global Conditional Finishing")
         if stage_required:

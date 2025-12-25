@@ -28,8 +28,8 @@ from .phase3.stage_to_target import stage_to_target
 logger = logging.getLogger(__name__)
 
 
-def _build_config_from_arguments() -> GlobalBuildConfig:
-    """Parse the arguments of the website build process."""
+def _build_parser() -> argparse.ArgumentParser:
+    """Build the argument parser."""
     parser = argparse.ArgumentParser(
         description="Python script to handle building of the fsfe webpages",
         formatter_class=argparse.ArgumentDefaultsHelpFormatter,
@@ -48,7 +48,7 @@ def _build_config_from_arguments() -> GlobalBuildConfig:
         "--languages",
         help="Languages to build website in.",
         nargs="+",
-        type=lambda langs: sorted(langs.split(",")),
+        type=str,
     )
     parser.add_argument(
         "--log-level",
@@ -97,7 +97,11 @@ def _build_config_from_arguments() -> GlobalBuildConfig:
         type=str,
         default=None,
     )
-    args = parser.parse_args()
+    return parser
+
+
+def _build_config_from_arguments(args: argparse.Namespace) -> GlobalBuildConfig:
+    """Convert the arguments to a build config."""
     # Now, update any args that need to default based on other arguments
     args.sites = (
         [path for path in args.source.glob("?*.??*") if path.is_dir()]
@@ -108,18 +112,16 @@ def _build_config_from_arguments() -> GlobalBuildConfig:
         args.target = str(args.source.joinpath("output/final"))
     args.stage = args.stage or any(char in args.target for char in "@:,")
     # And our derived settings we do not have as an argument
-    working_target = Path(
-        args.source / "output/stage" if args.stage_required else args.target
-    )
+    working_target = Path(args.source / "output/stage" if args.stage else args.target)
     all_languages = sorted(
         (path.name for path in args.source.glob("global/languages/??")),
     )
     return GlobalBuildConfig(
-        **args.vars(), working_target=working_target, all_languages=all_languages
+        **vars(args), working_target=working_target, all_languages=all_languages
     )
 
 
-def build(global_build_config: GlobalBuildConfig) -> None:
+def _run_build(global_build_config: GlobalBuildConfig) -> None:
     """Coordinate the website builder."""
     logging.basicConfig(
         format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
@@ -201,7 +203,9 @@ def build(global_build_config: GlobalBuildConfig) -> None:
         )
 
 
-def main() -> None:
+def build(passed_args: list[str] | None = None) -> None:
     """Parse args and run build."""
-    global_build_config = _build_config_from_arguments()
-    build(global_build_config)
+    parser = _build_parser()
+    args = parser.parse_args(passed_args)
+    global_build_config = _build_config_from_arguments(args)
+    _run_build(global_build_config)

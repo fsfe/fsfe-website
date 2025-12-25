@@ -15,7 +15,7 @@ dependencies = [
 ]
 
 [project.scripts]
-build = "fsfe_website_build:main"
+build = "fsfe_website_build:build"
 
 [dependency-groups]
 dev = [

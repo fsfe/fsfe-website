@@ -11,7 +11,7 @@ from typing import TYPE_CHECKING, TypedDict
 import iso639
 import nltk  # pyright: ignore[reportMissingTypeStubs]
 from fsfe_website_build.globals import CACHE_DIR
-from fsfe_website_build.lib.misc import update_if_changed
+from fsfe_website_build.lib.misc import lang_from_filename, update_if_changed
 from lxml import etree
 from nltk.corpus import (  # pyright: ignore[reportMissingTypeStubs]
     stopwords as nltk_stopwords,  # pyright: ignore[reportMissingTypeStubs]
@@ -42,9 +42,11 @@ def _find_teaser(document: etree.ElementTree) -> str:
     :returns: The text of the teaser or an empty string
     """
     trivial_length = 10
-    for p in document.xpath("//body//p"):
-        if p.text and len(p.text.strip().split(" ")) > trivial_length:
-            return p.text
+    for paragraph_text in (
+        p.text.strip() for p in document.xpath("//body//p") if p.text
+    ):
+        if len(paragraph_text.split(" ")) > trivial_length:
+            return paragraph_text
     return ""
 
 
@@ -52,30 +54,24 @@ def _process_file(file: Path, stopwords: set[str]) -> _SearchIndexEntry:
     """Generate the search index entry for a given file and set of stopwords."""
     xslt_root = etree.parse(file)
     tags = sorted(
-        str(tag.get("key"))
+        key
         for tag in xslt_root.xpath("//tag")
-        if tag.get("key") != "front-page"
+        if (key := str(tag.get("key"))) != "front-page"
     )
     return _SearchIndexEntry(
         url=f"/{file.with_suffix('.html').relative_to(file.parents[-2])}",
         tags=" ".join(tags),
         title=(
-            xslt_root.xpath("//html//title")[0].text
-            if xslt_root.xpath("//html//title")
+            titles[0].text.strip()
+            if (titles := xslt_root.xpath("//html//title"))
             else ""
         ),
         teaser=" ".join(
-            w
-            for w in sorted(_find_teaser(xslt_root).strip().split(" "))
-            if w.lower() not in stopwords
+            w for w in _find_teaser(xslt_root).split(" ") if w.lower() not in stopwords
         ),
         type="news" if "news/" in str(file) else "page",
         # Get the date of the file if it has one
-        date=(
-            xslt_root.xpath("//news[@newsdate]").get("newsdate")
-            if xslt_root.xpath("//news[@newsdate]")
-            else None
-        ),
+        date=(newsdate if (newsdate := xslt_root.xpath("//news/@newsdate")) else None),
     )
 
 
@@ -107,22 +103,22 @@ def run(source: Path, languages: list[str], processes: int, working_dir: Path) -
                 (
                     set(
                         nltk_stopwords.words(  # pyright: ignore [(reportUnknownMemberType)]
-                            iso639.Language.from_part1(
-                                file.suffixes[0].removeprefix("."),
-                            ).name.lower(),
+                            lang_full,
                         ),
                     )
-                    if iso639.Language.from_part1(
-                        file.suffixes[0].removeprefix("."),
-                    ).name.lower()
+                    if (
+                        lang_full := (
+                            iso639.Language.from_part1(
+                                lang_from_filename(file)
+                            ).name.lower()
+                        )
+                    )
                     in nltk_stopwords.fileids()  # pyright: ignore [(reportUnknownMemberType)]
                     else set()
                 ),
             )
-            for file in filter(
-                lambda file: file.suffixes[0].removeprefix(".") in languages,
-                source_dir.glob("**/*.??.xhtml"),
-            )
+            for file in source_dir.glob("**/*.??.xhtml")
+            if file.suffixes[0].removeprefix(".") in languages
         )
 
         articles = sorted(
@@ -131,6 +127,6 @@ def run(source: Path, languages: list[str], processes: int, working_dir: Path) -
         )
 
         update_if_changed(
-            working_dir.joinpath("index.js"),
-            "var pages = " + json.dumps(articles, ensure_ascii=False),
+            working_dir.joinpath("index.json"),
+            json.dumps(articles, ensure_ascii=False),
         )

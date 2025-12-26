@@ -13,6 +13,7 @@ expect \
 git \
 libxml2 \
 libxslt \
+minify \
 npm \
 openssh-client \
 rsync \

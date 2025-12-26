@@ -6,6 +6,7 @@ composer \
 git \
 libxml2 \
 libxml2-utils \
+minify \
 npm \
 php84-zip \
 python3 \

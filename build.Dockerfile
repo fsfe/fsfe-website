@@ -5,6 +5,7 @@ RUN apk add --no-cache \
 bash \
 expect \
 git \
+minify \
 npm \
 openssh-client \
 python3 \

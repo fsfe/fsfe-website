@@ -86,7 +86,7 @@ Alterations to build scripts or the files used site-wide will result in near ful
 
 We can either install the required dependencies manually using our preferred package manager. If you are a nix use one can run `nix-shell` to enter a shell with the required build dependencies. It will also provision `drone-cli` for signing the CI file after changing it, and load the values in `.env` into your current shell.
 
-If installing manually, you need the python package `uv` and the node package `lessc`.
+If installing manually, you need the python package `uv`, the node package `lessc` and the [`minify`](https://github.com/tdewolff/minify) CLI.
 
 As we are using [UV](https://docs.astral.sh/uv/) we can just run the build process directly, and let it handle deps.
 
@@ -138,4 +138,3 @@ While most small changes can be tested adequately by building locally some large
 ## Status Viewing
 
 The status of builds of [fsfe.org](https://fsfe.org) and [test.fsfe.org](https://test.fsfe.org) can be viewed at [status.fsfe.org](https://status.fsfe.org)
-

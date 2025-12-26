@@ -103,7 +103,7 @@ def _update_for_base(  # noqa: PLR0913
 
 def _update_module_xmllists(
     source: Path,
-    source_dir: Path,
+    source_site: Path,
     languages: list[str],
     pool: multiprocessing.pool.Pool,
 ) -> None:
@@ -113,15 +113,15 @@ def _update_module_xmllists(
     all_xml = {
         get_basepath(path)
         for path in (
-            *source_dir.glob("**/*.*.xml"),
+            *source_site.glob("**/*.*.xml"),
             *source.joinpath("global/").glob("**/*.*.xml"),
         )
         if lang_from_filename(path) in languages
     }
-    source_bases = {path.with_suffix("") for path in source_dir.glob("**/*.sources")}
+    source_bases = {path.with_suffix("") for path in source_site.glob("**/*.sources")}
     module_bases = {
         get_basepath(path)
-        for path in source_dir.glob("**/*.*.xhtml")
+        for path in source_site.glob("**/*.*.xhtml")
         if lang_from_filename(path) in languages and etree.parse(path).xpath("//module")
     }
     all_bases = source_bases | module_bases

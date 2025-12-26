@@ -20,11 +20,11 @@ logger = logging.getLogger(__name__)
 
 
 def prepare_early_subdirectories(
-    global_build_config: GlobalBuildConfig, source_dir: Path
+    global_build_config: GlobalBuildConfig, source_site: Path
 ) -> None:
     """Find any early subdir scripts in subdirectories and run them."""
-    logger.info("Preparing Early Subdirectories for site %s", source_dir)
-    for subdir_path in (path.parent for path in source_dir.glob("**/early_subdir.py")):
+    logger.info("Preparing Early Subdirectories for site %s", source_site)
+    for subdir_path in (path.parent for path in source_site.glob("**/early_subdir.py")):
         logger.info("Preparing early subdirectory %s", subdir_path)
         early_subdir_path_resolved = str(subdir_path.resolve())
         sys.path.append(early_subdir_path_resolved)

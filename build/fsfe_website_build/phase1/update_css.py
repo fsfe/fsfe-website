@@ -20,7 +20,7 @@ logger = logging.getLogger(__name__)
 
 
 def update_css(
-    source_dir: Path,
+    source_site: Path,
 ) -> None:
     """If any less files have been changed, update the css.
 
@@ -28,7 +28,7 @@ def update_css(
     Then minify it, and place it in the expected location for the build process.
     """
     logger.info("Updating css")
-    directory = source_dir.joinpath("look")
+    directory = source_site.joinpath("look")
     if directory.exists():
         for file in directory.glob("main*.less"):
             compiled_path = file.with_suffix(".css")

@@ -1,17 +1,19 @@
-FROM debian:13
-
-COPY --from=ghcr.io/astral-sh/uv:latest /uv /uvx /bin/
+FROM alpine
 
 # Install deps
-RUN apt-get update && apt-get install --yes --no-install-recommends \
-ca-certificates \
+RUN apk add --no-cache \
+bash \
 expect \
 git \
 libxml2 \
-libxslt1.1 \
-node-less \
+libxslt \
+npm \
 openssh-client \
-rsync
+rsync \
+uv
+
+# Install node deps
+RUN npm install -g less
 
 # Set uv project env, to persist stuff moving dirs 
 ENV UV_PROJECT_ENVIRONMENT=/root/.cache/uv/venv

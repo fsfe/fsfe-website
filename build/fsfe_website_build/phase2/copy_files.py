@@ -10,7 +10,7 @@ import logging
 import shutil
 from typing import TYPE_CHECKING
 
-import minify  # pyright: ignore [reportMissingTypeStubs]
+from fsfe_website_build.lib.misc import run_command
 
 if TYPE_CHECKING:
     import multiprocessing.pool
@@ -44,7 +44,13 @@ def _copy_minify_file(
         target_file.parent.mkdir(parents=True, exist_ok=True)
         # Do not minify pre minified files
         if ".min" not in source_file.suffixes:
-            minify.file(mime, str(source_file), str(target_file))
+            # Use cli based minify if possible
+            if shutil.which("minify") is not None:
+                run_command(["minify", str(source_file), "-o", str(target_file)])
+            else:
+                import minify  # pyright: ignore [reportMissingTypeStubs]  # noqa: PLC0415
+
+                minify.file(mime, str(source_file), str(target_file))
         else:
             # Instead just copy them into place
             shutil.copyfile(source_file, target_file)

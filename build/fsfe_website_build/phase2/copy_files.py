@@ -148,10 +148,14 @@ def copy_files(source_dir: Path, pool: multiprocessing.pool.Pool, target: Path) 
         ]
         # Use cli based minify if possible
         if shutil.which("minify"):
-            for file in files:
-                _cli_copy_minify_file(target, source_dir, file)
+            pool.starmap(
+                _cli_copy_minify_file, ((target, source_dir, file) for file in files)
+            )
         else:
             # fallback to python module
+            # This has to be single threaded as there is an upstream bug that
+            # prevents multihreading the minifier
+            # https://github.com/tdewolff/minify/issues/535
             import minify  # pyright: ignore [reportMissingTypeStubs]  # noqa: PLC0415
 
             for file in files:

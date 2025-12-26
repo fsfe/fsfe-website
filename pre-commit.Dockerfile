@@ -1,24 +1,24 @@
-FROM debian:trixie-20260316
-
-COPY --from=ghcr.io/astral-sh/uv /uv /uvx /bin/
+FROM alpine
 
 # Install deps
-RUN apt-get update && apt-get install --yes --no-install-recommends \
+RUN apk add --no-cache \
+bash \
 composer \
 file \
 git \
 libxml2 \
 libxml2-utils \
-libxslt1.1 \
-node-less \
+libxslt \
+mediainfo \
 npm \
-php-zip \
+perl \
+php84-zip \
 rsync \
 shfmt \
-xsltproc
+uv 
 
-# Install prettier
-RUN npm install -g prettier
+# Install node deps
+RUN npm install -g prettier less
 # Install php cs fixer
 RUN composer global require friendsofphp/php-cs-fixer
 # Add composer to path

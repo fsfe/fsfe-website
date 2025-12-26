@@ -1,18 +1,24 @@
-FROM debian:13
-
-COPY --from=ghcr.io/astral-sh/uv:latest /uv /uvx /bin/
+FROM alpine:3.24
 
 # Install deps
-RUN apt-get update && apt-get install --yes --no-install-recommends \
-ca-certificates \
+RUN apk add --no-cache \
+bash \
 expect \
 git \
-node-less \
+npm \
 openssh-client \
-rsync
+python3 \
+rsync \
+uv
+
+# Install node deps
+# Alpine does not package lessc
+RUN npm install -g less
 
 # Set uv project env, to persist stuff moving dirs 
 ENV UV_PROJECT_ENVIRONMENT=/root/.cache/uv/venv
+# Use the python3 from apk. Fail instead of downloading another one
+ENV UV_PYTHON_DOWNLOADS=never
 
 # Set the workdir
 WORKDIR /website-source-during-build

@@ -1,27 +1,29 @@
-FROM debian:13
-
-COPY --from=ghcr.io/astral-sh/uv /uv /uvx /bin/
+FROM alpine:3.24
 
 # Install deps
-RUN apt-get update && apt-get install --yes --no-install-recommends \
+RUN apk add --no-cache \
 composer \
 git \
 libxml2 \
 libxml2-utils \
-node-less \
 npm \
-php-zip \
+php84-zip \
+python3 \
 rsync \
-shfmt
+shfmt \
+uv
 
-# Install prettier
-RUN npm install -g prettier
+# Install node deps
+# Alpine does not package lessc
+RUN npm install -g prettier less
 # Install php cs fixer
 RUN composer global require friendsofphp/php-cs-fixer
 # Add composer to path
 ENV PATH="/root/.composer/vendor/bin:$PATH"
 # Set uv project env, to persist stuff moving dirs 
 ENV UV_PROJECT_ENVIRONMENT=/root/.cache/uv/venv
+# Use the python3 from apk. Fail instead of downloading another one
+ENV UV_PYTHON_DOWNLOADS=never
 # Add vent to path
 ENV PATH="$UV_PROJECT_ENVIRONMENT/bin:$PATH"
 

@@ -65,7 +65,7 @@ steps:
       XDG_RUNTIME_DIR: "/run/user/1001"
       DOCKER_HOST: "unix:///run/user/1001/docker.sock"
       # Target use ipv4 proxies for noddack and gahn, as ipv6 broken.
-      TARGET: "www@proxy.noris.fsfeurope.org:fsfe.org/global/?10322,www@proxy.plutex.fsfeurope.org:fsfe.org/global/?10322"
+      TARGETS: "www@proxy.noris.fsfeurope.org:fsfe.org/global/?10322 www@proxy.plutex.fsfeurope.org:fsfe.org/global/?10322"
       FSFE_WEBSITE_KEY_PRIVATE:
         from_secret: KEY_PRIVATE
       FSFE_WEBSITE_KEY_PASSWORD:
@@ -83,7 +83,7 @@ steps:
       # If we are in a cron job, then do a full rebuild
       # Ideally the cron would set the flag itself, but drone does not support that.
       - if [ "$DRONE_BUILD_EVENT" = "cron" ]; then EXTRA_FLAGS="--full --clean-cache"; fi
-      - docker compose run --remove-orphans --build build --target "$TARGET" $EXTRA_FLAGS
+      - docker compose run --remove-orphans --build build --targets $TARGETS $EXTRA_FLAGS
       - docker compose down
     when:
       branch:
@@ -99,7 +99,7 @@ steps:
       XDG_RUNTIME_DIR: "/run/user/1001"
       DOCKER_HOST: "unix:///run/user/1001/docker.sock"
       # Target use ipv4 proxies for noddack and gahn, as ipv6 broken.
-      TARGET: "www@proxy.noris.fsfeurope.org:test.fsfe.org/global/?10322,www@proxy.plutex.fsfeurope.org:test.fsfe.org/global/?10322"
+      TARGETS: "www@proxy.noris.fsfeurope.org:test.fsfe.org/global/?10322 www@proxy.plutex.fsfeurope.org:test.fsfe.org/global/?10322"
       FSFE_WEBSITE_KEY_PRIVATE:
         from_secret: KEY_PRIVATE
       FSFE_WEBSITE_KEY_PASSWORD:
@@ -117,7 +117,7 @@ steps:
       # If we are in a cron job, then do a full rebuild
       # Ideally the cron would set the flag itself, but drone does not support that.
       - if [ "$DRONE_BUILD_EVENT" = "cron" ]; then EXTRA_FLAGS="--full --clean-cache"; fi
-      - docker compose run --remove-orphans --build build --target "$TARGET" $EXTRA_FLAGS
+      - docker compose run --remove-orphans --build build --targets $TARGETS $EXTRA_FLAGS
       - docker compose down
     when:
       branch:
@@ -145,6 +145,4 @@ volumes:
       path: /run/user/1001/docker.sock
 ---
 kind: signature
-hmac: 627a990b0ba4c6dc8aa43dda45f0d35cb3d3ada367c6db7e8b59c751e13ad5b2
-
-...
+hmac: 5f8becf08f74b7561bc7c06c023e234689d0b281806cbf37b96b12387266479d

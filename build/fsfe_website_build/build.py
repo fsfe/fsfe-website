@@ -87,15 +87,15 @@ def _build_parser() -> argparse.ArgumentParser:
         action="store_true",
     )
     parser.add_argument(
-        "--target",
+        "--targets",
         help=dedent("""\
         Final dirs for websites to be build to.
         Can be a single path, or a comma separated list of valid rsync targets.
         Supports custom rsynx extension for specifying ports for ssh targets,
         name@host:path?port.
         """),
+        nargs="+",
         type=str,
-        default=None,
     )
     return parser
 
@@ -108,11 +108,20 @@ def _build_config_from_arguments(args: argparse.Namespace) -> GlobalBuildConfig:
         if args.sites is None
         else args.sites
     )
-    if args.target is None:
-        args.target = str(args.source.joinpath("output/final"))
-    args.stage = args.stage or any(char in args.target for char in "@:,")
+    if not args.targets:
+        args.targets = [str(args.source.joinpath("output/final"))]
+    args.stage = (
+        args.stage
+        # Multiple targets
+        or len(args.targets) > 1
+        # Has special char marking it as an rsync ssh target
+        or any(char in target for char in "@:" for target in args.targets)
+    )
     # And our derived settings we do not have as an argument
-    working_target = Path(args.source / "output/stage" if args.stage else args.target)
+    # args.targets is certain to be exactly one long if args.stage is not true
+    working_target = Path(
+        args.source / "output/stage" if args.stage else args.targets[0]
+    )
     all_languages = sorted(
         (path.name for path in args.source.glob("global/languages/??")),
     )
@@ -194,7 +203,7 @@ def _run_build(global_build_config: GlobalBuildConfig) -> None:
         logger.info("Starting Phase 3 - Global Conditional Finishing")
         if global_build_config.stage:
             stage_to_target(
-                global_build_config.working_target, global_build_config.target, pool
+                global_build_config.working_target, global_build_config.targets, pool
             )
 
     if global_build_config.serve:

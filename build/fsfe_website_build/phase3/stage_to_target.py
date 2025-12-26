@@ -37,7 +37,7 @@ def _rsync(stagedir: Path, target: str, port: int) -> None:
 
 
 def stage_to_target(
-    stagedir: Path, targets: str, pool: multiprocessing.pool.Pool
+    stagedir: Path, targets: list[str], pool: multiprocessing.pool.Pool
 ) -> None:
     """Use a multithreaded rsync to copy the stage dir to all targets."""
     logger.info("Rsyncing from stage dir to target dir(s)")
@@ -49,6 +49,6 @@ def stage_to_target(
                 (target if "?" not in target else target.split("?")[0]),
                 (int(target.split("?")[1]) if "?" in target else 22),
             )
-            for target in targets.split(",")
+            for target in targets
         ),
     )

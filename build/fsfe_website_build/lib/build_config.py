@@ -24,23 +24,26 @@ class GlobalBuildConfig:
     sites: list[Path]
     source: Path
     stage: bool
-    target: str
+    targets: list[str]
     working_target: Path
 
     def __post_init__(self) -> None:
         """Validate build settings."""
-        # All languages are two letter codes
-        for lang in self.languages:
-            if len(lang) != 2 or not lang.isalpha():  # noqa: PLR2004
-                message = (
-                    f"Language code '{lang}' must be a two-letter alphabetic string."
-                )
-                raise ValueError(message)
+        # Language validation
+        if self.languages:
+            # All languages are two letter codes
+            for lang in self.languages:
+                if len(lang) != 2 or not lang.isalpha():  # noqa: PLR2004
+                    message = (
+                        f"Language code '{lang}'"
+                        " must be a two-letter alphabetic string."
+                    )
+                    raise ValueError(message)
 
-        # All languages should exist in the global config
-        if any(lang not in self.all_languages for lang in self.languages):
-            message = "All languages must be in the 'all_languages' list."
-            raise ValueError(message)
+            # All languages should exist in the global config
+            if any(lang not in self.all_languages for lang in self.languages):
+                message = "All languages must be in the 'all_languages' list."
+                raise ValueError(message)
 
 
 @dataclass(frozen=True)

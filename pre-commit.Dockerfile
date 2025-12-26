@@ -10,6 +10,7 @@ libxml2 \
 libxml2-utils \
 libxslt \
 mediainfo \
+minify \
 npm \
 perl \
 php84-zip \

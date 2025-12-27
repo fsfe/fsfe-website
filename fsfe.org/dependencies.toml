@@ -1,6 +1,6 @@
 # Sources for the website
 # All repos should be mirrored to https://git.fsfe.org/fsfe-system-hackers-mirrors
-# 
+#
 # SCRIPTS
 [jquery]
 repo = "https://git.fsfe.org/fsfe-system-hackers-mirrors/jquery"
@@ -9,6 +9,7 @@ file_sets = [
   { source = "/dist/jquery.min.js", target = "scripts/thirdparty/" },
   { source = "/dist/jquery.min.map", target = "scripts/thirdparty/" },
 ]
+
 [lunr]
 repo = "https://git.fsfe.org/fsfe-system-hackers-mirrors/lunr.js"
 rev = "v2.3.9"

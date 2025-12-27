@@ -4,13 +4,14 @@
 """Download the dependencies of a site, should it be necessary."""
 
 import logging
-from pathlib import Path
 from typing import TYPE_CHECKING
 
 from fsfe_website_build.globals import CACHE_DIR
 from fsfe_website_build.lib.misc import run_command
 
 if TYPE_CHECKING:
+    from pathlib import Path
+
     from fsfe_website_build.lib.site_config import Dependency
 
 logger = logging.getLogger(__name__)
@@ -18,7 +19,7 @@ logger = logging.getLogger(__name__)
 
 def fetch_sparse(cache: Path, source_site: Path, dependency: Dependency) -> None:
     """Clone source, and move necessary files into place with source/dest pairs."""
-    clone_dir = cache / f"{Path(dependency.repo).name}_{dependency.rev}"
+    clone_dir = cache / f"{dependency.repo.split('/')[-1]}_{dependency.rev}"
 
     if not (clone_dir / ".git").exists():
         clone_dir.mkdir(exist_ok=True)
@@ -62,7 +63,7 @@ def fetch_sparse(cache: Path, source_site: Path, dependency: Dependency) -> None
         # and so we remove that so joining gives us a proper path
         src = clone_dir / str(mapping.source).lstrip("/")
         target = source_site / mapping.target
-        target.mkdir(parents=True, exist_ok=True)
+        target.parent.mkdir(parents=True, exist_ok=True)
 
         run_command(
             [

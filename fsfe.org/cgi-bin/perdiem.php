@@ -15,36 +15,34 @@
 */
 
 use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\Exception;
-use PHPMailer\PHPMailer\SMTP;
 
-require 'PHPMailer/Exception.php';
-require 'PHPMailer/PHPMailer.php';
-require 'PHPMailer/SMTP.php';
+require 'thirdparty/PHPMailer/Exception.php';
+require 'thirdparty/PHPMailer/PHPMailer.php';
+require 'thirdparty/PHPMailer/SMTP.php';
 
 $html = ''; // create empty variable
-$csv = array(array("Employee number", "Employee name", "Date", "Amount (EUR)", "Recipient name", "Activity Tag", "Activity Text", "Category ID", "Category Text", "Event", "Description", "Receipt number")); // create array for CSV
+$csv = [['Employee number', 'Employee name', 'Date', 'Amount (EUR)', 'Recipient name', 'Activity Tag', 'Activity Text', 'Category ID', 'Category Text', 'Event', 'Description', 'Receipt number']]; // create array for CSV
 $csvfile = tmpfile();
 $csvfile_path = stream_get_meta_data($csvfile)['uri'];
 $reimb_total = 0;   // total reimbursement for early calculation
 
-$who = isset($_POST["who"]) ? $_POST["who"] : false;
-$activity = isset($_POST["activity"]) ? $_POST["activity"] : false;
-$activity_tag = explode("||", $activity)[0];
-$activity_text = explode("||", $activity)[1];
-$category_id = "66640";
-$category_text = "Per diem";
-$event = isset($_POST["event"]) ? $_POST["event"] : false;
-$extra = isset($_POST["extra"]) ? $_POST["extra"] : false;
-$mailopt = isset($_POST["mailopt"]) ? $_POST["mailopt"] : false;
-$defaults = isset($_POST["defaults"]) ? $_POST["defaults"] : false;
-$dest = isset($_POST["dest"]) ? $_POST["dest"] : false;
-$dest_other = isset($_POST["dest_other"]) ? $_POST["dest_other"] : false;
-$use = isset($_POST["use"]) ? $_POST["use"] : false;
-$date = isset($_POST["date"]) ? $_POST["date"] : false;
-$break = isset($_POST["break"]) ? $_POST["break"] : false;
-$lunch = isset($_POST["lunch"]) ? $_POST["lunch"] : false;
-$dinner = isset($_POST["dinner"]) ? $_POST["dinner"] : false;
+$who = isset($_POST['who']) ? $_POST['who'] : false;
+$activity = isset($_POST['activity']) ? $_POST['activity'] : false;
+$activity_tag = explode('||', $activity)[0];
+$activity_text = explode('||', $activity)[1];
+$category_id = '66640';
+$category_text = 'Per diem';
+$event = isset($_POST['event']) ? $_POST['event'] : false;
+$extra = isset($_POST['extra']) ? $_POST['extra'] : false;
+$mailopt = isset($_POST['mailopt']) ? $_POST['mailopt'] : false;
+$defaults = isset($_POST['defaults']) ? $_POST['defaults'] : false;
+$dest = isset($_POST['dest']) ? $_POST['dest'] : false;
+$dest_other = isset($_POST['dest_other']) ? $_POST['dest_other'] : false;
+$use = isset($_POST['use']) ? $_POST['use'] : false;
+$date = isset($_POST['date']) ? $_POST['date'] : false;
+$break = isset($_POST['break']) ? $_POST['break'] : false;
+$lunch = isset($_POST['lunch']) ? $_POST['lunch'] : false;
+$dinner = isset($_POST['dinner']) ? $_POST['dinner'] : false;
 
 // Separate employee name parameters
 $who_verbose = explode('||', $who)[0];
@@ -54,11 +52,12 @@ $who = explode('||', $who)[1];
 // FUNCTIONS
 function errexit($msg)
 {
-    exit("Error: " . $msg . "<br/><br/>To avoid losing your data, press the back button in your browser");
+    exit('Error: '.$msg.'<br/><br/>To avoid losing your data, press the back button in your browser');
 }
 function replace_page($temp, $content)
 {
-    $vars = array(':RESULT:' => $content);
+    $vars = [':RESULT:' => $content];
+
     return str_replace(array_keys($vars), $vars, $temp);
 }
 /* Snippet Begin:
@@ -70,7 +69,7 @@ function filter_filename($filename, $beautify = true)
     // sanitize filename
     $filename = preg_replace(
         '~
-    [<>:"/\\|?*]|            # file system reserved https://en.wikipedia.org/wiki/Filename#Reserved_characters_and_words
+    [<>:"/\|?*]|            # file system reserved https://en.wikipedia.org/wiki/Filename#Reserved_characters_and_words
     [\x00-\x1F]|             # control characters http://msdn.microsoft.com/en-us/library/windows/desktop/aa365247%28v=vs.85%29.aspx
     [\x7F\xA0\xAD]|          # non-printing characters DEL, NO-BREAK SPACE, SOFT HYPHEN
     [#\[\]@!$&\'()+,;=]|     # URI reserved https://tools.ietf.org/html/rfc3986#section-2.2
@@ -87,47 +86,46 @@ function filter_filename($filename, $beautify = true)
     }
     // maximize filename length to 255 bytes http://serverfault.com/a/9548/44086
     $ext = pathinfo($filename, PATHINFO_EXTENSION);
-    $filename = mb_strcut(pathinfo($filename, PATHINFO_FILENAME), 0, 255 - ($ext ? strlen($ext) + 1 : 0), mb_detect_encoding($filename)) . ($ext ? '.' . $ext : '');
-    return $filename;
+
+    return mb_strcut(pathinfo($filename, PATHINFO_FILENAME), 0, 255 - ($ext ? strlen($ext) + 1 : 0), mb_detect_encoding($filename)).($ext ? '.'.$ext : '');
 }
 function beautify_filename($filename)
 {
     // reduce consecutive characters
-    $filename = preg_replace(array(
-      // "file   name.zip" becomes "file-name.zip"
-      '/ +/',
-      // "file___name.zip" becomes "file-name.zip"
-      '/_+/',
-      // "file---name.zip" becomes "file-name.zip"
-      '/-+/'
-    ), '-', $filename);
-    $filename = preg_replace(array(
-      // "file--.--.-.--name.zip" becomes "file.name.zip"
-      '/-*\.-*/',
-      // "file...name..zip" becomes "file.name.zip"
-      '/\.{2,}/'
-    ), '.', $filename);
+    $filename = preg_replace([
+        // "file   name.zip" becomes "file-name.zip"
+        '/ +/',
+        // "file___name.zip" becomes "file-name.zip"
+        '/_+/',
+        // "file---name.zip" becomes "file-name.zip"
+        '/-+/',
+    ], '-', $filename);
+    $filename = preg_replace([
+        // "file--.--.-.--name.zip" becomes "file.name.zip"
+        '/-*\.-*/',
+        // "file...name..zip" becomes "file.name.zip"
+        '/\.{2,}/',
+    ], '.', $filename);
     // lowercase for windows/unix interoperability http://support.microsoft.com/kb/100625
     $filename = mb_strtolower($filename, mb_detect_encoding($filename));
-    // ".file-name.-" becomes "file-name"
-    $filename = trim($filename, '.-');
-    return $filename;
-}
-/* Snippet End */
 
+    // ".file-name.-" becomes "file-name"
+    return trim($filename, '.-');
+}
+// Snippet End
 
 // Take currency and meal rates for the default country. Other home countries are not supported.
-$defaults = explode("/", $defaults);
-$currency = " " . $defaults[0];            // currency
+$defaults = explode('/', $defaults);
+$currency = ' '.$defaults[0];            // currency
 $rate_breakf = floatval($defaults[1]);    // breakfast rate
 $rate_lunch = floatval($defaults[2]);    // lunch rate
 $rate_dinner = floatval($defaults[3]);    // dinner rate
 
 // eligible amount per day
-if ($dest === 'other') {
+if ('other' === $dest) {
     $dest = $dest_other;  // if other destination, just take this value
 } else {
-    $pattern = "/([0-9.]+)?\/([0-9.]+)?/";  // define pattern something like "/12/24/"
+    $pattern = '/([0-9.]+)?\/([0-9.]+)?/';  // define pattern something like "/12/24/"
     $dest = preg_match($pattern, $dest, $match, PREG_OFFSET_CAPTURE); // actually search for it
     $dest = $match[0][0]; // matches are on 2nd level in an array
 }
@@ -138,12 +136,12 @@ $maxamount_trav = floatval($maxamount[0]);  // first half
 $maxamount_full = floatval($maxamount[1]);  // second half
 
 // Prepare output table
-if ($mailopt === "onlyme") {
-    $html .= "<p><strong>ATTENTION: The email has only been sent to you, not to the financial team!</strong></p>";
-} elseif ($mailopt === "none") {
-    $html .= "<p><strong>ATTENTION: You have configured to not send any email!</strong></p>";
+if ('onlyme' === $mailopt) {
+    $html .= '<p><strong>ATTENTION: The email has only been sent to you, not to the financial team!</strong></p>';
+} elseif ('none' === $mailopt) {
+    $html .= '<p><strong>ATTENTION: You have configured to not send any email!</strong></p>';
 }
-$html .= "<p>This per diem statement is made by <strong>$who_verbose</strong>.</p>
+$html .= "<p>This per diem statement is made by <strong>{$who_verbose}</strong>.</p>
 <table class='table table-striped'>
   <tr>
     <th>Date</th>
@@ -160,24 +158,23 @@ $html .= "<p>This per diem statement is made by <strong>$who_verbose</strong>.</
 // Prepare email
 $email = new PHPMailer();
 $email->isSMTP();
-$email->Host        = "mail.fsfe.org";
+$email->Host = 'mail.fsfe.org';
 // Settings on server
-$email->SMTPAuth    = false;
-$email->Port    = 25;
+$email->SMTPAuth = false;
+$email->Port = 25;
 // Settings for local debug
-//$email->SMTPAuth   = true;
-//$email->Port       = 587;
-//$email->Username   = 'fsfe_user';
-//$email->Password   = 'fsfe_pass';
-//$email->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
-$email->SetFrom($who . "@fsfe.org", $who_verbose);
-$email->CharSet = "UTF-8";
-$email->Subject     = "=?UTF-8?B?" . base64_encode("per diem statement by $who_verbose for $activity_text") . "?=";
-if ($mailopt === "normal") {
-    $email->addAddress("finance@lists.fsfe.org");
+// $email->SMTPAuth   = true;
+// $email->Port       = 587;
+// $email->Username   = 'fsfe_user';
+// $email->Password   = 'fsfe_pass';
+// $email->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+$email->SetFrom($who.'@fsfe.org', $who_verbose);
+$email->CharSet = 'UTF-8';
+$email->Subject = '=?UTF-8?B?'.base64_encode("per diem statement by {$who_verbose} for {$activity_text}").'?=';
+if ('normal' === $mailopt) {
+    $email->addAddress('finance@lists.fsfe.org');
 }
-$email->addAddress($who . "@fsfe.org");
-
+$email->addAddress($who.'@fsfe.org');
 
 foreach ($use as $d => $day) {  // calculate for each day
     // set "no" as value for day's variable if empty
@@ -194,30 +191,30 @@ foreach ($use as $d => $day) {  // calculate for each day
         $key = $d;
     }
 
-    if ($use[$d] === 'yes') { // only calculate if checkbox has been activated (day in use)
-        if ($d === 'out' || $d === 'return') {  // set amount of € for travel or full day
+    if ('yes' === $use[$d]) { // only calculate if checkbox has been activated (day in use)
+        if ('out' === $d || 'return' === $d) {  // set amount of € for travel or full day
             $reimb_day[$d] = $maxamount_trav;   // total max. reimburseable amount for this half day
         } else {
             $reimb_day[$d] = $maxamount_full;   // total max. reimburseable amount for this full day
         }
 
         // date
-        if ($date[$d] === '') {
-            $date[$d] = "Day " . $d;
+        if ('' === $date[$d]) {
+            $date[$d] = 'Day '.$d;
         }
         // breakfast
-        if ($break[$d] !== "yes") {
+        if ('yes' !== $break[$d]) {
             // if meal paid by someone else: total amount for today =
             // MINUS total possible amount for a FULL day * rate for this meal
             // no matter whether today is a full or a half day
             $reimb_day[$d] = $reimb_day[$d] - $maxamount_full * $rate_breakf;
         }
         // lunch
-        if ($lunch[$d] !== "yes") {
+        if ('yes' !== $lunch[$d]) {
             $reimb_day[$d] = $reimb_day[$d] - $maxamount_full * $rate_lunch;
         }
         // dinner
-        if ($dinner[$d] !== "yes") {
+        if ('yes' !== $dinner[$d]) {
             $reimb_day[$d] = $reimb_day[$d] - $maxamount_full * $rate_dinner;
         }
 
@@ -233,42 +230,41 @@ foreach ($use as $d => $day) {  // calculate for each day
         $reimb_day[$d] = number_format($reimb_day[$d], 2, ',', '');
 
         // Remarks, explanation what has been self-paid
-        $remarks[$d] = "";
-        if ($break[$d] === "yes") {
-            $remarks[$d] .= "breakfast+";
+        $remarks[$d] = '';
+        if ('yes' === $break[$d]) {
+            $remarks[$d] .= 'breakfast+';
         }
-        if ($lunch[$d] === "yes") {
-            $remarks[$d] .= "lunch+";
+        if ('yes' === $lunch[$d]) {
+            $remarks[$d] .= 'lunch+';
         }
-        if ($dinner[$d] === "yes") {
-            $remarks[$d] .= "dinner";
+        if ('yes' === $dinner[$d]) {
+            $remarks[$d] .= 'dinner';
         }
-        if ($break[$d] != "yes" && $lunch[$d] != "yes" && $dinner[$d] != "yes") {
-            $remarks[$d] = "nothing";
+        if ('yes' != $break[$d] && 'yes' != $lunch[$d] && 'yes' != $dinner[$d]) {
+            $remarks[$d] = 'nothing';
         }
-        if ($break[$d] === "yes" && $lunch[$d] === "yes" && $dinner[$d] === "yes") {
-            $remarks[$d] = "everything";
+        if ('yes' === $break[$d] && 'yes' === $lunch[$d] && 'yes' === $dinner[$d]) {
+            $remarks[$d] = 'everything';
         }
-        $remarks[$d] = preg_replace("/\+$/", "", $remarks[$d]);
-        $remarks[$d] .= " self-paid";
+        $remarks[$d] = preg_replace('/\+$/', '', $remarks[$d]);
+        $remarks[$d] .= ' self-paid';
 
         // HTML output for this day
         $html .= "
     <tr>
-      <td>$date[$d]</td>
-      <td>$reimb_day[$d]</td>
-      <td>$who_verbose</td>
-      <td>$activity_tag</td>
-      <td>$activity_text</td>
-      <td>$category_id</td>
-      <td>$category_text</td>
-      <td>$event</td>
-      <td>$remarks[$d]</td>
+      <td>{$date[$d]}</td>
+      <td>{$reimb_day[$d]}</td>
+      <td>{$who_verbose}</td>
+      <td>{$activity_tag}</td>
+      <td>{$activity_text}</td>
+      <td>{$category_id}</td>
+      <td>{$category_text}</td>
+      <td>{$event}</td>
+      <td>{$remarks[$d]}</td>
     </tr>";
 
         // CSV for this receipt
-        $csv[$key] = array($who_empnumber, $who_verbose, $date[$d], $reimb_day[$d], $who_verbose, $activity_tag, $activity_text, $category_id, $category_text, $event, $remarks[$d], "");
-
+        $csv[$key] = [$who_empnumber, $who_verbose, $date[$d], $reimb_day[$d], $who_verbose, $activity_tag, $activity_text, $category_id, $category_text, $event, $remarks[$d], ''];
     } // if day is used
 } // foreach
 
@@ -276,13 +272,13 @@ foreach ($use as $d => $day) {  // calculate for each day
 foreach ($csv as $fields) {
     fputcsv($csvfile, $fields, ';', '"', '"');
 }
-$email->addAttachment($csvfile_path, filter_filename($date[$d]."-"."pd" ."-". $who ."-". $activity_tag ."-". $event . ".csv"));
+$email->addAttachment($csvfile_path, filter_filename($date[$d].'-pd-'.$who.'-'.$activity_tag.'-'.$event.'.csv'));
 
 // Prepare email body
 $email_body = "Hi,
 
-This is a per diem statement by $who_verbose for
-$activity_tag ($activity_text),
+This is a per diem statement by {$who_verbose} for
+{$activity_tag} ({$activity_text}),
 sent via <https://fsfe.org/internal/pd>.
 
 Please find the expenses attached.";
@@ -291,22 +287,22 @@ Please find the expenses attached.";
 $reimb_total = number_format($reimb_total, 2, ',', '');
 
 // Finalise output table
-$html .= "<tr><td><strong>Total:</strong></td><td><strong>$reimb_total $currency</strong></td>";
+$html .= "<tr><td><strong>Total:</strong></td><td><strong>{$reimb_total} {$currency}</strong></td>";
 $html .= "<td colspan='8'></td></tr>";
-$html .= "</table>";
+$html .= '</table>';
 if ($extra) {
-    $html .= "<p>Extra remarks: <br />$extra</p>";
+    $html .= "<p>Extra remarks: <br />{$extra}</p>";
 
     $email_body .= "
 
 The sender added the following comment:
 
-$extra";
+{$extra}";
 }
 
 // Send email, and delete attachments
 $email->Body = $email_body;
-if ($mailopt === "normal" || $mailopt === "onlyme") {
+if ('normal' === $mailopt || 'onlyme' === $mailopt) {
     $email->send();
     $html .= $email->ErrorInfo;
 }

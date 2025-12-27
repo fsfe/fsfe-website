@@ -14,9 +14,7 @@ pre-commit:
       fail_on_changes: "ci"
     php-cs-fixer:
       glob: "*.php"
-      exclude:
-        - "fsfe.org/cgi-bin/PHPMailer/*.php"
-      run: for file in {staged_files}; do php-cs-fixer --no-interaction fix "$file"; done
+      run: php-cs-fixer --no-interaction --config=.php-cs-fixer.dist.php fix {staged_files}
       stage_fixed: true
       fail_on_changes: "ci"
     shfmt:
@@ -37,9 +35,9 @@ pre-commit:
         - "*.yml"
       run: prettier --write {staged_files}
       stage_fixed: true
-    taplo:
+    tombi:
       glob: "*.toml"
-      run: taplo format {staged_files}
+      run: tombi format {staged_files}
       stage_fixed: true
       fail_on_changes: "ci"
     format-xsl:

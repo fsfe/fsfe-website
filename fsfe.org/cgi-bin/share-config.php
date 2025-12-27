@@ -6,10 +6,10 @@
 */
 
 $config = [
-  'fediverseuser' => '@fsfe@mastodon.social',
-  'diasporauser' => '@{fsfe@diasp.eu}',
-  'twitteruser' => 'fsfe',
-  'flattruser' => 'fsfe',
-  'supporturl' => 'https://my.fsfe.org/donate?referrer=share',
-  'sharepic' => 'https://sharepic.fsfe.org'
+    'fediverseuser' => '@fsfe@mastodon.social',
+    'diasporauser' => '@{fsfe@diasp.eu}',
+    'twitteruser' => 'fsfe',
+    'flattruser' => 'fsfe',
+    'supporturl' => 'https://my.fsfe.org/donate?referrer=share',
+    'sharepic' => 'https://sharepic.fsfe.org',
 ];

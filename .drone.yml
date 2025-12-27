@@ -19,13 +19,12 @@ steps:
         path: /run/user/1001/docker.sock
     commands:
       - export FSFE_WEBSITE_HOST_SOURCE_CODE=$(docker container inspect "$HOSTNAME" --format '{{ range .Mounts }}{{ if eq .Destination "/drone/src" }}{{ .Source }}{{ end }}{{ end }}')
-      - docker ps && echo "tampered with"
       - echo "DRONE_COMMIT_BRANCH ${DRONE_COMMIT_BRANCH}"
       - echo "DRONE_COMMIT_REF ${DRONE_COMMIT_REF}"
-      - PROJECT="$(echo "fsfe-website-pre-commit-${DRONE_COMMIT_REF}" | tr "/" "-")"
-      - docker compose -p "$PROJECT" down
-      - docker compose -p "$PROJECT" run --remove-orphans --build pre-commit "origin/${DRONE_COMMIT_BRANCH}"
-      - docker compose -p "$PROJECT" down
+      - export COMPOSE_PROJECT_NAME="$(echo "fsfe-website-pre-commit-${DRONE_COMMIT_REF}" | tr "/" "-")"
+      - docker compose down
+      - docker compose run --remove-orphans --build pre-commit "origin/${DRONE_COMMIT_BRANCH}"
+      - docker compose down
 
   # Test building the deploy docker image
   - name: test-build-docker-image
@@ -73,20 +72,19 @@ steps:
         from_secret: KEY_PASSWORD
       FSFE_WEBSITE_GIT_TOKEN:
         from_secret: BUILD_TOKEN
-      PROJECT: fsfe-website-master
+      COMPOSE_PROJECT_NAME: fsfe-website-master
     volumes:
       # Mounting Docker socket of rootless docker user
       - name: dockersock
         path: /run/user/1001/docker.sock
     commands:
       - export FSFE_WEBSITE_HOST_SOURCE_CODE=$(docker container inspect "$HOSTNAME" --format '{{ range .Mounts }}{{ if eq .Destination "/drone/src" }}{{ .Source }}{{ end }}{{ end }}')
-      - docker ps && echo "tampered with"
-      - docker compose -p "$PROJECT" down
+      - docker compose down
       # If we are in a cron job, then do a full rebuild
       # Ideally the cron would set the flag itself, but drone does not support that.
-      - if [ "$DRONE_BUILD_EVENT" = "cron" ]; then EXTRA_FLAGS="--full"; fi
-      - docker compose -p "$PROJECT" run --remove-orphans --build build --target "$TARGET" $EXTRA_FLAGS
-      - docker compose -p "$PROJECT" down
+      - if [ "$DRONE_BUILD_EVENT" = "cron" ]; then EXTRA_FLAGS="--full --clean-cache"; fi
+      - docker compose run --remove-orphans --build build --target "$TARGET" $EXTRA_FLAGS
+      - docker compose down
     when:
       branch:
         - master
@@ -108,20 +106,19 @@ steps:
         from_secret: KEY_PASSWORD
       FSFE_WEBSITE_GIT_TOKEN:
         from_secret: BUILD_TOKEN
-      PROJECT: fsfe-website-test
+      COMPOSE_PROJECT_NAME: fsfe-website-test
     volumes:
       # Mounting Docker socket of rootless docker user
       - name: dockersock
         path: /run/user/1001/docker.sock
     commands:
       - export FSFE_WEBSITE_HOST_SOURCE_CODE=$(docker container inspect "$HOSTNAME" --format '{{ range .Mounts }}{{ if eq .Destination "/drone/src" }}{{ .Source }}{{ end }}{{ end }}')
-      - docker ps && echo "tampered with"
-      - docker compose -p "$PROJECT" down
+      - docker compose down
       # If we are in a cron job, then do a full rebuild
       # Ideally the cron would set the flag itself, but drone does not support that.
-      - if [ "$DRONE_BUILD_EVENT" = "cron" ]; then EXTRA_FLAGS="--full"; fi
-      - docker compose -p "$PROJECT" run --remove-orphans --build build --target "$TARGET" $EXTRA_FLAGS
-      - docker compose -p "$PROJECT" down
+      - if [ "$DRONE_BUILD_EVENT" = "cron" ]; then EXTRA_FLAGS="--full --clean-cache"; fi
+      - docker compose run --remove-orphans --build build --target "$TARGET" $EXTRA_FLAGS
+      - docker compose down
     when:
       branch:
         - test
@@ -148,6 +145,6 @@ volumes:
       path: /run/user/1001/docker.sock
 ---
 kind: signature
-hmac: aa5d8fd7cd515e165b861345495517924992c4e1ff86e16c9b1ed293fed7a565
+hmac: 627a990b0ba4c6dc8aa43dda45f0d35cb3d3ada367c6db7e8b59c751e13ad5b2
 
 ...

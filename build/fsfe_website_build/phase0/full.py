@@ -25,12 +25,10 @@ def full(source: Path) -> None:
         [
             "git",
             "--git-dir",
-            str(source) + "/.git",
+            str(source / ".git"),
             "clean",
-            "-fdx",
+            "-ffdx",
             "--exclude",
             "/.venv",
-            "--exclude",
-            "/.nltk_data",
         ],
     )

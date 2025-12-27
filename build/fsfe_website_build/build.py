@@ -11,6 +11,7 @@ from pathlib import Path
 from textwrap import dedent
 
 from .lib.misc import lang_from_filename
+from .phase0.clean_cache import clean_cache
 from .phase0.full import full
 from .phase0.global_symlinks import global_symlinks
 from .phase0.prepare_early_subdirectories import prepare_early_subdirectories
@@ -30,6 +31,11 @@ def _parse_arguments() -> argparse.Namespace:
     parser.add_argument(
         "--full",
         help="Force a full rebuild of all webpages.",
+        action="store_true",
+    )
+    parser.add_argument(
+        "--clean-cache",
+        help="Clean the global cache stored in the platform cache directory.",
         action="store_true",
     )
     parser.add_argument(
@@ -107,6 +113,8 @@ def build(args: argparse.Namespace) -> None:
     with multiprocessing.Pool(args.processes) as pool:
         logger.info("Starting phase 0 - Global Conditional Setup")
 
+        if args.clean_cache:
+            clean_cache()
         # TODO Should also be triggered whenever any build python file is changed
         if args.full:
             full(args.source)

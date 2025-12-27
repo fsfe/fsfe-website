@@ -62,38 +62,58 @@ def copy_files(source_dir: Path, pool: multiprocessing.pool.Pool, target: Path) 
         ".js": "application/javascript",
         ".svg": "image/svg+xml",
     }
-    # Here we copy everything we cannot minify
+    # get the special cases per site
+    special_case_file = source_dir / "required_deploy_files.txt"
+    stripped_lines = (
+        [line.strip() for line in special_case_file.read_text().split("\n")]
+        if special_case_file.exists()
+        else []
+    )
+    special_includes = [
+        file
+        for line in stripped_lines
+        if line and not line.startswith("#")
+        for file in source_dir.glob(line)
+    ]
 
+    # Here we copy everything we cannot minify
     pool.starmap(
         _copy_file,
         (
             (target, source_dir, file)
             for file in [
-                path
-                for path in source_dir.glob("**/*")
-                if path.is_file()
-                and path.suffix
-                not in
-                # Things we dont want over at all
-                [
-                    ".md",
-                    ".yml",
-                    ".gitignore",
-                    ".sources",
-                    ".xmllist",
-                    ".xhtml",
-                    ".xsl",
-                    ".xml",
-                    ".less",
-                    ".py",
-                    ".pyc",
-                    # and the things we can minify
-                    *minifiable_content.keys(),
-                ]
-                and path.name not in ["Makefile"]
+                # globbing of all files, exclude blacklist
+                *[
+                    path
+                    for path in source_dir.glob("**/*")
+                    if path.is_file()
+                    # Things we dont want over at all
+                    and path.suffix
+                    not in [
+                        ".less",
+                        ".md",
+                        ".py",
+                        ".pyc",
+                        ".sources",
+                        ".typed",
+                        ".xhtml",
+                        ".xml",
+                        ".xmllist",
+                        ".xsl",
+                        ".yml",
+                        # and the things we can minify
+                        *minifiable_content.keys(),
+                    ]
+                    and path.name
+                    not in [
+                        ".gitignore",
+                        "Makefile",
+                        "subdir-prio.txt",
+                    ]
+                ],
+                # special whitelist to include
+                *special_includes,
             ]
-            # Special case hard code pass over order items xml required by cgi script
-            + list(source_dir.glob("order/data/items.en.xml"))
         ),
     )
     # This has to be single threaded as their is an upstream bug that

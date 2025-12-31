@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--	see http://www.iso.org/iso/country_codes/iso_3166_code_lists.html
+	for code updates
+	see http://www.un.org/en/members/index.shtml for a list of
+	country names.
+
+	-->
+<!-- promo is European Economic Area plus a few manual additions where we want to send to -->
+<countryset>
+  <version>1</version>
+
+
+<country id="AF">אפגניסטן</country>
+<!--<country id="">Akrotiri and Dhekelia</country> The Sovereign Base Areas of Akrotiri and Dhekelia, Cyprus, Greece-->
+<country id="AX">איי אולנד</country>
+<country id="AL" yh4f="yes">אלבניה</country>
+<country id="DZ">אלג׳יריה</country>
+<country id="AS">סמואה האמריקאית</country>
+<country id="AD">אנדורה</country>
+<country id="AO">אנגולה</country>
+<country id="AI">אנגווילה</country>
+<country id="AQ">אנטארקטיקה</country>
+<country id="AG">אנטיגואה וברבודה</country>
+<country id="AR">ארגנטינה</country>
+<country id="AM">ארמניה</country>
+<country id="AW">ארובה</country>
+<!--<country id="">Ashmore and Cartier Islands</country>-->
+<country id="AU">אוסטרליה</country>
+<country id="AT" promo="yes" yh4f="yes">אוסטריה</country>
+<country id="AZ">אזרבייג׳ן</country>
+<country id="BS">איי הבהאמה</country><!-- Bahamas, The -->
+<country id="BH">בחריין</country>
+<country id="BD">בנגלדש</country>
+<country id="BB">ברבדוס</country>
+<!--<country id="">Bassas da India</country>-->
+<country id="BY">בלארוס</country>
+<country id="BE" promo="yes" yh4f="yes">בלגיה</country>
+<country id="BZ">בליז</country>
+<country id="BJ">בנין</country>
+<country id="BM">ברמודה</country>
+<country id="BT">בהוטן</country>
+<country id="BO">בוליביה (מדינת בוליביה הרב־לאומית)</country>
+<country id="BA" yh4f="yes">בוסניה והרצגובינה</country>
+<country id="BW">בוטסואנה</country>
+<country id="BV">אי בובה</country>
+<country id="BR">ברזיל</country>
+<country id="IO">הטריטוריה הבריטית באוקיינוס ההודי</country>
+<country id="VG">איי הבתולה הבריטיים</country>
+<country id="BN">ברוניי דארוסלאם</country>
+<country id="BG" promo="yes" yh4f="yes">בולגריה</country>
+<country id="BF">בורקינה פאסו</country>
+<country id="BI">בורונדי</country>
+<country id="KH">קמבודיה</country>
+<country id="CM">קמרון</country>
+<country id="CA">קנדה</country>
+<country id="CV">כף ורדה</country>
+<country id="KY">איי קיימן</country>
+<country id="CF">הרפובליקה המרכז־אפריקאית</country>
+<country id="TD">צ׳אד</country>
+<country id="CL">צ׳ילה</country>
+<country id="CN">סין</country>
+<country id="CX">אי חג המולד</country>
+<!--<country id="">Clipperton Island</country>-->
+<country id="CC">איי קוקוס (קילינג)</country>
+<country id="CO">קולומביה</country>
+<country id="KM">קומורוס</country>
+<country id="CG">קונגו (ברזוויל), הרפובליקה של</country>
+<country id="CK">איי קוק</country>
+<!--<country id="">Coral Sea Islands</country>Gay and Lesbian Kingdom of the Coral Sea Islands, Australia-->
+<country id="CR">קוסטה ריקה</country>
+<country id="CI">חוף השנהב</country>
+<country id="HR" promo="yes" yh4f="yes">קרואטיה</country>
+<country id="CU">קובה</country>
+<country id="CW">קוראסאו</country>
+<country id="CY" promo="yes" yh4f="yes">קפריסין</country>
+<country id="CZ" promo="yes" yh4f="yes">הרפובליקה הצ׳כית</country>
+<country id="KP">הרפובליקה העממית של קוריאה (קוריאה הצפונית)</country>
+<country id="CD">הרפובליקה הדמוקרטית של קונגו (קינשאסה)</country>
+<country id="DK" promo="yes" yh4f="yes">דנמרק</country>
+<country id="DJ">ג׳יבוטי</country>
+<country id="DM">דומיניקה</country>
+<country id="DO">הרפובליקה הדומיניקנית</country>
+<country id="EC">אקוודור</country>
+<country id="EG">מצרים</country>
+<country id="SV">אל סלבדור</country>
+<country id="GQ">גינאה המשוונית</country>
+<country id="ER">אריתריאה</country>
+<country id="EE" promo="yes" yh4f="yes">אסטוניה</country>
+<country id="ET">אתיופיה</country>
+<!--<country id="">Europa Island</country>-->
+<country id="FK">איי פוקלנד (איסלס מלווינס)</country>
+<country id="FO">איי פארו</country>
+<country id="FJ">פיג׳י</country>
+<country id="FI" promo="yes" yh4f="yes">פינלנד</country>
+<country id="FR" promo="yes" yh4f="yes">צרפת</country>
+<country id="GF">גיאנה הצרפתית</country>
+<country id="PF">פולינזיה הצרפתית</country>
+<country id="TF">הארצות הדרומיות והאנטארקטיות של צרפת</country>
+<country id="GA">גבון</country>
+<country id="GM">גמביה</country>
+<!--<country id="">Gaza Strip</country> see Palestinian territories-->
+<country id="GE">גאורגיה</country>
+<country id="DE" promo="yes" yh4f="yes">גרמניה</country>
+<country id="GH">גאנה</country>
+<country id="GI">גיברלטר</country>
+<!--<country id="">Glorioso Islands</country>-->
+<country id="GR" promo="yes" yh4f="yes">יוון</country>
+<country id="GL">גרינלנד</country>
+<country id="GD">גרנדה</country>
+<country id="GP">גוואדלופ</country>
+<country id="GU">גואם</country>
+<country id="GT">גואטמלה</country>
+<country id="GG">גרנזי</country>
+<country id="GN">גינאה</country>
+<country id="GW">גינאה ביסאו</country>
+<country id="GY">גיאנה</country>
+<country id="HT">האיטי</country>
+<country id="HM">האי הרד ואיי מקדונלד</country>
+<country id="HN">הונדורס</country>
+<country id="HK">הונג קונג</country>
+<country id="HU" promo="yes" yh4f="yes">הונגריה</country>
+<country id="IS" promo="yes" yh4f="yes">איסלנד</country>
+<country id="IN">הודו</country>
+<country id="ID">אינדונזיה</country>
+<country id="IR">איראן (הרפובליקה האסלאמית של איראן)</country>
+<country id="IQ">עיראק</country>
+<country id="IE" promo="yes" yh4f="yes">אירלנד</country>
+<country id="IM">האי מאן</country>
+<country id="IL">ישראל</country>
+<country id="IT" promo="yes" yh4f="yes">איטליה</country>
+<country id="JM">ג׳מייקה</country>
+<country id="SJ">יאן מאיין</country>
+<country id="JP">יפן</country>
+<country id="JE">ג׳רזי</country>
+<country id="JO">ירדן</country>
+<!--<country id="">Juan de Nova Island</country>-->
+<country id="KZ">קזחסטן</country>
+<country id="KE">קניה</country>
+<country id="KI">קיריבס</country>
+<country id="KW">כווית</country>
+<country id="KG">קירגיזסטן</country>
+<country id="LA">הרפובליקה הדמוקרטית של לאו</country>
+<country id="LV" promo="yes" yh4f="yes">לטביה</country>
+<country id="LB">לבנון</country>
+<country id="LS">לסוטו</country>
+<country id="LR">ליבריה</country>
+<country id="LY">לוב</country>
+<country id="LI" promo="yes" yh4f="yes">ליכטנשטיין</country>
+<country id="LT" promo="yes" yh4f="yes">ליטא</country>
+<country id="LU" promo="yes" yh4f="yes">לוקסמבורג</country>
+<country id="MO">מקאו</country>
+<country id="MG">מדגסקר</country>
+<country id="MW">מלאווי</country>
+<country id="MY">מלזיה</country>
+<country id="MV">מלדיביים</country>
+<country id="ML">מאלי</country>
+<country id="MT" promo="yes" yh4f="yes">מלטה</country>
+<country id="MH">איי מרשל</country>
+<country id="MQ">מרטיניק</country>
+<country id="MR">מאוריטניה</country>
+<country id="MU">מאוריציוס</country>
+<country id="YT">מאיוט</country>
+<country id="MX">מקסיקו</country>
+<country id="FM">מיקרונזיה (המדינות הפדרטיביות של)</country>
+<country id="MC">מונקו</country>
+<country id="MN">מונגוליה</country>
+<country id="ME" yh4f="yes">מונטנגרו</country>
+<country id="MS">מונסראט</country>
+<country id="MA">מרוקו</country>
+<country id="MZ">מוזמביק</country>
+<country id="MM">מיאנמר</country>
+<country id="NA">נמיביה</country>
+<country id="NR">נאורו</country>
+<!--<country id="">Navassa Island</country>-->
+<country id="NP">נפאל</country>
+<country id="NL" promo="yes" yh4f="yes">הולנד</country>
+<country id="NC">קלדוניה החדשה</country>
+<country id="NZ">ניו זילנד</country>
+<country id="NI">ניקרגואה</country>
+<country id="NE">ניז׳ר</country>
+<country id="NG">ניגריה</country>
+<country id="NU">ניואה</country>
+<country id="NF">אי נורפוק</country>
+<country id="MK" yh4f="yes">צפון מקדוניה</country>
+<country id="MP">איי מריאנה הצפוניים</country>
+<country id="NO" promo="yes" yh4f="yes">נורווגיה</country>
+<country id="OM">עומאן</country>
+<country id="PK">פקיסטן</country>
+<country id="PW">פלאו</country>
+<country id="PS">הרשות הפלסטינית (רצועת עזה והגדה המערבית)</country>
+<country id="PA">פנמה</country>
+<country id="PG">פפואה גינאה החדשה</country>
+<!--<country id="">Paracel Islands</country>-->
+<country id="PY">פרגוואי</country>
+<country id="PE">פרו</country>
+<country id="PH">הפיליפינים</country>
+<country id="PN">איי פיטקרן</country>
+<country id="PL" promo="yes" yh4f="yes">פולין</country>
+<country id="PT" promo="yes" yh4f="yes">פורטוגל</country>
+<country id="PR">פוארטו ריקו</country>
+<country id="QA">קטר</country>
+<country id="KR">הרפובליקה של קוריאה (קוריאה הדרומית)</country>
+<country id="MD" yh4f="yes">רפובליקת מולדובה</country>
+<country id="RE">ראוניון</country>
+<country id="RO" promo="yes" yh4f="yes">רומניה</country>
+<country id="RU">רוסיה (הרפובליקה הרוסית)</country>
+<country id="RW">רואנדה</country>
+<country id="SH">סנט הלנה</country>
+<country id="KN">סנט קיטס ונוויס</country>
+<country id="LC">סנט לוסיה</country>
+<country id="PM">סנט פייר ומיקלון</country>
+<country id="VC">סנט וינסנט והגרנדינים</country>
+<country id="WS">סמואה</country>
+<country id="SM">סן מרינו</country>
+<country id="ST">סאו טומה ופרינסיפה</country>
+<country id="SA">ערב הסעודית</country>
+<country id="SN">סנגל</country>
+<country id="RS" yh4f="yes">סרביה</country>
+<country id="SC">סיישל</country>
+<country id="SL">סיירה לאון</country>
+<country id="SG">סינגפור</country>
+<country id="SX">סנט מארטן</country>
+<country id="SK" promo="yes" yh4f="yes">סלובקיה</country>
+<country id="SI" promo="yes" yh4f="yes">סלובניה</country>
+<country id="SB">איי שלמה</country>
+<country id="SO">סומליה</country>
+<country id="ZA">דרום אפריקה</country>
+<country id="GS">איי ג׳ורג׳יה הדרומית ואיי סנדוויץ׳ הדרומיים</country>
+<country id="SS">דרום סודאן (ג׳ובה)</country>
+<country id="ES" promo="yes" yh4f="yes">ספרד</country>
+<!--<country id="">Spratly Islands</country>-->
+<country id="LK">סרי לנקה</country>
+<country id="SD">סודאן (ח׳רטום)</country>
+<country id="SR">סורינאם</country>
+<country id="SJ">סבאלברד</country>
+<country id="SZ">סווזילנד</country>
+<country id="SE" promo="yes" yh4f="yes">שבדיה</country>
+<country id="CH" promo="yes" yh4f="yes">שווייץ</country>
+<country id="SY">הרפובליקה הערבית הסורית</country>
+<country id="TW">טאיוואן</country>
+<country id="TJ">טג׳יקיסטן</country>
+<country id="TH">תאילנד</country>
+<country id="TL">מזרח טימור</country>
+<country id="TG">טוגו</country>
+<country id="TK">טוקלאו</country>
+<country id="TO">טונגה</country>
+<country id="TT">טרינידד וטובגו</country>
+<!--<country id="">Tromelin Island</country>-->
+<country id="TN">תוניסיה</country>
+<country id="TR" yh4f="yes">טורקיה</country>
+<country id="TM">טורקמניסטן</country>
+<country id="TC">איי טרקס וקייקוס</country>
+<country id="TV">טובאלו</country>
+<country id="UG">אוגנדה</country>
+<country id="UA" yh4f="yes">אוקראינה</country>
+<country id="AE">איחוד האמירויות הערביות</country>
+<country id="GB" promo="yes" yh4f="yes">הממלכה המאוחדת של בריטניה הגדולה וצפון אירלנד</country>
+<country id="TZ">הרפובליקה המאוחדת של טנזניה</country>
+<country id="US">ארצות הברית של אמריקה</country>
+<country id="UY">אורוגוואי</country>
+<country id="UZ">אוזבקיסטן</country>
+<country id="VU">ונואטו</country>
+<country id="VA">הוותיקן (הכס הקדוש)</country>
+<country id="VE">ונצואלה (הרפובליקה הבוליברית של)</country>
+<country id="VN">וייטנאם</country>
+<country id="VG">איי הבתולה</country>
+<!--<country id="">Wake Island</country>-->
+<country id="WF">ואליס ופוטונה</country>
+<!--<country id="">West Bank</country> see Palestinian territories-->
+<country id="EH">סהרה המערבית</country>
+<country id="YE">תימן</country>
+<country id="ZM">זמביה</country>
+<country id="ZW">זימבבואה</country>
+
+</countryset>

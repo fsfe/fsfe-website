@@ -3,6 +3,12 @@
 use CGI;
 use Digest::SHA qw(sha1_hex);
 
+binmode(STDOUT, ":utf8");
+
+# -----------------------------------------------------------------------------
+# Get parameters
+# -----------------------------------------------------------------------------
+
 my $query = new CGI;
 
 my $reference = $query->param("reference");
@@ -13,51 +19,18 @@ $language =~ s/\W//g;
 my $lang = substr($language, 0, 2);
 my $amount = substr($reference, 9, 3);
 my $amount_f = sprintf("%.2f", $amount);
-my $amount100 = $amount * 100;
 
 # -----------------------------------------------------------------------------
-# Generate form for ConCardis payment
+# Lead user to payment page
 # -----------------------------------------------------------------------------
-
-my $passphrase = "Only4TestingPurposes";
-my $shastring = 
-    "ACCEPTURL=https://fsfe.org/order/thankyou.$lang.html$passphrase" .
-    "AMOUNT=$amount100$passphrase" .
-    "CANCELURL=https://fsfe.org/order/cancel.$lang.html$passphrase" .
-    "CURRENCY=EUR$passphrase" .
-    "LANGUAGE=$language$passphrase" .
-    "ORDERID=$reference$passphrase" .
-    "PMLISTTYPE=2$passphrase" .
-    "PSPID=40F00871$passphrase" .
-    "TP=payment-with-bank.html$passphrase";
-my $shasum = uc(sha1_hex($shastring));
-my $form = "      <!-- payment parameters -->\n" .
-    "      <input type=\"hidden\" name=\"PSPID\"        value=\"40F00871\"/>\n" .
-    "      <input type=\"hidden\" name=\"orderID\"      value=\"$reference\"/>\n" .
-    "      <input type=\"hidden\" name=\"amount\"       value=\"$amount100\"/>\n" .
-    "      <input type=\"hidden\" name=\"currency\"     value=\"EUR\"/>\n" .
-    "      <input type=\"hidden\" name=\"language\"     value=\"$language\"/>\n" .
-    "      <!-- interface template -->\n" .
-    "      <input type=\"hidden\" name=\"TP\"           value=\"payment-with-bank.html\"/>\n" .
-    "      <input type=\"hidden\" name=\"PMListType\"   value=\"2\"/>\n" .
-    "      <!-- post-payment redirection -->\n" .
-    "      <input type=\"hidden\" name=\"accepturl\"    value=\"https://fsfe.org/order/thankyou.$lang.html\"/>\n" .
-    "      <input type=\"hidden\" name=\"cancelurl\"    value=\"https://fsfe.org/order/cancel.$lang.html\"/>\n" .
-    "      <!-- SHA1 signature -->\n" .
-    "      <input type=\"hidden\" name=\"SHASign\"      value=\"$shasum\"/>";
-
-# -----------------------------------------------------------------------------
-# Lead user to "thankyou" page
-# -----------------------------------------------------------------------------
-binmode(STDOUT, ":utf8");
 
 print "Content-type: text/html\n\n";
 open TEMPLATE,'<:raw:encoding(utf-8)',
   $ENV{"DOCUMENT_ROOT"} . "/order/tmpl-thankyou." . $lang . ".html";
 while (<TEMPLATE>) {
-  s/:AMOUNT:/$amount_f/g;
-  s/:REFERENCE:/$reference/g;
-  s/:FORM:/$form/g;
-  print;
+    s/:AMOUNT:/$amount_f/g;
+    s/:EMAIL/$email/g;
+    s/:REFERENCE:/$reference/g;
+    print;
 }
 close TEMPLATE;

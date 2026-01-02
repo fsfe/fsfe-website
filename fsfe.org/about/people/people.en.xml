@@ -195,7 +195,7 @@
     <link>http://jancborchardt.net</link>
     <avatar>borchardt.jpg</avatar>
     <fingerprint>ECD0C4A3A2FC72B354E4FC78CBD846FC845CBE17</fingerprint>
-    <keyhref>http://keys.gnupg.net/pks/lookup?op=get&amp;search=0xECD0C4A3A2FC72B354E4FC78CBD846FC845CBE17</keyhref>
+    <!-- <keyhref>http://keys.gnupg.net/pks/lookup?op=get&amp;search=0xECD0C4A3A2FC72B354E4FC78CBD846FC845CBE17</keyhref> -->
   </person>
 
   <person id="brooke-smith">
@@ -316,7 +316,7 @@
     <email>tobiasd@fsfe.org</email>
     <team>core</team>
     <employee>full/m</employee>
-    <keyhref>https://keys.fsfe.org/tobiasd@fsfe.org.asc</keyhref>
+    <keyhref>/about/people/tobiasd/tobiasd@fsfe.org.asc</keyhref>
     <fingerprint>23EEF484FDF8291CBA09A40625FE376FF17694A1</fingerprint>
     <function>sysadmin/m</function>
     <function volunteers="web">coordinator/m</function>
@@ -378,7 +378,7 @@
     <team>core</team>
     <email>anaghz@fsfe.org</email>
     <fingerprint>621EA5F1E3AFAEA9BF3B2DC8F1A5962865A4B86E</fingerprint>
-    <keyhref>https://keys.fsfe.org/anaghz@fsfe.org.asc</keyhref>
+    <keyhref>/about/people/anaghz@fsfe.org.asc</keyhref>
     <employee>full/f</employee>
     <function>senior-project-manager/f</function>
     <avatar>galan.jpg</avatar>
@@ -473,7 +473,7 @@
     <team>core</team>
     <country>DE</country>
     <fingerprint>7B16AAB1507D8BA0707E686D233BD83069144A3D</fingerprint>
-    <keyhref>https://keys.fsfe.org/hf@fsfe.org.asc</keyhref>
+    <keyhref>/about/people/hf@fsfe.org.asc</keyhref>
     <email>hf@fsfe.org</email>
     <avatar>hf.jpg</avatar>
   </person>
@@ -485,7 +485,7 @@
     <team>core</team>
     <country>DE</country>
     <fingerprint>1DB0D9668F986EFDCEBDD7F551E27735A5F4885F</fingerprint>
-    <keyhref>https://keys.fsfe.org/hl@fsfe.org.asc</keyhref>
+    <keyhref>https://keys.openpgp.org/vks/v1/by-fingerprint/1DB0D9668F986EFDCEBDD7F551E27735A5F4885F</keyhref>
     <email>hl@fsfe.org</email>
   </person>
 
@@ -644,7 +644,7 @@
     <team>core</team>
     <email>fkobi@fsfe.org</email>
     <fingerprint>C9055975AF8D4A02816FEE680BC2212BF0F08F7A</fingerprint>
-    <keyhref>https://keys.fsfe.org/fkobi@fsfe.org.asc</keyhref>
+    <keyhref>/about/people/fkobi@fsfe.org.asc</keyhref>
     <employee>full/m</employee>
   </person>
 
@@ -669,7 +669,7 @@
     <team>core</team>
     <email>lucas.lasota@fsfe.org</email>
     <fingerprint>322AE450D94CEFC00BFD69FE9D02E9E16271C2BD</fingerprint>
-    <keyhref>https://keys.fsfe.org/lucas.lasota@fsfe.org.asc</keyhref>
+    <keyhref>/about/people/lasota/lucas.lasota@fsfe.org.asc</keyhref>
     <link>/about/people/lasota/lasota.html</link>
     <avatar>lasota.jpg</avatar>
     <employee>part/m</employee>
@@ -717,7 +717,7 @@
     <team>care</team>
     <email>repentinus@fsfe.org</email>
     <fingerprint>E7E37766DD0B7F49B48FE1A2D5A96DC291349DD8</fingerprint>
-    <keyhref>https://public.repentinus.eu/repentinus.fsfe.org.key.asc.txt</keyhref>
+    <keyhref>/about/people/repentinus@fsfe.org.asc</keyhref>
     <link>/about/people/repentinus/repentinus.html</link>
     <avatar>lohmus.jpg</avatar>
   </person>
@@ -746,7 +746,8 @@
     <email>polina@fsfe.org</email>
     <avatar>malaja.jpg</avatar>
     <fingerprint>588051B29B14CA08D7B46E4F238E5945BC17039E</fingerprint>
-    <keyhref>http://keys.gnupg.net/pks/lookup?search=0x588051B29B14CA08D7B46E4F238E5945BC17039E&amp;op=get</keyhref>
+    <!-- NOTE: Key is expired! -->
+    <keyhref>https://keyserver.ubuntu.com/pks/lookup?op=get&search=0x588051b29b14ca08d7b46e4f238e5945bc17039e</keyhref>
   </person>
 
   <person id="marrali">
@@ -766,6 +767,7 @@
   </person>
 
   <person id="maxsc">
+    <!-- NOTE: Not on website -->
     <name>Max Schlüter</name>
     <country>DE</country>
     <email>maxsc@fsfe.org</email>
@@ -796,12 +798,13 @@
     <name>Irakli Maisuradze</name>
     <country>GE</country>
     <email>irakli@fsfe.org</email>
-    <keyhref>https://keys.fsfe.org/irakli@fsfe.org.asc</keyhref>
+    <keyhref>/about/people/irakli@fsfe.org.asc</keyhref>
     <fingerprint>182BC6C2F7B70CD5A17546215778F1FFFB23CFFD</fingerprint>
     <function>sysadmin/m</function>
   </person>
 
   <person id="micgor32">
+    <!-- NOTE: Not on website -->
     <name>Michal Gorlas</name>
     <country>PL</country>
     <email>micgor32@fsfe.org</email>
@@ -843,7 +846,7 @@
     <function country="DE">coordinator/m</function>
     <email>jn@fsfe.org</email>
     <fingerprint>1E222721ECCA6C7557AAD20B7D598E96B9B5218F</fingerprint>
-    <keyhref>https://keys.fsfe.org/jn@fsfe.org.asc</keyhref>
+    <keyhref>/about/people/jn@fsfe.org.asc</keyhref>
     <employee>part/m</employee>
     <function>senior-project-manager/m</function>
     <avatar>naeder.jpg</avatar>
@@ -915,7 +918,7 @@
     <country>IE</country>
     <email>delliott@fsfe.org</email>
     <fingerprint>0B8233A11ABCB64BA21D1EA9DA5F4575B2AED9D5</fingerprint>
-    <keyhref>https://keys.fsfe.org/delliott@fsfe.org.asc</keyhref>
+    <keyhref>/about/people/delliott@fsfe.org.asc</keyhref>
     <avatar>darragh.jpg</avatar>
   </person>
 
@@ -1013,6 +1016,7 @@
   </person>
 
   <person id="roussos">
+    <!-- NOTE: Not on website -->
     <name>Nikos Roussos</name>
     <country>GR</country>
     <team>gr</team>
@@ -1059,7 +1063,7 @@
     <team>core</team>
     <email>alex.sander@fsfe.org</email>
     <fingerprint>A80E11E0E6D1C29E09D35A4D36411F3E916C2B2C</fingerprint>
-    <keyhref>https://keys.fsfe.org/alex.sander@fsfe.org.asc</keyhref>
+    <keyhref>/about/people/sander/alex.sander@fsfe.org.asc</keyhref>
     <link>/about/people/sander/sander.html</link>
     <avatar>sander.jpg</avatar>
     <employee>contractor/m</employee>
@@ -1196,6 +1200,7 @@
   </person>
 
   <person id="suklje">
+    <!-- NOTE: Not on website -->
     <name>Matija Šuklje</name>
     <country>SI</country>
     <function country="SI">coordinator/m</function>
@@ -1212,7 +1217,7 @@
     <country>IT</country>
     <email>tommi@fsfe.org</email>
     <fingerprint>A91304BF701ED3FE58AF70620FAF46FD381AC57F</fingerprint>
-    <keyhref>https://keys.fsfe.org/tommi@fsfe.org.asc</keyhref>
+    <keyhref>/about/people/tommi@fsfe.org.asc</keyhref>
     <avatar>tommi.jpg</avatar>
   </person>
 

@@ -5,11 +5,12 @@ description = "Python tooling to build the fsfe websites"
 readme = "README.md"
 requires-python = "==3.14.*"
 dependencies = [
-  "lxml",            # XML parser
-  "nltk",            # For stopwords for the search index
-  "python-iso639",   # For getting english language names of languages from two letter codes.
-  "requests",        # For HTTP requests
-  "tdewolff-minify", # For minification html css and js
+  "lxml",  # XML parser
+  "nltk",  # For stopwords for the search index
+  "platformdirs",  # Get cache dirs and similar by platform
+  "python-iso639",  # For getting english language names of languages from two letter codes.
+  "requests",  # For HTTP requests
+  "tdewolff-minify",  # For minification html css and js
 ]
 
 [project.scripts]
@@ -17,13 +18,13 @@ build = "fsfe_website_build:main"
 
 [dependency-groups]
 dev = [
-  "lefthook",    # pre-commit hook
-  "pyright",     # python typechecker
-  "pytest",      # python test runner
-  "pytest-mock", # helper for mocking in pytest
-  "reuse",       # for enforcing licensing
-  "ruff",        # python formatter and linter
-  "taplo",       # toml formatter
+  "lefthook",  # pre-commit hook
+  "pyright",  # python typechecker
+  "pytest",  # python test runner
+  "pytest-mock",  # helper for mocking in pytest
+  "reuse",  # for enforcing licensing
+  "ruff",  # python formatter and linter
+  "tombi",  # toml formatter
   "types-lxml",  # type stubs for lxml
 ]
 
@@ -36,53 +37,56 @@ module-name = "fsfe_website_build"
 module-root = "build"
 
 [tool.ruff.lint]
-#  See https://docs.astral.sh/ruff/rules/ for information
+# See https://docs.astral.sh/ruff/rules/ for information
 select = [
-  "ANN",   # Flake 8 type annotations
-  "A",     # prevent using keywords that clobber python builtins
-  "ARG",   # Unused arguments
-  "ASYNC", # Flake 8 aysnc
-  "B",     # bugbear: security warnings
-  "C4",    # Comprehensions
-  "D",     # pydocstyle, recommended with pydoclint
-  "E",     # pycodestyle
-  "ERA",   # Commented out code
-  "F",     # pyflakes
+  "ANN",  # Flake 8 type annotations
+  "A",  # prevent using keywords that clobber python builtins
+  "ARG",  # Unused arguments
+  "ASYNC",  # Flake 8 aysnc
+  "B",  # bugbear: security warnings
+  "C4",  # Comprehensions
+  "D",  # pydocstyle, recommended with pydoclint
+  "E",  # pycodestyle
+  "ERA",  # Commented out code
+  "F",  # pyflakes
   "FURB",  # More upgrades to newer styles
-  "G",     # Logging Formatting
-  "I",     # ordered import
-  "ISC",   # implicit string concatenation
-  "LOG",   # Logging stuff
-  "N",     # pep 8 naming
+  "G",  # Logging Formatting
+  "I",  # ordered import
+  "ISC",  # implicit string concatenation
+  "LOG",  # Logging stuff
+  "N",  # pep 8 naming
   "PERF",  # SOme performance stuff
-  "PIE",   # Some extra checks
-  "PL",    # Pylint
-  "PTH",   # Use pathlib
-  "PT",    # Pytest style
-  "Q",     # flake 8 quotes
-  "RET",   # Return types
-  "RSE",   # Unneeded exception parentheses
-  "RUF",   # the ruff developer's own rules
-  "SIM",   # Simplify
-  "S",     # flake8-bandit, more secutiry checks
-  "T20",   # Warn about prints
-  "TC",    # Type checking
-  "TRY",   # Error handling stuff
-  "UP",    # Update syntax to newer versions
-  "W",     # pycodestyle warnings
+  "PIE",  # Some extra checks
+  "PL",  # Pylint
+  "PTH",  # Use pathlib
+  "PT",  # Pytest style
+  "Q",  # flake 8 quotes
+  "RET",  # Return types
+  "RSE",  # Unneeded exception parentheses
+  "RUF",  # the ruff developer's own rules
+  "SIM",  # Simplify
+  "S",  # flake8-bandit, more secutiry checks
+  "T20",  # Warn about prints
+  "TC",  # Type checking
+  "TRY",  # Error handling stuff
+  "UP",  # Update syntax to newer versions
+  "W",  # pycodestyle warnings
 ]
 ignore = [
-  "D203", # incorrect-blank-line-before-class, Conflicts with D211
-  "D213", # multi-line-summary-second-line, Conflicts with D212
+  "D203",  # incorrect-blank-line-before-class, Conflicts with D211
+  "D213",  # multi-line-summary-second-line, Conflicts with D212
 ]
+
 [tool.ruff.lint.per-file-ignores]
 "build/fsfe_website_build_tests*/*" = [
-  "D",      # We do not need to document the tests.
-  "TRY003", # Dont worry about big exceptions in tests
-  "S101",   # Allow asserts in tests
+  "D",  # We do not need to document the tests.
+  "TRY003",  # Dont worry about big exceptions in tests
+  "S101",  # Allow asserts in tests
 ]
+
 [tool.pyright]
 typeCheckingMode = "strict"
+
 [tool.pytest.ini_options]
 addopts = ["--import-mode=importlib"]
 python_files = ["*_test.py"]

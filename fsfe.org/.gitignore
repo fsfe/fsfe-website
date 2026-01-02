@@ -9,9 +9,17 @@ news/????/index.sources
 news/????/index.xsl
 news/**/.*.??.xml
 # search index
-search/index.js
+search/index.json
 #tags
 tags/tagged-*.??.xhtml
 tags/.tags.??.xml
 # internal activities file
 internal/fsfe-activities-options.*.xml
+
+# thirdpary stuff fetched by deps
+# once all deps are managed this way we can make this a more general pattern
+cgi-bin/thirdparty
+scripts/thirdparty/jquery*
+scripts/thirdparty/lunr.min.js
+scripts/thirdparty/bootstrap.min.js
+look/thirdparty/bootstrap

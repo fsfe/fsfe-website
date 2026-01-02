@@ -52,8 +52,8 @@ def main() -> None:
             "//track[@srclang]",  # Languages, used in some track elements
             "//track[@label]",  # Language label, used in some track elements
             "/html/translator",  # the translator
-            "//discussion[@href]", # Mastodon links can be in different langs
-            "//image[@alt]", # Image alt text for title image
+            "//discussion[@href]",  # Mastodon links can be in different langs
+            "//image[@alt]",  # Image alt text for title image
         ],
         help="Comma-separated list xpaths that we then ignore.",
     )
@@ -107,8 +107,8 @@ def main() -> None:
                 logger.info(result)
             logger.error("Some comparisons failed, exiting")
             sys.exit(1)
-        else:
-            logger.info("All comparisons succeeded, success")
+
+        logger.info("All comparisons succeeded, success")
 
 
 if __name__ == "__main__":

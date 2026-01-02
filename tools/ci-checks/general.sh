@@ -181,7 +181,7 @@ for f in $files_all; do
 	fileregex="(\.xhtml$|\.xml$|\.xsl$)"
 	if matchfile "${f}" "${fileregex}"; then
 		# XPath: “is there a <p> whose normalized string value is empty?”
-		if ! xmllint --xpath '//p[normalize-space(.)=""]' "$f" --quiet; then
+		if [ -n "$(xmllint --xpath '//p[not(node()[self::*]) and normalize-space(.) = ""]' "$f" 2>/dev/null)" ]; then
 			RETURN_EMPTY_PARAGRAPH=$((RETURN_EMPTY_PARAGRAPH + 1))
 			FILES_EMPTY_PARAGRAPH="${FILES_EMPTY_PARAGRAPH}|${f}"
 		fi
@@ -459,7 +459,7 @@ if [ $RETURN_EMPTY_PARAGRAPH -gt 0 ]; then
   =======================================
   The following ${RETURN_EMPTY_PARAGRAPH} file(s) in your commit have an empty <p> element, which is bad for accessibility and formatting.
 
-  $(filelisting "${RETURN_EMPTY_PARAGRAPH}")
+  $(filelisting "${FILES_EMPTY_PARAGRAPH}")
 
   Please remove the empty paragraphs, and use <br/> if using them for a linebreak.
 EOF

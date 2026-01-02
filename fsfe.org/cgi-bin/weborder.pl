@@ -152,7 +152,6 @@ if ( $amount > 999 ) {
 }
 
 my $amount_f  = sprintf "%.2f", $amount;
-my $amount100 = $amount * 100;
 
 my $vat = sprintf "%.2f", ( $amount_f / 1.19 ) * 0.19;
 my $net = sprintf "%.2f", $amount_f - $vat;
@@ -271,7 +270,7 @@ HTML
 my @odtfill = qw();
 
 # odtfill script
-push @odtfill, $ENV{"DOCUMENT_ROOT"} . "/cgi-bin/odtfill";
+push @odtfill, $ENV{"DOCUMENT_ROOT"} . "/cgi-bin/odtfill.sh";
 
 # template file
 if ( !$pickup ) {
@@ -382,43 +381,7 @@ my $ua       = LWP::UserAgent->new;
 my $response = $ua->request($request);
 
 # -----------------------------------------------------------------------------
-# Generate form for ConCardis payment
-# -----------------------------------------------------------------------------
-
-my $passphrase = "Only4TestingPurposes";
-my $shastring =
-    "ACCEPTURL=https://fsfe.org/order/thankyou.$lang.html$passphrase"
-  . "AMOUNT=$amount100$passphrase"
-  . "CANCELURL=https://fsfe.org/order/cancel.$lang.html$passphrase"
-  . "CN=$name$passphrase"
-  . "CURRENCY=EUR$passphrase"
-  . "EMAIL=$email$passphrase"
-  . "LANGUAGE=$language$passphrase"
-  . "ORDERID=$reference$passphrase"
-  . "PMLISTTYPE=2$passphrase"
-  . "PSPID=40F00871$passphrase"
-  . "TP=payment-with-bank.html$passphrase";
-my $shasum = uc sha1_hex(encode("utf-8", $shastring));
-my $form =
-    "      <!-- payment parameters -->\n"
-  . "      <input type=\"hidden\" name=\"PSPID\"        value=\"40F00871\"/>\n"
-  . "      <input type=\"hidden\" name=\"orderID\"      value=\"$reference\"/>\n"
-  . "      <input type=\"hidden\" name=\"amount\"       value=\"$amount100\"/>\n"
-  . "      <input type=\"hidden\" name=\"currency\"     value=\"EUR\"/>\n"
-  . "      <input type=\"hidden\" name=\"language\"     value=\"$language\"/>\n"
-  . "      <input type=\"hidden\" name=\"CN\"           value=\"$name\"/>\n"
-  . "      <input type=\"hidden\" name=\"EMAIL\"        value=\"$email\"/>\n"
-  . "      <!-- interface template -->\n"
-  . "      <input type=\"hidden\" name=\"TP\"           value=\"payment-with-bank.html\"/>\n"
-  . "      <input type=\"hidden\" name=\"PMListType\"   value=\"2\"/>\n"
-  . "      <!-- post-payment redirection -->\n"
-  . "      <input type=\"hidden\" name=\"accepturl\"    value=\"https://fsfe.org/order/thankyou.$lang.html\"/>\n"
-  . "      <input type=\"hidden\" name=\"cancelurl\"    value=\"https://fsfe.org/order/cancel.$lang.html\"/>\n"
-  . "      <!-- SHA1 signature -->\n"
-  . "      <input type=\"hidden\" name=\"SHASign\"      value=\"$shasum\"/>";
-
-# -----------------------------------------------------------------------------
-# Lead user to "thankyou" page
+# Lead user to payment page
 # -----------------------------------------------------------------------------
 
 print "Content-type: text/html\n\n";
@@ -426,8 +389,8 @@ open TEMPLATE,'<:raw:encoding(utf-8)',
   $ENV{"DOCUMENT_ROOT"} . "/order/tmpl-thankyou." . $lang . ".html";
 while (<TEMPLATE>) {
     s/:AMOUNT:/$amount_f/g;
+    s/:EMAIL:/$email/g;
     s/:REFERENCE:/$reference/g;
-    s/:FORM:/$form/g;
     print;
 }
 close TEMPLATE;

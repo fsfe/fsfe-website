@@ -1,0 +1,28 @@
+# Sources for the website
+# All repos should be mirrored to https://git.fsfe.org/fsfe-system-hackers-mirrors
+#
+# SCRIPTS
+[jquery]
+repo = "https://git.fsfe.org/fsfe-system-hackers-mirrors/jquery"
+rev = "3.5.1"
+file_sets = [
+  { source = "/dist/jquery.min.js", target = "scripts/thirdparty/" },
+  { source = "/dist/jquery.min.map", target = "scripts/thirdparty/" },
+]
+
+[lunr]
+repo = "https://git.fsfe.org/fsfe-system-hackers-mirrors/lunr.js"
+rev = "v2.3.9"
+file_sets = [{ source = "/lunr.js", target = "scripts/thirdparty/lunr.min.js" }]
+
+# STYLING
+[bootstrap]
+repo = "https://git.fsfe.org/fsfe-system-hackers-mirrors/bootstrap"
+rev = "v3.4.1"
+file_sets = [{ source = "/less", target = "look/thirdparty/bootstrap" }]
+
+# CGI
+[phpmailer]
+repo = "https://git.fsfe.org/fsfe-system-hackers-mirrors/PHPMailer"
+rev = "v6.10.0"
+file_sets = [{ source = "/src", target = "cgi-bin/thirdparty/PHPMailer" }]

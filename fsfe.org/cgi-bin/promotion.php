@@ -176,7 +176,7 @@ if (isset($_POST['donate']) && ($_POST['donate'] > 0)) {
 }
 
 // Generate letter to be sent along with the material
-$odtfill = $_SERVER['DOCUMENT_ROOT'].'/cgi-bin/odtfill';
+$odtfill = $_SERVER['DOCUMENT_ROOT'].'/cgi-bin/odtfill.sh';
 $template = $_SERVER['DOCUMENT_ROOT'].'/templates/promotionorder.odt';
 $outfile = '/tmp/promotionorder.odt';
 $name = $_POST['firstname'].' '.$_POST['lastname'];

@@ -29,7 +29,7 @@ open TEMPLATE,'<:raw:encoding(utf-8)',
   $ENV{"DOCUMENT_ROOT"} . "/order/tmpl-thankyou." . $lang . ".html";
 while (<TEMPLATE>) {
     s/:AMOUNT:/$amount_f/g;
-    s/:EMAIL/$email/g;
+    s/:EMAIL:/$email/g;
     s/:REFERENCE:/$reference/g;
     print;
 }

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<donorset>
+  <version>1</version>
+
+  <!--
+    The "since" attribute is set for all donors which have donated in at least
+    4 calendar years in a row - even if previous donations were lower than the
+    current category. A pause of one calendar year is ok and may happen more
+    than once in the donor's career. Monthly supporters are listed with the
+    amount for the full year, even if the year is still ongoing.
+  -->
+
+  <category1>
+    <!-- 1,500 per month or 18,000 in this year -->
+    <!-- Sorted by amount, with large image (width x height ca. 15.000) -->
+    <donor img="donors/linuxhotel.png" amount="18,000" since="2001">Linuxhotel Villa Vogelsang</donor>
+  </category1>
+
+  <category2>
+    <!-- 300 per month or 3,600 in this year -->
+    <!-- Sorted by name, with smaller image (width x height ca. 5.000) -->
+    <donor img="donors/silver-heinlein-support.png" since="2014">Heinlein Support</donor>
+    <donor img="donors/silver-intevation-new.png" since="2009">Intevation GmbH</donor>
+    <donor img="donors/silver-sysmocom.png" since="2016">sysmocom - systems for mobile communications</donor>
+  </category2>
+
+  <category3>
+    <!-- 60 per month or 720 in this year -->
+    <!-- Sorted by name, no image -->
+    <donor since="2021">Guido Bienhaus</donor>
+    <donor since="2003">Hostsharing eG</donor>
+    <donor since="2004">inmedias.it</donor>
+    <donor since="2009">LIHAS - LinuxHaus Stuttgart</donor><!-- Adrian Reyer -->
+  </category3>
+</donorset>

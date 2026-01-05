@@ -36,6 +36,7 @@ in
       shfmt
       prettier
       php84Packages.php-cs-fixer
+      rsync
     ]);
   # Installed for every architecture: only install the lib outputs
   multiPkgs =

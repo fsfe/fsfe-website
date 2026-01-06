@@ -21,12 +21,17 @@
       U kan nu online betalen met verschillende krediet- of debetkaarten of met PayPal.
     </p>
 
-    <form action="https://secure.payengine.de/ncol/prod/orderstandard_utf8.asp" method="post">
-:FORM:
-      <!-- translators: please also translate the term "Pay online", it will
-           show on the button. -->
-      <input type="submit" name="submit" value="Betaal online"/>
+    <form name="payment" action="https://my.fsfe.org/pay/:REFERENCE:" method="post" class="thankyou">
+      <input type="hidden" name="amount" value=":AMOUNT:"/>
+      <input type="hidden" name="email" value=":EMAIL:"/>
+      <input type="hidden" name="success_url" value="https://fsfe.org/order/thankyou.html"/>
+      <input type="hidden" name="cancel_url" value="https://fsfe.org/order/cancel.html"/>
+      <noscript>
+        <input type="submit" name="submit" value="Betaal online"/>
+      </noscript>
     </form>
+
+    <script type="text/javascript">document.payment.submit()</script>
 
     <p>
       Als u met bankoverschrijving wilt betalen gebruik dan alstublieft de 

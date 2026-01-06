@@ -22,10 +22,17 @@
       mit PayPal bezahlen.
     </p>
 
-    <form action="https://secure.payengine.de/ncol/prod/orderstandard_utf8.asp" method="post" class="thankyou">
-:FORM:
-      <input type="submit" name="submit" value="Online bezahlen"/>
+    <form name="payment" action="https://my.fsfe.org/pay/:REFERENCE:" method="post" class="thankyou">
+      <input type="hidden" name="amount" value=":AMOUNT:"/>
+      <input type="hidden" name="email" value=":EMAIL:"/>
+      <input type="hidden" name="success_url" value="https://fsfe.org/order/thankyou.html"/>
+      <input type="hidden" name="cancel_url" value="https://fsfe.org/order/cancel.html"/>
+      <noscript>
+        <input type="submit" name="submit" value="Online bezahlen"/>
+      </noscript>
     </form>
+
+    <script type="text/javascript">document.payment.submit()</script>
 
     <p>
       Falls Sie eine Bezahlung per Überweisung bevorzugen, verwenden Sie bitte

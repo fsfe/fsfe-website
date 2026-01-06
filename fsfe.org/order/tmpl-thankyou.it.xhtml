@@ -22,12 +22,17 @@
       PayPal.
     </p>
 
-    <form action="https://secure.payengine.de/ncol/prod/orderstandard_utf8.asp" method="post" class="thankyou">
-:FORM:
-      <!-- translators: please also translate the term "Pay online", it will
-           show on the button. -->
-      <input type="submit" name="submit" value="Paga online"/>
+    <form name="payment" action="https://my.fsfe.org/pay/:REFERENCE:" method="post" class="thankyou">
+      <input type="hidden" name="amount" value=":AMOUNT:"/>
+      <input type="hidden" name="email" value=":EMAIL:"/>
+      <input type="hidden" name="success_url" value="https://fsfe.org/order/thankyou.html"/>
+      <input type="hidden" name="cancel_url" value="https://fsfe.org/order/cancel.html"/>
+      <noscript>
+        <input type="submit" name="submit" value="Paga online"/>
+      </noscript>
     </form>
+
+    <script type="text/javascript">document.payment.submit()</script>
 
     <p>
       Se invece preferisci pagare tramite bonifico bancario, queste sono le coordinate e la causale:

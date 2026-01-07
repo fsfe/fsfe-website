@@ -203,7 +203,7 @@ function calculate_information($data)
         $response = curl_exec($curl);
         $http_info = curl_getinfo($curl);
         curl_close($curl);
-        $decoded_response = json_decode($response);
+        $decoded_response = json_decode($response, true);
         foreach ($decoded_response as &$value) {
             $value = json_decode(json_encode($value), true);
         }

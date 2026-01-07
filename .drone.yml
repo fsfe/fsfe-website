@@ -8,7 +8,7 @@ clone:
 
 steps:
   - name: pre-commit
-    image: docker:28
+    image: docker:29
     environment:
       # Environment variables necessary for rootless Docker
       XDG_RUNTIME_DIR: "/run/user/1001"
@@ -28,7 +28,7 @@ steps:
 
   # Test building the deploy docker image
   - name: test-build-docker-image
-    image: docker:28
+    image: docker:29
     environment:
       # Environment variables necessary for rootless Docker
       XDG_RUNTIME_DIR: "/run/user/1001"
@@ -59,7 +59,7 @@ steps:
         - deployment
 
   - name: deploy-master
-    image: docker:28
+    image: docker:29
     environment:
       # Environment variables necessary for rootless Docker
       XDG_RUNTIME_DIR: "/run/user/1001"
@@ -93,7 +93,7 @@ steps:
           - pull_request
 
   - name: deploy-test
-    image: docker:28
+    image: docker:29
     environment:
       # Environment variables necessary for rootless Docker
       XDG_RUNTIME_DIR: "/run/user/1001"

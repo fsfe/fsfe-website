@@ -13,7 +13,7 @@
     </xsl:element>
     <xsl:element name="footer">
       <xsl:element name="div">
-        <xsl:attribute name="id">page-info</xsl:attribute>
+        <xsl:attribute name="id">footer-social-media</xsl:attribute>
         <xsl:element name="div">
           <!-- Social Media links -->
           <xsl:element name="p">
@@ -47,6 +47,11 @@
               </xsl:element>
             </xsl:element>
           </xsl:element>
+        </xsl:element>
+      </xsl:element>
+      <xsl:element name="div"><!-- 1st column -->
+        <xsl:attribute name="id">page-info</xsl:attribute>
+        <xsl:element name="div">
           <!-- Copyright notice -->
           <xsl:element name="p">
             <xsl:text>Copyright © 2001-2026 </xsl:text>
@@ -68,7 +73,7 @@
             </xsl:call-template>
           </xsl:element>
         </xsl:element>
-        <xsl:element name="div">
+        <xsl:element name="div"><!-- middle column -->
           <!-- Contact -->
           <xsl:element name="p">
             <xsl:element name="a">
@@ -104,7 +109,8 @@
                 <xsl:with-param name="id" select="'imprint'"/>
               </xsl:call-template>
             </xsl:element>
-            <xsl:text> / </xsl:text>
+          </xsl:element>
+          <xsl:element name="p">
             <xsl:element name="a">
               <xsl:attribute name="href">
                 <xsl:value-of select="$urlprefix"/>
@@ -114,7 +120,8 @@
                 <xsl:with-param name="id" select="'privacy-policy'"/>
               </xsl:call-template>
             </xsl:element>
-            <xsl:text> / </xsl:text>
+          </xsl:element>
+          <xsl:element name="p">
             <xsl:element name="a">
               <xsl:attribute name="href">
                 <xsl:value-of select="$urlprefix"/>
@@ -125,14 +132,21 @@
               </xsl:call-template>
             </xsl:element>
           </xsl:element>
-          <!-- Sister organisations -->
+          <!-- Javascript licenses -->
           <xsl:element name="p">
-            <xsl:call-template name="fsfe-gettext">
-              <xsl:with-param name="id" select="'fsfnetwork'"/>
-            </xsl:call-template>
+            <xsl:element name="a">
+              <xsl:attribute name="href">
+                <xsl:value-of select="$urlprefix"/>
+                <xsl:text>/about/js-licences.html</xsl:text>
+              </xsl:attribute>
+              <xsl:attribute name="data-jslicense">1</xsl:attribute>
+              <xsl:call-template name="fsfe-gettext">
+                <xsl:with-param name="id" select="'js-licences'"/>
+              </xsl:call-template>
+            </xsl:element>
           </xsl:element>
         </xsl:element>
-        <xsl:element name="div">
+        <xsl:element name="div"><!-- 3rd column-->
           <!-- Link to the XHTML source -->
           <xsl:element name="p">
             <xsl:element name="a">
@@ -209,19 +223,6 @@
                 <xsl:with-param name="id" select="'translator3c'"/>
               </xsl:call-template>
             </xsl:if>
-          </xsl:element>
-          <!-- Javascript licenses -->
-          <xsl:element name="p">
-            <xsl:element name="a">
-              <xsl:attribute name="href">
-                <xsl:value-of select="$urlprefix"/>
-                <xsl:text>/about/js-licences.html</xsl:text>
-              </xsl:attribute>
-              <xsl:attribute name="data-jslicense">1</xsl:attribute>
-              <xsl:call-template name="fsfe-gettext">
-                <xsl:with-param name="id" select="'js-licences'"/>
-              </xsl:call-template>
-            </xsl:element>
           </xsl:element>
         </xsl:element>
       </xsl:element>

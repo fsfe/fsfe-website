@@ -6,10 +6,10 @@
       At one datacenter of our server locations we experience network problems after they did some maintenance work on Sunday Dec. 7th. Services located in the DC include email, email lists, Nextcloud, git, XMPP. The DC support is looking into the problem
     </update>
     <update date="2025-12-09">
-         Functionality for IMAP and Nextcloud services have been patched. Mailingslist delivery queue has reduced to normal values, delivery of emails should be as usual.
+      Functionality for IMAP and Nextcloud services have been patched. Mailingslist delivery queue has reduced to normal values, delivery of emails should be as usual.
     </update>
     <update date="2025-12-10">
-        Functionality for XMPP has been patched.
+      Functionality for XMPP has been patched.
     </update>
     <update date="2025-12-22" resolved="true">
       The network problem has been resolved.
@@ -19,17 +19,30 @@
     <update date="2025-09-01">
       The blog aggregator is currently not available. Reasons are being investigated.
     </update>
+    <update date="2025-11-05">
+	  Reason is, that the used plog aggregator (venus) has been deprecated.
+    </update>
+    <update date="2026-01-07">
+      Update from Chaos Congress, delayed due re-entry into normal time. System Hackers working on a replacement for the blog aggregator so that planet.fsfe.org hopefully sees new content <em>soon</em>.
+    </update>
   </incident>
   <incident name="Mailinglist">
     <update date="2025-06-07" resolved="true">
-    The mailing lists are fully operational again, including the
-    web interface.
+      The mailing lists are fully operational again, including the web interface.
     </update>
   </incident>
   <incident name="wiki.fsfe.org">
     <update date="2025-05-30">
-    After a DDoS to the service we temporarily forbit some event listings.
+      After a DDoS to the service we temporarily forbit some event listings.
     </update>
+    <update date="2026-01-06">
+	  The content of the wiki has been moved to docs.fsfe.org
+    </update>
+  </incident>
+  <incident name="initial login at docs.fsfe.org">
+	  <update date="2025-04-01">
+		The initial import from LDAP of the user permissions does not work correctly. Please contact the techsupport(at)fsfe.org helpdesk after your initial login to docs.fsfe.org which will result in an error about missing permissions. We will add your account then into the correct usergroup of the wiki system.
+	  </update>
   </incident>
   <incident name="git.fsfe.org">
     <update date="2025-03-14">

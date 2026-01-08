@@ -54,6 +54,7 @@ def main() -> None:
             "/html/translator",  # the translator
             "//discussion[@href]",  # Mastodon links can be in different langs
             "//image[@alt]",  # Image alt text for title image
+            "//profileimage[@alt]",  # Profilemage alt text for about/people images
         ],
         help="Comma-separated list xpaths that we then ignore.",
     )

@@ -6,6 +6,7 @@
   </xsl:variable>
   <xsl:include href="../global/xslt/internal/fsfe_head.xsl"/>
   <xsl:include href="../global/xslt/internal/fsfe_body.xsl"/>
+  <xsl:include href="../global/xslt/internal/fsfe_profileimage.xsl"/>
   <xsl:include href="../global/xslt/internal/gettext.xsl"/>
   <xsl:include href="../global/xslt/internal/static-elements.xsl"/>
   <xsl:include href="../global/xslt/internal/fsfe-cd.xsl"/>

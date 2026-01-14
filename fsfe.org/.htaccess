@@ -72,6 +72,7 @@ RewriteRule ^translators(.*) /contribute/translators/translators.html [R=301,L]
 # CAMPAIGN/TOPIC-SPECIFIC REDIRECTS
 # =============================================================================
 
+RewriteRule ^news/news.rss$ /news/news.en.rss [R=301,L]
 
 # Podcast
 RewriteRule ^news/podcast/?$ /news/podcast.html [R=301,L]

@@ -11,10 +11,11 @@ dependencies = [
   "python-iso639",  # For getting english language names of languages from two letter codes.
   "requests",  # For HTTP requests
   "tdewolff-minify",  # For minification html css and js
+  "dacite",  # dict to dataclass conversion
 ]
 
 [project.scripts]
-build = "fsfe_website_build:main"
+build = "fsfe_website_build:build"
 
 [dependency-groups]
 dev = [

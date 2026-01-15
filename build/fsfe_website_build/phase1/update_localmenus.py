@@ -27,7 +27,7 @@ logger = logging.getLogger(__name__)
 
 
 def _write_localmenus(
-    source_dir: Path,
+    source_site: Path,
     directory: Path,
     files: list[Path],
     languages: list[str],
@@ -61,7 +61,7 @@ def _write_localmenus(
                     link=(
                         "/"
                         + str(
-                            link_file.relative_to(source_dir),
+                            link_file.relative_to(source_site),
                         )
                     ),
                 ).text = localmenu.text
@@ -71,7 +71,7 @@ def _write_localmenus(
 
 def update_localmenus(
     source: Path,
-    source_dir: Path,
+    source_site: Path,
     languages: list[str],
     pool: multiprocessing.pool.Pool,
 ) -> None:
@@ -81,7 +81,7 @@ def update_localmenus(
     files_by_dir: dict[Path, list[Path]] = defaultdict(list)
     for file in (
         file
-        for file in source_dir.glob("**/*.??.xhtml")
+        for file in source_site.glob("**/*.??.xhtml")
         if "-template" not in file.name
     ):
         xslt_root = etree.parse(file)
@@ -111,5 +111,5 @@ def update_localmenus(
     ]
     pool.starmap(
         _write_localmenus,
-        ((source_dir, directory, files, languages) for directory, files in dirs),
+        ((source_site, directory, files, languages) for directory, files in dirs),
     )

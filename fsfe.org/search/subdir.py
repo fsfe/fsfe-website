@@ -84,11 +84,11 @@ def run(source: Path, languages: list[str], processes: int, working_dir: Path) -
     """
     # Download all stopwords
     nltkdir = CACHE_DIR / "nltk_data"
-    source_dir = working_dir.parent
+    source_site = working_dir.parent
     nltk.data.path = [nltkdir]
     nltk.download("stopwords", download_dir=nltkdir, quiet=True)  # pyright: ignore [(reportUnknownMemberType)]
     with multiprocessing.Pool(processes) as pool:
-        logger.debug("Indexing %s", source_dir)
+        logger.debug("Indexing %s", source_site)
 
         # Get all xhtml files in languages to be processed
         # Create a list of tuples
@@ -117,7 +117,7 @@ def run(source: Path, languages: list[str], processes: int, working_dir: Path) -
                     else set()
                 ),
             )
-            for file in source_dir.glob("**/*.??.xhtml")
+            for file in source_site.glob("**/*.??.xhtml")
             if file.suffixes[0].removeprefix(".") in languages
         )
 

@@ -27,7 +27,7 @@ logger = logging.getLogger(__name__)
 
 def _process_set(  # noqa: PLR0913
     source: Path,
-    source_dir: Path,
+    source_site: Path,
     languages: list[str],
     target: Path,
     processor: Path,
@@ -55,7 +55,7 @@ def _process_set(  # noqa: PLR0913
             ".html" if (len(processor.suffixes) == 1) else processor.suffixes[0]
         )
         target_file = target.joinpath(
-            source_file.relative_to(source_dir),
+            source_file.relative_to(source_site),
         ).with_suffix(target_suffix)
         # if the target file does not exist, we make it
         if not target_file.exists() or any(
@@ -90,7 +90,7 @@ def _process_set(  # noqa: PLR0913
 
 def process_files(
     source: Path,
-    source_dir: Path,
+    source_site: Path,
     languages: list[str],
     pool: multiprocessing.pool.Pool,
     target: Path,
@@ -101,7 +101,7 @@ def process_files(
     process_files_dict: dict[Path, set[Path]] = defaultdict(set)
 
     # This gathers all the simple xhtml files for generating xhtml output
-    for file in source_dir.glob("**/*.*.xhtml"):
+    for file in source_site.glob("**/*.*.xhtml"):
         # Processors with a file ending for the output encoded in the name, eg
         # events.rss.xsl
         type_specific_processors = set(
@@ -134,7 +134,7 @@ def process_files(
     pool.starmap(
         _process_set,
         (
-            (source, source_dir, languages, target, processor, files)
+            (source, source_site, languages, target, processor, files)
             for processor, files in process_files_dict.items()
         ),
     )

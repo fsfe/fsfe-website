@@ -16,11 +16,13 @@ if TYPE_CHECKING:
     import multiprocessing.pool
     from pathlib import Path
 
+    from fsfe_website_build.lib.site_config import Deployment
+
 logger = logging.getLogger(__name__)
 
 
-def _copy_file(target: Path, source_dir: Path, source_file: Path) -> None:
-    target_file = target.joinpath(source_file.relative_to(source_dir))
+def _copy_file(target: Path, source_site: Path, source_file: Path) -> None:
+    target_file = target.joinpath(source_file.relative_to(source_site))
     if (
         not target_file.exists()
         or source_file.stat().st_mtime > target_file.stat().st_mtime
@@ -33,9 +35,9 @@ def _copy_file(target: Path, source_dir: Path, source_file: Path) -> None:
 
 
 def _copy_minify_file(
-    target: Path, source_dir: Path, source_file: Path, mime: str
+    target: Path, source_site: Path, source_file: Path, mime: str
 ) -> None:
-    target_file = target.joinpath(source_file.relative_to(source_dir))
+    target_file = target.joinpath(source_file.relative_to(source_site))
     if (
         not target_file.exists()
         or source_file.stat().st_mtime > target_file.stat().st_mtime
@@ -52,7 +54,12 @@ def _copy_minify_file(
         shutil.copymode(source_file, target_file)
 
 
-def copy_files(source_dir: Path, pool: multiprocessing.pool.Pool, target: Path) -> None:
+def copy_files(
+    source_site: Path,
+    pool: multiprocessing.pool.Pool,
+    target: Path,
+    deploy_config: Deployment,
+) -> None:
     """Copy images, documents etc."""
     logger.info("Copying over media and misc files")
     # file extensions and mimes of minificable content
@@ -62,30 +69,16 @@ def copy_files(source_dir: Path, pool: multiprocessing.pool.Pool, target: Path) 
         ".js": "application/javascript",
         ".svg": "image/svg+xml",
     }
-    # get the special cases per site
-    special_case_file = source_dir / "required_deploy_files.txt"
-    stripped_lines = (
-        [line.strip() for line in special_case_file.read_text().split("\n")]
-        if special_case_file.exists()
-        else []
-    )
-    special_includes = [
-        file
-        for line in stripped_lines
-        if line and not line.startswith("#")
-        for file in source_dir.glob(line)
-    ]
-
     # Here we copy everything we cannot minify
     pool.starmap(
         _copy_file,
         (
-            (target, source_dir, file)
+            (target, source_site, file)
             for file in [
                 # globbing of all files, exclude blacklist
                 *[
                     path
-                    for path in source_dir.glob("**/*")
+                    for path in source_site.glob("**/*")
                     if path.is_file()
                     # Things we dont want over at all
                     and path.suffix
@@ -112,7 +105,7 @@ def copy_files(source_dir: Path, pool: multiprocessing.pool.Pool, target: Path) 
                     ]
                 ],
                 # special whitelist to include
-                *special_includes,
+                *[source_site / file for file in deploy_config.required_files],
             ]
         ),
     )
@@ -121,6 +114,6 @@ def copy_files(source_dir: Path, pool: multiprocessing.pool.Pool, target: Path) 
     # https://github.com/tdewolff/minify/issues/535
     for file_suffix, mime in minifiable_content.items():
         for file in [
-            path for path in source_dir.glob(f"**/*{file_suffix}") if path.is_file()
+            path for path in source_site.glob(f"**/*{file_suffix}") if path.is_file()
         ]:
-            _copy_minify_file(target, source_dir, file, mime)
+            _copy_minify_file(target, source_site, file, mime)

@@ -4,6 +4,6 @@
 
 """The main module for the fsfe website build process."""
 
-from .build import main
+from .build import build
 
-__all__ = ["main"]
+__all__ = ["build"]

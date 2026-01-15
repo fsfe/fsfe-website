@@ -1,27 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <html>
-  <version>2</version>
-
-      <head>
-            <title>Nieuwsbrieven</title>
-      </head>
-
-      <body>
-        <h1>Nieuwsbrieven</h1>
-        <p id="introduction">
+  <version>3</version>
+  <head>
+    <title>Nieuwsbrieven</title>
+  </head>
+  <body>
+    <p id="category"><a href="news.html">Nieuws</a></p>
+    <h1>Nieuwsbrieven</h1>
+    <p id="introduction">
           In aanvulling op onze <a href="news.html">reguliere nieuwsverhalen</a> publiceert FSFE iedere maand een nieuwsbrief waarin haar belangrijkste activiteiten zijn samengevat.
           
         </p>
-        
-        <module id="banner-subscribe"/>
-
-        <include-newsletter/>
-      </body>
-      <description>Maandelijkse nieuwsbrief over vooruitgang en promotie van Vrije Software van de Free Software Foundation Europe</description>
-    <text id="more">Lees...</text> 
-    <translator>André Ockers</translator>
-    </html><!--
-    Local Variables: ***
-    mode: xml ***
-    End: ***
-    -->
+    <more-updates/>
+    <include-news/>
+  </body>
+  <description>Maandelijkse nieuwsbrief over vooruitgang en promotie van Vrije Software van de Free Software Foundation Europe</description>
+  <translator>André Ockers</translator>
+  <banner1>
+    <module id="banner-subscribe"/>
+  </banner1>
+  <banner2>
+    <module id="banner-become-supporter"/>
+  </banner2>
+  <follow-news>
+    <module id="follow-news"/>
+  </follow-news>
+  <social-media>
+    <module id="social-media"/>
+  </social-media>
+</html>

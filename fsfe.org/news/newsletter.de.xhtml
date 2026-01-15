@@ -1,30 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <html>
-  <version>2</version>
-
+  <version>3</version>
   <head>
-
-
-	<title>FSFE – Newsletter</title>
+    <title>FSFE – Newsletter</title>
   </head>
-
   <body>
+    <p id="category"><a href="news.html">Nachrichten</a></p>
     <h1>Newsletter</h1>
     <p id="introduction">
       Zusätzlich zu unseren <a href="news.html">regelmäßigen Meldungen</a>
       veröffentlicht die FSFE jeden Monat einen Newsletter, in dem über die
       wichtigsten Aktivitäten berichtet wird. 
     </p>
-
-    <module id="banner-subscribe"/>
-
-    <include-newsletter/>
+    <more-updates/>
+    <include-news/>
   </body>
   <description>Monatlicher Newsletter über Neuigkeiten bei Freier Software und Informationen von der Free Software Foundation Europe</description>
-
-  <text id="more">Lesen …</text>
-</html><!--
-Local Variables: ***
-mode: xml ***
-End: ***
--->
+  <banner1>
+    <module id="banner-subscribe"/>
+  </banner1>
+  <banner2>
+    <module id="banner-become-supporter"/>
+  </banner2>
+  <follow-news>
+    <module id="follow-news"/>
+  </follow-news>
+  <social-media>
+    <module id="social-media"/>
+  </social-media>
+</html>

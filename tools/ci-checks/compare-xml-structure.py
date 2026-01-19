@@ -58,6 +58,11 @@ def main() -> None:
             "//image/@alt",  # Image alt text for title image
             "//img/@alt",  # Image alt text
             "//input[@name='language']",  # Input language types
+            "//label[@for='address']",
+            "//label[@for='email']",
+            "//label[@for='name']", # city and many others
+            "//label[@for='phone']",
+            "//label[@for='zip']", # zip code localisation
             "//profileimage/@alt",  # Profilemage alt text for about/people images
             "//track/@label",  # Language label, used in some track elements
             "//track/@srclang",  # Languages, used in some track elements

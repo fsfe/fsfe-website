@@ -90,6 +90,7 @@
     <!-- <team>aarhus</team> -->
     <email>agger@fsfe.org</email>
     <link>https://blogs.fsfe.org/agger/</link>
+    <keyhref>/about/people/agger@fsfe.org.gpg</keyhref>
   </person>
 
   <person id="albers">
@@ -195,7 +196,7 @@
     <link>http://jancborchardt.net</link>
     <avatar>borchardt.jpg</avatar>
     <fingerprint>ECD0C4A3A2FC72B354E4FC78CBD846FC845CBE17</fingerprint>
-    <keyhref>http://keys.gnupg.net/pks/lookup?op=get&amp;search=0xECD0C4A3A2FC72B354E4FC78CBD846FC845CBE17</keyhref>
+    <!-- <keyhref>http://keys.gnupg.net/pks/lookup?op=get&amp;search=0xECD0C4A3A2FC72B354E4FC78CBD846FC845CBE17</keyhref> -->
   </person>
 
   <person id="brooke-smith">
@@ -718,7 +719,7 @@
     <team>care</team>
     <email>repentinus@fsfe.org</email>
     <fingerprint>E7E37766DD0B7F49B48FE1A2D5A96DC291349DD8</fingerprint>
-    <keyhref>https://public.repentinus.eu/repentinus.fsfe.org.key.asc.txt</keyhref>
+    <keyhref>/about/people/repentinus/repentinus@fsfe.org.asc</keyhref>
     <link>/about/people/repentinus/repentinus.html</link>
     <avatar>lohmus.jpg</avatar>
   </person>
@@ -747,7 +748,7 @@
     <email>polina@fsfe.org</email>
     <avatar>malaja.jpg</avatar>
     <fingerprint>588051B29B14CA08D7B46E4F238E5945BC17039E</fingerprint>
-    <keyhref>http://keys.gnupg.net/pks/lookup?search=0x588051B29B14CA08D7B46E4F238E5945BC17039E&amp;op=get</keyhref>
+    <keyhref>https://keyserver.ubuntu.com/pks/lookup?op=get&amp;search=0x588051b29b14ca08d7b46e4f238e5945bc17039e</keyhref>
   </person>
 
   <person id="marrali">

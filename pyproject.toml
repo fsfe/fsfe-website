@@ -88,7 +88,7 @@ ignore = [
   "TRY003",  # Allow large exception messages in code cli scripting things
 ]
 
-[tool.pytest.ini_options]
+[tool.pytest]
 addopts = ["--import-mode=importlib"]
 python_files = ["*_test.py"]
 python_functions = ["*_test"]

@@ -84,6 +84,9 @@ ignore = [
   "TRY003",  # Dont worry about big exceptions in tests
   "S101",  # Allow asserts in tests
 ]
+"tools/**" = [
+  "TRY003",  # Allow large exception messages in code cli scripting things
+]
 
 [tool.pytest.ini_options]
 addopts = ["--import-mode=importlib"]

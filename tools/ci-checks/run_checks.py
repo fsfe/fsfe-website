@@ -30,7 +30,7 @@ def load_check_modules(check_dir: Path) -> tuple[list[ModuleType], list[ModuleTy
     critical_modules: list[ModuleType] = []
     informational_modules: list[ModuleType] = []
     if not check_dir.exists() or not check_dir.is_dir():
-        raise FileNotFoundError(f"Check directory not found: {check_dir}")  # noqa: TRY003
+        raise FileNotFoundError(f"Check directory not found: {check_dir}")
 
     for file in sorted(check_dir.iterdir()):
         if file.name.startswith("check_") and file.suffix == ".py":
@@ -39,7 +39,7 @@ def load_check_modules(check_dir: Path) -> tuple[list[ModuleType], list[ModuleTy
             # Load module from file
             spec = importlib.util.spec_from_file_location(module_name, file)
             if spec is None or spec.loader is None:
-                raise RuntimeError("Failed to load %s.", file)  # noqa: TRY003
+                raise RuntimeError("Failed to load %s.", file)
 
             module = importlib.util.module_from_spec(spec)
             # Register it to prevent pickle issues
@@ -54,13 +54,13 @@ def load_check_modules(check_dir: Path) -> tuple[list[ModuleType], list[ModuleTy
                 or module.CHECK_TYPE not in ["critical", "informational"]
                 or not callable(module.check)
             ):
-                raise RuntimeError("%s. missing some required attr", file)  # noqa: TRY003
+                raise RuntimeError("%s. missing some required attr", file)
             if module.CHECK_TYPE == "critical":
                 critical_modules.append(module)
             elif module.CHECK_TYPE == "informational":
                 informational_modules.append(module)
             else:
-                raise RuntimeError("%s CHECK_TYPE invalid", file)  # noqa: TRY003
+                raise RuntimeError("%s CHECK_TYPE invalid", file)
 
     return critical_modules, informational_modules
 

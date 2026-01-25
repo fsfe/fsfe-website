@@ -5,13 +5,13 @@ description = "Python tooling to build the fsfe websites"
 readme = "README.md"
 requires-python = "==3.14.*"
 dependencies = [
+  "dacite",  # dict to dataclass conversion
   "lxml",  # XML parser
   "nltk",  # For stopwords for the search index
   "platformdirs",  # Get cache dirs and similar by platform
   "python-iso639",  # For getting english language names of languages from two letter codes.
   "requests",  # For HTTP requests
   "tdewolff-minify",  # For minification html css and js
-  "dacite",  # dict to dataclass conversion
 ]
 
 [project.scripts]
@@ -83,6 +83,9 @@ ignore = [
   "D",  # We do not need to document the tests.
   "TRY003",  # Dont worry about big exceptions in tests
   "S101",  # Allow asserts in tests
+]
+"tools/**" = [
+  "TRY003",  # Allow large exception messages in code cli scripting things
 ]
 
 [tool.pyright]

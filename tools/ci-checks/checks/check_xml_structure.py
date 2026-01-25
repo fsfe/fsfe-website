@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-
 # SPDX-FileCopyrightText: Free Software Foundation Europe e.V. <https://fsfe.org>
 #
 # SPDX-License-Identifier: GPL-3.0-or-later
@@ -8,7 +6,6 @@
 
 import logging
 from collections import defaultdict
-from pathlib import Path
 from typing import TYPE_CHECKING
 
 from fsfe_website_build.lib.checks import (
@@ -21,6 +18,7 @@ from fsfe_website_build.lib.misc import (
 
 if TYPE_CHECKING:
     import multiprocessing.pool
+    from pathlib import Path
 
 logger = logging.getLogger(__name__)
 
@@ -42,7 +40,7 @@ def _job(master: Path, other: Path, whitelist: set[str]) -> str | None:
         return f"Exception occurred comparing {master} and {other}: ERROR {e}"
 
 
-def check(files: list[str], pool: multiprocessing.pool.Pool) -> tuple[bool, str]:
+def check(files: list[Path], pool: multiprocessing.pool.Pool) -> tuple[bool, str]:
     """Check for xml structure differences."""
     whitelist = {
         "//discussion/@href",  # Mastodon links can be in different langs
@@ -61,7 +59,7 @@ def check(files: list[str], pool: multiprocessing.pool.Pool) -> tuple[bool, str]
     }
     groups: defaultdict[tuple[Path, str], list[Path]] = defaultdict(list)
     for file in files:
-        path = Path(file).resolve()
+        path = file.resolve()
         groups[(get_basepath(path), path.suffix)].append(path)
 
     tasks: list[tuple[Path, Path, set[str]]] = []

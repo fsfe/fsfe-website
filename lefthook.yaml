@@ -63,11 +63,8 @@ pre-commit:
     pyright:
       glob: "*.py"
       run: pyright {staged_files}
-    structure:
-      glob:
-        - "*.xml"
-        - "*.xhtml"
-      run: tools/ci-checks/compare-xml-structure.py {staged_files}
+    general-checks:
+      run: tools/ci-checks/run_checks.py {staged_files}
     general:
       glob:
         - "*.html"

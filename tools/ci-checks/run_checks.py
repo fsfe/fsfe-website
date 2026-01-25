@@ -10,6 +10,7 @@ import argparse
 import importlib.util
 import logging
 import multiprocessing
+import multiprocessing.pool
 import sys
 from pathlib import Path
 from typing import TYPE_CHECKING
@@ -20,13 +21,14 @@ if TYPE_CHECKING:
 logger = logging.getLogger(__name__)
 
 
-def load_check_modules(check_dir: Path) -> list[ModuleType]:
+def load_check_modules(check_dir: Path) -> tuple[list[ModuleType], list[ModuleType]]:
     """Dynamically load all check modules from a directory."""
     # Ensure the check_dir is in sys.path so it's importable
     if str(check_dir) not in sys.path:
         sys.path.insert(0, str(check_dir))
 
-    modules: list[ModuleType] = []
+    critical_modules: list[ModuleType] = []
+    informational_modules: list[ModuleType] = []
     if not check_dir.exists() or not check_dir.is_dir():
         raise FileNotFoundError(f"Check directory not found: {check_dir}")  # noqa: TRY003
 
@@ -48,13 +50,43 @@ def load_check_modules(check_dir: Path) -> list[ModuleType]:
             if (
                 not hasattr(module, "check")
                 or not hasattr(module, "ALLOWED_EXTENSIONS")
+                or not hasattr(module, "CHECK_TYPE")
+                or module.CHECK_TYPE not in ["critical", "informational"]
                 or not callable(module.check)
             ):
-                raise RuntimeError("%s. missing check function", file)  # noqa: TRY003
+                raise RuntimeError("%s. missing some required attr", file)  # noqa: TRY003
+            if module.CHECK_TYPE == "critical":
+                critical_modules.append(module)
+            elif module.CHECK_TYPE == "informational":
+                informational_modules.append(module)
+            else:
+                raise RuntimeError("%s CHECK_TYPE invalid", file)  # noqa: TRY003
 
-            modules.append(module)
+    return critical_modules, informational_modules
 
-    return modules
+
+def run_module_list(
+    files: list[Path], modules: list[ModuleType], pool: multiprocessing.pool.Pool
+) -> bool:
+    """Run a list of modules on passed files, using passed pool."""
+    all_passed = True
+    for module in modules:
+        # Filter files by extension based on ALLOWED_EXTENSIONS
+        filtered_files: list[Path] = [
+            file for file in files if file.suffix in module.ALLOWED_EXTENSIONS
+        ]
+        # Skip check if no relevant files
+        if not filtered_files:
+            logger.info("%s: no relevant files, skipping", module)
+            continue
+        logger.info("%s: Running", module)
+        success, message = module.check(filtered_files, pool)
+        if not success:
+            logger.error(message)
+            all_passed = False
+        else:
+            logger.info("Check Passed!")
+    return all_passed
 
 
 def main() -> None:
@@ -85,42 +117,50 @@ def main() -> None:
         level=args.log_level,
     )
     try:
-        check_modules = load_check_modules(Path("./tools/ci-checks/checks"))
+        critical_modules, informational_modules = load_check_modules(
+            Path("./tools/ci-checks/checks")
+        )
     except Exception:
         logger.exception("Error loading check modules: %s")
         sys.exit(1)
-    all_checks_passed = True
     with multiprocessing.Pool(processes=args.jobs) as pool:
         # Run each check
-        for module in check_modules:
-            try:
-                # Filter files by extension based on ALLOWED_EXTENSIONS
-                filtered_files: list[Path] = [
-                    file
-                    for file in args.files
-                    if file.suffix in module.ALLOWED_EXTENSIONS
-                ]
-                # Skip check if no relevant files
-                if not filtered_files:
-                    logger.info("No relevant files for %s, skipping", module)
-                    continue
-                logger.info("Running %s", module)
-                success, message = module.check(filtered_files, pool)
-                if not success:
-                    logger.error(message)
-                    all_checks_passed = False
-                else:
-                    logger.info("Check Passed!")
+        try:
+            logger.info("Beginning Informational checks!")
+            logger.info(
+                "One may commit if these fail,"
+                " but should consider fixing the issues raised!\n\n"
+            )
+            informational_checks_successful = run_module_list(
+                args.files, informational_modules, pool
+            )
+            logger.info("Informational Checks finished!\n\n")
+            logger.info("Beginning Critical checks!")
+            logger.info("One must fix raised issues before being able to commit!\n\n")
+            critical_checks_successful = run_module_list(
+                args.files, critical_modules, pool
+            )
+            logger.info("Critical Checks finished!\n\n")
+            if not informational_checks_successful:
+                logger.warning(
+                    "Some informational checks failed,"
+                    " check messages and consider errors!"
+                )
+            else:
+                logger.info("All informational checks passed.")
 
-            except Exception:
-                logger.exception("Check failed to run correctly: %s")
+            if not critical_checks_successful:
+                logger.error(
+                    "Some critical checks failed, check messages and fix errors!"
+                )
                 sys.exit(1)
-    if not all_checks_passed:
-        logger.error("Some checks failed, check messages and fix errors!")
-        sys.exit(1)
-    else:
-        logger.info("All checks passed.")
-        sys.exit(0)
+            else:
+                logger.info("All critical checks passed.")
+                sys.exit(0)
+
+        except Exception:
+            logger.exception("Check failed to run correctly: %s")
+            sys.exit(1)
 
 
 if __name__ == "__main__":

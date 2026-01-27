@@ -36,6 +36,18 @@
       small="data/pictures/tshirt-nocloud-black-back-small.jpg"
       large="data/pictures/tshirt-nocloud-black-back-large.jpg"/>
   </item -->
+  <item type="tshirt" id="tshirt-cool-kids" price="25.00" date="2026-01-27">
+    <available size="XS" a="48" b="68"/>
+    <image small="data/pictures/tshirt-cool-kids-1-small.webp" large="data/pictures/tshirt-cool-kids-1-large.webp"/>
+    <image small="data/pictures/tshirt-cool-kids-2-small.webp" large="data/pictures/tshirt-cool-kids-2-large.webp"/>
+    <image small="data/pictures/tshirt-cool-kids-3-small.webp" large="data/pictures/tshirt-cool-kids-3-large.webp"/>
+  </item>
+  <item type="tshirt" id="tshirt-pmpc" price="25.00" date="2026-01-27">
+    <available size="XS" a="48" b="68"/>
+    <image small="data/pictures/tshirt-pmpc-1-small.webp" large="data/pictures/tshirt-pmpc-1-large.webp"/>
+    <image small="data/pictures/tshirt-pmpc-2-small.webp" large="data/pictures/tshirt-pmpc-2-large.webp"/>
+    <image small="data/pictures/tshirt-pmpc-3-small.webp" large="data/pictures/tshirt-pmpc-3-large.webp"/>
+  </item>
   <item type="tshirt" id="tshirt-hacking-4-freedom" price="25.00" date="2024-01-12">
     <available size="XS" a="48" b="68"/>
     <available size="S" a="50" b="70"/>
@@ -58,6 +70,12 @@
     <available size="3XL" a="70" b="82"/>
     <image small="data/pictures/tshirt-nocloud-petrol-front-small.jpg" large="data/pictures/tshirt-nocloud-petrol-front-large.jpg"/>
     <image small="data/pictures/tshirt-nocloud-petrol-back-small.jpg" large="data/pictures/tshirt-nocloud-petrol-back-large.jpg"/>
+  </item>
+  <item type="hoodie" id="hoodie-retro" price="60.00" date="2026-01-27">
+    <available size="XS" a="49" b="68"/>
+    <image small="data/pictures/hoodie-retro-1-small.webp" large="data/pictures/hoodie-retro-1-large.webp"/>
+    <image small="data/pictures/hoodie-retro-2-small.webp" large="data/pictures/hoodie-retro-2-large.webp"/>
+    <image small="data/pictures/hoodie-retro-3-small.webp" large="data/pictures/hoodie-retro-3-large.webp"/>
   </item>
   <!--item type="hoodie" id="hoodie-fourfreedoms-38c3-blue" price="60.00" date="2024-10-08">
     <available size="XS" a="49" b="68"/>

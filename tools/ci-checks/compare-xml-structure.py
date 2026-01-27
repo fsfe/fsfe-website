@@ -53,8 +53,8 @@ def main() -> None:
         nargs="+",
         type=str,
         default=[
+            "//body/@class",  # Top level body classes
             "//discussion/@href",  # Mastodon links can be in different langs
-            "/html/translator",  # the translator
             "//image/@alt",  # Image alt text for title image
             "//img/@alt",  # Image alt text
             "//input[@name='language']",  # Input language types
@@ -66,6 +66,7 @@ def main() -> None:
             "//profileimage/@alt",  # Profilemage alt text for about/people images
             "//track/@label",  # Language label, used in some track elements
             "//track/@srclang",  # Languages, used in some track elements
+            "/html/translator",  # the translator
         ],
         help="XPATHS that we then ignore.",
     )

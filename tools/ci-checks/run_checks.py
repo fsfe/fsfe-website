@@ -79,13 +79,13 @@ def run_module_list(
         if not filtered_files:
             logger.info("%s: no relevant files, skipping", module)
             continue
-        logger.info("%s: Running", module)
+        logger.debug("%s: Running", module)
         success, message = module.check(filtered_files, pool)
         if not success:
             logger.error(message)
             all_passed = False
         else:
-            logger.info("Check Passed!")
+            logger.debug("Check Passed!")
     return all_passed
 
 

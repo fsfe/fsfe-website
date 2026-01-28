@@ -79,7 +79,7 @@ def _build_parser() -> argparse.ArgumentParser:
         help="What site directories to build",
         default=None,
         nargs="+",
-        type=str,
+        type=Path,
     )
     parser.add_argument(
         "--stage",

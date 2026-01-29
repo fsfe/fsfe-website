@@ -20,14 +20,14 @@ logger = logging.getLogger(__name__)
 
 def prepare_subdirectories(
     source: Path,
-    source_dir: Path,
+    source_site: Path,
     languages: list[str],
     processes: int,
 ) -> None:
     """Find any subdir scripts in subdirectories and run them."""
     logger.info("Preparing Subdirectories")
     for subdir_path in sorted(
-        (path.parent for path in source_dir.glob("**/subdir.py")),
+        (path.parent for path in source_site.glob("**/subdir.py")),
         key=lambda directory: directory.joinpath("subdir-prio.txt").read_text().strip()
         if directory.joinpath("subdir-prio.txt").exists()
         else "0",

@@ -1,0 +1,1223 @@
+WEBVTT
+
+00:00.000 --> 00:05.160
+It should be very more clear that we want and should invest in free software and that
+
+00:05.160 --> 00:06.800
+we want to get rid of big tech.
+
+00:06.800 --> 00:08.440
+We want to get rid of dependencies.
+
+00:08.440 --> 00:10.120
+We want to get rid of proprietary software.
+
+00:10.120 --> 00:13.600
+We want administrations that control technology.
+
+00:26.400 --> 00:29.480
+Hello, and welcome to the Software Freedom Podcast.
+
+00:29.520 --> 00:33.800
+This podcast is brought to you by the Free Software Foundation, Europe.
+
+00:33.800 --> 00:37.600
+We are a charity that empowers users to control technology.
+
+00:37.600 --> 00:39.040
+And I'm Bernie Mehring.
+
+00:39.040 --> 00:42.320
+And today I'm here with my colleague, Alexander Sander.
+
+00:42.320 --> 00:43.120
+Hi, Alex.
+
+00:43.120 --> 00:43.640
+Hi, Bernie.
+
+00:43.640 --> 00:44.720
+Nice to have you back.
+
+00:44.720 --> 00:46.520
+Yeah, happy new year.
+
+00:46.520 --> 00:48.440
+Happy new year to you, too.
+
+00:48.440 --> 00:51.360
+What has happened in the past weeks?
+
+00:51.360 --> 00:54.480
+Oh, I gained some more kilos, I think.
+
+00:54.480 --> 00:57.320
+So it was very tasty.
+
+00:57.320 --> 01:01.240
+Not only days, but other than that.
+
+01:01.240 --> 01:05.200
+Also, some things happened in the Free Software sphere.
+
+01:05.200 --> 01:11.240
+So there's also some updates which we want to share with you in our very first
+
+01:11.240 --> 01:13.920
+policy podcast episode here in the new year.
+
+01:13.920 --> 01:18.760
+And so loads of food and loads of free software.
+
+01:18.760 --> 01:23.000
+Sounds like a perfect and relaxing holiday, to be honest.
+
+01:23.000 --> 01:25.120
+Yeah, half half.
+
+01:25.120 --> 01:26.360
+OK.
+
+01:26.360 --> 01:29.080
+Which half is not a relaxing part?
+
+01:29.080 --> 01:33.760
+Well, well, there are a couple of consultations ongoing.
+
+01:33.760 --> 01:38.120
+And yeah, so this is also something which we want to address today in our
+
+01:38.120 --> 01:38.600
+podcast.
+
+01:38.600 --> 01:40.880
+So, and yeah, this keeps us busy.
+
+01:40.880 --> 01:44.520
+And also during holidays, we were working.
+
+01:44.520 --> 01:51.440
+And so by that, we haven't been only eating, but also working.
+
+01:53.920 --> 01:54.440
+OK.
+
+01:56.640 --> 01:57.640
+How about you?
+
+01:57.640 --> 02:00.640
+I did not have that much chance to eat.
+
+02:00.640 --> 02:03.920
+I mean, there was enough food around at a 39C3.
+
+02:03.920 --> 02:05.600
+Yeah, you have been at the conquest, right?
+
+02:05.600 --> 02:06.800
+So how was it?
+
+02:06.800 --> 02:07.800
+I was really nice.
+
+02:07.800 --> 02:13.080
+It was like, there were a lot of people and it was just a special feeling of
+
+02:13.080 --> 02:19.160
+coming back to this very, very special Congress and conference that you can
+
+02:19.160 --> 02:21.240
+only experience with the CCC.
+
+02:21.240 --> 02:25.760
+So it's like an amazing event and it's amazing to be there.
+
+02:25.760 --> 02:30.200
+And we also had a podcast recording there with Heise, which I enjoyed quite a
+
+02:30.200 --> 02:30.480
+lot.
+
+02:30.480 --> 02:32.480
+It was about digital sovereignty.
+
+02:32.480 --> 02:38.480
+So one of the topics that we to cover extensively in this podcast as well.
+
+02:38.480 --> 02:43.920
+And it was really nice in German, sadly, only, but it was really nice to talk
+
+02:43.920 --> 02:47.240
+with Sven Neuhaus from the Zendis and Anne Roth.
+
+02:47.240 --> 02:52.200
+And of course, Keywan was also there from Heise and C't uplink.
+
+02:52.200 --> 02:57.400
+About their views on digital sovereignty and was, yeah, well done, I think.
+
+02:57.400 --> 02:58.400
+And it's worth a listen.
+
+02:58.400 --> 03:00.800
+I know that you have listened to it.
+
+03:00.800 --> 03:02.800
+Yeah, I have done so.
+
+03:02.800 --> 03:03.800
+Yeah.
+
+03:03.800 --> 03:06.000
+So I can recommend it definitely.
+
+03:06.000 --> 03:12.400
+So it's a very interesting hour and, yeah, also, as you said, it's very interesting
+
+03:12.400 --> 03:13.400
+to get some insights.
+
+03:13.400 --> 03:16.400
+Also, I think the mixed panel is very interesting.
+
+03:16.400 --> 03:22.120
+So we have people from tenders, as you said, so a governmental, yeah, more or less.
+
+03:22.120 --> 03:28.760
+We can see from Anna who is working in the Bundestag on the field of digital.
+
+03:28.760 --> 03:34.800
+And obviously you, as the expert professor of this, are really, really interesting balance
+
+03:34.800 --> 03:35.800
+talent.
+
+03:35.800 --> 03:36.800
+Thank you.
+
+03:36.800 --> 03:37.800
+Yeah.
+
+03:37.800 --> 03:43.120
+I also found it very entertaining to see the slightly different perspectives from the
+
+03:43.120 --> 03:45.040
+background that everybody brings along.
+
+03:45.040 --> 03:51.800
+So it also gives it a bit of a new and fresh air and to talk about this topic.
+
+03:51.800 --> 03:55.760
+I will link it in the show notes so that you can also find it and listen to it, our
+
+03:55.760 --> 03:56.760
+dear listeners.
+
+03:56.760 --> 03:58.760
+No, listen to it.
+
+03:58.760 --> 03:59.760
+It's really good.
+
+03:59.760 --> 04:00.760
+Yeah.
+
+04:00.760 --> 04:02.760
+All right.
+
+04:02.760 --> 04:11.960
+So, but for this day, we will also talk about the digital decade policy program, which
+
+04:11.960 --> 04:19.200
+wants to set up a monitoring and cooperation mechanism to achieve the common objectives
+
+04:19.200 --> 04:23.200
+and targets for Europe's digital transformation.
+
+04:23.200 --> 04:24.200
+This sounds...
+
+04:24.200 --> 04:25.200
+That's what the PR said.
+
+04:25.200 --> 04:27.200
+This is what the PR said.
+
+04:27.200 --> 04:28.200
+Yes.
+
+04:28.200 --> 04:33.120
+I was also like, okay.
+
+04:33.120 --> 04:40.200
+But it's the sentence that puts everything into one sentence, which does not really say
+
+04:40.200 --> 04:41.200
+much.
+
+04:41.200 --> 04:42.200
+Absolutely.
+
+04:42.200 --> 04:45.080
+So, can you take us through this?
+
+04:45.080 --> 04:48.640
+What exactly is the digital decade policy program?
+
+04:48.640 --> 04:49.640
+Yeah.
+
+04:49.640 --> 04:50.640
+Absolutely.
+
+04:50.640 --> 04:53.040
+It's another initiative by the European Commission.
+
+04:53.040 --> 04:59.640
+So it's a European Union program and, yeah, obviously they talk about a whole decade.
+
+04:59.640 --> 05:05.280
+So it's a program which lasts until 2030.
+
+05:05.280 --> 05:12.880
+So that's the aim for this and every year they come up with some new initiatives.
+
+05:12.880 --> 05:20.240
+They are also longer lasting than a year, but every year there's also some sort of evaluation
+
+05:20.240 --> 05:21.240
+report.
+
+05:21.240 --> 05:26.440
+And what they want to do in this digital decade policy program is to work basically on
+
+05:26.440 --> 05:29.320
+four topics, which is infrastructure.
+
+05:29.320 --> 05:36.040
+So they want to invest in a gigabit connectivity, European, whatever singing, then they want
+
+05:36.040 --> 05:43.720
+to invest or also the ability crown for digital business in Europe.
+
+05:43.720 --> 05:52.840
+They want to work on skills so that we have more ICT specialists here in Europe and ultimately
+
+05:52.840 --> 06:00.080
+government plays also role so that the key public services are online and that you have
+
+06:00.080 --> 06:04.960
+a EID and that you can access your health records online, stuff like this.
+
+06:04.960 --> 06:12.000
+So and yeah, we basically focus mostly on the part of government, but also business since
+
+06:12.000 --> 06:15.640
+business provides services for government.
+
+06:15.640 --> 06:20.040
+And this has spillover effects on skills, so these are the topics for us.
+
+06:20.040 --> 06:25.680
+We are interested in this digital decade policy program and what they do at the moment is
+
+06:25.680 --> 06:31.640
+to run a consultation to see what they can do in the next five years and what they might
+
+06:31.640 --> 06:34.920
+change or where they should put their focus on.
+
+06:34.920 --> 06:36.720
+And this is what we want to talk about today.
+
+06:36.720 --> 06:44.240
+So what can you contribute to this consultation and basically take on our views on this digital
+
+06:44.240 --> 06:50.560
+decade policy program and also like put it in a broader context.
+
+06:50.560 --> 06:56.640
+I mean, you'll listen probably to the other podcast episodes where we also talked about
+
+06:56.640 --> 06:59.160
+the financial situation.
+
+06:59.160 --> 07:04.600
+So the funding of free software also we talked a lot about procurement and stuff like
+
+07:04.600 --> 07:05.600
+this.
+
+07:05.600 --> 07:14.840
+So this is if you like just another program which is important for basically the use and
+
+07:14.840 --> 07:19.280
+spread of free software in administrations across Europe and we want to have a look
+
+07:19.920 --> 07:23.160
+at how is it working, what are they doing at the moment, where are we at the moment and
+
+07:23.160 --> 07:28.840
+what can we expect from the next five years and what do we do demand basically for the
+
+07:28.840 --> 07:33.120
+next five years in this digital decade policy program.
+
+07:33.120 --> 07:34.120
+Right.
+
+07:34.120 --> 07:39.000
+You've already covered some of the points that they consider important for the digital decade
+
+07:39.000 --> 07:41.280
+policy program.
+
+07:41.280 --> 07:49.200
+And where they constructed and what's the aim of this in total like what do they want
+
+07:49.200 --> 07:51.240
+to achieve.
+
+07:51.240 --> 07:57.640
+So I mean, we also talked about the digital Europe program which has a slightly comparable
+
+07:57.640 --> 08:03.520
+name so to say if you like, which was set up in light of the Corona crisis that the
+
+08:03.520 --> 08:09.520
+opinion and figured out that we are pretty much dependent on big tech and that it's very
+
+08:09.520 --> 08:13.960
+difficult to have sewer and IT infrastructure.
+
+08:13.960 --> 08:18.120
+So they started to work on this digital Europe program in order to address this.
+
+08:18.120 --> 08:23.480
+And then next to it, they came up with this digital decade policy program which is if
+
+08:23.480 --> 08:30.440
+you like a bit broader, but it also basically addressed the same topics like cybersecurity.
+
+08:30.440 --> 08:33.280
+They talk about a set infrastructure stuff like this.
+
+08:33.280 --> 08:37.560
+So it's a bit broader in terms of like it's not only about software, it's about digital
+
+08:38.560 --> 08:45.560
+in general and there are also some, so to say, soft goals in this like, as I said, they
+
+08:45.560 --> 08:54.960
+want to have more skills in Europe and for this they have several project programs.
+
+08:54.960 --> 08:58.560
+But most of this is also like voluntary.
+
+08:58.560 --> 09:03.680
+So the commission tries to stimulate cooperation between member states.
+
+09:03.680 --> 09:11.360
+They try to come up with projects and ideas and want to basically make sure that member
+
+09:11.360 --> 09:17.120
+states collaborate on this field of digital and particularly when you think about the free
+
+09:17.120 --> 09:21.200
+software with its four freedoms to use that you share and improve.
+
+09:21.200 --> 09:26.760
+For us, it's pretty obvious that free software should play a very, very important role in
+
+09:26.760 --> 09:28.160
+all of this.
+
+09:28.240 --> 09:33.960
+I can say it plays a role, but it could be way more proactive.
+
+09:33.960 --> 09:39.640
+It could be way more ambitious and this is basically also what we put in our feedback
+
+09:39.640 --> 09:45.640
+and we want to have this is also what we what we talked about the funding part.
+
+09:45.640 --> 09:51.000
+We want to have this everything a bit more sustainable and a bit more mid and long term
+
+09:51.000 --> 09:52.000
+oriented.
+
+09:52.000 --> 09:57.640
+And often when we talk about the opinion and we see pilot projects, we see some loose
+
+09:57.640 --> 10:05.880
+corporations, everything is a bit cracky so you don't know if it's still there tomorrow.
+
+10:05.880 --> 10:09.240
+It's pretty much depending on member states initiatives.
+
+10:09.240 --> 10:13.480
+So if they want to step in, if they want to contribute, if they want to collaborate
+
+10:13.480 --> 10:20.440
+and to be honest, I would love to see a bit more pressure and power behind this and also
+
+10:20.440 --> 10:26.880
+some more clarity on how important free software is in order to achieve this.
+
+10:26.880 --> 10:33.760
+So what they, for example, have done in the past is to come up with the edic consortium.
+
+10:33.760 --> 10:37.720
+So it's the European Digital Infrastructure Consortium.
+
+10:37.720 --> 10:43.200
+So there are a couple of initiatives and one of these initiatives, one of these consortias
+
+10:43.200 --> 10:51.880
+is around digital technological, so Renety, this was set up during the summit for European
+
+10:51.880 --> 10:56.200
+digital sovereignty, which was happening in Berlin in November.
+
+10:56.200 --> 11:01.160
+My colleague, Johannes, have been there and they are during that event, they have been
+
+11:01.160 --> 11:06.720
+launching this consortium, so it's a pretty new thing.
+
+11:06.720 --> 11:14.600
+And it's bringing together member states, namely France, Germany, Netherlands, Italy.
+
+11:14.600 --> 11:19.880
+It's more or less supported by Luxembourg and Slovenia and there are some observers as
+
+11:19.880 --> 11:25.400
+well, Poland and Belgium that might also join as members very soon here.
+
+11:25.400 --> 11:31.600
+So you see, it's basically some member states coming together that want to work on this topic
+
+11:31.600 --> 11:34.280
+of technological sovereignty.
+
+11:34.280 --> 11:39.320
+For Germany, for example, it's a sovereign tech agency that works on cybersecurity as
+
+11:39.320 --> 11:44.560
+well as the tenders, the organization which you just mentioned related to your podcast
+
+11:44.560 --> 11:50.440
+where you attend it, so which is basically a state-owned company that comes up with open
+
+11:50.440 --> 11:58.440
+desk, so on free software solution, for administrations to have a digital sovereign workplace.
+
+11:58.440 --> 12:05.880
+So and they want to collaborate in this consortium in order to come up with pool of resources.
+
+12:05.880 --> 12:13.360
+They want to share strategic best practices and ultimately maybe even code.
+
+12:13.360 --> 12:20.280
+And this is happening in such a initiative, which is basically supported or which is basically
+
+12:20.280 --> 12:23.400
+coming from this digital decade policy program.
+
+12:23.400 --> 12:25.760
+So by thus, you can see how it works.
+
+12:25.760 --> 12:31.800
+So you have basically the umbrella with the digital decade policy program and under this umbrella,
+
+12:31.800 --> 12:37.000
+you have other initiatives that are going to be set up or that are already running like
+
+12:37.000 --> 12:41.080
+this edit consortium on technological sovereignty.
+
+12:41.080 --> 12:47.520
+And here, member states that are willing to work together, are coming together and do so.
+
+12:47.520 --> 12:53.960
+And here you can also see that it's not covering every member state in the European Union nor
+
+12:53.960 --> 13:00.200
+doesn't cover, so to say a European Union wide approach, it's more or less a coalition
+
+13:00.200 --> 13:04.680
+of member states that are willing to work together, that are willing to collaborate
+
+13:04.720 --> 13:11.960
+and that then come up with strategy solutions and hopefully a lot of free software,
+
+13:11.960 --> 13:14.160
+which is then used among them.
+
+13:14.160 --> 13:19.160
+For me, the question remains, how do we make sure it spreads across Europe?
+
+13:19.160 --> 13:26.640
+How do we involve other member states and how do we make sure that they really make progress?
+
+13:26.640 --> 13:30.880
+Do you see that the European Commission is doing something in this regard
+
+13:30.880 --> 13:37.680
+or are they still waiting for member states who get active by themselves?
+
+13:37.680 --> 13:41.080
+I mean, they do a lot of public relations around it.
+
+13:41.080 --> 13:46.360
+Also, I do believe that this summit helped to promote this edit lounge,
+
+13:46.360 --> 13:50.000
+but at the same time, this is something which I learned from Johannes,
+
+13:50.000 --> 13:54.800
+who was at this summit for European digital sovereignty when this editing was launched,
+
+13:54.800 --> 13:59.120
+that free software didn't play that major role there.
+
+13:59.120 --> 14:04.880
+So it was more around this, by European, made in Europe, arguments,
+
+14:04.880 --> 14:13.040
+the ministers have talked a lot to SAP, and they didn't talk that much to the free software companies there.
+
+14:13.040 --> 14:16.640
+One could say they have been around, they have been recognized,
+
+14:16.640 --> 14:27.080
+but there is still not the relevance and the importance of their plays in all of this,
+
+14:27.080 --> 14:31.400
+is still not seen or addressed accordingly, I'd say.
+
+14:31.400 --> 14:34.720
+So there is way more room for improvement.
+
+14:34.720 --> 14:38.080
+I do believe it's a good first step, but there should be way more,
+
+14:38.080 --> 14:41.960
+and this is also what I always say when we talk about funding,
+
+14:41.960 --> 14:44.000
+it needs to be sustainable, right?
+
+14:44.000 --> 14:48.960
+So we need to make sure that when they come up with these kinds of activities,
+
+14:48.960 --> 14:54.280
+that they are mid and long-term oriented, that they receive the needed funding,
+
+14:54.280 --> 15:02.320
+that they get resources, and that ultimately, the solutions they come up with are also used, right?
+
+15:02.320 --> 15:05.520
+So it's not just about coming up with projects and saying,
+
+15:05.520 --> 15:07.480
+look, now we have an alternative.
+
+15:07.480 --> 15:12.760
+It's also about using these alternatives, and this is ultimately administrations.
+
+15:12.760 --> 15:17.320
+So for example, if you look at the Ministry for Digitalization in Germany,
+
+15:17.320 --> 15:22.560
+this is for me, obviously, the first ministry that should switch to Open Desk
+
+15:22.560 --> 15:28.960
+and make sure they use it and show other administrations, institutions,
+
+15:28.960 --> 15:37.680
+that it's working, and here we can also see that they struggle to spread their solutions
+
+15:37.680 --> 15:46.160
+and that they really do migrations and replace the dependencies that they build over the last decades.
+
+15:46.160 --> 15:52.160
+And here, I do believe the opinion that also member states could be very more ambitious
+
+15:52.160 --> 15:57.760
+and actually act and use these solutions they come up with
+
+15:57.760 --> 16:03.600
+and not just put them in the niche and put some nice PR around it,
+
+16:03.600 --> 16:09.120
+but also implement and go forward and get rid of these dependencies,
+
+16:09.120 --> 16:14.640
+get rid of proprietary software, and go in the direction of free software,
+
+16:14.640 --> 16:21.200
+since this is the obvious choice to achieve digital sovereignty when we talk about software.
+
+16:21.200 --> 16:26.720
+You mentioned that free software is not yet recognized as the important role it plays
+
+16:26.720 --> 16:31.840
+because free software is everywhere, and you and our listeners, you all know this,
+
+16:31.840 --> 16:35.680
+how important free software is to our digital life and our digital infrastructure.
+
+16:36.960 --> 16:41.600
+What are we, the FSFE, doing to promote the standing of free software?
+
+16:41.600 --> 16:45.120
+Because this is one of our core activities.
+
+16:45.440 --> 16:53.600
+Absolutely. I mean, as I said, there is the ongoing consultation on this digital decade policy
+
+16:53.600 --> 17:00.320
+program in order to give feedback to the commission how we do believe the next five years should look
+
+17:00.320 --> 17:06.880
+like. Basically, what I was just referring to in the last minutes is what we put in writing in
+
+17:06.880 --> 17:13.360
+this consultation. We ask for sustainable long term funding. We ask for free software first
+
+17:13.360 --> 17:20.000
+policy. We ask to basically also use these kinds of solutions. This is what we put in the consultation,
+
+17:20.000 --> 17:25.600
+and we do not stop with this consultation, and we also do not stop with the digital decade policy
+
+17:25.600 --> 17:32.000
+program. We also directly talk to decision makers in the European Union, the commission,
+
+17:32.720 --> 17:37.040
+but also the parliament. We also work on member states level, and by thus also try to
+
+17:37.120 --> 17:44.880
+influence the council position here. Also, next to these programs, we also had the podcast on
+
+17:44.880 --> 17:52.000
+procurement. There's also this ongoing consultation on the impact assessment on the procurement
+
+17:52.000 --> 17:58.800
+reform, where they talk a lot about by European or made in Europe, and maybe, for example,
+
+17:58.800 --> 18:03.360
+at rest, that free software is something global and that you should have an eye on this as well,
+
+18:04.000 --> 18:10.080
+and ultimately, also next to the digital decade policy program and the procurement reform,
+
+18:10.080 --> 18:17.920
+there's also ongoing consultation, which is pretty, pretty new on the open source strategy
+
+18:17.920 --> 18:23.520
+of the European Union, so there is basically, you can also find this on our media channels,
+
+18:25.040 --> 18:30.960
+where we give feedback on an evaluation of the European open source strategy,
+
+18:31.520 --> 18:36.880
+and this is about to be renewed now, and here we will also take part in the consultation,
+
+18:36.880 --> 18:42.640
+and this is also what I meant earlier when we started the podcast. There are lots of
+
+18:42.640 --> 18:49.360
+consultations ongoing at the moment, so we are producing a lot of paper work at the moment,
+
+18:49.360 --> 18:56.320
+and give feedback to the commission on all of the digital and free software policies, procurement,
+
+18:56.320 --> 19:05.200
+but also funding, and what we try to achieve is to give them a big picture and to combine
+
+19:05.200 --> 19:13.120
+activities in several fields, and to basically not only talk about the digital decade policy
+
+19:13.120 --> 19:18.880
+program, but also procurement, but also a budget of the European Union and the open source strategy.
+
+19:18.880 --> 19:25.360
+We also talked about stacks, you know the European commission is also working towards open
+
+19:25.360 --> 19:31.360
+internet stack, where we also try to make sure that free software plays a very more important role,
+
+19:31.360 --> 19:37.440
+and what we can see in all of this is that free software somehow plays a role, but we do believe
+
+19:37.440 --> 19:42.880
+it should play a very more important role, it should be very more clear that we want and should
+
+19:42.880 --> 19:49.360
+invest in free software, and that we want to get rid of big tech, we want to get rid of dependencies,
+
+19:49.360 --> 19:55.280
+we want to get rid of proprietary software, we want administrations that control technology,
+
+19:55.280 --> 20:01.120
+and when we talk about software, then the solution must be free software. This is what we are
+
+20:01.120 --> 20:07.920
+trying basically in all of these fields by taking part in these consultations. This is also a call
+
+20:07.920 --> 20:14.320
+for your dear listeners to also take part in these consultations. So it's important that they
+
+20:14.800 --> 20:20.320
+that they see that there are a couple of voices out there that take care, so it definitely helps
+
+20:20.320 --> 20:26.240
+to take part in such consultations. You can find our feedback on the half your save portal
+
+20:26.240 --> 20:32.960
+of the European commission. If you put it in the show notes precisely, there you can read what we
+
+20:32.960 --> 20:37.600
+put there as a feedback, you can come up with a remix of this or you can find your own words,
+
+20:37.600 --> 20:44.240
+this is definitely helping in order to tell the commission that we do care, but also you
+
+20:44.960 --> 20:50.400
+support us with a donation so that we basically can do the work and that we can come up with these
+
+20:51.440 --> 20:56.080
+feedback to consultations, but that we are also able to travel to Brussels to talk to decision
+
+20:56.080 --> 21:01.760
+makers, or that we can go to these kinds of events like the summit for European digital serenity,
+
+21:01.760 --> 21:06.880
+so that we can take part. So this is how you can support us here. This is how you can help to make
+
+21:06.960 --> 21:17.120
+sure that the free software ecosystem in Europe is spreading and living well. So basically our work
+
+21:17.120 --> 21:24.720
+is to build the ground, so this means we educate decision makers, we tell them about our views,
+
+21:24.720 --> 21:30.080
+we are there to answer and address their questions they might have, but also to bring in our positions
+
+21:30.960 --> 21:38.160
+basically to fight for free software first policy. In all of these fields, also to try to connect
+
+21:38.160 --> 21:43.840
+these topics, so you also need to know that it's not always the same people working on this,
+
+21:43.840 --> 21:51.600
+and there are several director generals working on this, so DG, so the procurement reform is
+
+21:51.600 --> 21:58.480
+happening somewhere else, then the budget debate, then the digital decade policy program,
+
+21:59.200 --> 22:05.200
+other than the open source strategies, everything is handled by another DG, by another people,
+
+22:05.200 --> 22:10.000
+they need to be educated basically, they need to be connected, they need to see what their
+
+22:10.000 --> 22:15.040
+colleagues are doing, this is basically how we try to channel through these kind of debates,
+
+22:15.040 --> 22:19.360
+connecting people, trying to bring in our positions, fighting for these positions, finding
+
+22:19.360 --> 22:25.760
+majorities for these positions ultimately, and making sure that there is ultimately a free software
+
+22:25.760 --> 22:31.920
+first policy in all of these files. That sounds like a lot of work. It is, but it's also to be honest,
+
+22:31.920 --> 22:39.200
+something where we do make progress, it's small steps, that's for sure, but we do these small steps,
+
+22:39.200 --> 22:48.560
+we try to be around, and hopefully we will very soon see major steps and major progress and
+
+22:48.720 --> 22:57.360
+have an independent, well, basically not independent, but a solo rent, and the administration that can
+
+22:57.360 --> 23:03.680
+control its technology. What's your feeling when you talk to MPs from the European Parliament?
+
+23:04.880 --> 23:10.000
+Is there more understanding of what free software is than, like, let's say, five years ago,
+
+23:10.960 --> 23:17.360
+we put in a lot of work and effort into this, or what's your personal
+
+23:18.560 --> 23:24.960
+point of view here when you talk to the MPs, do they understand the arguments or how do they act?
+
+23:26.720 --> 23:33.120
+I mean, first of all, it really depends on the group you look at, but also in general,
+
+23:33.200 --> 23:40.640
+I would say the level of knowledge is rising, so that's definitely for sure, but also you can see
+
+23:40.640 --> 23:47.200
+that in the last term, for example, we had the AI Act, we had the Cyber-Resilience Act,
+
+23:47.200 --> 23:52.320
+so we had some very, very important, but also prominent files where free software played a role
+
+23:52.320 --> 23:59.920
+in these files. We actively worked on that, and at the end of the term, I'd say many MPs
+
+23:59.920 --> 24:07.120
+knew about it, many MPs understood our take, and that's why they also amended accordingly
+
+24:07.120 --> 24:14.000
+to these files to make sure that free software is protected, or that there is a dedicated
+
+24:14.000 --> 24:21.280
+wording on this in those files, but also after the elections, the European Parliament
+
+24:21.280 --> 24:29.680
+was dramatically changed, not only by majorities, but also many of these, one could say,
+
+24:30.080 --> 24:37.520
+than experts left the parliament, so for many, we had to start from scratch, we had to start to
+
+24:37.520 --> 24:43.840
+build new relationships, this is also still ongoing, and in particular, if you look at files like
+
+24:43.840 --> 24:50.560
+procurement, for example, right, so people working on these files are not digital experts, they are
+
+24:51.920 --> 24:56.560
+experts for procurement, if you like, and if you look at procurement, we talk about chairs,
+
+24:56.560 --> 25:01.040
+we talk about cars, we talk about whatever can be procured, and digital just plays
+
+25:02.320 --> 25:09.280
+one role next to many, many, many others, so you can't expect that you find digital experts
+
+25:09.280 --> 25:13.520
+in the field of procurement, for example, so we are coming up with completely new files
+
+25:14.320 --> 25:21.920
+this term, so that means we are running into new, so to say, networks of decision makers
+
+25:21.920 --> 25:26.880
+that need to be educated, so I wouldn't say we need to start from scratch, and I wouldn't say we
+
+25:28.240 --> 25:34.560
+it's worse than five years ago, still we need to educate people a lot, but what I can see in
+
+25:34.560 --> 25:40.720
+all of these meetings is that there is an interest in this, and that they are willing to understand,
+
+25:40.720 --> 25:47.680
+and that they also see more and more the benefits, why one should invest in free software,
+
+25:47.760 --> 25:53.840
+but also on the other side, which might be equally important, I'd say, is that we can get rid
+
+25:53.840 --> 26:00.480
+of some myths more and more, right, so often we have seen or we still often see the
+
+26:00.480 --> 26:06.960
+argument around security, for example, right, so if the code is transparent, then it's an issue
+
+26:06.960 --> 26:12.320
+for security, for example, so this is sometimes some of these myths which we are confronted with,
+
+26:12.400 --> 26:17.920
+and then we can educate people and tell people that's basically the opposite, it's true,
+
+26:18.560 --> 26:26.720
+and by thus, I do believe that we, after this term, will have way more experts in Europe
+
+26:26.720 --> 26:32.720
+coming from the procurement sector, for example, but also from budget debates, that also do
+
+26:32.720 --> 26:38.560
+understand that there is not only a budget argument to go in the direction of free software,
+
+26:38.560 --> 26:44.400
+but also so ran into security argument around it, and it's good that they see it, that they
+
+26:44.400 --> 26:51.120
+understand it, and that they listen to it, and I also do believe that we can get closer and
+
+26:51.120 --> 26:57.760
+closer and closer to this free software, first policy by convincing these people how far we can get,
+
+26:57.760 --> 27:02.560
+that's difficult to say at the moment, also often we see that there are still many, many
+
+27:02.560 --> 27:09.760
+loopholes in all of these initiatives, strategies, papers, so this is something what we try to fix,
+
+27:09.760 --> 27:17.360
+also with some creative ways, one could say, but here I do believe this is something which we,
+
+27:18.800 --> 27:23.600
+what we need to challenge for a very long time is to fix loopholes in all of this,
+
+27:23.600 --> 27:30.480
+so the lobbyists on the other side are also doing their job, they also try to maintain their
+
+27:30.480 --> 27:39.520
+business model for their proprietary software, and it's basically a fight for majorities,
+
+27:39.520 --> 27:45.120
+but I do believe it's way better than a couple of years ago, and that we already made progress
+
+27:46.720 --> 27:51.600
+not only the cyber resilience act, but also fights before like the copyright directive,
+
+27:52.240 --> 27:58.960
+and also our takes on the open source strategy in 2020, for example, we can see progress,
+
+27:58.960 --> 28:06.000
+we can see that more and more people take care, still in particular in this term we are addressing
+
+28:06.000 --> 28:13.920
+completely new networks, they need to have the skills of the digital-to-decade policy program in
+
+28:13.920 --> 28:19.760
+order to understand what's ongoing and why to pick free software and not a proprietary one.
+
+28:21.760 --> 28:25.040
+Is there something that is really outstanding to you in this conversation?
+
+28:25.920 --> 28:36.080
+I mean the outstanding is maybe a bit difficult, but what we hear very often is this
+
+28:36.720 --> 28:44.000
+bi-European or made in Europe approach, and here it's a bit difficult to make them understand
+
+28:44.000 --> 28:50.160
+that in particular free software is something global, right, and that they do not have to fear,
+
+28:51.040 --> 28:57.440
+that they also do not have to fear, that a line of code is coming outside of Europe,
+
+28:57.440 --> 29:03.040
+which is then in our infrastructure, for example, some of these kind of myths we are trying to
+
+29:03.040 --> 29:10.720
+address here, and that we are at the moment really often confronted with, and so I do believe it
+
+29:10.720 --> 29:19.120
+won't help us a lot in order to achieve this digital sovereignty to replace big tech by a European
+
+29:19.120 --> 29:25.920
+proprietary vendor and one or come up with another vendor login, right, so that won't help us.
+
+29:26.480 --> 29:30.960
+This is something which we need to address, where we need to educate, where we need to explain
+
+29:30.960 --> 29:39.040
+decision-makers a lot, and this is probably one of the strongest narratives we have to counter
+
+29:39.040 --> 29:46.000
+these days is that this bi-European or made in Europe argument doesn't make that much sense
+
+29:46.560 --> 29:53.680
+if you talk about free software and that this should not be the criteria, but rather the criteria
+
+29:53.680 --> 29:58.800
+should be that the software you are using has the four freedoms to use, study, share and improve,
+
+29:59.360 --> 30:05.680
+and then in this case it doesn't matter that much where the code is coming from, but you need to
+
+30:05.680 --> 30:11.200
+have the freedoms, which is way more important than where the code is coming from, so this is basically
+
+30:11.200 --> 30:16.880
+something which I see quite often these days, and where we definitely have to make sure that we
+
+30:16.880 --> 30:23.680
+can counter this narrative in the field of software. All right, is there something our listeners
+
+30:23.680 --> 30:31.120
+can do directly now after listening to this podcast? I mean definitely, so there are
+
+30:31.840 --> 30:36.880
+since the digital decade policy program consultation will be closed when you listen to it,
+
+30:37.520 --> 30:42.880
+but as I said, there is still the ongoing consultation on the procurement reform. We also
+
+30:42.880 --> 30:47.600
+contribute it to this. You can, to the first consultation on procurement, you can use this as a
+
+30:47.600 --> 30:52.800
+blueprint in order to contribute to the impact assessment consultation. We also had a podcast
+
+30:52.800 --> 31:00.480
+recording on this where you can re-listen our takes on that one. There is the consultation on the
+
+31:01.360 --> 31:07.680
+European Union open source strategy where you can and should feedback, so this is definitely
+
+31:07.680 --> 31:13.360
+something what you can do. You can, whenever you run into decision makers, tell them about the
+
+31:13.360 --> 31:19.840
+benefits of the software, so help us with spreading the good news about the software, so this is also
+
+31:19.840 --> 31:26.320
+something which is super helpful. Use your social media channels to promote best practice,
+
+31:26.320 --> 31:31.040
+to promote our podcasts, for example, and ultimately, as also said in the beginning,
+
+31:31.040 --> 31:37.520
+you can join us as a supporter, for example, and help us that we can do our work. Go to conferences,
+
+31:37.520 --> 31:43.920
+spread the word, spread the good news, take part in these processes, listen to the podcast,
+
+31:43.920 --> 31:52.400
+so this is also something where we normally refer to ongoing activities where you can and might
+
+31:52.560 --> 31:57.760
+want to take part. So this is definitely, everything is helpful. Also, if you are a member states,
+
+31:57.760 --> 32:04.240
+it's super helpful. If you try to talk to your local and national decision makers,
+
+32:05.200 --> 32:11.680
+as said, often these initiatives in Europe are only happening because of the willingness of
+
+32:11.680 --> 32:18.160
+member states and the more member states we have around the more progress we can do. So this
+
+32:18.240 --> 32:22.800
+is definitely also helping if you are active in member states, so you don't have to go to Brussels
+
+32:22.800 --> 32:29.440
+to fight for a free software, you can also do this in your hometown. Yeah. I do have a person
+
+32:29.440 --> 32:36.400
+that I'm also sometimes in contact with decision makers. At the Congress, I received a postcard
+
+32:36.400 --> 32:44.320
+that said, thank you so much for your energy and your support of free software, and it was a
+
+32:44.320 --> 32:49.840
+very nice postcard that I received, and I have to be thinking that decision makers are also not all
+
+32:49.840 --> 32:57.120
+of them, all of them, because I mean, not everybody can be on the same page, but it's also very nice.
+
+32:59.360 --> 33:05.200
+Absolutely, yeah, this is very encouraging. Yeah, that's the word I was looking for. I found
+
+33:05.200 --> 33:11.440
+this was a very good story, and listeners, if you know any decision maker, maybe at the next
+
+33:11.520 --> 33:24.560
+Congress, you might receive such a postcard. So yeah, with this, I would say we put in all the links
+
+33:24.560 --> 33:30.320
+in the show notes, you find our feedback there, go through our feedback, take this as a blueprint,
+
+33:30.320 --> 33:36.400
+as Alex already proposed, and yeah, talk to your decision makers on a local level, on a member
+
+33:36.400 --> 33:43.680
+state level of the European Union, or also contact your MEPs in the European Parliament,
+
+33:43.680 --> 33:50.240
+and tell them how important free software is, and yeah, let us bring free software forward,
+
+33:50.240 --> 33:55.120
+and support us also with the nation, if you can, so we can do the work for you as well.
+
+33:58.480 --> 34:00.320
+Alex, do you have anything to add?
+
+34:01.040 --> 34:04.400
+No, no, do so.
+
+34:07.040 --> 34:10.880
+Thank you so much for taking us through the digital decade policy program.
+
+34:11.600 --> 34:16.480
+I mean, it's supposed to be running for the next decade, so let's see what's happening there.
+
+34:16.480 --> 34:18.640
+I'm quite sure you will follow up on it, right?
+
+34:19.680 --> 34:21.040
+Yes, yes, absolutely.
+
+34:21.040 --> 34:24.800
+Thank you for also doing this podcast, as you have said many times before.
+
+34:25.040 --> 34:29.600
+And yeah, thank you so much for being here.
+
+34:29.600 --> 34:31.280
+Thank you so much for your time.
+
+34:31.280 --> 34:31.680
+Thank you.
+
+34:32.960 --> 34:36.640
+Thank you, listeners, for listening to our software freedom podcast.
+
+34:37.600 --> 34:42.160
+If you liked this episode, please recommend it to your friends and rate it.
+
+34:42.160 --> 34:47.040
+Stay tuned for more inspiring conversations that explore the importance of software freedom,
+
+34:47.680 --> 34:49.520
+and its impact on our digital lives.
+
+34:50.480 --> 34:54.320
+This podcast is presented to you by the free software foundation, Europe.
+
+34:55.120 --> 34:58.320
+Yeah, a charity that works on promoting software freedom.
+
+34:59.200 --> 35:03.760
+If you like our work, please consider supporting us for the nation.
+
+35:04.560 --> 35:09.360
+You find more information under fsfe.org/donate.
+
+35:09.360 --> 35:10.160
+Thank you so much.
+
+35:10.720 --> 35:11.200
+Bye bye.
+
+35:12.960 --> 35:14.720
+Hi, my name is Eric Da Silva.
+
+35:14.720 --> 35:19.520
+How I got to fsafi is what's very passionate about digital rights.
+
+35:19.520 --> 35:23.440
+For the reason why I'm staying at fsafi, I've been staying around since my
+
+35:23.440 --> 35:26.480
+internship is because it's a very nice organization.
+
+35:26.480 --> 35:33.840
+It's for very kind people who are very committed to what we're doing and are very sensitive to
+
+35:35.840 --> 35:38.240
+the importance of political issues.
+
+35:38.240 --> 35:40.480
+But for human aspect, it's very important for me.
+

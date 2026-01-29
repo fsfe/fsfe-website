@@ -7,10 +7,15 @@ import argparse
 import logging
 import multiprocessing
 import sys
+import tomllib
 from pathlib import Path
 from textwrap import dedent
 
+from dacite import Config, from_dict
+
+from .lib.build_config import GlobalBuildConfig, SiteBuildConfig
 from .lib.misc import lang_from_filename
+from .lib.site_config import SiteConfig
 from .phase0.clean_cache import clean_cache
 from .phase0.full import full
 from .phase0.global_symlinks import global_symlinks
@@ -23,10 +28,11 @@ from .phase3.stage_to_target import stage_to_target
 logger = logging.getLogger(__name__)
 
 
-def _parse_arguments() -> argparse.Namespace:
-    """Parse the arguments of the website build process."""
+def _build_parser() -> argparse.ArgumentParser:
+    """Build the argument parser."""
     parser = argparse.ArgumentParser(
-        description="Python script to handle building of the fsfe webpage",
+        description="Python script to handle building of the fsfe webpages",
+        formatter_class=argparse.ArgumentDefaultsHelpFormatter,
     )
     parser.add_argument(
         "--full",
@@ -41,15 +47,15 @@ def _parse_arguments() -> argparse.Namespace:
     parser.add_argument(
         "--languages",
         help="Languages to build website in.",
-        default=[],
-        type=lambda langs: sorted(langs.split(",")),
+        nargs="+",
+        type=str,
     )
     parser.add_argument(
         "--log-level",
         type=str,
         default="INFO",
         choices=["DEBUG", "INFO", "WARNING", "ERROR", "CRITICAL"],
-        help="Set the logging level (default: INFO)",
+        help="Set the logging level",
     )
     parser.add_argument(
         "--processes",
@@ -72,7 +78,8 @@ def _parse_arguments() -> argparse.Namespace:
         "--sites",
         help="What site directories to build",
         default=None,
-        type=str,
+        nargs="+",
+        type=Path,
     )
     parser.add_argument(
         "--stage",
@@ -80,64 +87,78 @@ def _parse_arguments() -> argparse.Namespace:
         action="store_true",
     )
     parser.add_argument(
-        "--target",
+        "--targets",
         help=dedent("""\
         Final dirs for websites to be build to.
         Can be a single path, or a comma separated list of valid rsync targets.
         Supports custom rsynx extension for specifying ports for ssh targets,
         name@host:path?port.
         """),
+        nargs="+",
         type=str,
-        default=None,
     )
-    args = parser.parse_args()
+    return parser
+
+
+def _build_config_from_arguments(args: argparse.Namespace) -> GlobalBuildConfig:
+    """Convert the arguments to a build config."""
+    # Now, update any args that need to default based on other arguments
     args.sites = (
         [path for path in args.source.glob("?*.??*") if path.is_dir()]
         if args.sites is None
-        else [args.source.joinpath(site) for site in args.sites.split(",")]
+        else args.sites
     )
-    if args.target is None:
-        args.target = str(args.source.joinpath("output/final"))
-    return args
+    if not args.targets:
+        args.targets = [str(args.source.joinpath("output/final"))]
+    args.stage = (
+        args.stage
+        # Multiple targets
+        or len(args.targets) > 1
+        # Has special char marking it as an rsync ssh target
+        or any(char in target for char in "@:" for target in args.targets)
+    )
+    # And our derived settings we do not have as an argument
+    # args.targets is certain to be exactly one long if args.stage is not true
+    working_target = Path(
+        args.source / "output/stage" if args.stage else args.targets[0]
+    )
+    all_languages = sorted(
+        (path.name for path in args.source.glob("global/languages/??")),
+    )
+    return GlobalBuildConfig(
+        **vars(args), working_target=working_target, all_languages=all_languages
+    )
 
 
-def build(args: argparse.Namespace) -> None:
+def _run_build(global_build_config: GlobalBuildConfig) -> None:
     """Coordinate the website builder."""
     logging.basicConfig(
         format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
         datefmt="%Y-%m-%d %H:%M:%S",
-        level=args.log_level,
+        level=global_build_config.log_level,
     )
-    logger.debug(args)
+    logger.debug(global_build_config)
 
-    with multiprocessing.Pool(args.processes) as pool:
+    with multiprocessing.Pool(global_build_config.processes) as pool:
         logger.info("Starting phase 0 - Global Conditional Setup")
-
-        if args.clean_cache:
+        # These are simple conditional steps that interact directly with args
+        if global_build_config.clean_cache:
             clean_cache()
         # TODO Should also be triggered whenever any build python file is changed
-        if args.full:
-            full(args.source)
+        if global_build_config.full:
+            full(global_build_config.source)
         global_symlinks(
-            args.source,
+            global_build_config.source,
             (
-                args.languages
-                if args.languages
-                else sorted(
-                    (path.name for path in args.source.glob("global/languages/??")),
-                )
+                global_build_config.languages
+                if global_build_config.languages
+                else global_build_config.all_languages
             ),
             pool,
         )
-
-        stage_required = any(
-            [args.stage, "@" in args.target, ":" in args.target, "," in args.target],
-        )
-        working_target = Path(
-            f"{args.source}/output/stage" if stage_required else args.target
-        )
+        # Create our stable config across all sites
         # the two middle phases are unconditional, and run on a per site basis
-        for site in args.sites:
+        for site in global_build_config.sites:
             logger.info("Processing %s", site)
             if not site.exists():
                 logger.critical("Site %s does not exist, exiting", site)
@@ -148,36 +169,52 @@ def build(args: argparse.Namespace) -> None:
             # Do not get access to languages to be built in,
             # and other benefits of being ran later.
             prepare_early_subdirectories(
-                args.source,
+                global_build_config,
                 site,
-                args.processes,
             )
-            languages = (
-                args.languages
-                if args.languages
+            languages: list[str] = (
+                global_build_config.languages
+                if global_build_config.languages
                 else sorted(
                     {lang_from_filename(path) for path in site.glob("**/*.*.xhtml")},
                 )
             )
+            # Now we know our languages, build our site build config
+            site_build_config = SiteBuildConfig(languages, site)
+            # And build our config that is saved inside the site
+            site_config = (
+                from_dict(
+                    SiteConfig,
+                    tomllib.loads(config_file.read_text()),
+                    Config(strict=True, cast=[Path]),
+                )
+                if (config_file := site / "config.toml").exists()
+                else SiteConfig()
+            )
+
             # Processes needed only for subdir stuff
-            phase1_run(args.source, site, languages, args.processes, pool)
+            phase1_run(global_build_config, site_build_config, site_config, pool)
+            site_target = global_build_config.working_target / site.name
+
             phase2_run(
-                args.source,
-                site,
-                languages,
-                pool,
-                working_target.joinpath(site.name),
+                global_build_config, site_build_config, site_config, site_target, pool
             )
 
         logger.info("Starting Phase 3 - Global Conditional Finishing")
-        if stage_required:
-            stage_to_target(working_target, args.target, pool)
+        if global_build_config.stage:
+            stage_to_target(
+                global_build_config.working_target, global_build_config.targets, pool
+            )
 
-    if args.serve:
-        serve_websites(working_target, args.sites, 2000, 100)
+    if global_build_config.serve:
+        serve_websites(
+            global_build_config.working_target, global_build_config.sites, 2000, 100
+        )
 
 
-def main() -> None:
+def build(passed_args: list[str] | None = None) -> None:
     """Parse args and run build."""
-    args = _parse_arguments()
-    build(args)
+    parser = _build_parser()
+    args = parser.parse_args(passed_args)
+    global_build_config = _build_config_from_arguments(args)
+    _run_build(global_build_config)

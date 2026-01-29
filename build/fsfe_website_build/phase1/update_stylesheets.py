@@ -40,7 +40,7 @@ def _update_sheet(file: Path) -> None:
     touch_if_newer_dep(file, imports)
 
 
-def update_stylesheets(source_dir: Path, pool: multiprocessing.pool.Pool) -> None:
+def update_stylesheets(source_site: Path, pool: multiprocessing.pool.Pool) -> None:
     """Touch all XSL files dependant on an XSL that has changed since last build."""
     logger.info("Updating XSL stylesheets")
     banned = re.compile(r"(\.venv/.*)|(.*\.default\.xsl$)")
@@ -48,6 +48,6 @@ def update_stylesheets(source_dir: Path, pool: multiprocessing.pool.Pool) -> Non
         _update_sheet,
         filter(
             lambda file: banned.match(str(file)) is None,
-            source_dir.glob("**/*.xsl"),
+            source_site.glob("**/*.xsl"),
         ),
     )

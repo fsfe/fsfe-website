@@ -85,7 +85,9 @@ def compare_elements(
 
     # tag mismatch
     if elem1.tag != elem2.tag:
-        errors.append(f"Tag mismatch at {tag_path}: {elem1.tag} ≠ {elem2.tag}")
+        errors.append(
+            f"Tag of elements at <{tag_path}> differ: {elem1.tag} ≠ {elem2.tag}"
+        )
         return errors  # if tags differ, stop descending
 
     # attribute deltas
@@ -98,14 +100,14 @@ def compare_elements(
 
     if only_in_elem1 or only_in_elem2:
         errors.append(
-            f"Attribute delta at <{elem1.tag}>"
-            f"  only 1: {only_in_elem1}  only 2: {only_in_elem2}"
+            f"Attributes of element <{elem1.tag}> differ: "
+            f"{only_in_elem1} ≠ {only_in_elem2}"
         )
     for key in common:
         if attributes_of_elem1[key] != attributes_of_elem2[key]:
             error_msg = (
-                f"Attribute value diff at <{elem1.tag} {key}>:"
-                f" {attributes_of_elem1[key]!r} ≠ {attributes_of_elem2[key]!r}"
+                f"Attribute '{key}' of element <{elem1.tag}> differs: "
+                f"{attributes_of_elem1[key]!r} ≠ {attributes_of_elem2[key]!r}"
             )
             errors.append(error_msg)
 
@@ -113,11 +115,13 @@ def compare_elements(
     kids1 = list(elem1)
     kids2 = list(elem2)
     if len(kids1) != len(kids2):
-        errors.append(f"Child count at <{elem1.tag}>: {len(kids1)} ≠ {len(kids2)}")
+        errors.append(
+            f"Number of children of <{elem1.tag}> differs: {len(kids1)} ≠ {len(kids2)}"
+        )
         return errors  # if counts differ, stop descending
 
     # and then recurse into children
-    for idx, (child1, child2) in enumerate(zip(kids1, kids2, strict=False), start=1):
+    for idx, (child1, child2) in enumerate(zip(kids1, kids2, strict=False)):
         errors.extend(
             compare_elements(
                 child1, child2, xpaths_to_ignore=(), _path=f"{tag_path}[{idx}]"

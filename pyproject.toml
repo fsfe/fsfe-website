@@ -20,7 +20,7 @@ build = "fsfe_website_build:build"
 [dependency-groups]
 dev = [
   "lefthook",  # pre-commit hook
-  "pillow>=12.1.0",
+  "pillow",
   "pyright",  # python typechecker
   "pytest",  # python test runner
   "pytest-mock",  # helper for mocking in pytest

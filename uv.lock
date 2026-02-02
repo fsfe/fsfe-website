@@ -181,7 +181,7 @@ requires-dist = [
 [package.metadata.requires-dev]
 dev = [
     { name = "lefthook" },
-    { name = "pillow", specifier = ">=12.1.0" },
+    { name = "pillow" },
     { name = "pyright" },
     { name = "pytest" },
     { name = "pytest-mock" },

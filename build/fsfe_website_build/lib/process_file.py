@@ -11,6 +11,7 @@ from typing import TYPE_CHECKING, Any
 
 from lxml import etree
 
+from fsfe_website_build.lib.lang_directions import LANG_CODE_DIRECTION_MAPPINGS
 from fsfe_website_build.lib.misc import get_basename, get_version, lang_from_filename
 
 if TYPE_CHECKING:
@@ -34,8 +35,20 @@ def _get_xmls(file: Path, parser: etree.XMLParser) -> list[etree.Element]:
         # to this element instead of the actual content element.
         for elem in root.xpath("version"):
             root.remove(elem)
+        lang = lang_from_filename(file)
+        direction: str = LANG_CODE_DIRECTION_MAPPINGS.get(
+            lang_from_filename(file), "rtl"
+        )
         for elem in root.xpath("*"):
             elem.set("filename", get_basename(file))
+            # set the lang and direction on all elements
+            # this ensure no matter how we source an elem
+            # it has the right lang and direction
+            elem.set("lang", lang)
+            elem.set("dir", direction)
+            for subelem in elem.xpath("//*"):
+                subelem.set("lang", lang)
+                subelem.set("dir", direction)
             elements.append(elem)
         # and then we return the element
     return elements

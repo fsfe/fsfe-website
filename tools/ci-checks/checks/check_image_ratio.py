@@ -20,7 +20,7 @@ if TYPE_CHECKING:
 
 logger = logging.getLogger(__name__)
 
-CHECK_TYPE = "informational"
+CHECK_TYPE = "critical"
 ALLOWED_EXTENSIONS = {".xhtml", ".xml"}
 
 

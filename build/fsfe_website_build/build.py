@@ -22,6 +22,7 @@ from .phase0.global_symlinks import global_symlinks
 from .phase0.prepare_early_subdirectories import prepare_early_subdirectories
 from .phase1.run import phase1_run
 from .phase2.run import phase2_run
+from .phase3.completion_notification import completion_notification
 from .phase3.serve_websites import serve_websites
 from .phase3.stage_to_target import stage_to_target
 
@@ -96,6 +97,15 @@ def _build_parser() -> argparse.ArgumentParser:
         """),
         nargs="+",
         type=str,
+    )
+    parser.add_argument(
+        "--completion-notification",
+        help=dedent("""\
+        Send a notification a build finishes successfully.
+        Requires extra dependencies from the `notifications` dep group.
+        Easiest way to get them is `uv sync --all-groups`
+        """),
+        action="store_true",
     )
     return parser
 
@@ -205,6 +215,8 @@ def _run_build(global_build_config: GlobalBuildConfig) -> None:
             stage_to_target(
                 global_build_config.working_target, global_build_config.targets, pool
             )
+    if global_build_config.completion_notification:
+        completion_notification()
 
     if global_build_config.serve:
         serve_websites(

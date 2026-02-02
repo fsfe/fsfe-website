@@ -28,6 +28,9 @@ dev = [
   "ty",  # python typechecker
   "types-lxml",  # type stubs for lxml
 ]
+notifications = [
+  "desktop-notifier",  # send notification on completion optionally
+]
 
 [build-system]
 requires = ["uv_build"]

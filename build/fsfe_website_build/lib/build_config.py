@@ -26,6 +26,7 @@ class GlobalBuildConfig:
     stage: bool
     targets: list[str]
     working_target: Path
+    completion_notification: bool
 
     def __post_init__(self) -> None:
         """Validate build settings."""

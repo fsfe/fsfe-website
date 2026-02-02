@@ -7,4 +7,6 @@ from pathlib import Path
 
 from platformdirs import user_cache_dir
 
-CACHE_DIR = Path(user_cache_dir("fsfe-website-build", "fsfe"))
+APP_NAME = "fsfe-website-build"
+
+CACHE_DIR = Path(user_cache_dir(APP_NAME, "fsfe"))

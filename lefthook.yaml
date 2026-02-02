@@ -65,12 +65,6 @@ pre-commit:
       run: ty check {staged_files}
     general-checks:
       run: tools/ci-checks/run_checks.py {staged_files}
-    general:
-      glob:
-        - "*.html"
-        - "*.xml"
-        - "*.xhtml"
-      run: tools/ci-checks/general.sh {staged_files}
     simple-syntax:
       glob:
         - "*.xml"

@@ -37,7 +37,7 @@ WORKDIR /website-source-during-build
 # Copy pyproject, build deps & entrypoint
 COPY ./pyproject.toml ./uv.lock pre-commit.entrypoint.sh ./
 
-RUN uv sync --no-install-package fsfe_website_build --group dev
+RUN uv sync --no-install-package fsfe_website_build --all-groups
 
 # Set the workdir
 WORKDIR /website-source

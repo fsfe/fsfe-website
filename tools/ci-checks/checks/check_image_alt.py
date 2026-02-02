@@ -43,6 +43,5 @@ def check(files: list[Path], pool: multiprocessing.pool.Pool) -> tuple[bool, str
           you cannot see it.
 
           More information on alternative text for images:
-          https://wiki.fsfe.org/TechDocs/Mainpage/Editing/BestPractices#Alternative_text_for_images
-              """)
+          https://wiki.fsfe.org/TechDocs/Mainpage/Editing/BestPractices#Alternative_text_for_images""")
     )

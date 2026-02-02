@@ -5,6 +5,7 @@
 """Check that the passed files do not have frontpage news in non english."""
 
 import logging
+import textwrap
 from pathlib import Path
 from typing import TYPE_CHECKING
 
@@ -33,8 +34,9 @@ def check(files: list[Path], pool: multiprocessing.pool.Pool) -> tuple[bool, str
             / f"{get_basepath(file_path).name}.en{file_path.suffix}"
         ).exists()
     ]
-    return (
-        len(failed_files) == 0,
-        "The following files have no english version"
-        " and are marked for the front page:\n" + "\n".join(failed_files),
+    return len(failed_files) == 0, (
+        "\n".join(failed_files)
+        + textwrap.dedent("""
+            The above files have no english version
+            and are marked for the front page:""")
     )

@@ -34,6 +34,5 @@ def check(files: list[Path], pool: multiprocessing.pool.Pool) -> tuple[bool, str
                   Please do not use <style> elements to define CSS rules for a file.
 
                   More information why this is bad style, and what to do instead:
-                  https://wiki.fsfe.org/TechDocs/Mainpage/Editing/BestPractices#No_in-line_CSS
-              """)
+                  https://wiki.fsfe.org/TechDocs/Mainpage/Editing/BestPractices#No_in-line_CSS""")
     )

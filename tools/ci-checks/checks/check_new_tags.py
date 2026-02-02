@@ -79,6 +79,5 @@ def check(files: list[Path], pool: multiprocessing.pool.Pool) -> tuple[bool, str
               https://fsfe.org/tags/tags.html
 
               Please make another commit to replace a new tag with an already
-              existing one unless you are really sure. Thank you.
-              """)
+              existing one unless you are really sure. Thank you.""")
     )

@@ -69,6 +69,5 @@ def check(files: list[Path], pool: multiprocessing.pool.Pool) -> tuple[bool, str
           16:9 ratio for preview is mandatory for news items.
 
           More information on preview images:
-          https://wiki.fsfe.org/TechDocs/Mainpage/Editing#Preview_Image
-          """)
+          https://wiki.fsfe.org/TechDocs/Mainpage/Editing#Preview_Image""")
     )

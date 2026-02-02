@@ -38,6 +38,5 @@ def check(files: list[Path], pool: multiprocessing.pool.Pool) -> tuple[bool, str
               use CSS classes instead, or create them if necessary.
 
               More information why this is bad style, and what to do instead:
-              https://wiki.fsfe.org/TechDocs/Mainpage/Editing/BestPractices#No_in-line_CSS
-              """)
+              https://wiki.fsfe.org/TechDocs/Mainpage/Editing/BestPractices#No_in-line_CSS""")
     )

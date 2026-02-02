@@ -78,7 +78,4 @@ def check(files: list[Path], pool: multiprocessing.pool.Pool) -> tuple[bool, str
     filtered_results = [
         result for result in pool.starmap(_job, tasks) if result is not None
     ]
-    if filtered_results:
-        return False, "\n".join(filtered_results)
-
-    return True, "All Good."
+    return len(filtered_results) == 0, "\n".join(filtered_results)

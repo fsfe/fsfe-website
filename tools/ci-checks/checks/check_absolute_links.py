@@ -44,6 +44,5 @@ def check(files: list[Path], pool: multiprocessing.pool.Pool) -> tuple[bool, str
                     <a href="/freesoftware">link</a>
 
                   More information about the why and how:
-                  https://wiki.fsfe.org/TechDocs/Mainpage/Editing/BestPractices#No_absolute_links_to_fsfe.org
-              """)
+                  https://wiki.fsfe.org/TechDocs/Mainpage/Editing/BestPractices#No_absolute_links_to_fsfe.org""")
     )

@@ -70,6 +70,5 @@ def check(files: list[Path], pool: multiprocessing.pool.Pool) -> tuple[bool, str
         + "\n".join(failed_file_newsdate)
         + textwrap.dedent("""
               The scheme is \"20YY-MM-DD\", so the respective line should look
-              something like this: <html newsdate=\"2020-01-01\">
-              """),
+              something like this: <html newsdate=\"2020-01-01\">"""),
     )

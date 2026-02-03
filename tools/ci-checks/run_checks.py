@@ -77,7 +77,7 @@ def run_module_list(
         ]
         # Skip check if no relevant files
         if not filtered_files:
-            logger.info("%s: no relevant files, skipping", module)
+            logger.debug("%s: no relevant files, skipping", module)
             continue
         logger.debug("%s: Running", module)
         success, message = module.check(filtered_files, pool)

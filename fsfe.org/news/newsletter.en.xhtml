@@ -1,30 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <html>
-  <version>2</version>
-
+  <version>3</version>
   <head>
-
-
-	<title>Newsletters</title>
+    <title>Newsletters</title>
   </head>
-
   <body class="ltr">
+    <p id="category"><a href="news.html">News</a></p>
     <h1>Newsletters</h1>
     <p id="introduction">
       In addition to our <a href="news.html">regular news stories</a>, each
       month FSFE issues a newsletter that summarises its
       most important activities.
-      
-    </p>
-    
-    <module id="banner-subscribe"/>
-
-    <include-newsletter/>
+      </p>
+    <more-updates/>
+    <include-news/>
   </body>
   <description>Monthly newsletter about Free Software progress and advocacy from the Free Software Foundation Europe</description>
-<text id="more">Read...</text> 
-</html><!--
-Local Variables: ***
-mode: xml ***
-End: ***
--->
+  <banner1>
+    <module id="banner-subscribe"/>
+  </banner1>
+  <banner2>
+    <module id="banner-become-supporter"/>
+  </banner2>
+  <follow-news>
+    <module id="follow-news"/>
+  </follow-news>
+  <social-media>
+    <module id="social-media"/>
+  </social-media>
+</html>

@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <html>
-  <version>2</version>
-
+  <version>3</version>
   <head>
-
-
-	<title>Newsletter</title>
+    <title>Newsletter</title>
   </head>
-
   <body>
+    <p id="category"><a href="news.html">Notizie</a></p>
     <h1>Newsletter</h1>
     <p id="introduction">
       Oltre fornire le <a href="news.html">notizie</a>, ogni
@@ -16,16 +13,21 @@
       attività svolte o di interesse dell'associazione.
       
     </p>
-    
-    <module id="banner-subscribe"/>
-
-    <include-newsletter/>
+    <more-updates/>
+    <include-news/>
   </body>
   <description>Newsletter mensile su diffusione e difesa del Software Libero della Free Software Foundation Europe</description>
-<text id="more">Leggi...</text> 
+  <banner1>
+    <module id="banner-subscribe"/>
+  </banner1>
+  <banner2>
+    <module id="banner-become-supporter"/>
+  </banner2>
+  <follow-news>
+    <module id="follow-news"/>
+  </follow-news>
+  <social-media>
+    <module id="social-media"/>
+  </social-media>
   <translator>Sebastiano Pistore</translator>
-</html><!--
-Local Variables: ***
-mode: xml ***
-End: ***
--->
+</html>

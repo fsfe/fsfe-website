@@ -125,6 +125,7 @@ RewriteRule ^news/podcast/episode-special-1.html$ news/podcast/2020/episode-spec
 # TODO for new news-item: update links for latest news-item
 RewriteRule ^news/latest-news$ /news/2024/news-20240610-01.html [R=301,L]
 RewriteRule ^activities/ilovefs/toolkit$  https://download.fsfe.org/campaigns/ilovefs/toolkit/I%20Love%20Free%20Software%20Day%202026/ [R=307,L]
+RewriteRule ^activities/ilovefs/registration-nuernberg$ https://share.fsfe.org/apps/forms/s/56TysgtQBj4FH7a8NxyTfKsK [R=307,L]
 
 # TODO each year: update links for latest report
 RewriteRule ^activities/ilovefs/latest-report$ /activities/ilovefs/report/report_2025.html [R=307,L]

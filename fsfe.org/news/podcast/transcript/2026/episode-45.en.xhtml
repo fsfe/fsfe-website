@@ -1,0 +1,1291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html>
+ <version>3</version>
+<head>
+<title>Transcript SFP#45</title>
+</head>
+<body>
+  
+<h1>SFP#45: The final chapter of the EU Radio Equipment Directive</h1>
+
+<p><a href="/news/podcast/2026/episode-45.html">Back to the episode SFP#45</a></p>
+  
+  
+<pre class="transcript">
+<div class="content-centered"><h1 class="post-title"><a>SFP#45: The final chapter of the EU Radio Equipment Directive</a></h1>
+
+WEBVTT
+
+00:00.000 --> 00:18.960
+Dear listeners! Thank you very much for listening to The Software Freedom Podcast.
+
+00:18.960 --> 00:25.160
+And without any further ado, hello and welcome to this episode of The Software Freedom Podcast.
+
+00:25.160 --> 00:29.040
+This podcast is brought to you by The Free Software Foundation Europe.
+
+00:29.280 --> 00:32.880
+We are a charity that empowers users to control technology.
+
+00:33.520 --> 00:37.600
+I'm Bonnie Mehring and today I'm here with my colleague, Alexander Sander,
+
+00:37.600 --> 00:41.680
+who I've done multiple episodes with already. Hello, Alex.
+
+00:42.560 --> 00:43.600
+Hello, hello.
+
+00:43.600 --> 00:46.000
+And my former colleague, Max Meal.
+
+00:46.000 --> 00:48.240
+Hi, Max. It's so nice to have you back here.
+
+00:48.240 --> 00:50.240
+Hi, Bonnie. Hi, Alex. Great to be here.
+
+00:50.800 --> 00:53.280
+Max, how are you? How has life been treating you?
+
+00:54.000 --> 00:57.120
+It's been treating me very well, but currently it's quite busy.
+
+00:57.200 --> 01:02.000
+We are in per-FOSDEM preparation, a lot of talks and Devroom organization is going on.
+
+01:02.480 --> 01:04.240
+So yeah, but I'm happy to be here.
+
+01:05.520 --> 01:07.920
+Which Devroom will you be organizing at FOSDEM?
+
+01:08.880 --> 01:15.040
+I will be co-organizing the Railways and Open Transport Devroom since I've been working
+
+01:15.040 --> 01:20.480
+or still working for Deutsche Bahn. And it's great because we collect their international
+
+01:21.120 --> 01:26.000
+collection of companies, of railway companies, but also standardization bodies.
+
+01:26.720 --> 01:32.080
+People from the transportation community working on create a free software tools.
+
+01:32.080 --> 01:36.080
+And yeah, we are bringing them all together there for the fourth time in the row.
+
+01:36.880 --> 01:41.120
+Wow. Is there something that you are very much looking forward to at the Devroom?
+
+01:41.120 --> 01:42.720
+Is there a talk that you would highlight?
+
+01:44.640 --> 01:47.920
+I think all of them are great, depending on what you're interested in.
+
+01:48.400 --> 01:54.560
+What I especially like is a talk or multiple presentation about the open source railway designer
+
+01:54.560 --> 02:00.720
+always RD. That's the flagship project of the Open Rail Association, which we've co-founded
+
+02:00.720 --> 02:05.680
+as Deutsche Bahn. And yeah, that's really nice to see what they're all bringing together there,
+
+02:05.680 --> 02:08.800
+and the many people that are involved there. And how this is really
+
+02:10.080 --> 02:14.960
+accelerating the momentum of bringing free software development to the railway sector.
+
+02:15.920 --> 02:20.560
+Oh wow, okay. I'm very much looking forward. Last year I tried to get into the
+
+02:20.560 --> 02:23.280
+Devroom, but I didn't manage because the queue was so long.
+
+02:24.960 --> 02:28.400
+What am I supposed to do? It's like... Go there earlier. Go there earlier.
+
+02:28.400 --> 02:32.800
+Legal Devroom. Yeah, yeah, that's true. I can reserve you a place if you want to.
+
+02:34.240 --> 02:36.000
+Or VIPs in the first row.
+
+02:37.440 --> 02:40.880
+All right, I will come back to this later.
+
+02:43.200 --> 02:48.000
+Alex, you are probably also really busy with the preparation of the policy in legal Devroom,
+
+02:48.080 --> 02:54.960
+or? Yeah, that's true. So at the moment we are collecting slides from our speakers and try to have
+
+02:54.960 --> 03:00.960
+everything on one laptop so that we have good presentations and short times for headovers.
+
+03:01.760 --> 03:08.160
+Okay. Well, I'm very much looking forward to both Devrooms and very curious to see how
+
+03:08.160 --> 03:16.560
+Fostam will be this next weekend. They're upcoming. But today we will not be talking about Fostam,
+
+03:17.280 --> 03:20.880
+but we will be talking about the radio equipment directive.
+
+03:22.160 --> 03:28.080
+Max and Alex, can you briefly give me a background? How are you connected to the radio equipment
+
+03:28.080 --> 03:32.240
+directive? And yeah, how did you come in contact with RED?
+
+03:34.000 --> 03:39.840
+I was active in this radio freedom activity and that was very different because there
+
+03:40.800 --> 03:47.040
+the opposite position was clear. I mean, there were internet service providers that didn't want to
+
+03:47.040 --> 03:52.640
+give us the full control over the routers or that we cannot choose the routers ourselves and put
+
+03:52.640 --> 03:58.400
+free software on it if we wanted to. So there the conflict lines were quite clear. The radio
+
+03:58.400 --> 04:05.440
+equipment directive, as I said before, is not really clear because I would say for us as the
+
+04:05.440 --> 04:14.640
+free software community, 99% of what's in it is, yeah, it's not relevant to us. And we never
+
+04:14.640 --> 04:21.200
+really knew from the, at least from the start, was actually the intention of the one article
+
+04:21.200 --> 04:31.040
+that we found was a problem and a huge danger to free software in general. So to be honest,
+
+04:31.120 --> 04:36.160
+when I first looked and read through the radio equipment directive, and I remember that very well
+
+04:36.160 --> 04:42.960
+because back then I was working as a working student for 10 hours a week for the FSFE. So my time
+
+04:42.960 --> 04:51.360
+was limited and I printed this huge directive, I don't know, 70, 80 pages on the university printer
+
+04:51.360 --> 04:57.920
+had to pay for that, of course. And I read through it and I had my marker like a good student
+
+04:58.720 --> 05:05.760
+is doing it. And I remember that I only marked this one article and I was like, is that really it?
+
+05:05.760 --> 05:12.080
+Like, am I hunting a ghost here? Or is it just too small and just the detail that will never
+
+05:12.640 --> 05:18.960
+hit reality? And yeah, as it turned out, it was always a more like an abstract danger,
+
+05:18.960 --> 05:24.960
+but it could become within, yeah, blink of an eye or basically a delegated act to real threat
+
+05:24.960 --> 05:31.120
+of free software. So from then on, when I really understood that and when I was sure that this
+
+05:31.120 --> 05:36.960
+what we are afraid of can become reality and that this is not a really abstract that can be
+
+05:36.960 --> 05:42.400
+very concrete, then it was also motivating. But on the other hand, of course, also demotivating because
+
+05:43.200 --> 05:47.920
+explaining that to many people, to the many organizations and individuals that we worked with,
+
+05:48.880 --> 05:55.360
+that was not easy. That was not an easy task. But definitely something from which I learned a lot.
+
+05:57.120 --> 06:02.000
+All right, thank you very much for taking us back to this moment. I now see you in my mind.
+
+06:03.520 --> 06:07.600
+Alex, when did you start to work on the radio equipment directive?
+
+06:08.960 --> 06:15.040
+Yeah, basically, I was hoping that I never worked on this. But since Max left,
+
+06:16.000 --> 06:24.320
+I got the file and Max prepared a very good handover. We had a longer call on this as well.
+
+06:24.320 --> 06:30.400
+And when I looked at this, I was again, hoping that I don't really have to work on this. But
+
+06:30.400 --> 06:35.920
+unfortunately, yeah, every half or every year, the radio equipment directive popped up,
+
+06:35.920 --> 06:41.600
+and then normally I had to call Max and ask him again for some background questions.
+
+06:41.680 --> 06:46.640
+Since this is so overwhelming, and there's so much going on, and there are so many details.
+
+06:47.520 --> 06:53.120
+So I often was struggling again and had to ask him, is it really like this?
+
+06:53.120 --> 06:57.840
+I said, I couldn't imagine. And I saw that I missed some things. So that's why I called him again
+
+06:57.840 --> 07:04.800
+and again, and this regard. Thanks a lot, Max, for all the hours you spent with me on the radio
+
+07:04.800 --> 07:10.480
+equipment directive, just to explain me what's going on there. Yeah, you know, Alex, that's a lot
+
+07:10.480 --> 07:19.360
+of fun digging into the history of all of this. So this equipment directive has been staying with us
+
+07:19.360 --> 07:27.040
+now for over 10 years, basically, right? Yeah, more than 10 years now. Wow. When you read the radio
+
+07:27.040 --> 07:32.800
+equipment directive, what was in it? And can you take us through this step by step? And yeah,
+
+07:32.800 --> 07:40.240
+it started in 2014, right? At least then the directive was like formerly approved.
+
+07:40.880 --> 07:47.120
+So the directive, the radio equipment directive, with a beautiful name 2014 slash 53 slash EU,
+
+07:47.680 --> 07:53.680
+was more or less just a successor to an earlier directive. And that's, Alex will know better than I do,
+
+07:53.680 --> 07:58.720
+that that's quite normal in the European policy area, that you have older directives and you
+
+07:58.720 --> 08:04.560
+you modernize them, you harmonize more standards within. And so this wasn't replacing this directive
+
+08:04.560 --> 08:11.760
+from 1999. And many contents were more or less the same or yeah, modernized to the to the
+
+08:11.760 --> 08:17.680
+current technologies at the time. But this directive, like this new edition or this new version,
+
+08:17.680 --> 08:27.360
+this update contained also some articles and some regulations more on security, on safety,
+
+08:27.440 --> 08:34.000
+and also abuse prevention. And yeah, when I read through it, there was only one article really
+
+08:34.000 --> 08:41.760
+striking out, like reading that through the classes of the free software. And that is article 33i.
+
+08:42.400 --> 08:46.880
+And if you want to, I can, I can just cite it because it's not really long and but there is the
+
+08:46.880 --> 08:54.880
+whole gist of it. And that is the basis of 10 years of activity for the FSFE. And the article 33i is
+
+08:54.880 --> 09:01.920
+radio equipment, chance support, certain features in order to ensure that software can only be loaded
+
+09:01.920 --> 09:08.400
+into the radio equipment, rather compliance of the combination of the radio equipment and software
+
+09:08.400 --> 09:15.200
+has been demonstrated. And that's it. That was more or less the gist of it. The basic idea more or
+
+09:15.200 --> 09:23.600
+less is that we can only or users can only put software on their radio devices. And that is
+
+09:23.680 --> 09:30.800
+everything, right? That is everything that transmits and receives radio signals. So routers,
+
+09:30.800 --> 09:39.200
+smartphones, laptops, smart kitchen devices. You name it. Toys with Wi-Fi, signal always Bluetooth
+
+09:39.200 --> 09:46.480
+and so on. So that on all of these devices, we can only put software for which there is a proven
+
+09:47.360 --> 09:52.880
+yeah validation. With this in mind, we can no longer let's take a router as an example. We can
+
+09:52.880 --> 10:02.320
+no longer buy a router in the shelf in the supermarket or whatever from your favorite online shop.
+
+10:02.880 --> 10:10.160
+And just put software on it, which the manufacturer and the render did not explicitly allow
+
+10:10.160 --> 10:16.560
+because they proved that this combination of software and hardware is compliant with all this
+
+10:16.560 --> 10:22.880
+regulation. All right. So this is also why I think notice this, right? Yeah, that's mostly
+
+10:22.880 --> 10:28.000
+that's mostly their business model, right? They buy routers and they have create software on it
+
+10:28.000 --> 10:33.760
+that is customized to their needs and the needs of their users. And they put their software on it,
+
+10:33.760 --> 10:38.960
+they can run updates and so on. And they don't have to ask, I don't know, TP link or whatever
+
+10:38.960 --> 10:46.240
+router manufacturer, if they can, if this manufacturer can allow their software or this update and so on.
+
+10:47.200 --> 10:52.480
+And this has a lot of a lot of threats to free software in general. I mean, the run is for
+
+10:52.480 --> 11:00.240
+Fryfunk and these other community services. But also, of course, for all people who value
+
+11:00.240 --> 11:05.680
+free and open source software, like they want to install in firmware that for which they know
+
+11:05.760 --> 11:10.480
+what's in it, basically, and they can control this technology with it. And again, we are not only
+
+11:10.480 --> 11:17.200
+talking about routers. We are talking about all kinds of devices of modern devices. And also for
+
+11:17.200 --> 11:23.280
+security, right? That there's another reason that people can install software which they trust more
+
+11:23.280 --> 11:29.200
+and for which they, for instance, know that there are still current updates to it because many of
+
+11:29.200 --> 11:36.960
+the firmware and installations that you get from a manufacturer, they get out of date and of life
+
+11:36.960 --> 11:44.720
+and they render basically render the whole device useless. Like with phones. And apparently,
+
+11:44.720 --> 11:51.840
+this now also happens in other areas. So it also has a bit of a sustainability effect, right?
+
+11:52.720 --> 11:58.400
+Absolutely, absolutely. I mean, you just have to read normal tech news or even just normal news,
+
+11:58.400 --> 12:04.560
+especially with smart home devices, how many are rendered useless because the manufacturers said
+
+12:04.560 --> 12:10.480
+that they don't support it anymore or they switch off the update servers or even the connectivity,
+
+12:10.480 --> 12:15.920
+the cloud services connected to it. And what can you do with it? And with free software and with
+
+12:15.920 --> 12:22.560
+this access and the allowance to install own software on it, these devices can be used for a much
+
+12:22.720 --> 12:29.920
+longer time. Absolutely, absolutely. This is a very good point. But why did the commission actually
+
+12:29.920 --> 12:35.840
+want to do this? Like, what was the idea behind this article? Three, three eye?
+
+12:37.760 --> 12:44.720
+To my knowledge, the main reason was as stupid as it sounds was radars. So radars, for instance,
+
+12:44.720 --> 12:53.920
+at airports and these radars work are sometimes interfered by the five gigahertz Wi-Fi network.
+
+12:53.920 --> 13:04.720
+So five gigahertz is a usual frequency band in which both these radars work and some Wi-Fi devices.
+
+13:05.920 --> 13:11.440
+So for instance, with a router, this router needs to support a certain technology. It's called
+
+13:11.520 --> 13:17.920
+DFS for dynamic frequency selection. So when the router detects that this band or this
+
+13:17.920 --> 13:24.560
+area of the frequency band is used by something more important, for instance, a weather radar,
+
+13:24.560 --> 13:29.280
+then it will immediately switch to another frequency in order to not disturb the weather radar.
+
+13:30.560 --> 13:37.520
+And the regulators and some agencies, national agencies, they noticed that there were still
+
+13:37.520 --> 13:43.200
+disturbances. So that not all of these routers supported this technology.
+
+13:44.400 --> 13:50.800
+Previously, this situation was that device owners of these devices were responsible if they,
+
+13:50.800 --> 13:55.760
+for instance, shut down this technology. And that could happen, for instance, that if I have,
+
+13:55.760 --> 14:02.480
+as a user, the option in the software to make my router look like it wasn't in the EU,
+
+14:02.560 --> 14:08.160
+where this regulation was or where this setting, this technology had to be activated.
+
+14:08.160 --> 14:14.240
+So they could, for instance, and that was the thinking of the regulators and of the lawmakers.
+
+14:14.240 --> 14:20.720
+These users can basically turn their device, like if it was in the US or in Vietnam or where else.
+
+14:22.160 --> 14:29.120
+And by this also increased the signal strength of the Wi-Fi. And to turn off some technologies that
+
+14:29.120 --> 14:36.000
+they thought were hindering a really good Wi-Fi connectivity. And now the lawmaker thought,
+
+14:37.200 --> 14:43.280
+the current situation is that the users are responsible for it. But it seemingly doesn't really
+
+14:43.280 --> 14:49.840
+have an effect. Or there still are cases where there is disturbance with this weather radar, for instance.
+
+14:49.840 --> 14:57.440
+So what if we turn around the responsibilities and say that not the users are responsible for it,
+
+14:57.440 --> 15:02.480
+but that the manufacturers of these devices and of all devices, not only of routers with
+
+15:02.480 --> 15:08.720
+these five gigahertz capabilities, but that all radio device manufacturers basically have to
+
+15:08.720 --> 15:15.440
+lock down their devices that they sell in order that only software can be loaded onto them,
+
+15:16.480 --> 15:23.680
+that is forced or that cannot be overwritten in order to turn off these technologies or to
+
+15:23.680 --> 15:30.720
+otherwise harm the radio spectrum in some other way. And that was the basic idea. So we make it
+
+15:30.720 --> 15:37.360
+impossible from the start that something bad can happen with these devices. And also I think it's
+
+15:37.360 --> 15:42.080
+important to note that there are also other solutions out there, other than this regulation,
+
+15:42.080 --> 15:47.120
+right? So you also have market surveillance authorities who could step in and control the market.
+
+15:47.200 --> 15:53.200
+So and that was or that could also be a solution, but it was never discussed as a solution,
+
+15:53.200 --> 15:58.400
+but rather this regulation was discussed as a solution. And that's definitely not proportionate.
+
+16:00.480 --> 16:08.160
+So we have already covered the timeline a bit and we have already figured out that it's over 10
+
+16:08.160 --> 16:16.960
+years now when the radio equipment directive started to float around. Max and Alex both
+
+16:16.960 --> 16:22.720
+of you, can you take us through those 10 years very briefly and very quickly so that
+
+16:23.600 --> 16:28.160
+I and the listeners have an idea of what actually happened? Yeah, I try to
+
+16:29.760 --> 16:34.880
+remind myself, remember that from going through my email archives, which wasn't an easy task,
+
+16:35.760 --> 16:41.360
+one thing that stood out was that for a long time we've been quite unclear about the origins
+
+16:41.360 --> 16:45.920
+of this radio equipment directive. And what's actually actually happening? Perhaps an interesting
+
+16:45.920 --> 16:53.200
+detail is that at the same time in the US, there was also some concern about regulations by the FCC,
+
+16:53.200 --> 17:02.000
+which is responsible there. So there some time went into actually understanding what cost,
+
+17:02.000 --> 17:09.120
+what like is the European RED, our reaction to what happened in the US or was it the other way around
+
+17:09.120 --> 17:13.760
+turned out that the European Union started with this regulation and then the FCC just followed.
+
+17:13.840 --> 17:20.160
+But there was a lot of first ordering what's actually going on. And again, as I said, we then
+
+17:20.160 --> 17:26.000
+realized that this will be a concrete danger if it was activated because perhaps important to know
+
+17:26.000 --> 17:34.800
+is that this article isn't or wasn't activated in 2014 or 2015, like automatically, but in order to
+
+17:35.600 --> 17:42.240
+to make this happen and to define which devices are actually targeted by this article and by the
+
+17:43.440 --> 17:49.920
+by this regulation and the the imposement of this check of compliance between software and hardware,
+
+17:50.480 --> 17:58.560
+there needs to be a delegated act. So like an act by the European Commission to more or less work
+
+17:58.560 --> 18:07.040
+out which devices in which form are basically tackled by this article. And then we noticed
+
+18:07.680 --> 18:12.800
+new, basically what needs to be done, namely to influence the delegated act that the European
+
+18:12.800 --> 18:19.680
+Commission. And so what we did or what I did back then together with other people from the FSFE
+
+18:19.680 --> 18:27.520
+to build another new coalition on this to find out what are the stakeholders that we need and
+
+18:27.520 --> 18:34.400
+which are also harmed by the radio equipment directive. So we looked into of course three software
+
+18:34.400 --> 18:40.160
+communities like the open WRT people, the fryphone people and so on, which were very helpful.
+
+18:40.880 --> 18:47.520
+We looked into finding experts for telecommunication. For instance, Harad Veltar was a really good
+
+18:48.080 --> 18:54.400
+stakeholder and a really good help to all our activities because he was very knowledgeable with
+
+18:54.480 --> 19:01.600
+this. Also in the policy area and the policy area we reached out. So it was created already a few
+
+19:01.600 --> 19:08.800
+months later that Felix Reda was a member of the parliament back then, was also blogging about it.
+
+19:08.800 --> 19:18.640
+And he and his team, they were very helpful for us to also reach out to the commission.
+
+19:18.720 --> 19:25.520
+And what we then formed is to create a funders or like the single point of entry for
+
+19:26.400 --> 19:31.600
+all information around the radio equipment directive from the free software perspective.
+
+19:31.600 --> 19:38.080
+So we set up a public page about this, summarizing everything, explaining it and at the same time
+
+19:38.080 --> 19:44.320
+we opened a joint statement. So more or less like a public letter where we collected the
+
+19:44.320 --> 19:51.600
+organizations, also companies, yeah, civil society actors and so on. If they weren't really happy
+
+19:51.600 --> 19:57.200
+with what's going on and that this delegated act needs to be drafted in a way that doesn't harm
+
+19:57.200 --> 20:02.400
+free software and the different interests that were collected there. So that was very important
+
+20:02.400 --> 20:09.200
+to get this public awareness work starting and to have a good foundation for lobbying. What is?
+
+20:09.920 --> 20:16.880
+This is a short break for our own cause. Thank you for listening to the software
+
+20:16.880 --> 20:22.240
+freedom podcast. Working for software freedom and producing podcasts costs money.
+
+20:23.040 --> 20:29.520
+Please consider supporting us with a donation on the fsfe.org/donate at the show notes.
+
+20:29.760 --> 20:42.000
+All right. This is now 2016, right? Yeah, roughly. That was a lot of public awareness back then,
+
+20:42.000 --> 20:49.120
+yeah. And I found out that you also gave a talk at the cows communication congress.
+
+20:49.920 --> 20:54.720
+Yeah, exactly. How was that then and how was this received?
+
+20:55.200 --> 20:59.360
+Yeah, that was quite interesting. That was my first time being at the cows communication
+
+20:59.360 --> 21:04.400
+congress and I handed in this talk and it got accepted and I thought I will be in a small room
+
+21:04.400 --> 21:10.960
+with 10 people sitting at it. And 10 minutes before the talk, I searched my room where I was supposed
+
+21:10.960 --> 21:15.040
+to give the talk and I found out that it was the main stage or one of the main stages.
+
+21:16.080 --> 21:21.280
+And I'm happy that I only noticed that 10 minutes earlier another day because I would have never
+
+21:21.280 --> 21:28.560
+slept. But that was cool. The room was quite full and it was a talk not only on the radio
+
+21:28.560 --> 21:34.080
+equipment directive, but also on the router freedom activities and more coming from how we do
+
+21:34.080 --> 21:39.040
+policy work at the FSFE and what we've learned. But the result was quite interesting because
+
+21:39.760 --> 21:44.320
+many people after the talk came to me and said, well, let's talk about this. We need to know more
+
+21:44.320 --> 21:50.240
+about it because I'm concerned and I'm affected and my organization, my local community services
+
+21:50.240 --> 21:56.800
+affected. So we found a room and this room was packed, I don't know, with 30, 40 people sitting
+
+21:56.800 --> 22:02.080
+in the circle and we were discussing how we get active. And at the time, we knew that there will
+
+22:02.080 --> 22:08.560
+be an expert group with a European commission that was working on drafting this delegated act,
+
+22:08.560 --> 22:15.120
+which was everything about. So we talked about it, we collected our positions, we again talked about
+
+22:16.080 --> 22:20.800
+what the effects might be and how we can influence it and what a good solution may look like,
+
+22:20.800 --> 22:27.360
+but also how we get at least one seat in the expert group by the European commission. So there
+
+22:27.360 --> 22:35.360
+was a major part of it and also a long story actually, how we finally, as a community or as this
+
+22:35.360 --> 22:41.040
+coalition that formed, how we actually got into this expert group. But yeah, that was really great.
+
+22:41.040 --> 22:47.040
+That was a big moment in this movement and since we also set up a mailing list, so collected
+
+22:47.040 --> 22:52.800
+the community and collected the people who were working on it, that kicked off at cows communication
+
+22:52.800 --> 22:58.560
+conquest because a lot of people were joining afterwards. I can only imagine, especially since this
+
+22:58.560 --> 23:04.800
+is the first congress for you, how overwhelming this must have been. Yeah, yeah, I mean, I gave many
+
+23:04.800 --> 23:14.000
+talks before. That was definitely the largest one so far. And afterwards, you already mentioned
+
+23:14.000 --> 23:20.800
+there was an expert group. What was this expert group doing? And yeah, as FSFE, we obviously,
+
+23:22.400 --> 23:27.040
+we also applied to participate in this group as well because we wanted to be part of it and also
+
+23:27.040 --> 23:34.160
+have access to the documents and to the discussions. So usually these expert groups are pre-filled with
+
+23:34.160 --> 23:42.240
+people from national agencies and like the big business associations and so on. So we applied
+
+23:42.240 --> 23:48.800
+there and also a few people from our network. But we got rejected. I think it was a few months
+
+23:48.800 --> 23:54.880
+later because I think the official reason was we are not in European umbrella organization. So
+
+23:54.880 --> 24:00.720
+the problem was that the FSFE didn't have any sub-members. So we had individual members but not
+
+24:00.800 --> 24:06.640
+like sub-organizations like companies joining us as an umbrella organization. So unfortunately,
+
+24:06.640 --> 24:12.800
+they couldn't accept us there. But yeah, fortunately, we got two people or three people and organizations
+
+24:12.800 --> 24:19.120
+part of the expert group that met this criteria. That was the Humboldt Institute for Internet
+
+24:20.000 --> 24:26.160
+Society, I think. And also the international amateur radio union who got to see there and also
+
+24:26.160 --> 24:32.720
+an individual member that was more or less on our position. And so we knew what was going on
+
+24:32.720 --> 24:39.440
+within this expert group. And as usual, there was a lot of administrative stuff and like more on
+
+24:39.440 --> 24:46.320
+the meta level discussing about it and how we do this. And there wasn't really like a progress
+
+24:46.320 --> 24:52.320
+to be seen. So for us, it was quite boring, a lot of documents, but yeah, never really on the
+
+24:52.320 --> 24:58.000
+point of how do we actually define the different classes that are affected. Are we actually
+
+24:58.000 --> 25:05.680
+going to do this? And I wasn't invited to use later, I think, 2019 as an ad hoc expert to
+
+25:05.680 --> 25:12.240
+process because also the people from all this, our lines that we need to invite more people and
+
+25:12.240 --> 25:17.920
+also different opinions on this. There, I could also present the results of a legal study
+
+25:18.800 --> 25:26.240
+that the FSFE has been commissioning. And that was a legal study conducted by Till Jäger,
+
+25:26.240 --> 25:33.200
+who some of you may know, a really renowned expert on free software licensing. Because we looked at
+
+25:33.200 --> 25:41.200
+are these regulations from the radio equipment? Are these actually compatible with, how would you
+
+25:41.200 --> 25:48.160
+say that? What I would have to do as a manufacturer in order to comply with free software licenses,
+
+25:48.160 --> 25:54.560
+especially with a copy left free software licenses. And that was really good because there we could
+
+25:54.560 --> 26:02.480
+also raise again a few more eyebrows and bring the topic of license compliance in combination
+
+26:02.480 --> 26:08.560
+with the radio equipment on the park head. And that was good. Although the result of this,
+
+26:09.520 --> 26:16.640
+I think it was the eighth meeting of the expert group was also not interesting. Like there was no
+
+26:16.640 --> 26:21.680
+progress to be seen and just the decision that we did, they do another consultation and another
+
+26:21.680 --> 26:29.600
+impact assessment and so on. So it was very slow. All right, so there like we are now five years later
+
+26:29.600 --> 26:38.320
+and there has been an expert group founded in 2017. And hardly anything happened in this regard,
+
+26:38.320 --> 26:45.440
+correct? Not from the outside, right. So it was just clear that this is a complex topic and
+
+26:45.440 --> 26:51.520
+that the lawmakers or what the radio equipment directive has been thought is, is an easy task
+
+26:51.520 --> 26:57.440
+could just put that here and define the different devices that there is a lot of collateral damage
+
+26:57.920 --> 27:02.640
+that can be done. And I think this became apparent over the course of the years.
+
+27:03.040 --> 27:11.280
+All right. Let's move on to 2020. In 2020, there was a consultation, correct?
+
+27:12.640 --> 27:17.920
+Yes, the European Commission started the consultation, like that was more formalized with a
+
+27:18.960 --> 27:25.840
+survey form that you had to fill out a few strange questions in it. And we also made another
+
+27:25.840 --> 27:32.560
+call to participate in there. But interestingly, we've never seen the results. So the idea was
+
+27:32.560 --> 27:37.920
+that this consultation is also input for the impact assessment that is to be done. And more
+
+27:37.920 --> 27:42.880
+or less, that was the last sign that we've received from the European Commission, at least in the
+
+27:42.880 --> 27:48.800
+public. So there was this consultation. No follow up. I've queried the responsibly people at the
+
+27:48.800 --> 27:53.920
+European Commission. Yeah, I guess for one or two years asked, where are the results of the
+
+27:53.920 --> 28:01.040
+consultation? Are they as negative towards activating the delegated act or coming up with the
+
+28:01.040 --> 28:06.400
+delegated act as the feedback beforehand? And where's the impact assessment that you promised?
+
+28:06.400 --> 28:12.000
+And there was that silence more or like, yeah, we are working on it. And I have to say there
+
+28:12.000 --> 28:18.560
+that there was the last sign that I've received or the non sign that I've received until I actually
+
+28:18.560 --> 28:25.520
+left the FSFE in 2022. And as Alex said, the topic only popped up once a year or so since then.
+
+28:26.000 --> 28:34.560
+Thank you very much, Max, for taking us through this full timeline and it is rather packed with
+
+28:34.560 --> 28:40.160
+events happening there. But what happened afterwards? Then you handed over to Alex and Alex has already
+
+28:40.160 --> 28:48.000
+pointed out this has only happened like this topic only popped up once a year again. But in 2025,
+
+28:48.960 --> 28:56.000
+there was then finally the final impact assessment that was published. Alex, can you take us through this
+
+28:56.000 --> 29:03.440
+and what happened there? So it was never that nothing happened. So the expert group met and people
+
+29:03.440 --> 29:08.080
+were discussing the radio equipment directive. Often we got questions. So what's the status since we
+
+29:08.080 --> 29:14.640
+also still had the website or still have it where we talk about it. And people were asking, people
+
+29:14.640 --> 29:20.800
+were asking not only us, but also to commission. And what I figured out is that, for example,
+
+29:20.800 --> 29:28.000
+the expert group met on this article to discuss it. And the problem is these expert groups is that
+
+29:28.000 --> 29:33.760
+if you are not part of the expert groups, you only get the minutes and the agenda. So basically,
+
+29:33.760 --> 29:39.600
+first I got the agenda, then I called Max said, hey, they are discussing the article. Can we discuss
+
+29:40.000 --> 29:44.720
+again what they might discuss? And then we have seen the minutes. We are going through the minutes.
+
+29:44.720 --> 29:50.640
+And to be honest, it was still super unclear what they are doing. And it always felt like they are
+
+29:51.520 --> 29:57.920
+ventilating the question. And there is absolutely no room for progress other than just killing
+
+29:57.920 --> 30:05.040
+the whole thing. So my gut feeling is that the commission didn't want it to kill their own file.
+
+30:05.040 --> 30:11.600
+So they came up with this article. It was their idea. And they shied away from just saying,
+
+30:11.600 --> 30:17.840
+we don't come up with the delegated act. And we believe this article as it is. But nothing
+
+30:17.840 --> 30:22.800
+will be enforced. Nothing will be changed. There's just an empty article, so to say. And that's
+
+30:22.800 --> 30:28.000
+the thing they didn't want it. They were desperately seeking for a way out. Obviously, they didn't
+
+30:28.000 --> 30:35.200
+found one. And what they then again did is to run another consultation. They were also inviting
+
+30:36.400 --> 30:42.160
+other experts. And we are kind of like outsourcing the question. So they went to Kapgemini,
+
+30:42.160 --> 30:50.080
+which is basically a consultation company, and asking them if they can help them to find a way out.
+
+30:50.640 --> 30:54.480
+And to also come up with this impact assessment so that the commission don't have to write it,
+
+30:54.480 --> 31:00.560
+but someone else. And together with this other consultations, other expert group meetings,
+
+31:00.560 --> 31:05.920
+we finally then got from Kapgemini, the impact assessment. And also in between,
+
+31:05.920 --> 31:13.280
+there had been a study or like a paper or something like this where they discussed options on
+
+31:13.280 --> 31:18.400
+basically how to how to get out or how to regulate this article. And all of these solutions
+
+31:18.800 --> 31:24.400
+always went down to, actually, you can't really decide on which devices you want to regulate.
+
+31:24.400 --> 31:33.200
+So you will over regulate at any means. And the best idea is to just leave it as it is and
+
+31:33.200 --> 31:38.240
+don't not come up with this delegated act. And that's also then again, what basically
+
+31:38.960 --> 31:45.840
+the impact assessment set. And now if you go back to the consultation page, so they were running
+
+31:46.400 --> 31:52.560
+like from April to May last year in 2025, they were running another feedback call for evidence
+
+31:52.560 --> 31:58.800
+for the impact assessment where they discussed some of these options. And now the feedback was closed.
+
+31:58.800 --> 32:05.040
+And one year later, basically a few days ago on the 20th of January this year, 2026,
+
+32:05.600 --> 32:12.640
+if you go to this page, you can see the initiative has been abandoned. So they stopped it. So this
+
+32:12.640 --> 32:18.480
+pretty much looks like they will not come up as a delegated act, which is great news. And also
+
+32:18.480 --> 32:25.440
+victory of our 10 years activity here that Max started back in the days together with all of the
+
+32:25.440 --> 32:32.640
+other stakeholders he just mentioned. And just like recently a few days ago. And so even when we
+
+32:32.640 --> 32:37.920
+started to discuss this podcast episode, it was not clear to us that this will be the result. So
+
+32:38.480 --> 32:44.160
+we just also figured out a few days ago. And so yeah, it looks like that there will never be a
+
+32:44.160 --> 32:51.120
+delegated act. The article remains so to say empty. So the article is in place. It says, right,
+
+32:51.120 --> 32:58.720
+so the devices are not allowed. But at the same time, they don't tell us which devices. So and by
+
+32:58.720 --> 33:05.280
+that one could say the article remains empty. Nothing happens. Everything can continue as it is.
+
+33:06.240 --> 33:11.600
+From what the commission website says, they also won't come up with a delegated act.
+
+33:11.600 --> 33:18.400
+So however, we will continue to monitor this. You never know. But like the from the website,
+
+33:18.400 --> 33:25.440
+the official processing of the commission is now that this is basically stopped. And in the
+
+33:25.440 --> 33:33.040
+impact assessment that Kapgeemini wrote, they presented this. Basically what they wanted to come
+
+33:33.040 --> 33:37.360
+up with in the impact assessment, that was also what they presented to the expert group.
+
+33:37.920 --> 33:42.400
+And I think there was a few months ago. And we got the slides from this presentation. And I also
+
+33:42.400 --> 33:48.320
+discussed this with Max again, how to read the slides. And from there was also clear that if they
+
+33:48.320 --> 33:53.200
+write it in the impact assessment that they will suggest to not come up as the delegated act,
+
+33:53.200 --> 33:58.400
+that was then ultimately also in the impact assessment where also the study by Tilliega was
+
+33:58.400 --> 34:05.440
+quoted. So the FSFA and Tilliega is also quoted in the impact assessment as a reason for not
+
+34:05.440 --> 34:11.920
+yeah, over regulating this or not regulating this in this discussed ways. And so one could say that
+
+34:12.560 --> 34:18.560
+yeah, our activities, but also the study helped to come up with the impact assessment that told
+
+34:18.560 --> 34:25.680
+the commission, please stop this. This is the best outcome you could have had or?
+
+34:26.160 --> 34:32.960
+Yeah, I mean eight years earlier would have been also fine I think. So that would have saved
+
+34:32.960 --> 34:41.040
+us a lot of resources, a lot of discussions, a lot of papers, a lot of studies. And so I do believe it
+
+34:41.040 --> 34:49.120
+was clear to some extent very, very early that there is not really a solution to it and that the
+
+34:49.120 --> 34:56.320
+delegated act should please not come up. But however, yeah, it now took 10 years. So I wouldn't
+
+34:56.320 --> 35:02.000
+consider this as the very best outcome, but it's it's a good outcome for now. And it's also good
+
+35:02.000 --> 35:05.200
+that we are not going to discuss this for another 10 years. Let's put it like this.
+
+35:07.440 --> 35:13.280
+Are you both happy now that you don't have to touch this as regular as you have done in the past 10
+
+35:13.280 --> 35:23.520
+years? So to be honest, in a set, I would still money to this. So since I'm not trusting the website
+
+35:23.520 --> 35:29.200
+of the European Commission here, no, really. So I really do believe we made a major step and I really
+
+35:29.200 --> 35:37.200
+do think there won't be any delegated act. However, we will still have a look at this. I do not expect
+
+35:37.680 --> 35:44.240
+to see more studies, more consultations, more impact assessment and whatnot. So whatever happens,
+
+35:44.240 --> 35:50.880
+I hope I won't have to read that much anymore. And also I do believe that there is now a stop
+
+35:50.880 --> 35:56.560
+to everything towards this. But however, since the law still says the Commission can kind up
+
+35:56.560 --> 36:02.880
+with a delegated act as long as the law remains in place, I think it's a good idea to monitor this,
+
+36:02.880 --> 36:08.160
+even if chances are very, very low that the Commission will do another U-turn and come up as
+
+36:08.160 --> 36:14.240
+a delegated act. So everything looks very promising at the moment. Sorry, let me please add to that.
+
+36:14.240 --> 36:21.200
+I think the delegated act and like the article 3.3.1, that's from the desk, I would
+
+36:21.200 --> 36:26.720
+recreated that. It's very unrealistic. But I think the general idea of turning around this
+
+36:26.720 --> 36:34.640
+responsibility of compliance with radio regulations, that might persist. Because it's intriguing
+
+36:34.640 --> 36:39.200
+for also for national regulators or for national agencies like the Buenos Aires-Arcanturian
+
+36:39.200 --> 36:46.160
+Germany, for instance, that they don't have to monitor or they are not faced with non-compliant
+
+36:46.160 --> 36:53.840
+devices and having to circle around in cities to find these interferences. So instead, just
+
+36:53.920 --> 36:59.840
+regulate the manufacturers to basically shut off everything that might interfere with the
+
+36:59.840 --> 37:06.400
+radio. So I think the idea will persist in a way and so it's very important that Alex and
+
+37:06.400 --> 37:11.760
+the other policy colleagues and also the whole community keeps an eye on what's going on and
+
+37:11.760 --> 37:16.960
+whether these ideas will pop up again in some other form and some other regulations and some other
+
+37:16.960 --> 37:25.280
+acts, for instance. I'm pretty sure that will happen again. And also to add to this, it was back
+
+37:25.280 --> 37:30.400
+in the days, it was a DG roll, right? So and the commission is huge. So it might absolutely be
+
+37:30.400 --> 37:35.520
+possible that there's another DG that never heard of the radio equipment directive nor took part
+
+37:35.520 --> 37:41.200
+in the discussions around it and comes up basically with this idea. And for this, I completely agree
+
+37:41.280 --> 37:47.520
+with Max so that we have to still continue to explain to decision makers how all of this works
+
+37:47.520 --> 37:53.840
+and what harm could happen if you over-regulate or if you do not look specifically for,
+
+37:54.640 --> 37:56.880
+like for example, free software development in this case.
+
+37:59.680 --> 38:06.160
+Is there a good solution that you to think that could happen to actually really target the
+
+38:06.160 --> 38:10.400
+problem that has been raised by the radio direct equipment directive?
+
+38:12.800 --> 38:18.000
+I mean, to be honest, if you run the airport, there should be some sort of airport security
+
+38:18.000 --> 38:24.480
+around it, right? So we put so many efforts in to check every person who is going into the
+
+38:24.480 --> 38:31.280
+airport and out of the airport. And I think the same should be true for like devices that
+
+38:31.360 --> 38:39.840
+interfere with a normal traffic of an airport that's maybe comparable to these laser attacks we see
+
+38:39.840 --> 38:44.240
+at the moment at the airport. So there need to be solutions to this to guarantee the safety and
+
+38:44.240 --> 38:52.560
+security of these environments. And this could not be to regulate the device, but maybe you should
+
+38:52.560 --> 38:59.440
+think about that about airport security and airport safety, not only by coming up with scanners,
+
+38:59.520 --> 39:05.840
+but also with other devices that make sure that the airport can run smoothly,
+
+39:05.840 --> 39:11.520
+or even like making sure that, for example, some sort of surveillance authorities are around there
+
+39:12.000 --> 39:18.640
+and make sure to check that the regular signals are not interfered.
+
+39:19.360 --> 39:24.880
+And I would also say that the protection of the European market ought to actually assess the
+
+39:24.880 --> 39:30.800
+imports that we are doing of technological products. I think that's also a very challenge for
+
+39:31.360 --> 39:37.040
+the European market and the EU in general. And I think a lot of things could be done there to
+
+39:37.040 --> 39:44.880
+improve the handling of goods of products that are not complying with the different regulations
+
+39:44.880 --> 39:49.040
+and the different policies that we're having on the European market. So I'm thinking about,
+
+39:49.200 --> 39:54.640
+yeah, especially the imports from the Far East there for just a little money that is not even
+
+39:54.640 --> 39:59.840
+carrying a CEO symbol, for instance. I think that is one task. And another thing would be also to
+
+39:59.840 --> 40:05.520
+have more infrastructure resilience. We are talking about this a lot right now in the current
+
+40:05.520 --> 40:12.080
+policy area. But I mean, yeah, if rather radars of an airport can just be disturbed by a five-kicker
+
+40:12.080 --> 40:17.840
+hurts the router, something is wrong, right? Like if this is really tackling or endangering the
+
+40:18.720 --> 40:25.280
+the very fundamentals of airport security, then we have to think about like at least of backups
+
+40:25.280 --> 40:31.760
+or backup solutions here. And yeah, not everything can be just done with an regulation if you have
+
+40:31.760 --> 40:40.080
+people who are willingly wanting to harm the safety of an airport. Yeah, there will not be hindered
+
+40:40.080 --> 40:45.600
+by a radio equipment directive, I guess. But in general, I think there's also no perfect solution
+
+40:45.600 --> 40:53.360
+to it. We will have situations where technology or tools can be misused or abused. If you think of
+
+40:53.360 --> 40:58.160
+just a kitchen knife, you can obviously make bad things and harmful things with a kitchen knife.
+
+40:58.160 --> 41:04.880
+And nobody would come up with an idea that a kitchen knife ward in the supermarket needs to have
+
+41:04.960 --> 41:11.360
+technological features that prevent me from harming people. I mean, it's in the end, it's perhaps
+
+41:11.360 --> 41:17.440
+we also have to accept that things can go wrong and we need to have some certain decree of resilience
+
+41:17.440 --> 41:25.360
+in our societies and also our technologies. I think it's a good way to come to a close,
+
+41:25.360 --> 41:31.840
+is there something you would like to add in a final sentence that is very outstanding to you now
+
+41:31.920 --> 41:39.840
+or that you can think about when you talk about radio equipment directive. Alex, you want to go first?
+
+41:41.040 --> 41:49.280
+I mean, this is also something which I'm continuously repeating. All of these activities we follow
+
+41:49.280 --> 41:57.040
+are mid to very long term and 10 years is a really long time. And we have seen that a couple of
+
+41:57.040 --> 42:04.960
+people in the office of E had worked on this. And I think it shows that we are capable to do this.
+
+42:04.960 --> 42:11.440
+And this is thanks to our donors who allow us to do these kind of long term activities to follow up.
+
+42:12.560 --> 42:19.120
+If you have new team members and that we have good handovers that we even are still in contact
+
+42:19.120 --> 42:25.760
+even after people left. And I think that's for me a very nice learning. So that this happens,
+
+42:25.760 --> 42:33.920
+that we can win even after 10 years. And also again, it shows the importance of having this
+
+42:33.920 --> 42:39.280
+independence, the efforts that we have where we can pick our topics by ourselves and make sure
+
+42:39.280 --> 42:45.680
+that we can work on those kind of topics even for 10 years and that we have the resources to do so.
+
+42:47.200 --> 42:50.640
+In this regard, I really want to thank our donors who make this possible.
+
+42:51.120 --> 42:52.000
+Thank you very much.
+
+42:52.000 --> 42:57.120
+Yeah, I can only agree and I would have to say also thank you to the FSFE in general and for the
+
+42:57.120 --> 43:04.240
+strategy that we have because this file really wasn't really, I would say sexy or very attractive
+
+43:04.880 --> 43:11.760
+as a public awareness or as a fundraising thing from the start on, right? We noticed that it's not
+
+43:11.760 --> 43:17.840
+really really concrete for many people not easy to explain, but that I and also today Alex and
+
+43:17.920 --> 43:22.240
+all the others had the opportunity to continue the work on this because we thought and we were
+
+43:22.240 --> 43:27.760
+convinced that this is an important thing. And bad things can happen if we don't do anything about
+
+43:27.760 --> 43:33.680
+it. So that's great that the FSFE actually also following up on activities that are not the
+
+43:33.680 --> 43:40.720
+catchiest one on the first side. All right, thank you very much you too. That's really kind
+
+43:41.360 --> 43:46.880
+closing words. I have nothing more to add than to say thank you to the two of you and of course
+
+43:46.880 --> 43:51.760
+say thank you to our donors and listeners. Thank you so much for being here. Thank you so much
+
+43:51.760 --> 43:57.760
+for walking us through this radio equipment directive giving us some context here and yeah,
+
+43:58.320 --> 44:03.840
+doing this episode with me. Thank you very much. Yeah, thank you, Bonnie. Thank you for having me.
+
+44:04.960 --> 44:10.960
+Yeah, thank you, Bonnie and also again, thank you, Max, for helping me so much during the last
+
+44:10.960 --> 44:16.880
+years to be able to continue this. You're welcome, much appreciated.
+
+44:20.320 --> 44:26.480
+Thank you. This was the Software Freedom Podcast. If you liked this episode, please
+
+44:26.480 --> 44:31.920
+recommend it to your friends and rate it. Stay tuned for more inspiring conversations that
+
+44:31.920 --> 44:36.160
+explore the importance of software freedom and its impact on our digital lives.
+
+44:36.480 --> 44:43.200
+This podcast is presented to you by the free Software Foundation Europe. We are a charity
+
+44:43.200 --> 44:49.680
+that works on promoting software freedom. If you like our work, please consider supporting us
+
+44:49.680 --> 44:56.880
+with our donation. You find more information under fsfe.org/donate. Thank you so much. Thank
+
+44:56.880 --> 45:02.640
+you so much for listening and bearing with us through this radio equipment directive. Bye bye.
+
+
+</div>
+
+</pre>
+
+<p><a href="/news/podcast/2025/episode-44.html">Back to the episode SFP#44</a></p>
+
+</body>
+<sidebar promo="our-work">
+
+</sidebar>
+  
+</html>

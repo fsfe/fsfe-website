@@ -108,4 +108,17 @@
       <xsl:apply-templates select="."/>
     </xsl:for-each>
   </xsl:template>
+  <!-- Follow for more information -->
+  <xsl:template match="more-updates">
+    <p>
+      <xsl:call-template name="gettext">
+        <xsl:with-param name="id" select="'more-updates'"/>
+      </xsl:call-template>
+    </p>
+    <div class="module-wrapper news">
+      <xsl:apply-templates select="/buildinfo/document/banner1/node()"/>
+      <xsl:apply-templates select="/buildinfo/document/follow-news/node()"/>
+      <xsl:apply-templates select="/buildinfo/document/social-media/node()"/>
+    </div>
+  </xsl:template>
 </xsl:stylesheet>

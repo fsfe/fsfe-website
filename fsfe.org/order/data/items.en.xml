@@ -36,6 +36,42 @@
       small="data/pictures/tshirt-nocloud-black-back-small.jpg"
       large="data/pictures/tshirt-nocloud-black-back-large.jpg"/>
   </item -->
+  <item type="tshirt" id="tshirt-cool-kids" price="25.00" date="2026-01-27">
+    <available size="XS" a="46" b="66"/>
+    <available size="S" a="49" b="67.5"/>
+    <available size="M" a="52.5" b="71"/>
+    <available size="L" a="55" b="73"/>
+    <available size="XL" a="58" b="75"/>
+    <available size="2XL" a="60" b="77.5"/>
+    <available size="3XL" a="62.5" b="79.5"/>
+    <image small="data/pictures/tshirt-cool-kids-1-small.webp" large="data/pictures/tshirt-cool-kids-1-large.webp"/>
+    <image small="data/pictures/tshirt-cool-kids-2-small.webp" large="data/pictures/tshirt-cool-kids-2-large.webp"/>
+  </item>
+  <item type="slimfit" id="slimfit-cool-kids" price="25.00" date="2026-01-27">
+    <available size="XS" a="41.5" b="57.5"/>
+    <available size="S" a="42.5" b="59.5"/>
+    <available size="M" a="46.5" b="62.5"/>
+    <available size="L" a="49" b="63"/>
+    <available size="XL" a="50.5" b="64.5"/>
+    <available size="2XL" a="54" b="66"/>\
+    <!--image small="data/pictures/slimfit-cool-kids-1-small.webp" large="data/pictures/slimfit-cool-kids-1-large.webp"/>
+    <image small="data/pictures/slimfit-cool-kids-2-small.webp" large="data/pictures/slimfit-cool-kids-2-large.webp"/ -->
+    <image small="data/pictures/tshirt-cool-kids-1-small.webp" large="data/pictures/tshirt-cool-kids-1-large.webp"/>
+    <image small="data/pictures/tshirt-cool-kids-2-small.webp" large="data/pictures/tshirt-cool-kids-2-large.webp"/>
+  </item>
+  <item type="tshirt" id="tshirt-pmpc" price="25.00" date="2026-01-27">
+    <available size="XS" a="46" b="66"/>
+    <available size="S" a="49" b="67.5"/>
+    <available size="M" a="52.5" b="71"/>
+    <available size="L" a="55" b="73"/>
+    <available size="XL" a="58" b="75"/>
+    <available size="2XL" a="60" b="77.5"/>
+    <available size="3XL" a="62.5" b="79.5"/>
+    <available size="4XL" a="69" b="81"/>
+    <image small="data/pictures/tshirt-pmpc-1-small.webp" large="data/pictures/tshirt-pmpc-1-large.webp"/>
+    <image small="data/pictures/tshirt-pmpc-2-small.webp" large="data/pictures/tshirt-pmpc-2-large.webp"/>
+    <image small="data/pictures/tshirt-pmpc-3-small.webp" large="data/pictures/tshirt-pmpc-3-large.webp"/>
+  </item>
   <item type="tshirt" id="tshirt-hacking-4-freedom" price="25.00" date="2024-01-12">
     <available size="XS" a="48" b="68"/>
     <available size="S" a="50" b="70"/>
@@ -58,6 +94,16 @@
     <available size="3XL" a="70" b="82"/>
     <image small="data/pictures/tshirt-nocloud-petrol-front-small.jpg" large="data/pictures/tshirt-nocloud-petrol-front-large.jpg"/>
     <image small="data/pictures/tshirt-nocloud-petrol-back-small.jpg" large="data/pictures/tshirt-nocloud-petrol-back-large.jpg"/>
+  </item>
+  <item type="hoodie" id="hoodie-retro" price="60.00" date="2026-01-27">
+    <available size="S" a="x" b="y"/>
+    <available size="M" a="x" b="y"/>
+    <available size="L" a="x" b="y"/>
+    <available size="XL" a="x" b="y"/>
+    <available size="2XL" a="x" b="y"/>
+    <image small="data/pictures/hoodie-retro-1-small.webp" large="data/pictures/hoodie-retro-1-large.webp"/>
+    <image small="data/pictures/hoodie-retro-2-small.webp" large="data/pictures/hoodie-retro-2-large.webp"/>
+    <image small="data/pictures/hoodie-retro-3-small.webp" large="data/pictures/hoodie-retro-3-large.webp"/>
   </item>
   <!--item type="hoodie" id="hoodie-fourfreedoms-38c3-blue" price="60.00" date="2024-10-08">
     <available size="XS" a="49" b="68"/>
@@ -104,8 +150,8 @@
     <image small="data/pictures/hoodie-fourfreedoms-38c3-black-back-small.png" large="data/pictures/hoodie-fourfreedoms-38c3-black-back-large.png"/>
   </item //-->
   <item type="socks" id="socks-ilovefs" price="15.00" date="2024-01-12">
-    <image small="data/pictures/socks-ilovefs-small.jpg" large="data/pictures/socks-ilovefs-large.jpg"/>
     <available size="#"/>
+    <image small="data/pictures/socks-ilovefs-1-small.webp" large="data/pictures/socks-ilovefs-1-large.webp"/>
   </item>
   <!-- item type="other" id="card-christmas-blue" price="20.00" date="2019-12-09">
     <available size="#"/>

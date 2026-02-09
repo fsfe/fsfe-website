@@ -37,7 +37,7 @@ if (empty($service) || empty($url)) {
         $via_fed = '';
         $via_tw = '';
         $via_dia = '';
-        $sharepic = 'https://sharepic.fsfe.org/pmpc';
+        $sharepic = 'https://sharepic.fsfe.org/#pmpc';
         $supporturl = 'https://my.fsfe.org/donate?referrer=pmpc';
     } else {
         $via_fed = ' via '.$fediverseuser;

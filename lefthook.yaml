@@ -60,9 +60,9 @@ pre-commit:
       glob:
         - "*.py"
       run: pytest ./build/fsfe_website_build_tests_pre_commit
-    pyright:
+    ty:
       glob: "*.py"
-      run: pyright {staged_files}
+      run: ty check {staged_files}
     structure:
       glob:
         - "*.xml"

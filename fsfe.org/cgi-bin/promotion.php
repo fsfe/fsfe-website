@@ -145,7 +145,7 @@ if ('y' == $subcd or 'y' == $subnl or $donate) {
 }
 
 if (isset($json_cd_res) && ($_POST['donate'] > 0)) {
-    $_POST['donationID'] = $json_cd_res['donref'];
+    $_POST['donationID'] = $json_cd_res['donref'].'Z1';
     $subject .= ': '.$_POST['donationID'];
     $msg_to_staff .= "\n\nThe orderer choose to make a Donation of ".htmlspecialchars($_POST['donate'])." Euro.\n"
       ."Please do not assume that this donation has been made until you receive\n"

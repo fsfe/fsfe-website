@@ -1,15 +1,5 @@
 <?php
 
-function eval_xml_template($template, $data)
-{
-    $dir = dirname(__FILE__).'/../templates';
-    $result = file_get_contents("{$dir}/{$template}");
-    foreach ($data as $key => $value) {
-        $result = preg_replace("/<tpl name=\"{$key}\"><\\/tpl>/", $value, $result);
-    }
-
-    return preg_replace('/<tpl name="[^"]*"><\/tpl>/', '', $result);
-}
 function eval_template($template, $data)
 {
     extract($data);
@@ -21,79 +11,6 @@ function eval_template($template, $data)
     ob_end_clean();
 
     return $result;
-}
-function gen_alnum($digits)
-{
-    $alphabet = '0123456789abcdefghijklmnopqrstuvwxyz';
-    $ret = '';
-    for ($digits; $digits > 0; --$digits) {
-        $ret .= substr($alphabet, rand(0, 35), 1);
-    }
-
-    return $ret;
-}
-
-function relay_donation($orderID)
-{
-    $name = $_POST['name'];
-    $email = $_POST['mail'];
-    $amount100 = $_POST['donate'] * 100;
-    $language = $_POST['language'];
-    $lang = substr($language, 0, 2);
-
-    $PSPID = '40F00871';
-    $TP = 'payment-without-bank.html';
-    $acceptURL = "https://fsfe.org/donate/thankyou.{$lang}.html";
-    $cancelURL = "https://fsfe.org/donate/cancel.{$lang}.html";
-
-    $salt = 'Only4TestingPurposes';
-    $shasum = strtoupper(sha1(
-        "ACCEPTURL={$acceptURL}{$salt}"
-        ."AMOUNT={$amount100}{$salt}"
-        ."CANCELURL={$cancelURL}{$salt}"
-        // "CN=$name$salt".
-        // "COM=Donation$salt".
-        ."CURRENCY=EUR{$salt}"
-        ."EMAIL={$email}{$salt}"
-        ."LANGUAGE={$language}{$salt}"
-        ."ORDERID={$orderID}{$salt}"
-        ."PMLISTTYPE=2{$salt}"
-        ."PSPID={$PSPID}{$salt}"
-        ."TP={$TP}{$salt}"
-    ));
-
-    echo eval_xml_template('concardis_relay.en.html', [
-        'PSPID' => '<input type="hidden" name="PSPID"      value="'.$PSPID.'">',
-        'orderID' => '<input type="hidden" name="orderID"    value="'.$orderID.'">',
-        'amount' => '<input type="hidden" name="amount"     value="'.$amount100.'">',
-        // 'currency'   => '<input type="hidden" name="currency"   value="EUR">',
-        'language' => '<input type="hidden" name="language"   value="'.$language.'">',
-        // 'CN'         => '<input type="hidden" name="CN"         value="'.$name.'">',
-        'EMAIL' => '<input type="hidden" name="EMAIL"      value="'.$email.'">',
-        'TP' => '<input type="hidden" name="TP"         value="'.$TP.'">',
-        // 'PMListType' => '<input type="hidden" name="PMListType" value="2">',
-        'accepturl' => '<input type="hidden" name="accepturl"  value="'.$acceptURL.'">',
-        'cancelurl' => '<input type="hidden" name="cancelurl"  value="'.$cancelURL.'">',
-        'SHASign' => '<input type="hidden" name="SHASign"    value="'.$shasum.'">',
-    ]);
-}
-
-/**
- * Calls the "mail-signup" script with the data.
- *
- * Sends the script into the background to
- * handle the request asynchronously.
- *
- * @see mail-signup.php
- */
-function mail_signup(array $data)
-{
-    $cmd = sprintf(
-        'php %s %s > /dev/null &',
-        __DIR__.'/mail-signup.php',
-        escapeshellarg(json_encode($data))
-    );
-    exec($cmd);
 }
 
 $lang = $_POST['language'];
@@ -120,23 +37,23 @@ if (
 setlocale(LC_CTYPE, 'en_US.UTF-8');
 
 // $_POST["country"] has values like "DE|Germany", so split this string
-$countrycode = explode('|', $_POST['country'])[0];
-$countryname = explode('|', $_POST['country'])[1];
+$countrycode = explode('|', htmlspecialchars($_POST['country']))[0];
+$countryname = explode('|', htmlspecialchars($_POST['country']))[1];
 
 $subject = 'Promotion material order';
 $msg_to_staff = "Please send me promotional material:\n"
-  ."First Name: {$_POST['firstname']}\n"
-  ."Last Name:  {$_POST['lastname']}\n"
-  ."EMail:      {$_POST['mail']}\n"
+  ."First Name: ".htmlspecialchars($_POST['firstname'])."\n"
+  ."Last Name:  ".htmlspecialchars($_POST['lastname'])."\n"
+  ."EMail:      ".htmlspecialchars($_POST['mail'])."\n"
   ."\n"
   ."Address:\n"
-  ."{$_POST['firstname']} {$_POST['lastname']}\n";
+  . htmlspecialchars($_POST['firstname'])." ".htmlspecialchars($_POST['lastname'])."\n";
 
 if (!empty($_POST['org'])) {
-    $msg_to_staff .= "{$_POST['org']}\n";
+    $msg_to_staff .= htmlspecialchars($_POST['org'])."\n";
 }
-$msg_to_staff .= "{$_POST['street']}\n"
-  ."{$_POST['zip']} {$_POST['city']}\n"
+$msg_to_staff .= htmlspecialchars($_POST['street'])."\n"
+  . htmlspecialchars($_POST['zip'])." ".htmlspecialchars($_POST['city'])."\n"
   ."{$countryname}\n"
   ."\n"
   ."Specifics of the Order:\n";
@@ -153,7 +70,7 @@ if ('basic_sticker' == $_POST['packagetype']) {
     $msg_to_staff .= "Standard Package.\n";
 } else {
     $msg_to_staff .= "Custom package:\n"
-      ."{$_POST['specifics']}\n";
+      .htmlspecialchars($_POST['specifics'])."\n";
 }
 $languages = implode(',', $_POST['languages']);
 $msg_to_staff .= "\n"
@@ -161,31 +78,19 @@ $msg_to_staff .= "\n"
   ."{$languages}\n"
   ."\n"
   ."The material is going to be used for:\n"
-  ."{$_POST['usage']}\n"
-  ."\n"
-  ."Comments:\n"
-  ."{$_POST['comment']}\n";
-
-$_POST['donationID'] = '';
-if (isset($_POST['donate']) && ($_POST['donate'] > 0)) {
-    $_POST['donationID'] = 'DAFSPCK'.gen_alnum(5);
-    $subject .= ': '.$_POST['donationID'];
-    $msg_to_staff .= "\n\nThe orderer choose to make a Donation of {$_POST['donate']} Euro.\n"
-      ."Please do not assume that this donation has been made until you receive\n"
-      ."confirmation from Concardis for the order: {$_POST['donationID']}";
-}
+  .htmlspecialchars($_POST['usage'])."\n";
 
 // Generate letter to be sent along with the material
 $odtfill = $_SERVER['DOCUMENT_ROOT'].'/cgi-bin/odtfill.sh';
 $template = $_SERVER['DOCUMENT_ROOT'].'/templates/promotionorder.odt';
 $outfile = '/tmp/promotionorder.odt';
-$name = $_POST['firstname'].' '.$_POST['lastname'];
+$name = htmlspecialchars($_POST['firstname']).' '.htmlspecialchars($_POST['lastname']);
 $address = '';
 if (!empty($_POST['org'])) {
-    $address .= $_POST['org'].'\n';
+    $address .= htmlspecialchars($_POST['org']).'\n';
 }
-$address .= $_POST['street'].'\n'
-  .$_POST['zip'].' '.$_POST['city'].'\n'
+$address .= htmlspecialchars($_POST['street']).'\n'
+  .htmlspecialchars($_POST['zip']).' '.htmlspecialchars($_POST['city']).'\n'
   .$countryname;
 $cmd = sprintf(
     '%s %s %s %s %s %s',
@@ -199,16 +104,18 @@ $cmd = sprintf(
 shell_exec($cmd);
 
 // Make subscriptions to newsletter/community mails
+// This also gets the DONREF for the donation from the API
 $subcd = isset($_POST['subcd']) ? $_POST['subcd'] : false;
 $subnl = isset($_POST['subnl']) ? $_POST['subnl'] : false;
-if ('y' == $subcd or 'y' == $subnl) {
+$donate = isset($_POST['donate']) ? intval($_POST['donate']) > 0 : false;
+if ('y' == $subcd or 'y' == $subnl or $donate) {
     $signupdata = [
-        'name' => $_POST['firstname'].' '.$_POST['lastname'],
-        'email1' => $_POST['mail'],
-        'address' => $_POST['street'],
-        'zip' => $_POST['zip'],
-        'city' => $_POST['city'],
-        'langugage' => $_POST['language'],
+        'name' => htmlspecialchars($_POST['firstname']).' '.htmlspecialchars($_POST['lastname']),
+        'email1' => htmlspecialchars($_POST['mail']),
+        'address' => htmlspecialchars($_POST['street']),
+        'zip' => htmlspecialchars($_POST['zip']),
+        'city' => htmlspecialchars($_POST['city']),
+        'langugage' => htmlspecialchars($_POST['language']),
         'country' => $countrycode,
     ];
     if ('y' == $subcd) {
@@ -217,13 +124,38 @@ if ('y' == $subcd or 'y' == $subnl) {
     if ('y' == $subnl) {
         $signupdata['wants_newsletter_info'] = '1';
     }
-    mail_signup($signupdata);
+    $context = stream_context_create(
+        [
+            'http' => [
+                'method' => 'POST',
+                'header' => 'Content-type: application/x-www-form-urlencoded',
+                'user_agent' => 'FSFE mail-signup.php',
+                'content' => http_build_query($signupdata),
+                'timeout' => 10,
+            ],
+        ]
+    );
+    // DEBUG: set a local URL here to catch the requests
+    $cd_res = file_get_contents('https://my.fsfe.org/subscribe-api', false, $context);
+    $json_cd_res = json_decode($cd_res, true);
+    if (is_null($json_cd_res) or !isset($json_cd_res['donref'])) {
+        header("Location: https://fsfe.org/contribute/spreadtheword-ordererror.{$lang}.html");
+        exit;
+    }
+}
+
+if (isset($json_cd_res) && ($_POST['donate'] > 0)) {
+    $_POST['donationID'] = $json_cd_res['donref'];
+    $subject .= ': '.$_POST['donationID'];
+    $msg_to_staff .= "\n\nThe orderer choose to make a Donation of ".htmlspecialchars($_POST['donate'])." Euro.\n"
+      ."Please do not assume that this donation has been made until you receive\n"
+      ."confirmation from stripe for the order: {$_POST['donationID']}";
 }
 
 $data = [
-    'name' => $_POST['firstname'].' '.$_POST['lastname'],
+    'name' => htmlspecialchars($_POST['firstname']).' '.htmlspecialchars($_POST['lastname']),
     'donationID' => $_POST['donationID'],
-    'donate' => $_POST['donate'],
+    'donate' => htmlspecialchars($_POST['donate']),
     'lang' => $lang,
 ];
 $msg_to_customer = eval_template('promoorder/promoorder.php', $data);
@@ -238,16 +170,16 @@ $jsondata = [
     'mailboxId' => 7,         // This is the Merchandise Mailbox
     'subject' => $subject,
     'customer' => [
-        'email' => $_POST['mail'],
+        'email' => htmlspecialchars($_POST['mail']),
     ],
     'threads' => [
         [
             'text' => $msg_to_staff,
             'type' => 'customer',
             'customer' => [
-                'email' => $_POST['mail'],
-                'firstName' => $_POST['firstname'],
-                'lastName' => $_POST['lastname'],
+                'email' => htmlspecialchars($_POST['mail']),
+                'firstName' => htmlspecialchars($_POST['firstname']),
+                'lastName' => htmlspecialchars($_POST['lastname']),
             ],
             'attachments' => [
                 [
@@ -292,8 +224,11 @@ curl_setopt_array($curl, [
 $response = curl_exec($curl);
 curl_close($curl);
 // Only process donations starting from 10 euro.
-if (isset($_POST['donate']) && ((int) $_POST['donate']) >= 5) {
-    relay_donation($_POST['donationID']);
+if (isset($_POST['donate']) && ((int) $_POST['donate']) >= 10) {
+    $replace = array(':AMOUNT:', ':EMAIL:', ':REFERENCE:');
+    $with = array($_POST['donate'], $_POST['mail'], $_POST['donationID']);
+    $contents = file_get_contents($_SERVER['DOCUMENT_ROOT']."/order/tmpl-thankyou." . $lang . ".html");
+    echo str_replace($replace, $with, $contents);
 } else {
     // DEBUG: Comment out next line to be able to see errors and printed info
     header("Location: https://fsfe.org/contribute/spreadtheword-orderthanks.{$lang}.html");

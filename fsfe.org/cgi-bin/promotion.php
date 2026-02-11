@@ -227,7 +227,7 @@ curl_close($curl);
 if (isset($_POST['donate']) && ((int) $_POST['donate']) >= 10) {
     $replace = array(':AMOUNT:', ':EMAIL:', ':REFERENCE:');
     $with = array($_POST['donate'], $_POST['mail'], $_POST['donationID']);
-    $contents = file_get_contents($_SERVER['DOCUMENT_ROOT']."/order/tmpl-thankyou." . $lang . ".html");
+    $contents = file_get_contents($_SERVER['DOCUMENT_ROOT']."/contribute/spreadtheword-tmpl-payment." . $lang . ".html");
     echo str_replace($replace, $with, $contents);
 } else {
     // DEBUG: Comment out next line to be able to see errors and printed info

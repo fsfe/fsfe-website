@@ -1,0 +1,613 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html>
+ <version>3</version>
+<head>
+<title>Transcript SFP#47</title>
+</head>
+<body>
+  
+<h1>SFP#47: ILoveFS: Let’s meet our maintainers</h1>
+
+<p><a href="/news/podcast/2026/episode-47.html">Back to the episode SFP#47</a></p>
+
+
+  
+<pre class="transcript">
+<div class="content-centered"><h1 class="post-title"><a>SFP#47: ILoveFS: Let’s meet our maintainers</a></h1>
+  
+
+WEBVTT
+
+00:00.000 --> 00:18.400
+Dear listeners, thank you very much for listening to the Software Freedom Podcast.
+
+00:18.400 --> 00:22.600
+The Software Freedom Podcast is brought to you by the Free Software Foundation Europe.
+
+00:22.600 --> 00:26.800
+We are a charity that empowers users to control technology.
+
+00:27.120 --> 00:31.760
+I'm Bonnie Merring and today we have a dedicated I Love Free Software Day episode.
+
+00:33.040 --> 00:38.240
+Each year on the 14th of February we celebrate all the contributors, developers,
+
+00:38.240 --> 00:44.720
+maintainers of free software projects. I would love if this would be a regular thing and
+
+00:44.720 --> 00:50.000
+if you would not need a dedicated date for it. But so far we have the I Love Free Software Day
+
+00:50.000 --> 00:54.240
+and on this day we say thank you so much for your contribution to Software Freedom.
+
+00:54.640 --> 01:00.800
+This year on the I Love Free Software Day we highlight the extremely important work
+
+01:00.800 --> 01:06.720
+done by countless of maintainers out there. And for this I'm very happy to talk with Lorenz's
+
+01:06.720 --> 01:12.960
+K, one of the maintainers from the monitoring platforms. Lorenz, thank you so much for making
+
+01:12.960 --> 01:16.320
+the time and thank you so much for joining me in the Software Freedom Podcast.
+
+01:16.320 --> 01:20.480
+Thanks for having me. Happy to be here.
+
+01:20.720 --> 01:24.720
+Hi you coming to the I Love Free Software Day celebration in Nürnbeck.
+
+01:24.720 --> 01:28.640
+I sure am. Yes. Already planted in.
+
+01:29.840 --> 01:35.920
+Very happy. Can you very very briefly summarize for me and our listeners what the monitoring
+
+01:35.920 --> 01:46.320
+plugins are? Okay briefly might be hard because I have to add some context. So there is a family
+
+01:46.320 --> 01:54.080
+of free software systems monitoring software. So the software which helps an administrator to
+
+01:54.880 --> 01:59.680
+monitor the actual computers which are in a company institution or whatever.
+
+02:00.320 --> 02:08.400
+And we started in 90s with Nagios and they had the idea of putting the actual monitoring.
+
+02:08.400 --> 02:14.560
+So the knowledge about how things work into separate little programs which are called
+
+02:14.560 --> 02:20.960
+monitoring plugins. So they were separate from the main program and this principle this interface
+
+02:20.960 --> 02:28.320
+was kept by forks and follow ups and the monitoring plugins project is a collection of those
+
+02:28.320 --> 02:36.080
+monitoring plugins which do the actual monitoring. This is I guess quite a far collection.
+
+02:36.080 --> 02:42.080
+So there are a lot of plugins probably in it. Yes I mean the specific programs that this
+
+02:42.080 --> 02:49.600
+collection are like maintained by the project itself and they have like 30 thing different plugins
+
+02:49.600 --> 02:57.360
+which more or less provide like a basic system functionality test mostly.
+
+02:57.920 --> 03:00.880
+All right how did you get involved with the monitoring plugins?
+
+03:00.880 --> 03:08.000
+Well I started a shop at a company which provides professional services.
+
+03:08.880 --> 03:16.480
+So I encountered the monitoring plugins there and of course at some point I discovered that back
+
+03:16.480 --> 03:22.880
+was something I didn't like and well as you do in the good free software world to be a good citizen
+
+03:22.880 --> 03:29.760
+you go there you complain in the issue tracker and then nothing happens then you start up with a
+
+03:29.760 --> 03:34.720
+pool request and then nothing happens and then you start annoying the maintainers about your pool
+
+03:34.720 --> 03:39.600
+request and then they say hey how about you become proud of the project and then you're in.
+
+03:41.280 --> 03:48.560
+That's basically it. So you got sucked in. Yes you know you start up with the one thing and then
+
+03:48.560 --> 03:55.040
+you already have the code open in the editor and think that that doesn't look good or maybe I would
+
+03:55.040 --> 04:02.000
+like to have that differently and you have a second pool request then and after a few of those
+
+04:02.000 --> 04:10.000
+somebody approaches you and says hey since you're already here do you want to be part of this?
+
+04:11.040 --> 04:12.720
+Do you also try to serve others?
+
+04:14.560 --> 04:19.040
+Not successfully. No it did not happen recently.
+
+04:19.920 --> 04:22.960
+Okay should I keep fingers crossed that you get more people?
+
+04:22.960 --> 04:26.960
+I mean why not? That would might help.
+
+04:27.360 --> 04:37.600
+Okay. How did you then like you found us back right and you were like proposing a fix to it
+
+04:37.600 --> 04:44.000
+and making sure that everything is updated but what keeps you motivated to continue with this?
+
+04:44.000 --> 04:48.400
+Like is there something that you say oh I find this very interesting and I should really
+
+04:48.960 --> 04:57.360
+keep doing that. That's I think there's not one easy answer to that.
+
+04:58.160 --> 05:06.880
+Partially it's just it's a little bit my project now and I have some strong opinions about
+
+05:08.160 --> 05:14.320
+things should work and how the code should look like. This is partially an aesthetic thing,
+
+05:15.280 --> 05:22.400
+partially a functionality thing so part of my motivation now is I want to have good things
+
+05:22.400 --> 05:29.280
+so things should be proper and well and well done. I mean if I'm correct with the
+
+05:29.280 --> 05:37.440
+how how to do it well is another metaphor discussion but now I am okay I've scrolled through
+
+05:37.440 --> 05:43.760
+the code and every time I think oh that doesn't look I want to change that and I want to make
+
+05:44.160 --> 05:50.480
+better I want to have good software in a way and that keeps me motivated.
+
+05:51.440 --> 05:58.400
+Partially it's also I mean this is software that works mostly well but if you have used it
+
+05:58.400 --> 06:03.920
+for time you think okay why are we doing this this way? Can we not make it better?
+
+06:03.920 --> 06:12.240
+So not only keep it up internally but also improve the functionality, improve the the interfaces
+
+06:12.240 --> 06:20.800
+and yeah so it's yeah basically it's I want to have good software in the end and I want to make
+
+06:20.800 --> 06:29.600
+good software and somehow this keeps me keeps me at a project still after years and after the
+
+06:29.600 --> 06:35.440
+that one bug I found. But is there also a human connection for you?
+
+06:35.440 --> 06:42.960
+All right that does not have to exist is it more about technical things that you want to fix?
+
+06:44.080 --> 06:52.800
+I mean there's some human connection inside the project but like all the the other people are not
+
+06:53.760 --> 07:00.960
+locally here so and we don't have that much communication in itself but of course I have
+
+07:00.960 --> 07:09.120
+communication downstream so I I feel now responsible for software which is actually in use
+
+07:09.120 --> 07:17.360
+heavily in use and is used by a lot of people so in a way I communicate the downstream if I make
+
+07:18.640 --> 07:27.840
+less than optimal error message then people the the action monitoring somewhere works bad because people
+
+07:28.720 --> 07:36.960
+can't think or can't recognize what I try to tell them and what what their server is not doing well.
+
+07:38.080 --> 07:50.080
+So in a way I'm trying to communicate to users but it's maybe yeah and this is everyone but this
+
+07:50.080 --> 07:56.160
+is important for you to keep going this kind of communication or because like with the users it's
+
+07:56.160 --> 08:03.440
+more like you communicate to them and I guess they sometimes communicate back to you if something
+
+08:03.440 --> 08:10.560
+doesn't work. Some definitely do and that's recently has been actually a very enjoyable
+
+08:11.520 --> 08:19.280
+communication and actually that's also yes something that's motivating if you have somebody say hey
+
+08:19.280 --> 08:24.720
+I'm a maintainer of a mainstream Linux distribution and this is not working for me
+
+08:25.600 --> 08:34.720
+and there's a okay let's debug this and maybe person comes up with a fix and says oh yeah cool
+
+08:34.720 --> 08:41.200
+you solved my problem and that's actually really really nice if somebody comes by and says oh cool
+
+08:41.200 --> 08:48.000
+that works for me you really you solved the problem I had and that's cool. I can imagine if it's
+
+08:48.000 --> 08:53.680
+a bit like you're describing what's behind free software when we talk about community because
+
+08:53.680 --> 09:00.800
+this is also this interaction with each other and this exchange of ideas and all and free software
+
+09:01.360 --> 09:06.560
+really really grows from those kind of interactions at least as my feeling.
+
+09:08.000 --> 09:18.160
+Yes it definitely makes this more fun a lot more fun and I probably wouldn't do it for me
+
+09:19.120 --> 09:27.200
+if it wouldn't be like that I mean let's say in a workplace you have if you have find a bug then
+
+09:27.200 --> 09:32.240
+you have to contact support and the support has to find a developer and then as you have
+
+09:32.240 --> 09:38.720
+play email ping pong for forever and in this project it's just so somebody opens a new issue
+
+09:38.720 --> 09:44.240
+there and says hey this is broken and they say okay how is about this and this oh it is a problem
+
+09:44.320 --> 09:51.520
+and now I fix it and now I have just in a very smooth and efficient way with
+
+09:51.520 --> 10:00.240
+with no hurdles in there helped another human and that's great. Is there something that you
+
+10:00.240 --> 10:05.440
+value a lot if there's some interaction you say oh this is how I prefer things because I guess
+
+10:05.440 --> 10:10.480
+there is sometimes interaction that is not so nice but I also guess that there's interaction
+
+10:10.480 --> 10:19.680
+that keeps you really motivated to be there. I'm lucky in a way that most interaction is actually
+
+10:19.680 --> 10:27.120
+at least okay so I could imagine if you have a front end project you get a lot of people who say
+
+10:27.120 --> 10:37.600
+that's the wrong blue yeah and at least but yes sometimes I have people I mean mostly people
+
+10:37.600 --> 10:46.320
+who opened up the issue previously who said oh great that that really helped and yes that's
+
+10:46.320 --> 10:54.240
+these are moments that I which I value. How many of you are in the maintenance group
+
+10:54.960 --> 11:01.440
+like how many of them are really active because I obviously checked out the gift page
+
+11:02.000 --> 11:10.080
+from monitoring plugins but I have mentioned on the site 153 I guess not 153 people are
+
+11:10.080 --> 11:18.400
+actively maintaining this project as far as I know. Not really I think we are about four people
+
+11:18.400 --> 11:28.560
+who are more or less active and also active in different parts I would say so in recent years
+
+11:28.560 --> 11:35.600
+I have done most of the work in the C part of the project I think we have one or two loose
+
+11:36.720 --> 11:45.200
+recurring individuals who also participate there then we have a package maintainer there
+
+11:45.840 --> 11:55.120
+which is great because he's like a link to a major Linux distribution and the bugs come to us
+
+11:55.200 --> 12:00.560
+and he also managed those those bugs and issues with in the project and then he puts the patches
+
+12:00.560 --> 12:09.120
+up so there's a very good good link to the actual user base so to speak and then other people
+
+12:09.120 --> 12:18.160
+for pro and for organization but it's very a very loose group I mean it's not like we we do a lot
+
+12:18.160 --> 12:25.920
+there so it's a low burning project so to speak but yeah that's I would call this dead core
+
+12:25.920 --> 12:34.000
+group in a way. You mentioned there's one from a Linux distribution that is part of this
+
+12:34.960 --> 12:41.840
+does now brought me to a to a thread or to a line of communication that I also want to touch
+
+12:42.000 --> 12:49.920
+upon is resources because for testing software and all of this kind you need resources to figure out
+
+12:49.920 --> 12:54.640
+if this actually works with this project if this also works with that project and you already
+
+12:54.640 --> 13:00.240
+mentioned monitoring plugins are widely used on various systems so it's not on a Linux based
+
+13:00.240 --> 13:05.680
+systems they are also open the ESD freebies they want ever I'm not mentioning them all but don't
+
+13:06.400 --> 13:11.760
+they're all they're all there and they're very important don't get it wrong that means you missed
+
+13:11.760 --> 13:22.080
+that one on my toaster which one so you know what I mean like there are quite a lot of systems
+
+13:22.080 --> 13:31.200
+operating systems out there all of them equally important but how do you test the software
+
+13:31.200 --> 13:39.920
+then running for this like where do the resources come from well effectively not to be quite
+
+13:39.920 --> 13:46.960
+honest we were we are testing at different things on a few different Linux distributions
+
+13:48.480 --> 13:56.960
+but effectively we are not testing on ourselves on other Unixes
+
+13:57.920 --> 14:05.040
+partially because that's a hassle to get it up on GitHub and partially because this
+
+14:05.040 --> 14:12.720
+yeah would require resources to set up the testing to create a testing setup in itself find out
+
+14:12.720 --> 14:19.920
+how can a compiler how can I introduce tests there and for end-to-end tests what is the appropriate
+
+14:19.920 --> 14:31.440
+software there and so this is just something the group and I did not prioritize until now so
+
+14:31.440 --> 14:40.880
+sadly we rely on we would say end user testing so I have recently especially we had some very good
+
+14:40.880 --> 14:49.760
+contributions from one of the BSDs where people said oh so I said okay we're doing a release candidate
+
+14:49.760 --> 14:55.200
+for for a new release and they said okay let's let's put this in testing on our distribution and
+
+14:55.200 --> 15:03.840
+see what falls out and they then played the the connection between this BSD and us and that was
+
+15:03.840 --> 15:10.640
+very cool but of course it's not ideal so to speak to test it in production but is there something
+
+15:10.640 --> 15:17.520
+that others can do and help you with like the people with the BSD did is this something that you
+
+15:17.520 --> 15:22.880
+as a group of wish for or is this something that would put more burden on you because then there are
+
+15:22.880 --> 15:30.320
+no more issues and people coming to communicate with you and all of that no I would actually appreciate
+
+15:30.320 --> 15:39.280
+that if people if there was a good way to sort of like putting up testing pipelines on different
+
+15:39.280 --> 15:46.400
+unixes but yeah somebody if somebody would like to do that work that'd be really great
+
+15:49.200 --> 15:55.760
+yeah but so far nobody turned up but that would actually be really helpful so if we can test
+
+15:56.400 --> 16:03.360
+more and better before we put it in a release then we can smooth out bugs earlier and
+
+16:04.160 --> 16:11.840
+also do would not endanger a running system out in the wild so that also would of course be
+
+16:11.840 --> 16:18.480
+better to to make good work it's just a thing yeah to to find the time and everything for that
+
+16:18.480 --> 16:25.440
+but if people would show up with that and say okay you you have something that improves the
+
+16:25.440 --> 16:33.280
+quality here then I would love that that's very nice is there something that you would say
+
+16:33.280 --> 16:39.680
+maintain us generally speaking now I know you cannot speak for everybody but from your perspective
+
+16:39.680 --> 16:46.480
+is something that people actually need I know it's a hard question yeah it's a hard question and
+
+16:47.040 --> 16:57.920
+of course that cannot be a single answer to that I mean that the classic is to say a real
+
+16:57.920 --> 17:08.560
+probably financial contribution I mean a lot of infrastructure around the world is free software
+
+17:08.560 --> 17:14.960
+I mean probably everybody knows that it's KZD comic certainly forgot the number
+
+17:15.840 --> 17:28.320
+I will link it in the show notes thank you so an actual recognition and a free software work
+
+17:28.320 --> 17:38.880
+on which role it plays in modern infrastructure would be great here I mean there's some
+
+17:39.680 --> 17:47.280
+lonely initiatives I would say let's say an L-net which is great but like why is there not like
+
+17:48.400 --> 17:55.200
+a a national software development company where say okay I'll just hire 500 people who do the
+
+17:55.200 --> 18:01.120
+open software work in this country and they'll just support them and get them some food
+
+18:01.440 --> 18:12.000
+because they're keeping this the infrastructure and that that would be good because yeah actually
+
+18:12.000 --> 18:22.560
+some of our infrastructure is based on I find the time on a weekend to fix a bug there so that's
+
+18:23.440 --> 18:32.160
+not the most reliable way to have infrastructure apart from that it gets recognition in itself would of
+
+18:32.160 --> 18:40.960
+course be good so to have people come to you and say yeah it's great I like that thank you
+
+18:41.760 --> 18:48.480
+occasionally that's pretty nice and I guess especially for library maintainers that does not
+
+18:48.480 --> 18:55.760
+happen often if you're if you're the maintainer of lip foo nobody comes up to you and says hey I
+
+18:55.760 --> 19:02.240
+last that I have that in 300 programs on my computer running currently that's great work you did
+
+19:02.240 --> 19:09.360
+there this is a short break for our own cause thank you for listening to the software freedom
+
+19:09.360 --> 19:16.000
+podcast working for software freedom and producing podcasts costs money please consider
+
+19:16.400 --> 19:21.600
+supporting us with a donation on the fsfe.org slash donate and then the show notes
+
+19:24.400 --> 19:31.440
+I mean it would be nice of course just as on a human basis yeah so to feel seen you mean yes
+
+19:32.400 --> 19:40.080
+and so a convoyage meant into receiving to have recognition for that work but I guess the the
+
+19:40.080 --> 19:48.960
+extra physical financial aspect should not be you should also be there absolutely I can absolutely
+
+19:48.960 --> 19:56.800
+agree on that but to get the world up is there a project that you really like and would like to say
+
+19:56.800 --> 20:04.800
+thank you to I thought about this for for long and then it should be because of course this is
+
+20:05.520 --> 20:13.440
+very tricky because it's such a huge number of of projects I actually just have on my computer
+
+20:15.760 --> 20:23.520
+so I thought what would be one that actually does not get noticed very often so and I thought
+
+20:23.520 --> 20:31.520
+about a npd the music player demon which is a program to just play music and organize a playlist
+
+20:31.520 --> 20:39.520
+and a music library and it has been working on my systems for 15 years and the only trouble I had
+
+20:39.520 --> 20:45.120
+when I tried to configure the funny things and that plays music for me and it's great
+
+20:45.840 --> 20:53.360
+oh that's very cute no thank you very much last but not least what can the community do to help you
+
+20:54.240 --> 21:03.520
+I guess monitoring plugins and maintaining the maintenance of monitoring plugins of course
+
+21:04.800 --> 21:12.480
+cold contributions are always welcome issues especially notices about how their things are
+
+21:12.480 --> 21:22.560
+breaking or ideas about the improvement are welcome and although both of those create more right
+
+21:24.000 --> 21:31.120
+so things that would help in general I mean of course if people want to contribute long time
+
+21:31.120 --> 21:40.480
+and engage the project itself that would be great but of course a difficult thing but apart from
+
+21:40.560 --> 21:48.480
+that I would welcome things like static analysis and like maybe coding guidelines something they can
+
+21:48.480 --> 21:57.840
+automate which like reduces error rates my C is probably not the best C seen anywhere but so if
+
+21:57.840 --> 22:03.760
+people can come up with something that says me oh no that blind is broken because you did something
+
+22:03.760 --> 22:10.240
+wrong there and we can automate that or if people can actually build more test pipelines and
+
+22:10.640 --> 22:21.120
+build more test cases or documentation which is on my to-do list but you know so all of those
+
+22:21.120 --> 22:29.200
+things would be welcome and valued and I would be happy if people would come by and at least say
+
+22:29.200 --> 22:35.280
+hello in the IFC chat will also be nice I'm a link to IFC chat and I show lots then I just
+
+22:35.280 --> 22:40.160
+keep thinking about the documentation part because you know we have this program in competition for
+
+22:40.160 --> 22:46.160
+teenagers you've actually for freedom and in it we have eight criteria for eventually for the
+
+22:46.160 --> 22:52.080
+sure to evaluate the projects that are submitted and one of this criteria is documentation
+
+22:55.120 --> 23:02.480
+that's very appropriate I think yeah I guess so too anyway thank you very much Lorenzce for
+
+23:02.480 --> 23:08.880
+the time thank you so much for doing this with me and giving me a glamp and glimpse or an inside
+
+23:09.600 --> 23:15.200
+to say this in a better way of how maintaining works and what acts actually needed there thank you
+
+23:15.200 --> 23:22.320
+very much thank you for having me this was the software freedom podcast if you like this episode
+
+23:22.320 --> 23:28.400
+please recommend it to your friends and rated they tune for more inspiring conversations that
+
+23:28.400 --> 23:34.160
+explore the importance of software freedom and its impact on our digital lives I wish you all
+
+23:34.160 --> 23:39.120
+a very pleasant I love free software day there are some events that will be running throughout
+
+23:39.120 --> 23:48.000
+Europe so check out I love of s dot org and see if there's one happening near you and yes thank
+
+23:48.000 --> 23:52.560
+you so much for listening this podcast is presented to you by the free software foundation europe
+
+23:52.560 --> 23:58.800
+there are a charity that works on promoting software freedom if you like our book please consider
+
+23:58.880 --> 24:05.680
+supporting us with a donation you find more information under fsfe.org/donate thank you
+
+24:05.680 --> 24:08.800
+so much until the next episode bye bye
+
+
+
+</div>
+
+</pre>
+
+<p><a href="/news/podcast/2026/episode-47.html">Back to the episode SFP#47</a></p>
+
+</body>
+<sidebar promo="our-work">
+
+</sidebar>
+  
+</html>

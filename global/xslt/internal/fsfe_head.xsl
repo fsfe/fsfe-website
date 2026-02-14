@@ -2,7 +2,7 @@
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
   <xsl:variable name="mode">
     <!-- here you can set the mode to switch between normal and IloveFS style -->
-    <xsl:value-of select="'normal'"/>
+    <xsl:value-of select="'valentine'"/>
     <!-- can be either 'normal' or 'valentine' -->
   </xsl:variable>
   <!-- Take /head/title and append " - FSFE", use this as $title -->

@@ -63,7 +63,7 @@
           <xsl:element name="link">
             <xsl:attribute name="rel">stylesheet</xsl:attribute>
             <xsl:attribute name="media">all</xsl:attribute>
-            <xsl:attribute name="href"><xsl:value-of select="$urlprefix"/>/look/main.valentine.css</xsl:attribute>
+            <xsl:attribute name="href"><xsl:value-of select="$urlprefix"/>/look/main.css?20230215</xsl:attribute>
             <xsl:attribute name="type">text/css</xsl:attribute>
           </xsl:element>
         </xsl:otherwise>
@@ -76,8 +76,12 @@
       </xsl:element>
       <xsl:element name="link">
         <xsl:attribute name="rel">icon</xsl:attribute>
-        <xsl:attribute name="href"><xsl:value-of select="$urlprefix"/>
-            /graphics/fsfev.png
+        <xsl:attribute name="href">
+          <xsl:value-of select="$urlprefix"/>
+          <xsl:choose>
+            <xsl:when test="$mode = 'valentine'">/graphics/fsfev.png</xsl:when>
+            <xsl:otherwise>/graphics/fsfe.ico</xsl:otherwise>
+          </xsl:choose>
         </xsl:attribute>
         <xsl:attribute name="type">image/x-icon</xsl:attribute>
       </xsl:element>

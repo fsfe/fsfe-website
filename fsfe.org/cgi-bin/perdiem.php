@@ -26,23 +26,23 @@ $csvfile = tmpfile();
 $csvfile_path = stream_get_meta_data($csvfile)['uri'];
 $reimb_total = 0;   // total reimbursement for early calculation
 
-$who = isset($_POST['who']) ? $_POST['who'] : false;
-$activity = isset($_POST['activity']) ? $_POST['activity'] : false;
+$who = isset($_POST['who']) ? htmlspecialchars($_POST['who']) : false;
+$activity = isset($_POST['activity']) ? htmlspecialchars($_POST['activity']) : false;
 $activity_tag = explode('||', $activity)[0];
 $activity_text = explode('||', $activity)[1];
 $category_id = '66640';
 $category_text = 'Per diem';
-$event = isset($_POST['event']) ? $_POST['event'] : false;
-$extra = isset($_POST['extra']) ? $_POST['extra'] : false;
-$mailopt = isset($_POST['mailopt']) ? $_POST['mailopt'] : false;
-$defaults = isset($_POST['defaults']) ? $_POST['defaults'] : false;
-$dest = isset($_POST['dest']) ? $_POST['dest'] : false;
-$dest_other = isset($_POST['dest_other']) ? $_POST['dest_other'] : false;
-$use = isset($_POST['use']) ? $_POST['use'] : false;
-$date = isset($_POST['date']) ? $_POST['date'] : false;
-$break = isset($_POST['break']) ? $_POST['break'] : false;
-$lunch = isset($_POST['lunch']) ? $_POST['lunch'] : false;
-$dinner = isset($_POST['dinner']) ? $_POST['dinner'] : false;
+$event = isset($_POST['event']) ? htmlspecialchars($_POST['event']) : false;
+$extra = isset($_POST['extra']) ? htmlspecialchars($_POST['extra']) : false;
+$mailopt = isset($_POST['mailopt']) ? htmlspecialchars($_POST['mailopt']) : false;
+$defaults = isset($_POST['defaults']) ? htmlspecialchars($_POST['defaults']) : false;
+$dest = isset($_POST['dest']) ? htmlspecialchars($_POST['dest']) : false;
+$dest_other = isset($_POST['dest_other']) ? htmlspecialchars($_POST['dest_other']) : false;
+$use = isset($_POST['use']) ? htmlspecialchars($_POST['use']) : false;
+$date = isset($_POST['date']) ? htmlspecialchars($_POST['date']) : false;
+$break = isset($_POST['break']) ? htmlspecialchars($_POST['break']) : false;
+$lunch = isset($_POST['lunch']) ? htmlspecialchars($_POST['lunch']) : false;
+$dinner = isset($_POST['dinner']) ? htmlspecialchars($_POST['dinner']) : false;
 
 // Separate employee name parameters
 $who_verbose = explode('||', $who)[0];

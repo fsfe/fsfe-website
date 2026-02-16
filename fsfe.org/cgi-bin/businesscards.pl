@@ -1,6 +1,7 @@
 #!/usr/bin/perl
 
 use CGI;
+use HTML::Entities;
 use POSIX qw(strftime);
 
 
@@ -11,20 +12,20 @@ use POSIX qw(strftime);
 my $query = new CGI;
 
 
-my $name = $query->param("name");
-my $function = $query->param("function");
-my $function2 = $query->param("function2");
-my $radioaddress = $query->param("address");
-my $otheraddress = $query->param("other_address");
-my $phone = $query->param("phone");
-my $mobile = $query->param("mobile");
-my $fax = $query->param("fax");
-my $email = $query->param("email");
-my $jabber = $query->param("jabber");
-my $fp = $query->param("fingerprint");
-my $amount = $query->param("amount");
-my $er = $query->param("er");
-my $delivery = $query->param("delivery_address");
+my $name = encode_entities(scalar $query->param("name"));
+my $function = encode_entities(scalar $query->param("function"));
+my $function2 = encode_entities(scalar $query->param("function2"));
+my $radioaddress = encode_entities(scalar $query->param("address"));
+my $otheraddress = encode_entities(scalar $query->param("other_address"));
+my $phone = encode_entities(scalar $query->param("phone"));
+my $mobile = encode_entities(scalar $query->param("mobile"));
+my $fax = encode_entities(scalar $query->param("fax"));
+my $email = encode_entities(scalar $query->param("email"));
+my $jabber = encode_entities(scalar $query->param("jabber"));
+my $fp = encode_entities(scalar $query->param("fingerprint"));
+my $amount = encode_entities(scalar $query->param("amount"));
+my $er = encode_entities(scalar $query->param("er"));
+my $delivery = encode_entities(scalar $query->param("delivery_address"));
 
 
 if ($function2 ne "") {

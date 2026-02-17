@@ -154,7 +154,7 @@ if (isset($json_cd_res) && ($_POST['donate'] > 0)) {
 
 $data = [
     'name' => htmlspecialchars($_POST['firstname']).' '.htmlspecialchars($_POST['lastname']),
-    'donationID' => $_POST['donationID'],
+    'donationID' => isset($_POST['donationID']) ? $_POST['donationID'] : '',
     'donate' => htmlspecialchars($_POST['donate']),
     'lang' => $lang,
 ];

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html>
+  <version>1</version>
+
+  <head>
+    <title>Thank you for your donation!</title>
+  </head>
+
+  <body>
+    <p id="category"><a href="/contribute/">Contribute</a></p>
+
+    <h1>Thank you for your donation!</h1>
+
+    <p class="p-summary">
+      Thank you for offering a donation of <strong>€:AMOUNT:</strong> for your
+      promotion material order.
+    </p>
+
+    <p>
+      You can now make your donation online through various credit and debit
+      cards or through PayPal.
+    </p>
+
+    <form name="payment" action="https://my.fsfe.org/pay/:REFERENCE:" method="post" class="thankyou">
+      <input type="hidden" name="amount" value=":AMOUNT:"/>
+      <input type="hidden" name="email" value=":EMAIL:"/>
+      <noscript>
+        <!-- translators: please also translate the term "Donate online", it
+              will show on the button. -->
+        <input type="submit" name="submit" value="Donate online"/>
+      </noscript>
+    </form>
+
+    <script type="text/javascript">document.payment.submit()</script>
+
+    <p>
+      In case you prefer to donate by bank transfer, please use the following
+      data:
+    </p>
+
+    <p>
+      Recipient: Free Software Foundation Europe e.V.<br/>
+      Address: Revaler Straße 19, 10245 Berlin, Germany<br/>
+      IBAN: DE47 4306 0967 2059 7908 01<br/>
+      Bank: GLS Gemeinschaftsbank eG, 44774 Bochum, Germany<br/>
+      BIC: GENODEM1GLS<br/>
+      Amount: :AMOUNT:<br/>
+      Payment reference: :REFERENCE:
+    </p>
+  </body>
+
+  <followup>no</followup>
+</html><!--
+Local Variables: ***
+mode: xml ***
+End: ***
+-->

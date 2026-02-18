@@ -5,13 +5,13 @@ description = "Python tooling to build the fsfe websites"
 readme = "README.md"
 requires-python = "==3.14.*"
 dependencies = [
+  "dacite",  # dict to dataclass conversion
   "lxml",  # XML parser
   "nltk",  # For stopwords for the search index
   "platformdirs",  # Get cache dirs and similar by platform
   "python-iso639",  # For getting english language names of languages from two letter codes.
   "requests",  # For HTTP requests
   "tdewolff-minify",  # For minification html css and js
-  "dacite",  # dict to dataclass conversion
 ]
 
 [project.scripts]
@@ -20,12 +20,12 @@ build = "fsfe_website_build:build"
 [dependency-groups]
 dev = [
   "lefthook",  # pre-commit hook
-  "pyright",  # python typechecker
   "pytest",  # python test runner
   "pytest-mock",  # helper for mocking in pytest
   "reuse",  # for enforcing licensing
   "ruff",  # python formatter and linter
   "tombi",  # toml formatter
+  "ty",  # python typechecker
   "types-lxml",  # type stubs for lxml
 ]
 
@@ -84,9 +84,6 @@ ignore = [
   "TRY003",  # Dont worry about big exceptions in tests
   "S101",  # Allow asserts in tests
 ]
-
-[tool.pyright]
-typeCheckingMode = "strict"
 
 [tool.pytest.ini_options]
 addopts = ["--import-mode=importlib"]

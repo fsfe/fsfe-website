@@ -80,23 +80,23 @@ function parse_submission()
     }
 
     $data = [
-        'name' => isset($_POST['name']) ? $_POST['name'] : '',
-        'email' => isset($_POST['email']) ? $_POST['email'] : '',
-        'title' => isset($_POST['title']) ? $_POST['title'] : '',
-        'groupname' => isset($_POST['groupname']) ? $_POST['groupname'] : '',
-        'groupurl' => isset($_POST['groupurl']) ? $_POST['groupurl'] : '',
-        'startdate' => isset($_POST['startdate']) ? ($_POST['startdate'].':00Z') : '',
-        'enddate' => isset($_POST['enddate']) ? ($_POST['enddate'].':00Z') : '',
+        'name' => isset($_POST['name']) ? htmlspecialchars($_POST['name']) : '',
+        'email' => isset($_POST['email']) ? htmlspecialchars($_POST['email']) : '',
+        'title' => isset($_POST['title']) ? htmlspecialchars($_POST['title']) : '',
+        'groupname' => isset($_POST['groupname']) ? htmlspecialchars($_POST['groupname']) : '',
+        'groupurl' => isset($_POST['groupurl']) ? htmlspecialchars($_POST['groupurl']) : '',
+        'startdate' => isset($_POST['startdate']) ? (htmlspecialchars($_POST['startdate']).':00Z') : '',
+        'enddate' => isset($_POST['enddate']) ? (htmlspecialchars($_POST['enddate']).':00Z') : '',
         'description' => isset($_POST['description'])
-            ? $_POST['description']
+            ? htmlspecialchars($_POST['description'])
             : '',
-        'url' => isset($_POST['url']) ? $_POST['url'] : '',
-        'online' => isset($_POST['online']) ? $_POST['online'] : '',
+        'url' => isset($_POST['url']) ? htmlspecialchars($_POST['url']) : '',
+        'online' => isset($_POST['online']) ? htmlspecialchars($_POST['online']) : '',
         'location' => $location,
         'countryname' => $countryname,
         'countrycode' => $countrycode,
-        'tags' => isset($_POST['tags']) ? $_POST['tags'] : '',
-        'lang' => isset($_POST['lang']) ? $_POST['lang'] : '',
+        'tags' => isset($_POST['tags']) ? htmlspecialchars($_POST['tags']) : '',
+        'lang' => isset($_POST['lang']) ? htmlspecialchars($_POST['lang']) : '',
     ];
 
     $event = eval_template('registerevent/event.php', $data);
@@ -394,8 +394,8 @@ function send_event_email(
         'mailboxId' => 5, // This is the General Helpdesk
         'subject' => $subject,
         'customer' => [
-            'email' => $_POST['email'],
-            'firstName' => $_POST['name'],
+            'email' => htmlspecialchars($_POST['email']),
+            'firstName' => htmlspecialchars($_POST['name']),
         ],
         'threads' => [
             [
@@ -406,8 +406,8 @@ function send_event_email(
                 ),
                 'type' => 'customer',
                 'customer' => [
-                    'email' => $_POST['email'],
-                    'firstName' => $_POST['name'],
+                    'email' => htmlspecialchars($_POST['email']),
+                    'firstName' => htmlspecialchars($_POST['name']),
                 ],
                 'attachments' => [
                     [

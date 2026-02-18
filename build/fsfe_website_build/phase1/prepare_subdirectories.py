@@ -36,9 +36,9 @@ def prepare_subdirectories(
         sys.path.append(str(subdir_path.resolve()))
         # Ignore this very sensible warning, as we do evil things
         # here for out subdir scripts
-        import subdir  # noqa: PLC0415 # pyright: ignore [reportMissingImports]
+        import subdir  # noqa: PLC0415 # type: ignore
 
-        subdir.run(source, languages, processes, subdir_path)  # pyright: ignore [reportUnknownMemberType]
+        subdir.run(source, languages, processes, subdir_path)
         # Remove its path from where things can be imported
         sys.path.remove(str(subdir_path.resolve()))
         # Remove it from loaded modules

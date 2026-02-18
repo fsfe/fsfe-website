@@ -81,8 +81,8 @@
     <available size="XXL" a="57" b="77"/>
     <available size="3XL" a="65" b="79"/>
     <available size="4XL" a="70" b="82"/>
-    <image small="data/pictures/tshirt-H4F-front-small.jpg" large="data/pictures/tshirt-H4F-front-large.jpg"/>
-    <image small="data/pictures/tshirt-H4F-back-small.jpg" large="data/pictures/tshirt-H4F-back-large.jpg"/>
+    <image small="data/pictures/tshirt-H4F-front-small.webp" large="data/pictures/tshirt-H4F-front-large.webp"/>
+    <image small="data/pictures/tshirt-H4F-back-small.webp" large="data/pictures/tshirt-H4F-back-large.webp"/>
   </item>
   <item type="tshirt" id="tshirt-nocloud-petrol" price="25.00" date="2024-01-12">
     <!-- available size="XS" a="48" b="68"/ -->
@@ -92,13 +92,13 @@
     <available size="XL" a="55" b="75"/>
     <available size="XXL" a="57" b="77"/>
     <available size="3XL" a="70" b="82"/>
-    <image small="data/pictures/tshirt-nocloud-petrol-front-small.jpg" large="data/pictures/tshirt-nocloud-petrol-front-large.jpg"/>
-    <image small="data/pictures/tshirt-nocloud-petrol-back-small.jpg" large="data/pictures/tshirt-nocloud-petrol-back-large.jpg"/>
+    <image small="data/pictures/tshirt-nocloud-petrol-front-small.webp" large="data/pictures/tshirt-nocloud-petrol-front-large.webp"/>
+    <image small="data/pictures/tshirt-nocloud-petrol-back-small.webp" large="data/pictures/tshirt-nocloud-petrol-back-large.webp"/>
   </item>
   <item type="hoodie" id="hoodie-retro" price="60.00" date="2026-01-27">
     <available size="S" a="x" b="y"/>
     <available size="M" a="x" b="y"/>
-    <available size="L" a="x" b="y"/>
+    <!--available size="L" a="x" b="y"/-->
     <available size="XL" a="x" b="y"/>
     <available size="2XL" a="x" b="y"/>
     <image small="data/pictures/hoodie-retro-1-small.webp" large="data/pictures/hoodie-retro-1-large.webp"/>

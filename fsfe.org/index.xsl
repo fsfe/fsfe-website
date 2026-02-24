@@ -83,6 +83,11 @@
                 <xsl:text>/about/people/testimonials.html#</xsl:text>
                 <xsl:value-of select="@id"/>
               </xsl:attribute>
+              <xsl:attribute name="aria-label">
+                <xsl:call-template name="fsfe-gettext">
+                  <xsl:with-param name="id" select="'read-testimonial'"/>
+                </xsl:call-template>
+              </xsl:attribute>
               <xsl:element name="img">
                 <xsl:attribute name="class">img-circle</xsl:attribute>
                 <xsl:attribute name="src">
@@ -110,6 +115,11 @@
                 <xsl:attribute name="href">
                   <xsl:text>/about/people/testimonials.html#</xsl:text>
                   <xsl:value-of select="@id"/>
+                </xsl:attribute>
+                <xsl:attribute name="aria-label">
+                  <xsl:call-template name="fsfe-gettext">
+                    <xsl:with-param name="id" select="'read-testimonial'"/>
+                  </xsl:call-template>
                 </xsl:attribute>
                 <xsl:apply-templates select="name/node()"/>
               </xsl:element>

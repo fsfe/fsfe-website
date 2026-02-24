@@ -120,6 +120,11 @@
             <xsl:attribute name="href">
               <xsl:value-of select="$link"/>
             </xsl:attribute>
+            <xsl:attribute name="aria-label">
+              <xsl:call-template name="fsfe-gettext">
+                <xsl:with-param name="id" select="'learn-more'"/>
+              </xsl:call-template>
+            </xsl:attribute>
           </xsl:element>
           <!-- a/learn-more -->
         </xsl:if>

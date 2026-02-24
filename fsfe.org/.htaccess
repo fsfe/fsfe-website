@@ -276,6 +276,9 @@ RewriteRule ^berlin/?$ https://wiki.fsfe.org/LocalGroups/Berlin [R=301,L]
 # Legal Questions
 RewriteRule ^activities/licence-questions/licence-questions(.*)?$ /freesoftware/legal/faq$1 [R=301,L]
 
+# Timeline
+RewriteRule ^about/timeline\.([a-z]{2})\.html$ /about/timeline/index.$1.html [R=301,L]
+
 # =============================================================================
 # FELLOWSHIP AND DONATIONS
 # =============================================================================

@@ -27,6 +27,11 @@
               <xsl:attribute name="href">
                 <xsl:value-of select="discussion/@href"/>
               </xsl:attribute>
+              <xsl:attribute name="aria-label">
+                <xsl:call-template name="fsfe-gettext">
+                  <xsl:with-param name="id" select="'discuss-article'"/>
+                </xsl:call-template>
+              </xsl:attribute>
               <xsl:call-template name="fsfe-gettext">
                 <xsl:with-param name="id" select="'discuss-article'"/>
               </xsl:call-template>

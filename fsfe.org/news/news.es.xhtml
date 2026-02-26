@@ -1,31 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 <html>
-  <version>0</version>
+  <version>4</version>
 
   <head>
-    <title>Archivo de Noticias</title>
-    <link rel="alternate" type="application/rss+xml" title="FSFE - Noticias" href="/news/news.es.rss"/>
+    <title>News</title>
   </head>
 
-  <body class="article" microformats="h-entry">
-    <h1 class="p-name">Archivo de Noticias</h1>
+  <body class="toplevel news-index ltr">
+    <h1>News</h1>
+
+    <div id="introduction">
+      <p>      
+		La FSFE empodera a los usuarios para que controlen la 
+		tecnología con sus <a href="/activities/">distintas actividades</a> y su compromiso 
+		concreto por <a href="/freesoftware/">la libertad del software</a>. Síguenos y asegúrate de 
+		recibir actualizaciones periódicas e información más detallada 
+		en nuestros distintos canales.
+      </p>
+    </div>
+
+    <div class="module-wrapper news">
+      <module id="follow-news"/>
+      <module id="social-media"/>
+      <module id="banner-subscribe"/>
+    </div>
+
     <include-news/>
+
+    <h2><a href="/news/2023/index.html">Archivo de noticias</a></h2>
+
+    <p>
+      Para noticias más antiguas, consulte nuestro archivo de noticias.
+      <a class="learn-more" href="/news/2023/index.html"/>
+    </p>
   </body>
 
-  <sidebar promo="none">
-    <h2><i class="fa fa-rss"/></h2>
-    <p>
-      Esta página recoge las noticias regulares que
-      la FSFE publica sobre sus campañas y actividades.
-      Únase a la <a href="https://lists.fsfe.org/postorius/lists/newsletter-es.lists.fsfe.org">lista de
-      distribución de notas de prensa</a> para obtener
-      los comunicados de prensa que publicamos. También
-      tiene a su disposición nuestros <a href="newsletter.html">boletines mensuales</a>.
-      Puede consultar noticias de todo el mundo acerca del
-      Software Libre a través de las <a href="/about/fsfnetwork.html">organizaciones hermanas</a> de la FSFE.
-      <a href="news.rss" class="feed">Canal de noticias RSS</a>
-    </p>
-  </sidebar>
-
-  <text id="more">Leer más...</text>
+  <banner1><module id="banner-subscribe"/></banner1>
+  <banner2><module id="banner-become-supporter"/></banner2>
 </html>

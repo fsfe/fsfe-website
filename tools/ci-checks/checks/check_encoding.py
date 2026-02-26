@@ -25,7 +25,7 @@ def check(files: list[Path], pool: multiprocessing.pool.Pool) -> tuple[bool, str
     failed_files: list[str] = []
     for file in files:
         encoding_result = run_command(["file", "-b", "--mime-encoding", str(file)])
-        if encoding_result not in ["utf-8", "ascii"]:
+        if encoding_result not in ["utf-8", "ascii", "us-ascii"]:
             failed_files.append(f"{file} has invalid encoding {encoding_result}")
     return len(failed_files) == 0, (
         "\n".join(failed_files)

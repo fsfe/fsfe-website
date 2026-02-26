@@ -30,9 +30,6 @@ in
       libffi
       go
       # Packages for git hooks
-      mediainfo
-      perl
-      file
       shfmt
       prettier
       php84Packages.php-cs-fixer

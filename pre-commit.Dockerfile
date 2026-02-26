@@ -5,16 +5,12 @@ COPY --from=ghcr.io/astral-sh/uv /uv /uvx /bin/
 # Install deps
 RUN apt-get update && apt-get install --yes --no-install-recommends \
 composer \
-curl \
-file \
 git \
 libxml2 \
 libxml2-utils \
 libxslt1.1 \
-mediainfo \
 node-less \
 npm \
-perl-base \
 php-zip \
 rsync \
 shfmt \

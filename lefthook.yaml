@@ -63,22 +63,8 @@ pre-commit:
     ty:
       glob: "*.py"
       run: ty check {staged_files}
-    structure:
-      glob:
-        - "*.xml"
-        - "*.xhtml"
-      run: tools/ci-checks/compare-xml-structure.py {staged_files}
-    general:
-      glob:
-        - "*.html"
-        - "*.xml"
-        - "*.xhtml"
-      run: tools/ci-checks/general.sh {staged_files}
-    non-en-frontpage-news:
-      glob:
-        - "*.xml"
-        - "*.xhtml"
-      run: tools/ci-checks/check-non-en-frontpage.sh {staged_files}
+    general-checks:
+      run: tools/ci-checks/run_checks.py {staged_files}
     simple-syntax:
       glob:
         - "*.xml"

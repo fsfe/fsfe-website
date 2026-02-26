@@ -1,5 +1,5 @@
 # This is a config file for a site, that cuontains necessary settings
-# 
+#
 # Sources for the website
 # All repos should be mirrored to https://git.fsfe.org/fsfe-system-hackers-mirrors
 #
@@ -11,6 +11,7 @@ file_sets = [
   { source = "/dist/jquery.min.js", target = "scripts/thirdparty/" },
   { source = "/dist/jquery.min.map", target = "scripts/thirdparty/" },
 ]
+
 [[dependencies]]
 repo = "https://git.fsfe.org/fsfe-system-hackers-mirrors/lunr.js"
 rev = "v2.3.9"
@@ -32,4 +33,4 @@ file_sets = [{ source = "/src", target = "cgi-bin/thirdparty/PHPMailer" }]
 [deployment]
 # This files contains relative paths we want to deploy even if they would be blocked by the copy_files method filtering.
 # Special case hard code pass over order items xml required by cgi script
-required_files = ["order/data/items.en.xml"]
+required_files = ["order/data/items.en.xml", "about/people/people.en.xml"]

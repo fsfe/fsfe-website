@@ -1,7 +1,21 @@
 <?php
 
+// TODO remove once all working
+error_reporting(E_ALL);
+ini_set('display_errors', '1');
+ini_set('display_startup_errors', '1');
+
 $acc_request = strtolower($_GET['resource'] ?? '');
-$people = simplexml_load_file($_SERVER['DOCUMENT_ROOT'].'about/people/people.en.xml');
+$xml_file = $_SERVER['DOCUMENT_ROOT'].'about/people/people.en.xml';
+$people = simplexml_load_file($xml_file);
+
+if (false === $people) {
+    http_response_code(500);
+    echo 'ERROR: Could not load people file. Please check the path:'.$xml_file;
+
+    exit;
+}
+
 foreach ($people->xpath('//fediverse') as $fedi_elem) {
     if ('acct:'.strval($fedi_elem) == $acc_request) {
         // if we have a location, return it and exit
@@ -11,11 +25,11 @@ foreach ($people->xpath('//fediverse') as $fedi_elem) {
             exit;
         }
         http_response_code(500);
-        echo 'ERROR: fediverse element has no location attribute!';
+        echo 'ERROR: fediverse element has no location attribute.';
 
         exit;
     }
 }
 // No matches
 http_response_code(404);
-echo '404 matching person not found';
+echo '404 matching person not found.';

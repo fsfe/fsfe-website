@@ -1,10 +1,5 @@
 <?php
 
-// TODO remove once all working
-error_reporting(E_ALL);
-ini_set('display_errors', '1');
-ini_set('display_startup_errors', '1');
-
 $acc_request = strtolower($_GET['resource'] ?? '');
 $xml_file = $_SERVER['DOCUMENT_ROOT'].'about/people/people.en.xml';
 $people = simplexml_load_file($xml_file);

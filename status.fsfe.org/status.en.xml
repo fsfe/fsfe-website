@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <service-status-data>
   <version>1</version>
+  <incident name="Matrix connection problems">
+    <update date="2026-03-02">
+      There have been reports of connection problems to our Matrix server on the weekend. System Hackers are investigating the problem.
+    </update>
+  </incident>
   <incident name="Network problems in one datacenter">
     <update date="2025-12-07">
       At one datacenter of our server locations we experience network problems after they did some maintenance work on Sunday Dec. 7th. Services located in the DC include email, email lists, Nextcloud, git, XMPP. The DC support is looking into the problem
@@ -20,7 +25,7 @@
       The blog aggregator is currently not available. Reasons are being investigated.
     </update>
     <update date="2025-11-05">
-	  Reason is, that the used plog aggregator (venus) has been deprecated.
+	  Reason is, that the used blog aggregator (venus) has been deprecated.
     </update>
     <update date="2026-01-07">
       Update from Chaos Congress, delayed due re-entry into normal time. System Hackers working on a replacement for the blog aggregator so that planet.fsfe.org hopefully sees new content <em>soon</em>.

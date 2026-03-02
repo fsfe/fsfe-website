@@ -20,6 +20,8 @@ build = "fsfe_website_build:build"
 [dependency-groups]
 dev = [
   "lefthook",  # pre-commit hook
+  "pillow",  # image processing
+  "pyright",  # python typechecker
   "pytest",  # python test runner
   "pytest-mock",  # helper for mocking in pytest
   "reuse",  # for enforcing licensing
@@ -33,9 +35,11 @@ dev = [
 requires = ["uv_build"]
 build-backend = "uv_build"
 
-[tool.uv.build-backend]
-module-name = "fsfe_website_build"
-module-root = "build"
+[tool.pytest]
+addopts = ["--import-mode=importlib"]
+python_files = ["*_test.py"]
+python_functions = ["*_test"]
+testpaths = ["build/fsfe_website_build_tests*"]
 
 [tool.ruff.lint]
 # See https://docs.astral.sh/ruff/rules/ for information
@@ -84,9 +88,10 @@ ignore = [
   "TRY003",  # Dont worry about big exceptions in tests
   "S101",  # Allow asserts in tests
 ]
+"tools/**" = [
+  "TRY003",  # Allow large exception messages in code cli scripting things
+]
 
-[tool.pytest.ini_options]
-addopts = ["--import-mode=importlib"]
-python_files = ["*_test.py"]
-python_functions = ["*_test"]
-testpaths = ["build/fsfe_website_build_tests*"]
+[tool.uv.build-backend]
+module-name = "fsfe_website_build"
+module-root = "build"

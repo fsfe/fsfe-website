@@ -331,4 +331,5 @@ RewriteRule ^about/printable(/.*)?$ /contribute/spreadtheword.html [R=301,L]
 RewriteRule ^(tools|build)(/.*)?$ - [F,L]
 # Redirect attempts to status to status.fsfe.org
 RewriteRule ^status.fsfe.org(/.*)?$     https://status.fsfe.org/ [R=301,L]
-
+# Redirect fediverse redirects to our script
+RewriteRule ^\.well-known/webfinger$ /cgi-bin/webfinger.php [L]

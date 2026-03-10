@@ -95,7 +95,7 @@ function parse_submission()
         'location' => $location,
         'countryname' => $countryname,
         'countrycode' => $countrycode,
-        'tags' => isset($_POST['tags']) ? htmlspecialchars($_POST['tags']) : '',
+        'tags' => isset($_POST['tags']) ? $_POST['tags'] : '',
         'lang' => isset($_POST['lang']) ? htmlspecialchars($_POST['lang']) : '',
     ];
 

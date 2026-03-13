@@ -339,7 +339,7 @@ my $data = {
         {
             "type" => "message",
             "text" => "$body",
-            "user" => 6530,
+            "user" => 6530
         },
         {
             "type"     => "note",
@@ -351,7 +351,7 @@ my $data = {
                     "data"     => "$base64_encoded_invoice"
                 }
             ]
-            "user" => 6584,
+            "user" => 6584
         }
     ],
     "assignTo"     => 6584,

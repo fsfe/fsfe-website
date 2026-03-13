@@ -350,7 +350,7 @@ my $data = {
                     "mimeType" => "application/vnd.oasis.opendocument.text",
                     "data"     => "$base64_encoded_invoice"
                 }
-            ]
+            ],
             "user" => 6584
         }
     ],
@@ -361,7 +361,7 @@ my $data = {
             "id"    => 4,              # Order ID Custom Field
             "value" => "$reference"    # Actual Order ID
         }
-    ],
+    ]
 };
 
 # Encode the JSON

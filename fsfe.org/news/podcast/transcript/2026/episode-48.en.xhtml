@@ -1,0 +1,502 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html>
+ <version>3</version>
+<head>
+<title>Transcript SFP#48</title>
+</head>
+<body>
+  
+<h1>SFP#48: ILoveFS: Let’s meet our maintainers</h1>
+
+<p><a href="/news/podcast/2026/episode-48.html">Back to the episode SFP#48</a></p>
+
+
+  
+<pre class="transcript">
+<div class="content-centered"><h1 class="post-title"><a>SFP#48: ILoveFS: Let’s meet our maintainers</a></h1>
+  
+WEBVTT
+
+00:00.000 --> 00:06.000
+Dear listener, before we start with the Software Freedom Podcast, we have a very short announcement.
+
+00:06.000 --> 00:13.000
+Over the past months, the FSFE's online payment provider has repeatedly requested access
+
+00:13.000 --> 00:18.000
+to the private data of our supporters, which we obviously refuse.
+
+00:18.000 --> 00:21.000
+As a result, our contract was terminated.
+
+00:21.000 --> 00:26.000
+And during the migration to a new provider, we may lose some supporters.
+
+00:26.000 --> 00:30.000
+To continue our work for Free Software, we need your support.
+
+00:30.000 --> 00:37.000
+If you are already a supporter, please check your inbox for more information.
+
+00:37.000 --> 00:44.000
+If you are not a supporter, you can contribute financially at FSFE.org
+
+00:44.000 --> 00:47.000
+slash donate and help us over the next months.
+
+00:47.000 --> 00:50.000
+Thank you very much for listening to the Software Freedom Podcast
+
+00:50.000 --> 00:53.000
+and supporting the Free Software Foundation Europe.
+
+00:57.000 --> 01:02.000
+And I think this is still one of the biggest misunderstandings that we heard during FOSTEM
+
+01:02.000 --> 01:09.000
+but also before and afterwards is that people are scared that they personally
+
+01:09.000 --> 01:14.000
+or with their very small micro enterprise will fall under the CIA.
+
+01:14.000 --> 01:17.000
+And in most of the cases, it is not the case.
+
+01:27.000 --> 01:35.000
+Hello and welcome to the Software Freedom Podcast.
+
+01:35.000 --> 01:39.000
+Thank you so much for listening to this podcast and without you and your support,
+
+01:39.000 --> 01:41.000
+this podcast would not be possible.
+
+01:41.000 --> 01:42.000
+Thank you so much.
+
+01:42.000 --> 01:47.000
+This podcast is brought to you by the Free Software Foundation Europe.
+
+01:47.000 --> 01:51.000
+We are a charity that empowers users to control technology.
+
+01:51.000 --> 01:55.000
+I'm Bonnie Mehring and today I'm here with my colleague, Alexander Sander.
+
+01:55.000 --> 01:56.000
+Hey, Alex.
+
+01:56.000 --> 01:58.000
+Hey, Bonnie. Nice to be here again.
+
+01:58.000 --> 02:01.000
+Nice to have you again.
+
+02:01.000 --> 02:03.000
+How are you?
+
+02:03.000 --> 02:05.000
+I'm pretty good.
+
+02:05.000 --> 02:10.000
+I feel very good and looking forward to this podcast episode.
+
+02:10.000 --> 02:11.000
+Perfect.
+
+02:11.000 --> 02:17.000
+So today we will be talking about the very, very beloved cyber resilience act.
+
+02:18.000 --> 02:20.000
+And yes.
+
+02:20.000 --> 02:26.000
+Alex, during FOSDEM, you did a Q&amp;A  session about the CRA or the CRA.
+
+02:26.000 --> 02:31.000
+I was pointed out that this is the pronunciation.
+
+02:33.000 --> 02:36.000
+It's at least one we use.
+
+02:36.000 --> 02:38.000
+Yes.
+
+02:45.000 --> 02:53.000
+So you did a Q&amp;A  session in the legal and policy death room during FOSDEM.
+
+02:53.000 --> 02:56.000
+How was this and how was it received?
+
+02:56.000 --> 03:02.000
+And yeah, I have to feeling that quite a lot of open questions still floating around the regulation.
+
+03:02.000 --> 03:08.000
+And yeah, it's one of the most talked of regulations passed by the EU or?
+
+03:08.000 --> 03:11.000
+Yeah, indeed. I mean, there are still many uncertainties.
+
+03:11.000 --> 03:13.000
+There are still many questions.
+
+03:13.000 --> 03:18.000
+And that is also why we had the initial idea to come up with this Q&amp;A  session.
+
+03:18.000 --> 03:22.000
+It was pretty open to like to ask whatever you have.
+
+03:22.000 --> 03:26.000
+And we had a representative from the German market surveillance authority.
+
+03:26.000 --> 03:37.000
+This is important since market surveillance authority will be ultimately the ones that are checking if you fulfil the rules and if you're fulfilling the obligations from the cyber resilience act.
+
+03:37.000 --> 03:41.000
+And also we had the representative from the European Commission.
+
+03:41.000 --> 03:48.000
+So we were so to say it dreams team of people who can answer all the questions related to the cyber resilience act.
+
+03:48.000 --> 03:53.000
+And that's why we came up with this session in our legal and policy death room.
+
+03:53.000 --> 03:57.000
+But also there was a dedicated death room about the cyber resilience act.
+
+03:57.000 --> 04:04.000
+And there were many sessions on the cyber resilience act in other death rooms and also at the main stage.
+
+04:04.000 --> 04:10.000
+And there have been some talks about the cyber resilience act.
+
+04:10.000 --> 04:18.000
+So ultimately, I do believe that most of the questions that people had have been addressed during first and this year.
+
+04:18.000 --> 04:26.000
+And also, and this is very interesting at just there since we are recording on the Wednesday, fourth of March.
+
+04:26.000 --> 04:33.000
+So on the third of March, the European Commission released their 12 guidance on the cyber resilience act.
+
+04:33.000 --> 04:36.000
+And this is also a very important document.
+
+04:36.000 --> 04:39.000
+We also addressed this here a couple of times in the podcast already.
+
+04:39.000 --> 04:45.000
+We were running a survey on this, we were feedbacking on this to the European Commission.
+
+04:45.000 --> 04:57.000
+And now they came up with a 70 pages long document where they explain how to understand and how to read the cyber resilience act and how to lift this and practice basically.
+
+04:57.000 --> 05:06.000
+But why is this so? Why is this regulation talked of so much? Like what's happening there?
+
+05:06.000 --> 05:13.000
+So I mean, in general, I would say the European Commission is very experienced in talking to stakeholders.
+
+05:13.000 --> 05:17.000
+And when I say stakeholders, it's mainly market actors.
+
+05:17.000 --> 05:23.000
+So the European Commission is definitely an entity that is pretty good at understanding markets, regulating markets.
+
+05:23.000 --> 05:29.000
+And also collaborating with stakeholders for these markets.
+
+05:29.000 --> 05:38.000
+What is or what was I thinking new to them is to understand that there is nothing like.
+
+05:38.000 --> 05:45.000
+So Free Software is not like a classical car market or fish market or I don't know.
+
+05:45.000 --> 05:51.000
+So whatever market you might imagine, you simply have other stakeholders when you talk about Free Software.
+
+05:51.000 --> 06:03.000
+Since you have charities, since you have, by me, coffee people, since you have a large manufacturer, since you have foundations, and since you ultimately have individuals.
+
+06:03.000 --> 06:09.000
+And all of them might contribute to a product in the end, maybe even without knowing.
+
+06:09.000 --> 06:14.000
+Right? So since this is Free Software, you do not know what people are doing with your code.
+
+06:14.000 --> 06:23.000
+So this means you might write some code for that on GitLab and then you ultimately end up in the product without even knowing about this.
+
+06:23.000 --> 06:36.000
+And this is also something where I'd say the Commission had a learning during the last years, since they better understood how Free Software development in general works, how security mechanisms work,
+
+06:36.000 --> 06:55.000
+and how people are already making sure that Free Software is secure already, how they get there, and how difficult it is to put classical roles on them, like, for example, to say, you are a manufacturer, you are not a manufacturer, since there is so much in between.
+
+06:55.000 --> 07:11.000
+And I do believe the European Commission in the first place understood that there is something different with Free Software and that it needs a dedicated regulation, so to say, or like a dedicated place in the regulation where this needs to be clarified.
+
+07:11.000 --> 07:26.000
+So it can't be regulated like proprietary software, so there needs to be an exemption for Free Software that was clear to the Commission, but I think it was not clear to the Commission to which extent and for which actors, for example.
+
+02:38.000 --> 02:41.000
+We use most often.
+
+02:41.000 --> 02:44.000
+But sometimes it still slips out.
+
+
+07:26.000 --> 07:33.000
+So that was new, and I would say there was also a big learning for the Commission during these debates and discussions.
+
+07:33.000 --> 08:00.000
+And this is also being reflected in this guidance they came up now with since already said 70 pages and also since they are coming up with examples, it's pretty clear that they now, yeah, pretty much understand how Free Software development works, how security in Free Software development works, and how these several actors are collaborating and working together.
+
+08:00.000 --> 08:09.000
+But also how they might not want to work together or how they do not want to be forced into something but are still willing to contribute, right?
+
+08:09.000 --> 08:20.000
+So and this is so the needy greedy and the fine-tuning in the Free Software community, this is something which they haven't had on the radar in the first place, this is what I think.
+
+08:20.000 --> 08:46.000
+But what they and this is what I would say this is what you can see now, this is what changed and where they have a way better understanding also trying to address this in their legislation or in their guidance now, how the Free Software ecosystem looks like and how we can regulate it or also not regulated and still make sure that they contribute to a more secure software environment.
+
+08:46.000 --> 08:56.000
+So they are like very engaged to make this all better and to like really understand the Free Software ecosystem and the communities around us.
+
+08:56.000 --> 09:14.000
+Absolutely, and I think this is also being reflected since they took part in foster so when they came up with the regulation proposal, they have been at foster and since then a growing number of commission officials is going to foster for example, not just only as visitors,
+
+09:14.000 --> 09:36.000
+but also going on stage, talking about their ideas, talking about their plans, answering questions and ultimately I do believe it's also a very good sign and something which should be very happy about this is that commission officials are going to a session called Q&amp;A  session and it's basically asked me anything session, right?
+
+09:36.000 --> 09:54.000
+So they can't prepare in a way for this. It's not that they have a slide and say this is it and then they leave after a talk. No, it was a one-hour Q&amp;A  session and there were some tough questions I do believe and you cannot answer these questions if you do not understand the ecosystem.
+
+09:55.000 --> 09:59.000
+What was the toughest question that was asked during the Q&amp;A  session?
+
+10:00.000 --> 10:15.000
+This is maybe something you should ask the commission or the market surveillance authority, but on the other hand, I think one of the most pressuring questions and this is also why we then afterwards after foster came up with a plot post which you can find on fse.org.
+
+10:15.000 --> 10:28.000
+Do I have to be a steward? Some people still read the cyber resilience act in a way that they will be regulated and I think this is very important to say if you are an individual developer.
+
+10:29.000 --> 10:39.000
+If you are a charity, if you get donations, if you do not end up in a product, then you are out of scope.
+
+10:39.000 --> 10:54.000
+Still you can if you want to go in a steward role and follow the obligations from the steward role in order to help so to say, but you do not have to.
+
+10:54.000 --> 11:20.000
+And I think this is still one of the biggest misunderstandings that we heard during foster but also before and afterwards is that people are scared that they personally or with their very small micro enterprise will fall under the CIA and in most of the cases it is not the case in particular if you are not a legal entity, you do not fall under the cyber resilience act.
+
+11:20.000 --> 11:35.000
+Even if you are a legal entity, if you take donations, then it's very likely that you are only a steward and only if you are earning money with your project, yeah, obviously Free Software, then you might be considered as a manufacturer.
+
+11:35.000 --> 11:41.000
+So if you are bringing a product to the European market, then you are a manufacturer.
+
+11:41.000 --> 11:55.000
+Everything else is not a manufacturer so and I think this is one of the most important questions and this is also something where I would recommend everyone to read the guidance draft of the European Commission, so we will link it in the show notes.
+
+11:55.000 --> 12:18.000
+And again, they are working this example so and there are so many examples in it that I would say it's its very, very, very, very likely that your example is covered and that you will find the answer in this draft guidance if you are out of scope, if you might want to be a steward or if you are a manufacturer.
+
+12:18.000 --> 12:33.000
+So the only thing where you never can get out is that you are a manufacturer, but even there, so if you remove the product from the market, then you are also not a manufacturer out of scope, so also there nobody can force you to produce something right.
+
+12:36.000 --> 12:37.000
+Not yet.
+
+12:37.000 --> 12:49.000
+But I mean, you want to earn money, you have a product, we imagine you also want to keep this product on the market and also there it's pretty much well explained what you have to do then and how everything looks like.
+
+12:49.000 --> 13:04.000
+So no matter what you are, if you do Free Software, read the draft guidance of the European Commission, it's open for feedback, there's an ongoing consultation, so you can come up with whatever you think is wrong in this draft.
+
+13:04.000 --> 13:33.000
+You can amend things, so if you think something is missing, you can also share this with the Commission and also, I mean, if you should struggle to take part in these kinds of consultations, you can also send us an email and we will try to bring up your points in our feedback to consultation as it looks, I mean, I just had a few hours to read it, so I just went through it once and had some discussion with other stakeholders on it.
+
+13:33.000 --> 13:51.000
+I'd say it's looking really, really good at the moment, but I also need another reading of it and I also will talk to several projects, communities, Free Software developers, if they see something problematic in it, from my side, I would say at the moment it's looking really, really good.
+
+13:51.000 --> 13:59.000
+But still, I mean, also we or also I need to talk to others in order to understand if there's something missing.
+
+13:59.000 --> 14:19.000
+So let us know, and then we can also try to include it in our feedback if we should submit something, but at the moment, how it looks like, I would say, this is a very, very good document which helps to navigate the some resilience act and also to address some uncertainties to answer all the open questions.
+
+14:19.000 --> 14:24.000
+And I do believe they are answered in a way that it's good for the Free Software ecosystem.
+
+14:26.000 --> 14:29.000
+Okay, thank you so much for sharing does.
+
+14:29.000 --> 14:34.000
+Yeah, so you see I'm pretty happy and not only about the weather but also about.
+
+14:34.000 --> 14:44.000
+I mean, really, that was a year-long fight and it was also on us to share knowledge to bring in several communities, I've also learned a lot during this way.
+
+14:45.000 --> 14:58.000
+So I've heard about Free Software projects I've never heard before I have seen products that I've never heard of that before and how Free Software is helping them do to be a product ultimately.
+
+14:58.000 --> 15:13.000
+So also the learning curve for me was high so to say but ultimately I do believe for us, it was also always important to protect individual developers to protect charities to protect basically the work that helps.
+
+15:14.000 --> 15:32.000
+Society and to not overwork late here and I do believe that this helped, and it also helped that yeah others were listening to these podcasts listening to what we have doing giving feedback to us that helped us to explain the cause better to the commission.
+
+15:32.000 --> 15:37.000
+And this is why and this is how they came up with such as I would say good guidance.
+
+15:37.000 --> 15:44.000
+I'd say what looked a bit wild in the beginning and people were scared in the beginning when they heard about the cyber resilience act.
+
+15:44.000 --> 15:56.000
+The attempts helped our year-long communication with the commission helped also the way we talked with them the way we so basically our style.
+
+15:56.000 --> 16:05.000
+How we got there was helpful so we were not attacking but rather helping we were not demanding but rather explaining right so.
+
+16:05.000 --> 16:16.000
+And coming up is a better argument are ultimately that helped to get there and I think this is also learning for the Free Software ecosystem or for people out there in general.
+
+16:16.000 --> 16:28.000
+So a draft could be changed a draft will be changed and if you have good arguments it will be changed in a way that they follow your arguments and this is I do believe also good learning.
+
+16:28.000 --> 16:42.000
+And this is why if I may say this here why you should donate to the FSFE that I and also my colleagues can do the work so that we have the chance to go to process to go to meetings with the commission.
+
+16:42.000 --> 16:53.000
+This decision makers but also the European Parliament while the parliament had a lot to come up is a good legal text that the commission then can up is this good guidance so that we can navigate through these processes.
+
+16:53.000 --> 17:08.000
+This is possible due to the donations of the people that's yeah donate to the FSFE that ultimately pay our travel costs make this possible that we can take part in these processes and do believe the cyber resilience act.
+
+17:08.000 --> 17:20.000
+Another good example of why it's so important that we are around and yeah taking part in these processes just in the last episode we talked about the radio equipment director for smacks another example.
+
+17:20.000 --> 17:26.000
+So I think we can pretty much showcase why it's important that we do what we do.
+
+17:26.000 --> 17:45.000
+And just like very briefly before the podcast recording I did another dive into the cyber resilience act and I found on the Wikipedia article that you are linked there you're like one of the experts linked on the public page say talking about regulation.
+
+17:45.000 --> 18:04.000
+Yeah, yeah and the fun thing is you're also just shared this just before the recording with me and so I wasn't aware neither and the interesting thing is so it is from a hearing in the parliament from 2023 right so three years ago I formulated some criteria.
+
+18:04.000 --> 18:20.000
+How these are resilience act need to be modified in order to make sure that it's fostering cybersecurity and not harming the Free Software ecosystem and addressing basically all the like most of these problems have been addressed there.
+
+18:20.000 --> 18:48.000
+Still we are in the implementation so it's not everything is final now it's still a draft guidance so nothing is written into stone at the moment but yeah basically I think this is pretty much shows yeah our journey from commission draft going to the parliament now working again with the European Commission in between coming up the service where we collaborated with several stakeholders foundations and projects.
+
+18:48.000 --> 19:17.000
+Our first time talks and so on and so forth and yeah so the Wikipedia I think it reminded me of like how everything started because like even when I was in the parliament that's not the position of Alexander Sander right so presenting this to the parliament no I was talking to other stakeholders before I was talking to our community before how we need to change things and then presenting this in the parliament and basically seeing a couple of years later how we were able to change basically this based on.
+
+19:18.000 --> 19:39.000
+What I was saying there I think this is this feels really good based on that are there things that you are and obviously also our community our listeners think should still be addressed and open questions that need to be answered in the future.
+
+19:39.000 --> 20:06.000
+As we obviously did a very good job there, so there's still I think one major question or like a legal block in front of us which needs to be addressed so we now have the guidance which is talking about the roles right so the two world role the manufacturer role when you are out of scope of what's happening with the nation so on and so forth but also there is the article 25 in the several students act which is talking about attestation so to say.
+
+20:06.000 --> 20:35.000
+And attestation will be covered in a delegated act to make it very quick there is not really any proposal out there at the moment, so everything is basically a blank paper, and we have some ideas we were also running a survey on this which was running out by the end of the month February still you can also send us emails or try to reach us on any channel you might imagine that works out ultimately to share ideas.
+
+20:36.000 --> 21:05.000
+On how this attestation could look like and this is basically another regime which will be introduced on how to bring in Free Software components into products so on the one time you have to do it so the store is fulfilling the obligations working together with the manufacturer trying to make sure that the Free Software you have is secure in the product ultimately but there might be another way which is the so-called attestation and here it's unclear how to do it.
+
+21:06.000 --> 21:33.000
+To get there so an idea could be that you are as a manufacturer go to a website by a subscription model and then you get all the Free Software components that you need to integrate them in your product and the subscription fee is then distributed among those project that's end up in this product so that they can make sure they have a CIA ready product so to say.
+
+21:33.000 --> 21:55.000
+So imagine you have a Free Software you put it on good luck and then you want others that they can integrate it in their product but you do not really want to have a relationship with them so you just say I'm fulfilling the obligations from the cyber resilience act I'm CIA ready so you can just grab it put it in your product and go.
+
+21:55.000 --> 22:12.000
+For this there needs to be a mechanism that you are compensated for this right so and that's a question how to organize this I think it's a it's an easy thing for foundations to get there but what about projects that are not organized in foundations that are not willing to share.
+
+22:12.000 --> 22:35.000
+Share to join foundations how can they do this and how can they best be compensated, so my idea would be that we need to have a like a man in the middle heart that is organizing basically the yeah you have a manufacturer that is willing to pay a certain amount of money and on the other hand you have this developer.
+
+22:35.000 --> 23:04.000
+And then you need to channel money from one entity to another entity and you need something in someone in between who is making sure that this money is distributed in a way that it's fair and reasonable so that could be a way there might be other ways and for this yeah said we came up with a survey but also since the service already closed is to share your ideas with us, we will take this into considerations and ultimately and that's why it's so important.
+
+23:04.000 --> 23:23.000
+The European Commission will come up with a delegated act to organize this so to say how this attestation yeah we work out in the future so and this means whatever we contribute and explain to the commission and tell them how is something like this could look like.
+
+
+23:24.000 --> 23:45.000
+And also I do believe that there might be several ideas at the same time so that it's, so I hope that then will not only be one way to do this attestation but maybe several ways yeah so the more we know and the more we see the more we can feedback towards the commission that they will then come up with a good delegated act that is helping us.
+
+23:46.000 --> 24:03.000
+This is upcoming we can influence it we can bring in our ideas the commission is open I do believe we see this with the draft guidance so the more and the better ideas we have the more likely it is that they will end up in this delegated act, so please share your ideas with us.
+
+24:04.000 --> 24:18.000
+And the attestation is then basically just to have like one sentence for this another way of bringing Free Software to the market without being liable and in a way as manufacturers are.
+
+24:18.000 --> 24:19.000
+Precisely so basically what you want I think is it is an easy way for the manufacturer to just like go to your project use it put it in the product and the question is how to get there so and how the then still make sure that you get money for this so that you get compensated so because I do believe I mean if you want to do this for free then it's not a question of at all so then just do this but I do believe that if you do this so if you make it
+
+24:48.000 --> 25:17.000
+your project for example CIA ready let's put it in brackets this term right then you should be compensated for this and I think that's the main question is how to get to this kind of compensation that it's fair that it's reasonable that you are not being put under pressure by the manufacturer or any other market actors so but that you can focus on doing your Free Software and not focusing on some obligations or how do I need to answer emails or do I need a marketing person do I need the lawyer.
+
+25:17.000 --> 25:46.000
+So what do I need in order to do my Free Software right so we want you to do your Free Software and that's the thing you should care about and for us the question is how do you organize everything around it so that you can do your Free Software and that you are not bothered with legal text that you are not bothered with ununderstandably emails or that you are put under pressure because someone is saying you have to do this so and yeah that's basically our goal in this.
+
+25:47.000 --> 26:09.000
+We want to protect you individual developers but also make sure that if you want to take part if you contribute that you are also compensated for this or that you have the chance to get compensated so if you do not want to be compensated also fine but if you want to be compensated then there should be ways for you that be channel money from the manufacturers towards these Free Software projects because I think that would be fair.
+
+26:09.000 --> 26:24.000
+It's a very strong sentence I have nothing more to add to that and I find it such a very positive outlook so yeah I take this as a close sentence otherwise if you have something to say then it's your chance now.
+
+26:24.000 --> 26:33.000
+Now take part please share everything you have so that's I think that's a core message and yeah we will try to make this happen.
+
+26:33.000 --> 26:43.000
+Perfect, thank you so much Alex thank you so much for the time walking us once again through the car and the still open questions around it.
+
+26:43.000 --> 26:45.000
+Thank you very much.
+
+26:45.000 --> 27:02.000
+Thanks for having me and yeah enjoy the recordings you might find on Wikipedia as well as on our latest blog pod on the Q&amp;A  session, so maybe this one will be also ending up in the Wikipedia soon since I think it's a very good session.
+
+27:02.000 --> 27:12.000
+Yeah how many of these questions are already addressed so feel free to watch this read our resources and yeah thanks a lot Bonnie for having me again.
+
+27:12.000 --> 27:16.000
+Thank you bye bye Alex.
+
+27:16.000 --> 27:23.000
+This was the software freedom podcast if you liked this episode please recommend it to your friends and rate it.
+
+27:23.000 --> 27:30.000
+Stay tuned for more inspiring conversations that explore the importance of software freedom and its impact on our digital lives.
+
+27:30.000 --> 27:38.000
+This podcast is presented to you by the Free Software foundation Europe we are a charity that works on promoting software freedom.
+
+27:38.000 --> 27:45.000
+If you like our work as Alex said please consider supporting us for donation.
+
+27:45.000 --> 27:53.000
+You find more information under fsfe.org slash donate thank you so much bye bye.
+
+28:00.000 --> 28:07.000
+Thank you.
+
+
+</div>
+
+</pre>
+
+<p><a href="/news/podcast/2026/episode-48.html">Back to the episode SFP#48</a></p>
+
+</body>
+<sidebar promo="our-work">
+
+</sidebar>
+  
+</html>

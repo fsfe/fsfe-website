@@ -48,8 +48,8 @@
     <image small="data/pictures/tshirt-cool-kids-2-small.webp" large="data/pictures/tshirt-cool-kids-2-large.webp"/>
   </item>
   <item type="slimfit" id="slimfit-cool-kids" price="25.00" date="2026-01-27">
-    <available size="XS" a="41.5" b="57.5"/>
-    <available size="S" a="42.5" b="59.5"/>
+    <!-- available size="XS" a="41.5" b="57.5"/ -->
+    <!-- available size="S" a="42.5" b="59.5"/ -->
     <available size="M" a="46.5" b="62.5"/>
     <available size="L" a="49" b="63"/>
     <available size="XL" a="50.5" b="64.5"/>
@@ -80,15 +80,15 @@
     <available size="XL" a="55" b="75"/>
     <available size="XXL" a="57" b="77"/>
     <available size="3XL" a="65" b="79"/>
-    <available size="4XL" a="70" b="82"/>
+    <!-- available size="4XL" a="70" b="82"/ -->
     <image small="data/pictures/tshirt-H4F-front-small.webp" large="data/pictures/tshirt-H4F-front-large.webp"/>
     <image small="data/pictures/tshirt-H4F-back-small.webp" large="data/pictures/tshirt-H4F-back-large.webp"/>
   </item>
   <item type="tshirt" id="tshirt-nocloud-petrol" price="25.00" date="2024-01-12">
     <!-- available size="XS" a="48" b="68"/ -->
-    <available size="S" a="50" b="70"/>
+    <!-- available size="S" a="50" b="70"/ -->
     <available size="M" a="53" b="70"/>
-    <available size="L" a="57" b="72"/>
+    <!-- available size="L" a="57" b="72"/ -->
     <available size="XL" a="55" b="75"/>
     <available size="XXL" a="57" b="77"/>
     <available size="3XL" a="70" b="82"/>

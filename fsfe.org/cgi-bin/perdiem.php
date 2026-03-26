@@ -246,7 +246,7 @@ foreach ($use as $d => $day) {  // calculate for each day
         if ('yes' === $break[$d] && 'yes' === $lunch[$d] && 'yes' === $dinner[$d]) {
             $remarks[$d] = 'everything';
         }
-        $remarks[$d] = preg_replace('/ \+$/', '', $remarks[$d]);
+        $remarks[$d] = preg_replace('/\ \+$/', '', $remarks[$d]);
         $remarks[$d] .= ' self-paid';
 
         // HTML output for this day

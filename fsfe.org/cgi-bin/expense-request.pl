@@ -28,6 +28,7 @@ use POSIX qw(strftime);
 my %names = (
   "alex.sander" => "Alexander Sander",
   "anaghz" => "Ana Galán",
+  "annarita.russo" => "Anna Rita Russo",
   "bcludts" => "Ben Cludts",
   "bonnie" => "Bonnie Mehring",
   "carmenbianca" => "Carmen Bianca Bakker",

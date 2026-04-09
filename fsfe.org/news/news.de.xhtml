@@ -1,22 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <html>
-  <version>3</version>
+  <version>4</version>
 
   <head>
     <title>Nachrichten</title>
   </head>
 
-  <body class="toplevel article">
+  <body class="toplevel news-index ltr">
     <h1>Nachrichten</h1>
 
-    <p class="inline-buttons news-follow-us">Folge uns:
-      <span class="share-buttons">
-        <a class="button share-mail" href="/news/newsletter.html">Newsletter</a>
-        <a class="button share-rss" href="/news/news.rss">RSS-Feed</a>
-        <a target="_blank" class="button share-mastodon" href="https://mastodon.social/@fsfe">Mastodon</a>
-        <a target="_blank" class="button share-twitter" href="https://twitter.com/fsfe">Twitter</a>
-      </span>
-    </p>
+    <div id="introduction">
+      <p>
+        Die Free Software Foundation Europe unterstützt durch ihre <a href="/activities/">vielfältige Aktivitäten</a> und ihr Engagement für <a href="/freesoftware/">Software Freiheit</a> Menschen im selbstbestimmten Umgang mit Technik. Über die hier gelisteten Kanäle können Updates und tiefere Einblicke zu unserer Arbeit empfangen werden. 
+      </p>
+    </div>
+
+    <div class="module-wrapper news">
+      <module id="follow-news"/>
+      <module id="social-media"/>
+      <module id="banner-subscribe"/>
+    </div>
 
     <include-news/>
 
@@ -27,14 +30,6 @@
     </p>
   </body>
 
-  <sidebar promo="none">
-    <div class="news-sidebar">
-      <module id="follow-news"/>
-      <module id="social-media"/>
-      <hr/>
-      <module id="video-supporter"/>
-    </div>
-  </sidebar>
-
-  <translator>Michael Weimann</translator>
+  <banner1><module id="banner-subscribe"/></banner1>
+  <banner2><module id="banner-become-supporter"/></banner2>
 </html>

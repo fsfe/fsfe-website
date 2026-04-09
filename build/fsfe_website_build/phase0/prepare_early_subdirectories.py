@@ -30,9 +30,9 @@ def prepare_early_subdirectories(
         sys.path.append(early_subdir_path_resolved)
         # Ignore this very sensible warning, as we do evil things
         # here for out subdir scripts
-        import early_subdir  # noqa: PLC0415 # type: ignore # pyright: ignore [reportUnknownMemberType]
+        import early_subdir  # noqa: PLC0415 # type: ignore
 
-        early_subdir.run(  # pyright: ignore [reportUnknownMemberType]
+        early_subdir.run(
             global_build_config.source, global_build_config.processes, subdir_path
         )
         # Remove its path from where things can be imported

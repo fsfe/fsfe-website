@@ -13,12 +13,12 @@ $csv = [['Employee number', 'Employee name', 'Date', 'Amount (EUR)', 'Recipient 
 $csvfile = tmpfile();
 $csvfile_path = stream_get_meta_data($csvfile)['uri'];
 
-$who = isset($_POST['who']) ? $_POST['who'] : false;
-$type = isset($_POST['type']) ? $_POST['type'] : false;
-$rc_month = isset($_POST['rc_month']) ? $_POST['rc_month'] : false;
-$rc_year = isset($_POST['rc_year']) ? $_POST['rc_year'] : false;
-$cc_month = isset($_POST['cc_month']) ? $_POST['cc_month'] : false;
-$cc_year = isset($_POST['cc_year']) ? $_POST['cc_year'] : false;
+$who = isset($_POST['who']) ? htmlspecialchars($_POST['who']) : false;
+$type = isset($_POST['type']) ? htmlspecialchars($_POST['type']) : false;
+$rc_month = isset($_POST['rc_month']) ? htmlspecialchars($_POST['rc_month']) : false;
+$rc_year = isset($_POST['rc_year']) ? htmlspecialchars($_POST['rc_year']) : false;
+$cc_month = isset($_POST['cc_month']) ? htmlspecialchars($_POST['cc_month']) : false;
+$cc_year = isset($_POST['cc_year']) ? htmlspecialchars($_POST['cc_year']) : false;
 $entry = isset($_POST['entry']) ? $_POST['entry'] : false; // will become $date in loop
 $amount = isset($_POST['amount']) ? $_POST['amount'] : false;
 $recipient = isset($_POST['recipient']) ? $_POST['recipient'] : false;
@@ -27,7 +27,7 @@ $category = isset($_POST['category']) ? $_POST['category'] : false;
 $receipt = isset($_POST['receipt']) ? $_POST['receipt'] : false;
 $description = isset($_POST['description']) ? $_POST['description'] : false;
 $event = isset($_POST['event']) ? $_POST['event'] : false;
-$extra = isset($_POST['extra']) ? $_POST['extra'] : false;
+$extra = isset($_POST['extra']) ? htmlspecialchars($_POST['extra']) : false;
 $mailopt = isset($_POST['mailopt']) ? $_POST['mailopt'] : false;
 
 // create empty arrays for uploaded file

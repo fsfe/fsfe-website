@@ -1,0 +1,1751 @@
+WEBVTT
+
+00:00.000 --> 00:16.600
+Hello and welcome to the Software Freedom Podcast.
+
+00:16.600 --> 00:20.600
+This podcast is brought to you by the Free Software Foundation Europe.
+
+00:20.600 --> 00:25.600
+We are a charity that empowers users to control technology and I'm Bonnie Mehring.
+
+00:25.600 --> 00:29.400
+Today I'm here with Dr. Lucas Lasota from...
+
+00:29.400 --> 00:31.400
+I'm trying to pronounce the correct, okay?
+
+00:31.400 --> 00:38.200
+The Chest Transition Center of the Martin Luther University of Halle, Wittenberg.
+
+00:38.200 --> 00:42.600
+Lucas is also in part-time working for the free Software Foundation Europe.
+
+00:42.600 --> 00:44.600
+So we are also co-workers.
+
+00:44.600 --> 00:46.200
+Yeah, thank you so much Lucas for making it.
+
+00:46.200 --> 00:50.600
+Thank you so much for being here and yeah, taking the time at Foster.
+
+00:50.600 --> 00:53.000
+It's a great pleasure to be here and I thank you very much, Bonnie.
+
+00:53.000 --> 00:55.200
+It has been a pleasure here.
+
+00:55.200 --> 00:58.600
+All right, how are you and how has Foster been so far?
+
+00:58.600 --> 01:05.000
+Well, I think you can guess from my voice that Foster is always like that.
+
+01:05.000 --> 01:12.400
+Very intensive, almost overwhelming, but very inspiring and very energizing.
+
+01:12.400 --> 01:18.400
+And it gives us this energy to keep going for software freedom for the entire year.
+
+01:18.400 --> 01:23.600
+I can imagine, I can imagine, it gives you a bit of a blast, but it's also like really exhausting at the same time.
+
+01:23.600 --> 01:27.000
+I have to take some days after Foster for sure.
+
+01:27.000 --> 01:31.200
+Well, I'll highlight so far like anything that you think, oh, this was really inspiring.
+
+01:31.200 --> 01:35.200
+This is the thing that will give me some energy boost for the next weeks.
+
+01:35.200 --> 01:42.800
+So, as you know, at the university and at FSFE, I mainly work with policy and legal issues.
+
+01:43.000 --> 01:48.400
+And during the whole year, these issues are very emotionally demanding, if you will,
+
+01:48.400 --> 01:51.400
+because you are always dealing with problems.
+
+01:51.400 --> 01:59.000
+Well, if people don't have problems, then we don't need the law and regulation on relation to problems.
+
+01:59.000 --> 02:05.600
+And during the entire year, you get accustomed to the challenge all the time.
+
+02:05.600 --> 02:11.400
+Now we are involved with platform regulation, Apple, Google, Microsoft.
+
+02:11.400 --> 02:14.200
+There's a lot of challenges for free and open source software.
+
+02:14.200 --> 02:17.000
+But here in Foster, you see the power of the community.
+
+02:17.000 --> 02:19.000
+And you see this thousand of developers.
+
+02:19.000 --> 02:25.000
+And you see their engagement, you see their excitement to produce alternatives
+
+02:25.000 --> 02:29.600
+to allow people to control technology, you know, to put forward software freedom.
+
+02:29.600 --> 02:36.600
+So I think my highlight to Foster is this energy boost that helps me keeping with my legal and policy work for the rest of the year.
+
+02:36.600 --> 02:39.000
+I can't imagine, I can't imagine.
+
+02:39.000 --> 02:45.000
+If so many people come together, there's like this energy that is accelerating between all of them.
+
+02:45.000 --> 02:47.600
+And it's like, yeah, it's amazing.
+
+02:47.600 --> 02:51.200
+I think for anyone based in Europe, even outside Europe,
+
+02:51.200 --> 02:57.800
+if you have the privilege and to visit Foster, I think even from anthropological point of view,
+
+02:57.800 --> 03:02.000
+I think it is a very, yeah, very rewarding experience.
+
+03:02.000 --> 03:06.600
+Again, imagine, but today, even so I would love to continue this conversation.
+
+03:06.600 --> 03:12.200
+We won't be talking about Foster, but we will be talking about the question,
+
+03:12.200 --> 03:23.200
+can the Digital Markets Act help to protect Free Software developers working with the Android Open Source project in short AOSP?
+
+03:23.200 --> 03:24.200
+Right?
+
+03:24.200 --> 03:28.000
+Yes. It's a very difficult question and happy to discuss with you today.
+
+03:28.000 --> 03:33.200
+I'm also happy and I will, I'm really looking forward to find out what you think about it.
+
+03:33.200 --> 03:42.000
+Before we dive into the topic, can you vary briefly outline your connection to the Digital Markets Act and how you came in contact with this?
+
+03:42.000 --> 03:47.400
+Yes. So a primer about this, why we're talking so much about this law.
+
+03:47.400 --> 03:52.600
+And if anyone goes to FSFE.org and go to the search function and put Digital Markets Act,
+
+03:52.600 --> 03:56.000
+you're going to see a lot of this stuff being published on this.
+
+03:56.000 --> 04:09.600
+Because we do think this is a very important regulation that can push to the adoption of free and open source software in critical aspects of our mobile devices,
+
+04:09.600 --> 04:16.600
+especially in relation to alternative app stores, browsers, search engines, operating systems.
+
+04:16.600 --> 04:21.000
+And because the main goal of this law, and this is an European Union law,
+
+04:21.000 --> 04:26.000
+that came into force in 2024, is to promote more competition in digital markets.
+
+04:26.000 --> 04:28.600
+That's why Digital Markets Act, you know.
+
+04:28.600 --> 04:40.400
+And the situation with the Drupal Apple slash Google over mobile ecosystems has been so intense and so entrenched that the regulators in Europe said
+
+04:40.400 --> 04:47.000
+we need to do something about it, we need to inject more competition in their markets and we need desperately for alternatives.
+
+04:47.000 --> 04:53.600
+And look, Bonnie, yesterday I was in a very nice talk from our colleague who is listening to this podcast.
+
+04:53.600 --> 04:58.600
+I highly suggest going to the Boston website and search for Gabriel Ku Wei Bin.
+
+04:58.600 --> 05:02.600
+And he gave a primer on the legal aspects of free and open source software.
+
+05:02.600 --> 05:10.000
+And he also gave us a historical, very short historical development of the movement from the legal perspective.
+
+05:10.000 --> 05:17.000
+And copyright establishes a monopoly when someone creates a creative work.
+
+05:17.000 --> 05:19.600
+So think about a book, think about software, a music.
+
+05:19.600 --> 05:22.000
+The creator has a monopoly over that work.
+
+05:22.000 --> 05:26.000
+Sometimes it's good, you know, because you wanted to have control about the work that you have.
+
+05:26.000 --> 05:30.600
+But sometimes this monopoly can be overstated, you know.
+
+05:30.600 --> 05:37.400
+And the main core of the Free Software movement was to disintermediate this monopolies.
+
+05:37.600 --> 05:40.600
+Then that's why we created a copy left.
+
+05:40.600 --> 05:46.800
+So the Free Software licenses is a medium to disintermediated monopoly over software.
+
+05:46.800 --> 05:49.400
+And we have been doing this for 40 years, right?
+
+05:49.400 --> 05:54.800
+And therefore this law that came in 2024 is just a next step on this fight.
+
+05:54.800 --> 05:57.600
+It's just a next step on this type of work.
+
+05:57.600 --> 06:03.000
+We are not concerning with copyright only, but we are concerning now with platform regulation.
+
+06:03.000 --> 06:05.200
+We are concerned about digital markets, right?
+
+06:05.200 --> 06:14.800
+And therefore this law is a trench where the FSFE and anyone that cares about Free Software should be involved.
+
+06:14.800 --> 06:20.800
+Because we really want to allow people to control technology, to control our mobile devices.
+
+06:20.800 --> 06:27.800
+And sometimes it's not possible without regulation because the situation becomes so disadvantages for Free Software developers,
+
+06:27.800 --> 06:32.200
+even for end user customers, not customers, I'm sorry, end users, right?
+
+06:32.200 --> 06:33.800
+Thank you.
+
+06:33.800 --> 06:37.800
+That without regulation we cannot do anything more about it, you know.
+
+06:37.800 --> 06:41.800
+Was this what you were thinking like when you were at the DMA, you were like,
+
+06:41.800 --> 06:49.200
+oh, this will be an next step to help end users to be more empowered.
+
+06:49.200 --> 06:55.400
+And that monopolies are not that much in the, in the power of controlling everything.
+
+06:55.400 --> 06:58.400
+Was this what you were thinking like when you read it?
+
+06:58.400 --> 07:01.400
+Yeah, that's a very good summary, yes.
+
+07:01.400 --> 07:02.400
+How did you feel about this?
+
+07:02.400 --> 07:07.400
+Were you like really inspired or were you like, I hope that this works out?
+
+07:07.400 --> 07:09.400
+Well, that's a very good question.
+
+07:09.400 --> 07:18.400
+I mean, when I jump out the bed every day, I think I have to think, well, this will go on our workout.
+
+07:18.400 --> 07:20.400
+Well, I hope it will work out.
+
+07:20.400 --> 07:26.400
+But this brings me to the question because we already touched a bit on the monopoly side.
+
+07:26.400 --> 07:33.400
+So it's now over 20 years ago that Google acquired the Android open source project, right?
+
+07:33.400 --> 07:40.400
+And your work of the University of Halle-Wittenberg, you did also study on Google
+
+07:40.400 --> 07:46.400
+and especially the policy shift in regard to AOSP.
+
+07:46.400 --> 07:53.400
+So in the study, you wrote the AOSP has served as a baseline not only for diverse commercial versions
+
+07:53.400 --> 08:02.400
+of Android-based operating systems, but also for alternative, non-profit community-driven versions of operating systems.
+
+08:02.400 --> 08:09.400
+Can you walk me through what happened like before Google took this policy shift in 2025
+
+08:09.400 --> 08:16.400
+and yeah, how Google has seen or how Google's role as a gatekeeper to be precise?
+
+08:17.400 --> 08:23.400
+Yeah, so just about some organizational aspects about this study before we move forward,
+
+08:23.400 --> 08:25.400
+this study has not been published yet.
+
+08:25.400 --> 08:28.400
+So we submitted this study to a publication in a legal journal.
+
+08:28.400 --> 08:30.400
+So this study has not been published.
+
+08:30.400 --> 08:35.400
+What we have is a working version that we already discussed in a conference.
+
+08:35.400 --> 08:40.400
+And this version that you have access is an internal one that we shared on this conference.
+
+08:40.400 --> 08:43.400
+And I'm happy to discuss this working version that you have.
+
+08:44.400 --> 08:47.400
+But this is not the official version that will be published yet,
+
+08:47.400 --> 08:52.400
+because we are waiting for the feedback of the peer review that we submitted.
+
+08:52.400 --> 09:00.400
+But I would like you to provide just a context on this study and why this is important work that we have been doing.
+
+09:00.400 --> 09:08.400
+Because in the last three years, my research work and also my work at the FSFE has been dealing with Apple.
+
+09:08.400 --> 09:13.400
+Apple has taken a very aggressive approach against this law,
+
+09:13.400 --> 09:18.400
+because this law tries to open up an infrastructure from Apple
+
+09:18.400 --> 09:22.400
+and to allow more competition on App stores, browsers,
+
+09:22.400 --> 09:25.400
+allowing interoperability for Free Software,
+
+09:25.400 --> 09:31.400
+not only for software, but Apple is questioning this whole law
+
+09:31.400 --> 09:34.400
+and saying that this law is in constitutional law,
+
+09:34.400 --> 09:36.400
+you know, it's not proportional.
+
+09:36.400 --> 09:41.400
+But sometimes we forget that there are other companies that this law applies to.
+
+09:41.400 --> 09:46.400
+And one of these companies are Google and other companies are Microsoft, Amazon,
+
+09:46.400 --> 09:48.400
+looking at their others.
+
+09:48.400 --> 09:56.400
+But the problem with Google is that how Google relates to this law is a little bit more nuanced than Apple.
+
+09:56.400 --> 10:00.400
+Apple has a very strong adversarial position against this law.
+
+10:00.400 --> 10:04.400
+But Google, since, as you already mentioned, in the beginning of this podcast,
+
+10:04.400 --> 10:08.400
+Google is responsible for the Android open source project.
+
+10:08.400 --> 10:13.400
+And Android open source project is a fundamental part of the Android operating system.
+
+10:13.400 --> 10:23.400
+And the Android operating system is the most popular and the most used operating system in the world, you know, by far, you know.
+
+10:23.400 --> 10:25.400
+And...
+
+10:25.400 --> 10:27.400
+You mean like on smartphone?
+
+10:27.400 --> 10:28.400
+Yeah.
+
+10:28.400 --> 10:29.400
+In mobile devices, right?
+
+10:29.400 --> 10:36.400
+So comes Android in the first place, then iOS in the second place and together, together,
+
+10:36.400 --> 10:42.400
+they have more than 99% of the entire market of mobile operating systems.
+
+10:42.400 --> 10:45.400
+We, of course, know we are from the Free Software community.
+
+10:45.400 --> 10:49.400
+We know that there are many others, alternatives, operating systems,
+
+10:49.400 --> 10:53.400
+that the Android base are not Android boys, they're the Linux phones, several of them.
+
+10:53.400 --> 10:57.400
+You know, but their part on the market are very thin, you know,
+
+10:57.400 --> 10:59.400
+that's less than 1%, unfortunately.
+
+10:59.400 --> 11:01.400
+And we want to change that.
+
+11:01.400 --> 11:04.400
+But today's topic is about Android.
+
+11:04.400 --> 11:08.400
+Perhaps we can do a podcast in the future about Linux phones.
+
+11:08.400 --> 11:10.400
+We did one. We did one in the past.
+
+11:10.400 --> 11:11.400
+I will link it on the show notes.
+
+11:11.400 --> 11:12.400
+Oh, that's a great, yeah.
+
+11:12.400 --> 11:14.400
+But we did one in the past.
+
+11:14.400 --> 11:15.400
+That's super cool.
+
+11:15.400 --> 11:16.400
+But...
+
+11:16.400 --> 11:19.400
+And Android, as you said, right?
+
+11:19.400 --> 11:20.400
+I would like to...
+
+11:20.400 --> 11:25.400
+Well, I'm old enough to remember 2007 the expectations we had.
+
+11:25.400 --> 11:31.400
+And Android, when Android came into the market, it was a blast, I remember.
+
+11:31.400 --> 11:34.400
+Everyone would like to have an Android phone.
+
+11:34.400 --> 11:38.400
+Because before that we were having kind of smartphones,
+
+11:38.400 --> 11:41.400
+but the smartphones, they were very limited in their capacity
+
+11:41.400 --> 11:45.400
+because they pre-installed apps just from the manufacturer.
+
+11:45.400 --> 11:49.400
+And Android came with this promise, you know, with this potential
+
+11:49.400 --> 11:54.400
+that you could install any software that you would like on your phone via the app store.
+
+11:54.400 --> 11:59.400
+And this would turn your smartphone as truly a general-purpose computer,
+
+11:59.400 --> 12:03.400
+you know, and you would have these awesome apps that you don't have in your PC
+
+12:03.400 --> 12:07.400
+because, well, the smartphone comes with other hardware functionalities.
+
+12:07.400 --> 12:10.400
+There's a camera, there's telemetry, there's a microphone,
+
+12:10.400 --> 12:16.400
+and you could bring software to a whole other level of experience and functionalities.
+
+12:16.400 --> 12:17.400
+And...
+
+12:17.400 --> 12:20.400
+I never looked at a smartphone like this,
+
+12:20.400 --> 12:23.400
+and now I feel like, oh, yeah, this is how I felt when I came in.
+
+12:23.400 --> 12:26.400
+That's how I felt when I got my first smartphone.
+
+12:26.400 --> 12:28.400
+Now everybody knows that I'm a bit older.
+
+12:28.400 --> 12:29.400
+Right.
+
+12:29.400 --> 12:39.400
+And I think Google understood the power of opening up their infrastructure
+
+12:39.400 --> 12:42.400
+to these type of contributions.
+
+12:42.400 --> 12:47.400
+Academically speaking, on a little bit more on the theoretical speaking,
+
+12:47.400 --> 12:51.400
+this strategic move has a name for it.
+
+12:51.400 --> 12:54.400
+It's called the power of the network effects.
+
+12:54.400 --> 12:57.400
+And what is the network effects?
+
+12:57.400 --> 13:02.400
+It means that any network, the value of this network,
+
+13:02.400 --> 13:06.400
+increase proportionally to the size of this network.
+
+13:06.400 --> 13:10.400
+So the bigger the network is, the more value it has.
+
+13:10.400 --> 13:14.400
+And that's why today, both Apple and Google,
+
+13:14.400 --> 13:18.400
+they don't want to lose control over their app stores
+
+13:18.400 --> 13:23.400
+because the app stores now it's a huge network of apps.
+
+13:23.400 --> 13:26.400
+And this network brings a lot of money to them.
+
+13:26.400 --> 13:31.400
+But aside from this, what really disrupt the market,
+
+13:31.400 --> 13:34.400
+in the end of the first decade of 2000s,
+
+13:34.400 --> 13:37.400
+we were talking about 2007 here, right,
+
+13:37.400 --> 13:42.400
+was when they opened up their infrastructure for apps,
+
+13:42.400 --> 13:45.400
+this disrupt completely the market,
+
+13:45.400 --> 13:48.400
+the dispute out of the market.
+
+13:48.400 --> 13:51.400
+Symbian, Nokia, they put out the palm.
+
+13:51.400 --> 13:54.400
+Remember palm, palm was super chic.
+
+13:54.400 --> 13:56.400
+So you're very young.
+
+13:56.400 --> 13:59.400
+No, I feel young again.
+
+13:59.400 --> 14:04.400
+But palm devices were the crème de la crème in the past.
+
+14:04.400 --> 14:09.400
+And they disrupted it.
+
+14:09.400 --> 14:12.400
+Now they're in museums.
+
+14:12.400 --> 14:15.400
+So Apple followed this,
+
+14:15.400 --> 14:19.400
+and they also opened up their infrastructure
+
+14:19.400 --> 14:21.400
+for external contributors.
+
+14:21.400 --> 14:26.400
+So the first version of the iPhone came without an app store.
+
+14:26.400 --> 14:29.400
+And there was what the first app store was,
+
+14:29.400 --> 14:31.400
+a free and open source one called CD.
+
+14:31.400 --> 14:33.400
+You could not install apps on it.
+
+14:33.400 --> 14:36.400
+No, no, the first version of the iPhone was completely closed
+
+14:36.400 --> 14:39.400
+and it came only with pre-installed apps.
+
+14:39.400 --> 14:42.400
+The first app store was a CD was a free and open source software.
+
+14:42.400 --> 14:46.400
+And two years later I don't know,
+
+14:46.400 --> 14:50.400
+Apple changed the operating system in order to block CD.
+
+14:50.400 --> 14:54.400
+And now the only way to install external software
+
+14:54.400 --> 14:57.400
+on smartphones were via their own app store.
+
+14:57.400 --> 15:01.400
+So the control over app stores already has a long history,
+
+15:01.400 --> 15:03.400
+a very long history.
+
+15:03.400 --> 15:06.400
+So why am I saying all of this?
+
+15:06.400 --> 15:09.400
+Because Google did one step further
+
+15:09.400 --> 15:11.400
+to not only open the app store,
+
+15:11.400 --> 15:14.400
+but to open the entire operating system.
+
+15:14.400 --> 15:17.400
+So they opened the operating system to free and open source.
+
+15:17.400 --> 15:20.400
+So Android, it is, well, at least, you know,
+
+15:20.400 --> 15:23.400
+parts of it, a free and open source project.
+
+15:23.400 --> 15:26.400
+There is one, which is licensed into the app 82.
+
+15:26.400 --> 15:31.400
+But the history doesn't end there, you know.
+
+15:31.400 --> 15:33.400
+And it would be very easy to say,
+
+15:33.400 --> 15:38.400
+yes, we have the most successful free and open source project of all time
+
+15:38.400 --> 15:41.400
+because billions of people are using it.
+
+15:41.400 --> 15:44.400
+But the history unfortunately doesn't end there.
+
+15:44.400 --> 15:50.400
+And Google has excerpt control over iOSP in different forms,
+
+15:50.400 --> 15:53.400
+not only via the licensing aspect.
+
+15:53.400 --> 15:55.400
+And we can talk about this.
+
+15:55.400 --> 16:01.400
+How to control iOSP in a way that would hinder software freedom
+
+16:02.400 --> 16:05.400
+to others to exercise this traditional way
+
+16:05.400 --> 16:10.400
+that we see software freedom in such powerful ways
+
+16:10.400 --> 16:15.400
+and anti-competitive ways that in 2018,
+
+16:15.400 --> 16:20.400
+you know, Google got record fines from the commission
+
+16:20.400 --> 16:24.400
+because of this anti-competitive practice.
+
+16:24.400 --> 16:26.400
+I can imagine what was this fine about
+
+16:26.400 --> 16:30.400
+and like what was this EU commission saying there?
+
+16:30.400 --> 16:34.400
+So Google's strategy was a pretty clever one in the beginning
+
+16:34.400 --> 16:36.400
+so they open up the platform.
+
+16:36.400 --> 16:40.400
+And then suddenly, you know, if you were a manufacturer,
+
+16:40.400 --> 16:43.400
+if you were a smart one manufacturer,
+
+16:43.400 --> 16:48.400
+then you could adapt the functionalities
+
+16:48.400 --> 16:51.400
+of your devices to the operating system.
+
+16:51.400 --> 16:55.400
+And this was something truly revolutionary, you know.
+
+16:55.400 --> 16:59.400
+Because manufacturers, they always have the problem of
+
+16:59.400 --> 17:01.400
+the chicken and egg, you know.
+
+17:01.400 --> 17:03.400
+If you want a successful device,
+
+17:03.400 --> 17:06.400
+you need this operating system for it.
+
+17:06.400 --> 17:09.400
+But then, in order to have an operating system,
+
+17:09.400 --> 17:11.400
+you need a device for it.
+
+17:11.400 --> 17:17.400
+Let's put this on a context.
+
+17:17.400 --> 17:21.400
+Recently, I met some folks from risk five.
+
+17:21.400 --> 17:25.400
+Risk five is an open hardware specification for chips
+
+17:25.400 --> 17:30.400
+and they were telling their talks exactly this problem.
+
+17:30.400 --> 17:34.400
+They wanted to find a device that would enable them
+
+17:34.400 --> 17:37.400
+to have risk five, you know,
+
+17:37.400 --> 17:40.400
+and having this open architecture on laptops,
+
+17:40.400 --> 17:43.400
+but then they have to find an operating system for this.
+
+17:43.400 --> 17:46.400
+And so it took several years for them,
+
+17:46.400 --> 17:50.400
+but yeah, Ubuntu agreed and then they found also a device manufacturer.
+
+17:50.400 --> 17:53.400
+But anyway, so let's go back to 2007.
+
+17:53.400 --> 17:55.400
+In 2018.
+
+17:55.400 --> 17:57.400
+No, no, I started with 2008.
+
+17:57.400 --> 17:59.400
+2018 is the fine, right?
+
+17:59.400 --> 18:00.400
+Yes, it is.
+
+18:00.400 --> 18:02.400
+Until we got there.
+
+18:02.400 --> 18:04.400
+So manufacturers were facing this problem.
+
+18:04.400 --> 18:06.400
+You know, and they said, okay.
+
+18:06.400 --> 18:08.400
+Okay, I have this cool device,
+
+18:08.400 --> 18:09.400
+but I need an operating system.
+
+18:09.400 --> 18:13.400
+But the operating system is very expensive to develop.
+
+18:13.400 --> 18:16.400
+You know, think about how many hours of work you need
+
+18:16.400 --> 18:18.400
+to have a cool operating system.
+
+18:18.400 --> 18:19.400
+And then you have apps.
+
+18:19.400 --> 18:20.400
+You need to add the apps.
+
+18:20.400 --> 18:22.400
+And then the apps should run on the operating system.
+
+18:22.400 --> 18:25.400
+And you know, how are we going to do this?
+
+18:25.400 --> 18:29.400
+You know, so Google came with a solution for this.
+
+18:29.400 --> 18:31.400
+And they said, look, we will have Android.
+
+18:31.400 --> 18:35.400
+Android will be open and you will be able to adapt your devices
+
+18:35.400 --> 18:37.400
+to have Android running on it.
+
+18:37.400 --> 18:40.400
+So they really solve this problem
+
+18:40.400 --> 18:43.400
+for many, many, many, many manufacturers.
+
+18:43.400 --> 18:44.400
+You know?
+
+18:44.400 --> 18:46.400
+So manufacturers, okay, cool.
+
+18:46.400 --> 18:50.400
+But then here comes the trick.
+
+18:50.400 --> 18:51.400
+You know?
+
+18:51.400 --> 18:54.400
+And I would like to introduce here in our talk
+
+18:54.400 --> 18:56.400
+how Android is organized.
+
+18:56.400 --> 18:58.400
+The Android stack, right?
+
+18:58.400 --> 19:02.400
+Because the Android stack is where Google exerted it
+
+19:02.400 --> 19:06.400
+and exerced control over OSP until today.
+
+19:06.400 --> 19:07.400
+You know?
+
+19:07.400 --> 19:11.400
+And this also what led the European Commission 2018
+
+19:11.400 --> 19:14.400
+to establish records finds.
+
+19:14.400 --> 19:16.400
+You know, it was really.
+
+19:16.400 --> 19:18.400
+I don't have the, I forgot the numbers.
+
+19:18.400 --> 19:19.400
+But I may be wrong.
+
+19:19.400 --> 19:20.400
+You can check.
+
+19:20.400 --> 19:22.400
+But it was on the billion scale.
+
+19:22.400 --> 19:24.400
+That's quite a lot of money.
+
+19:24.400 --> 19:25.400
+Very.
+
+19:25.400 --> 19:28.400
+Because with this, what I'm going to say right now,
+
+19:28.400 --> 19:33.400
+Google was able to lock in entirely all the manufacturers
+
+19:33.400 --> 19:35.400
+on the Android ecosystem.
+
+19:35.400 --> 19:38.400
+So by opening up the operating system layer
+
+19:38.400 --> 19:41.400
+to free and open source software,
+
+19:41.400 --> 19:45.400
+Google was able to immediately attract millions and millions
+
+19:45.400 --> 19:49.400
+of, you know, the developers that were interested
+
+19:49.400 --> 19:52.400
+into contributing to the platform that was already, you know,
+
+19:52.400 --> 19:53.400
+exploring.
+
+19:53.400 --> 19:55.400
+They said, okay, we're going to be there.
+
+19:55.400 --> 19:58.400
+And they were also able to attract the manufacturers.
+
+19:58.400 --> 20:00.400
+So they were able to bring together.
+
+20:00.400 --> 20:03.400
+And this is what makes a platform good.
+
+20:03.400 --> 20:06.400
+A platform brings different sides together.
+
+20:06.400 --> 20:08.400
+And Google did this with Android.
+
+20:08.400 --> 20:09.400
+Android is a platform.
+
+20:09.400 --> 20:10.400
+Yeah.
+
+20:10.400 --> 20:12.400
+So that other device manufacturers could use Android
+
+20:12.400 --> 20:16.400
+and just use, have a bit of a customized version.
+
+20:16.400 --> 20:18.400
+But they are then also part of this.
+
+20:18.400 --> 20:21.400
+And Google is like there providing the services.
+
+20:21.400 --> 20:22.400
+Yes.
+
+20:22.400 --> 20:23.400
+But here's the trick.
+
+20:23.400 --> 20:27.400
+Because as soon as you license your operating system
+
+20:27.400 --> 20:30.400
+as free and open source software,
+
+20:30.400 --> 20:34.400
+this gives them the permission to market, you know,
+
+20:34.400 --> 20:38.400
+they can market and they can have their own version of it.
+
+20:38.400 --> 20:39.400
+Right?
+
+20:39.400 --> 20:42.400
+And well, we could have.
+
+20:42.400 --> 20:43.400
+Right?
+
+20:43.400 --> 20:46.400
+And I think this is the beauty of free and open source movement.
+
+20:46.400 --> 20:48.400
+We can have, you know, many, many of them.
+
+20:48.400 --> 20:49.400
+Right?
+
+20:49.400 --> 20:53.400
+But then, and this only became clear in 2018.
+
+20:53.400 --> 20:57.400
+Because, you know, it was in 2018, where the world understood
+
+20:57.400 --> 21:02.400
+how Google have this strategy around our speed that, you know,
+
+21:02.400 --> 21:06.400
+that didn't allow alternatives to strive.
+
+21:06.400 --> 21:09.400
+How they have to network and control, basically.
+
+21:09.400 --> 21:10.400
+Yes.
+
+21:10.400 --> 21:16.400
+And so via agreements with manufacturers, side agreements, right?
+
+21:16.400 --> 21:19.400
+So it was not on the license, you know,
+
+21:19.400 --> 21:23.400
+it was side agreements on the compatibility side.
+
+21:23.400 --> 21:27.400
+You know, so Google said, okay, so we wanted to be compatible
+
+21:27.400 --> 21:28.400
+with Android.
+
+21:28.400 --> 21:31.400
+You know, we have to sign this agreement with me, this side agreement.
+
+21:31.400 --> 21:33.400
+So we have the license here on one hand,
+
+21:33.400 --> 21:36.400
+but there is the agreement on the other hand.
+
+21:36.400 --> 21:41.400
+And these agreement, there were clauses forbidding manufacturers
+
+21:41.400 --> 21:43.400
+to fork Android.
+
+21:43.400 --> 21:46.400
+So it was called anti-forking agreements.
+
+21:46.400 --> 21:51.400
+You know, if you are, if you decided to fork Android,
+
+21:51.400 --> 21:56.400
+then you would not be allowed to install the Google suite.
+
+21:56.400 --> 21:58.400
+And what is the Google suite?
+
+21:58.400 --> 22:01.400
+Google suite is their Google Play Store.
+
+22:01.400 --> 22:06.400
+The security aspects of the Play Store, you know,
+
+22:06.400 --> 22:11.400
+and all the apps that Google in the old history has developed
+
+22:11.400 --> 22:16.400
+and has acquired YouTube, Chrome, and many, many other apps
+
+22:16.400 --> 22:20.400
+that people, well, they like to have on their smartphones, you know.
+
+22:20.400 --> 22:22.400
+You mean like the Google services that they...
+
+22:22.400 --> 22:26.400
+The Google services, the Google service, you know.
+
+22:26.400 --> 22:31.400
+And this was a very strong, disincentive
+
+22:31.400 --> 22:34.400
+and very strong threat to manufacturers, you know.
+
+22:34.400 --> 22:41.400
+Otherwise, they would go back pre-2007 when they had to develop
+
+22:41.400 --> 22:44.400
+their own operating system, you know.
+
+22:44.400 --> 22:49.400
+And it's super, super cool.
+
+22:49.400 --> 22:52.400
+I mean, cool in one hand as a researcher to read about it,
+
+22:52.400 --> 22:55.400
+but in other hand, it's very sad.
+
+22:55.400 --> 23:00.400
+But because they were managed to keep basically
+
+23:00.400 --> 23:04.400
+the entire ecosystem of Android manufacturers
+
+23:04.400 --> 23:07.400
+into this very strict locking.
+
+23:07.400 --> 23:10.400
+Until 2018, when the Commission said,
+
+23:10.400 --> 23:14.400
+man, this is super anti-competitive, you know.
+
+23:14.400 --> 23:18.400
+And there's a problem there, you know.
+
+23:18.400 --> 23:21.400
+And on a side note, it's very interesting,
+
+23:21.400 --> 23:25.400
+because you can read several analysis in 2007
+
+23:25.400 --> 23:31.400
+that historically, Microsoft was able to do this
+
+23:31.400 --> 23:34.400
+with laptops of computers.
+
+23:34.400 --> 23:37.400
+And in 2008, the vice manufacturer said,
+
+23:37.400 --> 23:40.400
+we don't want it to have a Microsoft 2.0 in our lives.
+
+23:40.400 --> 23:43.400
+And that's why we need an open source solution.
+
+23:43.400 --> 23:46.400
+And Google came with an open source solution,
+
+23:46.400 --> 23:48.400
+but Google were able to...
+
+23:49.400 --> 23:54.400
+But on the positive side of things, you know,
+
+23:54.400 --> 23:57.400
+not to be standing that the device manufacturers
+
+23:57.400 --> 24:03.400
+got locked in in this environment, you know.
+
+24:03.400 --> 24:07.400
+The nature, the free open source nature of iOSP
+
+24:07.400 --> 24:11.400
+allowed for fork if you were not a manufacturer.
+
+24:11.400 --> 24:13.400
+So, you know, if you don't have a device
+
+24:13.400 --> 24:16.400
+and you don't want it to enter in these compatibility agreements
+
+24:16.400 --> 24:19.400
+with Google, you could fork, you know.
+
+24:19.400 --> 24:21.400
+And you could create custom ROMs.
+
+24:21.400 --> 24:22.400
+Yes, exactly.
+
+24:22.400 --> 24:26.400
+What changed then with the release of Android 16?
+
+24:26.400 --> 24:30.400
+So, what, like, this was before 2025.
+
+24:30.400 --> 24:33.400
+But what happened afterwards, like, with Android 16,
+
+24:33.400 --> 24:35.400
+there was a policy ship.
+
+24:35.400 --> 24:36.400
+Yes.
+
+24:36.400 --> 24:37.400
+Precisely.
+
+24:37.400 --> 24:40.400
+And this is completely related now to alternative ROMs.
+
+24:40.400 --> 24:42.400
+And what is alternative ROMs?
+
+24:42.400 --> 24:46.400
+For audience, audience that is hearing this term for the first time.
+
+24:46.400 --> 24:50.400
+You know, technically, this is not a correct term
+
+24:50.400 --> 24:53.400
+to alternative ROMs, because we're not talking about ROMs,
+
+24:53.400 --> 24:54.400
+precisely.
+
+24:54.400 --> 24:56.400
+But basically, alternative operating systems
+
+24:56.400 --> 24:57.400
+that are based on Android.
+
+24:57.400 --> 25:01.400
+So, there is Android stock that is developed and controlled by Google.
+
+25:01.400 --> 25:06.400
+But then you can fork this and then you can make your own customized,
+
+25:07.400 --> 25:10.400
+you know, altered version of Android.
+
+25:10.400 --> 25:11.400
+There are several of them.
+
+25:11.400 --> 25:15.400
+You know, there are the very privacy-oriented ones like Grafino AS,
+
+25:15.400 --> 25:20.400
+there are ones that are intended to allow a great deal of compatibility
+
+25:20.400 --> 25:23.400
+with different types of devices like LanoAjo AS.
+
+25:23.400 --> 25:27.400
+There are other ones like Morena, EOS.
+
+25:27.400 --> 25:29.400
+There are many of them out there.
+
+25:29.400 --> 25:30.400
+Many, you know.
+
+25:30.400 --> 25:33.400
+We also have them with the free-your-and-work initiative.
+
+25:33.400 --> 25:34.400
+We have a page.
+
+25:34.400 --> 25:37.400
+We can link that in the show and other people can look it up.
+
+25:37.400 --> 25:38.400
+Yeah, yeah.
+
+25:38.400 --> 25:41.400
+So, they come in different flavors.
+
+25:41.400 --> 25:44.400
+But I think security and privacy are the main drivers.
+
+25:44.400 --> 25:48.400
+People, they want their Android devices to be a little bit more secure
+
+25:48.400 --> 25:54.400
+than they search for these alternative Android operating systems.
+
+25:54.400 --> 25:58.400
+But again, I would like to highlight that these are not Linux phones.
+
+25:58.400 --> 26:00.400
+They depend on Android.
+
+26:00.400 --> 26:06.400
+And they depend on how information is made available on Android.
+
+26:06.400 --> 26:12.400
+And this shift that you just mentioned is Google hindering
+
+26:12.400 --> 26:17.400
+a big deal of interoperability information inside OSP
+
+26:17.400 --> 26:24.400
+that can create a big struggle for these alternative ROMs to survive.
+
+26:24.400 --> 26:28.400
+You know, so it's basically enclosing,
+
+26:28.400 --> 26:35.400
+it's a step on enclosing more of a OSP restricting these alternative ROMs.
+
+26:35.400 --> 26:40.400
+And together with my research group, we work on this,
+
+26:40.400 --> 26:43.400
+we think that this is not compatible with this law
+
+26:43.400 --> 26:46.400
+that we mentioned in the beginning of our podcast, Digital Market Act.
+
+26:46.400 --> 26:50.400
+We do believe that interoperability, mandating this law is very broad.
+
+26:50.400 --> 26:56.400
+And this shifts what answering is that Google is stopped to provide
+
+26:56.400 --> 27:01.400
+some type of information that are very important for alternative ROMs.
+
+27:01.400 --> 27:06.400
+For example, interoperability information regarding the device,
+
+27:06.400 --> 27:09.400
+called the device trees, interoperability information
+
+27:09.400 --> 27:14.400
+regards to the source code history, you know, and also hardware drives.
+
+27:14.400 --> 27:19.400
+So this were type of information that Google decided to hinder
+
+27:19.400 --> 27:23.400
+or to publish later, sometimes they blocked,
+
+27:23.400 --> 27:25.400
+but sometimes they decided to publish later.
+
+27:25.400 --> 27:30.400
+So it created barriers for these alternative operating systems
+
+27:30.400 --> 27:34.400
+to compete with Google stock Android.
+
+27:34.400 --> 27:38.400
+This does this, like, hinders them to continue to developing
+
+27:38.400 --> 27:43.400
+those alternative ROMs or will there be a way around?
+
+27:43.400 --> 27:46.400
+Like, because you did some any research,
+
+27:46.400 --> 27:50.400
+you highlighted, you did some interviews with developers,
+
+27:50.400 --> 27:52.400
+as far as I understood.
+
+27:52.400 --> 27:55.400
+And like, what was their reaction towards this?
+
+27:55.400 --> 28:01.400
+So their reaction was quite negative and very worrisome.
+
+28:01.400 --> 28:05.400
+And they're saying this puts high loads on us
+
+28:05.400 --> 28:09.400
+to reverse engineer this type of information.
+
+28:09.400 --> 28:12.400
+And the thing is that outside of this law,
+
+28:12.400 --> 28:15.400
+this would create already competitive issues.
+
+28:15.400 --> 28:18.400
+But then the difference between competition law
+
+28:18.400 --> 28:21.400
+and this particular law, the DMA that we're talking about,
+
+28:21.400 --> 28:26.400
+is that in competition law, we need to wait until we see the harm.
+
+28:26.400 --> 28:30.400
+So we have to wait some years, and then...
+
+28:30.400 --> 28:35.400
+Oh, yes, indeed, there are some harm in the community.
+
+28:35.400 --> 28:38.400
+But this law is different.
+
+28:38.400 --> 28:41.400
+There is already a do-and-don't list.
+
+28:41.400 --> 28:43.400
+We don't need to wait.
+
+28:43.400 --> 28:46.400
+I think that blocking this type of interoperability information
+
+28:46.400 --> 28:48.400
+is already against this law.
+
+28:48.400 --> 28:52.400
+And that's why we tried to build a legal argument for this.
+
+28:52.400 --> 28:55.400
+Look, we do believe that inside Google,
+
+28:55.400 --> 28:59.400
+there's a lot of people that believe in free and open-source software.
+
+28:59.400 --> 29:02.400
+Google is a company that was founded on these ideals.
+
+29:02.400 --> 29:05.400
+They have a very strong Ospo.
+
+29:05.400 --> 29:09.400
+They have a very strong food on the community.
+
+29:09.400 --> 29:12.400
+And therefore, we do believe that this type of work
+
+29:12.400 --> 29:16.400
+helps them to re-evaluate their practices
+
+29:16.400 --> 29:22.400
+and to let alternatives inside the free and open-source movement to thrive.
+
+29:22.400 --> 29:24.400
+I hope it will.
+
+29:24.400 --> 29:28.400
+But was this also like the researchers in the interviews also see this?
+
+29:28.400 --> 29:33.400
+Or was it more like that they are afraid that they will have to stop?
+
+29:33.400 --> 29:36.400
+I mean...
+
+29:36.400 --> 29:38.400
+Sorry, not researchers, but developers.
+
+29:38.400 --> 29:41.400
+Yes, exactly.
+
+29:41.400 --> 29:46.400
+So I think that when you depend on a platform,
+
+29:46.400 --> 29:51.400
+any platform, there is an imbalance.
+
+29:51.400 --> 29:55.400
+And this is normal in any platform.
+
+29:55.400 --> 30:02.400
+Unless the platform is really democratically governed.
+
+30:02.400 --> 30:05.400
+But otherwise, there is always this imbalance.
+
+30:05.400 --> 30:07.400
+And we are trying...
+
+30:07.400 --> 30:08.400
+Like the hierarchy.
+
+30:08.400 --> 30:09.400
+Yes.
+
+30:09.400 --> 30:13.400
+And we are trying with regulation to level a little bit more the playing field.
+
+30:13.400 --> 30:18.400
+So at least we can have alternatives inside this ecosystem.
+
+30:18.400 --> 30:22.400
+So end users can choose and can have more competition among themselves,
+
+30:22.400 --> 30:26.400
+among alternative ROMs and stock Android itself.
+
+30:26.400 --> 30:33.400
+So I really don't want to have only one provider of Android.
+
+30:33.400 --> 30:39.400
+I think Android is a marvelous technological speaking operating system.
+
+30:39.400 --> 30:44.400
+And since it is fundamentally free and open source on its core,
+
+30:44.400 --> 30:47.400
+I think that this alternative ROMs they should thrive.
+
+30:47.400 --> 30:52.400
+They should allow people to have alternatives to install on their Android devices.
+
+30:52.400 --> 30:59.400
+And this is the goal of our work in the DMA is to inject more competition into Android ecosystem.
+
+30:59.400 --> 31:04.400
+Do you think there is an actual chance that a DMA can help us here to predict
+
+31:04.400 --> 31:08.400
+Free Software developers or is it a two-flastiger?
+
+31:08.400 --> 31:09.400
+No.
+
+31:09.400 --> 31:14.400
+No, I do think it's a viable instrument to search for.
+
+31:14.400 --> 31:18.400
+But look, it's not a miracle's instrument.
+
+31:18.400 --> 31:20.400
+Nowadays, in the EU...
+
+31:20.400 --> 31:23.400
+I want to have that because make it like that.
+
+31:23.400 --> 31:26.400
+Look, we are talking about digital sovereignty.
+
+31:26.400 --> 31:28.400
+We are talking about democratization.
+
+31:28.400 --> 31:30.400
+We are talking about the next generation of the internet.
+
+31:30.400 --> 31:34.400
+We are talking about the future of the web.
+
+31:34.400 --> 31:36.400
+The DMA is only one instrument.
+
+31:36.400 --> 31:38.400
+And I am a legal person.
+
+31:38.400 --> 31:40.400
+And that's why I talk a lot about the DMA.
+
+31:40.400 --> 31:46.400
+But if you go to any other strategist in the FSC in my research group at the university,
+
+31:46.400 --> 31:49.400
+there are people looking into other aspects.
+
+31:49.400 --> 31:55.400
+So we need to talk how to fundamentally change digital markets to a more democratic one.
+
+31:55.400 --> 31:58.400
+But DMA can help certainly, but alone it cannot do.
+
+31:58.400 --> 32:00.400
+So we need funding for Free Software.
+
+32:00.400 --> 32:02.400
+We really need funding for Free Software.
+
+32:02.400 --> 32:06.400
+And not only VC type of fund, we need a really public money type of fund
+
+32:06.400 --> 32:11.400
+that will enable collective effort on our society to Free Software.
+
+32:11.400 --> 32:13.400
+That is a public good.
+
+32:13.400 --> 32:15.400
+Free software is a public good.
+
+32:15.400 --> 32:16.400
+It's digital commons.
+
+32:16.400 --> 32:19.400
+Think about a park in our city.
+
+32:19.400 --> 32:20.400
+Think about a highway.
+
+32:20.400 --> 32:23.400
+Think about a railroad.
+
+32:23.400 --> 32:25.400
+They are public.
+
+32:25.400 --> 32:27.400
+And Free Software is the same.
+
+32:27.400 --> 32:31.400
+So therefore, we need to diversify the sources of funding.
+
+32:31.400 --> 32:36.400
+We need to diversify the strategy in order to make the digital markets more democratic.
+
+32:36.400 --> 32:40.400
+DMA can help, but we need many, many other venues and instruments.
+
+32:40.400 --> 32:41.400
+I absolutely agree.
+
+32:41.400 --> 32:44.400
+We need strategic and long term funding, especially.
+
+32:44.400 --> 32:46.400
+So it does not need to be short term.
+
+32:46.400 --> 32:49.400
+It needs to be really long term so that others can rely on it.
+
+32:49.400 --> 32:51.400
+And that it will be there.
+
+32:51.400 --> 32:54.400
+What's the European Commission's perspective on this?
+
+32:54.400 --> 32:59.400
+Do you know if they think they will act up on the shift in the Google policy?
+
+32:59.400 --> 33:01.400
+Yes, we will talk with them.
+
+33:01.400 --> 33:03.400
+They are monitoring this.
+
+33:03.400 --> 33:10.400
+And we are also monitoring their activity on this.
+
+33:10.400 --> 33:18.400
+A very good news I can share is that last week the European Commission started a new regulatory process
+
+33:18.400 --> 33:26.400
+to help Google to comply with the digital markets act in relation to interoperability and AI.
+
+33:26.400 --> 33:30.400
+AI falls a little bit out of scope of what we are talking about here,
+
+33:30.400 --> 33:36.400
+but the interoperability part for sure is included on the scope of this.
+
+33:36.400 --> 33:40.400
+And we will make sure on our research that the university
+
+33:40.400 --> 33:44.400
+or in our monitoring type of work that we do in the FSFE,
+
+33:44.400 --> 33:50.400
+to have DMA being forest on a Free Software developer friendly way.
+
+33:50.400 --> 33:51.400
+This is good to know.
+
+33:51.400 --> 33:54.400
+I'm very happy that there's a goal for us.
+
+33:54.400 --> 34:00.400
+So to finalize this, do you think that the DMA can actually help here?
+
+34:00.400 --> 34:03.400
+Like that it's protecting Free Software developers?
+
+34:03.400 --> 34:04.400
+Yes or no answer?
+
+34:04.400 --> 34:05.400
+Yes.
+
+34:05.400 --> 34:06.400
+Perfect.
+
+34:06.400 --> 34:07.400
+Thank you so much.
+
+34:07.400 --> 34:08.400
+I'm very much looking forward to this.
+
+34:09.400 --> 34:11.400
+How can the community help now?
+
+34:11.400 --> 34:14.400
+Oh, that's perhaps the most important question.
+
+34:14.400 --> 34:17.400
+And I'll try to be very concise on this.
+
+34:17.400 --> 34:25.400
+I'm very, very grateful for the Android developers from different operating systems that help us to understand all of this.
+
+34:25.400 --> 34:27.400
+And they were so nice.
+
+34:27.400 --> 34:34.400
+And I will make sure that in our next I love Free Software today to have a very beautiful message to all of them out there.
+
+34:34.400 --> 34:38.400
+But how the community can help is with technical advice to us,
+
+34:38.400 --> 34:44.400
+you know, spreading the world about this and leveraging our position together.
+
+34:44.400 --> 34:46.400
+So we have a coalition.
+
+34:46.400 --> 34:50.400
+We have an allies together and say, look, this is important for the whole movement.
+
+34:50.400 --> 34:51.400
+Thank you, Lucas.
+
+34:51.400 --> 34:52.400
+Thank you so much for being here.
+
+34:52.400 --> 34:54.400
+Thank you so much for walking us through this.
+
+34:54.400 --> 34:56.400
+And yeah, thank you for taking the time.
+
+34:56.400 --> 34:58.400
+The pleasure is always my thank you so much.
+
+34:58.400 --> 34:59.400
+This was really interesting.
+
+35:00.400 --> 35:07.400
+I'm, yeah, I'm now really much looking forward to the community coming back to us and letting us know what they think as well.
+
+35:07.400 --> 35:11.400
+Thank you also for the first live edition of the software freedom podcast.
+
+35:11.400 --> 35:13.400
+Thank you so much for being here.
+
+35:15.400 --> 35:17.400
+This was the software freedom podcast.
+
+35:17.400 --> 35:22.400
+If you liked this episode, please recommend it to your friends and rated.
+
+35:22.400 --> 35:28.400
+Stay tuned for more inspiring conversations that explore the importance of software freedom and its impact on our digital lives.
+
+35:29.400 --> 35:34.400
+This podcast is presented to you by the Free Software Foundation Europe,
+
+35:34.400 --> 35:39.400
+and we are a charity that works in promoting software freedom.
+
+35:39.400 --> 35:43.400
+If you like our work, please consider supporting us for the nation.
+
+35:43.400 --> 35:48.400
+You can find more information under fsfe.org/donate
+
+35:48.400 --> 35:50.400
+Thank you so much for listening.
+
+35:50.400 --> 35:51.400
+Bye-bye.
+
+35:59.400 --> 36:01.400
+Bye-bye.
+

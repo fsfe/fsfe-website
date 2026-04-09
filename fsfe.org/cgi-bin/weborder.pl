@@ -337,26 +337,23 @@ my $data = {
     },
     "threads" => [
         {
+            "type" => "message",
+            "text" => "$body",
+            "user" => 6530
+        },
+        {
+            "type"     => "note",
             "text"     => "A new order came in.",
-            "type"     => "customer",
-            "customer" => {
-                "email" => "$email",
-            },
             "attachments" => [
                 {
                     "fileName" => "invoice.odt",
                     "mimeType" => "application/vnd.oasis.opendocument.text",
                     "data"     => "$base64_encoded_invoice"
                 }
-            ]
-        },
-        {
-            "text" => "$body",
-            "type" => "message",
-            "user" => 6530,
+            ],
+            "user" => 6584
         }
     ],
-    "imported"     => JSON::false,
     "assignTo"     => 6584,
     "status"       => "pending",
     "customFields" => [
@@ -364,7 +361,7 @@ my $data = {
             "id"    => 4,              # Order ID Custom Field
             "value" => "$reference"    # Actual Order ID
         }
-    ],
+    ]
 };
 
 # Encode the JSON

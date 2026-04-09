@@ -13,16 +13,23 @@
   <category1>
     <!-- 1,500 per month or 18,000 in this year -->
     <!-- Sorted by amount, with large image (width x height ca. 15.000) -->
+    <donor img="donors/proton.png" amount="21,200">Proton Foundation</donor>
     <donor img="donors/linuxhotel.png" amount="18,000" since="2001">Linuxhotel Villa Vogelsang</donor>
   </category1>
 
   <category2>
     <!-- 300 per month or 3,600 in this year -->
     <!-- Sorted by name, with smaller image (width x height ca. 5.000) -->
+    <donor img="donors/silver-google.png" amount="4,000" since="2007">Google</donor>
     <donor img="donors/silver-heinlein-support.png" since="2014">Heinlein Support</donor>
     <donor img="donors/silver-intevation-new.png" since="2009">Intevation GmbH</donor>
+    <donor>Kraken Technologies</donor><!-- via github -->
+    <donor img="donors/silver-microsoft.png">Microsoft</donor>
     <donor>Open Education and Software Association e.V.</donor>
+    <donor img="donors/silver-proxmox.png">Proxmox</donor>
     <donor img="donors/silver-sysmocom.png" since="2016">sysmocom - systems for mobile communications</donor>
+    <donor img="donors/silver-http-toolkit.png">Toolshed Labs</donor>
+    <donor>Y Combinator</donor>
   </category2>
 
   <category3>
@@ -30,13 +37,21 @@
     <!-- Sorted by name, no image -->
     <donor>Andrea Soto and Roberto Moratore</donor>
     <donor since="2014">Björn Persson</donor>
+    <donor>Clouds365</donor>
     <donor>credativ</donor>
+    <donor>Document Foundation</donor>
+    <donor>Eclipse Foundation</donor>
     <donor since="2021">Guido Bienhaus</donor>
+    <donor since="2016">Holger Kienle</donor>
     <donor since="2003">Hostsharing eG</donor>
     <donor since="2004">inmedias.it</donor>
+    <donor>KIX</donor>
     <donor since="2009">LIHAS - LinuxHaus Stuttgart</donor><!-- Adrian Reyer -->
+    <donor>Marc Schaefer</donor>
     <donor>Marc Sunet</donor>
+    <donor>Matomo.org</donor>
     <donor>Rita Bylsma</donor>
+    <donor>SUSE</donor>
     <donor since="2014">Thomas Doczkal</donor>
   </category3>
 </donorset>

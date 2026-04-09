@@ -51,6 +51,7 @@
       full: Person is working 4 or 5 days a week
       part: Person is working 3 or less days a week
       freelancer: Person is working on honorary basis, no matter which salary or how long
+    <fediverse> Fediverse address of person.
   -->
   <!--
     Technical information:
@@ -126,6 +127,22 @@
     <!-- fingerprint></fingerprint -->
     <!-- keyhref></keyhref-->
     <!-- avatar></avatar-->
+  </person>
+
+  <person id="bcludts">
+    <name>Ben Cludts</name>
+    <email>bcludts@fsfe.org</email>
+    <team>core</team>
+    <employee>full/m</employee>
+    <function>intern/m</function>
+  </person>
+
+  <person id="annaritarusso">
+    <name>Anna Rita Russo</name>
+    <email>annarita.russo@fsfe.org</email>
+    <team>core</team>
+    <employee>full/f</employee>
+    <function>intern/f</function>
   </person>
 
   <person id="andreoli">
@@ -236,7 +253,7 @@
     <team>it</team>
     <function country="IT"/>
   </person>
-  
+
     <person id="ceballos">
     <name>Lina Ceballos</name>
     <country>CO</country>
@@ -323,6 +340,7 @@
     <function volunteers="web">coordinator/m</function>
     <link>/about/people/tobiasd/tobiasd.html</link>
     <avatar>tobiasd.png</avatar>
+    <fediverse handle="tobias@social.diekershoff.de">tobiasd@fsfe.org</fediverse>
   </person>
 
   <person id="dietrich">
@@ -478,12 +496,9 @@
     <email>hf@fsfe.org</email>
     <avatar>hf.jpg</avatar>
   </person>
-  
+
   <person id="hl">
     <name>Henning Lammert</name>
-    <function>intern/m</function>
-    <employee>full/m</employee>
-    <team>core</team>
     <country>DE</country>
     <fingerprint>1DB0D9668F986EFDCEBDD7F551E27735A5F4885F</fingerprint>
     <keyhref>https://keys.fsfe.org/hl@fsfe.org.asc</keyhref>
@@ -630,6 +645,7 @@
     <link>/about/people/kirschner/kirschner.html</link>
     <avatar>kirschner.jpg</avatar>
     <employee>full/m</employee>
+    <fediverse handle="kirschner@mastodon.social">mk@fsfe.org</fediverse>
   </person>
 
   <person id="kneissl">
@@ -642,12 +658,9 @@
   <person id="fkobi">
     <name>Filip Kobierski</name>
     <country>PL</country>
-    <function>intern/m</function>
-    <team>core</team>
     <email>fkobi@fsfe.org</email>
     <fingerprint>C9055975AF8D4A02816FEE680BC2212BF0F08F7A</fingerprint>
     <keyhref>https://keys.fsfe.org/fkobi@fsfe.org.asc</keyhref>
-    <employee>full/m</employee>
   </person>
 
   <person id="ku">
@@ -1019,6 +1032,7 @@
     <team>core</team>
     <team>nl</team>
     <email>nico.rikken@fsfe.org</email>
+    <fediverse handle="nicorikken@mastodon.nl">nico.rikken@fsfe.org</fediverse>
     <fingerprint>ECE25C5065503E34453F767B1A3C51D11C81AB68</fingerprint>
     <keyhref>/about/people/rikken/rikken-public.asc</keyhref>
     <link>/about/people/rikken/rikken.html</link>

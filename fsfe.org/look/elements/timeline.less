@@ -1,0 +1,66 @@
+// ============================================================================
+// Styles specific to displaying timelines
+// ============================================================================
+div.timeline-holder * {
+  border-radius: 4px;
+  padding: 4px;
+}
+div.timeline-year {
+  display: flex;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+div.timeline-year h2 {
+  margin: 0px;
+  vertical-align: middle;
+  text-align: center;
+  align-content: center;
+  writing-mode: tb-rl;
+  transform: rotate(-180deg);
+}
+div.timeline-year-content {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: stretch;
+  margin: 0px;
+}
+div.timeline-item {
+  max-width: 18em;
+  margin: 5px;
+  display: flex;
+  flex-direction: column;
+}
+div.timeline-item > div.topline {
+  height: 8em;
+  text-align: center;
+  align-content: center;
+  margin: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+div.timeline-item > div.description {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+}
+div.timeline-item > div.description > img {
+  object-fit: contain;
+}
+div.timeline-item > div.description > p {
+  flex: 1;
+}
+div.timeline-item.legal-support {
+  background-color: @brand-medium-lighter;
+}
+div.timeline-item.policy-advocacy {
+  background-color: @brand-mix-lighter;
+}
+div.timeline-item.public-awareness {
+  background-color: @brand-green-lighter;
+}
+div.timeline-item.internal {
+  background-color: @brand-strong-lighter;
+}

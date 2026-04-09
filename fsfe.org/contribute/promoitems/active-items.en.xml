@@ -23,10 +23,6 @@ Such an item doesn't need an image!
     <image imgsmall="/contribute/promopics/fsfe-sticker-thumb.png"/>
   </item>
 
-  <item type="fsfe" id="fsfe-since-2001-sticker" year="2021" order="02">
-    <image imgsmall="/contribute/promopics/fsfe-since-2001-sticker-thumb.png"/>
-  </item>
-  
   <item type="fsfe" id="fsfe-blue-balloon" year="2025" order="02">
     <image imgsmall="/contribute/promopics/fsfe-blue-balloon.jpg"/>
   </item>
@@ -39,9 +35,6 @@ Such an item doesn't need an image!
     <image imgsmall="/contribute/promopics/jtfsm-postcard-thumb.png"/>
   </item>
   
-  <item type="fsfe" id="fsfe-women-sticker" year="2022" order="10">
-    <image imgsmall="/contribute/promopics/fsfe-women-sticker-thumb.png"/>
-  </item>
   <item type="fsfe" id="fsfe-women-sticker-round" year="2023" order="11">
     <image imgsmall="/contribute/promopics/fsfe-women-sticker-round-thumb.png"/>
   </item>
@@ -60,11 +53,6 @@ Such an item doesn't need an image!
     <image imgsmall="/contribute/promopics/free-software-multilanguage-logocolours.png"/>
   </item>
 
-  <item type="fsfe" id="multilanguage-free-software-purple" year="2019" order="09">
-    <image imgsmall="/contribute/promopics/free-software-multilanguage-purple.png"/>
-  </item>
-
-
   <!-- Hacking 100 freedom -->
 
   <item type="fsfe" id="hacking-100-freedom-sticker-blue" year="2019" order="05">
@@ -79,18 +67,11 @@ Such an item doesn't need an image!
     <image imgsmall="/contribute/promopics/hacking-100-freedom-sticker-green.png"/>
   </item>
 
-
-
   <!-- 100 freedoms -->
 
   <item type="freedom" id="100-freedoms-sticker-black" year="2017" order="1">
     <image imgsmall="/contribute/promopics/100-freedoms-sticker-black.png"/>
   </item>
-
-  <item type="freedom" id="100-freedoms-sticker-orange" year="2017" order="2">
-    <image imgsmall="/contribute/promopics/100-freedoms-sticker-orange.png"/>
-  </item>
-
 
   <!-- Public Money, Public Code -->
 
@@ -114,14 +95,9 @@ Such an item doesn't need an image!
     <image imgsmall="/contribute/promopics/pmpc_poster_combined_thumb.png"/>
   </item>
 
-
   <!-- Upcycling Android -->
 
-  <item type="upcyclingandroid" id="ua-sticker-round" year="2021" order="2">
-    <image imgsmall="/contribute/promopics/ua-sticker-round-thumb.png"/>
-  </item>
-  
-   <item type="upcyclingandroid" id="ua-poster" year="2022" order="3">
+  <item type="upcyclingandroid" id="ua-poster" year="2022" order="3">
     <image imgsmall="/contribute/promopics/ua_poster_thumb.png"/>
   </item>
 
@@ -129,13 +105,11 @@ Such an item doesn't need an image!
     <image imgsmall="/contribute/promopics/ua_leaflet_thumb.png"/>
   </item>
 
-
   <!-- F-droid -->
 
   <item type="f-droid" id="fya-sticker" year="2017" order="2">
     <image imgsmall="/contribute/promopics/fya-sticker-2012-3cm.png"/>
   </item>
-
 
   <!-- I love Free Software -->
 
@@ -145,10 +119,6 @@ Such an item doesn't need an image!
 
   <item type="ilovefs" id="ilovefs-flyer" year="2014" order="2">
     <image imgsmall="/contribute/promopics/ilovefs_flyer_A7_thumb.png"/>
-  </item>
-
-  <item type="ilovefs" id="ilovefs-sticker" year="2016" order="1">
-    <image imgsmall="/contribute/promopics/ilovefs-sticker_thumb.png"/>
   </item>
 
   <item type="ilovefs" id="ilovefs-burgundy-sticker" year="2016" order="1">
@@ -171,7 +141,6 @@ Such an item doesn't need an image!
     <image imgsmall="/contribute/promopics/ilovefs-sticker_v2_thumb.png"/>
   </item>
 
-
   <!-- No cloud -->
 
   <item type="nocloud" id="nocloud-sticker" year="2015" order="1">
@@ -190,7 +159,6 @@ Such an item doesn't need an image!
     <image imgsmall="/contribute/promopics/thereisnocloud-poster-thumb.png"/>
   </item>
 
-
   <!-- Children's Book Ada+Zangemann -->
 
   <item type="childrensbook" id="childrensbook-sticker-ada-2022" year="2022" order="2">
@@ -201,7 +169,7 @@ Such an item doesn't need an image!
     <image imgsmall="/contribute/promopics/childrensbook-sticker-zangemann-2022-thumb.png"/>
   </item>
 
-    <!-- Device neutrality -->
+  <!-- Device neutrality -->
 
   <item type="device-neutrality" id="rf-sticker" year="2022" order="1">
     <image imgsmall="/contribute/promopics/rf-sticker.png"/>
@@ -215,7 +183,7 @@ Such an item doesn't need an image!
     <image imgsmall="/contribute/promopics/deviceneutrality-sticker-thumb.png"/>
   </item>
 
-    <!-- Fedigov -->
+  <!-- Fedigov -->
 
   <item type="fedigov" id="fedigov-sticker" year="2023" order="1">
     <image imgsmall="/contribute/promopics/fedigov-sticker-thumb.jpg"/>
@@ -227,7 +195,7 @@ Such an item doesn't need an image!
     <image imgsmall="/contribute/promopics/yh4f-logo-thumb.jpg"/>
   </item>
   
-    <item type="yh4f" id="yh4f-chara3-sticker" year="2023" order="1">
+  <item type="yh4f" id="yh4f-chara3-sticker" year="2023" order="1">
     <image imgsmall="/contribute/promopics/yh4f-chara3-thumb.png"/>
   </item>
 
@@ -239,23 +207,11 @@ Such an item doesn't need an image!
   <item type="fsfe" id="devicechoice-sticker" year="2023" order="15">
     <image imgsmall="/contribute/promopics/devicechoice-sticker-thumb.jpg"/>
   </item>
-  <item type="fsfe" id="dontcodeevil-sticker" year="2023" order="16">
-    <image imgsmall="/contribute/promopics/dontcodeevil-sticker-thumb.jpg"/>
-  </item>
-  <item type="fsfe" id="freesociety-sticker-hexagon" year="2023" order="18">
-    <image imgsmall="/contribute/promopics/freesociety-sticker-hexagon-thumb.png"/>
-  </item>
   <item type="fsfe" id="freesoftwarewins-sticker" year="2023" order="19">
     <image imgsmall="/contribute/promopics/freesoftwarewins-sticker-thumb.jpg"/>
   </item>
-  <item type="fsfe" id="hacking4freedom-sticker" year="2023" order="20">
-    <image imgsmall="/contribute/promopics/hacking4freedom-sticke-thumb.jpg"/>
-  </item>
   <item type="fsfe" id="notold-sticker" year="2023" order="21">
     <image imgsmall="/contribute/promopics/notold-sticker-thumb.jpg"/>
-  </item>
-  <item type="fsfe" id="useunderstand-sticker" year="2023" order="22">
-    <image imgsmall="/contribute/promopics/useunderstand-sticker-thumb.jpg"/>
   </item>
 
 </itemset>

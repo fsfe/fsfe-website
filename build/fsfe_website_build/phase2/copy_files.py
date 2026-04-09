@@ -10,7 +10,7 @@ import logging
 import shutil
 from typing import TYPE_CHECKING
 
-import minify  # pyright: ignore [reportMissingTypeStubs]
+import minify
 
 if TYPE_CHECKING:
     import multiprocessing.pool

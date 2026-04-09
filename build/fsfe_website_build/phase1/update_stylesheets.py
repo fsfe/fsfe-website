@@ -23,20 +23,29 @@ from fsfe_website_build.lib.misc import touch_if_newer_dep
 
 if TYPE_CHECKING:
     import multiprocessing.pool
+    from collections.abc import Generator
     from pathlib import Path
 
 logger = logging.getLogger(__name__)
 
 
+def _get_xsl_imports_includes(file: Path) -> Generator[Path]:
+    yield file.resolve()
+    root = etree.parse(file).getroot()
+    for imp in [
+        *root.xpath(
+            "//xsl:import", namespaces={"xsl": "http://www.w3.org/1999/XSL/Transform"}
+        ),
+        *root.xpath(
+            "//xsl:include", namespaces={"xsl": "http://www.w3.org/1999/XSL/Transform"}
+        ),
+    ]:
+        yield from _get_xsl_imports_includes(file.parent / imp.get("href"))
+
+
 def _update_sheet(file: Path) -> None:
     """Update a given xsl file if any of its dependant xsl files have been updated."""
-    xslt_root = etree.parse(file)
-    imports = [
-        file.parent.joinpath(imp.get("href")).resolve()
-        for imp in xslt_root.xpath(
-            "//xsl:import", namespaces={"xsl": "http://www.w3.org/1999/XSL/Transform"}
-        )
-    ]
+    imports = list(_get_xsl_imports_includes(file))
     touch_if_newer_dep(file, imports)
 
 

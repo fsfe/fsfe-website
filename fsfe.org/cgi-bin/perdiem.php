@@ -32,9 +32,9 @@ $activity_tag = explode('||', $activity)[0];
 $activity_text = explode('||', $activity)[1];
 $category_id = '66640';
 $category_text = 'Per diem';
-$event = isset($_POST['event']) ? $_POST['event'] : false;
-$extra = isset($_POST['extra']) ? $_POST['extra'] : false;
-$mailopt = isset($_POST['mailopt']) ? $_POST['mailopt'] : false;
+$event = isset($_POST['event']) ? htmlspecialchars($_POST['event']) : false;
+$extra = isset($_POST['extra']) ? htmlspecialchars($_POST['extra']) : false;
+$mailopt = isset($_POST['mailopt']) ? htmlspecialchars($_POST['mailopt']) : false;
 $defaults = isset($_POST['defaults']) ? $_POST['defaults'] : false;
 $dest = isset($_POST['dest']) ? $_POST['dest'] : false;
 $dest_other = isset($_POST['dest_other']) ? $_POST['dest_other'] : false;
@@ -232,10 +232,10 @@ foreach ($use as $d => $day) {  // calculate for each day
         // Remarks, explanation what has been self-paid
         $remarks[$d] = '';
         if ('yes' === $break[$d]) {
-            $remarks[$d] .= 'breakfast+';
+            $remarks[$d] .= 'breakfast + ';
         }
         if ('yes' === $lunch[$d]) {
-            $remarks[$d] .= 'lunch+';
+            $remarks[$d] .= 'lunch + ';
         }
         if ('yes' === $dinner[$d]) {
             $remarks[$d] .= 'dinner';
@@ -246,7 +246,7 @@ foreach ($use as $d => $day) {  // calculate for each day
         if ('yes' === $break[$d] && 'yes' === $lunch[$d] && 'yes' === $dinner[$d]) {
             $remarks[$d] = 'everything';
         }
-        $remarks[$d] = preg_replace('/\+$/', '', $remarks[$d]);
+        $remarks[$d] = preg_replace('/\ \+$/', '', $remarks[$d]);
         $remarks[$d] .= ' self-paid';
 
         // HTML output for this day

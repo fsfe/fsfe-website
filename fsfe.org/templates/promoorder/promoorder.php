@@ -12,8 +12,8 @@
   if (!empty($donationID)) {
       ?>
   <p>If you have yet to make your donation, you may now do so by following
-    this link: <a href=https://fsfe.org/order/payonline.<?php echo $lang; ?>/<?php echo $donationID; ?>> 
-    https://fsfe.org/order/payonline.<?php echo $lang; ?>/<?php echo $donationID; ?></a>. Once the donation is
+    this link: <a href="https://my.fsfe.org/payonline/<?php echo $donationID; ?>?amount=<?php echo $donate; ?>&go=1"> 
+    https://my.fsfe.org/payonline/<?php echo $donationID; ?>?amount=<?php echo $donate; ?>&go=1</a>. Once the donation is
     confirmed the promotional material will be send.</p>
     <p>In case you prefer to pay by bank transfer, please use the following data:</p>
     <p>Recipient: Free Software Foundation Europe e.V.<br>

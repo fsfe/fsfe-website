@@ -6,6 +6,7 @@
 import json
 import logging
 import multiprocessing
+import re
 from typing import TYPE_CHECKING, TypedDict
 
 import iso639
@@ -32,7 +33,20 @@ class _SearchIndexEntry(TypedDict):
     date: str | None
 
 
-def _find_teaser(document: etree.ElementTree) -> str:
+def _elem_to_word_list(
+    teaser_split_regex: re.Pattern, element: etree.Element
+) -> list[str]:
+    return [
+        string.lower().strip()
+        for string in re.split(
+            teaser_split_regex,
+            etree.tostring(element, encoding="unicode", method="text").strip(),
+        )
+        if string.strip()
+    ]
+
+
+def _get_teaser(document: etree.ElementTree, stopwords: set[str]) -> str:
     """Find a suitable teaser for indexation.
 
     Get all the paragraphs in <body> and return the first which contains more
@@ -42,11 +56,26 @@ def _find_teaser(document: etree.ElementTree) -> str:
     :returns: The text of the teaser or an empty string
     """
     trivial_length = 10
-    for paragraph_text in (
-        p.text.strip() for p in document.xpath("//body//p") if p.text
-    ):
-        if len(paragraph_text.split(" ")) > trivial_length:
-            return paragraph_text
+    teaser_split_regex = re.compile(r"\s+|,|:|;|\.")
+    # check for introduction p or div elements in page
+    possible_teasers: list[etree.Element] = [
+        *list(document.xpath('//body//p[@id="introduction"]')),
+        *list(document.xpath('//body//div[@id="introduction"]//p')),
+        # If no proper introduction, first reasonably long paragraph
+        *[
+            paragraph
+            for paragraph in document.xpath("//body//p")
+            if len(_elem_to_word_list(teaser_split_regex, paragraph)) > trivial_length
+        ],
+    ]
+    for paragraph in possible_teasers:
+        return " ".join(
+            [
+                word
+                for word in _elem_to_word_list(teaser_split_regex, paragraph)
+                if word not in stopwords
+            ]
+        )
     return ""
 
 
@@ -58,6 +87,7 @@ def _process_file(file: Path, stopwords: set[str]) -> _SearchIndexEntry:
         for tag in xslt_root.xpath("//tag")
         if (key := str(tag.get("key"))) != "front-page"
     )
+    # Split on any whitespace
     return _SearchIndexEntry(
         url=f"/{file.with_suffix('.html').relative_to(file.parents[-2])}",
         tags=" ".join(tags),
@@ -66,9 +96,7 @@ def _process_file(file: Path, stopwords: set[str]) -> _SearchIndexEntry:
             if (titles := xslt_root.xpath("//html//title"))
             else ""
         ),
-        teaser=" ".join(
-            w for w in _find_teaser(xslt_root).split(" ") if w.lower() not in stopwords
-        ),
+        teaser=_get_teaser(xslt_root, stopwords),
         type="news" if "news/" in str(file) else "page",
         # Get the date of the file if it has one
         date=(newsdate if (newsdate := xslt_root.xpath("//news/@newsdate")) else None),

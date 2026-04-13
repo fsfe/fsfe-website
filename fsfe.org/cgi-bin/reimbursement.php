@@ -14,7 +14,7 @@ $csvfile = tmpfile();
 $csvfile_path = stream_get_meta_data($csvfile)['uri'];
 
 $who = isset($_POST['who']) ? htmlspecialchars($_POST['who']) : false;
-$type = isset($_POST['type']) ? htmlspecialchars($_POST['type']) : false;
+$type = isset($_POST['type']) ? $_POST['type'] : false;
 $rc_month = isset($_POST['rc_month']) ? htmlspecialchars($_POST['rc_month']) : false;
 $rc_year = isset($_POST['rc_year']) ? htmlspecialchars($_POST['rc_year']) : false;
 $cc_month = isset($_POST['cc_month']) ? htmlspecialchars($_POST['cc_month']) : false;

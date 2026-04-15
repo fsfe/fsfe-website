@@ -30,6 +30,7 @@ LANG_CODE_DIRECTION_MAPPINGS = {
     "de": "ltr",
     "dv": "ltr",
     "el": "ltr",
+    "en": "ltr",
     "es": "ltr",
     "et": "ltr",
     "eu": "ltr",

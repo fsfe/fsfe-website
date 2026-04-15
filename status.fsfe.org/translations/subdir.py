@@ -17,6 +17,7 @@ from fsfe_website_build.lib.misc import (
     run_command,
     update_if_changed,
 )
+from fsfe_website_build.lib.translation_priorities import PRIORITIES_AND_SEARCHES
 from lxml import etree
 
 logger = logging.getLogger(__name__)
@@ -191,44 +192,12 @@ def run(source: Path, languages: list[str], processes: int, working_dir: Path) -
             (Path(line.strip()) for line in all_git_tracked_files.split("\x00")),
         ),
     )
-    thisyear = str(datetime.datetime.today().year)
-    priorities_and_searches: dict[str, list[str]] = {
-        "1": [
-            "**/fsfe.org/index.en.xhtml",
-            "**/fsfe.org/freesoftware/freesoftware.en.xhtml",
-        ],
-        "2": ["**/fsfe.org/activities/*/activity.en.xml"],
-        "3": [
-            "**/fsfe.org/activities/*.en.xhtml",
-            "**/fsfe.org/activities/*.en.xml",
-            "**/fsfe.org/freesoftware/*.en.xhtml",
-            "**/fsfe.org/freesoftware/*.en.xml",
-        ],
-        "4": [
-            "**/fsfe.org/order/*.en.xml",
-            "**/fsfe.org/order/*.en.xhtml",
-            "**/fsfe.org/contribute/*.en.xml",
-            "**/fsfe.org/contribute/*.en.xhtml",
-        ],
-        "5": ["**/fsfe.org/order/**/*.en.xml", "**/fsfe.org/order/**/*.en.xhtml"],
-        "6": [
-            f"**/fsfe.org/news/nl/nl-{thisyear}*.en.xhtml",
-            f"**/fsfe.org/news/nl/nl-{thisyear}*.en.xml",
-            f"**/fsfe.org/news/podcast/{thisyear}/*.en.xhtml",
-            f"**/fsfe.org/news/podcast/{thisyear}/*.en.xml",
-            f"**/fsfe.org/news/podcast/transcript/{thisyear}/*.en.xhtml",
-            f"**/fsfe.org/news/podcast/transcript/{thisyear}/*.en.xml",
-            f"**/fsfe.org/news/{thisyear}/*.en.xhtml",
-            "**/fsfe.org/news/*.en.xhtml",
-            "**/fsfe.org/news/*.en.xml",
-        ],
-    }
     with multiprocessing.Pool(processes) as pool:
         # Generate our file lists by priority
         # Super hardcoded unfortunately
         files_by_priority: dict[str, list[Path]] = defaultdict(list)
         for file in sorted(all_files_with_translations):
-            for priority, searches in priorities_and_searches.items():
+            for priority, searches in PRIORITIES_AND_SEARCHES.items():
                 # If any search matches,
                 # add it to that priority and skip all subsequent priorities
                 if any(file.full_match(search) for search in searches):

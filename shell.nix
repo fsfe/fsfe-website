@@ -34,6 +34,9 @@ in
       prettier
       php84Packages.php-cs-fixer
       rsync
+      # for generaitng translation files
+      perl5Packages.Po4a
+      gettext
     ]);
   # Installed for every architecture: only install the lib outputs
   multiPkgs =

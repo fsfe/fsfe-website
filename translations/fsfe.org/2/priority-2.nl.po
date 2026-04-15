@@ -1,0 +1,962 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2026-05-13 16:31+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"#-#-#-#-#  fsfe.org_activities_deviceneutrality_activity.en.xml.nl.po "
+"(PACKAGE VERSION)  #-#-#-#-#\n"
+"#-#-#-#-#  fsfe.org_activities_drm_activity.en.xml.nl.po (PACKAGE VERSION)  "
+"#-#-#-#-#\n"
+"#-#-#-#-#  fsfe.org_activities_fla_activity.en.xml.nl.po (PACKAGE VERSION)  "
+"#-#-#-#-#\n"
+"#-#-#-#-#  fsfe.org_activities_ilovefs_activity.en.xml.nl.po (PACKAGE "
+"VERSION)  #-#-#-#-#\n"
+"#-#-#-#-#  fsfe.org_activities_stacs_activity.en.xml.nl.po (PACKAGE "
+"VERSION)  #-#-#-#-#\n"
+"#-#-#-#-#  fsfe.org_activities_swpat_activity.en.xml.nl.po (PACKAGE "
+"VERSION)  #-#-#-#-#\n"
+"#-#-#-#-#  fsfe.org_activities_wsis_activity.en.xml.nl.po (PACKAGE VERSION)  "
+"#-#-#-#-#\n"
+
+#. type: Content of: <activityset><version>
+#: fsfe.org/activities/15years/activity.en.xml:3
+#: fsfe.org/activities/20years/activity.en.xml:3
+#: fsfe.org/activities/ada-zangemann/activity.en.xml:3
+#: fsfe.org/activities/agnula/activity.en.xml:3
+#: fsfe.org/activities/apple-litigation/activity.en.xml:3
+#: fsfe.org/activities/avm-gpl-violation/activity.en.xml:3
+#: fsfe.org/activities/bgw/activity.en.xml:3
+#: fsfe.org/activities/conf-events/activity.en.xml:3
+#: fsfe.org/activities/dma/activity.en.xml:3
+#: fsfe.org/activities/drm/activity.en.xml:3
+#: fsfe.org/activities/elections/activity.en.xml:3
+#: fsfe.org/activities/eucd/activity.en.xml:3
+#: fsfe.org/activities/eura-slovakia/activity.en.xml:3
+#: fsfe.org/activities/fla/activity.en.xml:3
+#: fsfe.org/activities/foss4smes/activity.en.xml:3
+#: fsfe.org/activities/gplv3/activity.en.xml:3
+#: fsfe.org/activities/ilovefs/activity.en.xml:3
+#: fsfe.org/activities/learnlikeapro/activity.en.xml:3
+#: fsfe.org/activities/mankind/activity.en.xml:3
+#: fsfe.org/activities/msooxml/activity.en.xml:3
+#: fsfe.org/activities/ngi/activity.en.xml:3
+#: fsfe.org/activities/nledu/activity.en.xml:3
+#: fsfe.org/activities/radiodirective/activity.en.xml:3
+#: fsfe.org/activities/reuse/activity.en.xml:3
+#: fsfe.org/activities/self/activity.en.xml:3
+#: fsfe.org/activities/sfp/activity.en.xml:3
+#: fsfe.org/activities/stacs/activity.en.xml:3
+#: fsfe.org/activities/tgs/activity.en.xml:3
+#: fsfe.org/activities/upcyclingandroid/activity.en.xml:3
+#: fsfe.org/activities/whyfs/activity.en.xml:3
+#: fsfe.org/activities/wsis/activity.en.xml:3
+#: fsfe.org/activities/yh4f/activity.en.xml:3
+#: fsfe.org/activities/zooom/activity.en.xml:3
+#, fuzzy, no-wrap
+msgid "1"
+msgstr "1"
+
+#. type: Content of: <activityset><activity><title>
+#: fsfe.org/activities/15years/activity.en.xml:6
+#, no-wrap
+msgid "15 Years Anniversary"
+msgstr ""
+
+#. type: Content of: <activityset><activity><description>
+#: fsfe.org/activities/15years/activity.en.xml:8
+#, no-wrap
+msgid ""
+"      Since its founding in 2001, the FSFE has been instrumental in a successful \n"
+"      antitrust case, kept software patents unenforceable in Europe, averted a \n"
+"      veritable apocalypse for small and medium sized tech companies, and set \n"
+"      groundbreaking legal precedents for the whole of the EU.\n"
+"    "
+msgstr ""
+
+#. type: Content of: <activityset><activity><title>
+#: fsfe.org/activities/20years/activity.en.xml:6
+#, no-wrap
+msgid "20 Years FSFE"
+msgstr ""
+
+#. type: Content of: <activityset><activity><description>
+#: fsfe.org/activities/20years/activity.en.xml:8
+#, no-wrap
+msgid ""
+"\t  In 2021, the Free Software Foundation Europe turns 20. Throughout \n"
+"\t  this time we have empowered users to use, study, share, and \n"
+"\t  improve software. In 20 Years FSFE, we thank everyone who helped \n"
+"\t  us along the way. Here you will find interviews discussing the \n"
+"\t  FSFE progress as well as technological issues. You are welcome to \n"
+"\t  celebrate with us!\n"
+"    "
+msgstr ""
+
+#. type: Content of: <activityset><activity><title>
+#: fsfe.org/activities/ada-zangemann/activity.en.xml:6
+#, no-wrap
+msgid "\"Ada &amp; Zangemann\" book and movie"
+msgstr ""
+
+#. type: Content of: <activityset><activity><description>
+#: fsfe.org/activities/ada-zangemann/activity.en.xml:8
+#, no-wrap
+msgid ""
+"The illustrated book animated movie \"Ada &amp; Zangemann - a tale of software, skateboards, and raspberry ice cream\" by the FSFE, tells the story of the famous inventor Zangemann and the girl Ada, a curious tinkerer. Ada begins to experiment with hardware and software, and in the process realises how crucial it is for her and others to control technology. \n"
+"    "
+msgstr ""
+
+#. type: Content of: <activityset><activity><title>
+#: fsfe.org/activities/agnula/activity.en.xml:6
+#, no-wrap
+msgid "AGNULA: A GNU/Linux Audio distribution"
+msgstr ""
+
+#. type: Content of: <activityset><activity><description>
+#: fsfe.org/activities/agnula/activity.en.xml:8
+#, no-wrap
+msgid ""
+"      The AGNULA project aimed to create a fully functional, completely Free \n"
+"      Software GNU/Linux distribution for professional audio users. Run by key \n"
+"      players in the audio community, and funded by the European Commission, the \n"
+"      FSFE was a partner in the project, taking care of the legal issues, its \n"
+"      long-term aspects, and making sure that the interests of the Free Software \n"
+"      community were heard. \n"
+"    "
+msgstr ""
+
+#. type: Content of: <activityset><version>
+#: fsfe.org/activities/android/activity.en.xml:3
+#: fsfe.org/activities/fp6/activity.en.xml:3
+#: fsfe.org/activities/fp7/activity.en.xml:3
+#: fsfe.org/activities/gbn/activity.en.xml:3
+#: fsfe.org/activities/igf/activity.en.xml:3
+#: fsfe.org/activities/ipred2/activity.en.xml:3
+#: fsfe.org/activities/licence-questions/activity.en.xml:3
+#: fsfe.org/activities/ln/activity.en.xml:3
+#: fsfe.org/activities/ms-vs-eu/activity.en.xml:3
+#: fsfe.org/activities/pdfreaders/activity.en.xml:3
+#: fsfe.org/activities/publiccode/activity.en.xml:3
+#: fsfe.org/activities/swpat/activity.en.xml:3
+#: fsfe.org/activities/wipo/activity.en.xml:3
+#, fuzzy, no-wrap
+msgid "2"
+msgstr "2"
+
+#. type: Content of: <activityset><activity><title>
+#: fsfe.org/activities/android/activity.en.xml:6
+#, no-wrap
+msgid "Free Your Android"
+msgstr ""
+
+#. type: Content of: <activityset><activity><description>
+#: fsfe.org/activities/android/activity.en.xml:8
+#, no-wrap
+msgid ""
+"      Android is a mostly free operating system but unfortunately the drivers for most devices and most applications in the built-in store are not Free Software. This initiative helps you to regain control of your Android device and your data. \n"
+"    "
+msgstr ""
+
+#. type: Content of: <activityset><activity><title>
+#: fsfe.org/activities/apple-litigation/activity.en.xml:6
+#, no-wrap
+msgid "DMA: Apple Litigation"
+msgstr ""
+
+#. type: Content of: <activityset><activity><description>
+#: fsfe.org/activities/apple-litigation/activity.en.xml:8
+#, no-wrap
+msgid ""
+"      The FSFE is intervening to safeguard Free Software in a key court case involving Apple and the European Commission.\n"
+"      Apple is trying to avoid obligations derived from the Digital Markets Act (DMA).\n"
+"      The FSFE seeks to hold Apple accountable under the DMA in a developer-friendly way.\n"
+"    "
+msgstr ""
+
+#. type: Content of: <activityset><activity><title>
+#: fsfe.org/activities/avm-gpl-violation/activity.en.xml:6
+#, no-wrap
+msgid "AVM GPL violation"
+msgstr ""
+
+#. type: Content of: <activityset><activity><description>
+#: fsfe.org/activities/avm-gpl-violation/activity.en.xml:8
+#, no-wrap
+msgid ""
+"      Can a company modify GPL-licensed software on a third-party device? Router \n"
+"      manufacturer AVM accused Cybits of copyright and trademark infringement \n"
+"      for modifying the original router firmware, which is largely based on the \n"
+"      Linux kernel. Together with gpl-violations.org, we successfully convinced \n"
+"      the court that the terms of the GPL licence are binding: software under \n"
+"      this licence can be freely modified and installed, even if it is supplied \n"
+"      as part of the firmware of an embedded device. \n"
+"    "
+msgstr ""
+
+#. type: Content of: <activityset><activity><title>
+#: fsfe.org/activities/bgw/activity.en.xml:6
+#, no-wrap
+msgid "Brave GNU World"
+msgstr ""
+
+#. type: Content of: <activityset><activity><description>
+#: fsfe.org/activities/bgw/activity.en.xml:8
+#, no-wrap
+msgid ""
+"      The Brave GNU World was a monthly column published from 1999 to 2004, \n"
+"      addressed at both technical and non-technical readers. Its aim was to\n"
+"      provide an insight into current projects and developments based on the \n"
+"      Free Software philosophy. The Brave GNU World was translated into 9 \n"
+"      languages, making it probably the most widely distributed monthly column \n"
+"      in the world. \n"
+"    "
+msgstr ""
+
+#. type: Content of: <activityset><activity><title>
+#: fsfe.org/activities/conf-events/activity.en.xml:6
+#, no-wrap
+msgid "Reports about conferences, events, and booths"
+msgstr ""
+
+#. type: Content of: <activityset><activity><description>
+#: fsfe.org/activities/conf-events/activity.en.xml:8
+#, no-wrap
+msgid ""
+"The Free Software Foundation Europe (FSFE) regularly participates in various conferences across Europe. These events feature talks and workshops aimed at discussing the diverse activities conducted by the FSFE. Here, you will find a compilation of the latest reports from these engaging events.\n"
+"    "
+msgstr ""
+
+#. type: Content of: <activityset><version>
+#: fsfe.org/activities/deviceneutrality/activity.en.xml:3
+#: fsfe.org/activities/routers/activity.en.xml:3
+#, fuzzy, no-wrap
+msgid "3"
+msgstr "1"
+
+#. type: Content of: <activityset><activity><title>
+#: fsfe.org/activities/deviceneutrality/activity.en.xml:6
+#, fuzzy, no-wrap
+msgid "Device Neutrality"
+msgstr "Apparaatneutraliteit"
+
+#. type: Content of: <activityset><activity><description>
+#: fsfe.org/activities/deviceneutrality/activity.en.xml:8
+#, fuzzy, no-wrap
+msgid ""
+"      Although digital devices are ubiquitous today, the number of devices on which users cannot run Free Software is exponentially increasing. The consequence is an increased loss of control over users’ technology. Device Neutrality aims to enable end-users to bypass gatekeepers to have a non-discriminatory use of Free Software on their devices. \n"
+"    "
+msgstr ""
+"      Hoewel digitale apparaten vandaag de dag alomtegenwoordig zijn, neemt het aantal apparaten waarop gebruikers geen Vrije Software kunnen draaien, exponentieel toe. Het gevolg is een toenemend\n"
+"      verlies van controle van gebruikers over de technologie. Apparaatneutraliteit heeft als doel\n"
+"      eindgebruikers in staat te stellen de poortwachters te omzeilen en zo op een niet-discriminerende manier op hun apparaten gebruik te kunnen maken van Vrije Software.\n"
+"    "
+
+#. type: Content of: <activityset><activity><title>
+#: fsfe.org/activities/dma/activity.en.xml:6
+#, no-wrap
+msgid "Digital Markets Act"
+msgstr ""
+
+#. type: Content of: <activityset><activity><description>
+#: fsfe.org/activities/dma/activity.en.xml:8
+#, no-wrap
+msgid ""
+"      Device Neutrality is the policy concept to regulate monopoly over\n"
+"      devices and re-establish end-user control over their digital equipment.\n"
+"      The Digital Markets Act (DMA) regulates the economic activity of large\n"
+"      digital platforms and introduces Device Neutrality in the EU\n"
+"      legislation, fostering access to Free Sofware in Devices.\n"
+"    "
+msgstr ""
+
+#. type: Content of: <activityset><activity><title>
+#: fsfe.org/activities/drm/activity.en.xml:6
+#, fuzzy, no-wrap
+msgid "DRM.info"
+msgstr "DRM.info"
+
+#. type: Content of: <activityset><activity><description>
+#: fsfe.org/activities/drm/activity.en.xml:8
+#, fuzzy, no-wrap
+msgid ""
+"   DRM.info is a collaborative platform initiated and maintained by the FSFE to \n"
+"   inform about the dangers and concerns of the Digital Restrictions Management. \n"
+"   Contributors to DRM.info include digital freedom, consumer protection, net \n"
+"   activism and library organisations. \n"
+"    "
+msgstr ""
+"    DRM.info is een gemeenschappelijk platform over de gevaren van het beheer van digitale\n"
+"    beperkingen, Digital Restriction Management (DRM). De FSFE die aan de wieg stond\n"
+"    van dit initiatief, zal ook het onderhoud van dit platform op zich nemen. Alle initiatiefnemers, \n"
+"    waaronder vrijheidsbewegingen, consumentenorganisaties, internetactivisten en \n"
+"    bibliotheken, krijgen de kans om hun specifieke zorgen over DRM meer bekend te maken.\n"
+"    "
+
+#. type: Content of: <activityset><activity><title>
+#: fsfe.org/activities/elections/activity.en.xml:6
+#, no-wrap
+msgid "Electoral Activities"
+msgstr ""
+
+#. type: Content of: <activityset><activity><description>
+#: fsfe.org/activities/elections/activity.en.xml:8
+#, no-wrap
+msgid ""
+"      What could be a better time to ask politicians about their stance on Free \n"
+"      Software and Open Standards than the run-up to an election? We believe we \n"
+"      can and should raise these issues in all elections, European, national, \n"
+"      regional and local. Depending on the electoral system and culture, we use\n"
+"       different strategies and tools.\n"
+"    "
+msgstr ""
+
+#. type: Content of: <activityset><activity><title>
+#: fsfe.org/activities/eucd/activity.en.xml:6
+#, no-wrap
+msgid "EUCD - Copyright extensions that harm"
+msgstr ""
+
+#. type: Content of: <activityset><activity><description>
+#: fsfe.org/activities/eucd/activity.en.xml:8
+#, no-wrap
+msgid ""
+"      The European Copyright Directive (EUCD) was the European equivalent of the \n"
+"      US Digital Millennium Copyright Act (DMCA). These laws lead to the \n"
+"      creation of monopolies and cartels, and pose serious obstacles to freedom \n"
+"      of speech and the press by providing means for digital censorship. The \n"
+"      FSFE has been actively involved in opposing such harmful legislation. \n"
+"    "
+msgstr ""
+
+#. type: Content of: <activityset><activity><title>
+#: fsfe.org/activities/eura-slovakia/activity.en.xml:6
+#, no-wrap
+msgid "EURA Slovakia case"
+msgstr ""
+
+#. type: Content of: <activityset><activity><description>
+#: fsfe.org/activities/eura-slovakia/activity.en.xml:8
+#, no-wrap
+msgid ""
+"    The Slovak company EURA faced fines of 5600 euros for not purchasing and use \n"
+"    Microsoft Windows operating system for submitting electronic tax reports. \n"
+"    The Slovak tax administration gave EURA the option to either buy and use \n"
+"    Microsoft Windows or face the fines. The FSFE assisted in this case \n"
+"    advocating for platform-neutral solutions for such procedures. Unfortunately, \n"
+"    the court ruled against Free Software and Open Standards, but we were able to \n"
+"    raise awareness about these wrongdoings in Slovakia and beyond. \n"
+"    "
+msgstr ""
+
+#. type: Content of: <activityset><activity><title>
+#: fsfe.org/activities/fla/activity.en.xml:6
+#, fuzzy, no-wrap
+msgid "Fiduciary Programme"
+msgstr "Fiduciair programma"
+
+#. type: Content of: <activityset><activity><description>
+#: fsfe.org/activities/fla/activity.en.xml:8
+#, fuzzy, no-wrap
+msgid ""
+"    The Fiduciary License Agreement (FLA) allows software projects to assign \n"
+"    copyrights to a named fiduciary for its effective management. This allows \n"
+"    developers to focus on development rather than spending time on legal \n"
+"    administration. While the FSFE is no longer accepting new projects under the \n"
+"    Fiduciary Programme, we continue to offer customisable versions of the FLA) \n"
+"    for your use. \n"
+"        "
+msgstr ""
+"                De Fiduciaire Licentieovereenkomst (\"Fiduciary License Agreement\" of FLA) stelt softwareprojecten in staat auteursrechten toe te wijzen en te consolideren aan een met name genoemde fiduciair, zodat deze  hun auteursrechtstatus effectief kan beheren. Hierdoor kunnen ontwikkelaars zich concentreren op het maken van goede applicaties, in plaats van hun tijd te besteden aan juridisch beheer. Hoewel de FSFE geen nieuwe projecten meer aanvaardt in het kader van het Fiduciaire Programma, blijven we aangepaste versies van de Fiduciaire Licentieovereenkomst (FLA) aanbieden.\n"
+"        "
+
+#. type: Content of: <activityset><activity><title>
+#: fsfe.org/activities/foss4smes/activity.en.xml:6
+#, no-wrap
+msgid "FOSS4SMEs"
+msgstr ""
+
+#. type: Content of: <activityset><activity><description>
+#: fsfe.org/activities/foss4smes/activity.en.xml:8
+#, no-wrap
+msgid ""
+"    FOSS4SMEs was a two-year collaborative Erasmus+ project to spread and \n"
+"    increase knowledge about Free Software. The FSFE collaborate with the other \n"
+"    partners to develop free online educational resources for managers and \n"
+"    employees of small and medium-sized enterprises (SMEs). \n"
+"    "
+msgstr ""
+
+#. type: Content of: <activityset><activity><title>
+#: fsfe.org/activities/fp6/activity.en.xml:6
+#, no-wrap
+msgid "6th EC Framework Programme (FP6)"
+msgstr ""
+
+#. type: Content of: <activityset><activity><description>
+#: fsfe.org/activities/fp6/activity.en.xml:8
+#, no-wrap
+msgid ""
+"     Funding of research and development by the European Commission is usually \n"
+"     done within the \"framework programmes\" (FPs). These last for four years and \n"
+"     FP6 started officially on December 17th, 2002. The FSFE sought to help with \n"
+"     Free Software related activities in FP6. \n"
+"    "
+msgstr ""
+
+#. type: Content of: <activityset><activity><title>
+#: fsfe.org/activities/fp7/activity.en.xml:6
+#, no-wrap
+msgid "7th EC Framework Programme (FP7)"
+msgstr ""
+
+#. type: Content of: <activityset><activity><description>
+#: fsfe.org/activities/fp7/activity.en.xml:8
+#, no-wrap
+msgid ""
+"     The European Commission funds research and development through official \n"
+"     framework programmes (FP for short). From 2007 these framework programmes \n"
+"     were used to select projects for support until 2013. The FSFE played a \n"
+"     central role in supported projects related to Free Software. \n"
+"    "
+msgstr ""
+
+#. type: Content of: <activityset><activity><title>
+#: fsfe.org/activities/gbn/activity.en.xml:6
+#, no-wrap
+msgid "GNU Business Network"
+msgstr ""
+
+#. type: Content of: <activityset><activity><description>
+#: fsfe.org/activities/gbn/activity.en.xml:8
+#, no-wrap
+msgid ""
+"      The GNU Business Network had the vision to network all companies, \n"
+"      developers and users in and around Free Software in a way that the \n"
+"      potential synergies are encouraged and informed decisions become possible. \n"
+"    "
+msgstr ""
+
+#. type: Content of: <activityset><activity><title>
+#: fsfe.org/activities/gplv3/activity.en.xml:6
+#, no-wrap
+msgid "GPLv3"
+msgstr ""
+
+#. type: Content of: <activityset><activity><description>
+#: fsfe.org/activities/gplv3/activity.en.xml:8
+#, no-wrap
+msgid ""
+"      The release of version 3 of the GNU General Public License (GPL) on 29 \n"
+"      June 2007 marked the end of an eighteen-month public consultation process. \n"
+"      During this time, the FSFE worked to raise awareness of the proposed \n"
+"      changes to the licence, to help the community participate in the public \n"
+"      consultation, and to document the ongoing discussion to make this issue as \n"
+"      accessible as possible. \n"
+"    "
+msgstr ""
+
+#. type: Content of: <activityset><activity><title>
+#: fsfe.org/activities/igf/activity.en.xml:6
+#, no-wrap
+msgid "Internet Governance Forum (IGF)"
+msgstr ""
+
+#. type: Content of: <activityset><activity><description>
+#: fsfe.org/activities/igf/activity.en.xml:8
+#, no-wrap
+msgid ""
+"      The Internet Governance Forum (IGF) is a global policy discussion forum of \n"
+"      the United Nations, established as an outcome of the UN World Summit on \n"
+"      the Information Society (WSIS). FSFE followed the IGF to ensure that \n"
+"      policy discussions will not endanger digital freedom in general and Free \n"
+"      Software in particular. \n"
+"    "
+msgstr ""
+
+#. type: Content of: <activityset><activity><title>
+#: fsfe.org/activities/ilovefs/activity.en.xml:6
+#, fuzzy, no-wrap
+msgid "I Love Free Software"
+msgstr "Ik hou van Vrije Software"
+
+#. type: Content of: <activityset><activity><description>
+#: fsfe.org/activities/ilovefs/activity.en.xml:8
+#, fuzzy, no-wrap
+msgid "      We often underestimate the power of a simple "
+msgstr "                  We onderschatten vaak de kracht van een eenvoudig "
+
+#. type: Content of: <activityset><activity><description><strong>
+#: fsfe.org/activities/ilovefs/activity.en.xml:8
+#, fuzzy, no-wrap
+msgid ""
+"Thank\n"
+"      You"
+msgstr "bedankje"
+
+#. type: Content of: <activityset><activity><description>
+#: fsfe.org/activities/ilovefs/activity.en.xml:9
+#, fuzzy, no-wrap
+msgid ""
+". Free Software contributors do important work for our society and the \"I Love Free Software Day\" on 14 February is the perfect opportunity for you to express your special gratitude. Since 2010, we have celebrated this wonderful annual event with an ever-growing and diverse community. ♥ ♥ ♥\n"
+"    "
+msgstr ""
+". Bijdragers aan Vrije Software doen belangrijk werk voor onze samenleving en verdienen aandacht. De \"Ik hou van Vrij Software dag\" op 14 februari (ook bekend als Valentijnsdag) is voor u de perfecte mogelijkheid om uiting te geven aan uw speciale dankbaarheid. Sinds 2010 hebben we dit fantastische jaarlijkse evenement samen met een steeds verder groeiende diverse gemeenschap gevierd.  ♥ ♥ ♥\n"
+"              "
+
+#. type: Content of: <activityset><activity><title>
+#: fsfe.org/activities/ipred2/activity.en.xml:6
+#, no-wrap
+msgid "IPRED2"
+msgstr ""
+
+#. type: Content of: <activityset><activity><description>
+#: fsfe.org/activities/ipred2/activity.en.xml:8
+#, no-wrap
+msgid ""
+"      A second Intellectual Property Rights Enforcement Directive was proposed \n"
+"      by the European Commission. It aims to criminalise all \"intentional, \n"
+"      commercial-scale\" infringements and allow rights holders to participate in \n"
+"      investigations. The FSFE pointed out to the EU institutions how such laws \n"
+"      encourage abuse of the legal system and have a chilling effect on \n"
+"      law-abiding activities. \n"
+"    "
+msgstr ""
+
+#. type: Content of: <activityset><activity><title>
+#: fsfe.org/activities/learnlikeapro/activity.en.xml:6
+#, no-wrap
+msgid "Learn like a pro"
+msgstr ""
+
+#. type: Content of: <activityset><activity><description>
+#: fsfe.org/activities/learnlikeapro/activity.en.xml:8
+#, no-wrap
+msgid ""
+"An initiative to bring Free Software in the education sector by increasing \n"
+"the digital sovereignty and competence of students and teachers. Created by the \n"
+"Zurich chapter, 'Lernen wie die Profis' was awarded the DINAcon Award. The activity is in German. \n"
+"    "
+msgstr ""
+
+#. type: Content of: <activityset><activity><title>
+#: fsfe.org/activities/licence-questions/activity.en.xml:6
+#, no-wrap
+msgid "Licence Questions"
+msgstr ""
+
+#. type: Content of: <activityset><activity><description>
+#: fsfe.org/activities/licence-questions/activity.en.xml:8
+#, no-wrap
+msgid ""
+"     The FSFE’s Licence Questions mailing list is our group of volunteers dedicated to provide help with Free Software licences and compliance. If you need advice on what Free Software licence you should use, or if you want to know more about what rights you have over a piece of Free Software, you can contact us. \n"
+"    "
+msgstr ""
+
+#. type: Content of: <activityset><activity><title>
+#: fsfe.org/activities/ln/activity.en.xml:6
+#, no-wrap
+msgid "Legal Network"
+msgstr ""
+
+#. type: Content of: <activityset><activity><description>
+#: fsfe.org/activities/ln/activity.en.xml:8
+#, no-wrap
+msgid ""
+"     The Legal Network is a neutral, non-partisan, group of experts involved in Free Software legal issues with currently several hundreds of participants from different legal systems, academic backgrounds and affiliations. The aim of the Legal Network is to promote discussion and foster better knowledge of the legal constructs that back Free Software. \n"
+"    "
+msgstr ""
+
+#. type: Content of: <activityset><activity><title>
+#: fsfe.org/activities/mankind/activity.en.xml:6
+#, no-wrap
+msgid "Classification of Free Software as a World Cultural Heritage"
+msgstr ""
+
+#. type: Content of: <activityset><activity><description>
+#: fsfe.org/activities/mankind/activity.en.xml:8
+#, no-wrap
+msgid ""
+"     The goal was to have Free Software classified by UNESCO as an Intangible \n"
+"     World Heritage and registered in the World Memory Register (another UNESCO \n"
+"     project). The Free Software community and UNESCO share the same values of \n"
+"     freedom, equality and fraternity. Such recognition would be a great boost \n"
+"     for Free Software. \n"
+"    "
+msgstr ""
+
+#. type: Content of: <activityset><activity><title>
+#: fsfe.org/activities/ms-vs-eu/activity.en.xml:6
+#, no-wrap
+msgid "Microsoft vs. EU Antitrust Case"
+msgstr ""
+
+#. type: Content of: <activityset><activity><description>
+#: fsfe.org/activities/ms-vs-eu/activity.en.xml:8
+#, no-wrap
+msgid ""
+"      In 2001 the European Union started investigating Microsoft's dominant \n"
+"      position in the market for desktop operating systems. The FSFE represented \n"
+"      the interests of Free Software developer as a public interest organisation \n"
+"      who cannot be bought off. Thanks to the excellent work by all involved \n"
+"      parties, the case was won in all rulings up to the European Court of \n"
+"      Justice in 2012. \n"
+"    "
+msgstr ""
+
+#. type: Content of: <activityset><activity><title>
+#: fsfe.org/activities/msooxml/activity.en.xml:6
+#, no-wrap
+msgid "MS-OOXML"
+msgstr ""
+
+#. type: Content of: <activityset><activity><description>
+#: fsfe.org/activities/msooxml/activity.en.xml:8
+#, no-wrap
+msgid ""
+"      Since the beginning of the standardisation process for Microsoft's Office \n"
+"      Open XML - OOXML (hereafter MS-OOXML), the FSFE has raised serious doubts \n"
+"      about whether MS-OOXML can be considered open. FSFE was the first to raise \n"
+"      the issue in the community, led the movement against the standardisation \n"
+"      of MS-OOXML, and has been closely following developments over the years. \n"
+"    "
+msgstr ""
+
+#. type: Content of: <activityset><activity><title>
+#: fsfe.org/activities/ngi/activity.en.xml:6
+#, no-wrap
+msgid "Next Generation Internet"
+msgstr ""
+
+#. type: Content of: <activityset><activity><description>
+#: fsfe.org/activities/ngi/activity.en.xml:8
+#, no-wrap
+msgid ""
+"     The FSFE is a partner organisation of NGI, a coalition of non-profit organisations from across Europe. Funded by the EC, it provides grants to work on new ideas and technologies that contribute to the establishment of the Next Generation Internet. The FSFE provides legal support for these projects.\n"
+"    "
+msgstr ""
+
+#. type: Content of: <activityset><activity><title>
+#: fsfe.org/activities/nledu/activity.en.xml:6
+#, no-wrap
+msgid "Unlock Education in the Netherlands"
+msgstr ""
+
+#. type: Content of: <activityset><activity><description>
+#: fsfe.org/activities/nledu/activity.en.xml:8
+#, no-wrap
+msgid ""
+"    This activity was specifically targeted at the Dutch education sector, with \n"
+"    the aim of enabling citizens to have free access to education and public \n"
+"    institutions, both online and offline. By promoting the mandatory use of \n"
+"    Open Standards and platform-independent access to all materials, students \n"
+"    and parents will be able fulfil their potential for personal growth and \n"
+"    development without being dependent on a company. \n"
+"    "
+msgstr ""
+
+#. type: Content of: <activityset><activity><title>
+#: fsfe.org/activities/pdfreaders/activity.en.xml:6
+#, no-wrap
+msgid "PDFreaders"
+msgstr ""
+
+#. type: Content of: <activityset><activity><description>
+#: fsfe.org/activities/pdfreaders/activity.en.xml:8
+#, no-wrap
+msgid ""
+"      The PDFreaders initiative aims to shine a spotlight on government \n"
+"      organisations that promote proprietary PDF readers. With the help of \n"
+"      activists across Europe, we have contacted these organisations and told \n"
+"      them how they can improve their websites to respect our freedom. On \n"
+"      "
+msgstr ""
+
+#. type: Content of: <activityset><activity><description><a>
+#: fsfe.org/activities/pdfreaders/activity.en.xml:12
+#, no-wrap
+msgid "pdfreaders.org"
+msgstr ""
+
+#. type: Content of: <activityset><activity><description>
+#: fsfe.org/activities/pdfreaders/activity.en.xml:13
+#, no-wrap
+msgid ""
+"      we present Free Software PDF readers for all major operating systems.\n"
+"    "
+msgstr ""
+
+#. type: Content of: <activityset><activity><title>
+#: fsfe.org/activities/publiccode/activity.en.xml:6
+#, no-wrap
+msgid "Public Money? Public Code!"
+msgstr ""
+
+#. type: Content of: <activityset><activity><description>
+#: fsfe.org/activities/publiccode/activity.en.xml:8
+#, no-wrap
+msgid ""
+"      Why is software created using taxpayers' money not released as Free Software? We want legislation requiring that publicly financed software developed for the public sector be made publicly available under a Free and Open Source Software licence. If it is public money, it should be public code as well. Code paid by the people should be available to the people!\n"
+"    "
+msgstr ""
+
+#. type: Content of: <activityset><activity><title>
+#: fsfe.org/activities/radiodirective/activity.en.xml:6
+#, no-wrap
+msgid "Radio Lockdown Directive"
+msgstr ""
+
+#. type: Content of: <activityset><activity><description>
+#: fsfe.org/activities/radiodirective/activity.en.xml:8
+#, no-wrap
+msgid ""
+"      An EU regulation may make it impossible to install a custom piece of \n"
+"      software on most radio devices like WiFi routers, smartphones, and \n"
+"      embedded devices. It requires hardware manufacturers to implement a \n"
+"      barrier that disallows users to install any software which has not been \n"
+"      certified by them.\n"
+"    "
+msgstr ""
+
+#. type: Content of: <activityset><activity><title>
+#: fsfe.org/activities/reuse/activity.en.xml:6
+#, no-wrap
+msgid "REUSE Software"
+msgstr ""
+
+#. type: Content of: <activityset><activity><description>
+#: fsfe.org/activities/reuse/activity.en.xml:8
+#, no-wrap
+msgid ""
+"The FSFE is running a project to make licensing easy for humans and machines alike. It solves a fundamental issue that Free Software licensing has at the very source: what license is a file licensed under, and who owns the copyright? REUSE provides easy recommendations in three steps that help users, developers and legal professionals.\n"
+"    "
+msgstr ""
+
+#. type: Content of: <activityset><activity><title>
+#: fsfe.org/activities/routers/activity.en.xml:6
+#, no-wrap
+msgid "Router Freedom"
+msgstr ""
+
+#. type: Content of: <activityset><activity><description>
+#: fsfe.org/activities/routers/activity.en.xml:8
+#, no-wrap
+msgid "      Although we should be free to choose the technical devices we use in our private lives, some European Internet Service Providers are dictating which device their customers have to use to connect to the Internet, or discriminating against owners of alternative devices. This undermines our basic freedom of choice.  \n"
+msgstr ""
+
+#. type: Content of: <activityset><activity><title>
+#: fsfe.org/activities/self/activity.en.xml:6
+#, no-wrap
+msgid "SELF"
+msgstr ""
+
+#. type: Content of: <activityset><activity><description>
+#: fsfe.org/activities/self/activity.en.xml:8
+#, no-wrap
+msgid ""
+"     The SELF project (Science, Education and Learning in Freedom) aimed at \n"
+"     creating a repository of educational materials on Free Software and Open \n"
+"     Standards. It did this by providing a platform for the collaborative \n"
+"     development of educational materials, as well as by engaging in the \n"
+"     development of educational materials that were missing in the field today. \n"
+"    "
+msgstr ""
+
+#. type: Content of: <activityset><activity><title>
+#: fsfe.org/activities/sfp/activity.en.xml:6
+#, no-wrap
+msgid "Software Freedom Podcast"
+msgstr ""
+
+#. type: Content of: <activityset><activity><description>
+#: fsfe.org/activities/sfp/activity.en.xml:8
+#, fuzzy, no-wrap
+msgid ""
+"     Software users must be able to participate in the development and \n"
+"     distribution of software in order to have a world where software does what \n"
+"     software users want it to do. Software patents block this goal by adding \n"
+"     legal and financial risks to software development and distribution, and by \n"
+"     giving patent holders the legal power to completely prohibit software \n"
+"     developers from using the patented ideas.      "
+msgstr ""
+"      Wij werken aan een wereld waarin software doet wat de softwaregebruikers willen dat het doet. Hiervoor moeten softwaregebruikers kunnen deelnemen aan de ontwikkeling en de distributie van de software.\n"
+"      Softwarepatenten blokkeren dit doel door juridische en financiële risico's toe te voegen aan de ontwikkeling en de distributie van software en door de patenthouders de wettelijke macht om software-ontwikkelaars volledig te verbieden de gepatenteerde ideeën te gebruiken.\n"
+"    "
+
+#. type: Content of: <activityset><activity><title>
+#: fsfe.org/activities/stacs/activity.en.xml:6
+#, fuzzy, no-wrap
+msgid "STACS"
+msgstr "STACS"
+
+#. type: Content of: <activityset><activity><description>
+#: fsfe.org/activities/stacs/activity.en.xml:8
+#, fuzzy, no-wrap
+msgid ""
+"     STACS (Science, Technology and Civil Society) was a project that sought to \n"
+"     bridge the gap between civil society and research in order to increase the \n"
+"     societal relevance of research being done. The project aimed to accomplish \n"
+"     by educating both civil society organisations and researchers, and finding \n"
+"     common projects to work on for the future. \n"
+"    "
+msgstr ""
+"     Het STACS-project (Science, technology and civil society) wilde een brug slaan tussen de\n"
+"     burgermaatschappij en onderzoekers om zo de sociale relevantie van het\n"
+"     onderzoekswerk te vergroten. Men wilde dit bereiken door zowel de onderzoekers als de\n"
+"     burgers hiervoor op te leiden, en door projecten te zoeken waaraan men in de toekomst\n"
+"     kon samenwerken.\n"
+"    "
+
+#. type: Content of: <activityset><activity><title>
+#: fsfe.org/activities/swpat/activity.en.xml:6
+#, fuzzy, no-wrap
+msgid "Software Patents in Europe"
+msgstr "Softwarepatenten in Europa"
+
+#. type: Content of: <activityset><activity><description>
+#: fsfe.org/activities/swpat/activity.en.xml:8
+#, fuzzy, no-wrap
+msgid ""
+"      We are working towards a world where software does what software\n"
+"      users want it to do. For this, software users must be able to\n"
+"      participate in the development and distribution of the software.\n"
+"      Software patents block this goal by adding legal and financial\n"
+"      risks to software development and distribution and by giving the\n"
+"      patent holders legal power to completely prohibit software\n"
+"      developers from using the patented ideas.\n"
+"    "
+msgstr ""
+"      Wij werken aan een wereld waarin software doet wat de softwaregebruikers willen dat het doet. Hiervoor moeten softwaregebruikers kunnen deelnemen aan de ontwikkeling en de distributie van de software.\n"
+"      Softwarepatenten blokkeren dit doel door juridische en financiële risico's toe te voegen aan de ontwikkeling en de distributie van software en door de patenthouders de wettelijke macht om software-ontwikkelaars volledig te verbieden de gepatenteerde ideeën te gebruiken.\n"
+"    "
+
+#. type: Content of: <activityset><activity><title>
+#: fsfe.org/activities/tgs/activity.en.xml:6
+#, no-wrap
+msgid "TUX&amp;GNU@school column"
+msgstr ""
+
+#. type: Content of: <activityset><activity><description>
+#: fsfe.org/activities/tgs/activity.en.xml:8
+#, no-wrap
+msgid ""
+"      The TUX&amp;GNU@school column was a regular column about Free\n"
+"      Software in education written by by Mario Fux. It informed about\n"
+"      educational Free Software, useful web sites on the topic and\n"
+"      other interesting topics for teachers, students and all software\n"
+"      freedom advocates.\n"
+"    "
+msgstr ""
+
+#. type: Content of: <activityset><activity><title>
+#: fsfe.org/activities/upcyclingandroid/activity.en.xml:6
+#, no-wrap
+msgid "Upcycling Android"
+msgstr ""
+
+#. type: Content of: <activityset><activity><description>
+#: fsfe.org/activities/upcyclingandroid/activity.en.xml:8
+#, no-wrap
+msgid ""
+"Keep using your phone with Free Software. Upcycling Android explains \n"
+"the issue of software obsolescence in the Android world and helps \n"
+"people flashing their phones with Free Software operating systems. \n"
+"    "
+msgstr ""
+
+#. type: Content of: <activityset><activity><title>
+#: fsfe.org/activities/whyfs/activity.en.xml:6
+#, fuzzy, no-wrap
+msgid "We speak about Free Software"
+msgstr "Ik hou van Vrije Software"
+
+#. type: Content of: <activityset><activity><description>
+#: fsfe.org/activities/whyfs/activity.en.xml:8
+#, no-wrap
+msgid ""
+"      Free Software is often referred to as \"Open Source\". But we are\n"
+"      convinced that Free Software is the better term: easier to\n"
+"      understand, harder to abuse, well-defined, providing additional\n"
+"      value, and offering freedom. We connected companies,\n"
+"      organisations and even co-founders of the Open Source movement\n"
+"      that prefer to use the term Free Software.\n"
+"    "
+msgstr ""
+
+#. type: Content of: <activityset><activity><title>
+#: fsfe.org/activities/wipo/activity.en.xml:6
+#, no-wrap
+msgid "World Intellectual Property Organization"
+msgstr ""
+
+#. type: Content of: <activityset><activity><description>
+#: fsfe.org/activities/wipo/activity.en.xml:8
+#, no-wrap
+msgid ""
+"The World Intellectual Property Organization (WIPO), one of the 16 specialised \n"
+"agencies of the UN system, administers 23 international treaties dealing with \n"
+"various aspects of limited monopolies on knowledge. As an observer to WIPO, and \n"
+"together with a global coalition of other actors, the FSFE worked to transform \n"
+"WIPO into a \"World Intellectual Wealth Organisation\". \t\n"
+"    "
+msgstr ""
+
+#. type: Content of: <activityset><activity><title>
+#: fsfe.org/activities/wsis/activity.en.xml:6
+#, fuzzy, no-wrap
+msgid "World Summit on the Information Society (WSIS)"
+msgstr "World Summit on the Information Society (WSIS)"
+
+#. type: Content of: <activityset><activity><description>
+#: fsfe.org/activities/wsis/activity.en.xml:8
+#, fuzzy, no-wrap
+msgid ""
+"The World Summit on the Information Society (WSIS) was a two-summit UN conference \n"
+"organised by the ITU to propose important cornerstones for the information and \n"
+"knowledge society. The FSFE participated with other civil societies to ensure \n"
+"that the principles of the digital age would protect digital freedom, knowledge \n"
+"sharing, access to information and Free Software. \t\n"
+"    "
+msgstr ""
+"The World Summit on the Information Society (WSIS)\n"
+"is een VN conferentie, georganiseerd door de ITU, om belangrijke principes voor de informatie- en kennismaatschappij vast te leggen. De FSFE neemt, samen met verschillende andere burgerorganisaties, deel aan deze conferentie om er voor te zorgen dat de principes van het digitale tijdperk niet alleen door de media-industrie en regeringen wordt bepaald en ook om te voorkomen dat de mensenrechten beperkt gaan worden door technische afspraken.\n"
+"    "
+
+#. type: Content of: <activityset><activity><title>
+#: fsfe.org/activities/yh4f/activity.en.xml:6
+#, no-wrap
+msgid "Youth Hacking 4 Freedom"
+msgstr ""
+
+#. type: Content of: <activityset><activity><description>
+#: fsfe.org/activities/yh4f/activity.en.xml:8
+#, no-wrap
+msgid ""
+"    Young people, from all over Europe, compete in Youth Hacking 4 Freedom to win cash prizes by creating programs of their choice licensed as Free Software. The six winners will be invited to the Award ceremony weekend. Youth Hacking for Freedom inspires people to learn programming and to collaborate. \n"
+"    "
+msgstr ""
+
+#. type: Content of: <activityset><activity><title>
+#: fsfe.org/activities/zooom/activity.en.xml:6
+#, no-wrap
+msgid "The ZOOOM Initiative"
+msgstr ""
+
+#. type: Content of: <activityset><activity><description>
+#: fsfe.org/activities/zooom/activity.en.xml:8
+#, no-wrap
+msgid ""
+"      The FSFE is part of these European consortium to promote and raise awareness about the importance of Free Software, Open Data, and Open Hardware among academia, business, industry, and innovation supporting organizations. As a big part of our work, we are promoting the REUSE specification as an important element for licensing compliance. \n"
+"    "
+msgstr ""

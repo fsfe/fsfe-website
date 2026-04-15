@@ -91,6 +91,9 @@ select = [
 ignore = [
   "D203",  # incorrect-blank-line-before-class, Conflicts with D211
   "D213",  # multi-line-summary-second-line, Conflicts with D212
+  "S607",  # this is a very high security warning about always using absolute paths to binaries
+  # its too much work and too silly for us to keep
+  "S603",  # this just warns on every subprocess command, too annoying
 ]
 
 [tool.ruff.lint.per-file-ignores]

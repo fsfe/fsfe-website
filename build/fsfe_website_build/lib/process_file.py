@@ -36,9 +36,7 @@ def _get_xmls(file: Path, parser: etree.XMLParser) -> list[etree.Element]:
         for elem in root.xpath("version"):
             root.remove(elem)
         lang = lang_from_filename(file)
-        direction: str = LANG_CODE_DIRECTION_MAPPINGS.get(
-            lang_from_filename(file), "rtl"
-        )
+        direction: str = LANG_CODE_DIRECTION_MAPPINGS[lang_from_filename(file)]
         for elem in root.xpath("*"):
             elem.set("filename", get_basename(file))
             # set the lang and direction on all elements

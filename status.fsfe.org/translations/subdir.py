@@ -47,7 +47,7 @@ def _generate_translation_data(lang: str, file: Path) -> _TranslationInfo | None
     )
 
     original_url = (
-        f"https://webpreview.fsfe.org?uri=/{page.relative_to(page.parts[0])}.en.html"
+        f"https://git.fsfe.org/FSFE/fsfe-website/src/branch/master/{page}.en.xhtml"
         if ext == "xhtml"
         else (
             f"https://git.fsfe.org/FSFE/fsfe-website/src/branch/master/{page}.en.xml"
@@ -59,7 +59,7 @@ def _generate_translation_data(lang: str, file: Path) -> _TranslationInfo | None
         "#"
         if not working_file.exists()
         else (
-            f"https://webpreview.fsfe.org?uri=/{page.relative_to(page.parts[0])}.{lang}.html"
+            f"https://git.fsfe.org/FSFE/fsfe-website/src/branch/master/{page}.{lang}.xhtml"
             if ext == "xhtml"
             else (
                 f"https://git.fsfe.org/FSFE/fsfe-website/src/branch/master/{page}.{lang}.xml"

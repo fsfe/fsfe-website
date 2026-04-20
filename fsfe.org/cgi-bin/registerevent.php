@@ -83,7 +83,7 @@ function parse_submission()
         'name' => isset($_POST['name']) ? htmlspecialchars($_POST['name']) : '',
         'email' => isset($_POST['email']) ? htmlspecialchars($_POST['email']) : '',
         'title' => isset($_POST['title']) ? htmlspecialchars($_POST['title']) : '',
-        'groupname' => isset($_POST['groupname']) ? htmlspecialchars($_POST['groupname']) : '',
+        'groupname' => isset($_POST['groupname']) ? $_POST['groupname'] : '',
         'groupurl' => isset($_POST['groupurl']) ? htmlspecialchars($_POST['groupurl']) : '',
         'startdate' => isset($_POST['startdate']) ? (htmlspecialchars($_POST['startdate']).':00Z') : '',
         'enddate' => isset($_POST['enddate']) ? (htmlspecialchars($_POST['enddate']).':00Z') : '',

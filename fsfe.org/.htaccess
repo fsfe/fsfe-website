@@ -54,7 +54,7 @@ RewriteRule ^share/?$ /cgi-bin/share.php [NC,L]
 RewriteRule ^subscribe/?$ /contact/email-updates.html [R=301,L]
 
 # Team Women
-RewriteRule ^women(/.*)?$ https://wiki.fsfe.org/Teams/Women [R=301,L]
+RewriteRule ^women(/.*)?$ https://docs.fsfe.org/en/teams/Women [R=301,L]
 
 # Others
 RewriteRule ^standards(.*) /freesoftware/standards$1 [R=301,L]

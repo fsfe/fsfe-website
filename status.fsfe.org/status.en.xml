@@ -8,6 +8,9 @@
     <update date="2026-03-03">
       FSFE System Hackers have identified issues on the Database of the Matrix service and are working on resolving them.
     </update>
+    <update date="2026-04-17">
+      The Matrix server sees an unusual high system LOAD at the moment which is investigated by the System Hackers. This LOAD might cause problems of clients connecting to the server.
+    </update>
   </incident>
   <incident name="Network problems in one datacenter">
     <update date="2025-12-07">

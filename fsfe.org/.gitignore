@@ -16,8 +16,9 @@ tags/.tags.??.xml
 # internal activities file
 internal/fsfe-activities-options.*.xml
 
-# thirdpary stuff fetched by deps
+# thirdparty stuff fetched by deps
 # once all deps are managed this way we can make this a more general pattern
+cgi-bin/share.php
 cgi-bin/thirdparty
 scripts/thirdparty/jquery*
 scripts/thirdparty/lunr.min.js

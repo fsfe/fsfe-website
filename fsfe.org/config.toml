@@ -29,6 +29,12 @@ repo = "https://git.fsfe.org/fsfe-system-hackers-mirrors/PHPMailer"
 rev = "v6.10.0"
 file_sets = [{ source = "/src", target = "cgi-bin/thirdparty/PHPMailer" }]
 
+# share-buttons
+[[dependencies]]
+repo = "https://git.fsfe.org/FSFE/share-buttons"
+rev = "8cac2cd410bcc19f8ce20f2e08c23bed65cbac1c"
+file_sets = [{ source = "share.php", target = "cgi-bin/share.php" }]
+
 # Settings for deployment
 [deployment]
 # This files contains relative paths we want to deploy even if they would be blocked by the copy_files method filtering.

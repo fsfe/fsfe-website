@@ -5,6 +5,7 @@
 """Check that the passed files match xml structure across languages."""
 
 import logging
+import re
 from collections import defaultdict
 from typing import TYPE_CHECKING
 
@@ -44,22 +45,24 @@ def _job(master: Path, other: Path, whitelist: set[str]) -> str | None:
 def check(files: list[Path], pool: multiprocessing.pool.Pool) -> tuple[bool, str]:
     """Check for xml structure differences."""
     whitelist = {
+        "//a/@href",  # we often link to different languages
+        "//*/@alt",  # alt text for a variety of elements
+        "//a/@title",  # link titles can be translated
         "//discussion/@href",  # Mastodon links can be in different langs
         "/html/translator",  # the translator
-        "//image/@alt",  # Image alt text for title image
-        "//img/@alt",  # Image alt text
         "//input[@name='language']",  # Input language types
-        "//label[@for='address']",
+        "//label[@for='address']",  # some input labels that need translating
         "//label[@for='email']",
-        "//label[@for='name']",  # city and many others
+        "//label[@for='name']",
         "//label[@for='phone']",
-        "//label[@for='zip']",  # zip code localisation
-        "//profileimage/@alt",  # Profilemage alt text for about/people images
+        "//label[@for='zip']",
+        "//source/@src",  # videos can have different links
         "//track/@label",  # Language label, used in some track elements
         "//track/@srclang",  # Languages, used in some track elements
     }
     groups: defaultdict[tuple[Path, str], list[Path]] = defaultdict(list)
-    for file in files:
+    forbidden_fileregex = re.compile(r"^fsfe\.org/news/([0-9]{4}|nl)/.*")
+    for file in [file for file in files if not forbidden_fileregex.match(str(file))]:
         path = file.resolve()
         groups[(get_basepath(path), path.suffix)].append(path)
 

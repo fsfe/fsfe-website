@@ -68,10 +68,20 @@ def run(source: Path, languages: list[str], processes: int, working_dir: Path) -
         and lang_from_filename(path) in languages
     }
     whitelist = [
-        "//img[@alt]",  # Image alt text
-        "//track[@srclang]",  # Languages, used in some track elements
-        "//track[@label]",  # Language label, used in some track elements
+        "//a/@href",  # we often link to different languages
+        "//*/@alt",  # alt text for a variety of elements
+        "//a/@title",  # link titles can be translated
+        "//discussion/@href",  # Mastodon links can be in different langs
         "/html/translator",  # the translator
+        "//input[@name='language']",  # Input language types
+        "//label[@for='address']",  # some input labels that need translating
+        "//label[@for='email']",
+        "//label[@for='name']",
+        "//label[@for='phone']",
+        "//label[@for='zip']",
+        "//source/@src",  # videos can have different links
+        "//track/@label",  # Language label, used in some track elements
+        "//track/@srclang",  # Languages, used in some track elements
     ]
     groups: defaultdict[Path, list[Path]] = defaultdict(list)
     for file in all_files:

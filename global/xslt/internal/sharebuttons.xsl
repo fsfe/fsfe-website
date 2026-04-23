@@ -8,7 +8,7 @@
     <!-- article URL -->
     <xsl:variable name="share-url">
       <xsl:text>https://fsfe.org</xsl:text>
-      <xsl:value-of select="/buildinfo/@url"/>
+      <xsl:value-of select="/buildinfo/@fileurl"/>
       <xsl:text>.html</xsl:text>
     </xsl:variable>
     <xsl:element name="form">
@@ -87,19 +87,19 @@
           <xsl:text>OK</xsl:text>
         </xsl:element>
       </xsl:element>
-      <!-- Reddit -->
+      <!-- Bluesky -->
       <xsl:element name="button">
         <xsl:attribute name="type">submit</xsl:attribute>
         <xsl:attribute name="name">service</xsl:attribute>
-        <xsl:attribute name="value">reddit</xsl:attribute>
-        <xsl:attribute name="class">button share-reddit</xsl:attribute>
+        <xsl:attribute name="value">bluesky</xsl:attribute>
+        <xsl:attribute name="class">button share-bluesky</xsl:attribute>
         <xsl:attribute name="title">
           <xsl:call-template name="fsfe-gettext">
             <xsl:with-param name="id" select="'share-page'"/>
           </xsl:call-template>
-          <xsl:text> Reddit</xsl:text>
+          <xsl:text> Bluesky</xsl:text>
         </xsl:attribute>
-        <xsl:text>Reddit</xsl:text>
+        <xsl:text>Bluesky</xsl:text>
       </xsl:element>
       <!-- Hacker News -->
       <xsl:element name="button">
@@ -122,34 +122,6 @@
         </xsl:attribute>
         <xsl:attribute name="class">button share-mail</xsl:attribute>
         <xsl:text>E-Mail</xsl:text>
-      </xsl:element>
-      <!-- Twitter -->
-      <xsl:element name="button">
-        <xsl:attribute name="type">submit</xsl:attribute>
-        <xsl:attribute name="name">service</xsl:attribute>
-        <xsl:attribute name="value">twitter</xsl:attribute>
-        <xsl:attribute name="class">button share-twitter</xsl:attribute>
-        <xsl:attribute name="title">
-          <xsl:call-template name="fsfe-gettext">
-            <xsl:with-param name="id" select="'share-page'"/>
-          </xsl:call-template>
-          <xsl:text> Twitter</xsl:text>
-        </xsl:attribute>
-        <xsl:text>Twitter</xsl:text>
-      </xsl:element>
-      <!-- Facebook -->
-      <xsl:element name="button">
-        <xsl:attribute name="type">submit</xsl:attribute>
-        <xsl:attribute name="name">service</xsl:attribute>
-        <xsl:attribute name="value">facebook</xsl:attribute>
-        <xsl:attribute name="class">button share-facebook</xsl:attribute>
-        <xsl:attribute name="title">
-          <xsl:call-template name="fsfe-gettext">
-            <xsl:with-param name="id" select="'share-page'"/>
-          </xsl:call-template>
-          <xsl:text> Facebook</xsl:text>
-        </xsl:attribute>
-        <xsl:text>Facebook</xsl:text>
       </xsl:element>
       <!-- Support -->
       <xsl:element name="button">

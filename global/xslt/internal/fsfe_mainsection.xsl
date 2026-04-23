@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
   <xsl:include href="tags.xsl"/>
+  <xsl:include href="sharebuttons.xsl"/>
   <xsl:include href="fsfe_sidebar.xsl"/>
   <xsl:template name="fsfe_mainsection">
     <xsl:element name="main">
@@ -52,6 +53,10 @@
           </xsl:element>
         </xsl:if>
         <!-- /tags -->
+        <!-- Share buttons for social network -->
+        <xsl:if test="not(/buildinfo/document/body/@class = 'frontpage') and                 not(/buildinfo/document/body/@class = 'errorpage') and                 not(/buildinfo/document/@external)">
+          <xsl:call-template name="sharebuttons"/>
+        </xsl:if>
       </xsl:element>
       <!--/article#content-->
       <xsl:if test="/buildinfo/document/sidebar or /buildinfo/document/@newsdate">

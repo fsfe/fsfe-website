@@ -50,10 +50,12 @@ def _get_xmls(file: Path, parser: etree.XMLParser) -> list[etree.Element]:
             # this ensure no matter how we source an elem
             # it has the right lang and direction
             elem.set("lang", lang)
-            elem.set("dir", direction)
+            if direction != "ltr":
+                elem.set("dir", direction)
             for subelem in elem.xpath("//*"):
                 subelem.set("lang", lang)
-                subelem.set("dir", direction)
+                if direction != "ltr":
+                    subelem.set("dir", direction)
             elements.append(elem)
         # and then we return the element
     return elements

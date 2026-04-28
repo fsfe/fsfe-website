@@ -115,6 +115,34 @@
         </xsl:attribute>
         <xsl:text>Hacker News</xsl:text>
       </xsl:element>
+      <!-- Reddit -->
+      <xsl:element name="button">
+        <xsl:attribute name="type">submit</xsl:attribute>
+        <xsl:attribute name="name">service</xsl:attribute>
+        <xsl:attribute name="value">reddit</xsl:attribute>
+        <xsl:attribute name="class">button share-reddit</xsl:attribute>
+        <xsl:attribute name="title">
+          <xsl:call-template name="fsfe-gettext">
+            <xsl:with-param name="id" select="'share-page'"/>
+          </xsl:call-template>
+          <xsl:text> Reddit</xsl:text>
+        </xsl:attribute>
+        <xsl:text>Reddit</xsl:text>
+      </xsl:element>
+      <!-- LinkedIn -->
+      <xsl:element name="button">
+        <xsl:attribute name="type">submit</xsl:attribute>
+        <xsl:attribute name="name">service</xsl:attribute>
+        <xsl:attribute name="value">linkedin</xsl:attribute>
+        <xsl:attribute name="class">button share-linkedin</xsl:attribute>
+        <xsl:attribute name="title">
+          <xsl:call-template name="fsfe-gettext">
+            <xsl:with-param name="id" select="'share-page'"/>
+          </xsl:call-template>
+          <xsl:text> LinkedIn</xsl:text>
+        </xsl:attribute>
+        <xsl:text>LinkedIn</xsl:text>
+      </xsl:element>
       <!-- e-mail -->
       <xsl:element name="a">
         <xsl:attribute name="href">

@@ -33,7 +33,7 @@ file_sets = [{ source = "/src", target = "cgi-bin/thirdparty/PHPMailer" }]
 # TODO: Copy the images directly from the repo into graphics/services
 [[dependencies]]
 repo = "https://git.fsfe.org/FSFE/share-buttons"
-rev = "7af6e8cf8da78fef9ffe30f4e194496c9bebaed8"
+rev = "c29559b6db872ef7475e191e8bef118340ed195d"
 file_sets = [{ source = "share.php", target = "cgi-bin/share.php" }]
 
 # Settings for deployment

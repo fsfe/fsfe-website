@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <service-status-data>
   <version>1</version>
-  <incident name="Maintenance on network infrastructure">
+  <incident name="Maintenance on network infrastructure" resolved="true">
 	  <update date="2026-04-29">
 		  FSFE System Hacker will perform updates to the network infrastructure in our server clusters on Wed and Thu between 19 and 22h CEST. During that time services might be not reachable.
 	  </update>

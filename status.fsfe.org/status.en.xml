@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <service-status-data>
   <version>1</version>
+  <incident name="Maintenance on network infrastructure">
+	  <update date="2026-04-29">
+		  FSFE System Hacker will perform updates to the network infrastructure in our server clusters on Wed and Thu between 19 and 22h CEST. During that time services might be not reachable.
+	  </update>
+  </incident>
   <incident name="Matrix connection problems">
     <update date="2026-03-02">
       There have been reports of connection problems to our Matrix server on the weekend. System Hackers are investigating the problem.
@@ -10,6 +15,9 @@
     </update>
     <update date="2026-04-21">
       The Matrix server sees an unusual high system LOAD at the moment which is investigated by the System Hackers. This LOAD might cause problems of clients connecting to the server.
+    </update>
+    <update date="2026-04-22">
+      The high LOAD problems have been resolved.
     </update>
   </incident>
   <incident name="Network problems in one datacenter">

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <service-status-data>
   <version>1</version>
-  <incident name="Maintenance on network infrastructure" resolved="true">
-	  <update date="2026-04-29">
-		  FSFE System Hacker will perform updates to the network infrastructure in our server clusters on Wed and Thu between 19 and 22h CEST. During that time services might be not reachable.
-	  </update>
+  <incident name="Login to git.fsfe.org not possible">
+      <update date="2026-04-30">
+          After the update of gitea at the 29th it seems that the login to git.fsfe.org is currently not possible. System Hackers are working to resolve the issue.
+      </update>
   </incident>
   <incident name="Matrix connection problems">
     <update date="2026-03-02">
@@ -20,20 +20,6 @@
       The high LOAD problems have been resolved.
     </update>
   </incident>
-  <incident name="Network problems in one datacenter">
-    <update date="2025-12-07">
-      At one datacenter of our server locations we experience network problems after they did some maintenance work on Sunday Dec. 7th. Services located in the DC include email, email lists, Nextcloud, git, XMPP. The DC support is looking into the problem
-    </update>
-    <update date="2025-12-09">
-      Functionality for IMAP and Nextcloud services have been patched. Mailingslist delivery queue has reduced to normal values, delivery of emails should be as usual.
-    </update>
-    <update date="2025-12-10">
-      Functionality for XMPP has been patched.
-    </update>
-    <update date="2025-12-22" resolved="true">
-      The network problem has been resolved.
-    </update>
-  </incident>
   <incident name="planet.fsfe.org">
     <update date="2025-09-01">
       The blog aggregator is currently not available. Reasons are being investigated.
@@ -43,11 +29,6 @@
     </update>
     <update date="2026-01-07">
       Update from Chaos Congress, delayed due re-entry into normal time. System Hackers working on a replacement for the blog aggregator so that planet.fsfe.org hopefully sees new content <em>soon</em>.
-    </update>
-  </incident>
-  <incident name="Mailinglist">
-    <update date="2025-06-07" resolved="true">
-      The mailing lists are fully operational again, including the web interface.
     </update>
   </incident>
   <incident name="wiki.fsfe.org">
@@ -62,13 +43,5 @@
 	  <update date="2025-04-01">
 		The initial import from LDAP of the user permissions does not work correctly. Please contact the techsupport(at)fsfe.org helpdesk after your initial login to docs.fsfe.org which will result in an error about missing permissions. We will add your account then into the correct usergroup of the wiki system.
 	  </update>
-  </incident>
-  <incident name="git.fsfe.org">
-    <update date="2025-03-14">
-    We are having issues with AI scrapers overloading the git server.
-    </update>
-    <update date="2025-08-21" resolved="true">
-    We have deployed anubis in front of the git service. Depending on the development of AI DDoS you may be redirected to the login page to access certain functionality or pages/files.
-    </update>
   </incident>
 </service-status-data>

@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <service-status-data>
   <version>1</version>
+  <incident name="Federation of Matrix service disrupted">
+    <update date="2026-05-04">
+      The federation-that is the distribution of messages to and from other Matrix servers-of the FSFE Matrix server is currently disrupted. The reason for this is unknown at the moment. System Hackers are investigating the issue.
+    </update>
+  </incident>
   <incident name="Login to git.fsfe.org not possible">
       <update date="2026-04-30">
           After the update of gitea at the 29th it seems that the login to git.fsfe.org is currently not possible. System Hackers are working to resolve the issue.

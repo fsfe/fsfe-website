@@ -5,6 +5,9 @@
     <update date="2026-05-04">
       The federation-that is the distribution of messages to and from other Matrix servers-of the FSFE Matrix server is currently disrupted. The reason for this is unknown at the moment. System Hackers are investigating the issue.
     </update>
+    <update date="2026-05-05">
+      Federation has been restored and the server is now catching up with the relayed postings. Hence it may be a bit slow.
+    </update>
   </incident>
   <incident name="Login to git.fsfe.org not possible">
       <update date="2026-04-30">

@@ -5,13 +5,16 @@
     <update date="2026-05-04">
       The federation-that is the distribution of messages to and from other Matrix servers-of the FSFE Matrix server is currently disrupted. The reason for this is unknown at the moment. System Hackers are investigating the issue.
     </update>
-    <update date="2026-05-05">
+    <update date="2026-05-05" resolved="true">
       Federation has been restored and the server is now catching up with the relayed postings. Hence it may be a bit slow.
     </update>
   </incident>
   <incident name="Login to git.fsfe.org not possible">
       <update date="2026-04-30">
           After the update of gitea at the 29th it seems that the login to git.fsfe.org is currently not possible. System Hackers are working to resolve the issue.
+      </update>
+      <update date="2026-05-05" resolved="true">
+        The issue has been resolved.
       </update>
   </incident>
   <incident name="Matrix connection problems">
@@ -24,7 +27,7 @@
     <update date="2026-04-21">
       The Matrix server sees an unusual high system LOAD at the moment which is investigated by the System Hackers. This LOAD might cause problems of clients connecting to the server.
     </update>
-    <update date="2026-04-22">
+    <update date="2026-04-22" resolved="true">
       The high LOAD problems have been resolved.
     </update>
   </incident>

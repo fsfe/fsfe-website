@@ -23,6 +23,7 @@ dev = [
   "pillow",  # image processing
   "pyright",  # python typechecker
   "pytest",  # python test runner
+  "pytest-cov",  # coverage reports for python coverage
   "pytest-mock",  # helper for mocking in pytest
   "reuse",  # for enforcing licensing
   "ruff",  # python formatter and linter
@@ -37,6 +38,13 @@ notifications = [
 [build-system]
 requires = ["uv_build"]
 build-backend = "uv_build"
+
+[tool.coverage.run]
+source = ["fsfe_website_build.lib"]
+
+[tool.coverage.report]
+show_missing = true
+fail_under = 100
 
 [tool.pytest]
 addopts = ["--import-mode=importlib"]

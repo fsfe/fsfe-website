@@ -12,6 +12,8 @@ from lxml import etree
 if TYPE_CHECKING:
     from collections.abc import Generator
 
+    from pytest_mock import MockFixture
+
 
 class TestCompareFiles:
     """Smoke tests for the high-level entry point."""
@@ -26,23 +28,44 @@ class TestCompareFiles:
             b.write_text("<root><y/></root>")
             yield a, b
 
-    def test_compare_files_returns_list(self, two_files: tuple[Path, Path]) -> None:
+    def compare_files_returns_list_test(self, two_files: tuple[Path, Path]) -> None:
         a, b = two_files
         assert isinstance(compare_files(a, b), list)
 
-    def test_compare_files_finds_difference(self, two_files: tuple[Path, Path]) -> None:
+    def compare_files_finds_difference_test(self, two_files: tuple[Path, Path]) -> None:
         a, b = two_files
         diff = compare_files(a, b)
         assert len(diff) == 1
 
+    def compare_files_xml_syntax_error_test(self, mocker: MockFixture) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            bad = Path(tmpdir) / "bad.xml"
+            good = Path(tmpdir) / "good.xml"
+            bad.write_text("<not xml")
+            good.write_text("<root/>")
+
+            mocker.patch("sys.exit", side_effect=SystemExit)
+            with pytest.raises(SystemExit):
+                compare_files(bad, good)
+
 
 class TestCompareElements:
-    """Unit tests for the xml comparator function"""
+    """Unit tests for the xml comparison function"""
 
     def identical_elements_test(self) -> None:
         e1 = etree.Element("root")
         e2 = etree.Element("root")
         assert compare_elements(e1, e2) == []
+
+    def wildcard_attributes_deletion_test(self) -> None:
+        e1 = etree.Element("root", a="1")
+        e2 = etree.Element("root", a="2")
+        assert compare_elements(e1, e2, ["//root/@*"]) == []
+
+    def named_attributes_deletion_test(self) -> None:
+        e1 = etree.Element("root", a="1")
+        e2 = etree.Element("root")
+        assert compare_elements(e1, e2, ["//root/@a"]) == []
 
     def tag_mismatch_test(self) -> None:
         e1 = etree.Element("root")

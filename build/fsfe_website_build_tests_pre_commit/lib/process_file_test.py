@@ -4,10 +4,15 @@
 
 import textwrap
 from pathlib import Path
+from tempfile import TemporaryDirectory
+from typing import TYPE_CHECKING
 
 import pytest
 from fsfe_website_build.lib.process_file import process_file
 from lxml import etree
+
+if TYPE_CHECKING:
+    from pytest_mock import MockFixture
 
 
 @pytest.fixture
@@ -75,3 +80,89 @@ def process_file_link_rewrites_test(
     # we only need to care about the first one
     link_node = etree.fromstring(result_doc).xpath("//a[@href and @test_url]")[0]
     assert link_node.get("href") == link_out
+
+
+def xmllist_processing_test(sample_xsl_transformer: etree.XSLT) -> None:
+    """Process something that has an XMLLIST."""
+    with TemporaryDirectory() as tmp:
+        source = Path(tmp) / "source"
+        source.mkdir()
+
+        lang_folder = source / "global" / "languages"
+        lang_folder.mkdir(parents=True, exist_ok=True)
+
+        en_lang_file = lang_folder / "en"
+        en_lang_file.write_text("English\n")
+
+        action_dir = source / "news"
+        action_dir.mkdir()
+
+        action_file = action_dir / "news.en.xhtml"
+        action_file.write_text("<html><body>News</body></html>")
+
+        list_file = action_dir / ".news.xmllist"
+        list_file.write_text("global/data/sidebar\n")
+
+        sidebar_dir = source / "global" / "data" / "sidebar"
+        sidebar_dir.mkdir(parents=True)
+        sidebar_en = sidebar_dir / ".sidebar.en.xml"
+        sidebar_en.write_text("<sidebar><item>Link</item></sidebar>")
+
+        infile = action_dir / "news.de.xhtml"
+
+        result = process_file(source, infile, sample_xsl_transformer)
+        assert result is not None
+
+
+def missing_translation_fallback_test(sample_xsl_transformer: etree.XSLT) -> None:
+    """Process a file where it does not exist in the correct language."""
+    with TemporaryDirectory() as tmp:
+        source = Path(tmp) / "source"
+        source.mkdir()
+
+        lang_folder = source / "global" / "languages"
+        lang_folder.mkdir(parents=True, exist_ok=True)
+
+        en_lang_file = lang_folder / "en"
+        en_lang_file.write_text("English\n")
+
+        de_lang_file = lang_folder / "de"
+        de_lang_file.write_text("Deutsch\n")
+
+        action_dir = source / "news"
+        action_dir.mkdir()
+
+        en_file = action_dir / "news.en.xhtml"
+        en_file.write_text("<html><body>News</body></html>")
+
+        infile = action_dir / "news.de.xhtml"
+
+        result = process_file(source, infile, sample_xsl_transformer)
+        assert result is not None
+
+
+def detect_invalid_xml_from_transformation_test(mocker: MockFixture) -> None:
+    """Check that it detects invalid XML being returned"""
+    with TemporaryDirectory() as tmp:
+        source = Path(tmp) / "source"
+        source.mkdir()
+        lang_folder = source / "global" / "languages"
+        lang_folder.mkdir(parents=True, exist_ok=True)
+
+        en_lang_file = lang_folder / "en"
+        en_lang_file.write_text("English\n")
+
+        action_dir = source / "news"
+        action_dir.mkdir()
+
+        infile = action_dir / "news.en.xhtml"
+        infile.write_text("<html><body>News</body></html>")
+
+        mock_result = mocker.MagicMock()
+        mock_result.xpath.side_effect = AssertionError("bad xml")
+
+        mock_transform = mocker.MagicMock()
+        mock_transform.return_value = mock_result
+
+        result = process_file(source, infile, mock_transform)
+        assert result == str(mock_result)

@@ -10,6 +10,8 @@ output
 # Python stuff
 .venv
 __pycache__
+# pytest coverage outputs
+.coverage
 #phpcsfixer cache
 .php-cs-fixer.cache
 # Secrets

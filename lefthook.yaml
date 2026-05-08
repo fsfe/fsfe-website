@@ -59,7 +59,11 @@ pre-commit:
     pytest:
       glob:
         - "*.py"
-      run: pytest ./build/fsfe_website_build_tests_pre_commit
+      run: coverage run -m pytest ./build/fsfe_website_build_tests_pre_commit
+    pytest-coverage:
+      glob:
+        - "*.py"
+      run: coverage report --show-missing --fail-under=85
     ty:
       glob: "*.py"
       run: ty check {staged_files}

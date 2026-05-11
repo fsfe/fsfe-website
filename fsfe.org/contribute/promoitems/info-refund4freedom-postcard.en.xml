@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<infoset>
+  <version>1</version>
+
+  <info id="refund4freedom-postcard">
+    <!-- Leave a tag like <printready> blank or erase it if you don't 
+    want to appear it -->
+    <!-- Translations for "Type", "Size" etc. can be found in 
+    /tools/texts-**.xml -->
+    <name>Refund4Freedom - Postcard</name>
+    <description>
+      A postcard to let people know how to get your Windows license refund. Then you can spend your refund in other things like in this postcard!"
+    </description>
+    <type>Postcard</type>
+    <size>148mm x 105mm</size>
+    <context><a href="https://en.refund4freedom.org/">Refund4Freedom</a></context>
+    <languages>
+      <a href="https://download.fsfe.org/advocacy/promomaterial/refund4freedom/">PDF (English)</a>, <a href="https://download.fsfe.org/advocacy/promomaterial/refund4freedom/">PDF (Italian)</a>
+    </languages>
+    <printed>
+      English, Italian
+    </printed>
+    <license><a href="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA 4.0</a></license>
+    <author>FSFE (design and layout), Karthik Palepu (graphis)</author>
+    <source><a href="https://download.fsfe.org/advocacy/promomaterial/refund4freedom/">Refund4Freedom postcard in download.fsfe.org</a></source> 
+    <printready></printready>
+  </info>
+
+</infoset>

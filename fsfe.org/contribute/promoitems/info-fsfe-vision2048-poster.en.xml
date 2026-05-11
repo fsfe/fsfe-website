@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<infoset>
+  <version>1</version>
+
+  <info id="fsfe-vision2048-poster">
+    <!-- Leave a tag like <printready> blank or erase it if you don't 
+    want to appear it -->
+    <!-- Translations for "Type", "Size" etc. can be found in 
+    /tools/texts-**.xml -->
+    <name>Vision 2048 - Poster</name>
+    <description>
+      The poster that collects the FSFE's vision for 2048.
+    </description>
+    <type>Poster</type>
+    <size>A2</size>
+    <context><a href="/news/2025/news-20250103-01">The FSFE vision from now til 2048</a></context>
+    <languages>
+      <a href="https://download.fsfe.org/advocacy/promomaterial/FSFE/FSFE_Vision2048/fsfe-vision2048-poster.pdf">PDF (English)</a>
+    </languages>
+    <printed>
+      English
+    </printed>
+    <license><a href="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA 4.0</a></license>
+    <author>Sofia Aritz</author>
+    <source><a href="https://download.fsfe.org/advocacy/promomaterial/FSFE/FSFE_Vision2048/fsfe-vision2048-poster.pdf">FSFE vision2048 in download.fsfe.org</a></source>  
+    <printready></printready>
+  </info>
+
+</infoset>

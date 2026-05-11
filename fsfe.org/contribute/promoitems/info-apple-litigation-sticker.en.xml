@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<infoset>
+  <version>1</version>
+
+  <info id="apple-litigation-sticker">
+    <!-- Leave a tag like <printready> blank or erase it if you don't 
+    want to appear it -->
+    <!-- Translations for "Type", "Size" etc. can be found in 
+    /tools/texts-**.xml -->
+    <name>DMA: Litigation against Apple - Sticker (round)</name>
+    <description>
+      A sticker to support to DMA's litigation against Apple.
+    </description>
+    <type>Sticker</type>
+    <size>⌀ 50mm</size>
+    <context><a href="/activities/apple-litigation">DMA: Litigation against Apple</a></context>
+    <languages>
+      <a href="https://download.fsfe.org/advocacy/promomaterial/apple_litigation/apple-litigation-sticker.pdf">PDF (English)</a>
+    </languages>
+    <printed>
+      English
+    </printed>
+    <license><a href="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA 4.0</a></license>
+    <author>FSFE (design and layout), Karthik Palepu (graphis)</author>
+    <source><a href="https://download.fsfe.org/advocacy/promomaterial/apple_litigation/apple-litigation-sticker.pdf">Apple Litigation sticker in download.fsfe.org</a></source> 
+    <printready></printready>
+  </info>
+
+</infoset>

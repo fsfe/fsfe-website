@@ -46,6 +46,10 @@ Such an item doesn't need an image!
   <item type="fsfe" id="fsfe-modernise-your-it-2sided" year="2019" order="13">
     <image imgsmall="/contribute/promopics/fsfe-modernize-your-it-thumb.png"/>
   </item>
+  
+    <item type="fsfe" id="fsfe-vision2048-poster" year="2025" order="14">
+    <image imgsmall="/contribute/promopics/fsfe-vision2048-poster-thumb.png"/>
+  </item>
 
   <!-- Free Software multilanguage -->
 
@@ -208,6 +212,24 @@ Such an item doesn't need an image!
   </item>
   <item type="fsfe" id="notold-sticker" year="2023" order="21">
     <image imgsmall="/contribute/promopics/notold-sticker-thumb.jpg"/>
+  </item>
+  
+  <!-- DMA: Litigation against Apple -->
+
+  <item type="apple-litigation" id="apple-litigation-sticker" year="2025" order="1">
+    <image imgsmall="/contribute/promopics/apple-litigation-sticker-thumb.png"/>
+  </item>
+  
+  <!-- REUSE Software -->
+
+  <item type="reusesoftware" id="reusesoftware-sticker" year="2025" order="1">
+    <image imgsmall="/contribute/promopics/reusesoftware-sticker-thumb.png"/>
+  </item>
+  
+  <!-- Refund4Freedom -->
+
+  <item type="refund4freedom" id="refund4freedom-postcard" year="2025" order="1">
+    <image imgsmall="/contribute/promopics/refund4freedom-poster-combined-thumb.png"/>
   </item>
 
 </itemset>

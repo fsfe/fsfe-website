@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<activityset>
+  <version>1</version>
+
+  <activity id="20years" date="2021-02-01" status="finished">
+    <title>20 años de la FSFE</title>
+    <description>
+	  En 2021, la Free Software Foundation Europe cumple 20 años. A lo 
+	  largo de este tiempo hemos empoderado a los usuarios para que 
+	  pudieran usar, estudiar, compartir y mejorar el software. En 20 
+	  años de la FSFE, queremos dar las gracias a todos los que nos han 
+	  ayudado en este camino. Aquí encontrarás entrevistas en las que se 
+	  analiza la trayectoria de la FSFE, así como cuestiones 
+	  tecnológicas. ¡Te invitamos a celebrarlo con nosotros!
+    </description>
+    <link href="/activities/20years/20years.html"/>
+    <image url="/graphics/logos/fsfe20.png"/>
+    <order priority="4"/>
+    <tags>
+      <tag key="awareness"/>
+    </tags>
+  </activity>
+</activityset>

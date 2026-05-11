@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<activityset>
+  <version>2</version>
+
+  <activity id="android" date="2012-02-28" status="active">
+    <title>Libera tu Android</title>
+    <description>
+     Android es un sistema operativo mayoritariamente libre, pero, 
+     lamentablemente, los controladores de la mayoría de los 
+     dispositivos y la mayoría de las aplicaciones de la tienda 
+     incorporada no son Software Libre. Esta iniciativa te ayuda a 
+     recuperar el control de tu dispositivo Android y de tus datos. 
+    </description>
+    <link href="/activities/android/android.html"/>
+    <image url="/graphics/logos/android.png"/>
+    <order priority="4" highlight="yes"/>
+    <tags>
+      <tag key="awareness"/>
+    </tags>
+  </activity>
+</activityset>

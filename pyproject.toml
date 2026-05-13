@@ -21,6 +21,7 @@ build = "fsfe_website_build:build"
 dev = [
   "lefthook",  # pre-commit hook
   "pillow",  # image processing
+  "polib",  # library for manipulating po files for translation tooling
   "pyright",  # python typechecker
   "pytest",  # python test runner
   "pytest-cov",  # coverage reports for python coverage

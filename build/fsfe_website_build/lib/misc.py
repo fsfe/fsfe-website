@@ -87,7 +87,7 @@ def run_command(commands: list[str]) -> str:
     and command error handling across the project.
     """
     try:
-        result = subprocess.run(  # noqa: S603 allow callsing subprocess without knowing the args
+        result = subprocess.run(
             # we validate that they are okay elsewhere in the code
             commands,
             capture_output=True,

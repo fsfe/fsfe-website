@@ -1,0 +1,48 @@
+# Italian translations for PACKAGE package
+# Copyright (C) 2026 Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# Automatically generated, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2026-07-13 18:02+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: it\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. type: Content of: <html><body><h1>
+#: fsfe.org/order/cancel.en.xhtml:6 fsfe.org/order/cancel.en.xhtml:14
+msgid "Payment cancelled"
+msgstr ""
+
+#. type: Content of: <html><body><p>
+#: fsfe.org/order/cancel.en.xhtml:11 fsfe.org/order/thankyou.en.xhtml:11
+msgid "<a href=\"/order/order.html\">Merchandise</a>"
+msgstr "<a href=\"/order/order.html\">Prodotti</a>"
+
+#. type: Content of: <html><body><p>
+#: fsfe.org/order/cancel.en.xhtml:17
+#, fuzzy
+#| msgid "Your online payment has successfully been processed."
+msgid "Your online payment has been cancelled. No money will be transferred."
+msgstr "Il tuo pagamento online è stato eseguito con successo."
+
+#. type: Content of: <html><body><p>
+#: fsfe.org/order/cancel.en.xhtml:21
+msgid ""
+"If the abort was caused by a problem on our side, please <a "
+"href=\"mailto:contact@fsfe.org\">tell us about it</a> so we can improve our "
+"infrastructure. In any case, you can also try to <a "
+"href=\"order.html\">restart the process</a> now."
+msgstr ""
+
+#. type: Content of: <html><followup>
+#: fsfe.org/order/cancel.en.xhtml:28
+msgid "no"
+msgstr ""

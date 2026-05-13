@@ -10,21 +10,22 @@ All po4a operations needed in the repo should be done through this script.
 """
 
 import argparse
+import copy
 import logging
 import multiprocessing
 import multiprocessing.pool
-import shutil
+import os
 import subprocess
 import sys
-import tempfile
 from collections import defaultdict
 from functools import partial
 from pathlib import Path
 
+import polib
 from fsfe_website_build.lib.checks import compare_elements
 from fsfe_website_build.lib.misc import (
-    delete_file,
     get_basepath,
+    get_version,
     lang_from_filename,
     run_command,
     update_if_changed,
@@ -40,7 +41,29 @@ SITE = "fsfe.org"
 TRANSLATION_OUTPUT_FOLDER = Path("translations") / SITE
 SOURCE_LANG = "en"
 
-IGNORE_ALL_ATTRS_XPATHS = ("//*/@*",)
+UNTRANSLATED_OPT = 'opt:"-o untranslated=\\"<version> <html><translator>\\""'
+
+# Higher value = offered to translators earlier. Bucket 6 inherits
+# Weblate's default of 100, so we don't stamp it.
+PRIORITY_VALUES = {"1": 600, "2": 500, "3": 400, "4": 300, "5": 200}
+
+# Language attributes that legitimately differ between language variants.
+_LANG_ATTRS = (
+    "lang",
+    "xml:lang",
+    "{http://www.w3.org/XML/1998/namespace}lang",
+)
+
+# Locale used when invoking po4a/gettext tools. Avoids msginit failures in
+# minimal Nix shells where the host locale is unavailable.
+_GETTEXT_ENV = {"LC_ALL": "C.UTF-8", "LANG": "C.UTF-8", "LANGUAGE": "C.UTF-8"}
+
+
+def _gettext_env() -> dict[str, str]:
+    """Return environment with a safe C.UTF-8 locale for gettext tools."""
+    env = os.environ.copy()
+    env.update(_GETTEXT_ENV)
+    return env
 
 
 def _detect_target_languages() -> list[str]:
@@ -60,22 +83,18 @@ def _detect_target_languages() -> list[str]:
 
 
 def _collect_files_by_priority() -> dict[str, list[Path]]:
-    """Bucket every translatable, git-tracked English master into its priority.
-
-    The patterns in PRIORITIES_AND_SEARCHES are required to only match
-    English masters. Anything not git-tracked or not matched by a
-    priority's patterns gets silently dropped, so generated files don't
-    end up in our POs.
-    """
+    """Bucket every translatable, git-tracked English master into its priority."""
     git_output = run_command(["git", "ls-files", "-z"])
-    all_translatable = sorted(
+    all_masters = sorted(
         path
-        for path in (Path(line.strip()) for line in git_output.split("\x00"))
-        if path.suffix in {".xhtml", ".xml"} and path.name
+        for path in (Path(line) for line in git_output.split("\x00") if line)
+        if path.suffix in {".xhtml", ".xml"}
+        and len(path.suffixes) >= 2  # noqa: PLR2004
+        and lang_from_filename(path) == SOURCE_LANG
     )
 
     files_by_priority: dict[str, list[Path]] = defaultdict(list)
-    for file in all_translatable:
+    for file in all_masters:
         for priority, searches in PRIORITIES_AND_SEARCHES.items():
             if any(file.full_match(search) for search in searches):
                 files_by_priority[priority].append(file)
@@ -83,12 +102,17 @@ def _collect_files_by_priority() -> dict[str, list[Path]]:
     return files_by_priority
 
 
-def _po_path(po_dir: Path, prio: str, lang: str) -> Path:
-    return po_dir / f"priority-{prio}.{lang}.po"
+def _master_stem(master: Path) -> str:
+    """Repo-relative POSIX path of master with the .<lang>.<ext> suffix stripped."""
+    return get_basepath(master).as_posix()
 
 
-def _pot_path(po_dir: Path, prio: str) -> Path:
-    return po_dir / f"priority-{prio}.pot"
+def _po_dir(prio: str) -> Path:
+    return TRANSLATION_OUTPUT_FOLDER / prio
+
+
+def _po_path(master: Path, lang: str, prio: str) -> Path:
+    return _po_dir(prio) / f"{_master_stem(master)}.{lang}.po"
 
 
 def _localized_for(master: Path, lang: str) -> Path | None:
@@ -98,78 +122,114 @@ def _localized_for(master: Path, lang: str) -> Path | None:
     return get_basepath(master).with_suffix(f".{lang}{master.suffix}")
 
 
-def _parse_xml(path: Path) -> etree._Element | None:
-    """Parse an xml/xhtml file, or warn and skip if it doesn't parse."""
+def _strip_lang_attrs(root: etree.Element) -> None:
+    """Remove language attributes from the whole tree."""
+    for el in root.iter():
+        for attr in _LANG_ATTRS:
+            el.attrib.pop(attr, None)
+
+
+def _structurally_compatible(master: Path, localized: Path) -> bool:
+    """Return True if localized has the same XML structure as master.
+
+    Language attributes are ignored because they legitimately differ.
+    """
     parser = etree.XMLParser(remove_comments=True)
     try:
-        return etree.parse(str(path), parser).getroot()
-    except etree.XMLSyntaxError:
-        log.exception("XML parse error in %s", path)
-        return None
-
-
-def _structures_match(master: Path, localized: Path) -> bool:
-    """Check master and localized have the same xml structure.
-
-    po4a-gettextize needs the two trees to line up exactly. We ignore
-    all attributes because translators legitimately change things like
-    xml:lang or href targets.
-    """
-    root1 = _parse_xml(master)
-    if root1 is None:
-        return False
-    root2 = _parse_xml(localized)
-    if root2 is None:
-        return False
-    errors = compare_elements(root1, root2, xpaths_to_ignore=IGNORE_ALL_ATTRS_XPATHS)
-    if errors:
+        master_tree = etree.parse(master, parser)
+        localized_tree = etree.parse(localized, parser)
+    except (etree.ParseError, OSError) as exc:
         log.warning(
-            "Different xml structure, skipping: %s <-> %s (%d differences)",
+            "Could not parse %s or %s for structural comparison: %s",
             master,
             localized,
-            len(errors),
+            exc,
+        )
+        return False
+
+    master_root = copy.deepcopy(master_tree.getroot())
+    localized_root = copy.deepcopy(localized_tree.getroot())
+    _strip_lang_attrs(master_root)
+    _strip_lang_attrs(localized_root)
+
+    errors = compare_elements(master_root, localized_root)
+    if errors:
+        log.warning(
+            "Skipping %s: structural mismatch with %s (%s)",
+            localized,
+            master,
+            errors[0],
         )
         return False
     return True
 
 
-def _check_writable(job: tuple[Path, str]) -> tuple[Path, str, bool]:
-    """Decide whether po4a may write this (master, lang) output.
-
-    A (master, lang) is writable when the localized file is absent
-    (po4a will create it), or it exists and matches the master's
-    structure.
-
-    Files with different xml structure need manual fixing before they can be handled.
-    We have to make sure to ignore them, or po4a deletes them.
-    """
-    master, lang = job
-    localized = _localized_for(master, lang)
-    if localized is None:
-        return master, lang, False
-    if not localized.exists():
-        return master, lang, True
-    return master, lang, _structures_match(master, localized)
-
-
-def _compute_writable(
-    matches: list[Path],
-    languages: list[str],
-    pool: multiprocessing.pool.Pool,
-) -> dict[Path, list[str]]:
-    """Map each master to the langs whose output po4a is allowed to touch."""
-    jobs = [(master, lang) for master in matches for lang in languages]
-    writable: dict[Path, list[str]] = {m: [] for m in matches}
-    for master, lang, ok in pool.map(_check_writable, jobs):
-        if ok:
-            writable[master].append(lang)
-    return writable
+def _unfuzzy(po_path: Path, unfuzzy: bool) -> None:
+    """Normalize trailing newlines; optionally clear fuzzy on real translations."""
+    po = polib.pofile(str(po_path))
+    changed = False
+    for entry in po:
+        msgstr = entry.msgstr
+        if msgstr:
+            id_nl = entry.msgid.endswith("\n")
+            str_nl = msgstr.endswith("\n")
+            if id_nl and not str_nl:
+                msgstr = msgstr + "\n"
+            elif str_nl and not id_nl:
+                msgstr = msgstr.rstrip("\n")
+            if msgstr != entry.msgstr:
+                entry.msgstr = msgstr
+                changed = True
+        if unfuzzy and entry.msgstr and "fuzzy" in entry.flags:
+            entry.flags.remove("fuzzy")
+            changed = True
+    if changed:
+        po.save(str(po_path))
 
 
-def _gettextize_worker(job: tuple[Path, Path, Path, str]) -> Path | None:
-    """Salvage one master/localized pair into a temp PO."""
-    master, localized, temp_po, file_type = job
+def _stamp_priority(po_path: Path, prio: str) -> None:
+    """Stamp ``priority:N`` on every entry, replacing any prior priority flag."""
+    value = PRIORITY_VALUES.get(prio)
+    if value is None or not po_path.exists():
+        return
+    po = polib.pofile(str(po_path))
+    flag = f"priority:{value}"
+    changed = False
+    for entry in po:
+        cleaned = [f for f in entry.flags if not f.startswith("priority:")]
+        cleaned.append(flag)
+        if cleaned != entry.flags:
+            entry.flags = cleaned
+            changed = True
+    if changed:
+        po.save(str(po_path))
 
+
+def _po_is_valid(po_path: Path) -> bool:
+    """Return True if polib can read the file."""
+    try:
+        polib.pofile(str(po_path))
+    except Exception as exc:
+        log.warning("PO file %s is invalid: %s", po_path, exc)
+        return False
+    return True
+
+
+def _read_version_safe(path: Path) -> int:
+    """Return version, treating parse errors or missing tag as 0."""
+    try:
+        return get_version(path)
+    except Exception as exc:
+        log.warning("Could not read version from %s: %s", path, exc)
+        return 0
+
+
+def _gettextize_worker(
+    job: tuple[Path, Path, Path, str, str],
+) -> None:
+    """Salvage one (master, lang) pair into its on-disk PO."""
+    master, localized, po_path, file_type, prio = job
+    po_path.parent.mkdir(parents=True, exist_ok=True)
     cmd = [
         "po4a-gettextize",
         "-f",
@@ -179,14 +239,22 @@ def _gettextize_worker(job: tuple[Path, Path, Path, str]) -> Path | None:
         "-L",
         "UTF-8",
         "-m",
-        str(master),
+        str(master.resolve()),
         "-l",
-        str(localized),
+        str(localized.resolve()),
         "-p",
-        str(temp_po),
+        str(po_path),
     ]
-    result = subprocess.run(cmd, capture_output=True, text=True, check=False)
-    if result.returncode != 0 or not temp_po.exists():
+    result = subprocess.run(
+        cmd,
+        capture_output=True,
+        text=True,
+        encoding="utf-8",
+        errors="replace",
+        env=_gettext_env(),
+        check=False,
+    )
+    if result.returncode != 0 or not po_path.exists():
         last_err = (
             result.stderr.strip().splitlines()[-1]
             if result.stderr.strip()
@@ -198,152 +266,188 @@ def _gettextize_worker(job: tuple[Path, Path, Path, str]) -> Path | None:
             localized,
             last_err,
         )
-        return None
-    return temp_po
+        if po_path.exists():
+            po_path.unlink()
+        return
+
+    if not _po_is_valid(po_path):
+        po_path.unlink()
+        return
+
+    master_v = _read_version_safe(master)
+    local_v = _read_version_safe(localized)
+    if master_v and local_v and local_v > master_v:
+        log.warning(
+            "Localized %s version (%d) ahead of master %s (%d)",
+            localized,
+            local_v,
+            master,
+            master_v,
+        )
+    versions_equal = master_v != 0 and local_v != 0 and master_v == local_v
+    _unfuzzy(po_path, unfuzzy=versions_equal)
+    _stamp_priority(po_path, prio)
 
 
-def _po4a_worker(cfg: Path, no_translations: bool) -> None:
-    """Run po4a on a single config."""
-    cmd = ["po4a", "--keep=1"]
+def _po4a_worker(cfg: Path, no_translations: bool) -> str | None:
+    """Run po4a on a single config. Return an error string on failure."""
+    cmd = ["po4a", "--keep", "1"]
     if no_translations:
         cmd.append("--no-translations")
     cmd.append(str(cfg))
-    run_command(cmd)
+    result = subprocess.run(
+        cmd,
+        capture_output=True,
+        text=True,
+        encoding="utf-8",
+        errors="replace",
+        env=_gettext_env(),
+        check=False,
+    )
+    if result.stderr:
+        for line in result.stderr.splitlines():
+            log.info("po4a[%s]: %s", cfg.name, line)
+    if result.returncode != 0:
+        return (
+            f"po4a failed on {cfg} (exit {result.returncode})\n"
+            f"stdout:\n{result.stdout}\n"
+            f"stderr:\n{result.stderr}"
+        )
+    return None
 
 
-def _msgcat(target_po: Path, temp_pos: list[Path]) -> None:
-    """Merge per-file temp POs into one priority-level PO."""
-    run_command(["msgcat", "-o", str(target_po), *map(str, sorted(temp_pos))])
+def _build_writable(
+    prio: str,
+    masters: list[Path],
+    languages: list[str],
+) -> dict[Path, list[str]]:
+    """Check if a (master, lang) is writable.
+
+    True if and only if its PO already exists on disk, is valid, and the
+    localized file is structurally compatible with the master.
+    """
+    return {
+        m: [
+            lang
+            for lang in languages
+            if (po := _po_path(m, lang, prio)).exists()
+            and _po_is_valid(po)
+            and (localized := _localized_for(m, lang)) is not None
+            and _structurally_compatible(m, localized)
+        ]
+        for m in masters
+    }
 
 
 def _salvage_priority(
     prio: str,
-    matches: list[Path],
+    masters: list[Path],
     languages: list[str],
-    writable: dict[Path, list[str]],
     pool: multiprocessing.pool.Pool,
 ) -> None:
-    """Rebuild every per-language PO for one priority from localized files.
-
-    POs are pure derivatives of the xhtml: we destroy and rebuild them on
-    every update-po run, so anything not represented by a writable
-    localized file on disk vanishes from the PO.
-    """
-    po_dir = TRANSLATION_OUTPUT_FOLDER / prio
-    po_dir.mkdir(parents=True, exist_ok=True)
-
-    temp_dir = Path(tempfile.mkdtemp(prefix="salvage_", dir=po_dir))
-
-    try:
-        jobs: list[tuple[Path, Path, Path, str]] = []
-        job_langs: list[str] = []
-        per_lang: dict[str, list[Path]] = {lang: [] for lang in languages}
-
-        for master in matches:
-            for lang in writable.get(master, []):
-                localized = _localized_for(master, lang)
-                if localized is None or not localized.exists():
-                    continue
-                ext = master.suffix.lstrip(".")
-                key = str(master).replace("/", "_")
-                temp_po = temp_dir / f"{key}.{lang}.po"
-                jobs.append((master, localized, temp_po, ext))
-                job_langs.append(lang)
-
-        if jobs:
-            results = pool.map(_gettextize_worker, jobs)
-            for lang, result in zip(job_langs, results, strict=True):
-                if result is not None:
-                    per_lang[lang].append(result)
-
+    """Regenerate every per-(master, lang) PO from localized files."""
+    jobs: list[tuple[Path, Path, Path, str, str]] = []
+    for master in masters:
         for lang in languages:
-            target_po = _po_path(po_dir, prio, lang)
-            temp_pos = per_lang[lang]
-            if not temp_pos:
-                if target_po.exists():
-                    delete_file(target_po)
+            localized = _localized_for(master, lang)
+            if localized is None or not localized.exists():
                 continue
-            log.info("Priority %s / %s: salvaging %d files", prio, lang, len(temp_pos))
-            _msgcat(target_po, temp_pos)
-    finally:
-        shutil.rmtree(temp_dir, ignore_errors=True)
+            if not _structurally_compatible(master, localized):
+                continue
+            jobs.append(
+                (
+                    master,
+                    localized,
+                    _po_path(master, lang, prio),
+                    master.suffix.lstrip("."),
+                    prio,
+                )
+            )
+    if not jobs:
+        return
+    log.info("Priority %s: salvaging %d (master, lang) pairs", prio, len(jobs))
+    pool.map(_gettextize_worker, jobs)
 
 
-def _gen_config(
-    prio: str,
-    matches: list[Path],
-    languages: list[str],
-    writable: dict[Path, list[str]],
-) -> Path | None:
-    """Write the po4a config for one priority.
-
-    Only emit per-file lang targets for langs whose existing localized
-    file is absent or structurally matches the master. Drifted outputs
-    are omitted so po4a never rewrites or deletes them.
-    """
-    po_dir = TRANSLATION_OUTPUT_FOLDER / prio
+def _gen_config(prio: str, writable: dict[Path, list[str]]) -> Path | None:
+    """Write the po4a config for one priority bucket."""
+    po_dir = _po_dir(prio)
     po_dir.mkdir(parents=True, exist_ok=True)
+
+    # Get unique set of all languages used across all masters in this bucket
+    all_langs = sorted({lang for langs in writable.values() for lang in langs})
+    if not all_langs:
+        log.warning("Priority %s: no writable (master, lang) pairs, skipping", prio)
+        return None
+
+    pot_template = f"{po_dir.as_posix()}/$master.pot"
+    po_template = f"$lang:{po_dir.as_posix()}/$master.$lang.po"
 
     lines = [
+        "[po4a_langs] " + " ".join(all_langs),
+        "",
         "[po4a_alias:xhtml] xhtml",
         "[po4a_alias:xml] xml",
         "",
+        f"[po4a_paths] {pot_template} {po_template}",
+        "",
     ]
 
-    pot = _pot_path(po_dir, prio)
-    po_targets = " ".join(
-        f"{lang}:{_po_path(po_dir, prio, lang)}" for lang in languages
-    )
-    lines.append(f"[po4a_paths] {pot} {po_targets}")
-    lines.append("")
-
-    file_lines = 0
-    for f in matches:
-        langs = writable.get(f, [])
+    n = 0
+    for master in sorted(writable):
+        langs = writable[master]
         if not langs:
             continue
-        ext = f.suffix.lstrip(".")
-        basepath = get_basepath(f)
-        targets = " ".join(f"{lang}:{basepath}.{lang}{f.suffix}" for lang in langs)
-        lines.append(f"[type: {ext}] {f} {targets}")
-        file_lines += 1
-
-    if file_lines == 0:
-        log.warning(
-            "Priority %s: no writable (master, lang) pairs, skipping config", prio
+        ext = master.suffix.lstrip(".")
+        basepath = get_basepath(master)
+        targets = " ".join(
+            f"{lang}:{basepath}.{lang}{master.suffix}" for lang in sorted(langs)
         )
-        return None
+        lines.append(
+            f"[type: {ext}] {master} {targets} "
+            f"pot={_master_stem(master)} {UNTRANSLATED_OPT}"
+        )
+        n += 1
 
     cfg = CONFIG_FOLDER / f"priority-{prio}.cfg"
     update_if_changed(cfg, "\n".join(lines) + "\n")
-    log.info("Wrote %s (%d files)", cfg, file_lines)
+    log.info("Wrote %s (%d masters)", cfg, n)
     return cfg
+
+
+def _restamp_bucket(prio: str, writable: dict[Path, list[str]]) -> None:
+    """Re-apply priority flag after po4a's msgmerge may have added entries."""
+    if prio not in PRIORITY_VALUES:
+        return
+    for master, langs in writable.items():
+        for lang in langs:
+            _stamp_priority(_po_path(master, lang, prio), prio)
 
 
 def _prepare(
     pool: multiprocessing.pool.Pool,
     salvage: bool,
-) -> list[Path]:
-    """Compute writable pairs, optionally salvage, then emit the configs."""
+) -> list[tuple[str, Path, dict[Path, list[str]]]]:
+    """Build per-bucket configs; optionally salvage POs from xhtml first."""
     languages = _detect_target_languages()
     TRANSLATION_OUTPUT_FOLDER.mkdir(parents=True, exist_ok=True)
     CONFIG_FOLDER.mkdir(parents=True, exist_ok=True)
 
     files_by_priority = _collect_files_by_priority()
 
-    cfgs: list[Path] = []
+    result: list[tuple[str, Path, dict[Path, list[str]]]] = []
     for prio in PRIORITIES_AND_SEARCHES:
-        matches = files_by_priority.get(prio, [])
-        if not matches:
+        masters = files_by_priority.get(prio, [])
+        if not masters:
             log.warning("Priority %s: no files matched, skipping", prio)
             continue
-        writable = _compute_writable(matches, languages, pool)
         if salvage:
-            _salvage_priority(prio, matches, languages, writable, pool)
-        cfg = _gen_config(prio, matches, languages, writable)
+            _salvage_priority(prio, masters, languages, pool)
+        writable = _build_writable(prio, masters, languages)
+        cfg = _gen_config(prio, writable)
         if cfg is not None:
-            cfgs.append(cfg)
-    return cfgs
+            result.append((prio, cfg, writable))
+    return result
 
 
 def _run_po4a(
@@ -352,25 +456,37 @@ def _run_po4a(
     no_translations: bool,
 ) -> None:
     """Run po4a across every priority config in parallel."""
-    pool.map(partial(_po4a_worker, no_translations=no_translations), cfgs)
+    errors = [
+        err
+        for err in pool.map(
+            partial(_po4a_worker, no_translations=no_translations), cfgs
+        )
+        if err
+    ]
+    if errors:
+        for err in errors:
+            log.error(err)
+        sys.exit(1)
 
 
 def _cmd_update_po(pool: multiprocessing.pool.Pool) -> None:
     """Rebuild POT/PO files from the current xhtml sources."""
-    cfgs = _prepare(pool, salvage=True)
-    if not cfgs:
+    prepared = _prepare(pool, salvage=True)
+    if not prepared:
         log.error("No configs generated")
         sys.exit(1)
-    _run_po4a(pool, cfgs, no_translations=True)
+    _run_po4a(pool, [cfg for _, cfg, _ in prepared], no_translations=True)
+    for prio, _, writable in prepared:
+        _restamp_bucket(prio, writable)
 
 
 def _cmd_update_source(pool: multiprocessing.pool.Pool) -> None:
     """Write translations from PO files back into localized xhtml."""
-    cfgs = _prepare(pool, salvage=False)
-    if not cfgs:
+    prepared = _prepare(pool, salvage=False)
+    if not prepared:
         log.error("No configs generated")
         sys.exit(1)
-    _run_po4a(pool, cfgs, no_translations=False)
+    _run_po4a(pool, [cfg for _, cfg, _ in prepared], no_translations=False)
 
 
 def main() -> None:
@@ -411,12 +527,8 @@ def main() -> None:
         level=args.log_level,
     )
 
-    try:
-        with multiprocessing.Pool(processes=args.processes) as pool:
-            args.func(pool)
-    except subprocess.CalledProcessError as exc:
-        log.exception("Subprocess failed (exit %s): %s", exc.returncode, exc.cmd)
-        sys.exit(exc.returncode or 1)
+    with multiprocessing.Pool(processes=args.processes) as pool:
+        args.func(pool)
 
 
 if __name__ == "__main__":

@@ -1,0 +1,47 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2026-07-13 18:02+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Content of: <activityset><activity><title>
+#: fsfe.org/activities/avm-gpl-violation/activity.en.xml:6
+#, no-wrap, priority:500
+msgid "AVM GPL violation"
+msgstr "Violazione GPL da parte di AVM"
+
+#. type: Content of: <activityset><activity><description>
+#: fsfe.org/activities/avm-gpl-violation/activity.en.xml:8
+#, no-wrap, priority:500
+msgid ""
+"      Can a company modify GPL-licensed software on a third-party device? Router \n"
+"      manufacturer AVM accused Cybits of copyright and trademark infringement \n"
+"      for modifying the original router firmware, which is largely based on the \n"
+"      Linux kernel. Together with gpl-violations.org, we successfully convinced \n"
+"      the court that the terms of the GPL licence are binding: software under \n"
+"      this licence can be freely modified and installed, even if it is supplied \n"
+"      as part of the firmware of an embedded device. \n"
+"    "
+msgstr ""
+"      Un'azienda può modificare un software con licenza GPL su un dispositivo\n"
+"      di terze parti? Il produttore di router AVM ha accusato Cybits di\n"
+"      violazione del copyright e reclamo del marchio registrato perché\n"
+"      hanno modificato il firmware originale del router, che è ampiamente basato\n"
+"      sul kernel Linux. Insieme a gpl-violations.org abbiamo ottenuto con\n"
+"      successo che le clausole nella licenza GPL debbano essere vincolanti:\n"
+"      il software con questa licenza può essere liberamente modificato e\n"
+"      installato anche se fornito come parte del firmware di un dispositivo\n"
+"      embedded.\n"
+"    "

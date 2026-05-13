@@ -1,0 +1,88 @@
+# Spanish translations for PACKAGE package
+# Copyright (C) 2026 Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# Automatically generated, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2026-07-13 18:02+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. type: Content of: <html><head><title>
+#: fsfe.org/freesoftware/gnuproject.en.xhtml:6
+msgid "What is the GNU-Project?"
+msgstr ""
+
+#. type: Content of: <html><body><h1>
+#: fsfe.org/freesoftware/gnuproject.en.xhtml:10
+msgid "What is the GNU project?"
+msgstr ""
+
+#. type: Attribute 'alt' of: <html><body><div><div><img>
+#: fsfe.org/freesoftware/gnuproject.en.xhtml:14
+msgid "GNU head"
+msgstr ""
+
+#. type: Content of: <html><body><div><p>
+#: fsfe.org/freesoftware/gnuproject.en.xhtml:17
+msgid ""
+"The <a href=\"http://www.gnu.org\">GNU project</a> was launched in September "
+"1983 by Richard M.  Stallman to create a complete operating system which is "
+"<a href=\"/freesoftware/freesoftware.html\">Free Software</a>.  Software "
+"development work started the following January.  Today we have several Free "
+"Software operating systems which respect the users' freedom by giving "
+"everybody the right to use, study, share, and improve the software for any "
+"purpose."
+msgstr ""
+
+#. type: Content of: <html><body><p>
+#: fsfe.org/freesoftware/gnuproject.en.xhtml:28
+msgid ""
+"Stallman established the Free Software Foundation in October 1985 to assist "
+"administrative, legal, and organisational aspects of the GNU project and "
+"also to spread the use and knowledge of Free Software.  The main licences of "
+"the GNU project are the <a href=\"http://www.gnu.org/licenses/gpl.html\">GNU "
+"General Public License (GPL)</a> and the <a href=\"http://www.gnu.org/"
+"licenses/lgpl.html\">GNU Lesser General Public License</a> (LGPL, originally "
+"called GNU Library General Public License).  Over the years they have become "
+"established as the most widely used licences for Free Software."
+msgstr ""
+
+#. type: Content of: <html><body><p>
+#: fsfe.org/freesoftware/gnuproject.en.xhtml:39
+msgid ""
+"The GNU project consists of numerous smaller sub-projects maintained by "
+"volunteers or businesses or combinations of the two.  These sub-projects "
+"themselves are also called \"GNU projects\" or \"GNU packages.\""
+msgstr ""
+
+#. type: Content of: <html><body><p>
+#: fsfe.org/freesoftware/gnuproject.en.xhtml:46
+msgid ""
+"The name of the GNU project is derived from the recursive acronym \"GNU's "
+"Not Unix.\" Unix was a very popular operating system in the 80s, so Stallman "
+"designed GNU to be mostly compatible with Unix so that it would be "
+"convenient for people to migrate to GNU.  The name acknowledges that GNU "
+"learned from Unix's technical design, but also importantly notes that they "
+"are unrelated.  Unlike Unix, GNU is Free Software."
+msgstr ""
+
+#. type: Content of: <html><body><p>
+#: fsfe.org/freesoftware/gnuproject.en.xhtml:56
+msgid ""
+"Being Unix-like, GNU is modular in design.  This means that third party "
+"components can be inserted into GNU.  Today, it is very common for people to "
+"use a third party kernel called Linux with GNU systems.  Many people use the "
+"name \"Linux\" for this variant of GNU, but this prevents people from "
+"hearing of the GNU project and its goal of software freedom.  FSFE asks "
+"people to use the term \"GNU/Linux\" or \"GNU+Linux\" when referring to such "
+"systems."
+msgstr ""

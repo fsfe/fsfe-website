@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <data>
-  <version>1</version>
+  <version>3</version>
 
 
 <!-- ALL STATIC TEXTS -->
@@ -36,22 +36,31 @@
   <text id="translator3a">Si veda il </text>
   <text id="translator3b">testo originale</text>
   <text id="translator3c"> di questa pagina.</text>
+  <text id="permission">
+    Salvo diversa indicazione, il contenuto di questa pagina specifica è concesso in licenza secondo la <a href="https://creativecommons.org/licenses/by-sa/4.0/">Licenza Creative Commons Attribution Share-Alike 4.0 (CC-BY-SA 4.0)</a>.
+    Per ulteriori informazioni, consultare i contenuti delle pagine che descrivono la nostra <a href="/about/license-policy.html">politica sulle licenze</a>.
+  </text>
   <text id="js-licences">Licenze JavaScript</text>
-
 
   <!-- Warning info boxes -->
   <text id="outdated-1">
     La traduzione potrebbe non essere aggiornata rispetto al
   </text><!-- followed by "translator3b" -->
   <text id="outdated-2">
-     <a href="/contribute/translators/translators.html">Per favore aiutaci a
+     <a href="/contribute/translators/translators.html">Per favore aiutateci a
      tradurre</a> questa ed altre pagine su fsfe.org, affinché le persone possano leggere
-	i nostri messaggi nella propria lingua madre.
+     i nostri messaggi nella propria lingua madre.
   </text>
+  <text id="very-outdated">
+    La traduzione di questa pagina è rimasta molto indietro, perciò viene visualizzata la
+    versione inglese. <a href="/contribute/translators/translators.html">Per favore aiutateci a
+    tradurre</a> questa ed altre pagine su fsfe.org, affinché le persone possano leggere
+    i nostri messaggi nella propria lingua madre.
+  </text>  
   <text id="notranslation">
     Questa pagina non è ancora stata tradotta. <a href="/contribute/translators/translators.html">Per favore aiutaci a
-	tradurre</a> questa ed altre pagine su fsfe.org, affinché le persone possano leggere
-	i nostri messaggi nelle propria lingua madre.
+    tradurre</a> questa ed altre pagine su fsfe.org, affinché le persone possano leggere
+    i nostri messaggi nelle propria lingua madre.
   </text>
     <text id="under-construction">
     <strong>Attenzione: </strong>Questa pagina è in costruzione. Per favore  <strong>non divulgare </strong> o iniziare una traduzione in quanto il contenuto è soggetto a cambiamenti.
@@ -77,11 +86,12 @@
   <text id="fs/basics">Le basi del Software Libero</text>
   <text id="community/discuss">Discussioni sul Software Libero</text>
 
-
-
   <text id="learn-more">Vuoi saperne di più?</text>
 
   <text id="newsletter">Newsletter</text>
+  <text id="read-testimonial">Leggi la testimonianza</text>
+
+  <text id="newsletter">Bollettino</text>
   <text id="podcast">Podcast</text>
 
   <text id="go-to">Vai a:</text>
@@ -142,7 +152,7 @@
   <text id="related-news">Notizie correlate</text>
   <text id="related-events">Eventi collegati</text>
   <text id="related-all">Notizie ed eventi collegati</text>
-
+  <text id="more-updates">È inoltre possibile ricevere aggiornamenti regolari e approfondimenti sui nostri altri canali:</text>
 
   <!-- Sidebars -->
   <text id="our-work">Il nostro lavoro</text>
@@ -188,6 +198,9 @@
     cruciali per la nostra solidità e autonomia. Esse permettono di continuare
     a lavorare per il Software Libero ovunque necessario, e di essere una voce indipendente.
   </text>
+  
+  <text id="followup/press-header">Rimani informato</text>
+  <text id="followup/press-paragraph">Il modo migliore per rimanere aggiornati è iscriversi ai nostri <a href="/press/press.html">comunicati stampa</a> o <a href="/news/index.html">aggiornamenti</a>. È inoltre possibile contattare il nostro ufficio stampa all'indirizzo <email mailto="yes">press@fsfe.org</email>.</text>
 
   <!-- pdfreaders.org -->
   <text id="pdfreaders-head-readers">I lettori</text>
@@ -203,7 +216,7 @@
   <text id="share-warning">Alcuni servizi potrebbero non essere Software Libero e potrebbero pregiudicare la tua privacy.</text>
 
   <!-- Sponsoring buttons -->
-  <text id="donation-buttons">Banner</text>
+  <text id="donation-buttons">Pulsanti</text>
 
 
 
@@ -220,4 +233,8 @@
   <text id="search/placeholder">parole da cercare...</text>
   <text id="search/notfound">Nessun risultato trovato. Prova a mettere altri termini di ricerca.</text>
   <text id="search/empty">Non ha inserito alcun termine di ricerca.</text>
+
+  <!-- Progressbar -->
+  <text id="progressbar-of">di</text>
+  
 </data>

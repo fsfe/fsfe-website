@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<activityset>
+  <version>1</version>
+
+  <activity id="devices" date="2021-11-01" status="active">
+    <title>Legge sui Mercati Digitali</title>
+    <description>
+      La neutralità dei dispositivi è il concetto politico volto a
+      regolamentare il monopolio sui dispositivi e a ristabilire
+      il controllo degli utenti finali sulle proprie apparecchiature digitali.
+      La Legge sui Mercati Digitali (DMA) regola l'attività economica delle
+      grandi piattaforme digitali e introduce la neutralità dei dispositivi
+      nella legislazione europea, promuovendo l'accesso al Software Libero
+      nei dispositivi.
+    </description>
+    <link href="/activities/dma/dma.html"/>
+    <image url="/graphics/logos/dma-logo.png"/>
+    <order priority="5" highlight="yes"/>
+    <tags>
+      <tag key="policy"/>
+    </tags>
+  </activity>
+</activityset>

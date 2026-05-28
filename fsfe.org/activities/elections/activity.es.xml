@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<activityset>
+  <version>1</version>
+
+  <activity id="elections" date="2009-09-01" status="active">
+    <title>Actividades electorales</title>
+    <description>
+      ¿Cuál podría ser el mejor momento para preguntar a los políticos sobre su
+      posición respecto al Software Libre y los Estándares Abiertos que en el período previo a unas elecciones? Creemos que podemos y deberíamos plantear estos 
+      asuntos en todas las elecciones, ya sean europeas, nacionales, regionales y locales.
+      Dependiendo del sistema electoral y la cultura, empleamos distintas 
+      estrategias y herramientas.
+       </description>
+    <link href="/activities/elections/index.html"/>
+    <image url="/graphics/logos/elections.png"/>
+    <order priority="3"/>
+    <tags>
+      <tag key="awareness"/>
+      <tag key="policy"/>
+    </tags>
+  </activity>
+</activityset>

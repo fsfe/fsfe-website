@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<activityset>
+  <version>1</version>
+
+  <activity id="conf-events" date="2023-08-24" status="active">
+    <title>Informes sobre conferencias, eventos y expositores</title>
+    <description>
+La Free Software Foundation Europe (FSFE) participa regularmente en varias 
+conferencias por toda Europa. Estos eventos presentan charlas informativas y 
+talleres dedicados a debatir las diversas actividades llevadas a cabo 
+por la FSFE. Aquí podrás encontrar una recopilación de los últimos informes de 
+estos interesantes eventos.
+    </description>
+    <link href="/activities/conf-events/conf-events.html"/>
+    <image url="/graphics/touch-icon.png"/>
+    <order priority="1" highlight="no"/>
+    <tags>
+      <tag key="awareness"/>
+        <tag key="hide"/>
+    </tags>
+  </activity>
+</activityset>

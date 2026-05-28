@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<activityset>
+  <version>3</version>
+
+  <activity id="devices" date="2021-11-01" status="active">
+    <title>La Neutralidad del Dispositivo</title>
+	<description> A pesar de que hoy en día los dispositivos digitales 
+	están por todas partes, el número de dispositivos en los que los 
+	usuarios no pueden ejecutar Software Libre se está incrementando 
+	exponencialmente. La consecuencia es una pérdida de control cada 
+	vez mayor de los usuarios sobre la tecnología. La Neutralidad del 
+	Dispositivo tiene como objetivo permitir que los usuarios finales 
+	eludan a los guardianes del acceso para hacer un uso no 
+	discriminatorio del Software Libre en sus dispositivos. 
+	</description>
+    <link href="/activities/deviceneutrality/index"/>
+    <image url="/graphics/logos/deviceneutrality-transparent.png"/>
+    <order priority="5" highlight="yes"/>
+    <tags>
+      <tag key="policy"/>
+      <tag key="awareness"/>
+    </tags>
+  </activity>
+</activityset>

@@ -46,6 +46,20 @@
                 <xsl:attribute name="title">Peertube</xsl:attribute>
               </xsl:element>
             </xsl:element>
+            <xsl:element name="a">
+              <!-- RSS Feed -->
+              <xsl:attribute name="href">
+                <xsl:text>/news/news.rss</xsl:text>
+              </xsl:attribute>
+              <xsl:element name="img">
+                <xsl:attribute name="src">
+                  <xsl:value-of select="$urlprefix"/>
+                  <xsl:text>/graphics/services/rss.png</xsl:text>
+                </xsl:attribute>
+                <xsl:attribute name="alt">RSS Feed</xsl:attribute>
+                <xsl:attribute name="title">RSS Feed</xsl:attribute>
+              </xsl:element>
+            </xsl:element>          
           </xsl:element>
         </xsl:element>
       </xsl:element>

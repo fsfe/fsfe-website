@@ -6,6 +6,7 @@
 import argparse
 import logging
 import multiprocessing
+import multiprocessing.pool
 import sys
 import tomllib
 from pathlib import Path
@@ -149,7 +150,7 @@ def _run_build(global_build_config: GlobalBuildConfig) -> None:
     )
     logger.debug(global_build_config)
 
-    with multiprocessing.Pool(global_build_config.processes) as pool:
+    with multiprocessing.pool.ThreadPool(global_build_config.processes) as pool:
         logger.info("Starting phase 0 - Global Conditional Setup")
         # These are simple conditional steps that interact directly with args
         if global_build_config.clean_cache:

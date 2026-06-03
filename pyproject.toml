@@ -3,10 +3,10 @@ name = "fsfe-website-build"
 version = "0.0.0"
 description = "Python tooling to build the fsfe websites"
 readme = "README.md"
-requires-python = "==3.14.*"
+requires-python = "==3.14.4+freethreading"
 dependencies = [
   "dacite",  # dict to dataclass conversion
-  "lxml",  # XML parser
+  "lxml>=7.0.0a",  # XML parser
   "nltk",  # For stopwords for the search index
   "platformdirs",  # Get cache dirs and similar by platform
   "python-iso639",  # For getting english language names of languages from two letter codes.

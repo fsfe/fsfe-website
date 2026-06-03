@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <service-status-data>
   <version>1</version>
-  <incident name="Power outtage in Data Center" resulved="true">
-    <update date="2026-06-02">
+  <incident name="Power outtage in Data Center">
+    <update date="2026-06-02" resolved="true">
       One of the data centers FSFE is hosting servers in is affected by a power outage. The DC technicians are working to resolve the issue. Services disrupted include: Nextcloud, git, IMAP, XMPP...
     </update>
     <update date="2026-06-03">

@@ -52,15 +52,17 @@ div.timeline-item > div.description > img {
 div.timeline-item > div.description > p {
   flex: 1;
 }
-div.timeline-item.legal-support {
-  background-color: @timeline-legal-support;
+div.timeline-item.legal-support,
+div.timeline-item.legal-education {
+  background-color: @timeline-legal-education;
 }
-div.timeline-item.policy-freemarkets,
+div.timeline-item.market-regulations,
 div.timeline-item.policy-advocacy {
-  background-color: @timeline-policy-freemarkets;
+  background-color: @timeline-market-regulations;
 }
+div.timeline-item.org-dev,
 div.timeline-item.internal {
-  background-color: @timeline-internal;
+  background-color: @timeline-org-dev;
 }
 div.timeline-item.young-generation {
   background-color: @timeline-young-generation;
@@ -71,4 +73,7 @@ div.timeline-item.volunteer-engagement {
 }
 div.timeline-item.device-neutrality {
   background-color: @timeline-device-neutrality;
+}
+div.timeline-item.pmpc {
+  background-color: @timeline-pmpc;
 }

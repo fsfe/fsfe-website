@@ -29,10 +29,13 @@
                 <div class="topline">
                   <h3>
                     <xsl:choose>
-                      <xsl:when test="@type = 'internal'">🤝︎</xsl:when>
-                      <xsl:when test="@type = 'policy-advocacy'">🏛︎</xsl:when>
-                      <xsl:when test="@type = 'legal-support'">⚖︎</xsl:when>
-                      <xsl:when test="@type = 'public-awareness'">📣︎</xsl:when>
+						<xsl:when test="@type = 'device-neutrality'">♻</xsl:when>
+						<xsl:when test="@type = 'legal-education'">⚖︎</xsl:when>
+						<xsl:when test="@type = 'market-regulations'">🗠</xsl:when>
+						<xsl:when test="@type = 'pmpc'">🏛︎</xsl:when>
+						<xsl:when test="@type = 'volunteer-engagement'">📣︎</xsl:when>
+						<xsl:when test="@type = 'young-generation'">👾︎</xsl:when>
+						<xsl:when test="@type = 'org-dev'">🤝︎</xsl:when>
                       <xsl:otherwise>???</xsl:otherwise>
                     </xsl:choose>
                     <xsl:text> </xsl:text>

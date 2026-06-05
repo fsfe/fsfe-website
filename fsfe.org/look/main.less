@@ -1,5 +1,6 @@
 @import "base";
 @import "elements/banners";
+@import "elements/card-grid";
 @import "elements/color-box";
 @import "elements/details";
 @import "elements/figure";
@@ -111,6 +112,17 @@ img.signatory-logo {
     }
   }
 }
+
+// ----------------------------------------------------------------------------
+// Landing pages (like "ada", ...
+// ----------------------------------------------------------------------------
+
+body.landing #content {
+  .toplevel;
+  
+  .card-grid;
+}
+
 
 // ----------------------------------------------------------------------------
 // Overview pages (like "about", "contribute", ...

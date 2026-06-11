@@ -90,9 +90,10 @@ def run(source: Path, languages: list[str], processes: int, working_dir: Path) -
         tags_by_lang: defaultdict[str, dict[str, str | None]] = defaultdict(dict)
         # Fill out files_by_tag and tags_by_lang
         for file in filter(
-            lambda file:
-            # Not in tags dir of a source_dir
-            working_dir not in file.parents,
+            lambda file: (
+                # Not in tags dir of a source_dir
+                working_dir not in file.parents
+            ),
             working_dir.parent.glob("**/*.xml"),
         ):
             for tag in etree.parse(file).xpath("//tag"):

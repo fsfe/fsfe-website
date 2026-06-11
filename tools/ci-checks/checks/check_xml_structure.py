@@ -49,7 +49,6 @@ def check(files: list[Path], pool: multiprocessing.pool.Pool) -> tuple[bool, str
         "//*/@alt",  # alt text for a variety of elements
         "//a/@title",  # link titles can be translated
         "//discussion/@href",  # Mastodon links can be in different langs
-        "/html/translator",  # the translator
         "//input[@name='language']",  # Input language types
         "//label[@for='address']",  # some input labels that need translating
         "//label[@for='email']",

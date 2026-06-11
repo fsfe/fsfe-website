@@ -72,7 +72,6 @@ def run(source: Path, languages: list[str], processes: int, working_dir: Path) -
         "//*/@alt",  # alt text for a variety of elements
         "//a/@title",  # link titles can be translated
         "//discussion/@href",  # Mastodon links can be in different langs
-        "/html/translator",  # the translator
         "//input[@name='language']",  # Input language types
         "//label[@for='address']",  # some input labels that need translating
         "//label[@for='email']",

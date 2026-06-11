@@ -5,65 +5,51 @@
     <div class="timeline-holder">
       <xsl:for-each select="/buildinfo/document/set/year">
         <xsl:sort select="@value" order="descending"/>
-        <xsl:variable name="year" select="@value"/>
-        <div class="timeline-year">
-          <xsl:attribute name="id">
-            <xsl:value-of select="$year"/>
-          </xsl:attribute>
-          <h2>
-            <xsl:value-of select="$year"/>
-          </h2>
-          <div class="timeline-year-content">
-            <xsl:for-each select="event">
-              <xsl:sort select="@month" order="descending"/>
-              <div>
-                <xsl:attribute name="id">
-                  <xsl:value-of select="$year"/>
-                  <xsl:text>-</xsl:text>
-                  <xsl:value-of select="@month"/>
-                </xsl:attribute>
-                <xsl:attribute name="class">
-                  <xsl:text>timeline-item </xsl:text>
-                  <xsl:value-of select="@type"/>
-                </xsl:attribute>
-                <div class="topline">
-                  <h3>
-                    <xsl:choose>
-						<xsl:when test="@type = 'device-neutrality'">♻</xsl:when>
-						<xsl:when test="@type = 'legal-education'">⚖︎</xsl:when>
-						<xsl:when test="@type = 'market-regulations'">🗠</xsl:when>
-						<xsl:when test="@type = 'pmpc'">🏛︎</xsl:when>
-						<xsl:when test="@type = 'volunteer-engagement'">📣︎</xsl:when>
-						<xsl:when test="@type = 'young-generation'">👾︎</xsl:when>
-						<xsl:when test="@type = 'org-dev'">🤝︎</xsl:when>
-                      <xsl:otherwise>???</xsl:otherwise>
-                    </xsl:choose>
-                    <xsl:text> </xsl:text>
-                    <xsl:value-of select="title"/>
-                  </h3>
+        <xsl:if test="*">
+          <xsl:variable name="year" select="@value"/>
+          <div class="timeline-year">
+            <xsl:attribute name="id">
+              <xsl:value-of select="$year"/>
+            </xsl:attribute>
+            <h2>
+              <xsl:value-of select="$year"/>
+            </h2>
+            <div class="timeline-year-content">
+              <xsl:for-each select="event">
+                <xsl:sort select="@month" order="descending"/>
+                <div>
+                  <xsl:attribute name="id">
+                    <xsl:value-of select="$year"/>
+                    <xsl:text>-</xsl:text>
+                    <xsl:value-of select="@month"/>
+                  </xsl:attribute>
+                  <xsl:attribute name="class">
+                    <xsl:text>timeline-item </xsl:text>
+                    <xsl:value-of select="@type"/>
+                  </xsl:attribute>
+                  <div class="topline">
+                    <h3>
+                      <xsl:value-of select="title"/>
+                    </h3>
+                  </div>
+                  <div class="description">
+                    <p>
+                      <xsl:value-of select="body"/>
+                    </p>
+                    <a class="more-info">
+                      <xsl:attribute name="href">
+                        <xsl:value-of select="url"/>
+                      </xsl:attribute>
+                      <xsl:call-template name="fsfe-gettext">
+                        <xsl:with-param name="id" select="'learn-more'"/>
+                      </xsl:call-template>
+                    </a>
+                  </div>
                 </div>
-                <div class="description">
-                  <p>
-                    <xsl:value-of select="body"/>
-                    <!-- <xsl:if test="img"> -->
-                    <!-- <figure> -->
-                    <!-- <xsl:copy-of select="img"/> -->
-                    <!-- </figure> -->
-                    <!-- </xsl:if> -->
-                  </p>
-                  <a class="more-info">
-                    <xsl:attribute name="href">
-                      <xsl:value-of select="url"/>
-                    </xsl:attribute>
-                    <xsl:call-template name="fsfe-gettext">
-                      <xsl:with-param name="id" select="'learn-more'"/>
-                    </xsl:call-template>
-                  </a>
-                </div>
-              </div>
-            </xsl:for-each>
+              </xsl:for-each>
+            </div>
           </div>
-        </div>
+        </xsl:if>
       </xsl:for-each>
     </div>
   </xsl:template>

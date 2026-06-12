@@ -1,0 +1,770 @@
+WEBVTT
+
+00:00.000 --> 00:17.600
+Hello and welcome to the Software Freedom Podcast.
+
+00:17.600 --> 00:22.440
+Thank you so much our dear listener for listening to this podcast without you, this would not
+
+00:22.440 --> 00:23.600
+be possible.
+
+00:23.600 --> 00:25.120
+So thank you very much.
+
+00:25.120 --> 00:28.880
+This podcast is brought to you by the Free Software Foundation Europe.
+
+00:29.120 --> 00:33.040
+We are charity that empowers users to control technology.
+
+00:33.040 --> 00:36.480
+I'm Bonnie Mehring and today I'm here with Nico Rikken.
+
+00:36.480 --> 00:44.320
+Nico is a long-term FSFE volunteer and yeah he has been around for quite a while now and I'm
+
+00:44.320 --> 00:48.400
+very very happy to have you here Nico on the Software Freedom Podcast.
+
+00:48.400 --> 00:49.840
+Thank you so much for making it.
+
+00:51.040 --> 00:52.160
+Yeah, hi, Bonnie.
+
+00:52.160 --> 00:53.200
+Thanks for having me.
+
+00:53.200 --> 00:55.360
+It's great to be on the podcast.
+
+00:56.320 --> 00:59.680
+So far we have never managed to record an episode before, right?
+
+00:59.680 --> 01:06.000
+So this is the first time you're here but we did record the ending of one episode.
+
+01:07.280 --> 01:08.160
+Yeah, that's true.
+
+01:08.160 --> 01:13.440
+So then was my first first appearance on the podcast and now let's see what we end up.
+
+01:14.160 --> 01:15.440
+Very, very curious.
+
+01:16.160 --> 01:22.720
+All right, Nico how did your journey with the FSFE start and then exactly did you join the FSFE?
+
+01:23.440 --> 01:29.760
+I joined the FSFE in the beginning of May 2014 and I was invited on the mailing list
+
+01:29.760 --> 01:38.560
+and there I was invited by Felix to also come to the local Nijmegen Linux user group
+
+01:38.560 --> 01:40.240
+which is quite close to where I live.
+
+01:40.800 --> 01:43.600
+So I joined and then Felix immediately asked,
+
+01:43.600 --> 01:45.920
+fired at me like, oh yeah, T-DOSE is coming up.
+
+01:45.920 --> 01:50.160
+Will he want to join and there will be good and you can help with the booth.
+
+01:50.160 --> 01:51.840
+So before I know it, there was T-DOSE.
+
+01:53.280 --> 01:59.200
+And then before I know it, it was, well, if you like T-DOSE, you might as well come to FOSDEM.
+
+02:00.320 --> 02:07.920
+And for me, even coming to the local Linux user group, before going there,
+
+02:08.480 --> 02:12.400
+for me free and open source software was something that I was doing online,
+
+02:13.120 --> 02:18.960
+on my room, on the couch with the laptop, reading, maybe posting some things.
+
+02:19.920 --> 02:25.360
+And then to be in a group of people that all think along the same lines as you do,
+
+02:26.240 --> 02:31.040
+there was so heartwarming that I wanted to have more of that and I found that from the Linux user
+
+02:31.040 --> 02:37.200
+group then to T-DOSE and then to, wow, if you look at FOSDEM, it's overwhelming the amount
+
+02:37.200 --> 02:41.760
+of energy and like many people that you meet there. So that's really great.
+
+02:42.720 --> 02:46.160
+So because I've had this very interesting, now you had this local user,
+
+02:46.160 --> 02:53.200
+Linux user group, who is also connected to the FSFE with Felix and who invited you to the mailing
+
+02:53.200 --> 03:00.080
+list and invited you to all of those events. But you are very much engaged with all of us now,
+
+03:00.080 --> 03:06.000
+like you're, you could be our co-workers, that's how much you do for the FSFE sometimes.
+
+03:07.600 --> 03:13.520
+So I'm wondering, what made you stick around there? Like, I joined the FSFE to make an impact
+
+03:13.520 --> 03:19.200
+in the world. At least that was my idea because I found it important. Also at that time,
+
+03:19.200 --> 03:24.000
+there was the Snowden leaks. I thought there's a lot of people concerned about privacy, but actually,
+
+03:24.000 --> 03:28.800
+how do you get privacy when you have no control on the devices underpinning that privacy in the digital
+
+03:28.800 --> 03:35.040
+world? And I didn't see many people having that mindset that there was really important.
+
+03:35.040 --> 03:40.080
+And looking for that, I found that FSFE. I was familiar with that by the open source software,
+
+03:40.160 --> 03:47.040
+but I wasn't as much familiar with the ideas behind it. And looking at FSFE is like,
+
+03:47.040 --> 03:52.560
+ah, would there be a European counterpart? And before I know that, I found FSFE. And
+
+03:54.160 --> 04:00.560
+getting more engaged with FSFE, I found lots of friendly people, and we were all trying to
+
+04:00.560 --> 04:07.120
+make an impact. And I could really see the impact that we were making. And it's also a nice European
+
+04:07.200 --> 04:14.000
+network to, yeah, being engaged with different cultures, different viewpoints, and everybody so
+
+04:14.000 --> 04:23.520
+friendly. And yeah, I really like that. So for me, it's on one hand doing something that's
+
+04:23.520 --> 04:29.360
+good for society, I think. I'm really convinced about that. But also, we do it together with the
+
+04:29.360 --> 04:35.120
+whole whole community of FSFE, which gives me a lot of energy and fulfillment. Wow, thank you very
+
+04:35.120 --> 04:40.960
+much. Very happy to have you here. And I hope we keep having you around for quite a while.
+
+04:40.960 --> 04:48.480
+Yeah, thank you. I'm sure I will. So today we will be talking about the Dutch conference called
+
+04:48.480 --> 04:55.760
+T-DOSE. I'm not quite sure if I'm pronouncing this correct. I guess I am. It's English, or?
+
+04:56.960 --> 05:02.000
+Yeah, I think it's intended to be pronounced English. Everybody talks about T-DOSE.
+
+05:02.880 --> 05:08.640
+But the funny thing is, it could be a play on words, I don't know, but with a T-Box, but I don't
+
+05:08.640 --> 05:14.560
+know if that's a case. It has been called that. That's actually really funny. I will keep that in mind.
+
+05:15.520 --> 05:19.760
+But I don't know the origin of the name, actually. So that's the story I can't tell much about.
+
+05:19.760 --> 05:25.280
+Ah, alright. Don't worry. We will have enough to talk about, because this conference T-DOSE
+
+05:25.280 --> 05:30.000
+has just happened over the six and sevenths of June, so basically last weekend.
+
+05:30.560 --> 05:36.960
+Yeah, that was great. So we had a 20th edition of the T-DOSE conference. There was some
+
+05:38.480 --> 05:42.720
+of course, there were some editions that were skipped due to the pandemic and some other issues.
+
+05:43.760 --> 05:49.280
+But yeah, 20 editions, so that's nice. That's really, really nice. But where the editions,
+
+05:49.280 --> 05:54.400
+like during the pandemic, were there some online editions, or was this just there and merely
+
+05:55.120 --> 06:01.680
+like skipped and there was nothing happening? Yeah, it was quite tragic, I think, for T-DOSE.
+
+06:01.680 --> 06:08.240
+It's that before T-DOSE was in a school building. So after you had your high school, you could
+
+06:08.240 --> 06:14.800
+do studies there. And we had the whole place for the whole weekend. But unfortunately, we
+
+06:14.800 --> 06:20.960
+could no longer host T-DOSE there. And so the organization then was looking for another venue
+
+06:20.960 --> 06:26.320
+and then COVID hit. So there was like, I guess, three consecutive years of no conference,
+
+06:26.880 --> 06:35.280
+so that it is hard with all the continuity of such a conference. But ever since the pandemic,
+
+06:35.280 --> 06:41.920
+we're slowly growing in terms of attendees and the program and the organization. So I think
+
+06:42.640 --> 06:48.880
+last weekend was another bigger turnout than the year before and the year before that. So it's
+
+06:48.960 --> 06:55.920
+we're on an upward trend. Okay, so but let's take a step back and for everybody out there, what is T-DOSE?
+
+06:57.280 --> 07:05.680
+T-DOSE is the technical Dutch open source event. And it was started with the intention of being
+
+07:05.680 --> 07:10.480
+like a Mini-FOSDEM, or maybe not even mini, I don't know how the big ideas were at the time,
+
+07:10.480 --> 07:16.400
+but it's like we should have like something like FOSDEM in the Netherlands, specifically around
+
+07:16.400 --> 07:24.960
+the region of Eindhoven. And it is in a way like Fossom that it's free admittance. There's a
+
+07:24.960 --> 07:31.440
+couple of tracks. The talks are on the one hand, they are technical, but also more entry level and
+
+07:31.440 --> 07:40.720
+more different kind of aspects about society, impact, could be privacy. There was a workshop
+
+07:40.720 --> 07:47.760
+last weekend about musical, so about editing musical annotations of sheet music. So there's
+
+07:48.560 --> 07:54.960
+a part of the program that can go in different directions. And I think that specifically the fact that
+
+07:54.960 --> 08:02.160
+it's free admittance and that it's a number of booths also from community projects like including
+
+08:02.160 --> 08:08.560
+the FSFE, but also about Debian and the local hackerspace and some others. It really has this
+
+08:08.560 --> 08:16.240
+community vibe to it. And some people are just living there locally, they come to see what's up,
+
+08:17.120 --> 08:20.800
+sometimes you have people from the community that only have a couple of hours to spend,
+
+08:20.800 --> 08:27.280
+then they draw by and say hello. So it's a really easy sort of family-like event.
+
+08:28.240 --> 08:35.200
+That sounds really cozy. Yeah it is. Is it like that the Dutch people come together,
+
+08:35.280 --> 08:38.480
+or are there also people from outside of the Netherlands?
+
+08:39.680 --> 08:43.760
+I've mentioned people there over the years that were not from the Netherlands,
+
+08:44.800 --> 08:49.760
+but that's a rarity I'd say. All right. Why is it focused on Eindhoven?
+
+08:51.200 --> 08:55.360
+I think they just started it. The first edition was a university of Eindhoven.
+
+08:56.160 --> 09:02.880
+And yeah, there was no reason to leave the region also because the main volunteers are from the
+
+09:02.880 --> 09:09.360
+region. And well, the region itself, proud of itself, are being the brain port region.
+
+09:09.920 --> 09:17.200
+So there should be enough tech and IT to go around. Okay, so this is like the technical center
+
+09:17.200 --> 09:26.960
+of the Netherlands. Depends on your ask. So if you talk about finance and maps about the
+
+09:26.960 --> 09:34.560
+Tom Tom booking the big right, that's all an Amsterdam. But if outside of that anything chips and
+
+09:34.560 --> 09:40.640
+better, I'd say yeah, then the brain port region around Eindhoven is so maybe even more high tech,
+
+09:40.640 --> 09:46.160
+but that depends on how you look at it. All right. Now I learned something new. Thank you very much.
+
+09:46.720 --> 09:57.200
+Okay, so this T-DOSE started 20 years ago. This makes 2006. And during those past years,
+
+09:57.200 --> 10:04.960
+you joined the core team of T-DOSE and also you're now like organizing T-DOSE with others.
+
+10:04.960 --> 10:09.360
+How did this all start? Of course, I was already attending T-DOSE
+
+10:10.320 --> 10:16.720
+most of the editions ever since I joined. And I was familiar with the people from the community
+
+10:16.720 --> 10:22.400
+also through other events. And it's like, hey Niko, you're also and this more has maybe more to do
+
+10:22.400 --> 10:28.000
+with my day job. You're also involved with the public sector and could you maybe help us
+
+10:28.000 --> 10:33.360
+get more of the public sector and highlight all the good stuff that is happening in the Netherlands and
+
+10:33.360 --> 10:38.720
+work on a track? Well, we didn't. I didn't manage to fill a whole track that year, but I did find
+
+10:38.720 --> 10:44.000
+some speakers. And before I know it, it's like, oh, you have some good skills that we could use
+
+10:44.000 --> 10:49.600
+in the core team, which you want to help volunteer. So it was like three years ago. And yeah,
+
+10:49.600 --> 10:55.440
+trying to make the most of it. I mean, my time is limited. I try to help where I can. I'd say the
+
+10:55.440 --> 11:00.960
+rest of the core team is doing way more than I do, but I try to help where I can. That sounds
+
+11:00.960 --> 11:07.280
+really good. That sounds like you're a really close team and you're trying to get together and
+
+11:07.760 --> 11:16.640
+basically organize a conference for everybody in the Netherlands. Yes, we really try to make it
+
+11:16.640 --> 11:25.360
+a good cool event, get a good program. I'd say it's also a challenge with having such a team,
+
+11:25.360 --> 11:30.160
+which from the first community, we want to do all of everything ourselves. So we do the web server
+
+11:30.160 --> 11:34.880
+and we do the mail server and the website and everything. So it's quite a bit of a workload
+
+11:34.880 --> 11:42.080
+outside of even hosting the venue and getting the speakers and the booths and sponsors. Of course,
+
+11:42.080 --> 11:51.760
+that so much needed. I see. I needed to smile now because I'm like, isn't this the same
+
+11:51.760 --> 11:58.400
+of every single conference all over Europe? Everybody is like, I need my own infrastructure. I'm hosting
+
+11:58.400 --> 12:05.360
+this myself and I just think it's, I don't know why this is the case. You know what I mean?
+
+12:05.920 --> 12:14.320
+Yeah, this is sort of a bootstrapping problem. You have to get off the ground and who helps you.
+
+12:14.320 --> 12:20.000
+I must say I was also involved last year with the Postgres Day event, PG Day, you know.
+
+12:21.280 --> 12:26.880
+And in that case, it was really nice to be piggybacking on the Postgres Europe organization.
+
+12:28.560 --> 12:33.200
+I used that infrastructure for ticket sales and I think also for hosting the website and there
+
+12:33.200 --> 12:38.640
+was the Postgres community from the UK, I think, already had a template for the website. So
+
+12:38.640 --> 12:45.440
+bootstrapping a new conference in that way was rather easy. So I think it would be nice if there
+
+12:45.440 --> 12:51.600
+was more like that. But then thinking of it now, there's already pre-talks as sort of a main
+
+12:51.600 --> 12:57.440
+conference organizing software that we also leverage in TIDOS. So it's also a way to share and collaborate.
+
+12:58.160 --> 13:03.120
+Absolutely, absolutely. There are quite a lot of free software projects out there that make
+
+13:03.120 --> 13:08.880
+organizing conferences way more easy. And pre-talks is definitely one of them.
+
+13:09.760 --> 13:14.000
+So who is with you in the quarantine? I'm guessing it's not only you.
+
+13:15.680 --> 13:25.120
+No, that would be Wienke and Johan, a couple that I've known as long as I've been to TIDOS.
+
+13:25.120 --> 13:29.200
+They're really the backbone and carry also the weight in other conferences.
+
+13:30.000 --> 13:39.360
+And then Peter and Nick, Nick recently joined, but he's given a lot of energy to the team.
+
+13:39.360 --> 13:45.760
+So that's good. Yeah, Peter as a chair, I think the amount of hours he puts in is overwhelming.
+
+13:45.760 --> 13:51.280
+And I should not forget Marta also talking IT infrastructure and the design because
+
+13:52.240 --> 13:57.760
+yeah, we're on a podcast, so you can't see, but the sticker I have last week and I had is
+
+13:58.720 --> 14:03.840
+an online effort person with a festive head for the 20-year celebration. And each and every year we
+
+14:03.840 --> 14:15.680
+have a different icon. And also Nina is the daughter of Johan and Wienke who made the characters
+
+14:15.680 --> 14:20.480
+for the last few years. And so each and every year we try to get a unique design.
+
+14:21.280 --> 14:25.680
+And they'll get printed on shirts, they'll get printed on marks. So before you know,
+
+14:25.680 --> 14:30.400
+if you attend TIDOS, you have a whole stack of marks and T-shirts of each and every edition.
+
+14:31.760 --> 14:34.080
+Okay, now I definitely need to come next year.
+
+14:36.160 --> 14:42.160
+All right, so this is quite a full team. And what's the something that you find really outstanding
+
+14:42.160 --> 14:48.320
+and that really struck you off TIDOS where you're like, oh, this is a point of view that I have
+
+14:48.320 --> 14:58.000
+not thought about before. I was mostly manning the booth. So I didn't see much talks, but in one
+
+14:58.000 --> 15:04.720
+of the discussions we had about digital autonomy at the booth and sort of devil's advocate question
+
+15:04.720 --> 15:10.320
+that came up was, well, how do you think we can establish a digital autonomy in Europe and a
+
+15:10.320 --> 15:17.120
+free and open source software business ecosystem? If there's no sort of a thin layer of a
+
+15:17.120 --> 15:24.560
+proprietary around the free and open source software to have like a cutting edge and to make sure
+
+15:24.560 --> 15:34.800
+you're not undercut by other players in a global market. So I think that was a there was a very
+
+15:35.120 --> 15:44.560
+I think there was a spicy question to make you think like how do we see to support our free
+
+15:44.560 --> 15:52.000
+no source ecosystem and make sure that the businesses that put in the effort are driving and can
+
+15:52.000 --> 16:00.240
+stay competitive. So the question was how to support free ends of their businesses and how they
+
+16:00.240 --> 16:07.360
+can still be competitive then in the free market against such monopolies. Yeah.
+
+16:16.800 --> 16:24.960
+Second to last episode. So SFP 50 it could be and I now find this very interesting because he
+
+16:25.040 --> 16:31.120
+also talked about monopolies and he was also pointing out how important the next generation
+
+16:31.120 --> 16:38.320
+internet program is in this regard because it is supporting those kinds of projects and also for
+
+16:38.320 --> 16:45.440
+the FSFE do keep calling for a long term funding of free software projects because basically all
+
+16:45.440 --> 16:49.680
+of those free software projects all of you know this is case the comics so I don't need to
+
+16:50.320 --> 16:58.880
+reference it more but all the free software projects they are also in other projects like
+
+16:58.880 --> 17:06.400
+non free software projects and they do need this kind of project even the monopolies because
+
+17:06.400 --> 17:13.040
+they are built on those and therefore we do need this long term funding that the FSFE is calling
+
+17:13.360 --> 17:20.960
+for. What do you think about that answer? I think that's very good especially from from the
+
+17:20.960 --> 17:27.440
+standpoint of FSFE that makes a whole lot of sense I think it's for the business associations
+
+17:27.440 --> 17:36.320
+so in the nanos we recently had a business association sort of get a revival the Dutch open source
+
+17:36.320 --> 17:42.880
+business alliance and I think it's more for them to also say okay we need businesses and
+
+17:42.880 --> 17:52.800
+competitiveness which may be less of a concern for FSFE I think we both want a thriving
+
+17:53.760 --> 17:59.680
+fossil ecosystem. Absolutely. Was there something else that you found really that struck you
+
+17:59.680 --> 18:05.520
+or where you thought like oh this tea does is especially nice compared to other conferences
+
+18:05.520 --> 18:13.200
+or like yeah anything in digital guard. Tea does for me really has this community feel of people
+
+18:13.200 --> 18:21.840
+that are really fast-minded and it's not a regular tech conference but also it's a smaller scale
+
+18:22.480 --> 18:28.800
+maybe a way smaller scale than something like foster them so even mounting the booth of the FSFE
+
+18:29.840 --> 18:36.640
+at a certain time it was a bit low traffic because I was interesting talks going on and I had a chat
+
+18:36.640 --> 18:44.320
+with Sondorf was from the UB-ports booth as well from the community and he happens to be a teacher
+
+18:44.320 --> 18:50.960
+as well so what we're looking with the ad on Sangamon book is how can we leverage that book in education
+
+18:51.840 --> 18:58.240
+and we had a couple of chats all about that already at other events and this was a moment
+
+18:58.240 --> 19:02.000
+where we met and we had some time on our hands and we really started to go down
+
+19:03.520 --> 19:08.480
+like how does the Dutch education system work what are the terms that all the schools have to
+
+19:08.480 --> 19:15.040
+meet and how the book fit in so we now have I'm at least have some ideas how we can get to a
+
+19:15.040 --> 19:22.400
+concrete proposal to have a document added to the book that will help use the book in schools
+
+19:22.400 --> 19:31.520
+for anything digital digital education that's pretty cool yeah there's quite a number of people
+
+19:31.520 --> 19:37.040
+from the free and open source software community that I've come to know from Tidos
+
+19:37.680 --> 19:43.200
+because it's a rather it's a smaller event so you have more time on our hands to talk to certain
+
+19:43.200 --> 19:49.520
+people that's and then ideas like this get started that sounds really nice
+
+19:50.480 --> 19:56.640
+so will you be following up on that or what will be happening there next I think I just
+
+19:56.640 --> 20:04.080
+pressured myself by putting it in a podcast but I intend to I'm sorry for that you can tell me if
+
+20:04.080 --> 20:10.640
+I should cut it out no no I think it's all good and and actually one of the challenges there
+
+20:10.640 --> 20:16.880
+specifically about the education is that this is this is diverse across Europe so we have a
+
+20:16.880 --> 20:24.000
+a Dutch inside with Dutch terms and what is required but there's a whole international aspect
+
+20:24.000 --> 20:32.960
+today so we need to get started and then collaborate across nations to see how do we get something
+
+20:32.960 --> 20:39.040
+universal or that can be converted but you need to keep me posted on that so we need to do a
+
+20:39.040 --> 20:46.240
+another episode about how and Sangaman arrived in the Netherlands in the school system that will be
+
+20:46.240 --> 20:52.160
+great yeah all right but do you have for Tidos do you have something to recommend to all of us
+
+20:52.160 --> 20:59.040
+on us to have a look at yeah so most of the talks are actually recorded and they were live streamed
+
+20:59.040 --> 21:04.640
+this year last year they were recorded and broadcasted also on peer tube this year they were even
+
+21:05.520 --> 21:12.480
+live streamed to peer tube so the live stream should already be up if I understand correctly
+
+21:13.200 --> 21:18.960
+and one of the talks that had multiple people talked to me about how great it was was the talk
+
+21:18.960 --> 21:24.640
+by Michael Boelen there was a we promote and talk about open but are we actually doing it
+
+21:24.640 --> 21:31.840
+enough and what I got from other people because I didn't attend the talk instead it was very much
+
+21:31.840 --> 21:43.360
+about how to engage newcomers and and invite them in our false community one of the examples he
+
+21:43.360 --> 21:52.960
+was working on last year is to make a very beginner friendly Linux tutorial and write it in
+
+21:52.960 --> 21:58.880
+Dutch so it's really accessible and make it sort of universal so it's not just oh this is the
+
+21:58.960 --> 22:04.800
+the Debian guide or this is the Fedora guide now it is generic Linux and doesn't introduction
+
+22:05.680 --> 22:14.720
+and also that the way we provide present information and write the documentation has to be done
+
+22:15.920 --> 22:21.840
+with care to make sure that people can follow along and not that halfway through reading a
+
+22:21.840 --> 22:26.800
+tutorial they think oh this is too complex I lost what I was doing again and then
+
+22:27.440 --> 22:36.160
+they never get into it I know what you mean so that it's like more of a aiming to unbord people who
+
+22:36.160 --> 22:44.400
+are like not the technical kind of people but who would also like to be able to use Linux
+
+22:45.920 --> 22:54.480
+indeed yeah to get everybody to join in without dumbing down the content to still engage them
+
+22:55.040 --> 23:01.920
+which of course is challenging as any writer of documentation would do absolutely but it's
+
+23:01.920 --> 23:10.000
+really needed because I mean like there are loads of people out there who would like to be able to
+
+23:10.000 --> 23:18.080
+use free and open source software in their daily lives but it's just sometimes for them this
+
+23:18.080 --> 23:25.120
+feels more like a barrier and this kind of approach really preaches those this barrier and really
+
+23:25.120 --> 23:33.600
+helps to like get people unborded from inner and yeah get them from the to collect them from
+
+23:33.600 --> 23:39.360
+where they are standing and not be like first you need to step up here on my step and then we
+
+23:39.360 --> 23:44.160
+can talk you know what I mean like it's more about like getting down to their level and say come
+
+23:44.160 --> 23:51.760
+I'll take you with me come along yeah and also make sure that there's nothing that trips up
+
+23:51.760 --> 23:57.920
+somebody where they might get lost along the way and then say okay this is too complicated this
+
+23:57.920 --> 24:04.400
+is not for me and then give up I will watch this talk now because I'm like really
+
+24:05.360 --> 24:12.960
+it did I already opened the tab so I will keep it you got me hooked in apart from the amazing
+
+24:12.960 --> 24:18.880
+talks apparently that are happening there at Tito's and the workshops of course is there a
+
+24:18.880 --> 24:24.640
+challenge that Tito's is also facing currently I heard you mentioning that there's also some
+
+24:26.160 --> 24:32.560
+some wish to have more sponsors and to get people from outside the Netherlands attracted
+
+24:32.560 --> 24:42.080
+there how do you want to achieve that is that a mean question no that's not a mean question how do
+
+24:42.080 --> 24:48.800
+we want to achieve that by growing the event and making it more relevant and just I think
+
+24:48.800 --> 24:55.200
+especially for sponsors it's amazing how many organizations are willing to sponsor if you ask
+
+24:55.200 --> 25:01.760
+them and make sure that the events aligns with their goals because often the event does but they
+
+25:01.760 --> 25:09.360
+are not aware of how what Tito's is and how it relates to them so I think sponsorship for example
+
+25:09.360 --> 25:17.040
+is something that could be done a lot with effort from the core team to send out more messages
+
+25:17.040 --> 25:25.040
+more emails do more calls to get more sponsors in and the second point of getting more attendees
+
+25:25.840 --> 25:30.880
+I think that has to do with creating awareness so we're on pre-tube we are mustard on
+
+25:32.960 --> 25:38.000
+now on a podcast we have been on other podcasts as well to grow as well
+
+25:38.560 --> 25:43.760
+and reach more audience all right yeah I kind of found out was there so that was nice and he did
+
+25:43.760 --> 25:53.680
+some interviews and also there's a Dutch Angry Nerds podcast and you imagine two tables joined
+
+25:53.680 --> 26:00.720
+together and then like six people around it doing a collaborative podcast with a video live stream
+
+26:00.720 --> 26:07.040
+so they were there I think the first time two years ago and they in the in the hole where there's
+
+26:07.040 --> 26:12.960
+also the booths they just record the podcast they did that on Saturday and it did that on Sunday
+
+26:12.960 --> 26:17.600
+it's like a special podcast edition but it's also something that reached an audience and there's
+
+26:17.600 --> 26:24.240
+interaction when people from the booths or speakers can join in in the podcast and yeah it's really
+
+26:24.240 --> 26:30.320
+fun in the sense that it's like oh yeah somebody joins in in the podcast say what I want to say
+
+26:30.320 --> 26:35.440
+they have some discussion and it's like oh you you just get somebody else to fill up your seat
+
+26:35.440 --> 26:41.760
+and we reached around the topic so it's a continuous podcast with new people coming in
+
+26:43.120 --> 26:48.720
+maybe we can link it in the show notes that sounds really fun okay I'm very much looking forward
+
+26:48.720 --> 26:54.800
+now to be there next year on the fifth and sixth of June yes is there also something that our
+
+26:54.800 --> 27:02.240
+listeners can do as our final question to support Tito's and the organization yeah of course you
+
+27:02.240 --> 27:09.920
+can all come to the conference next year or another year but also if please share all the announcements
+
+27:09.920 --> 27:17.360
+and look at PiaTube what recordings of this year or the previous years and if you'd like something
+
+27:17.360 --> 27:24.480
+please share it around and yeah give some some more buzz about Tito's very nice thank you so much
+
+27:25.200 --> 27:30.400
+thank you so much also for taking the time and talking with me about Tito's very much
+
+27:30.400 --> 27:38.160
+appreciated yeah thank you this was the software freedom podcast if you like this episode please
+
+27:38.160 --> 27:43.200
+recommend Tito friends and rate it stay tuned for more inspiring conversations that
+
+27:43.200 --> 27:49.760
+explority importance of software freedom and its impact on our digital lives this podcast is
+
+27:49.760 --> 27:55.360
+presented to you by the free software foundation europe we are a charity that works on promoting
+
+27:55.440 --> 28:04.240
+software freedom if you like our word please consider supporting us with our donation you find more
+
+28:04.240 --> 28:18.080
+information under fsafi.org slash donate thank you so much bye bye
+

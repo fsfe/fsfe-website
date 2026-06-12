@@ -1,4 +1,4 @@
-FROM debian:trixie-20260316
+FROM debian:trixie-20260518
 
 COPY --from=ghcr.io/astral-sh/uv:latest /uv /uvx /bin/
 

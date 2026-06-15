@@ -19,8 +19,12 @@
       width: 100%;
       height: auto;
       margin-bottom: (@line-height-computed / 2);
-      border-radius: (@border-radius-large * 4);
-      border: 3px solid #72aaa1;
+      border: 3px solid (@link-color);
+    }
+      a {
+      &:hover img {
+        border-color: darken(@link-color, 15%);
+      }
     }
 
     h2 {

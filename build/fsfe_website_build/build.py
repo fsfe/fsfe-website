@@ -159,11 +159,7 @@ def _run_build(global_build_config: GlobalBuildConfig) -> None:
             full(global_build_config.source)
         global_symlinks(
             global_build_config.source,
-            (
-                global_build_config.languages
-                if global_build_config.languages
-                else global_build_config.all_languages
-            ),
+            (global_build_config.languages or global_build_config.all_languages),
             pool,
         )
         # Create our stable config across all sites
@@ -182,12 +178,8 @@ def _run_build(global_build_config: GlobalBuildConfig) -> None:
                 global_build_config,
                 site,
             )
-            languages: list[str] = (
-                global_build_config.languages
-                if global_build_config.languages
-                else sorted(
-                    {lang_from_filename(path) for path in site.glob("**/*.*.xhtml")},
-                )
+            languages: list[str] = global_build_config.languages or sorted(
+                {lang_from_filename(path) for path in site.glob("**/*.*.xhtml")},
             )
             # Now we know our languages, build our site build config
             site_build_config = SiteBuildConfig(languages, site)

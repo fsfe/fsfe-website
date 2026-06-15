@@ -177,6 +177,8 @@ RewriteRule ^about/reports/es-2007(.*)$ /news/2007/news-20070630-01$1 [R=301,L]
 RewriteRule ^about/reports/es-2009(.*)$ /news/2009/news-20090620-01$1 [R=301,L]
 RewriteRule ^freesoftware/enterprise/freesoftwarecompany(.*)$ /news/2008/news-20081202-02$1 [R=301,L]
 RewriteRule ^freesoftware/enterprise/chargeofitsbrand(.*)$ /news/2009/news-20090604-01$1 [R=301,L]
+RewriteRule ^events/SFD-2010(.*)$ news/2010/news-20100918-01$1 [R=301,L]
+RewriteRule ^events/fscons-2010(.*)$ news/2010/news-20101105-01$1 [R=301,L]
 
 # Old/moved people/staff profiles
 RewriteRule ^about/(bako|polvani|tuke|maffulli|jakobs|oriordan|oberg|coughlan|weiden|nanda)(/.*)?$ /about/people/index.html [R=301,L]

@@ -28,9 +28,11 @@ def prepare_subdirectories(
     logger.info("Preparing Subdirectories")
     for subdir_path in sorted(
         (path.parent for path in source_site.glob("**/subdir.py")),
-        key=lambda directory: directory.joinpath("subdir-prio.txt").read_text().strip()
-        if directory.joinpath("subdir-prio.txt").exists()
-        else "0",
+        key=lambda directory: (
+            directory.joinpath("subdir-prio.txt").read_text().strip()
+            if directory.joinpath("subdir-prio.txt").exists()
+            else "0"
+        ),
     ):
         logger.info("Preparing subdirectory %s", subdir_path)
         sys.path.append(str(subdir_path.resolve()))

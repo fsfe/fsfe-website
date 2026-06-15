@@ -89,8 +89,10 @@ def run(source: Path, languages: list[str], processes: int, working_dir: Path) -
             [
                 (working_dir, file)
                 for file in filter(
-                    lambda path: lang_from_filename(path) in languages
-                    and etree.parse(path).xpath("//html[@newsdate]"),
+                    lambda path: (
+                        lang_from_filename(path) in languages
+                        and etree.parse(path).xpath("//html[@newsdate]")
+                    ),
                     working_dir.glob("**/*.??.xhtml"),
                 )
             ],

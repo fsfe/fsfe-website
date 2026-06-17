@@ -164,6 +164,10 @@ Such an item doesn't need an image!
   <item type="childrensbook" id="childrensbook-sticker-zangemann-2022" year="2022" order="4">
     <image imgsmall="/contribute/promopics/childrensbook-sticker-zangemann-2022-thumb.png"/>
   </item>
+  
+  <item type="childrensbook" id="childrensbook-bookmark" year="2026" order="5">
+    <image imgsmall="/contribute/promopics/childrensbook-bookmark-thumb.png"/>
+  </item>
 
   <!-- Device neutrality -->
 
@@ -197,8 +201,8 @@ Such an item doesn't need an image!
 
   <!-- 2023 Stickers -->
 
-  <item type="fsfe" id="coolkids-sticker" year="2023" order="14">
-    <image imgsmall="/contribute/promopics/coolkids-sticker-thumb.jpg"/>
+  <item type="fsfe" id="coolkids-sticker-flipped" year="2026" order="15">
+    <image imgsmall="/contribute/promopics/coolkids-sticker-flipped-thumb.png"/>
   </item>
   <item type="fsfe" id="devicechoice-sticker" year="2023" order="15">
     <image imgsmall="/contribute/promopics/devicechoice-sticker-thumb.jpg"/>

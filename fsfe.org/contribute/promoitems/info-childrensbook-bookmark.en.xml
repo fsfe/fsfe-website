@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<infoset>
+  <version>1</version>
+
+  <info id="childrensbook-bookmark">
+    <!-- Leave a tag like <printready> blank or erase it if you don't
+    want to appear it -->
+    <!-- Translations for "Type", "Size" etc. can be found in
+    /tools/texts-**.xml -->
+    <name>Ada &amp; Zangemann - Bookmarkt, 2026</name>
+    <description>
+	  The perfect bookmark to always be on the right page, with a nice 
+	  illustration from the children book "Ada &amp; Zangemann - A tale 
+	  of software, skateboards, and raspberry ice cream.
+    </description>
+    <type>Bookmark</type>
+    <size>148mm x 50mm</size>
+    <context><a href="/activities/ada-zangemann/">Ada &amp; Zangemann</a></context>
+    <languages>
+      <a href="https://download.fsfe.org/advocacy/promomaterial/ChildrensBook/childrensbook_Bookmark.pdf">PDF (English)</a>
+    </languages>
+    <printed>
+      English
+    </printed>
+    <license><a href="https://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA 3.0</a></license>
+    <author>Sandra Brandstätter</author>
+    <source><a href="https://download.fsfe.org/advocacy/promomaterial/ChildrensBook/">childrensbook-bookmark-* in download.fsfe.org</a></source>
+    <printready/>
+  </info>
+
+</infoset>

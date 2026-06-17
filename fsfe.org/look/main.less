@@ -142,6 +142,24 @@ body.overview #content {
   margin-right: 10px;
 }
 
+/*Timeline view */
+
+.span-style(@color) {
+  border-radius: 10px;
+  padding: 0 0.5em;
+}
+
+#timeline {
+  .span-device-neutrality    { .span-style(@timeline-device-neutrality); }
+  .span-legal-education      { .span-style(@timeline-legal-education); }
+  .span-market-regulations   { .span-style(@timeline-market-regulations); }
+  .span-pmpc                 { .span-style(@timeline-pmpc); }
+  .span-volunteer-engagement { .span-style(@timeline-volunteer-engagement); }
+  .span-young-generation     { .span-style(@timeline-young-generation); }
+  .span-org-dev              { .span-style(@timeline-org-dev); }
+}
+
+
 /* Activity view */
 
 .activitylogo {

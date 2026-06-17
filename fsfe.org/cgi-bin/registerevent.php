@@ -424,7 +424,7 @@ function send_event_email(
                     $pr_url
                 ),
                 'type' => 'message',
-                'user' => 6530,
+                'user' => 6580,
                 'attachments' => [
                     [
                         'fileName' => $calculated_information['filename'],

@@ -8,9 +8,9 @@
     <xsl:for-each select="/buildinfo/document/set/language">
 		<xsl:sort select="@value" order="ascending"/>
 		<xsl:variable name="language" select="@value"/>
-			<h3>
+			<p>
               <xsl:value-of select="$language"/>
-            </h3>
+            </p>
             <ul>
 			  <xsl:for-each select="platform">
 				<li>

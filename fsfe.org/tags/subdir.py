@@ -9,6 +9,7 @@ import multiprocessing
 from collections import defaultdict
 from pathlib import Path
 
+from fsfe_website_build.globals import FALLBACK_LANG
 from fsfe_website_build.lib.misc import (
     get_basepath,
     keys_exists,
@@ -52,9 +53,9 @@ def _update_tag_sets(
                 tags_by_lang[lang][tag]
                 if keys_exists(tags_by_lang, lang, tag)
                 and tags_by_lang[lang][tag] is not None
-                else tags_by_lang["en"][tag]
-                if keys_exists(tags_by_lang, "en", tag)
-                and tags_by_lang["en"][tag] is not None
+                else tags_by_lang[FALLBACK_LANG][tag]
+                if keys_exists(tags_by_lang, FALLBACK_LANG, tag)
+                and tags_by_lang[FALLBACK_LANG][tag] is not None
                 else tag
             )
             if count > 0:
@@ -76,7 +77,7 @@ def run(source: Path, languages: list[str], processes: int, working_dir: Path) -
 
      Creates/update the following files:
 
-    * */tags/tagged-<tags>.en.xhtml for each tag used. Apart from being
+    * */tags/tagged-<tags>.$FALLBACK_LANG.xhtml for each tag used. Apart from being
       automatically created, these are regular source files for HTML pages, and
       in phase 2 are built into pages listing all news items and events for a
       tag.

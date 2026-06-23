@@ -11,6 +11,7 @@ from typing import TYPE_CHECKING, Any
 
 from lxml import etree
 
+from fsfe_website_build.globals import FALLBACK_LANG
 from fsfe_website_build.lib.misc import get_basename, get_version, lang_from_filename
 
 if TYPE_CHECKING:
@@ -86,7 +87,7 @@ def _get_set(
                 path_xml = (
                     path.with_suffix(f".{lang}.xml")
                     if path.with_suffix(f".{lang}.xml").exists()
-                    else path.with_suffix(".en.xml")
+                    else path.with_suffix(f".{FALLBACK_LANG}.xml")
                 )
                 doc_set.extend(_get_xmls(path_xml, parser))
 
@@ -128,8 +129,10 @@ def _build_xmlstream(
     )
     logger.debug("file lang list: %s", lang_lst)
     original_lang = (
-        "en"
-        if infile.with_suffix("").with_suffix(f".en{infile.suffix}").exists()
+        FALLBACK_LANG
+        if infile.with_suffix("")
+        .with_suffix(f".{FALLBACK_LANG}{infile.suffix}")
+        .exists()
         else sorted(
             infile.parent.glob(f"{get_basename(infile)}.??{infile.suffix}"),
             key=get_version,
@@ -187,7 +190,9 @@ def _build_xmlstream(
 
     textsetbackup = etree.SubElement(page, "textsetbackup")
     textsetbackup.extend(
-        _get_xmls(source.joinpath("global/data/texts/texts.en.xml"), parser)
+        _get_xmls(
+            source.joinpath(f"global/data/texts/texts.{FALLBACK_LANG}.xml"), parser
+        )
     )
 
     textset = etree.SubElement(page, "textset")

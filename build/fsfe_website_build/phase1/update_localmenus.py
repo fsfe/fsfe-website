@@ -14,6 +14,7 @@ from typing import TYPE_CHECKING
 
 from lxml import etree
 
+from fsfe_website_build.globals import FALLBACK_LANG
 from fsfe_website_build.lib.misc import (
     get_basepath,
     get_localised_file,
@@ -101,7 +102,9 @@ def update_localmenus(
             [
                 (
                     not (
-                        localmenu_path := directory.joinpath(".localmenu.en.xml")
+                        localmenu_path := directory.joinpath(
+                            f".localmenu.{FALLBACK_LANG}.xml"
+                        )
                     ).exists()
                 )
                 or (file.stat().st_mtime > localmenu_path.stat().st_mtime)

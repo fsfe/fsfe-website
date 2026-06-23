@@ -12,6 +12,7 @@ from typing import TYPE_CHECKING
 from urllib.parse import urlparse
 
 import requests
+from fsfe_website_build.globals import FALLBACK_LANG
 from fsfe_website_build.lib.misc import update_if_changed
 from lxml import etree
 
@@ -74,6 +75,6 @@ def run(source: Path, languages: list[str], processes: int, working_dir: Path) -
         option.text = f"{tag} ({description})"
 
     update_if_changed(
-        working_dir.joinpath("fsfe-activities-options.en.xml"),
+        working_dir.joinpath(f"fsfe-activities-options.{FALLBACK_LANG}.xml"),
         etree.tostring(page, encoding="utf-8").decode("utf-8"),
     )

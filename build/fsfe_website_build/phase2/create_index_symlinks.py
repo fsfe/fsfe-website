@@ -5,8 +5,8 @@
 
 For directories with no existing index,
 where there is a file with the same name as the parent folder,
-EG about/about.en.html
-generate a symlink from about/index.en.html to about.en.html
+EG about/about.$FALLBACK_LANG.html
+generate a symlink from about/index.$FALLBACK_LANG.html to about.$FALLBACK_LANG.html
 """
 
 import logging

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html>
+  <version>1</version>
+
+  <head>
+    <title>Merchandise - Withdraw Order</title>
+  </head>
+
+  <body class="toplevel ltr">
+    <h1>Merchandise - Withdraw Order</h1>
+
+    <p class="p-summary">
+      You have the right to cancel a merchandise order within fourteen days without giving any reason.
+    </p>
+    <p>
+      The cancellation period is fourteen days from the day on which you, or a third party designated by you (other than the carrier), took possession of the goods.
+    </p>
+    <p>
+      To exercise your right of withdrawal, you must <a href="/about/contact.html">inform us</a> by means of a clear statement of your decision to withdraw from this contract. You may, for example, use the form below.
+    </p>
+    <p>
+      To meet the withdrawal deadline, it is sufficient for you to send your notification of exercising your right of withdrawal before the withdrawal period expires.
+    </p>
+
+    <div class="clearfix"/>
+
+    <form action="/cgi-bin/withdraworder.php" method="post" class="item-grid" accept-charset="UTF-8">
+      <h2>Your Data</h2>
+
+      <div class="row form-group">
+        <label class="col-sm-2 control-label" for="orderid">Order ID<sup>*</sup>:</label>
+        <div class="col-sm-4">
+          <input class="form-control" id="orderid" name="orderid" type="text" aria-required="true"/>
+        </div>
+      </div>
+
+
+      <div class="row form-group">
+        <label class="col-sm-2 control-label" for="name">Name<sup>*</sup>:</label>
+        <div class="col-sm-4">
+          <input class="form-control" id="name" name="name" type="text" aria-required="true"/>
+        </div>
+      </div>
+
+      <div class="row form-group">
+        <label class="col-sm-2 control-label" for="address">Address<sup>*</sup>:</label>
+        <div class="col-sm-4">
+          <textarea class="form-control" rows="3" id="address" name="address" type="text" aria-required="true"/>
+        </div>
+      </div>
+
+      <div class="row form-group">
+        <label class="col-sm-2 control-label" for="zip">Zip<sup>*</sup>:</label>
+        <div class="col-sm-4">
+          <input class="form-control" id="zip" name="zip" type="text" aria-required="true"/>
+        </div>
+      </div>
+
+      <div class="row form-group">
+        <label class="col-sm-2 control-label" for="name">City<sup>*</sup>:</label>
+        <div class="col-sm-4">
+          <input class="form-control" id="city" name="city" type="text" aria-required="true"/>
+        </div>
+      </div>
+
+      <div class="row form-group">
+        <label class="col-sm-2 control-label" for="country">Country<sup>*</sup>:</label>
+        <div class="col-sm-4">
+          <country-list/>
+        </div>
+      </div>
+
+      <div class="row form-group">
+        <label class="col-sm-2 control-label" for="email">Email<sup>*</sup>:</label>
+        <div class="col-sm-4">
+          <input class="form-control" id="email" name="email" type="email" aria-required="true"/>
+        </div>
+      </div>
+
+      <div class="row form-group">
+        <label class="col-sm-2 control-label" for="phone">Phone:</label>
+        <div class="col-sm-4">
+          <input class="form-control" id="phone" name="phone" type="text" aria-required="false"/>
+        </div>
+      </div>
+
+      <p class="n">
+        Please do not put anything in here:
+        <input type="text" size="40" name="url" aria-required="false"/>
+      </p>
+
+      <!-- Translators: Please change the value here to your language -->
+      <input type="hidden" name="language" value="en_GB"/>
+
+      <div class="row form-group">
+        <div class="col-sm-offset-2 col-sm-6">
+          <button id="btn-withdraw-submit" type="submit" class="btn btn-primary">Withdraw from Order</button>
+        </div>
+      </div>
+    </form>
+    <p>Fields marked with a <sup>*</sup> are required and need to match the data of the order.</p>
+
+  </body>
+  <description>Withdraw from an order made on the website of the FSFE.</description>
+
+<translator/>
+</html>

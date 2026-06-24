@@ -245,6 +245,15 @@ Self pick-up (Shipping): € 0<br>
 <strong>Total amount: € $amount</strong>
 </pre>
 <p>
+You have the right to withdraw from this contract within fourteen days without giving any reason.
+</p><p>
+The withdrawal period is fourteen days from the day on which you, or a third party nominated by you (other than the carrier), took possession of the goods.
+</p><p>
+To exercise your right of withdrawal, you must inform us of your decision to withdraw from this contract by means of a clear statement (e.g. a letter sent by post or an email or the form at https://fsfe.org/order/withdraworder.html). You are responsible for the costs of postage and packaging.
+</p><p>
+To meet the withdrawal deadline, it is sufficient for you to send your notification of exercising your right of withdrawal before the withdrawal period expires.
+</p>
+<p>
     Best regards,
 </p>
 </body>

@@ -39,7 +39,7 @@ def _update_tag_sets(
     tags_by_lang: dict[str, dict[str, str | None]],
 ) -> None:
     """Update the .tags.??.xml tagset xmls for a given tag."""
-    # Add uout toplevel element
+    # Add the toplevel element
     page = etree.Element("tagset")
 
     # Add the subelements
@@ -89,12 +89,11 @@ def run(source: Path, languages: list[str], processes: int, working_dir: Path) -
         files_by_tag: dict[str, list[Path]] = defaultdict(list)
         tags_by_lang: defaultdict[str, dict[str, str | None]] = defaultdict(dict)
         # Fill out files_by_tag and tags_by_lang
-        for file in filter(
-            lambda file: (
-                # Not in tags dir of a source_dir
-                working_dir not in file.parents
-            ),
-            working_dir.parent.glob("**/*.xml"),
+        for file in (
+            file
+            for file in working_dir.parent.glob("**/*.xml")
+            if working_dir  # Do not look inside the tags directory for tags
+            not in file.parents
         ):
             for tag in etree.parse(file).xpath("//tag"):
                 # Get the key attribute, and filter out some invalid chars
@@ -106,7 +105,9 @@ def run(source: Path, languages: list[str], processes: int, working_dir: Path) -
                     .strip()
                 )
                 # Get the label, and strip it.
-                label = tag.text.strip() if tag.text and tag.text.strip() else None
+                label: str | None = (
+                    tag.text.strip() if tag.text and tag.text.strip() else None
+                )
 
                 # Load into the dicts
                 files_by_tag[key].append(get_basepath(file))
@@ -116,7 +117,8 @@ def run(source: Path, languages: list[str], processes: int, working_dir: Path) -
         # Sort dicts to ensure that they are stable between runs
         files_by_tag = sort_dict(files_by_tag)
         for tag in files_by_tag:
-            files_by_tag[tag] = sorted(files_by_tag[tag])
+            # Deduplicate files by tag, as else we have entries for multiple languages
+            files_by_tag[tag] = sorted(set(files_by_tag[tag]))
         tags_by_lang = sort_dict(tags_by_lang)
         for lang in tags_by_lang:
             tags_by_lang[lang] = sort_dict(tags_by_lang[lang])

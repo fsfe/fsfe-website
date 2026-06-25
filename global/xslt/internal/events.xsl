@@ -81,8 +81,10 @@
         <xsl:if test="$start_time != $end_time">
           <xsl:value-of select="$start_time"/>
         </xsl:if>
+        <xsl:text> UTC </xsl:text>
         <xsl:if test="$start_day != $end_day">
           <xsl:value-of select="$start_day"/>
+          <xsl:text>. </xsl:text>
         </xsl:if>
         <xsl:text> </xsl:text>
         <xsl:if test="$start_month != $end_month">

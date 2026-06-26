@@ -2,13 +2,13 @@
 <timeline>
   <version>2</version>
   <year value="2025">
-    <event month="05" type="legal-education">
-      <title>Launch of Refund4Freedom Initiative</title>
+    <event month="05" type="device-neutrality">
+      <title>Refund4Freedom Initiative launched</title>
       <url>https://en.refund4freedom.org/</url>
       <body>
 	  The FSFE and the Italian Linux Society jointly launched 
-	  Refund4Freedom, a new initiative supporting consumers in 
-	  reclaiming the cost of unwanted Windows licences bundled with new 
+	  Refund4Freedom, an initiative to support users in 
+	  reclaiming the cost of  the unwanted Windows licences bundled with their new purchased
 	  hardware.
       </body>
     </event>
@@ -16,239 +16,235 @@
       <title>Ada &amp; Zangemann animated movie released</title>
       <url>https://fsfe.org/activities/ada-zangemann/movie</url>
       <body>
-	  The FSFE's book Ada &amp; Zangemann - was adapted into an 
+	  The FSFE's book Ada &amp; Zangemann was adapted into an 
 	  animated movie, reaching new audiences worldwide. The movie 
 	  marked a significant step in the FSFE's long-term strategy to 
 	  engage with the young generation about software freedom.
       </body>
     </event>
     <event month="01" type="org-dev">
-      <title>Define our Vision 2048</title>
-      <url>https://fsfe.org/news/2025/news-20250103-01.en.html</url>
+      <title>Vision 2048 defined</title>
+      <url>https://fsfe.org/news/2025/news-20250103-01.html</url>
       <body>
-	 The FSFE discussed what the world might would look like in the 
-	 different areas of our work in 2048 and took significant strides 
-	 toward this vision.
+	 The FSFE discussed what the world could look like across the different areas of our work by 2048, and made significant strides toward that vision.
       </body>
     </event>
     <event month="07" type="market-regulations">
-      <title>The FSFE channels community input on Cyber Resilience Act (CRA)</title>
-      <url>https://fsfe.org/news/2025/news-20250717-01.en.html</url>
+      <title>Community input on  the Cyber Resilience Act</title>
+      <url>https://fsfe.org/news/2025/news-20250717-01.html</url>
       <body>
-	  The FSFE and the Federal Office for Information Security (BSI) 
+	  The FSFE and the German Federal Office for Information Security (BSI) 
 	  worked together with representatives from civil society, 
 	  academia, industry and public authorities in a project on the 
 	  Cyber Resilience Act (CRA) and its implication for Free Software.
       </body>
     </event>
     <event month="02" type="legal-education">
-      <title>Launch of Legal Corner column</title>
-      <url>https://fsfe.org/tags/tagged-legal-corner.en.html</url>
+      <title>Legal Corner column launched</title>
+      <url>https://fsfe.org/tags/tagged-legal-corner.html</url>
       <body>
-	  The FSFE launched the Legal Corner, a regular column that seeks 
-	  to explain various legal concepts that Free Software developers 
+	  The FSFE started publishing the Legal Corner, a regular column that seeks 
+	  to explain the diverse legal concepts that Free Software developers 
 	  may encounter, as well as explore current events in the legal 
-	  realm that impact Free Software.
+	  realm that mpact Free Software.
+      </body>
+    </event>
+    <event month="05" type="pmpc">
+      <title>"Public Money? Public Code! in practice" symposium</title>
+      <url>https://fsfe.org/news/2025/news-20250409-01.html/</url>
+      <body>
+	  The FSFE organised the symposium “Public Money? Public Code! in 
+	  practice”,where representatives from public administration, politics, business, academia, and civil society discussed how Free Software procurement, funding, and ecosystem collaboration can reduce dependencies and strengthen digital sovereignty.
       </body>
     </event>
   </year>
   <year value="2024">
     <event month="09" type="device-neutrality">
-      <title>Litigation Against Apple's DMA Non-Compliance</title>
-      <url>https://fsfe.org/news/2024/news-20240812-01.en.html</url>
+      <title>Litigation Against Apple under the Digital Markets Act</title>
+      <url>https://fsfe.org/news/2024/news-20240812-01.html</url>
       <body>
 	  The FSFE intervenes in litigation brought by Apple against the 
 	  European Commission before the Court of Justice of the European 
-	  Union.
+	  Union. The FSFE's goal is to enforce the DMA in a developer-friendly 
+	  way.
       </body>
     </event>
     <event month="07" type="market-regulations">
-      <title>The FSFE called for public sustainable long-term funding</title>
-      <url>https://fsfe.org/news/2024/news-20240808-01.en.html</url>
+      <title>Called for public sustainable long-term funding</title>
+      <url>https://fsfe.org/news/2024/news-20240808-01.html</url>
       <body>
-	  The FSFE responded to the EU's cut of funding for the NGI 
+	  The FSFE responded to the European Commission's cut of funding for the NGI 
 	  Initiative, highlighting its demand for secured long-term funding 
 	  for Free Software across Europe.
       </body>
     </event>
     <event month="03" type="device-neutrality">
-      <title>Launch of the Device Neutrality website</title>
+      <title>Device Neutrality website launched</title>
       <url>https://deviceneutrality.org/</url>
       <body>
-	 The FSFE launched a new dedicated landing page to explain the 
+	 The FSFE unveiled a dedicated landing page to explain the 
 	 concept of Device Neutrality in a simple and accessible way for 
 	 all users, regardless of technical background.
       </body>
-       </event>
-    <event month="10" type="device-neutrality">
-      <title>Several victories for Router Freedom and launched the tech wiki</title>
-      <url>https://docs.fsfe.org/en/teams/router-freedom-tech-wiki</url>
-      <body>
-      The FSFE participated and monitored regulatory processes in Germany, Austria, Italy and Belgium. Also we introduced the new Router Freedom tech wiki, prepared by our Netherlands team of volunteers.
-      </body>
     </event>
-    <!-- relevant?
-    <event month="12" type="legal-education">
-      <title>ZOOOM project completed</title>
-      <url>https://fsfe.org/activities/zooom/zooom.en.html</url>
-      <body>
-      The FSFE concluded its work in the EU funded ZOOOM Initiative. The aim of this project was to raise awareness of the importance of managing rights and obligations related to Free Software, Open Data, and Open Hardware.
-      </body>
-    </event>
-    -->
-    <!-- relevant?
-    <event month="11" type="org-dev">
-      <title>Migration from wiki.fsfe.org to docs.fsfe.org</title>
-      <url>https://docs.fsfe.org/en/techdocs/mainpage</url>
-      <body>
-		  The FSFE migrated all the documentation from wiki.fsfe.org to docs.fsfe.org
-		</body>
-    </event>
-    -->
   </year>
   <year value="2023">
     <event month="06" type="pmpc">
-      <title>Public awareness for openwashing at Sovereign Workplace</title>
-      <url>https://fsfe.org/news/2023/news-20230606-01.en.html</url>
+      <title>Openwashing at German Sovereign Workplace</title>
+      <url>https://fsfe.org/news/2023/news-20230606-01.html</url>
       <body>
-	  The FSFE critically examined the German government's "Sovereign 
-	  Workplace", which was labelled as "Free Software", raising 
+	  The FSFE critically examined the German government's initiative "Sovereign 
+	  Workplace", which was labelled as "Free Software". We raised 
 	  questions about missing source code, accountability, and public 
 	  spending.
       </body>
     </event>
     <event month="10" type="pmpc">
-      <title>TEDective won EU Datathon</title>
+      <title>TEDective, winner of the EU Datathon prize</title>
       <url>https://media.fsfe.org/w/fphnrcqwv8cFHVkaF7Rj2q</url>
       <body>
-	  The FSFE's "TEDective", a Free Software tool designed to help 
-	  citizens and journalists analyse and visualise public spending 
-	  data from the EU's TED procurement database, won first prize at 
-	  the EU Datathon.
+	  "TEDective" won the first prize at the EU Datathon. This Free Software tool was designed by the FSFE to help 
+	  citizens and journalists analyse and visualise public spending data from the EU's TED procurement database.
+      </body>
+    </event>
+    <event month="10" type="device-neutrality">
+      <title>Router Freedom tech wiki published</title> 
+      <url>https://docs.fsfe.org/en/teams/router-freedom-tech-wiki</url>
+      <body>
+      The FSFE introduced the new Router Freedom tech wiki, prepared by our Netherlands team of volunteers. The aim of this guide is to replace the modem of your ISP by your own. 
       </body>
     </event>
    </year>
    <year value="2022">
-    <event month="01" type="device-neutrality">
-      <title>Device Neutrality into EU legislation</title>
-      <url>https://fsfe.org/news/2021/news-20211215-01.en.html</url>
-      <body>
-      The FSFE dedicated efforts to include Device Neutrality in the EU's new Digital Markets Act. The Act was adopted by 642 votes in favour, formally introducing the principle of Device Neutrality into EU legislation.
-      </body>
-    </event>
-    <event month="05" type="device-neutrality">
-      <title>Defended Router Freedom in Europe</title>
-      <url>https://fsfe.org/activities/routers/routers.en.html</url>
-      <body>
-      The FSF worked on several challenges, ranging from multi-stakeholder initiatives to bilateral cooperation with regulators and strategic support from partner organisations in Europe.
-      </body>
-    </event>
     <event month="03" type="market-regulations">
       <title>Artificial Intelligence and Free Software</title>
-      <url>https://fsfe.org/news/2022/news-20220330-01.en.html</url>
+      <url>https://fsfe.org/news/2022/news-20220330-01.html</url>
       <body>
-     The FSFE analysed how AI can be more verifiable, trustworthy, innovative with Free Software, and made policy recommendations and presented this result in different conferences.
+	 The FSFE analysed how AI can be more verifiable, trustworthy, 
+	 and innovative with Free Software, and made policy recommendations. This result was 
+	 presented in different conferences.
       </body>
     </event>
     <event month="10" type="young-generation">
-      <title>First edition of Youth Hacking 4 Freedom</title>
-      <url>https://fsfe.org/activities/yh4f/index.en.html</url>
+      <title>'Youth Hacking 4 Freedom' first edition</title>
+      <url>https://fsfe.org/activities/yh4f/index.html</url>
       <body>
-      The FSFE successfully concluded the first edition of Youth Hacking 4 Freedom, a pan-European coding competition aimed at inspiring teenagers to engage with Free Software.
+	  The FSFE successfully launched Youth Hacking 
+	  4 Freedom (YH4F), a pan-European and annual programming competition 
+	  aimed at inspiring teenagers to engage with Free Software.
       </body>
     </event>
     <event month="12" type="volunteer-engagement">
-      <title>Release of the video ‘What is Free Software (Open Source)?’</title>
+      <title>‘What is Free Software (Open Source)?’ video released</title>
       <url>https://media.fsfe.org/w/xs29yhLxSP1uKLYkSeoKKp</url>
       <body>
-      The FSFE published a short video in English and in German: ‘What is Free Software (Open Source)?’ to explain the complex topic of software freedom. This can help a new audience grasp the importance of Free Software.
+	  The FSFE published 'What is Free Software (Open Source)? Software freedom explained in less than three minutes! to explain the complex topic of 
+	  software freedom'. This video helps to understand and grasp the importance of Free Software.
+      </body>
+    </event>
+    <event month="06" type="legal-education">
+      <title> The FSFE part of the ZOOOM Initiative</title>
+      <url>https://fsfe.org/activities/zooom/</url>
+      <body>
+	 Funded by the EC, the ZOOOM consoritum promoted a solid understanding of licensing requirements 
+	 and business needs in the intersection of Free Software, Open Data 
+	 and Open Source Hardware. 
       </body>
     </event>
     <event month="11" type="legal-education">
-      <title>First ‘Legal Education Day’</title>
-      <url>https://fsfe.org/freesoftware/legal/led.en.html</url>
+      <title>Open Letter "The universal right to install any software on any device"</title>
+      <url>https://fsfe.org/news/2022/news-20221121-01.html</url>
       <body>
-      The FSFE organized the first ‘Legal Education Day’ (LED) to provide basic legal education on the legal context of Free Software: copyright law and the concept of copyleft.
+	 More than 100 civil society organisations across sectors signed our open letter “The universal right to 
+	 install any software on any device”. The letter was hand 
+	 delivered to the Chair of the Digital Affairs Committee at the 
+	 German Parliament in 2023.
       </body>
     </event>
   </year>
    <year value="2021">
-       <!-- relevant?
-    <event month="06" type="org-dev">
-      <title>FSFE 20th Anniversary</title>
-      <url>https://fsfe.org/activities/20years/</url>
+	<event month="11" type="legal-education">
+      <title>First ‘Legal Education Day’</title>
+      <url>https://fsfe.org/freesoftware/legal/led.html</url>
       <body>
-      The FSFE celebrated its 20th anniversary, looking back on two decades of empowering users to control technology.
+	  The FSFE organized the first ‘Legal Education Day’ (LED) to 
+	  provide basic legal education on the legal context of Free 
+	  Software: copyright law and the concept of copyleft.
       </body>
     </event>
-       -->
     <event month="03" type="device-neutrality">
-      <title>Italian Court rules on Windows licence refund</title>
-      <url>https://fsfe.org/news/2021/news-20210302-01.en.html</url>
+      <title>Key court case on Windows license refund</title>
+      <url>https://fsfe.org/news/2021/news-20210302-01.html</url>
       <body>
-      The FSFE supporter Luca Bonissi won a two-year court case against Lenovo in Italy, with the Court of Monza ordering the company to pay 20.000 euros in damages for refusing to refund the price of a pre-installed Windows licence.
+	  The FSFE's supporter Luca Bonissi won a two-year court case 
+	  against Lenovo in Italy, with the court ordering the company to 
+	  pay 20.000 euros in damages for refusing to refund the price of a 
+	  pre-installed Windows licence.
       </body>
     </event>
-    <!--
-    <event month="06" type="legal-education">
-      <title>Launch of REUSE Booster</title>
-      <url>https://reuse.software/booster/</url>
-      <body>
-     The FSFE launched REUSE Booster, a new initiative designed to assist Free Software projects in adopting REUSE best practices for machine-readable licensing and copyright compliance.
-      </body>
-    </event>
-    -->
     <event month="11" type="device-neutrality">
-      <title>Launch of Upcycling Android Campaign</title>
+      <title>Upcycling Android Campaign launched</title>
       <url>https://fsfe.org/activities/upcyclingandroid/</url>
       <body>
-     The FSFE launched the initiative to help users install Free Software operating systems on their phones, organised workshops across Europe, and developed policy recommendations to extend hardware lifetimes and reduce electronic waste.
+	 The FSFE started this initiative to help users install Free 
+	 Software operating systems on their phones, by organizing workshops 
+	 across Europe, and developing policy recommendations to extend 
+	 hardware lifetimes and reduce electronic waste.
       </body>
     </event>
     <event month="11" type="young-generation">
-      <title>Publication of Ada &amp; Zangemann Children's Book</title>
+      <title>Ada &amp; Zangemann Children's Book published</title>
       <url>https://fsfe.org/activities/ada-zangemann/</url>
       <body>
-     The FSFE released "Ada &amp; Zangemann – A Tale of Software, Skateboards, and Raspberry Ice Cream", a children's book written by FSFE President Matthias Kirschner and published by O'Reilly under a Creative Commons licence. 
+	 The FSFE released "Ada &amp; Zangemann – A Tale of Software, 
+	 Skateboards, and Raspberry Ice Cream", a children's book written 
+	 by the FSFE President Matthias Kirschner and published under a Creative Commons licence. 
       </body>
     </event>
     <event month="12" type="volunteer-engagement">
-      <title>FSFE Women group formed</title>
+      <title>The FSFE Women group formed</title>
       <url>https://docs.fsfe.org/en/teams/Women</url>
       <body>
-	The FSFE Women group was created to help women and everyone who identifies as female build connections with each other while discussing technological issues. 
+	The FSFE Women group was created to help women and everyone who 
+	identifies as female build connections with each other while 
+	discussing technological issues. 
       </body>
+    </event>
+    <event month="09" type="device-neutrality">
+      <title>Device Neutrality initiative</title>
+      <url>https://fsfe.org/activities/deviceneutrality/index</url>
+      <body>The FSFE's initiative to protect Device Neutrality and software freedom by countering lock-ins, strengthening end-user control over data, and defending the uer's right to  free to install, run, and uninstall software on their own devices.</body>
     </event>
   </year>
   <year value="2020">
     <event month="04" type="pmpc">
       <title>Free Software for COVID-19 contact tracing apps</title>
-      <url>https://fsfe.org/news/2020/news-20200402-02.en.html</url>
+      <url>https://fsfe.org/news/2020/news-20200402-02.html</url>
       <body>
-      The FSFE advocated that all publicly funded COVID-19 contact tracing apps should be released under a Free Software licence. Both the EU and the WHO followed the FSFE's arguments and recommended that any COVID-19 contact tracing app be published as Free Software.
-      </body>
-    </event>
-    <event month="06" type="device-neutrality">
-      <title>Router Freedom victory with BEREC</title>
-      <url>https://fsfe.org/news/2020/news-20200601-01.en.html</url>
-      <body>
-      BEREC sided with the FSFE's demand that any router and modem be under the full control of the user, rather than Internet Service Providers. The FSFE subsequently published a report monitoring the challenges ahead for national implementation across EU member states.
+	  The FSFE advocated that all publicly funded COVID-19 contact 
+	  tracing apps should be released under a Free Software licence. 
+	  Both the EU and the WHO followed the FSFE's arguments and 
+	  recommended that any COVID-19 contact tracing app be published as 
+	  Free Software.
       </body>
     </event>
     <event month="07" type="young-generation">
-      <title>Launch of “Learning like a pro”</title>
+      <title>“Learning like a pro” launched</title>
       <url>https://lernenwiedieprofis.ch/</url>
       <body>
-    The local FSFE group in Zurich created a website which they use to explain why Free Software matters in education, described individual Free Software solutions and how these solutions in particular can be used to make school learning efficient and easy.
+    The local FSFE group in Zurich created a website which they explain why Free Software matters in education, described individual Free Software solutions and how these solutions in particular can be used to make school learning efficient and easy.
       </body>
     </event>
   </year>
   <year value="2019">
     <event month="10" type="device-neutrality">
-      <title>Router Freedom at EU level</title>
-      <url>https://fsfe.org/activities/routers/index.en.html</url>
+      <title>Router Freedom reaches the European level</title>
+      <url>https://fsfe.org/activities/routers/index.html</url>
       <body>
-      The FSFE started monitoring the status of router freedom in several EU countries and prepared an "activity package" for people and organisations willing to advocate for router freedom.
+	  After victories in Germany, the FSFE expands its advocacy for 
+	  Router Freedom at EU level, preparing a comprehensive activity 
+	  package including a monitoring tool for people and organisations 
+	  willing to advocate for freedom of terminal equipment.
       </body>
     </event>
     <event month="08" type="legal-education">
@@ -262,7 +258,11 @@
       <title>Tearing down barriers introduced by the Radio Lockdown Directive</title>
       <url>https://fsfe.org/activities/radiodirective/</url>
       <body>
-      The European Commission collected 276 public comments on the Radio Equipment Directive, most of them critical. The FSFE continued pressing regulators to recognise that the right to install Free Software is fundamental to security, education, and innovation.
+	  The European Commission collected 276 public comments on the 
+	  Radio Equipment Directive, most of them critical. The FSFE 
+	  continued pressing regulators to recognise that the right to 
+	  install Free Software is fundamental to security, education, and 
+	  innovation.
       </body>
     </event>
     <event month="01" type="pmpc">
@@ -274,16 +274,20 @@
     </event>
     <event month="02" type="pmpc">
       <title>First Parliament in Europe demands public code</title>
-      <url>https://fsfe.org/news/2019/news-20190514-01.en.html</url>
+      <url>https://fsfe.org/news/2019/news-20190514-01.html</url>
       <body>
-      The Parliament of Asturias became the first Parliament in Europe to vote in favour of signing our open letter demanding "Public Money? Public Code!".
+	  The Parliament of Asturias became the first Parliament in Europe 
+	  to vote in favour of signing our open letter demanding "Public 
+	  Money? Public Code!".
       </body>
     </event>
     <event month="10" type="volunteer-engagement">
       <title>Launch of the Software Freedom Podcast</title>
-      <url>https://fsfe.org/news/podcast.en.html</url>
+      <url>https://fsfe.org/news/podcast.html</url>
       <body>
-      The FSFE launched a podcast series to talk once a month with people who have inspiring ideas about software freedom and to reach broader audiences beyond its traditional community.
+	  The FSFE launched a podcast series to talk with people who have 
+	  inspiring ideas about software freedom and to reach broader 
+	  audiences beyond its traditional community.
       </body>
     </event>
   </year>
@@ -292,43 +296,43 @@
       <title>Exclusion of Free Software in the European Union's Copyright Directive</title>
       <url>https://savecodeshare.eu/</url>
       <body>
-       The FSFE obtained the first limited exclusion for Free Software in a major EU legislation. In this case in the amendments 143 and 150 of the current copyright reform proposal of the European Parliament's directive.
+	   The FSFE obtained the first limited exclusion for Free Software 
+	   in a major EU legislation. In this case in the amendments 143 
+	   and 150 of the current copyright reform proposal of the European 
+	   Parliament's directive.
       </body>
     </event>
     <event month="11" type="legal-education">
       <title>The FSFE joined its first NGI consortium</title>
       <url>https://www.ngi.eu/ngi-projects/ngi-zero/</url>
       <body>
-        The NGI is a European Commission initiative supporting technologies that shape the internet into an open, inclusive, and privacy-respecting platform. The FSFE is part of the NGI Zero consortium, providing support on legal and licensing questions.
+		The NGI is a European Commission initiative supporting 
+		technologies that shape the internet into an open, inclusive, 
+		and privacy-respecting platform. The FSFE is part of the NGI 
+		Zero consortium, providing support on legal and licensing 
+		questions.
       </body>
     </event>
     <event month="12" type="org-dev">
       <title>Creation of CARE team</title>
       <url>https://fsfe.org/about/codeofconduct#CARE</url>
       <body>
-        To further ensure the availability and enforcement of our Code of Conduct, we created a CARE team so that whenever our Code of Conduct is breached within the FSFE community, you can contact our central CARE team.
+		To further ensure the availability and enforcement of our Code 
+		of Conduct, we created a CARE team so that whenever our Code of 
+		Conduct is breached within the FSFE community, you can contact 
+		our central CARE team.
       </body>
     </event>
   </year>
   <year value="2017">
     <event month="11" type="legal-education">
-      <title>REUSE Initiative is launched</title>
+      <title>REUSE Initiative launched</title>
       <url>https://reuse.software/</url>
       <body>
         The FSFE created an initiative to deliver the best development options
         for Free Software licensing compliance.
       </body>
     </event>
-    <!-- we had other meetings before, e.g. the Fellowhsip meetings in the early 2000s
-    <event month="11" type="org-dev">
-      <title>Community Meeting in Berlin</title>
-      <url>http://blog.3rik.cc/2017/12/report-about-the-fsfe-community-meeting-2017/</url>
-      <body>
-        For the first time, the FSFE holds an open-invite community meeting. In
-        order to share knowledge, grow projects, and discuss code.
-      </body>
-    </event>
-    -->suppport
     <event month="10" type="legal-education">
       <title>Fiduciary Licensing Agreement 2.0 is released</title>
       <url>https://fsfe.org/activities/ln/ln.html</url>
@@ -341,7 +345,10 @@
       <title>Launch of 'Public Money? Public Code!'</title>
       <url>https://publiccode.eu/</url>
       <body>
-        The FSFE initiates a campaign framework for legislation requiring that publicly financed software developed for the public sector be made publicly available under a Free Software licence.
+		The FSFE initiates a campaign framework for legislation 
+		requiring that publicly financed software developed for the 
+		public sector be made publicly available under a Free Software 
+		licence.
       </body>
     </event>
     <event month="06" type="volunteer-engagement">
@@ -370,12 +377,14 @@
       </body>
     </event>
     <event month="08" type="device-neutrality">
-      <title>Compulsory Routers abolished in Germany</title>
+      <title>Router Freedom established in Germany</title>
       <url>https://fsfe.org/news/2016/news-20160725-01.html</url>
       <body>
-        A new law in Germany enables customers to use their own routers with
-        their Internet connections, enabling them to use Free Software for their
-        connections.
+		After three years of intense engagement with policy makers in 
+		Germany, Router Freedom became a reality in the country. A 
+		telecom law enabled customers to use their own routers with 
+		their Internet connections, enabling them to use Free Software 
+		for their connections.
       </body>
     </event>
     <event month="03" type="volunteer-engagement">
@@ -456,7 +465,6 @@
         The FSFE coordinators from all over Europe meet in Berlin for the
         first time to exchange knowledge and discuss future strategies.
       </body>
-      <img src="https://pics.fsfe.org/uploads/big/6e459b4ea03aceb6456a2ccb5c17d8f3.jpg" alt="Group picture of the first European Coordinators meeting"/>
     </event>
     <event month="06" type="market-regulations">
       <title>German parliament unanimous against Software Patents</title>
@@ -511,17 +519,16 @@
       </body>
     </event>
     <event month="03" type="device-neutrality">
-      <title>Launch of Free Your Android</title>
+      <title>Free Your Android launched</title>
       <url>https://fsfe.org/news/2012/news-20120228-01.html</url>
       <body>
         Most smartphones come with non-free software and some restrictions. The FSFE
         stars a campaign to help users free their phones and use Free Software
         apps.
       </body>
-      <img src="/graphics/logos/android.png" alt="Free Your Android Logo"/>
     </event>
     <event month="02" type="device-neutrality">
-      <title>The FSFE raised concerns over the Nortel patent portfolio sale</title>
+      <title>Concerns over the Nortel patent portfolio sale</title>
       <url>https://fsfe.org/news/2012/news-20120214-01.html</url>
       <body>
        The FSFE calls on US competition regulators about faulty competition settlement
@@ -540,24 +547,30 @@
   </year>
   <year value="2011">
 	<event month="12" type="legal-education">
-      <title>Supported the case of AVM vs. Cybits</title>
-      <url>https://fsfe.org/activities/avm-gpl-violation/</url>
+      <title>AVM vs. Cybits case</title>
+      <url>https://fsfe.org/activities/avm-gpl-violation.html/</url>
       <body>
-      The FSFE supported the case of AVM vs. Cybits and the court confirmed FSFE's view that users of GNU GPLed software are allowed to modify and install it even if it is shipped as a part of an embedded device's firmware.
+	  The FSFE supported the case of AVM vs. Cybits and the court 
+	  confirmed FSFE's view that users of GNU GPLed software are 
+	  allowed to modify and install it even if it is shipped as a part 
+	  of an embedded device's firmware.
       </body>
     </event>
     <event month="" type="market-regulations">
-      <title>The FSFE provided input to EU's R &amp; D funding program</title>
+      <title>Input to EU's R&amp;D funding program</title>
       <url>https://fsfe.org/news/2011/news-20111206-01.en.html</url>
       <body>
-      Called Horizon 2020, the program will provide 80 billion EUR for research and development projects. The FSFE provided input to the Commission in order to make the program accessible for Free Software research and projects.
+	  The FSFE provided input to the Commission in order to make Horizion 2020 (EU's R&amp;D funding program for the period 2014-2020) accessible for Free 
+	  Software research and projects.
       </body>
     </event>
     <event month="05" type="market-regulations">
-      <title>The FSFE in European Court of Justice hearing</title>
-      <url>https://fsfe.org/news/2011/news-20110523-01.en.html</url>
+      <title>European Court of Justice hearing</title>
+      <url>https://fsfe.org/news/2011/news-20110523-01.html</url>
       <body>
-     The FSFE played a key role at a Microsoft hearing before the European Union's General Court, helping explain the intricacies of Free Software servers.
+	 The FSFE played a key role at a Microsoft hearing before the 
+	 European Union's General Court, helping explain the intricacies of 
+	 Free Software servers.
       </body>
     </event>
   </year>
@@ -569,18 +582,15 @@
         The FSFE receives the Theodor Heuss medal for its work on freedom in the
         information society.
       </body>
-      <img src="/graphics/theodor-heuss-medal.png" alt=" The Theodor Heuss Medal, a small medal depicting Theodor Heuss"/>
     </event>
     <event month="04" type="org-dev">
-      <title>
-        German Merrit Cross on Ribbon for the FSFE's founding president
+      <title> The FSFE's founding president awarded German Cross of Merit
       </title>
       <url>https://fsfe.org/news/2010/news-20100428-01.html</url>
       <body>
-        Georg C. F. Greve receives this high award for his work on Free
-        Software.
+        Georg C. F. Greve, founding president of the FSFE, receives this high award (Verdienstkreuz am Bande).for his work on Free
+        Software and Open Standards.
       </body>
-      <img src="/graphics/ribbonofmerit.png" alt="German Merrit Cross on Ribbon"/>
     </event>
     <event month="02" type="volunteer-engagement">
       <title>First "I love Free Software" Day</title>
@@ -590,21 +600,18 @@
         thank the developers of the software they use
         every day.
       </body>
-      <img src="/graphics/ilovefs-hashtag-campaignbox.png" alt="I Love Free Software Day logo"/>
     </event>
   </year>
   <year value="2009">
     <event month="09" type="pmpc">
-      <title>First "Ask Your Candidates"</title>
+      <title> "Ask Your Candidates" launched</title>
       <url>https://fsfe.org/news/2009/news-20090908-01.html</url>
       <body>
-        For the federal elections in Germany, the FSFE asks political parties about
-        their political opinions regarding Free Software, Open standards, and
-        ideas for more freedom.
+        For the federal elections in Germany, the FSFE started this initiative to ask the parties' candidates about their positions on Free Software and Open Standards
       </body>
     </event>
     <event month="02" type="volunteer-engagement">
-      <title>Launch of the PDFReaders campaign</title>
+      <title>PDFReaders campaign</title>
       <url>https://fsfe.org/news/2009/news-20090202-01.html</url>
       <body>
         Many websites from public administrations advertise proprietary PDF
@@ -612,7 +619,13 @@
         about free PDF readers and contacts public institutions to tell them
         about it.
       </body>
-      <img src="/graphics/pdfreaders-logo.png" alt="pdfreaders Logo"/>
+    </event>
+    <event month="06" type="org-dev">
+      <title>Karsten Gerloff is elected as new president</title>
+      <url>https://fsfe.org/about/people/gerloff/gerloff.html</url>
+      <body>
+        Team member of the FSFE since 2005, Karsten Gerloff was elected FSFE president together with Fernanda Weiden as vice president.  
+      </body>
     </event>
   </year>
   <year value="2008">
@@ -623,16 +636,12 @@
         For the first time, the FSFE promotes this international day to celebrate
         and show support for access to information and Open Standards. 
       </body>
-      <img src="/graphics/dfd.logo.png" alt="Document Freedom Day Logo"/>
     </event>
     <event month="02" type="legal-education">
-      <title>First European Free Software Licensing and Legal Workshop</title>
+      <title>First Free Software Licensing and Legal Workshop</title>
       <url>https://fsfe.org/news/2008/news-20080214-01.html</url>
       <body>
-        The FSFE offers a workshop focused on medium to large projects and
-        enterprises to discuss their existing license compliance processes. Our
-        legal experts and external partners help to deliver training and
-        consultancy for Free Software.
+        The Free Software Licensing and Legal Workshop (LLW) gathers experts to discuss license and legal topics, organized by the FSFE's Freedom Task Force.
       </body>
     </event>
   </year>
@@ -643,17 +652,16 @@
       <body>
         From 2004 until its conclusion in 2007, the FSFE worked hard on this case with
         the Samba team to protect the interests of Free Software developers.
-        Microsoft is now required to publish interoperability information.
+        As a result, Microsoft is required to publish interoperability information.
       </body>
     </event>
     <event month="07" type="market-regulations">
-      <title>Fighting against MS-OOXML</title>
+      <title>Against the standardisation of MS-OOXML</title>
       <url>https://fsfe.org/activities/msooxml/msooxml.html</url>
       <body>
         Microsoft tried to make OOXML an Open Standard. This implementation
-        lacks interoperability information and can be considered as an attempt
-        to undermine Open Standards. By informing about this issue MS-OOXML did
-        not establish well enough to be a danger anymore.
+        lacks interoperability information and can be considered an attempt
+        to undermine Open Standards. By informing about this issue, MS-OOXML ended up not being established well enough to be a danger anymore.
       </body>
     </event>
     <event month="02" type="legal-education">
@@ -661,7 +669,7 @@
       <url>https://fsfe.org/activities/fla/fla.html</url>
       <body>
         The FSFE releases the Fiduciary License Agreement (FLA) to ensure legal maintability of Free Software
-        projects and rights in court. In 2008, KDE is adopting it as well.
+        projects and rights in court. In 2008, KDE adopted it as well.
       </body>
     </event>
   </year>
@@ -670,16 +678,14 @@
       <title>First Fellowship conference</title>
       <url>https://lwn.net/Articles/200329/</url>
       <body>
-        The first Fellowship conference is organised in Bolzan (Italy) and enables 
-       the FSFE supporters to meet in person.
+	   The first Fellowship conference took place in Bolzano, Italy, enabling FSFE supporters to meet in person.
       </body>
     </event>
     <event month="11" type="legal-education">
-      <title>Launch of the FSFE's Legal Team</title>
-      <url>https://fsfe.org/activities/legal.en.html</url>
+      <title>The FSFE's Legal Team established</title>
+      <url>https://fsfe.org/activities/legal.html</url>
       <body>
-        Established and operating in close collaboration with
-        gpl-violations.org, "FSFE Legal" educates and supports Free Software
+       Operating in close collaboration with gpl-violations.org, "FSFE Legal" educates and supports Free Software
         developers in legal aspects.
       </body>
     </event>
@@ -687,45 +693,52 @@
       <title>DRM.info campaign launched</title>
       <url>https://drm.info</url>
       <body>
-        Under the slogan "Your devices don't trust you", FSFE starts a campaign
+        Under the slogan "Your devices don't trust you", the FSFE starts a campaign
         to inform about the dangers of digital restriction management (DRM).
+      </body>
+    </event>
+    <event month="11" type="legal-education">
+      <title>Legal Network founded</title>
+      <url>https://fsfe.org/activities/ln/</url>
+      <body>
+        The Legal Network is a neutral, non-partisan, group of experts in different fields involved in Free Software legal issues and the aim of it is to promote discussion and foster better knowledge of the legal constructs that back Free Software.
       </body>
     </event>
   </year>
   <year value="2005">
     <event month="11" type="market-regulations">
-      <title>Intervening European Commmission's antitrust lawsuit against Microsoft</title>
-      <url>https://fsfe.org/activities/ms-vs-eu/ms-vs-eu.en.html</url>
+      <title>EC's antitrust lawsuit against Microsoft</title>
+      <url>https://fsfe.org/activities/ms-vs-eu/ms-vs-eu.html</url>
       <body>
-        In order to strengthen a culture of interoperability between devices in EU member states, the FSFE files an application to participate in this important case"
+		In order to strengthen a culture of interoperability between 
+		devices in EU member states, the FSFE files an application to 
+		intervene in this important case".
       </body>
     </event>
     <event month="06" type="market-regulations">
       <title>European Parliament votes against Software Patents</title>
-      <url>https://fsfe.org/activities/swpat/swpat.en.html</url>
+      <url>https://fsfe.org/activities/swpat/swpathtml</url>
       <body>
-        After an intense campaign by the FSFE and many other organisations, the
-        European Parliament rejects the new Software Patent initiative.
+        After an intense campaign by the FSFE and other organisations, the
+        European Parliament rejects the Software Patent initiative.
       </body>
     </event>
     <event month="06" type="market-regulations">
       <title>Karlsruhe Memorandum against Software Patents</title>
       <url>https://fsfe.org/activities/swpat/memorandum.html</url>
       <body>
-        Nearly 40 organisations and over 220 individuals take a stand against
+        Nearly 40 organisations and over 220 individuals took a stand against
         the Software Patents directive before its second reading in the European
         Parliament.
       </body>
     </event>
     <event month="02" type="org-dev">
-      <title>Creation of the Fellowship of the FSFE</title>
-      <url>https://fsfe.org/tags/tagged-fellowship.en.html</url>
+      <title> The Fellowship of the FSFE</title>
+      <url>https://blogs.fsfe.org/fellowship-interviews/?p=27</url>
       <body>
-        European Free Software advocates can now become supporters of the
-        FSFE and use its infrastructure to promote and spread the vision of the
-        FSFE.
+        European Free Software advocates can now become fellows by supporting the
+        FSFE. As fellows, they can also use the FSFE's infrastructure to promote and spread our vision as volunteers."
       </body>
-      <img src="/graphics/plussy.png" alt="Plussy, the fellowship mascot"/>
     </event>
   </year>
   <year value="2004">
@@ -748,25 +761,24 @@
       </body>
     </event>
     <event month="05" type="market-regulations">
-      <title>Definition of Open Standards</title>
+      <title>Open Standards definition</title>
       <url>https://fsfe.org/freesoftware/standards/def.html</url>
       <body>
-        The FSFE refines the Open Standards definition which will be adopted by many
+        The FSFE contributes to redefine the Open Standards definition, which will be adopted by many
         organisations and companies in Europe.
       </body>
     </event>
   </year>
   <year value="2003">
     <event month="07" type="volunteer-engagement">
-      <title>Launch of the Education Task Force</title>
+      <title>Education Task Force created</title>
       <url>https://fsfe.org/freesoftware/education/education.html</url>
       <body>
-        To improve the access to Free Software in education, a team of experts to focus on education topics was funded by volunteers of the FSFE.
+        To improve the access to Free Software in education, the Education Task Force was funded by volunteers of the FSFE. The members are experts in this topic.
       </body>
     </event>
   </year>
-  <year value="2002"/>
-  <year value="2001">
+  <year value="2001-2002">
     <event month="11" type="volunteer-engagement">
       <title>"We speak about Free Software" campaign</title>
       <url>https://fsfe.org/activities/whyfs/whyfs.html</url>
@@ -781,7 +793,6 @@
       <body>
         The Free Software Foundation Europe (FSFE) is founded as a sister organisation of the FSF, with Georg C. F. Greve becoming the first president.
       </body>
-      <img src="/graphics/logo.png" alt="FSFE Logo"/>
     </event>
   </year>
 </timeline>

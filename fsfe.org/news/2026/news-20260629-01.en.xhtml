@@ -1,0 +1,509 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html newsdate="2026-06-29">
+<version>1</version>
+
+<head>
+<title>Open Hardware and Free Software: Teufel Mynd, a case study</title>
+	</head>
+
+<body>
+
+<h1>Open Hardware and Free Software: Teufel Mynd, a case study</h1> 
+
+<p>The FSFE's volunteer and open hardware passionate, Nicole Faeber 
+read about the Teufel Mynd speaker announced as an "Open Source Project", so 
+she decided to put it to the test. We, the FSFE, bought 
+one and she dug in. Curious what she found? Read along with us!
+</p>
+
+<figure>
+	<img 
+	src="https://pics.fsfe.org/uploads/medium/53/c7/0153fc12197d5fc2d87486bbd7c6.jpg" 
+	alt="A Teufel Mynd speaker in blue standing on what looks like a floor surface
+"/> 
+	<figcaption>Teufel Mynd Bluetooth 
+	speaker box</figcaption>
+</figure>
+
+<p>Open hardware and Free Software are about more than tinkering: 
+they give users the freedom to inspect, modify, and truly understand the 
+technology they rely on every day. Open hardware means the design of a 
+device is publicly available: anyone can study how it's built, improve 
+it, or manufacture it themselves. Free Software goes hand in hand with 
+this: it guarantees that the code running on your devices can be use, 
+study, share, and improve by anyone. Together, they ensure that whoever 
+owns a 
+device gets to decide what runs on it, free from manufacturer lock-in or 
+hidden restrictions.</p>
+
+<p><em>This article has not been sponsored by Teufel
+in any way. We bought the device to test from our own money and
+did all research on our own.</em></p>
+
+<p>----------------------------------</p>
+<p>In May 2025 the German audio hardware maker company <a 
+href="https://cdn.teufelaudio.com/image/upload/w_100/v1/press/PM%20-%20Teufel%20MYND%20-%20Eine%20neue%20Generation%20Speaker.pdf">Teufel 
+announced a new product, the Mynd Bluetooth speaker box</a>. The 
+speaker in itself is yet another Bluetooth speaker box, the remarkable 
+feature of it is that it was announced as an "Open Source Project" with 
+"high repairability and sustainability", with all mechanical and 
+electronics design files as well as the firmware source code published 
+as "open source". So they mean the Mynd to be a Free Software and open 
+hardware product.</p>
+
+<p>So we wanted to put this to a test!</p>
+
+<h3>TL;DR - A Quick Summary</h3>
+<p>The Teufel Mynd project is a pretty impressive example of an Open
+Source Hardware project. All the mechanical and electronics design files
+are made public under a permissive license granting the four freedoms -
+to study, to share, to modify and to distribute modified versions of it.
+The data is complete enough to recreate the whole hardware, the
+mechanical enclosure as well as the electronics PCBs.</p>
+
+<p>There are only two caveats:</p>
+<ol>
+<li>The loudspeakers themselves are, at least very likely, Teufel
+proprietary and Teufel does not sell them as spare parts.</li>
+<li>The firmware for the Bluetooth module along with some DSP and USB
+type-C controller firmware are not Free Software. But at least the files
+are provided as binary blobs so one can build a complete firmware update
+file.</li>
+</ol>
+
+<p>
+So <a 
+href="https://oshwa.org/resources/open-source-hardware-definition/">the 
+project fulfills the Open Source Hardware Definition</a>.
+</p>
+<p>Let's dive into the details!</p>
+
+<h3>Repairability</h3>
+<p>Many current consumer electronic devices these days are not repair
+friendly. Cost pressure and ease of mass production make the
+non-repairable options, like glue instead of screws, very appealing to
+manufacturers.</p>
+
+<p>The Mynd is very different in this regard. The case is held together
+by screws, not glue. The parts are pieced together tightly with proper
+rubber seals, not glue strips. The screws are clearly visible and
+marked, not hidden away under some sticker label or warranty seal. The
+different screw sizes and types are documented on the bottom of device
+itself. Also the starting point to pry the casing parts apart after
+taking out the screws is marked on the case. So opening the device is
+really made as easy as possible, no guessing, the steps for dis- and
+reassembly are clear and pretty much self explanatory.</p>
+
+<figure>
+	<img 
+	src="https://pics.fsfe.org/uploads/medium/04/0d/3303022467f0bc5786786ef201c1.jpg" 
+	alt="Teufel Mynd speaker opend and dismantled"/> 
+	<figcaption>Mynd opened</figcaption>
+</figure>
+
+<p>There is just one caveat, availability of spare parts. So far Teufel
+only offers the battery pack and carrying belts as spare parts, not the
+Printed Circuit Boards (PCBs) or speaker chassis themselves. Maybe it is
+possible to convince the Teufel service center to buy these, but
+Teufel's general policy for spare parts says: "Please note: We do not
+ship circuit diagrams, toner, or electronic components such as circuit
+boards, capacitors, and resistors". For the average customer, this limits repairability.</p>
+
+<h3>Open Hardware</h3>
+
+<p>As promised in the product announcement, Teufel made <a 
+href="https://github.com/teufelaudio/mynd-hardware">all hardware
+design files publicly available on GitHub</a>. All these files are,
+where applicable, licensed under the Creative Commons
+"Attribution-ShareAlike 4.0 International" license which allows the four
+freedoms: Use, study and modify, redistribute the original and
+modifications.</p>
+
+<p>This is pretty remarkable!</p>
+
+<h3>3D CAD, the casing</h3>
+<p>All components of the case are split into separate 3D CAD files and
+are available in 3DM, STL and STP format. In total there are 11
+different parts that make up the case / chassis. Here we have the main
+case STP file opened in FreeCAD:</p>
+
+<figure>
+	<img src="https://pics.fsfe.org/uploads/medium/e2/cd/dbb82b75fa03305376e7560e7995.jpg" 
+	alt="Teufel Mynd speaker opend and dismantled"/> 
+	<figcaption>Teufel Mynd speaker opened and dismantled</figcaption>
+</figure>
+
+<p>So yes, everything is there, the full case and all its parts! Can you
+remake it, like 3D print? Well, let's see, here is the front grill STL
+file opened in the Cura 3D printer slicer:</p>
+
+<figure>
+	<img src="https://pics.fsfe.org/uploads/medium/e7/84/7338220c8f6d9edbfc64c85026f1.jpg" 	alt="Front grill in Cura slicer"/> 
+</figure>
+
+<p>This is looking pretty good! Since the Mynd speaker box is quite big
+you of course need a large 3D print room, the front grill is 26cmx18cm.
+But the problem is in the details. The 3D CAD design has not been
+optimised for 3D printing but rather for injection mold production so
+this makes 3D printing difficult and we can see the issue when looking
+at the print plate from underneath:</p>
+
+<figure>
+	<img src="https://pics.fsfe.org/uploads/medium/51/39/da8622b40709c8ccab4c331a3c9f.jpg" 	alt="Front grill in Cura Slicer, bottom
+view"/> 
+</figure>
+
+<p>All the red parts are free floating, i.e. these do not touch the
+print surface and will create issues while printing. With some luck and
+a good printer these will still come out OK but they may also end up
+quite ugly. Another a bit problematic part are the "knobs" on the top
+side which hold the front grill tight in rubber gaskets of the speaker
+fixture:</p>
+
+<figure>
+	<img src="https://pics.fsfe.org/uploads/original/2f/e8/89d9220c127fd975f2abdfe75c99.jpg" 	alt="Front grill in Cura Slicer, holding knobs"/> 
+</figure>
+
+<p>These little knobs also have some overhangs which can create issues
+while printing.</p>
+
+<p>So is the CAD design indeed "open hardware"? Yes! It is open licensed
+and you can use Free Software tools like FreeCAD or Cura slicer to
+tinker with it, even try to reproduce parts e.g. using 3D printing. The
+3D printing limitations (overhangs etc.) are not a detriment to the open
+hardware nature, nothing requires open hardware to be easily
+reproducible.</p>
+
+<h3>Electronics, schematics and PCBs</h3>
+
+<p>Next let's have a look at the electronics design, also for this <a 
+href="https://github.com/teufelaudio/mynd-hardware">all
+relevant files are available in the same hardware GitHub repository</a> 
+under the same "Attribution-ShareAlike 4.0 International" license. Again
+the files are made available in three file formats: Altium Designer,
+KiCAD and PDF. The PDF files are PDF exports of the schematics and the
+printed circuit board (PCB) layout. The Altium Designer and KiCAD
+formats are the much more interesting ones since these contain the
+editable schematics and PCB layout! Since we only use Free Software we
+cannot use the Altium files, so we focus on the KiCAD version for now -
+I assume that the original design was made using Altium and was then
+exported to KiCAD.</p>
+
+<h3>Excursion: Electronics making</h3>
+
+<p>To design and finally make a piece of electronics, a number of pieces
+are needed. First you need to have some idea what you are going to make,
+of course. Based on this you need to start choosing components for your
+design - which chips to use, which power supply these need, how this
+needs to be designed with which parts etc. So from a very early stage
+the component selection is a critical first step, we'll also come back
+to this a little later.</p>
+
+<p>Next you need to start to draft your electronics design, i.e. how all
+the components are connected to each other. This is done in the so
+called schematics. Every single connection of each of the components is
+made here. The schematics usually does not look similar to the final
+PCB, it is a rather abstracted view on the hardware and focuses on the
+parts choice and the connection between the parts.</p>
+
+<p>Once the schematics is somewhat ready the next phase is a real time
+sink, creating a PCB layout from the schematics. Tools like Altium or
+KiCAD assist with it, they know the physical sizes and constraints of
+the components and visualize it for you. But in the end the engineer has
+to properly place them on the virtual PCB. Placing is not only a matter
+of just putting them somewhere but you also need to know electrical
+constraints and keep routing the connections in mind. Creating a PCB
+from known schematics can take days and weeks and needs a lot of
+experience. Adding to that there may be mechanical constraints as well,
+e.g. known maximum PCB sizes or shapes that need to be taken into
+account.</p>
+
+<p>Once the schematics and PCB layout is done the PCB can be ordered
+from a PCB manufacturer and all electronic components can be ordered
+from the various distributors. In many cases you need to order from more
+than one distributor because not even the large ones carry all
+components - and fingers crossed everything is in stock!</p>
+
+<p>Once PCBs arrive and all parts are at hand you can finally start to
+assemble the PCB and power it up for the first time: Good luck the
+"magic smoke" stays within the parts!</p>
+
+<h3>The main board</h3>
+
+<p>So let's have a look at the main PCB as an example:</p>
+
+<figure>
+	<img src="https://pics.fsfe.org/uploads/medium/6b/cc/92166c516e2e30d1bacb152051b2.jpg
+" 	alt="Mynd main PCB in KiCAD"/> 
+</figure>
+
+<p>The Teufel engineers created a full KiCAD project for each PCB that
+can be directly and completely opened in KiCAD with all parts -
+schematics, footprints, 3D components and the full PCB design. Here is
+one page of the main PCB schematics for the main microcontroller:</p>
+
+<h3>Schematics</h3>
+
+<figure>
+	<img src="https://pics.fsfe.org/uploads/medium/f7/ba/41d09c6d4c20ae6c092d5e97919d.jpg" 	alt="Mynd main PCB, MCU schematics"/> 
+</figure>
+
+<p>The schematics only show a limited level of detail, some details
+necessary for actually making a device are not shown. For example the
+component with designator "C22C" right of the microcontroller unit
+(MCU), in the schematics you can only see that it is a capacitor with
+100nF capacity. But the actual specification needed contains a lot more
+information, which is also contained in the KiCAD project:</p>
+
+<figure>
+	<img src="https://pics.fsfe.org/uploads/medium/75/a3/8d171a02f5ec50a75e1a569fdf09.png" 	alt="Screenshot showing the componente C2C in symbol properties"/> 
+	<figcaption>Example component C2C</figcaption>
+</figure>
+
+<p>So here you can see that it is rated for maximum voltage of 50V, has
+a temperature coefficient of X7R, a tolerance of +/-10% and that the
+physical so called "footprint" is 0603, which means a surface mount
+device (SMD) 6mil long and 3mil wide - 'mil' is 100th of an inch, a
+common size in PCB design, so about 1.6mm in length and 0.8mm wide. A
+pretty small component. Each and every component needs to be specified
+this way.</p>
+
+<p>For a capacitor one usually can find components with the same
+specification from different manufacturers which makes component
+sourcing a bit easier. Some distributors allow importing a Bill Of
+Material (BOM) into their shop system and will offer best matches. For
+some other components there can be a variety of choices with very
+similar specifications which can make picking the right one complicated.
+In this case an exact manufacturer part number comes to the rescue:</p>
+
+<figure>
+	<img src="https://pics.fsfe.org/uploads/medium/e2/2e/3419107cb11123d69c46759da52e.jpg" 	alt="Screenshot showing MCU"/> 
+	<figcaption>Example MCU</figcaption>
+</figure>
+
+<p>In this example there is the main PCBs microntroller unit, specified
+with its exact manufacturer and the manufacturer's part number, ready
+for ordering.</p>
+
+<p>Speaking of ordering, it is also quite common, especially for
+commercial projects, to also specify an ordering source within the
+project, so that later on a BOM can be exported and handed over to e.g.
+a purchasing person or department for ordering all the components. In
+the KiCAD Mynd project there are no ordering sources.</p>
+
+<p>So, are the electronics design schematics open hardware? Yes! It is
+licensed under an open license providing the four freedoms. All
+necessary information to understand the schematics is included as well
+as all information to make a PCB from the schematics.</p>
+
+<h3>PCB layout</h3>
+
+<p>And now to the real fun part, the PCB layout. I won't go into the
+details here because there would be too much to cover. Just to give an
+idea here is the main PCB view in KiCAD's PCB editor:</p>
+
+<figure>
+	<img src="https://pics.fsfe.org/uploads/medium/36/ff/cfc71c48c5700f82c22de46c1da6.jpg" 	alt="Main PCB layout"/> 
+	<figcaption>Main PCB layout, KiCAD</figcaption>
+</figure>
+
+<p>This is a 4-layer PCB, i.e. it has four layers of copper traces, top,
+bottom and two in between. This PCB alone carries 561 components! Many
+of them small SMD components, the smallest being some 0402 resistors
+(4mil x 2mil = ~1mm x ~0.5mm). And to make things even worse, there are
+components placed on both sides of the PCB which makes soldering even
+more complicated. In KiCAD there is an awesome feature to create an
+interactive 3D view of the designed PCB, here is the Mynd Main PCB front
+and back:</p>
+
+<figure>
+	<img src="https://pics.fsfe.org/uploads/medium/93/59/8b1261a8c582f11e0d50f7c0d045.jpg" 	alt="KiCAD 3D Mynd PCB front"/> 
+	<figcaption>KiCAD 3D Mynd PCB front</figcaption>
+</figure>
+
+<figure>
+	<img src="https://pics.fsfe.org/uploads/medium/bc/66/76ca9e40eab19846b59d8e821348.png" 	alt="KiCAD 3D Mynd PCB back"/> 
+	<figcaption>KiCAD 3D Mynd PCB back</figcaption>
+</figure>
+
+<p>In total there are nine (9) PCBs in the Mynd speaker box, the main
+and amplifier PCBs being the largest and most complex. In total there
+are 1047 components on these 9 PCBs, about 87 different types of
+components. Just managing the supply and stock of 87 different component
+types is, I can tell from experience, a major effort.</p>
+
+<p>Is the PCB layout open hardware? Yes! You have the four freedoms and
+the hardware design details are complete enough to rebuild the whole
+thing! From parts specification to PCB specification (so called "stack
+up") everything is there. The only issue one might run into trouble with
+is finding ordering sources for all the components, but that's probably
+outside of the scope of open hardware anyway.</p>
+
+<h3>Make it yourself?</h3>
+
+<p>Well, I have not tried, but looking at the design files, mechanical
+and electronics, I think building the Mynd speaker hardware from scratch
+should be possible. I have not found any information missing, except
+maybe ordering sources for the components. Placing and soldering all
+over 1000 components on the nine PCBs will be a major effort and with
+components down to 0402 will be difficult to place by hand, some pick
+&amp; place setup would be very helpful along with proper SMD reflow
+soldering equipment. But the important part here is that there is no
+information missing in the design files, it's all there.</p>
+
+<p>3D printing the case could be possible as well, with some additional
+effort to accommodate for 3D printing instead of injection molding. The
+result will very likely look and feel differently, but it could
+work.</p>
+
+<p>What will definitely become a problem are the Teufel specific custom
+parts, i.e. the speaker chassis themselves. Other parts like the rubber
+gaskets and rubber seals these are also in the 3D design files but will
+be hard to e.g. 3D print properly.</p>
+
+<h3>The firmware</h3>
+
+<p>And now to the final part, there is also some software involved! The 
+main MCU, a STM32 microcontroller, runs some software as well as is the 
+module used for the Bluetooth connectivity and sound generation. The <a 
+href="https://github.com/teufelaudio/mynd-firmware/blob/main/.github/workflows/build-firmware.yml">source 
+code and build scripts were also made available by Teufel</a>. The parts 
+created by Teufel, i.e. the application software running on that STM32 
+MCU, are licensed under the MIT license. But for building it, some more 
+dependencies are needed, like some software development kit (SDK) bits 
+from ST-Micro (Apache 2.0, BSD 3-clause, MIT, proprietary ST SLA), bits 
+and pieces of FreeRTOS (MIT) and some more proprietary binary only 
+parts for the Bluetooth module, the audio DSP and, last but not least, 
+the USB type-C port controller - yes, also these things have their own 
+firmware these days.</p>
+
+<p>So apart from the blobs everything is Free Software, which is pretty
+cool! The blobs though are a bit of a bummer. But is this Teufel's
+fault? Or does this make the whole project less "open hardware"?</p>
+
+<p>My personal take on such blobs is this: While I dislike proprietary
+blobs in general, because they limit our freedoms to use the hardware as
+we like, I can at least accept certain blobs, e.g. in the case where
+chip+blob form a kind of union so that I can basically view the two
+together as just a single piece of hardware. I still don't like it,
+because it is hidden software, but at least I can somewhat accept it. We
+have this kind of situation in many cases and are somewhat OK with it -
+the WiFi firmware in our WiFi cards, the firmware in the touchpad
+controller of our laptops etc. The list is long, very long. How to
+properly address and fix this is another story we need to come back to
+another time.</p>
+
+<p>The firmware package can be built using the free GNU GCC cross
+compiler for ARM and build the firmware for the STM32 MCU. The firmware
+blobs for the DSP, Bluetooth module and the USB type-C controller do not
+get built and it is also not documented how to program these. But at
+least the binaries are there.</p>
+
+<p>So is the firmware Free Software? Concerning the MCU firmware, yes,
+it is. All firmware? No, there are certain blobs.</p>
+
+<p>Especially sad is that the Bluetooth part is completely binary only
+in the Bluetooth firmware blob, so all pairing, Bluetooth audio protocol
+(A2DP with SBC) etc. is hidden in that blob and can not be changed - I
+would have been curious if SBC-XQ (higher quality audio codec) or TWS
+(True Wireless Stereo) could be added to that Bluetooth firmware.</p>
+
+<h3>Final verdict</h3>
+
+<p>So, is it open hardware?</p>
+
+<p><strong>Mechanical design / parts</strong>: Yes! Everything is documented properly,
+some special components are not available off the shelf and need
+alternative sources, especially the speakers. It would be great if
+Teufel would also supply these through their spare parts shop.</p>
+
+<p><strong>Electronics design</strong>: Yes! The KiCAD files contain everything one needs
+to completely recreate and especially repair the electronics. Some
+components may be difficult to source though (like the Bluetooth
+module).</p>
+
+<p><strong>Firmware</strong>: The Teufel made parts are Free Software, some third party
+firmware parts are not (USB type-C controller, DSP, Bluetooth
+module).</p>
+
+<p>With all that it also qualifies nicely for the Open Source Hardware
+Definition [4] by the Open Source Hardware Association (OSHWA).</p>
+
+<p>Overall I think the Teufel engineers did an extremely good job here!
+They definitely set the bar and have given a great example of how one
+can make open and sustainable consumer hardware. For some first hand
+insights there is a nice <a 
+href="https://hardware.prototypefund.de/teufel-entwickler-es-tut-nicht-weh-den-schaltplan-zu-veroeffentlichen/">interview 
+with the engineers published on the
+Prototype Fund website (in German)</a>.</p>
+
+<p>Will the openness detriment their business? I am fairly sure it
+won't. Yes, maybe competitors can learn a bit about high quality
+engineering, but on the other hand this isn't rocket science either.
+Will they loose business because people will now rather build it
+themselves instead of buying a ready made device from Teufel? I doubt
+that. While I am quite convinced that one could build a complete Mynd
+device from the open specifications, it would take many many work hours
+- the logistics for the over 1000 electronic components, populating the
+PCBs, 3D printing or otherwise making the enclosure etc. - this is a
+serious undertaking and will take weeks along with dozens of person
+hours. A good hacking experience, for sure! But economically definitely
+not worth it, better go and support the company that made it with a
+purchase.</p>
+
+<h3>Outlook</h3>
+
+<p>Open Hardware not only means better repairability and with it better
+sustainability. It also means possible enhancements too! For example the
+Bluetooth module in the factory Mynd only supports the rather mediocre
+SBC audio codec. But since the electronics are made modular and the rest
+of the system is documented so well, why not think about replacing this
+limiting Bluetooth module by something else? By something more
+capable?</p>
+
+<p>Why not replace it with an ESP32 based module plus high quality audio
+codec chip? Would not be the first ESP32 based audio device.</p>
+
+<p>Why stop at an ESP32? There is <a href="https://github.com/teufelaudio/mynd-hardware/issues/1">a 
+discussion going on in the GitHub
+Mynd hardware repository</a> about replacing the proprietary Bluetooth
+module with a Raspberry Pi Zero 2 W based module! This would not only
+enable other Bluetooth audio codecs but then you would also get a
+complete Linux system into your Mynd, with its own media playback
+capabilities! Prototypes already seem to exist.</p>
+
+<p>This is the brilliance of Free Software and open hardware, the limit
+is your imagination, it is in your hands.</p>
+
+
+<p><strong>Happy hacking!</strong></p>
+
+
+<p>----------------------------------</p>
+<p>
+Do you care about sustainability, repairability and Free Software? Did 
+you do research about which products work best with Free Software? Have 
+you ever tried to tinker with them? We would love to hear your 
+experiences. <a href="https://survey.fsfe.org/index.php/555748">Please, share your knowledge with us</a>. We want to know which 
+products work better when you want to be in control of your 
+devices!<br/><br/>Moreover, we are looking for Free Software enthusiasts 
+who like to check if their devices are really open hardware. If you are 
+one of those, <a href="contact@fsfe.org">contact us</a>, so we can write reviews 
+together to help user to choose products that respect our four freedoms!
+</p>
+
+
+</body>
+<author id="nica"/>
+
+
+	<tags>
+			 <tag key="community">Community</tag>
+	        <tag key="front-page"/>
+	        <tag key="highlights">highlights</tag>
+		</tags>
+
+<discussion href="https://mastodon.social/deck/@fsfe/"/>
+<image url="https://pics.fsfe.org/uploads/medium/53/c7/0153fc12197d5fc2d87486bbd7c6.jpg" 
+	alt="A Teufel Mynd speaker in blue standing on what looks like a floor surface"/> 
+</html>

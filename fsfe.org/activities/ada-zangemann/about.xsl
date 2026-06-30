@@ -14,15 +14,26 @@
             <ul>
 			  <xsl:for-each select="publisher">
 				<li>
+					<p>
+						<xsl:call-template name="gettext">
+							<xsl:with-param name="id" select="'publisher'" />
+						</xsl:call-template>
+					<xsl:text>: </xsl:text>
 					<a>
 						<xsl:attribute name="href">
 							<xsl:value-of select="url"/>
 						</xsl:attribute>
 						<xsl:value-of select="name"/>
 					</a>
-					<p>
-						<xsl:value-of select="description"/>
 					</p>
+					<p>
+						ISBN: <xsl:value-of select="number"/>
+					</p>
+					<xsl:if test="affiliate != ''">
+						<p><em>
+							<xsl:value-of select="affiliate"/>
+						</em></p>
+					</xsl:if>
 				</li>
 			  </xsl:for-each>
 			</ul>

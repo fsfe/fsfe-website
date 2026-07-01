@@ -1,0 +1,58 @@
+/* Card grid used for activity's landing pages but can also be used stand-alone in a div */
+
+.card-grid {
+  .make-row;
+
+  .card {
+    .make-md-column(6);
+    display: flex;
+    flex-direction: column;
+    margin-top: @line-height-computed;
+
+    @media (min-width: @screen-md-min) {
+      &:nth-child(odd) {
+        clear: both;
+      }
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: (@line-height-computed / 2);
+      border: 3px solid (@link-color);
+    }
+      a {
+      &:hover img {
+        border-color: darken(@link-color, 15%);
+      }
+    }
+
+    iframe {
+      position: absolute;
+      inset: 0px;
+      aspect-ratio: 16 / 9;
+      margin-bottom: (@line-height-computed / 2);
+      border: 3px solid (@link-color);
+    }
+      a {
+      &:hover iframe {
+        border-color: darken(@link-color, 15%);
+      }
+    }
+
+    h2 {
+      margin-top: 0;
+      margin-bottom: (@line-height-computed / 2);
+      display: flex;
+	  justify-content: center;
+
+      a {
+        vertical-align: middle;
+      }
+    }
+
+    p {
+      margin-top: 0;
+    }
+  }
+}

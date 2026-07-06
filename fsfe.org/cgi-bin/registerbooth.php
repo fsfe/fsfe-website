@@ -109,7 +109,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         htmlspecialchars($_POST["notes"] ?? ''),
         htmlspecialchars($_POST["personalinfo"] ?? '')
   );
-  header("Location: https://fsfe.org/events/tools/boothregistration.{$lang}.html");
+  header("Location: https://fsfe.org/events/tools/boothregistration.html");
 } else {
     die("An error occured.");
 }

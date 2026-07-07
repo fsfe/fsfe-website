@@ -16,7 +16,7 @@ please contact contact@fsfe.org</p>
 <p>If you register your event in another language than English, please consider uploading an English version first to make sure everyone understands it -- including us. Also be aware that a non-English event is only visible on the non-English page of fsfe.org. So for example an Italian event would just be visible on fsfe.org/index.it.html.</p> 
 
 <p>If you need material about the FSFE and our activities for your event, please
-<a href="https://share.fsfe.org/apps/forms/s/Sk2teQXqccbDxcWWW3RKECMq">fill out
+<a href="/events/tools/boothregistration.html">fill out
 the booth preparation form</a> and let us know about it!</a>
  
 <p>Thanks,<br />

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <service-status-data>
   <version>1</version>
-  <incident name="Mailing list server service disruption">
+  <incident name="Mailing list and git service">
     <update date="2026-06-02">
-      The mailing list server of the FSFE is currently under high load. We are investigating the reason and working on a solution of the issue.
+      We are experiencing exceptional traffic on our systems caused by a DDoS attack. We are taking measures for mitigation. Please apologise if systems are reacting slower that you expected or if your client has been blocked by mistake.
     </update>
   </incident>
   <incident name="Power outtage in Data Center">

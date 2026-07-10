@@ -1,0 +1,551 @@
+WEBVTT
+
+00:00.000 --> 00:04.640
+Before we start with the podcast, we would like to say thank you to all of you who support
+
+00:04.640 --> 00:07.840
+the FSFE's work of money.
+
+00:07.840 --> 00:12.760
+Working for software freedom and producing podcasts cost money.
+
+00:12.760 --> 00:18.200
+Please consider supporting us with our nation and the FSFE.org slash donate and in the
+
+00:18.200 --> 00:33.880
+show notes.
+
+00:33.880 --> 00:36.480
+Hello and welcome to the software freedom podcast.
+
+00:36.480 --> 00:40.120
+Thank you so much for listening to this podcast and this episode.
+
+00:40.120 --> 00:44.280
+Without you and your support, this podcast would not be possible.
+
+00:44.280 --> 00:46.920
+Thank you our dear listeners.
+
+00:46.920 --> 00:51.720
+This podcast is brought to you by the free software foundation Europe.
+
+00:51.720 --> 00:55.600
+We are a charity that empowers users to control technology.
+
+00:55.600 --> 00:59.840
+Today I'm here with my colleague Ana Galán.
+
+00:59.840 --> 01:04.240
+Hello Ana, nice to finally have you here on the software freedom podcast.
+
+01:04.240 --> 01:05.240
+Thank you very much.
+
+01:05.240 --> 01:10.640
+It's another to finally manage to be here with you.
+
+01:10.640 --> 01:12.200
+I think it's the first time, right?
+
+01:12.200 --> 01:16.880
+Yeah, it's my first time so, I know it never was, but I'm very, very happy.
+
+01:16.880 --> 01:23.880
+Really happy to make it into the cool people that are coming to this spot.
+
+01:23.880 --> 01:33.440
+Yes, since Alex is off right now, I'm getting on all my co-workers and all of them have
+
+01:33.440 --> 01:36.160
+never been here on the podcast and I like each episode.
+
+01:36.160 --> 01:39.320
+I'm like, oh, just the first time we're doing that together, right?
+
+01:39.320 --> 01:41.920
+But I have been doing that for quite a few times now.
+
+01:41.920 --> 01:44.360
+Why haven't you been here before?
+
+01:44.360 --> 01:45.360
+What went wrong, Ana?
+
+01:45.920 --> 01:52.000
+I guess, you know, when you do communications, there's always other colleagues who knows
+
+01:52.000 --> 01:55.560
+more about things than you do over the topics, right?
+
+01:55.560 --> 01:59.760
+At conferences, at least, you always know quite a lot about the booth.
+
+01:59.760 --> 02:04.520
+More than I can say sometimes about other activities that are not mine.
+
+02:04.520 --> 02:08.720
+So because you read all our news and you do all the communication and you're responsible
+
+02:08.720 --> 02:14.040
+for all the mastodon things and I'm proud to, no, I'm forget.
+
+02:14.040 --> 02:19.760
+But I will be doing a podcast about the Fediverse in the near future, so you will go into that
+
+02:19.760 --> 02:20.760
+topic.
+
+02:20.760 --> 02:23.040
+I can't wait.
+
+02:23.040 --> 02:29.360
+All right, but today we are not talking about social media.
+
+02:29.360 --> 02:31.880
+Even so, it's a very interesting topic.
+
+02:31.880 --> 02:36.920
+But we are talking about the FSFE turning 25.
+
+02:36.920 --> 02:42.280
+So that's quite a long time for the FSFE to be around.
+
+02:42.280 --> 02:50.320
+And you're responsible for the big party, so tell me more.
+
+02:50.320 --> 02:57.640
+So yeah, like you said, we are these years our 25th anniversary, which means that some
+
+02:57.640 --> 03:04.640
+of our interns are younger than us, never to be, I don't know if you thought about this,
+
+03:04.640 --> 03:05.640
+but yeah.
+
+03:05.640 --> 03:09.800
+Oh my goodness, I have never thought about that, and now I feel really old.
+
+03:09.800 --> 03:20.960
+So 25 years since we were founded here in Germany to empower people to use control, use
+
+03:20.960 --> 03:29.440
+and control technology in Europe and we want to celebrate with everyone who's been here
+
+03:29.440 --> 03:38.240
+in the last 25 years or from the some founders to all the new people and all the new donor
+
+03:38.240 --> 03:46.640
+supporters, staff, everyone, and we're going to have a great huge party in Krakow in
+
+03:46.640 --> 03:47.640
+Poland.
+
+03:47.640 --> 03:50.720
+Are you very much looking forward to that?
+
+03:50.720 --> 03:55.600
+Yeah, I mean, this is going to be great with a lot of surprises.
+
+03:55.600 --> 04:04.240
+For this, we decided to we talk with your Python, that will be also those that week in
+
+04:04.240 --> 04:11.240
+Krakow, and then we'll part of of your Python during the weekend, and we will have there
+
+04:11.240 --> 04:17.280
+like a conference with different talks from yeah, a lot of people who are related to the
+
+04:17.280 --> 04:26.800
+FSFE, like for example, like friends, a part of the community, founders, former presidents,
+
+04:27.800 --> 04:35.320
+former staffers, current staffs, a lot of volunteers, and ice cream, there will be ice cream,
+
+04:35.320 --> 04:46.080
+which is very important, some surprises, and then we will have a huge party because we want
+
+04:46.080 --> 04:53.400
+to celebrate with everyone, and the best way to do it is with a party, and a cake, hopefully,
+
+04:53.400 --> 04:56.760
+let's see, we're working on that.
+
+04:56.760 --> 05:01.960
+Well, I hear that you have pretty good baker and scones.
+
+05:01.960 --> 05:06.600
+Yeah, in this case, I'm not the one making the cake.
+
+05:06.600 --> 05:11.400
+Luckily for me, there's a lot of things to do, right?
+
+05:11.400 --> 05:15.040
+But there was going to be a lot of other surprises.
+
+05:15.040 --> 05:22.200
+So I don't want to say a lot, because oh no, you have to tell me one.
+
+05:22.200 --> 05:24.600
+You have to tell me one surprise that will be happening.
+
+05:24.600 --> 05:26.200
+Oh, at least give me a hint.
+
+05:26.200 --> 05:32.920
+Well, on the first day, we would end the conference with a super nice, in-person theater,
+
+05:32.920 --> 05:36.080
+of course, about free software.
+
+05:36.080 --> 05:40.040
+So okay, now I feel like I need to prepare.
+
+05:40.040 --> 05:46.520
+No, I mean, there will be some theater people doing it, don't worry, but yeah, maybe we
+
+05:46.520 --> 05:50.240
+can also bring some people and say it's a great idea.
+
+05:50.240 --> 05:54.160
+I'm prepared just in case.
+
+05:54.160 --> 06:01.920
+Okay, maybe after the official theater, we can have an office, you know, the amateur one.
+
+06:01.920 --> 06:03.680
+I will do that.
+
+06:03.680 --> 06:06.240
+I will get, I will fight somebody else.
+
+06:06.240 --> 06:10.360
+So, yeah, so it's going to be really, really great.
+
+06:10.360 --> 06:16.600
+It's also like a moment for us to say thank you to everyone who's been here during the
+
+06:16.600 --> 06:22.440
+last 25 years, as I said, you know, everyone has been supporting us.
+
+06:22.440 --> 06:27.560
+Our great donors, that's like everybody who took a long, and we have donors also, almost
+
+06:27.560 --> 06:34.880
+from the beginning, that are still like donating to us, so that's something that's a great
+
+06:34.880 --> 06:38.520
+moment to say thank you and be grateful for this.
+
+06:38.520 --> 06:44.120
+All our great supporters who, you know, are also really, really there, and we don't see
+
+06:44.120 --> 06:46.560
+their faces a lot, right?
+
+06:46.560 --> 06:49.360
+So, it will be also, that's why we're doing this.
+
+06:49.360 --> 06:56.640
+It's a great moment for everyone to join, to also to ask questions, like, I know some
+
+06:56.640 --> 07:01.840
+people might be wondering, okay, how was the beginning of the FSFE, right?
+
+07:01.840 --> 07:08.520
+So, that's the place to ask that question, that's the place to meet the founders and tell
+
+07:08.520 --> 07:13.000
+them why they decided to fund the FSFE.
+
+07:13.000 --> 07:20.000
+So, there will be quite a lot of people, I guess, that will join us because, I mean, like
+
+07:20.000 --> 07:26.880
+25 years, there must have been a lot of volunteer supporters, staffers that you said will join
+
+07:26.880 --> 07:33.040
+us, former staffers, who are now volunteers sometimes, so that's quite a lot.
+
+07:33.040 --> 07:38.440
+Yeah, we are expecting quite a lot, but there's just a place for more.
+
+07:38.440 --> 07:46.120
+So, yeah, like, a lot of people coming are, as I said, a former, former president and
+
+07:46.120 --> 07:55.680
+founders, a lot of volunteers, a witness, people from our community, some from our associations,
+
+07:55.680 --> 08:01.960
+but a lot of current volunteers, but of course, we also want to see more.
+
+08:01.960 --> 08:08.280
+So, everybody can join, but then it's going to have, like, can you tell me the dates?
+
+08:08.280 --> 08:15.400
+Yeah, so as we said, it's going to be in Kraków in Poland, and it's going to be that we came
+
+08:15.400 --> 08:25.160
+from the 17th to the 19th of July, so yeah, everyone is invited, the entry to the conference
+
+08:25.160 --> 08:31.400
+is free, of course, the entry to the parties is free, so everything is free.
+
+08:31.400 --> 08:40.200
+And, yeah, doing, as we said, like, doing the Saturday, we have some talks, and as part
+
+08:40.200 --> 08:44.440
+of your Python, it's what the part of what the error Python calls prints, so it will
+
+08:44.440 --> 08:51.040
+be at their venue, and then do people need to register so that, and for EuroPython or
+
+08:51.840 --> 08:56.240
+it's free, they don't need to register, also your Python, like from Monday to Friday,
+
+08:56.240 --> 09:02.400
+there's the needs ticket, but for the weekend, they don't, don't, so we also will be part of
+
+09:02.400 --> 09:08.480
+your Python on Friday, we'll, I mean, we will have a booth, so if you are so there doing the week,
+
+09:09.440 --> 09:18.800
+our booth will be there with our amazing merchandise, and then on Friday, also Matthias,
+
+09:18.800 --> 09:24.960
+our actual president will be giving a talk, but our proper celebrations will start on Saturday,
+
+09:24.960 --> 09:31.280
+when he's free, and you don't need to register. Okay, so for Saturday and Sunday, it's free,
+
+09:31.280 --> 09:36.320
+and they can also join us there, and also see some amazing talks, I hear. Yeah, we are still
+
+09:36.320 --> 09:44.560
+preparing and drafting the agenda, but I can tell you that besides maybe talking about the past,
+
+09:44.560 --> 09:49.360
+we will talk, of course, about the present, the future, about our current activities,
+
+09:50.240 --> 09:58.400
+what we expect, right, to in the next year, so our vision, and of course, how everyone can
+
+09:58.400 --> 10:04.720
+contribute, and also your willing to help. As a volunteer, we will also be there. Yeah.
+
+10:06.400 --> 10:11.280
+Oh, that's very nice. I see you're trying to accommodate everybody there again. Of course, I mean,
+
+10:12.240 --> 10:21.760
+with all the wishes, meeting for everyone. Yeah, but it's also a year of it. It's a bit of your
+
+10:21.760 --> 10:28.160
+character to be, to make sure that everybody feels welcome and comfortable, and enjoying the time,
+
+10:28.160 --> 10:34.160
+and has a good time. That's really you. You're a really great hostess. Thank you, I guess. I mean,
+
+10:34.240 --> 10:40.960
+you know, is we want everyone to get the most out of it, and also to have fun, because that's
+
+10:40.960 --> 10:49.360
+also the point, right, to have fun when doing what you believe in, and you know, enjoying the community,
+
+10:49.360 --> 10:57.280
+we are part of, and yeah, so it's basically what it is, like having fun. Well learning,
+
+10:57.920 --> 11:04.160
+my learning more about free software and the episode. I really liked that, because I just,
+
+11:04.160 --> 11:08.080
+I have been back from a conference, you know, that like yesterday I arrived back home,
+
+11:09.440 --> 11:16.640
+and you will be going to the next conference in just a few days, and at this conference, I was like,
+
+11:18.560 --> 11:22.960
+I reminded about how much I do care about free software, and how much everybody else
+
+11:22.960 --> 11:27.600
+cares about free software, as well, and was really inspiring to see like all those people coming
+
+11:27.600 --> 11:34.800
+together and to feel this energy, and also those worries that are around like, how will the future
+
+11:34.800 --> 11:40.000
+of free software look like? What will be happening next? I still had the feeling that there is a
+
+11:40.000 --> 11:45.680
+community that there is this broader movement for everybody caring about software freedom,
+
+11:45.680 --> 11:50.560
+and that was really inspiring. So now I have the feeling that this is also the case with
+
+11:51.520 --> 11:58.640
+our summer meeting, and that it will be like really a poor free software, and why we care so much about
+
+11:59.680 --> 12:06.400
+the software freedom and the curiosity behind learning, you know what I mean, like so, very, very much looking forward.
+
+12:07.040 --> 12:12.800
+Yeah, no, indeed, that's interesting, because that's the conversation I've been coming in the last
+
+12:12.960 --> 12:23.040
+or so days, right? Like I'm one of my neighbors is using Linux since he was like 12 from 13,
+
+12:23.040 --> 12:26.960
+and yeah, I met him at another conference, and then we were talking all these things, and
+
+12:28.880 --> 12:33.520
+he was asking me, no, like this, why do you care about this? And I'm like, I think for the different
+
+12:33.520 --> 12:40.400
+reasons, don't do care. I mean, not at the beginning, right? That's also what I like about
+
+12:40.400 --> 12:48.560
+free software, like you don't need to be a developer, or you know, just like willing to
+
+12:49.520 --> 12:55.280
+take in the sense of understanding everything, you can also be like, we believe in software freedom,
+
+12:55.280 --> 13:00.640
+and in free software as a way to make the society a better place, you know, as a way to
+
+13:02.080 --> 13:09.040
+have more democracy, more transparency, so yeah, and then you talk without this super
+
+13:10.000 --> 13:15.360
+tech people, and then for them, of course it's about freedom, but you know, another different kind
+
+13:15.360 --> 13:20.800
+of freedom, but at the end of the day, we all have the same mission, right? We really want to
+
+13:21.760 --> 13:28.160
+make free software a reality that everyone else, so you can use, understand, and yeah, make their lives
+
+13:28.160 --> 13:36.400
+easier. That sounds really nice. I will take that as a closing. Thank you.
+
+13:39.920 --> 13:46.160
+All right, anything our listeners would need to know about the FSFE25,
+
+13:46.160 --> 13:52.080
+and basically our summer meeting this year, we have to date, we will be staying in Kraków,
+
+13:52.880 --> 13:57.440
+they can reach out to us, especially to you, your information is linked in the show notes,
+
+13:59.120 --> 14:05.280
+and there will be an amazing agenda with some impersonator, very much look forward to that,
+
+14:05.360 --> 14:11.760
+and even more surprises, anything else that we are missing to wrap every single one.
+
+14:11.760 --> 14:19.200
+No, just that feel free to come, join us, we really want to celebrate with all of you,
+
+14:20.400 --> 14:25.360
+even if you haven't been active in the last years, that's also not an excuse, join us.
+
+14:25.840 --> 14:27.440
+That's not an excuse.
+
+14:30.640 --> 14:35.600
+And he's Krakow, you know, he's an amazing city, I love Krakow, he has a dragon,
+
+14:36.240 --> 14:42.240
+so that's where the dragon is. He has a dragon, what? He has a dragon, the city, yeah, Krakow has a dragon.
+
+14:42.720 --> 14:46.720
+Okay, I'm very much looking forward to go there because I have never been there,
+
+14:47.360 --> 14:53.120
+so I never went to Krakow, so very much looking forward now. So basically is that, you know,
+
+14:53.200 --> 14:58.720
+nice city, nice conference, super nice people from Europe, Python, and of course,
+
+14:59.280 --> 15:06.240
+what can I say, we are so really nice, you are really nice, you will be there. So also our
+
+15:06.880 --> 15:13.760
+listeners can finally, you know, talk to you in person soon. That's also another good excuse.
+
+15:13.760 --> 15:19.680
+We should turn that I own, like not talk about me that much, but talking about you, I like that point a lot.
+
+15:20.400 --> 15:21.200
+Thank you.
+
+15:21.200 --> 15:30.240
+No, and yeah, and it's also a good moment to celebrate that we are still here, right?
+
+15:30.240 --> 15:38.400
+Wasn't the dream and the day of some, some people, they've our founders 25 years ago.
+
+15:39.120 --> 15:45.120
+Yeah, that they have 25 years ago, so they have these dream, they believe in this.
+
+15:46.080 --> 15:50.400
+And thanks to all our supporters, our donors, our volunteers, our,
+
+15:50.960 --> 15:57.200
+also our staff, yeah, our super nice colleagues that are really hardworking colleagues.
+
+15:57.920 --> 16:05.760
+Thanks to all of them, we are here 25 years later. And yeah, it might seem that
+
+16:07.200 --> 16:14.240
+the world was the same as it was 25, but we haven't maybe done a lot, but we have released in our
+
+16:14.240 --> 16:21.760
+timeline. And through our timeline, you can really really see that we've done a lot of
+
+16:21.760 --> 16:27.120
+great things. So even in these moments, when we are a bit more, you know, we have it under the
+
+16:27.120 --> 16:34.640
+weather and we are like, oh, the world is what's happening to the world. We can see that we achieve a
+
+16:34.640 --> 16:43.200
+lot. There's still a lot more to be done, but we are on the wood path. And yeah, hopefully we
+
+16:43.200 --> 16:50.960
+can celebrate 20, our 15 years, sorry, you know, 25 years. And then be the really, like the
+
+16:50.960 --> 16:56.880
+really, really, really old people. Exactly. And then the people will be coming to say hi to us
+
+16:56.880 --> 17:05.200
+to our founders. Okay, this is now a twist that I don't think we should go down that route too far.
+
+17:06.960 --> 17:11.200
+All right. Thank you, Ana. Thank you so much for joining me here. Thank you so much for
+
+17:11.200 --> 17:18.000
+walking me through the 25th anniversary. And now we really well prepared. Yeah. Thank you so
+
+17:18.000 --> 17:23.360
+much. Thank you. It was really nice to talk to you. Yeah. Hope to be here back soon.
+
+17:24.640 --> 17:30.640
+Definitely. This was the software freedom podcast. If you liked this episode, please
+
+17:30.640 --> 17:35.680
+recommend it to your friends and rate it. Stay tuned for more inspiring conversations that
+
+17:35.680 --> 17:40.160
+explore the importance of software freedom and its impact on our digital lives.
+
+17:41.280 --> 17:47.360
+This podcast is presented to you by the Free Software Foundation Europe. We are a charity
+
+17:47.360 --> 17:54.640
+that works on promoting software freedom. If you'd like our work, please consider supporting us
+
+17:54.640 --> 18:00.800
+for the nation. You find more information on the FSFE.org slash tonight. Thank you so much.
+
+18:00.800 --> 18:02.480
+Thank you so much for listening. Bye bye.
+

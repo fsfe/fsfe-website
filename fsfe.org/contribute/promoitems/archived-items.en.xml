@@ -173,6 +173,11 @@ to every item in this file -->
     <image imgsmall="/contribute/promopics/ua-sticker-square-thumb.jpg"/>
   </item>
 
+  <item type="upcyclingandroid" id="ua-leaflet" year="2023" order="4">
+    <image imgsmall="/contribute/promopics/ua_leaflet_thumb.png"/>
+  </item>
+
+
   <!-- Children's Book Ada+Zangemann -->
 
 
@@ -186,6 +191,12 @@ to every item in this file -->
 
   <item type="fsfe" id="dontwreckourtech-sticker" year="2023" order="17">
     <image imgsmall="/contribute/promopics/dontwreckourtech-sticker-thumb.jpg"/>
+  </item>
+
+  <!-- Fedigov -->    
+
+<item type="fedigov" id="fedigov-sticker" year="2023" order="1">
+    <image imgsmall="/contribute/promopics/fedigov-sticker-thumb.jpg"/>
   </item>
 
 </itemset>

@@ -7,16 +7,14 @@ import http.server
 import logging
 import multiprocessing
 import os
-import shutil
 import socketserver
+import webbrowser
 from pathlib import Path
-
-from fsfe_website_build.lib.misc import run_command
 
 logger = logging.getLogger(__name__)
 
 
-def _run_webserver(path: str, port: int) -> None:
+def _run_webserver(path: Path, port: int) -> None:
     """Given a path and a port it will serve that dir on that localhost:port."""
     os.chdir(path)
     handler = http.server.SimpleHTTPRequestHandler
@@ -40,13 +38,13 @@ def serve_websites(
         for path in Path(serve_dir).iterdir()
         if (path.is_dir() and (path.name in site_names))
     )
-    serves: list[tuple[str, int]] = []
+    serves: list[tuple[Path, int]] = []
     for index, directory in enumerate(dirs):
         port = base_port + (increment_number * index)
-        url = f"http://127.0.0.1:{port}"
-        logger.info("%s served at %s", directory.name, url)
-        if shutil.which("xdg-open") is not None:
-            run_command(["xdg-open", url + "/index.en.html"])
-        serves.append((str(directory), port))
+        serves.append((directory, port))
     with multiprocessing.Pool(len(serves)) as pool:
-        pool.starmap(_run_webserver, serves)
+        pool.starmap_async(_run_webserver, serves)
+        for directory, port in serves:
+            url = f"http://127.0.0.1:{port}"
+            logger.info("%s served at %s", directory.name, url)
+            webbrowser.open(url + "/index.en.html")

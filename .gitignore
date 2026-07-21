@@ -15,10 +15,7 @@ __pycache__
 #phpcsfixer cache
 .php-cs-fixer.cache
 # Secrets
-# docker compose
+# general secrets
 .env
-# drone
-secrets.txt
-drone_token.txt
 # editors
 .vscode

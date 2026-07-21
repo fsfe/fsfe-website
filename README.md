@@ -14,7 +14,7 @@ This repository contains the source files of [fsfe.org](https://fsfe.org), pdfre
 
 Our web team has compiled some information about technology used for this website on the [Information for Webmasters](https://fsfe.org/contribute/web/) page. This is mainly focused on page content.
 
-For information on how the build process works see [docs subfolder](./docs/overview.md). For more information on contributing to the buid process, please see the [contributor docs](./docs/contributing.md) for some useful tips.
+For information on how the build process works see [docs subfolder](./docs/overview.md). For more information on contributing to the build process, please see the [contributor docs](./docs/contributing.md) for some useful tips.
 
 Some tips for management can be found in the [management docs](./docs/management.md)
 
@@ -84,11 +84,11 @@ Alterations to build scripts or the files used site-wide will result in near ful
 
 ### Native
 
-We can either install the required dependencies manually using our preferred package manager. If you are a nix use one can run `nix-shell` to enter a shell with the required build dependencies.
+We can either install the required dependencies manually using our preferred package manager. If you are a nix use one can run `nix-shell` to enter a shell with the required build dependencies. It will also provision `drone-cli` for signing the CI file after changing it, and load the values in `.env` into your current shell.
 
 If installing manually, you need the python package `uv` and the node package `lessc`.
 
-Also needed are the libraries
+This also requires
 
 ```
 libxml2 libxslt
@@ -102,26 +102,20 @@ The pages can be built and served by running `uv run build`. Try `--help` for mo
 
 > Docker is used on the build server, so you can use this to replicate the exact behavior
 > **Advantage**: Reproducibility, no changes on the host system
-> **Disadvantage**: Docker breaks sometimes, bigger install size, more network usage
+> **Disadvantage**: Bigger install size, more network usage
 
 The docker build process is in some ways designed for deployment. This means that it expects some environment variables to be set to function. Namely, it will try and load ssh credentials and git credentials, and docker does not support providing default values to these.
 
 So, to stub out this functionality, please set the environment variables
-`FSFE_WEBSITE_KEY_PRIVATE FSFE_WEBSITE_KEY_PASSWORD FSFE_WEBSITE_GIT_TOKEN` to equal `none` when running docker. One can set them for the shell session, an example in bash is seen below.
+`FSFE_WEBSITE_KEY_PRIVATE FSFE_WEBSITE_KEY_PASSWORD FSFE_WEBSITE_GIT_TOKEN` to equal `none` when running docker. They can be set using a `.env` file in the report root, using a simple key value syntax, E.G
 
-```
-export FSFE_WEBSITE_KEY_PRIVATE=none;
-export FSFE_WEBSITE_KEY_PASSWORD=none;
-export FSFE_WEBSITE_GIT_TOKEN=none;
+```sh
+FSFE_WEBSITE_KEY_PRIVATE=none
+FSFE_WEBSITE_KEY_PASSWORD=none
+FSFE_WEBSITE_GIT_TOKEN=none
 ```
 
 One can then run Docker commands like `docker compose ...`.
-
-Alternatively one can prefix the Docker commands with the required variables, like so
-
-```
-FSFE_WEBSITE_KEY_PRIVATE=none FSFE_WEBSITE_KEY_PASSWORD=none FSFE_WEBSITE_GIT_TOKEN=none docker compose
-```
 
 Once your preferred method has been chosen, simply running `docker compose run --service-ports build --serve` should build the webpages and make them available over localhost.
 

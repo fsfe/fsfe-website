@@ -8,9 +8,10 @@
 let
   inherit (pkgs) lib;
   python = pkgs.python314;
+  name = "fsfe-website-env";
 in
 (pkgs.buildFHSEnv {
-  name = "fsfe-website-env";
+  inherit name;
   # Installed for host pc only
   targetPkgs =
     pkgs:
@@ -34,13 +35,12 @@ in
       prettier
       php84Packages.php-cs-fixer
       rsync
+      # drone cli for signing
+      drone-cli
     ]);
   # Installed for every architecture: only install the lib outputs
-  multiPkgs =
-    pkgs:
-    (with pkgs; [
-    ]);
-  runScript = pkgs.writeShellScript "fsfe-website-env" ''
+  multiPkgs = pkgs: (with pkgs; [ ]);
+  runScript = pkgs.writeShellScript name ''
     set -euo pipefail
     # Force uv to use Python interpreter from venv
     export UV_PYTHON="${lib.getExe python}";
@@ -54,6 +54,12 @@ in
     source .venv/bin/activate
     # install your git hooks
     lefthook install
+    # Source .env for providing vars
+    if [[ -f .env ]]; then
+      set -o allexport
+      source .env
+      set +o allexport
+    fi
     # hand control over to the caller (or start a shell)
     exec ${run}
   '';

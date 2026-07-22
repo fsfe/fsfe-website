@@ -41,6 +41,9 @@ RewriteRule ^community/events/2016/summit/backsight(/.*)?$  /events/2016/summit/
 # 15 years of FSFE
 RewriteRule ^15(/.*)?$    /activities/15years$1 [R=301,L]
 
+# 25 years of FSFE
+RewriteRule ^about\/summermeeting-schedule(.*)?$    /activities/fsfe25/index$1 [R=301,L]
+
 # Podcast
 RewriteRule ^podcast(/.*)? /news/podcast.html [R=301,L]
 

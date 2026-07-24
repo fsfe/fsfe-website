@@ -10,6 +10,8 @@ from typing import TYPE_CHECKING, Any, cast
 
 from lxml import etree
 
+from fsfe_website_build.globals import FALLBACK_LANG
+
 if TYPE_CHECKING:
     from pathlib import Path
 
@@ -139,7 +141,7 @@ def get_localised_file(base_file: Path, lang: str, suffix: str) -> Path | None:
         else fallback
         if (
             fallback := base_file.with_suffix(
-                base_file.suffix + ".en" + normalised_suffix
+                base_file.suffix + "." + FALLBACK_LANG + normalised_suffix
             )
         ).exists()
         else None

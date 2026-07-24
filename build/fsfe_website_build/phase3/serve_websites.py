@@ -11,6 +11,7 @@ import shutil
 import socketserver
 from pathlib import Path
 
+from fsfe_website_build.globals import FALLBACK_LANG
 from fsfe_website_build.lib.misc import run_command
 
 logger = logging.getLogger(__name__)
@@ -46,7 +47,7 @@ def serve_websites(
         url = f"http://127.0.0.1:{port}"
         logger.info("%s served at %s", directory.name, url)
         if shutil.which("xdg-open") is not None:
-            run_command(["xdg-open", url + "/index.en.html"])
+            run_command(["xdg-open", url + f"/index.{FALLBACK_LANG}.html"])
         serves.append((str(directory), port))
     with multiprocessing.Pool(len(serves)) as pool:
         pool.starmap(_run_webserver, serves)

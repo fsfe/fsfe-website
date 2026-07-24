@@ -7,6 +7,8 @@ import logging
 from itertools import product
 from typing import TYPE_CHECKING
 
+from fsfe_website_build.globals import FALLBACK_LANG
+
 if TYPE_CHECKING:
     import multiprocessing.pool
     from pathlib import Path
@@ -19,7 +21,7 @@ def _do_symlinking(source: Path, link_type: str, lang: str) -> None:
     target = (
         source.joinpath(f"global/data/{link_type}/{link_type}.{lang}.xml")
         if source.joinpath(f"global/data/{link_type}/{link_type}.{lang}.xml").exists()
-        else source.joinpath(f"global/data/{link_type}/{link_type}.en.xml")
+        else source.joinpath(f"global/data/{link_type}/{link_type}.{FALLBACK_LANG}.xml")
     )
     source_xml = source.joinpath(f"global/data/{link_type}/.{link_type}.{lang}.xml")
     if not source_xml.exists():

@@ -1267,6 +1267,23 @@ blockquote#statement p {
   font-weight: unset;
 }
 
+/* breadcrumb */
+
+.breadcrumb {
+  background: lighten(@brand-primary, 40%);
+  display: block;
+  padding: 0.5em;
+
+  @media (min-width: @screen-sm-min) {
+    margin-top: -2em;
+  }
+
+  a:before {
+    content: "‹ ";
+  }
+}
+
+
 /* -------------------------------------------------------------------- */
 /* Interviews                                                           */
 /* -------------------------------------------------------------------- */

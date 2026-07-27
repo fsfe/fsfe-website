@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <data>
-  <version>3</version>
+  <version>4</version>
 
 
 <!-- ALL STATIC TEXTS -->
@@ -152,7 +152,7 @@
   <text id="related-events">Related Events</text>
   <text id="related-all">All related news and events</text>
   <text id="more-updates">You can also receive regular updates and deeper insights on our other channels:</text>
-
+  <text id="no-upcoming-events">There are no upcoming events planned related to Ada and Zangemann.</text>
 
   <!-- Sidebars -->
   <text id="our-work">Our Work</text>
@@ -234,5 +234,8 @@
 
   <!-- Progressbar -->
   <text id="progressbar-of">of</text>
+  
+  <!-- Activity Ada &amp; Zagemann -->
+  <text id="publisher">Publisher</text>
 
 </data>

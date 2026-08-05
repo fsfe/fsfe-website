@@ -2,8 +2,8 @@
 <service-status-data>
   <version>1</version>
   <incident name="blogs.fsfe.org service">
-    <update date="2026-08-05">
-      Currently the blogs are not available. We are working on bringing them back.
+    <update date="2026-08-05" resolved="true">
+      The community blogs were not accessible after an update. We reverted back to the snapshot from before the update and are rescheduling the update for later.
     </update>
   </incident>
   <incident name="Mailing list and git service">

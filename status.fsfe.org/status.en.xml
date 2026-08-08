@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <service-status-data>
   <version>1</version>
+  <incident name="login to services of the FSFE">
+    <update date="2026-08-08">
+      System Hackers will update the LDAP servers of the FSFE tomorrow, SUNDAY 2026-08-09 starting at 11h CEST and the work should be finished till 13h CEST. DURING THIS TIME LOGGING IN TO OUR SERVICES WILL NOT BE POSSIBLE.
+    </update>
+  </incident>
   <incident name="blogs.fsfe.org service">
     <update date="2026-08-05" resolved="true">
       The community blogs were not accessible after an update. We reverted back to the snapshot from before the update and are rescheduling the update for later.

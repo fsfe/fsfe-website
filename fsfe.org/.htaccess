@@ -48,6 +48,7 @@ RewriteRule ^about\/summermeeting-schedule(.*)?$    /activities/fsfe25/index$1 [
 RewriteRule ^podcast(/.*)? /news/podcast.html [R=301,L]
 
 # EU policies wiki page, e.g. linked from the PMPC brochure
+RewriteRule ^fs https://wiki.fsfe.org/Activities/EU_Policies_overview_FS [R=301,L]
 RewriteRule ^fs-policies/?$ https://wiki.fsfe.org/Activities/EU_Policies_overview_FS [R=301,L]
 
 # Share buttons

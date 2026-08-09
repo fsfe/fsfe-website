@@ -63,7 +63,6 @@ RewriteRule ^women(/.*)?$ https://docs.fsfe.org/teams/Women [R=301,L]
 # Others
 RewriteRule ^standards(.*) /freesoftware/standards$1 [R=301,L]
 RewriteRule ^education(.*) /freesoftware/education$1 [R=301,L]
-RewriteRule ^endof10-berlin https://wiki.fsfe.org/Events/Berlin/2025-08-09 [R=301,L]
 
 # Apple Litigation
 RewriteRule ^activities/apple-litigation/confidentialrequest(.*) https://curia.europa.eu/juris/document/document.jsf?text=&docid=295904&pageIndex=0&doclang=en&mode=req&dir=&occ=first&part=1&cid=13488140f [R=307,L]
@@ -201,8 +200,6 @@ RewriteRule ^en/layout/set/rss/content/view/full/4974 https://blogs.fsfe.org/gre
 RewriteRule ^en/news /news/ [R=301,L]
 RewriteRule ^en/rss/feed/news.xml /news/news.en.rss [R=301,L]
 RewriteRule ^en/rss/feed/events.xml /events/events.en.rss  [R=301,L]
-RewriteRule ^en/content/download/17665/125518/file/gnupg-ccid.rules https://wiki.fsfe.org/Card_howtos/Card_reader_setup_(udev)?action=AttachFile&do=view&target=gnupg-ccid.rules [R=301,L]
-RewriteRule ^en/content/download/15872/77909/file/gnupg-ccid https://wiki.fsfe.org/Card_howtos/Card_reader_setup_(udev)?action=AttachFile&do=view&target=gnupg-ccid [R=301,L]
 
 # Tags
 RewriteRule ^tags/tagged(\...)(\.html)?$ /tags/tags$1.html [R=301,L]
@@ -302,7 +299,6 @@ RewriteRule ^donate/payonline(/.*)?$     https://my.fsfe.org/payonline$1 [R=301,
 RewriteRule ^order/payonline.(.*)/(.*) /cgi-bin/order-payonline.pl?language=$1&reference=$2
 
 # Old /fellowship pages
-RewriteRule ^fellowship/card(/.*)?$ https://wiki.fsfe.org/TechDocs/CardHowtos [R=301,L]
 RewriteRule ^fellowship/communicate(/.*)?$ /about/contact.html [R=301,L]
 RewriteRule ^fellowship/contact(/.*)?$ /about/contact.html [R=301,L]
 RewriteRule ^fellowship/events(.*) /events$1 [R=301,L]

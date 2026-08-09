@@ -304,8 +304,8 @@ RewriteRule ^fellowship/contact(/.*)?$ /about/contact.html [R=301,L]
 RewriteRule ^fellowship/events(.*) /events$1 [R=301,L]
 RewriteRule ^fellowship/faq(/.*)?$ https://docs.fsfe.org/KnowHow/FSFELife/FAQ [R=301,L]
 RewriteRule ^fellowship/graphics/people(/.*)?$ - [L]
-RewriteRule ^fellowship/groups(/.*)?$ https://wiki.fsfe.org/LocalGroups [R=301,L]
-RewriteRule ^fellowship/new-group(/.*)?$ https://wiki.fsfe.org/KnowHow/Groups/CoordinatorsHandbook [R=301,L]
+RewriteRule ^fellowship/groups(/.*)?$ https://docs.fsfe.org/LocalGroups/Active/$1 [R=301,L]
+RewriteRule ^fellowship/new-group(/.*)?$ https://docs.fsfe.org/KnowHow/Groups/CoordinatorsHandbook [R=301,L]
 # Catch the rest
 RewriteRule ^fellowship / [R=301,L]
 

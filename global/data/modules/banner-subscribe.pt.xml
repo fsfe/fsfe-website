@@ -10,14 +10,16 @@
         <span style="font-size:0.8em">(A nossa <a href="/about/legal/imprint.html#id-privacy-policy"><span style="color:white; text-decoration: underline;">Política de Privacidade</span></a>)</span>
       </p>
 
-      <form class="form-inline" method="post" action="https://my.fsfe.org/subscribe">
+      <form class="form-inline" method="post" action="https://my.fsfe.org/subscribe" aria-label="Formulário de subscrição por e-mail">
         <input type="hidden" name="language" value="pt"/>
         <input type="input" style="display: none !important" name="password" tabindex="-1" autocomplete="off"/>
         <div class="form-group">
-          <input type="text" class="form-control" name="name" placeholder="O seu nome" required="required"/>
+		  <label for="subscribe-name" class="sr-only">O seu nome</label>
+          <input type="text" class="form-control" id="subscribe-name" name="name" placeholder="O seu nome" required="required"/>
         </div>
         <div class="form-group">
-          <input type="email" class="form-control" name="email1" placeholder="O seu endereço de email" required="required"/>
+		  <label for="subscribe-email" class="sr-only">O seu endereço de email</label>
+          <input type="email" class="form-control" id="subscribe-email" name="email1" placeholder="O seu endereço de email" required="required"/>
         </div>
         <fsfe-cd-referrer-input/>
         <input type="hidden" name="wants_info" value="yes"/>

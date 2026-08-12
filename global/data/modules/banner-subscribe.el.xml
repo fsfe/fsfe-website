@@ -8,14 +8,16 @@
         Εγγραφείτε στις ενημερώσεις μας μέσω ηλεκτρονικού ταχυδρομείου. Οι ειδικοί μας σας ενημερώνουν για τα τρέχοντα νέα, γεγονότα, δράσεις και πως να συνεισφέρετε. <span style="font-size:0.8em">(Η <a href="/about/legal/imprint.html#id-privacy-policy"><span style="color:white; text-decoration: underline;">Πολιτική ιδιωτικότητας</span></a>)</span>
       </p>
 
-      <form class="form-inline" method="post" action="https://my.fsfe.org/subscribe">
+      <form class="form-inline" method="post" action="https://my.fsfe.org/subscribe" aria-label="Φόρμα εγγραφής μέσω email">
         <input type="hidden" name="language" value="el"/>
         <input type="input" style="display: none !important" name="password" tabindex="-1" autocomplete="off"/>
         <div class="form-group">
-          <input type="text" class="form-control" name="name" placeholder="Το όνομα σου" required="required"/>
+		  <label for="subscribe-name" class="sr-only">Το όνομα σου</label>
+          <input type="text" class="form-control" id="subscribe-name" name="name" placeholder="Το όνομα σου" required="required"/>
         </div>
         <div class="form-group">
-          <input type="email" class="form-control" name="email1" placeholder="Το email σου" required="required"/>
+		  <label for="subscribe-email" class="sr-only">Το email σου</label>
+          <input type="email" class="form-control" id="subscribe-email" name="email1" placeholder="Το email σου" required="required"/>
         </div>
         <fsfe-cd-referrer-input/>
         <input type="hidden" name="wants_info" value="yes"/>

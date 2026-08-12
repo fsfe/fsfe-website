@@ -13,12 +13,12 @@
         <input type="hidden" name="language" value="it"/>
         <input type="input" style="display: none !important" name="password" tabindex="-1" autocomplete="off"/>
         <div class="form-group">
-		  <label for="suscribe-name" class="sr-only">Il tuo nome</label>
-          <input type="text" class="form-control" id="suscribe-name" name="name" placeholder="Il tuo nome" required="required"/>
+		  <label for="subscribe-name" class="sr-only">Il tuo nome</label>
+          <input type="text" class="form-control" id="subscribe-name" name="name" placeholder="Il tuo nome" required="required"/>
         </div>
         <div class="form-group">
-		  <label for="suscribe-email" class="sr-only">Il tuo indirizzo email</label>
-          <input type="email" class="form-control" id="suscribe-email" name="email1" placeholder="Il tuo indirizzo email" required="required"/>
+		  <label for="subscribe-email" class="sr-only">Il tuo indirizzo email</label>
+          <input type="email" class="form-control" id="subscribe-email" name="email1" placeholder="Il tuo indirizzo email" required="required"/>
         </div>
         <fsfe-cd-referrer-input/>
         <input type="hidden" name="wants_info" value="yes"/>

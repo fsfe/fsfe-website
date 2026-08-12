@@ -9,14 +9,16 @@
         news, events, activities, and how you can contribute. <span style="font-size:0.8em">(Our <a href="/about/legal/imprint.html#id-privacy-policy"><span style="color:white; text-decoration: underline;">Privacy Policy</span></a>)</span>
       </p>
 
-      <form class="form" method="post" action="https://my.fsfe.org/subscribe">
+      <form class="form" method="post" action="https://my.fsfe.org/subscribe" aria-label="Email subscription form">
         <input type="hidden" name="language" value="en"/>
         <input type="input" style="display: none !important" name="password" tabindex="-1" autocomplete="off"/>
         <div class="form-group">
-          <input type="text" class="form-control" name="name" placeholder="Your name" required="required"/>
+		  <label for="suscribe-name" class="sr-only">Your name</label>
+          <input type="text" class="form-control" id="suscribe-name" name="name" placeholder="Your name" required="required"/>
         </div>
         <div class="form-group">
-          <input type="email" class="form-control" name="email1" placeholder="Your email address" required="required"/>
+		  <label for="suscribe-email" class="sr-only">Your email address</label>
+          <input type="email" class="form-control" id="suscribe-email" name="email1" placeholder="Your email address" required="required"/>
         </div>
         <fsfe-cd-referrer-input/>
         <input type="hidden" name="wants_info" value="yes"/>

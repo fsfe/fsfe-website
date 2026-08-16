@@ -44,12 +44,6 @@
 
 
 <!-- Warning info boxes -->
-  <text id="outdated">
-    <strong>Avertissement : </strong>
-    Cette page traduite pourrait ne pas être à jour par rapport au document original.
-    Merci de consulter <a href="/contribute/contribute.html">cette page</a>
-    pour tout renseignement sur la manière de participer, entre autres, aux traductions.
-  </text>
   <text id="outdated-1">
     <strong>Avertissement : </strong>
     Cette page traduite pourrait ne pas être à jour par rapport au
@@ -58,15 +52,15 @@
     Merci de consulter <a href="/contribute/contribute.html">cette page</a>
     pour tout renseignement sur la manière de participer, entre autres, aux traductions.
   </text>
-  <text id="very-outdated">
-    <strong>Avertissement : </strong>
-    La traduction de cette page est obselète, la version originale la remplace donc.
-    Merci de consulter <a href="/contribute/contribute.html">cette page</a>
-    pour tout renseignement sur la manière de participer, entre autres, aux traductions.
-  </text>
   <text id="notranslation">
     <strong>Avertissement : </strong>
     Cette page n'a pas encore été traduite. Vous voyez ci-dessous la version originale de la page.
+    Merci de consulter <a href="/contribute/contribute.html">cette page</a>
+    pour tout renseignement sur la manière de participer, entre autres, aux traductions.
+  </text>
+  <text id="very-outdated">
+    <strong>Avertissement : </strong>
+    La traduction de cette page est obselète, la version originale la remplace donc.
     Merci de consulter <a href="/contribute/contribute.html">cette page</a>
     pour tout renseignement sur la manière de participer, entre autres, aux traductions.
   </text>
@@ -78,9 +72,9 @@
 
 <!-- Menu, Navigation, Buttons -->
   <text id="fsfe/about">À propos</text>
+  <text id="fsfe/activities">Activités</text>
   <text id="fsfe/help">Contribuer</text>
   <text id="fsfe/press">Presse</text>
-  <text id="fsfe/activities">Activités</text>
 
   <text id="support/become">Devenez un soutien</text>
   <text id="fellowship/login">Connexion</text>
@@ -92,42 +86,42 @@
   <text id="fs/basics">Bases du Logiciel Libre</text>
   <text id="community/discuss">Discussions sur le Logiciel Libre</text>
 
+  <text id="learn-more">En savoir plus</text>
+  <text id="read-testimonial">Lire des témoignages</text>
+
+  <text id="newsletter">Lettre d'information</text>s
+  <text id="podcast">Podcast</text>
+
+  <text id="go-to">Aller à :</text>
+
+  <text id="yourname">Votre nom</text>
+  <text id="subscribe">S'abonner</text>
+  <text id="email">Addresse e-mail</text>
   <text id="news">Actualités</text>
   <text id="breadcrumb-news">Actualités</text>
-  <text id="newsletter">Lettre d'information</text>s
   <text id="receive-newsletter">S'abonner à la lettre d'information mensuelle de la FSFE</text>
   <text id="subscribe-newsletter">S'abonner à nos actualités par e-mail</text>
   <text id="subscribe-newsletter-text">Nos experts vous informent sur les dernières actualités, événements, activités, et comment vous pouvez y contribuer.</text>
-  <text id="subscribe">S'abonner</text>
-  <text id="podcast">Podcast</text>
 
-  <text id="yourname">Votre nom</text>
-  <text id="email">Addresse e-mail</text>
   <text id="contact">Contact</text>
   <text id="team">Équipe</text>
 
-  <text id="learn-more">En savoir plus</text>
-  <text id="read-testimonial">Lire des témoignages</text>
-  <text id="discuss-article">En discuter</text>
-  
   <text id="change-lang">Changer de langue</text>
-  <text id="go-to">Aller à :</text>
-  <text id="go-top">Aller en haut</text>
-  
   <text id="menu">Menu</text>
   <text id="content">Contenu</text>
   <text id="page-info">Infos de la page</text>
+
+  <text id="go-top">Aller en haut</text>
   <text id="source">Code source</text>
+  <text id="contact-us">Contactez-nous</text>
+  <text id="jobs">Oportunités</text>
+  <text id="translate">Traduire cette page ?</text>
+  <text id="contribute-web">S’impliquer dans l’équipe Web</text>
   <text id="imprint">Mentions légales</text>
   <text id="privacy-policy">Politique de confidentialité</text>
   <text id="transparency-commitment">Engagement de transparence</text>
-  
-  <text id="jobs">Oportunités</text>
-  <text id="contact-us">Contactez-nous</text>
-  <text id="translate">Traduire cette page ?</text>
-  <text id="contribute-web">S’impliquer dans l’équipe Web</text>
-  
   <text id="tags">Mots clés</text>
+  <text id="discuss-article">En discuter</text>
   <text id="finished">Terminé</text>
 
 
@@ -151,7 +145,7 @@
   <text id="related-events">Évènements liés</text>
   <text id="related-all">Tous les articles et événements liés</text>
   <text id="more-updates">Vous pouvez aussi recevoir régulièrement des actualités et des analyses approfondies sur nos autres canaux :</text>
-
+  <text id="no-upcoming-events">Aucun événement n'est prévu prochainement concernant Ada and Zangemann.</text>
 
 <!-- Sidebars -->
   <text id="our-work">Notre action</text>
@@ -183,6 +177,7 @@
   <text id="show-support-paragraph">La FSFE a besoin de voutre soutien pour que sa voix soit entendue ! Chaque soutien est important !</text>
   <text id="support-fsfe">Je soutiens la FSFE !</text>
   <text id="support-paragraph">La liberté dans la société de l'information a besoin de votre contribution financière.</text>
+
   <text id="donate">Faire un don</text>
   <text id="donate-paragraph">
     La Free Software Foundation Europe est une organisation non-gouvernementale
@@ -193,7 +188,7 @@
     notre force et notre autonomie. Ils nous permettent de continuer à défendre
     les Logiciels Libres partout où cela est nécessaire et en toute indépendance.
   </text>
-  
+
   <text id="followup/press-header">Restez informé</text>
   <text id="followup/press-paragraph">
     Le meilleur moyen de rester informé est de vous abonner à nos <a href="/press/press.html">communiqués de presse</a>
@@ -238,6 +233,5 @@
 
 <!-- Activity Ada &amp; Zagemann -->
   <text id="publisher">Éditeur</text>
-  <text id="no-upcoming-events">Aucun événement n'est prévu prochainement concernant Ada and Zangemann.</text>
 
 </data>

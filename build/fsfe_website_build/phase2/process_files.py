@@ -16,6 +16,7 @@ from typing import TYPE_CHECKING
 
 from lxml import etree
 
+from fsfe_website_build.globals import FALLBACK_LANG
 from fsfe_website_build.lib.misc import get_basepath
 from fsfe_website_build.lib.process_file import process_file
 
@@ -68,7 +69,7 @@ def _process_set(  # noqa: PLR0913
                     (
                         source_file
                         if source_file.exists()
-                        else Path(str(basepath) + ".en.xhtml")
+                        else Path(str(basepath) + f".{FALLBACK_LANG}.xhtml")
                     ),
                     processor,
                     (
@@ -78,7 +79,7 @@ def _process_set(  # noqa: PLR0913
                     ),
                     Path(f"global/data/texts/.texts.{lang}.xml"),
                     Path(f"global/data/topbanner/.topbanner.{lang}.xml"),
-                    Path("global/data/texts/texts.en.xml"),
+                    Path(f"global/data/texts/texts.{FALLBACK_LANG}.xml"),
                 ]
             ),
         ):

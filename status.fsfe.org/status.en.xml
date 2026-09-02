@@ -1,6 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <service-status-data>
   <version>1</version>
+  <incident name="login to services of the FSFE">
+    <update date="2026-08-08" resolved="true">
+      System Hackers will update the LDAP servers of the FSFE tomorrow, SUNDAY 2026-08-09 starting at 11h CEST and the work should be finished till 13h CEST. DURING THIS TIME LOGGING IN TO OUR SERVICES WILL NOT BE POSSIBLE.
+    </update>
+  </incident>
+  <incident name="blogs.fsfe.org service">
+    <update date="2026-08-05" resolved="true">
+      The community blogs were not accessible after an update. We reverted back to the snapshot from before the update and are rescheduling the update for later.
+    </update>
+  </incident>
+  <incident name="Mailing list and git service">
+    <update date="2026-06-02">
+      We are experiencing exceptional traffic on our systems caused by a DDoS attack. We are taking measures for mitigation. Please apologise if systems are reacting slower that you expected or if your client has been blocked by mistake.
+    </update>
+  </incident>
   <incident name="Power outtage in Data Center">
     <update date="2026-06-02" resolved="true">
       One of the data centers FSFE is hosting servers in is affected by a power outage. The DC technicians are working to resolve the issue. Services disrupted include: Nextcloud, git, IMAP, XMPP...

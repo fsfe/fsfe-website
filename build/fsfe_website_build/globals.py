@@ -10,3 +10,5 @@ from platformdirs import user_cache_dir
 APP_NAME = "fsfe-website-build"
 
 CACHE_DIR = Path(user_cache_dir(APP_NAME, "fsfe"))
+
+FALLBACK_LANG = "en"

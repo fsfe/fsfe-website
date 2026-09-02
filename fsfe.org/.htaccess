@@ -41,6 +41,9 @@ RewriteRule ^community/events/2016/summit/backsight(/.*)?$  /events/2016/summit/
 # 15 years of FSFE
 RewriteRule ^15(/.*)?$    /activities/15years$1 [R=301,L]
 
+# 25 years of FSFE
+RewriteRule ^about\/summermeeting-schedule(.*)?$    /activities/fsfe25/index$1 [R=301,L]
+
 # Podcast
 RewriteRule ^podcast(/.*)? /news/podcast.html [R=301,L]
 
@@ -274,6 +277,7 @@ RewriteRule ^community/projects-call(/.*)?$ /contact/projects-call$1 [R=301,L]
 RewriteRule ^community/groups(/.*)?$ /about/groups$1 [R=301,L]
 RewriteRule ^potteries/?$ https://wiki.fsfe.org/LocalGroups/Potteries [R=301,L]
 RewriteRule ^berlin/?$ https://wiki.fsfe.org/LocalGroups/Berlin [R=301,L]
+RewriteRule ^contact$ /about/contact [R=301,L]
 
 # Legal Questions
 RewriteRule ^activities/licence-questions/licence-questions(.*)?$ /freesoftware/legal/faq$1 [R=301,L]

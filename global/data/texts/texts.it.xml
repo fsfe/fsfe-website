@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <data>
-  <version>3</version>
+  <version>4</version>
 
 
 <!-- ALL STATIC TEXTS -->
@@ -93,8 +93,10 @@
 
   <text id="newsletter">Bollettino</text>
   <text id="podcast">Podcast</text>
-
+  
+  <text id="nav/quick-links-label">Collegamenti rapidi</text>
   <text id="go-to">Vai a:</text>
+  
 
   <text id="yourname">Il tuo nome</text>
   <text id="subscribe">Iscriviti</text>
@@ -120,6 +122,7 @@
   <text id="page-info">Informazioni sulla pagina</text>
 
   <text id="go-top">Vai all'inizio</text>
+  <text id="nav/back-to-top-label">Torna su</text>
   <text id="source">Codice sorgente</text>
   <text id="contact-us">Contattaci</text>
   <text id="jobs">Posti di lavoro</text>

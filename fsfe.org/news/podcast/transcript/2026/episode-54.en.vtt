@@ -1,0 +1,736 @@
+WEBVTT
+
+00:00.000 --> 00:18.440
+Hello and welcome to the Software Freedom Podcast.
+
+00:18.440 --> 00:21.000
+Thank you so much for listening to this podcast.
+
+00:21.000 --> 00:26.400
+Without you and your support, this podcast would not be possible.
+
+00:26.400 --> 00:29.280
+Thank you our dear listener.
+
+00:29.280 --> 00:33.720
+This podcast is brought to you by the Free Software Foundation Europe.
+
+00:33.720 --> 00:37.680
+We are a charity that empowers users to control technology.
+
+00:37.680 --> 00:41.760
+Today, I'm here with Jithendra Palepu.
+
+00:41.760 --> 00:50.000
+And we will be talking about the very intensely discussed topic of Android developer verification.
+
+00:50.000 --> 00:53.760
+So this has been over the news lately.
+
+00:53.760 --> 00:59.840
+So this has been all over the news during the past months, I would already say.
+
+00:59.840 --> 01:06.280
+And it's a topic that's very, that's discussed very intensely.
+
+01:06.280 --> 01:08.480
+Let's put it like that.
+
+01:08.480 --> 01:11.640
+Very, very happy to have Jithendra here with me.
+
+01:11.640 --> 01:13.840
+Thank you so much for taking the time.
+
+01:13.840 --> 01:17.160
+And yeah, it's very nice to have you here on the Software Freedom Podcast.
+
+01:17.160 --> 01:19.000
+Thank you so much, Jithendra.
+
+01:19.000 --> 01:20.120
+Yeah, hi, Bonnie.
+
+01:20.120 --> 01:21.120
+Thanks for having me.
+
+01:21.120 --> 01:23.440
+We're here to be here.
+
+01:23.440 --> 01:26.680
+You work for the FSFE team, right?
+
+01:26.680 --> 01:28.480
+What do you do there?
+
+01:28.480 --> 01:40.760
+Yes, my main work is on Digital Markets Act and our litigation against Apple and other related topics on the DMA.
+
+01:40.760 --> 01:51.240
+It involves research and contributing to the consultation process of different regulators.
+
+01:51.240 --> 01:59.920
+And writing research articles and presenting the voice of Free Software to the regulators
+
+01:59.920 --> 02:07.680
+and to the academics and different outside actors, if I may use that word,
+
+02:07.680 --> 02:16.760
+to make them aware of the problems and the views of Free Software community.
+
+02:16.760 --> 02:24.600
+It has a lot to do with legal side as well, all those kind of regulations that are coming up there, right?
+
+02:24.600 --> 02:25.600
+Do you enjoy that?
+
+02:25.600 --> 02:28.920
+Or is there something sometimes things that you say, oh my God,
+
+02:28.920 --> 02:35.040
+why do I have to explain this now for the fifth time, what Free Software or how do you perceive this work?
+
+02:35.040 --> 02:44.320
+No, I think I definitely enjoy it because I am not a developer and I am a lawyer by training.
+
+02:44.320 --> 02:50.720
+And I always wanted to work in the intersection of law and technology.
+
+02:50.720 --> 02:56.720
+So for me, this is the space where I thrive.
+
+02:56.720 --> 02:58.320
+That's very nice.
+
+02:58.320 --> 03:02.600
+And how did you get involved for Free Software?
+
+03:02.600 --> 03:11.600
+Okay, my first interaction with Free Software, I would say is maybe VLC media player, of course, like many people.
+
+03:11.640 --> 03:17.560
+And also playing video games, I used to own a console and broke it,
+
+03:17.560 --> 03:22.280
+but then I found that there are things, these things called emulators.
+
+03:22.280 --> 03:29.200
+Emulators create maybe like a software based version of a console environment,
+
+03:29.200 --> 03:34.400
+allowing games designed for that console to run on a computer basically.
+
+03:34.400 --> 03:40.280
+So I was able to play all sorts of games through these emulators on my computer
+
+03:40.280 --> 03:49.320
+that made me question why a game I had access to could only be played on one particular device.
+
+03:49.320 --> 03:54.120
+And yeah, this is my first interaction with Free Software.
+
+03:54.120 --> 04:01.440
+And later I realized that most of these emulators are Free Software and I was very thankful.
+
+04:01.440 --> 04:09.800
+And yeah, and of course, ad blockers were also one of my first Free Software that I used.
+
+04:09.840 --> 04:16.160
+So that's basically your interaction with technology that made you think about like,
+
+04:16.160 --> 04:22.640
+I want to use Free Software and I want to have this freedom in choosing where I play games,
+
+04:22.640 --> 04:26.000
+how I play games and how I interact with the technology.
+
+04:26.000 --> 04:26.800
+Yeah, exactly.
+
+04:26.800 --> 04:33.640
+So as I said, so I had access to a game that could only be played on one particular device,
+
+04:33.640 --> 04:39.000
+rather than on a computer that was technically also capable of running it.
+
+04:39.000 --> 04:45.320
+So then it made me question because I don't have the console, I have a computer,
+
+04:45.320 --> 04:50.920
+but I have this emulator installed on this computer and I was able to play all the games
+
+04:50.920 --> 04:53.400
+that I was playing on the console.
+
+04:53.400 --> 04:59.440
+So it was a really beautiful experience at the time at least.
+
+04:59.440 --> 05:06.840
+So, yeah, that was my first interaction with software freedom and these ideas,
+
+05:06.840 --> 05:12.840
+like reverse engineering and I mean, I mean, I don't even know that these words existed
+
+05:12.840 --> 05:18.640
+then, but now looking back, I didn't realize it then, but it was probably my first encounter
+
+05:18.640 --> 05:26.840
+with these ideas and now, fast forward, these are the topics I work on today.
+
+05:30.840 --> 05:35.840
+Well, that's very intriguing, I would love to discuss this further because you're the first
+
+05:35.840 --> 05:42.040
+person that I met who's playing video games and this is how they started to think about software
+
+05:42.040 --> 05:43.040
+freedom.
+
+05:43.040 --> 05:49.400
+But today, we will be talking about the Android developer verification.
+
+05:49.400 --> 05:53.240
+This is also one of the topics you work on.
+
+05:53.240 --> 05:56.000
+Can you give me an introduction to this?
+
+05:56.000 --> 06:01.680
+Because this has been all over the news, this has been discussed in various mediums and
+
+06:02.680 --> 06:09.680
+a lot of people hold talks already about this and there's a lot of fear going on.
+
+06:09.680 --> 06:16.680
+But let's take a step back and let's see what actually is the Android developer verification.
+
+06:16.680 --> 06:19.680
+Sure, I will try, yes.
+
+06:19.680 --> 06:28.680
+So in August 2025, Google released a blog post introducing this developer verification
+
+06:29.680 --> 06:37.680
+program. It's essentially requires all the developers everywhere in the world to register centrally
+
+06:37.680 --> 06:42.680
+with Google in order to be able to distribute the apps they make.
+
+06:42.680 --> 06:49.680
+And that means that no matter what country you are in, you need to go to Google and register
+
+06:49.680 --> 06:57.680
+with personal data with your government ID, register and pay some fees to Google,
+
+06:57.680 --> 07:06.680
+agree to their terms and conditions and then upload the evidence of your signing keys and
+
+07:06.680 --> 07:08.680
+this kind of stuff.
+
+07:08.680 --> 07:19.680
+So you need to sign a mini file or something that Google will send to you so that they want
+
+07:19.680 --> 07:25.680
+to prove that you are the person who is able to cryptographically sign the applications
+
+07:25.680 --> 07:26.680
+you will be making.
+
+07:26.680 --> 07:30.680
+So it basically wants you to share personal data with them.
+
+07:30.680 --> 07:39.680
+Yes, as a mechanism to have more control of what is getting inside their platform and to check
+
+07:39.680 --> 07:46.680
+because this, so in continuation to this, if you do not do this, then starting next year,
+
+07:46.680 --> 07:53.680
+all Android certified devices will block apps that have not been verified by Google.
+
+07:54.680 --> 07:57.680
+So even if you download them from F tried.
+
+07:57.680 --> 07:58.680
+Yes.
+
+07:58.680 --> 08:07.680
+And I use the word Android certified device and it's basically a thing that Google approves
+
+08:07.680 --> 08:18.680
+that so most of the devices people own are Android certified devices and around 95%
+
+08:18.680 --> 08:25.680
+and it's like Google's certification that, okay, this is, I certify this and they meet our standards
+
+08:25.680 --> 08:28.680
+and this is an Android certified device.
+
+08:28.680 --> 08:33.680
+It has Google Play Store installed in it and Google Mobile Services installed in it and outside
+
+08:33.680 --> 08:42.680
+of China, these are overwhelmingly a huge majority there, 95% of devices are Android certified devices.
+
+08:42.680 --> 08:52.680
+So basically this whole developer verification program is going to affect the entire world
+
+08:52.680 --> 08:58.680
+and the app distribution in Android throughout the world.
+
+08:58.680 --> 08:59.680
+Yes.
+
+08:59.680 --> 09:01.680
+Wow, that's quite a lot.
+
+09:01.680 --> 09:07.680
+And China is probably an exception because of their own system that they have in place
+
+09:07.680 --> 09:15.680
+because they don't really have the same Android person as outside of China do.
+
+09:15.680 --> 09:16.680
+Yes.
+
+09:16.680 --> 09:24.680
+It's also very clearly written in Google's blog posts about this and China, I mean,
+
+09:24.680 --> 09:32.680
+they have their own system as a set and there are also some other players coming out of China.
+
+09:32.680 --> 09:37.680
+So it's a different, it's a different beast.
+
+09:37.680 --> 09:41.680
+That's good for it like that.
+
+09:41.680 --> 09:48.680
+All right, for everybody who has not read the blog post, we will link it in their show notes.
+
+09:48.680 --> 09:54.680
+So you can take a look there and also dive deeper into this topic.
+
+09:54.680 --> 10:00.680
+As this has been published now for quite a while, what has happened since then?
+
+10:00.680 --> 10:01.680
+Sure.
+
+10:01.680 --> 10:08.680
+So later updates were also quite interesting, an interesting quote unquote.
+
+10:08.680 --> 10:19.680
+So Google has proposed that users who wish to install unverified apps may eventually need an advanced user flow.
+
+10:19.680 --> 10:28.680
+This is for those who are willing to navigate through these additional security warnings and procedures.
+
+10:28.680 --> 10:33.680
+The process, it could involve like a sequence of additional steps,
+
+10:33.680 --> 10:42.680
+not only to make installation technically hard and complicated, but also discouraging it altogether.
+
+10:42.680 --> 10:49.680
+For example, like mandatory cooling off period of up to 24 hours or warning screens
+
+10:49.680 --> 10:53.680
+when you want to install this app that is unverified.
+
+10:53.680 --> 11:00.680
+There will be a scare screen that, oh, this is an unverified application, do you want to continue or not?
+
+11:00.680 --> 11:10.680
+So it requires and the user has to acknowledge that they may be under coercion or under a social engineering attack.
+
+11:10.680 --> 11:18.680
+So it involves around nine steps and first involving that the user has to go to settings,
+
+11:18.680 --> 11:26.680
+turn on the developer mode, and I mean, you know, how to turn on developer mode is also like you need to click,
+
+11:26.680 --> 11:33.680
+go to settings and click tap on the build number for seven or ten times depending on the device.
+
+11:33.680 --> 11:39.680
+And then you enter the developer mode and then the next steps come in.
+
+11:39.680 --> 11:44.680
+Then you have to, there will be a 24 hour cool off period.
+
+11:44.680 --> 11:51.680
+So you can't do anything in this 24 hours and then you can, you again have to go through the scare screens
+
+11:51.680 --> 11:54.680
+that, okay, now you want to install an unverified app.
+
+11:54.680 --> 11:59.680
+You have to click, okay, I acknowledge the risks involved.
+
+11:59.680 --> 12:07.680
+And so it involves a nine whole steps that Google thinks is a way for,
+
+12:07.680 --> 12:16.680
+let's just use like a technologically savvy users, if they want to install or like take educated risks,
+
+12:16.680 --> 12:24.680
+then they have to follow this multi-step process to install apps on the devices they own.
+
+12:24.680 --> 12:31.680
+So basically they are trying to lock everything down to the Google Play Store for normal users
+
+12:31.680 --> 12:39.680
+and to like have all the personal data of the developers, because if you submit something to Google Play Store,
+
+12:39.680 --> 12:49.680
+they want you to share those kind of data and avoid having other platforms where you can get apps.
+
+12:49.680 --> 12:51.680
+Yes, it involves a lot of friction, right?
+
+12:51.680 --> 13:00.680
+So the later updates this advanced flow program, it involves a lot of friction for a user.
+
+13:00.680 --> 13:05.680
+Let's just look at a user journey, like I consider myself as an average user.
+
+13:05.680 --> 13:10.680
+And I would like to install an app that is unverified.
+
+13:10.680 --> 13:14.680
+Let's just say from, from F-Droid.
+
+13:14.680 --> 13:20.680
+F-Droid does not require any of these verification processes for their developers.
+
+13:20.680 --> 13:23.680
+And I want to install something from F-Droid.
+
+13:23.680 --> 13:27.680
+And I have to, I have to go through all these nine steps, like developer mode.
+
+13:28.680 --> 13:36.680
+So this in a way, it affects average users like me massively.
+
+13:36.680 --> 13:42.680
+It discourages users to not use unverified apps.
+
+13:42.680 --> 13:47.680
+Interestingly, I can give one reference.
+
+13:47.680 --> 13:56.680
+Epic Games, last year, they released a study on this multi-user step.
+
+13:57.680 --> 14:05.680
+So their idea was, I mean, you know, they have been fighting legal battles against Apple and Google,
+
+14:05.680 --> 14:11.680
+left and right everywhere, like in many parts of the world, you as being the first.
+
+14:11.680 --> 14:21.680
+So they had a process where they were looking at how a six-step process and a nine-step process.
+
+14:21.680 --> 14:25.680
+Basically, let's say five steps and 10 steps process.
+
+14:25.680 --> 14:30.680
+And they were comparing the user drop off rates for Epic Games App Store.
+
+14:30.680 --> 14:35.680
+They had their own App Store and they were trying to compare the numbers on iOS.
+
+14:35.680 --> 14:41.680
+So when a user wants to install Epic Games Store on iOS, there's this multi-step process.
+
+14:41.680 --> 14:45.680
+And they were comparing how many users gave up.
+
+14:45.680 --> 14:48.680
+And it's staggering. The numbers are crazy.
+
+14:48.680 --> 14:53.680
+And many people give up. This is essentially lock-in, right?
+
+14:53.680 --> 14:58.680
+So this is the vendor lock-in that we talk about when we talk about device neutrality.
+
+14:58.680 --> 15:04.680
+And so users are giving up and they're stuck within this ecosystem.
+
+15:04.680 --> 15:10.680
+And they will end up using the apps that the vendor is providing.
+
+15:10.680 --> 15:12.680
+In this case, it is Google.
+
+15:12.680 --> 15:19.680
+But I can absolutely understand it, to be honest, because we are all limited on time.
+
+15:19.680 --> 15:25.680
+And our daily life is becoming more and more dense.
+
+15:25.680 --> 15:33.680
+So there's hardly a moment for you to take a breath to sit down, to read a good book or to take a break.
+
+15:33.680 --> 15:40.680
+And then you are asked to click, click, click, click, click, click, multiple times and devote a lot of time to this action.
+
+15:40.680 --> 15:47.680
+That's quite annoying and it can also, like, it's frustrating in a sense.
+
+15:47.680 --> 15:57.680
+Because it takes away your precious time to do something and you really need to want this kind of action.
+
+15:57.680 --> 16:05.680
+And like, you need to be able to say, yes, I want to devote 20 minutes on reading everything and going through that.
+
+16:05.680 --> 16:10.680
+And also wait for 24 hours. Yes, I'm very much focused on that.
+
+16:10.680 --> 16:15.680
+So it's like, this is a lot of effort you ask for.
+
+16:15.680 --> 16:18.680
+Exactly, exactly. You put it very well there.
+
+16:18.680 --> 16:21.680
+Yeah, so it's a big ask, right? It's really a big ask.
+
+16:21.680 --> 16:26.680
+I'm wondering now, what does Google wants to solve with this kind of approach?
+
+16:26.680 --> 16:39.680
+Yeah, so the only reason they seem to state is to prevent repeat malware offenders from being able to operate.
+
+16:39.680 --> 16:54.680
+So this, it looks like they're citing very extreme cases where there's a malware or scam app that pretends to be your banking app or something and tries to get your credentials on that pretext.
+
+16:54.680 --> 16:59.680
+And yeah, still solve your money and agreed in all fairness.
+
+16:59.680 --> 17:15.680
+This is a legitimate concern and there are fraudulent apps on a wide scale available right in many Asian countries, even in even in Europe, but numbers in Asia are higher.
+
+17:15.680 --> 17:37.680
+It's just that it's a legitimate concern, but it might not prevent that these scams will happen because any developer can, for example, with this verification, anybody can take a falsified credentials from someone and register themselves and create the fake scam app again.
+
+17:38.680 --> 17:43.680
+So yeah, it's not really effective, right?
+
+17:43.680 --> 17:55.680
+But the idea is that they're tackling financial scams and malware that is prevalent on their platform and that is what they keep on citing.
+
+17:55.680 --> 18:04.680
+But at the same time, the timing is very interesting because of new requirements from the Epic Games lawsuit in the US.
+
+18:04.680 --> 18:15.680
+They settled the case and some requirements from that settlement is that Google has to allow third party app stores within their play store.
+
+18:15.680 --> 18:30.680
+So they have to allow third party app stores now from now on and they came up with this registered app store program where they will allow some app stores to which are qualified in their opinion, which qualified their own standards.
+
+18:30.680 --> 18:35.680
+They will allow these app stores with less friction.
+
+18:35.680 --> 18:47.680
+But one thing before we dive into this into this topic further is I just saw that when you when you talked about that they want to try to prevent scam.
+
+18:47.680 --> 18:54.680
+This is also what I read and what I heard before and also when I was reading this, I was like, well, but behind scam.
+
+18:54.680 --> 19:00.680
+There's also an industry. So there's money involved in this regard.
+
+19:00.680 --> 19:11.680
+And so far, there has always been a bay of finding new ways to scam people.
+
+19:11.680 --> 19:19.680
+And I find it's very interesting because it's not a partner that you can very easily solve.
+
+19:20.680 --> 19:25.680
+Yeah. I mean, this story, it's not so new.
+
+19:25.680 --> 19:37.680
+Yes, it's a legitimate concern, but it also is the implementation or the measures taken to tackle this are quite overblown.
+
+19:37.680 --> 19:44.680
+And it's not so new like whenever a single firm has exercise control over a technological ecosystem.
+
+19:44.680 --> 19:53.680
+It has often argued that greater like more openness threatens security of their of their ecosystem.
+
+19:53.680 --> 20:04.680
+It's not a new thing that the company says that this affects my security and my integrity of my platform.
+
+20:05.680 --> 20:09.680
+And it's absolutely absolutely a very common argument.
+
+20:09.680 --> 20:14.680
+And as you already pointed out with all the aspects there as well.
+
+20:14.680 --> 20:21.680
+Back to this epic game study or sorry, this epic game lost it in the USA.
+
+20:21.680 --> 20:25.680
+Basically, the outcome of this was that there will be registered app stores.
+
+20:25.680 --> 20:37.680
+So this is kind of like Google's way to address the digital markets act that's also calling for interoperability and dip option to install third party apps.
+
+20:37.680 --> 20:51.680
+Yes. So this this comes out as a settlement from the US lawsuit, but also it kind of it can be a way yes for Google to comply with the digital markets act in the EU.
+
+20:51.680 --> 21:02.680
+Because you mentioned interoperability that's really a good hook for me to explain this because installing a third party app store and in Google.
+
+21:02.680 --> 21:07.680
+Let's say Google Google's platform is also interoperability.
+
+21:07.680 --> 21:17.680
+Interoperability does not mean that you need access to some feature of a platform in order for your third party service to work.
+
+21:17.680 --> 21:37.680
+So many people have this that for example, we let's say a third party watch wants to have really good connectivity with Apple's watch to iPhone basically with Apple's mobile and Apple's watch.
+
+21:37.680 --> 21:49.680
+Watch they connect very seamlessly they work very perfectly and the third party watch would also like to be connected seamlessly to Apple's mobile and that is interoperability.
+
+21:49.680 --> 22:01.680
+But using user installing a third party application store and app store is also an interoperability because you're also interacting with the platforms operating system in general.
+
+22:01.680 --> 22:11.680
+You want the app store your third party app store to work seamlessly like how the platforms own native app store is working seamlessly.
+
+22:11.680 --> 22:24.680
+So how you want a similar you want equal treatment basically how Google's play store is working on Android device you want the same functionality and seamlessness for your own third party app store.
+
+22:24.680 --> 22:52.680
+That's all they ask and that's all the digital markets act is asking and yeah, so this look this registered app store program looks Google also cited this in their compliance report to the DMA that so every year they have this compliance reports where they they write a lot and you have to evaluate this commission has to evaluate this and then they have dialogue there.
+
+22:52.680 --> 23:21.680
+And in this second version like recent version of compliance report Google mentioned that this as a as a way for them to comply with digital markets act where one article talks about its article 64 6.4 they mentioned this article requires that gatekeepers should allow third party app stores for the users to be able to install this and Google cited this.
+
+23:21.680 --> 23:50.680
+Register that store program as a way to comply but it remains to be seen how how the European Commission will evaluate this and I mean again we are talking about centralized control we are talking about Google exercising control and since it's a very fresh thing we still don't do not know much details of this but there are terms and conditions are the one that I will watch.
+
+23:50.680 --> 24:08.680
+And that's where the that's where the devil is so and they will is in the details and the terms and conditions and agreements that you have to be you have to sign in order for your app store to be there.
+
+24:08.680 --> 24:37.680
+You need to check those and check them for compatibility with with the DMA itself so you can't just have you can just say that yes we are allowing third party app stores but then again this is a hypothetical scenario so but then again if you have terms and conditions that are unreasonable that also violates the DMA so we have to evaluate this and then see but but you're right this this is Google's next step to show that should to show how they are compliant.
+
+24:38.680 --> 25:07.680
+So I'm going with the DMA sorry I went overboard very interesting don't apologize this is very very intriguing subject to be honest because it's like it affects a lot of people as you already said the counter devices and it's amazing how much it affects like nearly everybody because even if you don't use those kind of apps the possibility is gone for you.
+
+25:07.680 --> 25:25.680
+So I think it's a very very important topic to talk about and yet to see what will be happening as far as I understood the final implementation of Google's Android developer verification will come in September or
+
+25:25.680 --> 25:52.680
+in September and it's rolling out for for specific selected countries at the moment Brazil Thailand Indonesia and then global roll out will be from next year and we do not know the details of what exactly that will start applying to everybody from next year but we know that it's from
+
+25:52.680 --> 26:20.680
+2027 that it will be applicable globally so in regard to community how is the Free Software community reacting to this because obviously there's a lot of things going on there there's a lot of there's a lot of talk but will be happening in September then but what is the Free Software community doing to keep Android open basically.
+
+26:20.680 --> 26:48.680
+There's an initiative or a campaign like a global protest that's that happened that's currently happening it's called keep Android open and this initiative it essentially calls out Google to reverse the decision and shows how how it will affect everybody and details everything keep Android open.org if anybody wants to check and
+
+26:48.680 --> 27:17.680
+they had an open letter and it's been signed by more than 70 organizations worldwide and the community talks talks a lot about this and many developers have publicly stated that they will not sign up for the developer verification and yeah and this keep Android open initiative it it has like call for actions divided on three categories for users
+
+27:17.680 --> 27:46.680
+they want the users to go to their local authorities and government departments and complain to them and explain why this is problematic and because I mean what more can the user do up this itself is a big big thing big effort if they do this that globally then that's that's one one thing how they are calling users to contribute to this and for developers
+
+27:47.680 --> 28:14.680
+do nothing they say and do not sign up for this and do not pay anything to Google I mean it's it's the fees that we are talking about is $25 US dollars and but still you take the government ID you take you make them sign the terms and conditions and on top there's also a fees so I leave that up to the listeners interpretation
+
+28:15.680 --> 28:42.680
+and and for governments the initiative calls for monitor this closely and analyze this based on your local competition law or any other law that deals with this check the compatibility against this and address this as soon as possible and these are some of the these are majorly the I covered all the call for actions from keep Android open
+
+28:42.680 --> 28:49.680
+this is this is one big major reaction from the community unified into yeah
+
+28:49.680 --> 28:54.680
+what is the FSFE doing to protect Free Software developers and disregard
+
+28:54.680 --> 29:11.680
+that we signed this open letter keep Android open we signed it and we are approaching this from from several directions not just this specific mandate that Google brought in like first we with many organizations we signed this letter
+
+29:11.680 --> 29:33.680
+and the goal is is there to raise awareness among users and developers and it there's already quite a lot of awareness on this secondly the European Commission is currently developing the interoperability rules for Android under digital markets act
+
+29:33.680 --> 29:51.680
+and the FSFE we recently submitted our position calling on the commission to ensure that developers can access Android's interoperability features without having to register with Google or sign Google developer agreements
+
+29:51.680 --> 30:12.680
+so we also argued there in the same submission that users should be able to completely uninstall pre installed AI features from Android devices so this is one and thirdly we have we filed a complaint against Google on uninstalling software on Android devices
+
+30:12.680 --> 30:29.680
+we are engaging directly with with the commission and we have along with article 19 every GFF and homo digital is we we had like a technical and legal analysis on Google's compliance with the DMA
+
+30:29.680 --> 30:48.680
+and it's not just on developer verification and for example this this complaint is is a joint complaint to the commission are giving that Google was not complying with the articles of the DMA that enable users that that give users the ability to uninstall
+
+30:48.680 --> 31:06.680
+so because Android is preventing users from genuinely uninstalling pre installed Google applications and yeah the law asks Google to enable users to uninstall not disabled we file a complaint against this
+
+31:06.680 --> 31:23.680
+and more broadly like our goal is to ensure that European regulation like like the DMA is enforced as it is and the tool and its promise for Free Software developers
+
+31:23.680 --> 31:45.680
+whether it is on Apple's interoperability obligations or Google's Android practices the main question is the same can developers build and distribute apps without having to seek permission from a from a gatekeeper and can users remain free to choose the software they run on the devices.
+
+31:45.680 --> 32:03.680
+All right now I feel we have done it like a very balanced podcast episode on all of the topics in regard to this Android developer verification to tell our last question is there anything our community can do to support us here
+
+32:03.680 --> 32:09.680
+our listeners for example how what can they do to take action and to safeguard software freedom.
+
+32:09.680 --> 32:38.680
+Yeah I mean first thing I would say is follow the FSF is work and follow follow our work and check out the keep Android open website and if you haven't then please do so and yeah and install Free Software app stores and saw repositories like after I'd and if you haven't already then use them and then see for yourself and yeah
+
+32:39.680 --> 33:08.680
+then whenever you can try to tell others how it impacts there I mean there's there's always a question why how does this impact a normal user or something like this or how does this impact other iOS users or something but it impacts because it's the device you have is a computer and it's it's capable of running more things than you know of
+
+33:08.680 --> 33:33.680
+and it's capable of running any apps that you install and you should be able to install this on your device and you have been doing this but Android promise was open since the beginning and now it's slowly going in a different direction and that will impact your freedoms and that's why you should be concerned about this.
+
+33:33.680 --> 33:43.680
+Thank you thank you so much for taking the time and walking us to the topic Android developer verification and yeah thank you very much the time.
+
+33:43.680 --> 33:45.680
+Thank you thanks for having me.
+
+33:45.680 --> 33:46.680
+It was a pleasure.
+
+33:46.680 --> 33:47.680
+Thank you.
+
+33:47.680 --> 33:55.680
+This was the software freedom podcast if you liked this episode please recommend it to your friends and rated.
+
+33:56.680 --> 34:04.680
+Stay tuned for more inspiring conversations that explore the importance of software freedom and its impact on our digital lives.
+
+34:04.680 --> 34:16.680
+This podcast is presented to you by the Free Software foundation Europe and we are a charity that works on promoting software freedom if you like our work.
+
+34:16.680 --> 34:19.680
+Please consider supporting us with other nation.
+
+34:19.680 --> 34:27.680
+You find more information under fsfe.org/donate and in the show notes.
+
+34:27.680 --> 34:31.680
+Thank you so much for listening and staying with us.
+
+34:31.680 --> 34:34.680
+Yeah let's keep up the good work for software freedom.
+
+34:34.680 --> 34:35.680
+Bye bye.
+
+34:46.680 --> 34:48.680
+Bye.

@@ -699,30 +699,6 @@ div#content {
     }
   }
 
-  /* blocks that stand out */
-
-  .standout {
-    margin-top: 1.5em;
-    margin-bottom: 1.5em;
-    margin-left: -1.5em;
-    padding-top: 0.5em;
-    padding-bottom: 0.5em;
-    @media (min-width: @screen-sm-min) {
-      margin-left: -3em;
-    }
-  }
-  .standout-text {
-    .standout;
-    padding-left: 1.5em;
-    @media (min-width: @screen-sm-min) {
-      padding-left: 3em;
-    }
-  }
-  .standout-text-bggreen {
-    .standout-text;
-    background-color: @brand-green-lighter;
-  }
-
   blockquote,
   .blockQuote,
   .blockHighlight,
@@ -745,6 +721,30 @@ div#content {
     margin-right: 1.5em;
     margin-left: 0;
   }
+}
+
+/* blocks that stand out */
+
+.standout {
+	margin-top: 1.5em;
+	margin-bottom: 1.5em;
+	margin-left: -1.5em;
+	padding-top: 0.5em;
+	padding-bottom: 0.5em;
+	@media (min-width: @screen-sm-min) {
+	  margin-left: -3em;
+	}
+}
+.standout-text {
+	.standout;
+	padding-left: 1.5em;
+	@media (min-width: @screen-sm-min) {
+	  padding-left: 3em;
+	}
+}
+.standout-text-bggreen {
+	.standout-text;
+	background-color: @brand-green-lighter;
 }
 
 /* subpages "backward compatibility" */
@@ -1268,6 +1268,7 @@ blockquote#statement p {
   font-family: "Roboto", sans-serif;
   font-weight: unset;
 }
+
 
 /* -------------------------------------------------------------------- */
 /* Interviews                                                           */

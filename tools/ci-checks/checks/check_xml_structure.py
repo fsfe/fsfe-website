@@ -55,6 +55,8 @@ def check(files: list[Path], pool: multiprocessing.pool.Pool) -> tuple[bool, str
         "//label[@for='name']",
         "//label[@for='phone']",
         "//label[@for='zip']",
+        "//input/@placeholder",
+        "//*/@aria-label",
         "//source/@src",  # videos can have different links
         "//track/@label",  # Language label, used in some track elements
         "//track/@srclang",  # Languages, used in some track elements

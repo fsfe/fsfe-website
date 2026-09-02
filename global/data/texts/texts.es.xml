@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <data>
-  <version>2</version>
+  <version>3</version>
 
 
 <!-- ALL STATIC TEXTS -->
@@ -83,8 +83,9 @@
 
   <text id="newsletter">Boletín de noticias</text>
   <text id="podcast">Podcast</text>
-
-  <text id="go-to">Ir a</text>
+  
+  <text id="nav/quick-links-label">Enlaces de acceso directo</text>
+  <text id="go-to">Ir a:</text>
   
   <text id="yourname">Tu Nombre</text>
   <text id="subscribe">Suscribirse</text>
@@ -110,6 +111,7 @@
   <text id="page-info">Información de la página</text>
 
   <text id="go-top">Ir al principio</text>
+  <text id="nav/back-to-top-label">Volver arriba</text>
   <text id="source">Código fuente</text>
   <text id="contact-us">Contactar</text>
   <text id="jobs">Trabajos</text>

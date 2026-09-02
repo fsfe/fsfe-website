@@ -4,6 +4,11 @@
     <!-- Go to top -->
     <xsl:element name="nav">
       <xsl:attribute name="id">direct-to-top</xsl:attribute>
+      <xsl:attribute name="aria-label">
+			<xsl:call-template name="fsfe-gettext">
+			<xsl:with-param name="id" select="'nav/back-to-top-label'"/>
+			</xsl:call-template>
+	  </xsl:attribute>
       <xsl:element name="a">
         <xsl:attribute name="href">#top</xsl:attribute>
         <xsl:call-template name="fsfe-gettext">

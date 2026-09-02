@@ -20,6 +20,11 @@
       <!--/div#masthead-->
       <xsl:element name="nav">
         <xsl:attribute name="id">menu</xsl:attribute>
+		<xsl:attribute name="aria-label">
+			<xsl:call-template name="fsfe-gettext">
+			<xsl:with-param name="id" select="'nav/quick-links-label'"/>
+			</xsl:call-template>
+		</xsl:attribute>
         <xsl:element name="p">
           <xsl:call-template name="fsfe-gettext">
             <xsl:with-param name="id" select="'go-to'"/>

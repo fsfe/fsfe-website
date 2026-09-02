@@ -75,30 +75,13 @@
         <xsl:value-of select="@id"/>
       </xsl:attribute>
       <xsl:element name="div">
-        <xsl:if test="@image">
-          <xsl:attribute name="class">with-image-right</xsl:attribute>
-          <xsl:element name="div">
-            <xsl:attribute name="class">img-container img-square</xsl:attribute>
-            <xsl:element name="img">
-              <xsl:attribute name="class">img-circle</xsl:attribute>
-              <xsl:attribute name="src">
-                <xsl:value-of select="@image"/>
-              </xsl:attribute>
-              <xsl:attribute name="alt">
-                <xsl:value-of select="/buildinfo/document/text[@id='photograph']"/>
-              </xsl:attribute>
-            </xsl:element>
-            <!-- img -->
-          </xsl:element>
-          <!-- /div.img-container.square -->
-        </xsl:if>
         <xsl:element name="div">
-          <xsl:element name="p">
-            <xsl:apply-templates select="text/node()"/>
-          </xsl:element>
           <xsl:element name="p">
             <xsl:attribute name="class">source</xsl:attribute>
             <xsl:apply-templates select="name/node()"/>
+          </xsl:element>     
+          <xsl:element name="p">
+            <xsl:apply-templates select="text/node()"/>
           </xsl:element>
           <!-- Optional link to interview video -->
           <xsl:if test="watch">

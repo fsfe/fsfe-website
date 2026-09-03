@@ -35,39 +35,63 @@
 
     <div class="three-columns">
       <div class="column news">
-        <h2/>
-<h2>Últimas noticias<br/>
-          <a class="learn-more" href="/news/index.html">Ver todos los eventos...</a></h2>
-        
+		<h2>Últimas noticias<br/>
+          <a class="learn-more" href="/news/index.html">Ver todas las noticias...</a>
+        </h2>
         <dynamic-content-news/>
       </div>
       <div class="column subscribe">
         <module id="banner-subscribe-box"/>
       </div>
       <div class="column events">
-        <h2><div class="column events">
         <h2>
           Próximos eventos<br/>
           <a class="learn-more" href="/events/events.html">Ver todos los eventos...</a>
-        </h2>
-        
-      </div>
-    
         </h2>
         <dynamic-content-events/>
       </div>
     </div>
 
     <!-- module id="banner-subscribe" //-->
-
-    <h2/>
-<h2>Nuestra comunidad
-      <a class="learn-more" href="/contribute/index.html">Actúa...</a></h2>
     
+    <h2>
+      Nuestra comunidad
+    </h2>
 
-    <div class="testimonials">
-      <dynamic-content-testimonials/>
-    </div>
+    <div class="two-columns">
+		<div class="column">
+			<section class="carousel" aria-labelledby="carouselheading">
+				<h3 id="carouselheading" class="visuallyhidden">Fotos destacadas</h3> 
+				<ul class="slides">
+					<li class="slide is-active">
+						<img src="https://pics.fsfe.org/uploads/medium/17/85/19248ba1d6a5a8880141b6253276.JPG" alt="Un gran número de personas sosteniendo un globo con el número 25 para conmemorar el 25.º aniversario de la FSFE." />
+					</li>
+					<li class="slide">
+						<img src="https://pics.fsfe.org/uploads/medium/59/5c/69b165be0a4149f3f51d58c53ce9.jpeg" alt="Un grupo de personas posando delante de un edificio." />
+					</li>
+					<li class="slide">
+						<img src="https://pics.fsfe.org/uploads/medium/0f/96/32d686b9b68141492ed23705cba5.jpeg" alt="Varias personas en un puesto donde se venden artículos de la FSFE." />
+					</li>
+					<li class="slide">
+						<img src="https://pics.fsfe.org/uploads/medium/ac/5e/d9c8e3756048a58e82e37fb0cce2.JPG" alt="Un grupo de personas posando delante de un edificio." />
+					</li>
+					<li class="slide">
+						<img src="https://pics.fsfe.org/uploads/medium/f4/77/c0dc9a85f12e912c90380098daaa.jpg" alt="Varias personas en un puesto donde se venden artículos de la FSFE." />
+					</li>		
+				</ul>
+			</section>
+		</div>
+		
+		<div class="column">
+			<p>Somos una comunidad diversa de personas de toda Europa y 
+			más allá, comprometidas con el Software Libre. Si te 
+			sientes así, únete a nosotros en nuestro trabajo por la 
+			libertad. Hay muchas maneras de participar y seguramente 
+			encontrarás una forma que se ajuste a tus intereses y 
+			habilidades.</p>
+			<a class="learn-more" href="/about/index.html">Actúa...</a>
+		</div>		
+	</div>
 
     <module id="banner-become-supporter"/>
 
@@ -76,7 +100,7 @@
         <h3/>
 <h3>Material informativo</h3>
         <a href="/contribute/spreadtheword.html">
-          <img src="https://pics.fsfe.org/uploads/medium/a0/61/aa650c1d9c7c239e4fbeeb3cf45d.jpeg" alt="Promotional flyers, stickers, postcards, and brochures from FSFE. On the material you can see campaign logos, and different activities from the FSFE. "/>
+          <img src="https://pics.fsfe.org/uploads/medium/a0/61/aa650c1d9c7c239e4fbeeb3cf45d.jpeg" alt="Diversos folletos promocionales, pegatinas, postales y catálogos de la FSFE y de las diferentes actividades de la FSFE."/>
         </a>
         <p>
           <a class="learn-more" href="/contribute/spreadtheword.html">corre la voz...</a>
@@ -86,7 +110,7 @@
       <div class="column">
         <h3/><h3>Material promocional</h3>
         <a href="/order/index.html">
-         <img src="https://pics.fsfe.org/uploads/medium/e9/9e/6b635afbd166828e99d4fe0e625e.jpeg" alt="FSFE merchandising: tshirts, hoodies, magnets and more"/>
+         <img src="https://pics.fsfe.org/uploads/medium/e9/9e/6b635afbd166828e99d4fe0e625e.jpeg" alt="Artículos de la FSFE: camisetas, sudaderas con capucha, imanes y mucho más."/>
         </a>
         <p>
           <a class="learn-more" href="/order/index.html">consigue tu equipamiento...</a>
@@ -99,11 +123,13 @@
           <img src="/graphics/booth-presentation.jpg" alt="Dos voluntarios detrás de un stand de la FSFE presentando información y material promocional."/>
         </a>
         <p>
-          <a class="learn-more" href="https://docs.fsfe.org/en/KnowHow/Groups/OrganizeABooth">aprende 
-          cómo hacerlo...</a>
+          <a class="learn-more" href="https://docs.fsfe.org/en/KnowHow/Groups/OrganizeABooth">Aprenda más...</a>
         </p>
       </div>
     </div>
+    
+  <script src="/scripts/carousel-community.js"/>
+    
   </body>
   <description>    Non profit organisation working to create general understanding and support    for software freedom. Includes news, events, and campaigns.  </description>
 

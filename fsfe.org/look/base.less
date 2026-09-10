@@ -1001,6 +1001,50 @@ ul.nav + p {
   margin-top: 1em;
 }
 
+.localmenu {
+  .nav-tabs {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: flex-end;
+    font-size: 0.95em;
+    gap: 0.5em;
+    list-style: none;
+    margin-bottom: 1em;
+    padding: 0;
+    border-bottom: none;
+
+    > li {
+      flex: 1 1 0;
+      min-width: 0;
+      text-align: center;
+
+      a {
+        display: block;
+        white-space: normal;
+        border: 1px solid @gray;
+        border-bottom: 4px solid @gray;
+        padding: 0.3em 0.6em;
+        color: @gray-dark;
+      }
+      
+      &.active a {
+        border: 1px solid transparent;
+        border-bottom-color: transparent;
+
+      }
+      
+      &:nth-child(1) a { background-color: @gray-lighter; }
+      &:nth-child(2) a { background-color: @timeline-device-neutrality; }
+      &:nth-child(3) a { background-color: @timeline-legal-education; }
+      &:nth-child(4) a { background-color: @timeline-market-regulations; }
+      &:nth-child(5) a { background-color: @timeline-pmpc; }
+      &:nth-child(6) a { background-color: @timeline-volunteer-engagement; }
+      &:nth-child(7) a { background-color: @timeline-young-generation; }
+  }
+ }
+}
+
 /* trivia */
 
 form input#yourname,

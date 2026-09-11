@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html>
+  <version>1</version>
+  <head>
+    <title>Additional information about our Android reviews</title>
+  </head>
+  <body class="article">
+    <p id="category">
+      <a href="/activities/android/android.html">Free Your Android</a>
+    </p>
+    <h1>Additional information about our Android reviews</h1>
+    <h2 id="test-setup">Test setup</h2>
+    <p>We performed these tests with a Pixel 7 and a Pixel 8a between November 2025 and June 2026. While the builds for different devices are very similar, the results are nevertheless specific to the tested devices and can be different with other setups.</p>
+    <p>We tested the same steps with each distribution to understand what works and what does not. To see network traffic, we used mitmproxy, a Free Software HTTPS proxy that enables inspection of encrypted traffic. For that purpose, we installed a custom CA certificate on the device. In order to make this work for system apps and any apps targeting API level 24 and higher, we used Magisk to root the device so we could place the certificate in the system certificate store. In order to not influence the other tests, we performed the rooting and network analysis after the other tests.</p>
+    <p>Unfortunately, some connections can still not be analysed with that setup because the apps use certificate pinning where the app trusts only a specific certificate. This is a good security measure, even if it blocked our efforts there. There are ways to circumvent this, but we did not take those additional steps because we could still see the connections, just not their content, and for our purposes this was sufficient.</p>
+    <h2 id="why-we-tested-non-free-apps">Why we tested non-free apps</h2>
+    <p>We looked at a number of typical Free Software apps and non-free software apps for compatibility. We strongly discourage the use of non-free software, but we also recognise that testing a variety of apps on Android distributions provides important information for users. Users may be unable to switch to 100% Free Software immediately and may need to approach this step by step. Giving users the information to make informed decisions about steps towards freedom is an important part of our mission.</p>
+    <h2 id="seedvault">SeedVault</h2>
+    <p>SeedVault is a very capable backup solution that uses Android’s internal backup APIs, just like Google’s own backup service. Instead of transmitting your data to Google’s servers, SeedVault allows you to store your data wherever you choose. SeedVault encrypts backups and does not require root access, but does need to be integrated into the OS. It backs up app data, device settings, contacts, call history, SMS messages, and your storage, and it can run automatically in the background. Many distributions offer to restore SeedVault backups during their initial setup, but you can also do it at a later point, and you can use standalone tools to inspect your backups on your other non-phone computers.</p>
+    <p>Unfortunately, one drawback of the backup APIs is that individual apps need to implement it properly. Some apps do not, and some opt out of it on purpose. For that reason, SeedVault now mimics device-to-device transfer for backups to be able to back up more data, but even there some apps disable this explicitly. This means that users cannot rely on SeedVault providing a complete backup and need to check first what the backup actually includes. Restoring these backups across major releases with significant changes may not work properly or cause stability issues. As with any backup, it is a good idea to periodically verify that your backups contain the data you rely on the most.</p>
+    <h2 id="battery-life">Battery life</h2>
+    <p>This is one area where community Android distributions typically get a lot of praise. This seems logical considering stock Android as well as some distributions heavily modified by the phone manufacturer come with a significant number of pre-installed apps that could potentially decrease battery life. In our tests, the differences in battery consumption were so small, though, that we do not want to generalise these results. Screen usage, the exact background data behaviour of apps, reception quality, and so on had a much larger effect on battery life than the distribution itself. So our recommendation is to test this yourself because depending on your exact setup, especially in terms of background connections and push notifications, these results will vary greatly.</p>
+    <h2 id="bootloader-security">Bootloader security</h2>
+    <p>Installing a different Android distribution requires you to unlock your phone’s bootloader first. An unlocked bootloader lets you and anyone else with access to the device modify the software on the phone. If the boot image is changed, the chain of trust cannot be extended to the operating system it boots, so this is an important security issue. Android uses a system called Verified Boot to build this chain of trust. For this process, it uses a key installed in the hardware to verify the bootloader, which in turn verifies the OS. Usually, the key your phone comes with is from the manufacturer. When you install another Android distribution on it, you need to tell the bootloader to trust the key of that distribution.</p>
+    <p>If a distribution does not support relocking the bootloader, you need to rely on encryption for your data. Even then, an attacker with physical access who flashes a compromised bootloader on your device could simply log the credentials you enter the next time you use the device. That is why securing the bootloader is so essential.</p>
+  </body>
+  <author id="snow"/>
+  <date>
+    <original content="2026-09-11"/>
+  </date>
+  <sidebar/>
+  <translator/>
+</html>

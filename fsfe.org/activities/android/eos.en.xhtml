@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html>
+  <version>1</version>
+  <head>
+    <title>/e/OS review</title>
+  </head>
+  <body class="article">
+    <p id="category">
+      <a href="/activities/android/android.html">Free Your Android</a>
+    </p>
+    <h1>/e/OS review</h1>
+    <h2 id="introduction">Introduction</h2>
+    <p>/e/OS is an Android distribution based on LineageOS with a focus on privacy, developed by the e Foundation. The aim is to provide a complete user experience with access to different online accounts right after the installation. Device support is comparable to that of LineageOS. You can also buy phones with /e/OS preinstalled from Murena. Buying phones through this channel helps support development of the distribution.</p>
+    <p>For our tests, we used /e/OS 3. We also have <a href="/activities/android/additionalinfo.html#test-setup">further information on our test setup</a>.</p>
+    <h2 id="installation">Installation</h2>
+    <p>/e/OS provides a web-based installer using WebUSB that makes the process very streamlined. In our tests, with one device, we experienced issues with the installer and had to fall back to the manual setup. The fallback is comparable to the process in LineageOS. In the cases where the web-based installer worked, it walked us through the necessary steps and we ended up with a complete installation. In the end, the installer locks the bootloader on some officially supported devices. This worked with one of our test devices; the other was not supported.</p>
+    <h2 id="general-impression">General impression</h2>
+    <p>/e/OS aims to provide a fully ready-to-use experience. That means not only does it provide many apps that people most likely use on a daily basis, it comes with support for a whole range of online services, one of which is a Murena account, able to tie together multiple other services. The launcher, BlissLauncher, is reminiscent of phones from Cupertino and the pre-installed apps cover daily use well. The apps are typically custom versions of Free Software apps and in our tests, they lagged several versions behind their upstream versions, typically between a few weeks and up to a year. The custom versions have their own names, so it’s not immediately obvious which Free Software app is behind a certain version, but it is possible for users to install the upstream apps directly and get updates more quickly.</p>
+    <p>The app store, App Lounge, combines apps from the Google Play Store and F-Droid repos under one user interface. This is convenient, but blurs the line between Free Software and non-free software sources. /e/OS takes the stance that users should make choices instead of the OS making choices for them. There is also a filter to only show freely licensed apps. App Lounge does not use F-Droid directly as a source, but uses cleanapk.org, Murena’s F-Droid mirror. App Lounge also gets tracker reports from Exodus Privacy to display them with apps. Apps that are not in F-Droid’s repo, but for example on IzzyOnDroid, are not available in App Lounge and the tool recommends non-free alternatives instead.</p>
+    <p>The system includes microG to increase compatibility with apps expecting Google services. The default navigation app, Magic Earth, is non-free, but there are currently plans to replace it with /e/OS’s own Murena Maps.</p>
+    <p>/e/OS also includes a parental control feature that prevents certain apps from being installed or blocks them. In addition, there is an advanced privacy dashboard. There is also an SMS-based device tracking feature. The device can be located by sending an SMS with a password. It uses a symmetric password, so even without intercepting SMS, anyone who knows the password can track the device, but it works without any special proprietary networks to get the device location.</p>
+    <h2 id="backups">Backups</h2>
+    <p>/e/OS ships SeedVault as the default backup solution. It behaves as in any other distribution. Please have a look at our <a href="/activities/android/additionalinfo.html#seedvault">general explanation of SeedVault</a> for more details.</p>
+    <p>Not exclusively for backups, but relevant here is that /e/OS includes support for many online storage solutions with just a few clicks. One of them is its own Murena Workspace which can also be used for backups.</p>
+    <h2 id="battery-life">Battery life</h2>
+    <p>In our tests, /e/OS did not have significantly different battery life. We have <a href="/activities/android/additionalinfo.html#battery-life">more detailed information about this</a> that is the same across all tested distributions.</p>
+    <h2 id="software-support">Software support</h2>
+    <p>We looked at a number of typical Free Software apps and non-free software apps for compatibility. <a href="/activities/android/additionalinfo.html#why-we-tested-non-free-apps">Here is why</a>.</p>
+    <p>All Free Software messaging apps worked and microG handled the push notifications, using Google infrastructure. Some non-free software messaging apps were a bit finicky during setup, but then worked flawlessly. Trying to use UnifiedPush was tricky due to severely outdated forked ntfy binaries.</p>
+    <p>Navigation apps all worked without problems. We chose BeaconDB as the backend microG uses for network location and the GPS fix happened almost instantly, even indoors.</p>
+    <p>Streaming and media apps are a realm of non-free apps considering this area typically deals with Digital Restrictions Management (DRM). To our surprise, all tested apps were able to acquire a license and play DRM-encumbered media.</p>
+    <p>Delivery and transit apps mostly worked in our tests. One app refused to start with English set as the language. Others had some minor features not working.</p>
+    <p>Banking is usually a field where users run into problems because a bank cannot be easily changed and there is no choice in terms of which app to use. In our tests, we encountered no issues blocking their use. This also changes from release to release, and our results are by no means representative of the whole range of banking apps.</p>
+    <h2 id="esim">eSIM</h2>
+    <p>eSIM support poses some general challenges on non-Google Android distributions. Depending on the device, /e/OS ships with Google’s non-free SIM Manager. eSIMs already present on the device worked immediately. The “add new SIM” button supports downloading new profiles via QR code or a manual entry. It also supports switching between and removing profiles.</p>
+    <h2 id="security-and-privacy">Security and privacy</h2>
+    <p>/e/OS comes with an advanced privacy dashboard that lets users control their location data, block trackers, and mask their IP address. The heritage from LineageOS shows here with the option of randomising the layout of the PIN pad, and the ability to exclude sensitive phone numbers from the call log.</p>
+    <h3 id="relocking-the-bootloader">Relocking the bootloader</h3>
+    <p>As stated in the installation section of this report, relocking the bootloader is officially supported and standard procedure in the installer for officially supported devices. We also have <a href="/activities/android/additionalinfo.html#bootloader-security">more details about why this matters</a>. Relocking support differs by device, however, and community builds are not supported.</p>
+    <h3 id="updates">Updates</h3>
+    <p>/e/OS typically mirrors the AOSP support timeframe and once a device drops out of AOSP bulletin coverage, it usually receives no further security updates. For devices sold with /e/OS, the support timeframe has increased over time. Currently, for the Fairphone 6, /e/OS is expected to provide updates and security patches for at least eight years. Older phones often receive updates after official support from the manufacturer has ended.</p>
+    <p>/e/OS provides OTA system updates at least every other month. For security updates, the official policy here is that a release in a certain month includes security patches from the previous month. This typically means security updates arrive in /e/OS a few weeks to a month after Google releases them. If there is a 0-day exploit, the fixes are rolled out sooner. Recently, we saw that /e/OS beat those expectations by including all current security patches in releases.</p>
+    <p>Just like LineageOS, /e/OS has no way of influencing the vendor security patch level beyond including what is available quickly. This means updates to firmware and other proprietary components depend on the hardware manufacturer and once a phone is no longer supported there, these components do not receive any more updates on any OS. Some devices have seriously outdated components here, despite newer versions being available.</p>
+    <h3 id="data-transmission">Data transmission</h3>
+    <p>/e/OS includes microG, so some data transmission to Google is expected, mainly for push notifications. We captured network data from the device via mitmproxy and, for part of the process, installed a custom system certificate via root so we could also trace system apps.</p>
+    <h4 id="startup-and-idle-behaviour">Startup and idle behaviour</h4>
+    <p>At idle with no additional setup, /e/OS makes connectivity checks:</p>
+    <pre><code>GET http://connectivity.murena.io/
+GET https://connectivity.murena.io/</code></pre>
+    <p>This is standard Android behaviour to detect if you are on a network with a login page. These requests go to the Murena servers rather than to Google. In addition, the requests do not transmit device identifiers beyond standard HTTP headers. The User-Agent string is a generic desktop string, not a mobile device identifier.</p>
+    <p>microG performs a full Google device registration via <code>android.clients.google.com/checkin</code>. It spoofs the device identity, but includes a build fingerprint. This happens for push notification registration.</p>
+    <p>There is an OTA update check against /e/OS servers, which is to be expected, and it uses an anonymised per-device hash.</p>
+    <p>Additional traffic happens after online accounts are set up because syncs happen in the background. This is necessary and depends on user choices.</p>
+    <h4 id="device-attestation">Device attestation</h4>
+    <p>/e/OS contacts Google’s Remote Key Provisioning service. This is nothing /e/OS-specific, but an Android platform requirement for hardware-backed key attestation and the User-Agent includes the device model, Android version, and build number.</p>
+    <p>The device attestation for SafetyNet/Play Integrity failed in our tests. SafetyNet/Play Integrity in turn matter for certain apps that determine whether they should run on this system. microG enables interactions with the Google Play Store API and these interactions include extensive device fingerprinting, including a persistent device ID, carrier information, and a device consistency token.</p>
+    <p>Apps that use reCAPTCHA depend on the reimplementation in microG. This passes successfully, but triggers several more connections to different Google domains (recaptchaenterprise.googleapis.com, www.recaptcha.net, www.gstatic.com).</p>
+    <h4 id="browser">Browser</h4>
+    <p>The default browser in /e/OS is a fork of Cromite, a privacy-hardened Chromium fork. Like Chromium, it uses a simple “Android 10” version string and the device model “K” in its User-Agent regardless of the actual device. On launch without any user interaction, it requests several favicons from <code>murena.qwant.com</code>, <code>community.e.foundation</code>, <code>murena.com</code>, and <code>e.foundation</code>. These belong to pre-configured bookmarks. In addition to that, it gets several filter lists for ad blocking. None of these interactions set any cookies or include any device-specific tracking.</p>
+    <p>The browser uses Murena Find as its search engine (Qwant performs the actual search) and sends each letter typed into the search field for suggestions. This again does not include tracking information. On search execution, the device sends the locale and the device type. In response, Qwant sets its cookies for A/B testing, a Matomo visitor ID and a Matomo session tracking cookie. The browser sends a do not track header and Qwant acknowledges it, but still sets the tracking cookies.</p>
+    <p>The browser comes with another search engine option called Spot. This is Murena’s SearXNG instance and has a very different privacy profile. It contacts just one host and sets only one cookie for server routing, but none for tracking. Image previews also go through Murena’s server so the image host never sees the client IP. Search suggestions go through the DuckDuckGo autocomplete API that does not set cookies and the transmitted data is only the search query and the language preference. Spot is, however, not the default search engine, despite the much better privacy footprint.</p>
+    <h4 id="app-lounge">App Lounge</h4>
+    <p>App Lounge is the app store /e/OS uses to combine non-free apps from Google Play, Free Software apps, and progressive web apps. It is itself under a free license and does not require an account. At first launch, it fetches updates, blocklists, and content ratings from e Foundation servers and the requests only reveal the device model and Android version in the User-Agent.</p>
+    <p>The anonymous login uses the Aurora library for Google Play access and has a much larger privacy footprint. The requests go to Murena’s token dispensing server and include device model, branch, build fingerprint, bootloader version, screen dimensions, GPU extensions, all system libraries, hardware features, and the SIM operator code. The server then responds with login information that is mostly disposable. The device then performs a full Google device check-in and uploads the same extensive device fingerprinting information to Google as stock Android, albeit with an empty advertising ID.</p>
+    <h2 id="summary">Summary</h2>
+    <p>/e/OS is an Android distribution that simplifies using it in connection with the typical online accounts that users have come to expect. The software selection unfortunately includes a non-free component for eSIM management and a non-free navigation app, even though the latter is planned to get replaced. Otherwise, the app selection and user experience are good, especially being able to use online accounts easily, including file and contact sync. Updates come as OTA packages, and during our tests they arrived in a timely fashion.</p>
+    <p>Another area with a larger non-free surface is App Lounge. It makes it very convenient to install non-free apps from the same UI as Free Software. It does, however, let users make informed decisions by integrating information about apps such as tracker counts.</p>
+    <p>The remaining non-free components are the main gap between /e/OS and Free Software values, and with Murena Maps already in the pipeline as a replacement, that gap is narrowing. Overall, /e/OS is nice to use, the hardened browser is a real plus, and it offers a level of convenience not present in other Android distributions.</p>
+  </body>
+  <author id="snow"/>
+  <date>
+    <original content="2026-09-18"/>
+  </date>
+  <sidebar/>
+  <translator/>
+</html>

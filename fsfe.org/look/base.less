@@ -1001,6 +1001,73 @@ ul.nav + p {
   margin-top: 1em;
 }
 
+.localmenu {
+  .nav-tabs {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: flex-end;
+    font-size: 0.95em;
+    gap: 0.5em;
+    list-style: none;
+    margin-bottom: 1em;
+    padding: 0;
+    border-bottom: none;
+
+    > li {
+      a {
+        display: flex;
+        flex-direction: column;              
+        align-items: center;
+        justify-content: center;
+        text-align: center;  
+        white-space: pre-line;
+        line-height: 1.2em;
+        min-height: 2.4em;
+        border: 1px solid @gray;
+        border-bottom: 4px solid @gray;
+        padding: 0.3em 0.6em;
+        color: @gray-dark;
+      }
+      
+      &.active a {
+        border: 1px solid transparent;
+        border-bottom-color: transparent;
+      }
+      
+      &:nth-child(1) a { background-color: @gray-lighter; }
+      &:nth-child(2) a { background-color: @timeline-device-neutrality; }
+      &:nth-child(3) a { background-color: @timeline-legal-education; }
+      &:nth-child(4) a { background-color: @timeline-market-regulations; }
+	  &:nth-child(5) a { background-color: @timeline-pmpc; display: 
+	  -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; 
+	  line-clamp: 2; overflow: hidden; text-overflow: ellipsis; }
+      &:nth-child(6) a { background-color: @timeline-volunteer-engagement; }
+      &:nth-child(7) a { background-color: @timeline-young-generation; }     
+      }
+      
+    @media (max-width: 995px) {
+      flex-wrap: wrap;
+      row-gap: 0.5em;
+
+      > li {
+        flex: 0 1 calc(25% - 0.5em);
+      }
+    }
+
+    @media (max-width: 767px) {
+      > li {
+        flex-basis: calc(33.333% - 0.5em);
+      }
+      
+      > li:first-child {
+        flex-basis: 100%;
+      }
+    }	
+  }
+}
+
+
 /* trivia */
 
 form input#yourname,

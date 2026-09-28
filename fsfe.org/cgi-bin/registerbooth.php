@@ -20,8 +20,6 @@ function send_email ($name, $email, $experience, $material, $eventdescription, $
     $mailbody .= "Country: " . $country . "<br/>";
     $mailbody .= "Start date: " . $startdate . "<br/>";
     $mailbody .= "Expected attendance: " . $people . "<br/>";
-    $mailbody .= "Preferred language(s): " . $language . "<br/>";
-    $mailbody .= "Package size: " . $package . "<br/>";
     $mailbody .= "Shipping address: " . $address . "<br/>";
     $mailbody .= "Additional notes: " . $notes . "<br/>";
     $mailbody .= "Personal background: " . $personalinfo . "</p>";

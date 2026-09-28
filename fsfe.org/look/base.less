@@ -1012,7 +1012,7 @@ ul.nav + p {
     list-style: none;
     margin-bottom: 1em;
     padding: 0;
-    border-bottom: none;
+    border-bottom: 4px solid @brand-primary;
 
     > li {
       a {
@@ -1025,14 +1025,15 @@ ul.nav + p {
         line-height: 1.2em;
         min-height: 2.4em;
         border: 1px solid @gray;
-        border-bottom: 4px solid @gray;
+        border-bottom: none;
         padding: 0.3em 0.6em;
         color: @gray-dark;
       }
       
       &.active a {
-        border: 1px solid transparent;
-        border-bottom-color: transparent;
+        border: 4px solid @brand-primary;
+        border-bottom: none;
+        /* border-bottom-color: transparent; */
       }
       
       &:nth-child(1) a { background-color: @gray-lighter; }
@@ -1049,9 +1050,19 @@ ul.nav + p {
     @media (max-width: 995px) {
       flex-wrap: wrap;
       row-gap: 0.5em;
+      border-bottom: none;
 
       > li {
         flex: 0 1 calc(25% - 0.5em);
+        
+        a {
+          border-bottom: 4px solid @gray;  
+        }
+
+        &.active a {
+          border: 1px solid transparent;
+          border-bottom: 4px solid transparent;
+        }
       }
     }
 

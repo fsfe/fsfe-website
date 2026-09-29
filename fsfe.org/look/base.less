@@ -641,6 +641,45 @@ div#content {
       margin-bottom: 1.25em;
     }
   }
+  .warning-rainbow {
+    margin: 0.75em 0 1.5em;
+    padding: 0.75em 1em;
+    border: 2px solid #ffce00;
+    border-radius: 10px;
+    background: #fff7d6 linear-gradient(90deg,
+    rgba(255, 34, 34, 0.18),
+    rgba(255, 0, 255, 0.18),
+    rgba(34, 34, 255, 0.18),
+    rgba(47, 255, 255, 0.18),
+    rgba(47, 255, 47, 0.18),
+    rgba(255, 255, 34, 0.18),
+    rgba(255, 34, 34, 0.18));
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.6), 0 0 12px rgba(255, 186, 0, 0.4);
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    color: #330;
+
+    strong {
+      display: inline-block;
+      background-image: linear-gradient(
+        90deg,
+        #f22 0%,
+        #f2f 15%,
+        #22f 30%,
+        #2ff 45%,
+        #2f2 60%,
+        #ff2 75%,
+        #f22 100%
+      );
+      background-size: 220% 100%;
+      color: transparent;
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: rainbow-shift 5s linear infinite;
+      text-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
+    }
+  }
   textarea {
     min-height: 150px;
   }
@@ -649,6 +688,24 @@ div#content {
     .btn-lg;
     display: block;
     margin: 1em 0;
+  }
+}
+
+@keyframes rainbow-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 200% 50%;
+  }
+}
+
+@-webkit-keyframes rainbow-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 200% 50%;
   }
 }
 

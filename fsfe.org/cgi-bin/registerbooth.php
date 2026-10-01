@@ -83,8 +83,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         empty($_POST["city"]) ||
         empty($_POST["country"]) ||
         empty($_POST["startdate"]) ||
-        empty($_POST["people"]) ||
-        empty($_POST["language"]) ||
         empty($_POST["package"]) ||
         empty($_POST["address"])
     ) {

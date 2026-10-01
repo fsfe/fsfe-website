@@ -1,5 +1,5 @@
 <?php
-function send_email ($name, $email, $experience, $material, $eventdescription, $city, $country, $startdate, $people, $package, $address, $notes, $personalinfo) {
+function send_email ($name, $email, $experience, $material, $eventdescription, $city, $country, $startdate, $people, $address, $notes, $personalinfo) {
     $url = 'https://helpdesk.fsfe.org/api/conversations';
     $apikey = getenv('FREESCOUT_API_KEY');
     $subject = "Booth request from " . $name . " - " . $city;
@@ -83,7 +83,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         empty($_POST["city"]) ||
         empty($_POST["country"]) ||
         empty($_POST["startdate"]) ||
-        empty($_POST["package"]) ||
         empty($_POST["people"]) ||
         empty($_POST["address"])
     ) {
@@ -100,7 +99,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         htmlspecialchars($_POST["country"]),
         htmlspecialchars($_POST["startdate"]),
         htmlspecialchars($_POST["people"]),
-        htmlspecialchars($_POST["package"]),
         htmlspecialchars($_POST["address"]),
         htmlspecialchars($_POST["notes"] ?? ''),
         htmlspecialchars($_POST["personalinfo"] ?? '')

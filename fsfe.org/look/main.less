@@ -115,7 +115,7 @@ img.signatory-logo {
 }
 
 // ----------------------------------------------------------------------------
-// Landing pages (like "ada", ...
+// Landing pages (like "ada", "yh4f" ...
 // ----------------------------------------------------------------------------
 
 body.landing #content {
@@ -123,7 +123,6 @@ body.landing #content {
   
   .card-grid;
 }
-
 
 // ----------------------------------------------------------------------------
 // Overview pages (like "about", "contribute", ...
@@ -178,7 +177,7 @@ body.overview #content {
   margin-right: 10px;
 }
 
-/*Timeline view */
+/* Span for activity frames backgrounds colors */
 
 .span-style(@color) {
   border-radius: @border-radius-large;
@@ -186,15 +185,13 @@ body.overview #content {
   background-color: @color;
 }
 
-#timeline {
-  .span-device-neutrality    { .span-style(@timeline-device-neutrality); }
-  .span-legal-education      { .span-style(@timeline-legal-education); }
-  .span-market-regulations   { .span-style(@timeline-market-regulations); }
-  .span-pmpc                 { .span-style(@timeline-pmpc); }
-  .span-volunteer-engagement { .span-style(@timeline-volunteer-engagement); }
-  .span-young-generation     { .span-style(@timeline-young-generation); }
-  .span-org-dev              { .span-style(@timeline-org-dev); }
-}
+.span-device-neutrality    { .span-style(@device-neutrality); }
+.span-legal-education      { .span-style(@legal-education); }
+.span-market-regulations   { .span-style(@market-regulations); }
+.span-pmpc                 { .span-style(@pmpc); }
+.span-volunteer-engagement { .span-style(@volunteer-engagement); }
+.span-young-generation     { .span-style(@young-generation); }
+.span-org-dev              { .span-style(@org-dev); }
 
 
 /* Activity view */

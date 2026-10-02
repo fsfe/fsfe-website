@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <html>
-  <version>1</version>
+  <version>2</version>
 
   <head>
     <title>Prepare a FSFE booth</title>
@@ -100,8 +100,8 @@
 
       <label for="startdate" class="required">When does the event start?<span class="star">*</span></label>
       <input name="startdate" value="" required="required" type="date"/>
-      <p class="help-block">
-		  Please note that you should give us 6 weeks for packaging. 3 weeks is possible in emergencies.
+      <p class="help-block warning-rainbow">
+		  Please note that <strong>you should give us 6 weeks</strong> for packaging. 3 weeks is possible in emergencies.
       </p>
       
       <div class="form-group">
@@ -114,33 +114,7 @@
           <option value="5000">5000</option>
         </select>
       </div>
-      
-      <label for="language">What languages would you prefer the information material to be in?<span class="star">*</span></label> 
-      <input id="language" name="language" value="" required="required" type="text"/>
-      <p class="help-block">
-		  You can <a href="/contribute/spreadtheword.html">check the available material</a>. English is the default language of the material.
-      </p>
-      
-      <div class="form-group">
-        <label for="package">How large should the package be?<span class="star">*</span></label>
-        <select id="package" name="package" class="form-control" required="required">
-	      <option value="" disabled="disabled" selected="selected" hidden="hidden"></option>
-          <option value="S">S (2kg of promotion material)</option>
-          <option value="M">M (more promotion material, decoration material, some things to give away)</option>
-          <option value="L">L (merchandise material + the M package)</option>
-        </select>
-        <p class="help-block">
-		  The S package contains around: 16 posters, 30 postcards, 24 leaflets and 300 stickers  that cover all of our campaigns.
-		  <br />
-		  The M package is a bit more then twice the S package.
-		  <br />
-		  The L package is customized for the specific event.
-        </p>
-        <p class="help-block">
-		  If you want some customization of the included promotion material, please provide us more information in the "Additional Notes" field below. Don't forget to provide the preferred language information above.
-        </p>
-      </div>
-      
+
       <label for="address">What address should the package be sent to?<span class="star">*</span></label> 
       <input ide="address" name="address" value="" required="required" type="text"/>
       

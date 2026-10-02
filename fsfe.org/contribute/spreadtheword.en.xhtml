@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- @TRANSLATORS: PLEASE DON'T TRANSLATE THIS FILE YET. IT IS SUBJECT TO CHANGE DURING THE NEXT WEEKS -->
 <html>
-  <version>5</version>
+  <version>6</version>
 
   <head>
     <title>Spread the word</title>
@@ -66,7 +66,6 @@
 
 
     <form class="highlight labeledform form-inline" id="orderpromo" method="post" action="/cgi-bin/promotion.php" accept-charset="utf-8">
-      <add-language/>
       <h3 class="noclear">Order promotional material</h3>
       <p>Fields marked with * are mandatory.</p>
       <fieldset>
@@ -117,28 +116,6 @@
         <div>
           <span class="formlabel">I would like to use the material for (short description)*:</span>
           <textarea name="usage" rows="4" cols="40" placeholder="For example: Spreading information about Free Software in my surrounding, on event XYZ..." required="required"/>
-        </div>
-        <div class="langselector">
-          <span class="formlabel">My language preferences (we cannot guarantee availability):</span>
-          <ul>
-            <!-- Translators: No need to translate here, we use the native names -->
-            <!-- If you want to extend, please iterate the number behind "lang" accordingly -->
-            <li><label for="lang1"><input type="checkbox" name="languages[]" id="lang1" value="en" checked="checked"/>English</label></li>
-            <li><label for="lang2"><input type="checkbox" name="languages[]" id="lang2" value="cn"/>中文</label></li>
-            <li><label for="lang3"><input type="checkbox" name="languages[]" id="lang3" value="de"/>Deutsch</label></li>
-            <li><label for="lang4"><input type="checkbox" name="languages[]" id="lang4" value="el"/>Eλληνικά</label></li>
-            <li><label for="lang5"><input type="checkbox" name="languages[]" id="lang5" value="es"/>Español</label></li>
-            <li><label for="lang6"><input type="checkbox" name="languages[]" id="lang6" value="fr"/>Français</label></li>
-            <li><label for="lang7"><input type="checkbox" name="languages[]" id="lang7" value="it"/>Italiano</label></li>
-            <li><label for="lang8"><input type="checkbox" name="languages[]" id="lang8" value="lt"/>Latviešu</label></li>
-            <li><label for="lang9"><input type="checkbox" name="languages[]" id="lang9" value="nl"/>Nederlands</label></li>
-            <li><label for="lang10"><input type="checkbox" name="languages[]" id="lang10" value="pl"/>Polski</label></li>
-            <li><label for="lang11"><input type="checkbox" name="languages[]" id="lang11" value="ru"/>Русский</label></li>
-            <li><label for="lang12"><input type="checkbox" name="languages[]" id="lang12" value="sq"/>Shqip</label></li>
-            <li><label for="lang13"><input type="checkbox" name="languages[]" id="lang13" value="sr"/> Српски / srpski</label></li>
-            <li><label for="lang14"><input type="checkbox" name="languages[]" id="lang14" value="fi"/>Suomi</label></li>
-            <li><label for="lang15"><input type="checkbox" name="languages[]" id="lang15" value="tr"/>Türkçe</label></li>
-          </ul>
         </div>
       </fieldset>
       <fieldset>

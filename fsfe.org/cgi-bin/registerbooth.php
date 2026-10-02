@@ -1,5 +1,5 @@
 <?php
-function send_email ($name, $email, $experience, $material, $eventdescription, $city, $country, $startdate, $people, $language, $package, $address, $notes, $personalinfo) {
+function send_email ($name, $email, $experience, $material, $eventdescription, $city, $country, $startdate, $people, $address, $notes, $personalinfo) {
     $url = 'https://helpdesk.fsfe.org/api/conversations';
     $apikey = getenv('FREESCOUT_API_KEY');
     $subject = "Booth request from " . $name . " - " . $city;
@@ -20,8 +20,6 @@ function send_email ($name, $email, $experience, $material, $eventdescription, $
     $mailbody .= "Country: " . $country . "<br/>";
     $mailbody .= "Start date: " . $startdate . "<br/>";
     $mailbody .= "Expected attendance: " . $people . "<br/>";
-    $mailbody .= "Preferred language(s): " . $language . "<br/>";
-    $mailbody .= "Package size: " . $package . "<br/>";
     $mailbody .= "Shipping address: " . $address . "<br/>";
     $mailbody .= "Additional notes: " . $notes . "<br/>";
     $mailbody .= "Personal background: " . $personalinfo . "</p>";
@@ -86,8 +84,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         empty($_POST["country"]) ||
         empty($_POST["startdate"]) ||
         empty($_POST["people"]) ||
-        empty($_POST["language"]) ||
-        empty($_POST["package"]) ||
         empty($_POST["address"])
     ) {
     die("The supplied data is incorrect. Please use the back button of the browser to return to the form.");
@@ -103,8 +99,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         htmlspecialchars($_POST["country"]),
         htmlspecialchars($_POST["startdate"]),
         htmlspecialchars($_POST["people"]),
-        htmlspecialchars($_POST["language"]),
-        htmlspecialchars($_POST["package"]),
         htmlspecialchars($_POST["address"]),
         htmlspecialchars($_POST["notes"] ?? ''),
         htmlspecialchars($_POST["personalinfo"] ?? '')

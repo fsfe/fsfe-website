@@ -83,6 +83,17 @@
         </xsl:otherwise>
       </xsl:choose>
     </xsl:variable>
+  <!-- codec -->
+    <xsl:variable name="TYPE">
+     <xsl:choose>
+        <xsl:when test="$format = 'mp3'">
+          <xsl:text>mpeg</xsl:text>
+        </xsl:when>
+        <xsl:otherwise>
+          <xsl:text>ogg</xsl:text>
+        </xsl:otherwise>
+     </xsl:choose>
+    </xsl:variable>
     <!-- Language -->
     <xsl:variable name="lang">
       <xsl:value-of select="@language"/>
@@ -116,7 +127,7 @@
         <xsl:element name="atom:link">
           <xsl:attribute name="href"><xsl:text>https://fsfe.org/news/podcast</xsl:text><xsl:choose><xsl:when test="$alternateformat != 'mp3'"><xsl:text>-</xsl:text><xsl:value-of select="$alternateformat"/></xsl:when></xsl:choose><xsl:text>.</xsl:text><xsl:value-of select="$lang"/>.rss</xsl:attribute>
           <xsl:attribute name="rel">alternate</xsl:attribute>
-          <xsl:attribute name="type">application/rss+xml</xsl:attribute>
+          <xsl:attribute name="type">application/rss xml</xsl:attribute>
           <xsl:attribute name="title">Software Freedom Podcast (<xsl:value-of select="$alternateformat"/> Audio)</xsl:attribute>
         </xsl:element>
         <!-- PODCAST specific information -->
@@ -268,7 +279,7 @@
               </xsl:attribute>
               <xsl:attribute name="type">
                 <xsl:text>audio/</xsl:text>
-                <xsl:value-of select="$format"/>
+                <xsl:value-of select="$TYPE"/>
               </xsl:attribute>
             </xsl:element>
             <!-- Chapters -->

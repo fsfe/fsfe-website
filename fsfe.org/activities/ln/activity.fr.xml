@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<activityset>
+  <version>2</version>
+
+  <activity id="ln" date="2007-04-01" status="active">
+    <title>Legal Network</title>
+    <description>
+      Le « Legal Network » est un groupe d’experts neutre et non partisan, impliqué dans les enjeux juridiques du Logiciel Libre,
+      composé actuellement des centaines de participants issus de divers systèmes législatifs, parcours universitaires et organismes.
+      L’objectif du réseau est de promouvoir la discussion et de favoriser une meilleure compréhension des concepts sous-jacents au Logiciel Libre.
+    </description>
+    <link href="/activities/ln/ln.html"/>
+    <image url="/graphics/logos/legalnetwork.png" alt=""/>
+    <order priority="1" highlight="yes"/>
+    <tags>
+      <tag key="legal"/>
+    </tags>
+  </activity>
+</activityset>

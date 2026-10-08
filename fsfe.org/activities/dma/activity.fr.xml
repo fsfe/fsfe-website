@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<activityset>
+  <version>1</version>
+
+  <activity id="devices" date="2021-11-01" status="active">
+    <title>DMA</title>
+    <description>
+      La liberté matérielle est un projet politique visant à réguler les monopole sur les appareils
+      et redonner aux utilisateurs le contrôle de leur matériel numérique.
+      Le règlement sur les marchés numériques (ou DMA) régule l’activité économique des grandes plateformes numériques
+      et introduit la libeté matérielle dans la législation de l’UE, favorisant l’accès aux logiciels libres sur nos appareils.
+    </description>
+    <link href="/activities/dma/dma.html"/>
+    <image url="/graphics/logos/dma-logo.png" alt=""/>
+    <order priority="5" highlight="yes"/>
+    <tags>
+      <tag key="deviceneutrality"/>
+    </tags>
+  </activity>
+</activityset>

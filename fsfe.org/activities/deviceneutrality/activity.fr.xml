@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<activityset>
+  <version>3</version>
+
+  <activity id="devices" date="2021-11-01" status="active">
+    <title>Neutralité des appareils</title>
+    <description>
+      Bien que les appareils numérique soient ajourd’hui omniprésent, le nombre d’appareils sur lesquels
+      les utilisateurs ne peuvent pas utiliser de logiciels libres augmente de façon exponentielle.
+      Cela conduit à une perte de controle pour les utilisateurs vis-à-vis de la technologie.
+      La neutralité des appareils, vise à permettre aux utilisateurs de contourner les contrôleurs
+      d’accès afin d’utiliser des logiciels libres sur leurs appareils, sans restriction.
+    </description>
+    <link href="/activities/deviceneutrality/index"/>
+    <image url="/graphics/logos/deviceneutrality-transparent.png" alt=""/>
+    <order priority="5" highlight="yes"/>
+    <tags>
+      <tag key="deviceneutrality"/>
+    </tags>
+  </activity>
+</activityset>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<activityset>
+  <version>2</version>
+
+  <activity id="licence-questions" date="2015-11-25" status="active">
+    <title>Questions de licences</title>
+    <description>
+      La liste de diffusion « Licence Question » de la FSFE regroupe les bénévoles qui offrent leur aide
+      sur les sujets liés aux licences du Logiciel Libre et à leur respect.
+      Si vous avez besoin de conseils pour choisir une licence de Logiciel Libre, ou si vous voulez en apprendre plus sur les droits
+      dont vous disposez sur une partie d’un logiciel libre, vous pouvez nous contacter.
+    </description>
+    <link href="/freesoftware/legal/faq.html"/>
+    <image url="/graphics/logos/licencequestions.png" alt=""/>
+    <order priority="3" highlight="yes"/>
+    <tags>
+      <tag key="legal"/>
+    </tags>
+  </activity>
+</activityset>

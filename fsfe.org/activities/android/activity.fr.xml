@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<activityset>
+  <version>2</version>
+
+  <activity id="android" date="2012-02-28" status="active">
+    <title>Libérez votre Android</title>
+    <description>
+      Android est un système d’exploitations en grande partie libre, mais malheureusement,
+      les pilotes de la majorité des appareils et de la plupart applications de la boutique intégrée ne relèvent pas du Logiciel Libre.
+      Cette initiative vous accompagne dans la reprise de contrôle de votre appareil Android et de vos données
+    </description>
+    <link href="/activities/android/android.html"/>
+    <image url="/graphics/logos/android.png" alt=""/>
+    <order priority="4" highlight="yes"/>
+    <tags>
+      <tag key="deviceneutrality"/>
+    </tags>
+  </activity>
+</activityset>

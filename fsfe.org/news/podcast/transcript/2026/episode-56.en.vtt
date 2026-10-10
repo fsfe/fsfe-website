@@ -1,0 +1,929 @@
+WEBVTT
+
+00:00.000 --> 00:19.720
+Thank you so much for listening to this episode and yeah, thank you so much for listening
+
+00:19.720 --> 00:24.680
+to the Software Freedom Podcast then without you, our dear dear listener, this podcast would
+
+00:24.680 --> 00:26.280
+not be possible.
+
+00:26.280 --> 00:31.880
+This podcast is brought to you by the Free Software Foundation, you know, we are a charity
+
+00:31.880 --> 00:34.880
+that empowers users to control technology.
+
+00:34.880 --> 00:41.200
+Today I am here with my colleague Dario Presutti. Dario works on legal and policy topics.
+
+00:41.200 --> 00:45.920
+You have a policy background, Dario. Can you give me some background how you ended up
+
+00:45.920 --> 00:50.440
+at the FSFE and how come that you were so interested into Free Software?
+
+00:50.440 --> 00:54.840
+First of all, hello Bonnie and hello everyone. I am really happy to be here. It's a pleasure
+
+00:54.840 --> 00:59.800
+to be here, to be in the Software Freedom Podcast, which you all. So yeah, I have a policy
+
+00:59.800 --> 01:05.640
+background. I also have, let's say, my Gresham Studies background, but somehow ended up
+
+01:05.640 --> 01:11.680
+working in Free Software. And this is because during my studies, I did an internship with
+
+01:11.680 --> 01:17.360
+the Italian Foreign Ministry at the European Parliament and I really became involved and
+
+01:17.360 --> 01:23.240
+interested in European politics. And at the same time, at the end of my studies, while
+
+01:23.280 --> 01:28.640
+I was finishing my studies, my brother was finishing his studies and I studied something
+
+01:28.640 --> 01:33.440
+much more related to Free Software, which is software development. And somehow, when
+
+01:33.440 --> 01:38.440
+we were talking about our studies and what we were doing and what was interesting for
+
+01:38.440 --> 01:44.000
+us, I came across something called Free Software or at the time, I came across the word
+
+01:44.000 --> 01:48.760
+open source and I became really interested in that and I started reading this, but then
+
+01:48.800 --> 01:54.480
+I didn't really get involved until I moved to Berlin and if some of our listeners
+
+01:54.480 --> 01:59.200
+don't know, FSFE office is in Berlin and I was looking for an internship after my studies
+
+01:59.200 --> 02:04.200
+and that's how I found out about the FSFE and all the work that the FSFE is doing in
+
+02:04.200 --> 02:10.120
+the realm of politics and technology. So already more than two years ago at the beginning
+
+02:10.120 --> 02:17.640
+of the 2023, I started my internship at the FSFE and that's also how I became always
+
+02:17.640 --> 02:23.560
+more interested and involved in Free Software and all the policy and legal topics related
+
+02:23.560 --> 02:28.480
+to the topic. So I would say that it was really nice to share with my brother all of
+
+02:28.480 --> 02:34.760
+these interests and then how this mixed a lot and then ended up being my work now.
+
+02:34.760 --> 02:38.320
+So I am really happy. That sounds really nice and it sounds like your
+
+02:38.320 --> 02:43.320
+brother is an awesome person as well. Yeah, I cannot deny that. Yeah.
+
+02:43.480 --> 02:47.480
+Why did you stack around for Free Software? Do you think it's something very important
+
+02:47.480 --> 02:52.680
+for society or this is now a very obvious question that you have to answer it? Yes, I know,
+
+02:52.680 --> 02:57.560
+but why do you think it's that case? Yeah, I think that that is the case because basically right now
+
+02:57.560 --> 03:03.640
+software is deeply involved in all the aspects of our life. Right now we cannot think about anything
+
+03:03.640 --> 03:09.480
+without thinking about devices and then devices also run software and software basically as a
+
+03:09.480 --> 03:14.120
+part of our daily life and also it's important that we control the software that it's part of
+
+03:14.120 --> 03:19.160
+our daily life and sometimes we're not really used to thinking this way because we think that
+
+03:19.160 --> 03:24.200
+software works this way and we just have to accept it while in on the other hand,
+
+03:24.200 --> 03:30.920
+we should have the power to control the software that is basically around us our daily life and
+
+03:30.920 --> 03:36.840
+until discovering the four freedoms of Free Software, I had no idea that we could and we should
+
+03:37.320 --> 03:43.640
+have much more power in controlling the technology that we use every day. So that's why I think that
+
+03:43.640 --> 03:50.280
+being able to control the technology is basically a fundamental work and a fundamental right for
+
+03:50.280 --> 03:57.240
+everything else that also it's important to control our rights in the sphere of migration,
+
+03:57.240 --> 04:03.560
+our rights in the sphere of I don't know, workers rights, anyways, so technology is so involved in
+
+04:03.560 --> 04:09.880
+all our aspects of our daily life that it's really believed that it's a fundamental kind of fight
+
+04:09.880 --> 04:15.000
+that we have to pursue in order to live in a democratic society and in the end of the day.
+
+04:15.000 --> 04:21.640
+I like that. Since you are also using Free Software, do you have a different experience of how
+
+04:21.640 --> 04:28.120
+you are able to choose which kind of software you are using or how it looks like in the end?
+
+04:28.120 --> 04:33.720
+I can give you an example because in the past year and a half I've also been working a lot on
+
+04:33.720 --> 04:39.880
+another file that is called the Digital Markets Act that tries to give back control also to users
+
+04:39.880 --> 04:44.760
+in terms of choosing what you can do with your mobile devices and I think that's something that I
+
+04:44.760 --> 04:51.080
+think that people should get used to do again. So choosing what you want to use in your daily life
+
+04:51.080 --> 04:56.280
+also when it comes to technology and not only think that it's always me like this, that's the only
+
+04:56.280 --> 05:00.920
+option I have and that's not true and it's also why I really love Free Software because it really
+
+05:00.920 --> 05:05.400
+gives you the power to choose what you can do and what you want to do and what you don't want to
+
+05:05.400 --> 05:11.880
+do with your devices and the DMA is a law that basically allows alternative for example
+
+05:11.880 --> 05:16.680
+App stores and many people are not used to think that they can choose their own App stores or they
+
+05:16.680 --> 05:21.880
+should be able to so that's also why I really believe that point of choice is extremely important
+
+05:22.440 --> 05:28.120
+in this regard. I believe that as well. I had just had to smile because you carry them much
+
+05:28.120 --> 05:34.040
+about the work that you do that it interests also with your philosophical kind of use and I
+
+05:34.040 --> 05:38.280
+really really like that. This is serious. I would love to do a full episode just
+
+05:39.000 --> 05:45.960
+the FSFE staff and volunteers for lots of philosophical point of use on Free Software. I think
+
+05:45.960 --> 05:51.000
+that would be quite nice. Yeah absolutely. I mean everything is political. Everything can be
+
+05:51.000 --> 05:56.840
+philosophical, right? But today, sadly, it's not today that we are doing that. Even so, I really
+
+05:56.840 --> 06:03.800
+would like to do that. But today, we will be talking about the Digital Networks Act and short
+
+06:03.800 --> 06:12.760
+DNA. It's not the DMA, but it's the DNA. So it's very good that you made the distinction between the
+
+06:12.760 --> 06:19.160
+DNA and the DMA because European Union legislation usually loves acronyms but sometimes they can be
+
+06:19.240 --> 06:25.000
+a bit tricky. So the DNA, the Digital Networks Act, is a proposal from the European
+
+06:25.000 --> 06:31.160
+Commission that has been published more or less at the beginning of January 2026. And basically,
+
+06:31.160 --> 06:38.280
+it's a regulation that will overhaul and we will reform our telecom, so telecommunication
+
+06:38.280 --> 06:43.880
+and network infrastructure is regulated across the whole European Union. This is something new
+
+06:44.600 --> 06:49.000
+because these kind of topics are already regulated, of course, in the European Union, but the
+
+06:49.000 --> 06:55.240
+important detail is that the DNA is now proposed as a regulation and not a directive. What it means
+
+06:55.240 --> 07:01.960
+that the European Union can produce two different kinds of legislation, regulation, or a directive.
+
+07:01.960 --> 07:08.840
+A directive is more of a set of goals and then each member state can decide independently how
+
+07:08.840 --> 07:16.520
+these goals will be met while a regulation is a proper set of articles and obligations and
+
+07:16.520 --> 07:23.320
+etc. that every member state has to follow in the same way. And this is an important distinction
+
+07:23.320 --> 07:29.080
+to make because until now, the topic of router freedom that is included in this proposal was
+
+07:29.080 --> 07:34.920
+regulated very differently across the member states because the European Union set the goal of,
+
+07:34.920 --> 07:41.960
+yes, users should be able to choose their own terminal equipment, but how this is regulated
+
+07:41.960 --> 07:48.680
+depends on the different national regulation authorities. Those are NRAS, national regulatory authorities. So national agency
+
+07:48.680 --> 07:54.600
+that work with telecommunication law that will ultimately set the details and the rules of how
+
+07:54.600 --> 08:00.520
+this right is implemented in the European Union. But now with the regulation, so this regulation
+
+08:00.520 --> 08:06.440
+will apply directly and identically everywhere. So we really believe that now it's the moment to
+
+08:06.440 --> 08:13.880
+finally harmonize these rights. Different ideas that are across the member states. Exactly.
+
+08:13.880 --> 08:19.880
+This sounds like a lot of work. I'll be as FSFE or basically you as the one working for the
+
+08:19.880 --> 08:25.000
+FSFE in this case, aware of all the different regulations because I can imagine it's quite hard
+
+08:25.160 --> 08:31.880
+to follow up on all of those or it's just now not necessarily the case anymore because there
+
+08:31.880 --> 08:39.640
+will be an harmonization on them. So that will be the perfect end goal. So basically until now,
+
+08:39.640 --> 08:45.240
+what's been happening is that we have been following what's happening in terms of router freedom
+
+08:45.240 --> 08:50.520
+in all the different member states because as I said before, the different member states
+
+08:50.600 --> 08:57.480
+add the power to define what is called the network termination point. And that's a very important
+
+08:57.480 --> 09:05.320
+concept because basically the network termination point is a definition of where the end of the
+
+09:05.320 --> 09:11.400
+public network is and where the start of the private network is. So basically depending on the
+
+09:11.400 --> 09:18.520
+definition of this point, some member states and therefore some users will have access to router
+
+09:18.520 --> 09:25.640
+freedom or not. So let's use an example if the public network ends where the socket is,
+
+09:25.640 --> 09:31.560
+so basically where you would then connect your router to the cable, then everything that comes
+
+09:31.560 --> 09:37.720
+after the socket is basically your property and therefore you have the right to choose your
+
+09:37.720 --> 09:43.800
+own router. If the network termination point is defined, let's say for example after the modem
+
+09:43.880 --> 09:49.080
+or after the router, you don't have the right to choose your router or your modem because this
+
+09:49.080 --> 09:54.120
+is not your property but is still property of the intern service provider in this case.
+
+09:54.120 --> 09:59.800
+And I guess just let me quickly ask that question there. I guess that this means that it's
+
+09:59.800 --> 10:05.480
+differently defined across member states, right? That's exactly the problem that we're trying
+
+10:05.480 --> 10:11.080
+to solve with the DNA because until now there is a general definition that says that
+
+10:11.160 --> 10:18.360
+users should be able to choose their own router but the definition of the network termination point
+
+10:18.360 --> 10:25.160
+is tasked to the different regulatory authorities of the member states. So basically those
+
+10:25.160 --> 10:31.240
+authorities they should follow some kind of guidelines that are defined by another authority
+
+10:31.240 --> 10:38.360
+which is the European authority that basically governs the work between all these different
+
+10:38.360 --> 10:44.840
+member states. BEREC you mean, right? BEREC exactly. BEREC is the body of European regulators
+
+10:44.840 --> 10:50.600
+for electronic communications. So for example is there is the Bundesnetzagentur for Germany
+
+10:50.600 --> 10:57.480
+or there is EGICOM for Italy. They are some kind of European Bundesnetzagentur for example.
+
+10:57.480 --> 11:02.760
+They produce these guidelines on the definition of the network termination point that the different
+
+11:02.760 --> 11:08.520
+national authority should follow when they define this. But of course there are some member states
+
+11:08.520 --> 11:14.440
+that they find them. They they they find that the NTP at point A some others at point B some others
+
+11:14.440 --> 11:19.480
+they didn't even start the definition. So there is some kind of loophole, there is some kind of grey area
+
+11:19.480 --> 11:25.000
+or some other authorities for example, the Italian authorities that basically
+
+11:25.080 --> 11:31.880
+at the find the NTP at the point A but then when it came to the find the NTP for fiber networks
+
+11:31.880 --> 11:38.360
+it wasn't really clear if the NTP was still at point A. So that's still an open yes because
+
+11:38.360 --> 11:43.160
+there's still an open discussion and for example that was also the discussion in Germany. I guess
+
+11:43.160 --> 11:47.960
+you also had a podcast recording with some of my colleagues that talked about the latest
+
+11:47.960 --> 11:53.480
+news in Germany and that's a similar case in Italy where the NTP is being redefined for fiber
+
+11:53.480 --> 11:59.880
+networks. So as you can see there is a lot of fragmentation and European users really cannot rely
+
+11:59.880 --> 12:07.880
+on a single regulation defining the NTP at point A. So that's why even if the DNA has a lot of
+
+12:07.880 --> 12:14.360
+topics inside it's a huge regulation because it talks about telecommunication, about radio,
+
+12:14.360 --> 12:21.080
+about satellite, about many different things. It includes also the article that basically until now
+
+12:21.080 --> 12:25.960
+was protecting router freedom so the article three of the open internet regulation and this
+
+12:25.960 --> 12:33.720
+article is included in the DNA and we also want to make sure that the DNA already defines the NTP
+
+12:33.720 --> 12:39.240
+as a default in the point A so that basically there is a European default for router freedom
+
+12:39.240 --> 12:45.400
+and then these national authorities can only be tasked to define exceptions on the definition of
+
+12:46.200 --> 12:51.160
+the NTP because there might be exception for countries etc but anyways there is already a
+
+12:51.160 --> 12:59.480
+European default that will make sure that the NTP is defined at the point A or anyways as the first
+
+12:59.480 --> 13:07.080
+passive physical interface as in localist term we like to say. All right so that's basically the
+
+13:07.080 --> 13:12.840
+aim that we want to achieve to protect router freedom and freedom of choice and this we go.
+
+13:12.920 --> 13:19.560
+Exactly because sometimes it's important to remember that router freedom sits inside a much bigger
+
+13:19.560 --> 13:25.880
+debate or a much bigger idea which is net neutrality. So net neutrality is a very important principle
+
+13:25.880 --> 13:31.400
+of the open internet which basically says that your internet service provider so the company that
+
+13:31.400 --> 13:37.400
+is providing you with access to the internet should treat the traffic equally so the risk should not
+
+13:37.720 --> 13:43.240
+be any discrimination based on the content or the service or the equipment that you use.
+
+13:43.240 --> 13:49.160
+So also net neutrality has some freedoms and there are also four freedoms so basically the
+
+13:49.160 --> 13:54.360
+right and the freedom to access whatever content you want to access to run whatever applications you
+
+13:54.360 --> 14:00.760
+want to run and it's also the right to attach whatever devices you want to your own connection
+
+14:00.840 --> 14:07.640
+and also some rights about transparency and clear information about your service plan that you're
+
+14:07.640 --> 14:12.840
+using. Anyways but this the right and the freedom to attach whatever devices you want to your
+
+14:12.840 --> 14:18.600
+own connection is where the FSFE has been most active on because many digital rights organization
+
+14:18.600 --> 14:24.440
+they usually gravitate towards the first two freedoms so the freedom of non-discriminating by
+
+14:24.440 --> 14:31.560
+content and also the freedom of treating internet data the same but the FSFE decided to plant
+
+14:31.560 --> 14:38.600
+this flag specifically on the device one and since 2013 actually since more than 10 years we have
+
+14:38.600 --> 14:45.000
+been at the very one of the very few organizations working specifically on router freedom because it
+
+14:45.000 --> 14:51.240
+literally affects everyone with a home internet connection because if you think about it our
+
+14:51.240 --> 14:58.600
+modems and our routers are the gateway of everything we do on the internet so having control
+
+14:58.600 --> 15:05.800
+on the router and the modems we use every day is this also means having control on for example
+
+15:05.800 --> 15:11.080
+how much data is shared with your internet services provider and how to have control with that
+
+15:11.080 --> 15:17.400
+or how is your traffic routed between the networks so this is not only a question of choosing
+
+15:17.400 --> 15:23.640
+your proper device but having power on how you access the internet and this is this is extremely
+
+15:23.640 --> 15:29.560
+important right now why why do you think it's so extreme because at the end of the day is also
+
+15:29.560 --> 15:37.400
+where it all comes from why the FSFE exists in the first place so basically oh goodness this is a
+
+15:37.960 --> 15:48.040
+I cannot settle for less absolutely fine yeah because absolutely fine at the end of the day free
+
+15:48.040 --> 15:53.800
+software is about control so therefore freedoms to use, study, share, and improve the software running
+
+15:53.800 --> 16:00.440
+also on the device that we run every day and that freedom becomes meaningless if you don't
+
+16:00.440 --> 16:06.840
+control this device your modem your router your modem are devices they are very small sometimes
+
+16:06.840 --> 16:11.480
+they are very easy to ignore because they sit there in a corner on an cupboard and we kind
+
+16:11.480 --> 16:17.320
+of forget about them because we turn collect a lot of exactly there does take her you know because
+
+16:17.320 --> 16:23.640
+we we configure them we install them and then also we never turn them off and they're just there
+
+16:23.640 --> 16:28.840
+and we only remember about them when our interconnection doesn't work and we turn around and we say
+
+16:28.840 --> 16:36.520
+oh my god what's happening to it exactly or you even forget where you put it the first time but
+
+16:36.520 --> 16:43.880
+yeah so if your internet service provided forces you to use the router that they want that's also
+
+16:43.880 --> 16:49.800
+a computer in your own running software that you cannot inspect or you cannot audit you cannot
+
+16:49.800 --> 16:55.240
+patch yourself if you're able to you know and especially you cannot replace and you're even
+
+16:55.240 --> 17:02.360
+though you're banking your private messages your work your backups they all depend on the software
+
+17:02.360 --> 17:07.400
+that it's run in the in the routers and in the modems and if you cannot put Free Software
+
+17:07.400 --> 17:13.560
+firmware on it or install a Free Software operating system you can also not independently check whether
+
+17:13.560 --> 17:19.800
+there is more data collected than it should or if the manufacturer suddenly stops issuing
+
+17:19.800 --> 17:25.240
+security updates for your device then your left exposed with not legal rights to fix it yourself
+
+17:25.240 --> 17:30.280
+so that's also why we frame router freedom not only as a core piece of net neutrality but also
+
+17:30.360 --> 17:36.040
+as a core piece of device neutrality which is also another important aspect of our work at the
+
+17:36.040 --> 17:43.400
+FSFE which is basically the broader principle that devices in your life that you buy should be owned
+
+17:43.400 --> 17:49.880
+by yourself and should answer to you and not to whoever manufactured or sold the device to you
+
+17:49.880 --> 17:55.400
+and this is also include the right to run Free Software on your devices which is not always
+
+17:55.400 --> 17:59.800
+the case until now and that's also why we're not only fighting for router freedom but also for
+
+17:59.800 --> 18:06.520
+example in the DMA with Apple for example or with Google there are the finance gatekeepers but
+
+18:06.520 --> 18:12.840
+that's another that's another podcast yeah and even if most people will never compile their own
+
+18:12.840 --> 18:18.120
+kernel in their routers you know they will never do it but almost everyone should have the right
+
+18:18.120 --> 18:24.760
+to own the router the seats there in the dusty cupboard you know if they want to so of course
+
+18:24.760 --> 18:29.320
+it can be handy to have your internet service provider giving you the routers when you need to
+
+18:29.320 --> 18:34.040
+because maybe you don't want to configure it yourself but if you want to you should be able to
+
+18:34.040 --> 18:40.440
+have this right also because it's already a right recognize my European law it's implementation
+
+18:40.440 --> 18:44.920
+that's that's another question but that's why we're working on the DNA and that's why also my work
+
+18:44.920 --> 18:51.000
+sometimes really spans between policy and legal topics you know because you can actively shape
+
+18:51.000 --> 18:55.400
+regulation before it's approved you give the interpretation to policy makers you make
+
+18:55.400 --> 19:00.600
+them understand why this is important but then once the law is approved there are other stakeholders
+
+19:00.600 --> 19:06.120
+involved that might also be interested in shaping the interpretation of of the law that is already
+
+19:06.120 --> 19:12.040
+being approved and so we maybe need to go to court to make and make the judges understand why this
+
+19:12.040 --> 19:18.840
+is important for technology and for the democratic society or we need to go to regulatory authorities
+
+19:18.840 --> 19:23.640
+and not to policy makers anymore that's why also my work really spans between policy and legal
+
+19:23.640 --> 19:30.440
+topics but at the end of the day geogep this is the same I like that and I also am very very
+
+19:30.440 --> 19:35.880
+grateful for the for the background and the concept of why this actually is an important topic for
+
+19:35.880 --> 19:41.880
+us as FSFE as well because I truly believe that this is the case as well so I am very very happy
+
+19:41.880 --> 19:48.520
+that we now have this officially on record before we go over to the how can listeners jump in and
+
+19:48.920 --> 19:53.800
+what's there to do what I actually be doing you already mentioned that this act that
+
+19:53.800 --> 19:59.640
+ditches her networks act is actually quite friendly towards router freedom as far as I understood
+
+19:59.640 --> 20:05.240
+so what's then our work is done and we go home and we just lay our feet on the desk or what's
+
+20:05.240 --> 20:11.000
+happening there I don't absolutely absolutely not so I wouldn't frame it in a way that the DNA
+
+20:11.000 --> 20:16.360
+is friendly to router freedom but at the end of the day it doesn't change the status quo
+
+20:16.360 --> 20:22.280
+but until now we are not really satisfied about the status quo so what we want to change
+
+20:22.280 --> 20:27.000
+and what we're trying to do and what we will try to do in the next month is to make sure that the
+
+20:27.000 --> 20:35.400
+status quo is actually at the standards that we think it should be so basically an harmonization
+
+20:35.400 --> 20:42.600
+of the regulation that until now was defining the NTP already written in the low so we would like
+
+20:42.600 --> 20:48.760
+to see written in the DNA that the NTP should be defined at the first passive physical
+
+20:48.760 --> 20:55.480
+interface which means full router freedom for all European users they will be really nice and we
+
+20:55.480 --> 21:01.000
+do believe that this should really be the case and that's why we will be working with policy makers
+
+21:01.000 --> 21:07.400
+with other stakeholders in order to make sure that this is what we're aiming for and of course
+
+21:07.400 --> 21:13.720
+this involves a lot of traveling to Brussels a lot of talking with different stakeholders but
+
+21:13.720 --> 21:19.480
+we are confident how are the talks they're going because I gathered at this is taking up quite a
+
+21:19.480 --> 21:24.120
+lot of time for you there and I am really really grateful that you made the time to join me here
+
+21:24.120 --> 21:29.800
+today as well because I know how busy you have been over the past two weeks and months so
+
+21:29.800 --> 21:34.520
+basically there are three main European institutions the European commission and then the European
+
+21:34.520 --> 21:39.000
+parliament and the European council the European commission is the only institution that has
+
+21:39.000 --> 21:43.880
+the power to propose a legislation so basically that's what the European commission did with the
+
+21:43.880 --> 21:51.400
+DNA in January and then different stakeholders have the possibility to already give feedback on
+
+21:51.400 --> 21:57.240
+this proposal in a public consultation and that's what we exactly what we did exactly in February
+
+21:57.240 --> 22:03.400
+2026 we produced a response to this public consultation that you can read in our website or in the
+
+22:03.400 --> 22:10.600
+show notes of this of this episode for sure and that basically laid down our main ideas regarding
+
+22:10.600 --> 22:17.080
+the DNA and our main demands regarding the DNA and then after the European commission publishes the
+
+22:17.080 --> 22:23.480
+proposals at the same time the European parliament and the European council discuss independently but
+
+22:23.480 --> 22:30.280
+at the same time modifications or amendments to this proposal and to see the light the proposal
+
+22:30.360 --> 22:38.360
+must be approved in a equal form both by the European parliament and both by the council so what
+
+22:38.360 --> 22:42.680
+happens usually is that these two institutions they will have two different proposals and then they
+
+22:42.680 --> 22:48.280
+would meet to then find an agreement to have an identical proposal and then it's it's eventually
+
+22:48.280 --> 22:52.440
+going to be approved so right now we're in this phase where these two institutions are discussing
+
+22:52.440 --> 22:57.320
+we're so we're working with European parliament and MP's there to make them understand why
+
+22:57.400 --> 23:02.440
+rather if it was important and our positions and then actually it's not the whole parliament
+
+23:02.440 --> 23:07.960
+discussing the proposal but it's a committee which is the parliament is exactly it's a kind of
+
+23:07.960 --> 23:12.760
+working group that works based on different topics and the main committee for the DNA is the
+
+23:12.760 --> 23:18.120
+ITRE committee which is the industry research and energy committee of the of the European parliament
+
+23:18.120 --> 23:24.040
+so basically we're working with MP's part of this committee and we will continue to do so
+
+23:24.040 --> 23:29.640
+after the summer break and then eventually in a some months or a bit less than a year we will
+
+23:29.640 --> 23:34.760
+see the proposal being voted by the European parliament and by the European council and then
+
+23:34.760 --> 23:40.680
+they will meet in order to find an agreement and then the final identical text will be voted by
+
+23:40.680 --> 23:53.400
+both institutions. I have to say that in general we do work a lot with each
+
+23:53.400 --> 23:58.280
+or committee but not only also with the imco committee for example the internal market committee
+
+23:58.280 --> 24:04.760
+but in general member of the European parliament are eager to listen to stakeholders you know
+
+24:04.760 --> 24:10.360
+because of course a member of the parliament cannot be experts on everything and that's also
+
+24:10.360 --> 24:16.040
+the beauty of the democracy you know being elected as a person that doesn't know all about everything
+
+24:16.040 --> 24:22.760
+but exactly because you are representing someone you also should be very open to listen to everyone
+
+24:22.760 --> 24:28.680
+you're representing so that's why usually member of the parliament are of course open to listen to
+
+24:28.680 --> 24:35.480
+everyone and then of course there is everything involved in politics so you know yes there is work
+
+24:35.480 --> 24:40.760
+to be done that also means we need a lot of support from our listeners because as you know this is
+
+24:40.760 --> 24:45.880
+actually quite expensive work to do and we don't have millions to throw around and to invite them
+
+24:45.880 --> 24:51.320
+to fancy dinner parties but we are there with the better arguments absolutely absolutely that's
+
+24:51.320 --> 24:55.880
+super important as we were saying it's extremely true because already for us traveling to Brussels
+
+24:55.880 --> 25:01.160
+is an expense you know and sometimes to meet them or when they invite us to some meetings or
+
+25:01.160 --> 25:07.080
+regulatory meetings across Europe we need money to do so it's extremely important that we also when
+
+25:08.200 --> 25:16.280
+our listeners see that we got something from or there was a win in the in the European politics
+
+25:16.760 --> 25:21.400
+this means a lot of travels to Brussels or a lot of meetings to Brussels and this is this cost
+
+25:21.400 --> 25:27.320
+as money you know so we can only keep our good work up for Free Software if we have enough
+
+25:27.320 --> 25:33.000
+people who donate to us and as we are charity we really depend on your donation so please think
+
+25:33.000 --> 25:39.720
+about making a donation to the FSFE today yes to keep up the good work absolutely back to the good
+
+25:40.200 --> 25:47.640
+so you talk a lot with them about how important the definition of the technical point where our
+
+25:47.640 --> 25:54.600
+control starts is and how is this perceived do they understand that or yeah is there still a lot
+
+25:54.600 --> 26:00.120
+of ongoing discussions our feedback we will link in the show notes so what's happening there next
+
+26:00.120 --> 26:07.480
+I personally don't think that's a different concept to understand that's also why I really love
+
+26:07.480 --> 26:13.320
+working for the FSFE because sometimes when people are faced with this kind of very technical
+
+26:13.320 --> 26:18.760
+arguments they are kind of scared and they kind of back off and say no no no but this is technical it
+
+26:18.760 --> 26:24.360
+it doesn't concern me but on the opposite side what I really like doing is try to simplify in the
+
+26:24.360 --> 26:30.600
+good way you know what I mean not to simplify in order to make things less valuable or to compromise
+
+26:30.600 --> 26:35.640
+but just say look this is extremely important or our internet traffic goes through their
+
+26:36.120 --> 26:39.800
+router therefore it's important that we have control on the router but why don't we have control
+
+26:39.800 --> 26:45.480
+on the router is because the definition of the public infrastructure ends after the plug or before
+
+26:45.480 --> 26:50.520
+the plug or after the router and I don't think that that's extremely difficult to understand of
+
+26:50.520 --> 26:55.800
+course there are many technical and many more technical details when when it comes to router
+
+26:55.800 --> 27:00.360
+free domain when it comes to network infrastructure that's also why we have some amazing
+
+27:00.360 --> 27:06.680
+volunteers that always help us with their super important technical input but I really believe that
+
+27:07.560 --> 27:12.840
+the work that the FSFE is doing is also important on the instance so trying to educate
+
+27:12.840 --> 27:18.520
+policymakers on the importance of these topics and trying to educate more and more people on
+
+27:18.520 --> 27:23.480
+the importance of controlling the technology that we use every day I think that's a really nice
+
+27:23.480 --> 27:28.760
+phrase to head over to the question how our listeners can actually support us here as well because
+
+27:28.760 --> 27:34.440
+absolutely the network is dearly needed and it's also it's very good if we all talk about it
+
+27:34.440 --> 27:40.360
+because I just recently heard this phrase but I believe it's very true that when you are sick
+
+27:40.360 --> 27:46.600
+of hearing it it starts to sink in with some people at least and that's the point where you need
+
+27:46.600 --> 27:53.160
+to keep talking about it wow that's a very good way to put it yeah thank you yeah I will try to
+
+27:53.240 --> 28:00.840
+use it as well that's that's really true and yeah how can our listeners help us of course I was
+
+28:00.840 --> 28:06.120
+as we mentioned already course becoming a supporter or the FSFE was extremely important but also if
+
+28:06.120 --> 28:13.960
+you want to get your hands a bit dirty and tinker a bit this is I think one of the most practical
+
+28:13.960 --> 28:19.320
+topics of the FSFE where you can really tinker so if you want to exercise router freedom we have
+
+28:19.320 --> 28:26.520
+our router freedom tech weekend done by our amazing Dutch volunteer that really explains how to
+
+28:26.520 --> 28:31.960
+exercise this freedom so there is also a decision tree that basically helps you guide through the
+
+28:31.960 --> 28:37.960
+decision of installing your own routers and also gives you a lot of technical details in how to
+
+28:37.960 --> 28:45.400
+do so because sometimes another way for an internet service provider to actually not make you exercise
+
+28:45.560 --> 28:50.200
+this right is saying yes you can use your own routers but I will not give you any kind of technical
+
+28:50.200 --> 28:55.960
+details or now to connect the to my network so that's also way to harm router freedom so that's why
+
+28:55.960 --> 29:01.960
+our volunteers put together this this guide to help people that want to start having their own router
+
+29:01.960 --> 29:09.720
+and also another way is to check whether your country defined the NTP and if yes where did
+
+29:09.720 --> 29:15.400
+they define the NTP if not try to understand why didn't define the NTP which is the organization
+
+29:15.400 --> 29:20.280
+that should define the NTP which regulatory authority should define the NTP because we also
+
+29:20.280 --> 29:26.760
+maintain a live tracker map of router freedoms country by country so basically listeners can see
+
+29:26.760 --> 29:31.880
+whether they already covered or not and if they're not or if the information is missing they can
+
+29:31.880 --> 29:37.880
+definitely reach out to us and we're happy to update this this map and another way of is of course
+
+29:37.880 --> 29:46.120
+by spreading the word putting router freedom stickers on on free routers postcards or hashtag router
+
+29:46.120 --> 29:51.800
+freedom Free Software share this episode if you think you liked it anyways there are many ways
+
+29:51.800 --> 29:57.400
+you can help us both if you're technical or not technical person so you have nice skills I would
+
+29:57.400 --> 30:06.040
+say I like that and yeah thank you so much Dario for working walking not working but working as
+
+30:06.760 --> 30:11.800
+working through all of this and working me through all of this it was really nice to talk with you. thank you
+
+30:11.800 --> 30:16.280
+so much for taking the time and yeah thank you so much for being here at the software freedom
+
+30:16.280 --> 30:20.840
+podcast thank you Bonnie was really a pleasure I wish you a pleasant day and I hope you have a good
+
+30:20.840 --> 30:26.200
+of a lot of success today as well thank you all right this was the software freedom podcast if you
+
+30:26.200 --> 30:31.240
+liked this episode please recommend it to your friends and rate it stay tuned for more inspiring
+
+30:31.240 --> 30:36.680
+conversations that explore the importance of software freedom and its impact on our digital lives
+
+30:36.680 --> 30:42.600
+this podcast is presented to you by the Free Software Foundation Europe as mentioned we are a
+
+30:42.600 --> 30:49.240
+charity that works on promoting software freedom if you like our work please consider supporting us
+
+30:49.240 --> 31:03.640
+for further information you find more information on the https://fsfe.org/donate Thank you so much bye bye
+

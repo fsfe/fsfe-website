@@ -72,11 +72,7 @@ if ('basic_sticker' == $_POST['packagetype']) {
     $msg_to_staff .= "Custom package:\n"
       .htmlspecialchars($_POST['specifics'])."\n";
 }
-$languages = implode(',', $_POST['languages']);
 $msg_to_staff .= "\n"
-  ."Preferred language(s) (if available):\n"
-  ."{$languages}\n"
-  ."\n"
   ."The material is going to be used for:\n"
   .htmlspecialchars($_POST['usage'])."\n";
 
@@ -115,7 +111,7 @@ if ('y' == $subcd or 'y' == $subnl or $donate) {
         'address' => htmlspecialchars($_POST['street']),
         'zip' => htmlspecialchars($_POST['zip']),
         'city' => htmlspecialchars($_POST['city']),
-        'langugage' => htmlspecialchars($_POST['language']),
+        'language' => htmlspecialchars($_POST['language']),
         'country' => $countrycode,
     ];
     if ('y' == $subcd) {

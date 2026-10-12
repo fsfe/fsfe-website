@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<activityset>
+  <version>3</version>
+
+  <activity id="routers" date="2013-11-01" status="active">
+    <title>Router Freedom</title>
+    <description>
+      Alors que nous devrions être libre de choisir les appareils que nous utilisons dand notre vie privé,
+      certains fournisseurs d’accès à internet européen imposent à leur clients le type d’appareil à utiliser pour se connecter à internet,
+      ou discriminent les détenteurs d’appareils alternatifs.
+      Ce qui porte atteinte à notre liberté fondamentale de choix.
+    </description>
+    <link href="/activities/routers/routers.html"/>
+    <image url="/graphics/logos/RouterFreedom-logo.png" alt=""/>
+    <order priority="4" highlight="yes"/>
+    <tags>
+      <tag key="deviceneutrality"/>
+    </tags>
+  </activity>
+</activityset>

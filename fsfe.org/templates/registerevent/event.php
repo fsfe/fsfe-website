@@ -14,7 +14,6 @@
     } else {
         $location = ' in '.$location;
     } ?>
-    <series><?php echo htmlspecialchars($eventseries);echo "-";echo htmlspecialchars($eventseriesyear); ?></series>
     <title><?php echo htmlspecialchars($title).$location; ?></title>
     <group>
      <name><?php echo htmlspecialchars($groupname); ?></name> 

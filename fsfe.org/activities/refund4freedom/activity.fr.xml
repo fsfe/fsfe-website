@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<activityset>
+  <version>1</version>
+
+  <activity id="refund4freedom" date="2025-05-25" status="active">
+    <title>Refund4Freedom</title>
+    <description>
+      Lors de l’achat d’un nouvel ordinateur portable, vous vous retrouvez souvent avec un système d’exploitation préinstallé
+      et imposé : Microsoft Windows. C’est injuste. L’initiative « Refund4Freedom », remboursement pour la liberté,
+      explique aux utilisateurs comment se faire rembourser dans ces cas-là
+      et exige la fin de cette pratique qui restreint la liberté des utilisateurs.
+    </description>
+    <link href="/activities/refund4freedom/refund4freedom.html"/>
+    <image url="/graphics/logos/refund4freedom.png" alt=""/>
+    <order priority="2" highlight="yes"/>
+    <tags>
+      <tag key="deviceneutrality"/>
+    </tags>
+  </activity>
+</activityset>
+ 

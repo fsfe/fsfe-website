@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<activityset>
+  <version>1</version>
+
+  <activity id="devices" date="2024-10-18" status="active">
+    <title>DMA: Le litige d’Apple</title>
+    <description>
+      La FSFE intervient pour protégé le Logiciel Libre dans deux affaires judiciaires majeures liées à Apple et à la Commission Européenne.
+      Apple essaie d’échapper aux obligations découlant du règlement sur les marchés numériques (ou DMA).
+      La FSFE cherche à contraindre Apple à se conformer au DMA d’une manière favorable aux développeurs.
+    </description>
+    <link href="/activities/apple-litigation/apple-litigation.html"/>
+    <image url="/graphics/logos/applelitigation-logo.png" alt=""/>
+    <order priority="5" highlight="yes"/>
+    <tags>
+      <tag key="deviceneutrality"/>
+    </tags>
+  </activity>
+</activityset>

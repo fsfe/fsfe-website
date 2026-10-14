@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<activityset>
+  <version>2</version>
+
+  <activity id="publiccode" date="2017-09-13" status="active">
+    <title>Public Money? Public Code!</title>
+    <description>
+      Pourquoi les logiciels créés grâce à l’argent du contribuable ne sont-ils pas distribués en tant que logiciels libres ?
+      Nous souhaitons la mise en place d’une législation qui impose que les logiciels financés par le contribuable
+      et développés pour eux soient mis à disposition sous une licence de Logiciel Libre.
+      Si l’argent provient de fonds publics, le code devrait lui être public.
+      Un logiciel financé par le peuple doit être accessible par le peuple !
+    </description>
+    <link href="/activities/publiccode/publiccode.html"/>
+    <image url="/graphics/logos/publiccode.png" alt=""/>
+    <order priority="9" highlight="yes"/>
+    <tags>
+      <tag key="pmpc"/>
+    </tags>
+  </activity>
+</activityset>

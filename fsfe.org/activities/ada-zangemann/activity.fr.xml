@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<activityset>
+  <version>1</version>
+
+  <activity id="childrensbook" date="2021-12-01" status="active">
+    <title>«Ada &amp; Zangemann» livre et film</title>
+    <description>
+      Le livre illustré et film d’animation « Ada &amp; Zangeman Un conte sur les logiciels, le skateboard et la glace à la framboise » par la FSFE,
+      raconte l’histoire de Zangemann un inventeur connu et Ada une jeune fille curieuse.
+      Ada commence à expérimenter avec le matériel et les logiciels, puis se rend compte au fur et à mesure à quel point il est essentiel,
+      pour elle comme pour les autres, de maîtriser la technologie.
+    </description>
+    <link href="/activities/ada-zangemann/"/>
+    <image url="/graphics/logos/childrensbook.png" alt=""/>
+    <order priority="8" highlight="yes"/>
+    <tags>
+        <tag key="young-generation"/>
+    </tags>
+  </activity>
+</activityset>

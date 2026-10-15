@@ -1,10 +1,4 @@
-<<<<<<< HEAD
-FROM debian:13
-
-COPY --from=ghcr.io/astral-sh/uv:latest /uv /uvx /bin/
-=======
 FROM alpine
->>>>>>> ae8c2bbb1f (feat: switch images to alpine)
 
 # Install deps
 RUN apk add --no-cache \

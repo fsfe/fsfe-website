@@ -2,7 +2,16 @@
 
 .card-grid {
   .make-row;
-
+  
+ // Centers the last card when the total number of cards is odd
+  &.odd {
+    .card:last-child {
+      float: none !important; // overrides Bootstrap's .make-md-column float: left
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  
   .card {
     .make-md-column(6);
     display: flex;

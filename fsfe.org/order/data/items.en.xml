@@ -56,8 +56,18 @@
     <available size="2XL" a="54" b="66"/>\
     <!--image small="data/pictures/slimfit-cool-kids-1-small.webp" large="data/pictures/slimfit-cool-kids-1-large.webp"/>
     <image small="data/pictures/slimfit-cool-kids-2-small.webp" large="data/pictures/slimfit-cool-kids-2-large.webp"/ -->
-    <image small="data/pictures/tshirt-cool-kids-1-small.webp" large="data/pictures/tshirt-cool-kids-1-large.webp"/>
-    <image small="data/pictures/tshirt-cool-kids-2-small.webp" large="data/pictures/tshirt-cool-kids-2-large.webp"/>
+    <image small="data/pictures/tshirt-cool-kids-green-1-small.webp" large="data/pictures/tshirt-cool-kids-green-1-large.webp"/>
+    <image small="data/pictures/tshirt-cool-kids-green-2-small.webp" large="data/pictures/tshirt-cool-kids-green-2-large.webp"/>
+  </item>
+  <item type="slimfit" id="slimfit-cool-kids-green" price="25.00" date="2026-10-16">
+    <available size="XS" a="41.5" b="57.5"/>
+    <available size="S" a="42.5" b="59.5"/>
+    <available size="M" a="46.5" b="62.5"/>
+    <available size="L" a="49" b="63"/>
+    <available size="XL" a="50.5" b="64.5"/>
+    <available size="2XL" a="54" b="66"/>\
+    <image small="data/pictures/tshirt-cool-kids-green-1-small.webp" large="data/pictures/tshirt-cool-kids-green-1-large.webp"/>
+    <image small="data/pictures/tshirt-cool-kids-green-2-small.webp" large="data/pictures/tshirt-cool-kids-green-2-large.webp"/>
   </item>
   <item type="tshirt" id="tshirt-pmpc" price="25.00" date="2026-01-27">
     <available size="XS" a="46" b="66"/>
@@ -94,6 +104,24 @@
     <available size="3XL" a="70" b="82"/>
     <image small="data/pictures/tshirt-nocloud-petrol-front-small.webp" large="data/pictures/tshirt-nocloud-petrol-front-large.webp"/>
     <image small="data/pictures/tshirt-nocloud-petrol-back-small.webp" large="data/pictures/tshirt-nocloud-petrol-back-large.webp"/>
+  </item>
+  <item type="tshirt" id="tshirt-nocloud-burgundy" price="25.00" date="2026-10-16">
+    <!-- available size="XS" a="48" b="68"/ -->
+    <!-- available size="S" a="50" b="70"/ -->
+    <available size="M" a="53" b="70"/>
+    <available size="L" a="57" b="72"/>
+    <available size="XL" a="55" b="75"/>
+    <available size="XXL" a="57" b="77"/>
+    <available size="3XL" a="70" b="82"/>
+    <image small="data/pictures/tshirt-nocloud-burgundy-1-small.webp" large="data/pictures/tshirt-nocloud-burgundy-1-large.webp"/>
+    <image small="data/pictures/tshirt-nocloud-burgundy-2-small.webp" large="data/pictures/tshirt-nocloud-burgundy-2-large.webp"/>
+  </item>
+  <item type="kids" id="kidstshirt-coolkids-yellow" price="25.00" date="2026-10-16">
+    <available size="3-4 Year"/>
+    <available size="5-6 Year"/>
+    <available size="7-8 Year"/>
+    <available size="9-11 Year"/>
+    <image small="data/pictures/kidstshirt-coolkids-yellow-1-small.webp" large="data/pictures/kidstshirt-coolkids-yellow-1-large.webp"/>
   </item>
   <item type="hoodie" id="hoodie-retro" price="60.00" date="2026-01-27">
     <!-- available size="S" a="x" b="y"/ -->
@@ -152,6 +180,10 @@
   <item type="socks" id="socks-ilovefs" price="15.00" date="2024-01-12">
     <available size="#"/>
     <image small="data/pictures/socks-ilovefs-1-small.webp" large="data/pictures/socks-ilovefs-1-large.webp"/>
+  </item>
+  <item type="beanie" id="beanie-fsfe" price="15.00" date="2026-10-16">
+    <available size="#"/>
+    <image small="data/pictures/beanie-fsfe-1-small.webp" large="data/pictures/beanie-fsfe-1-large.webp"/>
   </item>
   <!-- item type="other" id="card-christmas-blue" price="20.00" date="2019-12-09">
     <available size="#"/>

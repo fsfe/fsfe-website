@@ -117,22 +117,22 @@
     <image small="data/pictures/tshirt-nocloud-burgundy-2-small.webp" large="data/pictures/tshirt-nocloud-burgundy-2-large.webp"/>
   </item>
   <item type="kids" id="kidstshirt-coolkids-yellow" price="25.00" date="2026-10-16">
-    <available size="3-4 Year (98-104 cm)"/>
-    <available size="5-6 Year (110-116 cm)"/>
-    <available size="7-8 Year (122-128 cm)"/>
-    <available size="9-11 Year (134-146 cm)"/>
+    <available size="3-4 Year"/>
+    <available size="5-6 Year"/>
+    <available size="7-8 Year"/>
+    <available size="9-11 Year"/>
     <image small="data/pictures/kidstshirt-coolkids-yellow-1-small.webp" large="data/pictures/kidstshirt-coolkids-yellow-1-large.webp"/>
   </item>
-  <item type="hoodie" id="hoodie-retro" price="60.00" date="2026-01-27">
-    <!-- available size="S" a="x" b="y"/ -->
-    <!-- available size="M" a="x" b="y"/ -->
-    <!-- available size="L" a="x" b="y"/-->
-    <!-- available size="XL" a="x" b="y"/-->
-    <!-- available size="2XL" a="x" b="y"/ -->
+  <!-- <item type="hoodie" id="hoodie-retro" price="60.00" date="2026-01-27">
+    <available size="S" a="x" b="y"/>
+    <available size="M" a="x" b="y"/>
+    <available size="L" a="x" b="y"/>
+    <available size="XL" a="x" b="y"/>
+    <available size="2XL" a="x" b="y"/>
     <image small="data/pictures/hoodie-retro-1-small.webp" large="data/pictures/hoodie-retro-1-large.webp"/>
     <image small="data/pictures/hoodie-retro-2-small.webp" large="data/pictures/hoodie-retro-2-large.webp"/>
     <image small="data/pictures/hoodie-retro-3-small.webp" large="data/pictures/hoodie-retro-3-large.webp"/>
-  </item>
+  </item> -->
   <!--item type="hoodie" id="hoodie-fourfreedoms-38c3-blue" price="60.00" date="2024-10-08">
     <available size="XS" a="49" b="68"/>
     <available size="S" a="52" b="70"/>

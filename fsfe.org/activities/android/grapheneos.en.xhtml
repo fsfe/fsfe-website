@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html>
+  <version>1</version>
+  <head>
+    <title>GrapheneOS review</title>
+  </head>
+  <body class="article">
+    <p id="category">
+      <a href="/activities/android/android.html">Free Your Android</a>
+    </p>
+    <h1>GrapheneOS review</h1>
+    <h2 id="introduction">Introduction</h2>
+    <p>GrapheneOS is an Android distribution based on the Android Open Source Project (AOSP) developed by the GrapheneOS Foundation. Its focus is security and privacy, so it is close to AOSP with extra hardening on top. It supports Pixel devices exclusively due to GrapheneOS’s requirement for certain hardware security features, and, through a partnership with Motorola, it will support at least one of their devices with support expected to start in 2027.</p>
+    <p>For our tests, we used GrapheneOS 2025090300 through 2026060100. We also have <a href="/activities/android/additionalinfo.html#test-setup">further information on our test setup</a>.</p>
+    <h2 id="installation">Installation</h2>
+    <p>GrapheneOS provides a web-based installer using WebUSB that makes the process very streamlined. In our tests, with one device, we experienced an issue with the installer while relocking the bootloader and had to fall back to issuing commands from the CLI. The fallback is well documented. During other setups on the same device and with our other test device, the web-based installer worked and walked us through the necessary steps, and we ended up with a complete installation. In the end, the installer always locks the bootloader.</p>
+    <h2 id="general-impression">General impression</h2>
+    <p>GrapheneOS does not make many choices for its users and comes with the typical AOSP apps, and users can install other apps of their choice. Two things are noteworthy here: The icons of bundled apps are all grey, which gives a distinct look, different from all other Android distributions. Many apps are the standard AOSP versions that have an older look and feel because GrapheneOS ships them as is and does not apply any modernisations here. This means users will typically choose other apps of their choice for these purposes.</p>
+    <p>The only app store that comes with GrapheneOS is called App Store and carries mostly GrapheneOS-specific apps, Accrescent, another app store focused on security, Android Auto, Google Play Services, and Google Play Store, as well as Markup from Google. Users can install other app stores. The one often recommended in GrapheneOS communities for F-Droid repos is Neo Store, but those are user choices; nothing comes preinstalled as a general source of apps.</p>
+    <p>As you can see from the app selection on the GrapheneOS store, this distribution is unique here because instead of relying on a Free Software reimplementation of Google Play Services (as others do with microG), GrapheneOS runs apps without that, and in case a user needs Play Services, it offers the original in a sandbox without privileged permissions. Offering the original Google Play Store goes in a similar direction: GrapheneOS says in their usage guide that getting apps offered through the Google Play Store directly from there instead of an intermediary like the Aurora Store is the most secure way and thus the non-free app store is the best way for them, even though it involves running non-free software.</p>
+    <p>Overall, GrapheneOS is pretty unobtrusive and feels like what you would expect from an AOSP distribution without much customisation.</p>
+    <h2 id="backups">Backups</h2>
+    <p>GrapheneOS ships SeedVault as the default backup solution. It behaves as in any other distribution. Please have a look at our <a href="/activities/android/additionalinfo.html#seedvault">general explanation of SeedVault</a> for more details.</p>
+    <h2 id="battery-life">Battery life</h2>
+    <p>In our tests, GrapheneOS did not have significantly different battery life. In theory, the compilation ahead of time should improve battery life during regular use, but we did not see major changes. We have <a href="/activities/android/additionalinfo.html#battery-life">more detailed information about this</a> that is the same across all tested distributions.</p>
+    <h2 id="software-support">Software support</h2>
+    <p>We looked at a number of typical Free Software apps and non-free software apps for compatibility. <a href="/activities/android/additionalinfo.html#why-we-tested-non-free-apps">Here is why</a>.</p>
+    <p>All Free Software and non-free messaging apps worked, but if an app relies solely on Google Play Services for notifications, the only way to get them is to install sandboxed Google Play Services. Fortunately, typical messaging apps provide WebSocket fallbacks. UnifiedPush is another option here for Free Software apps to combine battery efficiency and independence from Google.</p>
+    <p>Navigation apps worked without problems, but if they relied on the Google Maps APIs, they did not display maps without sandboxed Google Play. Location services worked quickly either way because GrapheneOS provides network location information as an opt-in through its own proxy to Apple’s location service that strips identifying details.</p>
+    <p>Streaming and media apps are a realm of non-free apps, since this area typically deals with Digital Restrictions Management (DRM). To our surprise, all tested apps were able to acquire a license and play DRM-encumbered media, both with and without Google Play.</p>
+    <p>Delivery and transit apps had mixed results. Some refused to work at all without Play Services; others started, but had some broken functionality and gave an error message about missing Play Services on key features. With sandboxed Play Services, all apps worked flawlessly.</p>
+    <p>Banking is usually a field where users run into problems because a bank cannot be easily changed and there is no choice in terms of which app to use. In our tests, we encountered no issues blocking their use. This also changes from release to release, and our results are by no means representative of the whole range of banking apps.</p>
+    <p>Overall, GrapheneOS is very different here from other Android distributions that rely on microG. Compatibility without sandboxed Play Services was lower than on distributions with microG and significantly higher with Google Play present. However, this means running a non-free system in the background, even if it is sandboxed, which means it does not have more privileges than any other app.</p>
+    <h2 id="esim">eSIM</h2>
+    <p>By default, GrapheneOS ships with eSIM management disabled. This is a privacy decision because GrapheneOS uses non-free Google code for eSIM provisioning and wants the user to explicitly opt in. This means that any eSIM already present on the device before flashing will continue to work, but adding, removing, and transferring eSIM profiles is disabled. Once a user opts in, full eSIM management works without Google Play present.</p>
+    <h2 id="security-and-privacy">Security and privacy</h2>
+    <p>Security and privacy are the main focus of GrapheneOS and that is where its strengths lie. Many of its improvements also get upstreamed, so users of Pixel devices with other Android distributions and also users of the Linux kernel in general profit from that work.</p>
+    <p>Some of the unique security features are:</p>
+    <ul>
+      <li>a hardened memory allocator to prevent and detect memory corruption exploits</li>
+      <li>hardware memory tagging is always on for supported apps on supported hardware with a more advanced integration than in stock Android</li>
+      <li>duress PIN that triggers a complete device wipe</li>
+      <li>automatic reboot to completely lock down a device if not in use</li>
+      <li>PIN scramble option that randomises the layout of the PIN pad</li>
+      <li>Auditor app for hardware-backed device integrity verification via the secure element</li>
+      <li>storage scopes that limit which directories an app can see</li>
+      <li>contact scopes that provide different sets of contacts to different apps</li>
+      <li>USB port control</li>
+      <li>secure paste that isolates the clipboard between apps</li>
+    </ul>
+    <p>Further security enhancements on GrapheneOS are the per-app network permission toggle and the sensors permission toggle. These increase privacy and are designed so the apps don’t detect the change.</p>
+    <p>User management exists in AOSP, but is significantly extended in GrapheneOS. You can set up several different user profiles, decide whether they can install software, and so on. This could be used for a multi-user setup, but in practice, it is typically used to separate concerns. For example, you might want to isolate an app more than just by permissions or you could install Google Play Services in one profile, but not another. Another typical use of this feature is to use an additional profile as the main profile instead of the admin profile, and then delete it when crossing a border. The reason here is that the additional profiles can easily be removed as opposed to the admin profile. GrapheneOS adds support for more profiles and shutting down a profile so it is no longer in memory and the data is at rest, meaning encryption keys and so on are out of memory as well. It also allows forwarding notifications to another profile. The downside is the one that typically comes with increased privacy: configuring and maintaining this degree of separation of apps is a bit more complicated than just installing it.</p>
+    <p>GrapheneOS compiles all code ahead of time instead of doing just-in-time compilation like Android generally does. This prevents some exploits, but makes app installs take longer. After an OS update, certain core components and apps also need to be recompiled, which takes some time.</p>
+    <h3 id="relocking-the-bootloader">Relocking the bootloader</h3>
+    <p>As stated in the installation section of this report, relocking the bootloader is officially supported and standard procedure in the installer for all supported devices. We also have <a href="/activities/android/additionalinfo.html#bootloader-security">more details about why this matters</a>.</p>
+    <h3 id="updates">Updates</h3>
+    <p>GrapheneOS delivers updates as OTA packages through its own update system. The update gets installed to a second system partition and afterwards, a reboot activates it without much downtime.</p>
+    <p>Update frequency is high. Kernel updates usually get delivered before stock Android delivers them because Google only updates kernels for quarterly releases. Security updates also get delivered quickly, ahead of other distributions and on par with stock Android. GrapheneOS also lets users choose to include security preview releases. These are binary only until an embargo lifts, but they will ultimately end up as Free Software. This is because in 2025, Google started including patches in a security bulletin about three months after providing them to OEMs. GrapheneOS receives these updates through an OEM partnership and are allowed to ship the patches as soon as they receive them, but they cannot release the source yet due to the embargo Google places on them. This puts all Android developers in a tricky situation: Most don’t get access to these patches early, and those who do cannot receive them as Free Software. Choosing between immediate security with eventual freedom and later security with freedom throughout is a bad situation to be in.</p>
+    <p>Just like other Android distributions, GrapheneOS has no way of influencing the vendor security patch level beyond including what is available. They do this quickly, but it means once a vendor stops supporting a device, GrapheneOS also stops supporting it. Theoretically, it would be possible to continue supporting those devices for some time, but not at the security standards GrapheneOS sets for itself. GrapheneOS does sometimes ship extended support releases, but only as a harm-reduction measure and with a warning that they lack full patches.</p>
+    <h3 id="data-transmission">Data transmission</h3>
+    <h4 id="startup-and-idle-behaviour">Startup and idle behaviour</h4>
+    <p>At idle with no additional setup, GrapheneOS makes connectivity checks:</p>
+    <pre><code>GET http://connectivitycheck.grapheneos.network/generate_204
+GET https://connectivitycheck.grapheneos.network/generate_204
+GET https://time.grapheneos.org/generate_204
+GET https://samsung.psds.grapheneos.org/p4/42F3</code></pre>
+    <p>The first two are standard Android behaviour to detect if you are on a network with a login page. The latter two are an HTTPS time sync (setting the clock via an X-Time header instead of the Android standard via SNTP) and GPS assistance data. All of these requests go to GrapheneOS infrastructure rather than to Google. In addition, the requests do not transmit device identifiers beyond standard HTTP headers. The User-Agent is a generic frozen desktop Chrome User-Agent that does not reveal anything about the device.</p>
+    <p>Beyond that, the updater checks for new versions regularly, the GrapheneOS App Store and Vanadium check for component updates and certificate transparency log lists, and the system performs a DNS-over-TLS test query. The updater does reveal the device, release channel, and current version.</p>
+    <p>Even with sandboxed Play Services installed, without any interaction, these services do not contact Google. Once Google Play Services are fully configured, the device does periodic connectivity checks with Google infrastructure as well and background connections to receive push notifications.</p>
+    <h4 id="device-attestation">Device attestation</h4>
+    <p>GrapheneOS contacts its own reverse proxy to Google’s Remote Key Provisioning service for hardware-backed key attestation and the User-Agent includes the device model, Android version, and build number. The reverse proxy hides the user IP and passes the information on to Google.</p>
+    <p>The device attestation for SafetyNet/Play Integrity failed in our tests. SafetyNet/Play Integrity in turn matter for certain apps that determine whether they should run on this system. Installing the non-free sandboxed Play Services still does not make this pass.</p>
+    <h4 id="browser">Browser</h4>
+    <p>The default browser in GrapheneOS is Vanadium, a privacy- and security-hardened Chromium fork. On launch, it does not make any network connections besides update checks to GrapheneOS infrastructure. Search suggestions come from DuckDuckGo by default, with each character transmitted to the search engine. Like Chromium, Vanadium uses a simple “Android 10” version string and the device model “K” in its User-Agent regardless of the actual device. None of these interactions set any cookies or include any device-specific tracking.</p>
+    <h4 id="app-store">App Store</h4>
+    <p>The GrapheneOS App Store also made requests only to GrapheneOS infrastructure, but as noted above, it does not carry many apps. Neo Store, a frontend for F-Droid repos, connects to that infrastructure and nothing else.</p>
+    <p>Using the non-free Google Play Store adds a lot of connections to Google. The device then does a device checkin with a protobuf payload containing hardware information in exchange for persistent credentials. There are also connections to the ad syndication endpoint, Firebase push notification registration, and DroidGuard bytecode gets downloaded. This all happens just by starting the Play Store. This behaviour is to be expected because it is the original Play Store.</p>
+    <h2 id="summary">Summary</h2>
+    <p>GrapheneOS is an Android distribution with a strong focus on security through countless changes to make the phone more secure. In the same vein, updates arrive very quickly. Network connections are limited to a minimum, they transmit minimal data, and most of it goes to GrapheneOS infrastructure.</p>
+    <p>Installing Play Services introduces a significant non-free component that also makes many connections to Google. At the same time, access to user data is restricted. In terms of compatibility, this improves things compared to microG. In terms of data transmission, it makes more connections in some respects, but with less access to user data. In terms of software freedom, offering only a non-free solution while a freer solution like microG exists and could possibly also be sandboxed is a downside.</p>
+    <p>The system does not make many decisions for users, who are free to install the apps they want, and the extended profile management makes isolating apps from one another very simple. Overall, GrapheneOS is pleasant to use, and knowing that security is a hard priority for the developers makes it a good choice even for people with additional security concerns.</p>
+  </body>
+  <author id="snow"/>
+  <date>
+    <original content="2026-10-16"/>
+  </date>
+  <sidebar/>
+  <translator/>
+</html>

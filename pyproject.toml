@@ -3,7 +3,7 @@ name = "fsfe-website-build"
 version = "0.0.0"
 description = "Python tooling to build the fsfe websites"
 readme = "README.md"
-requires-python = "==3.14.*"
+requires-python = "==3.15.*"
 dependencies = [
   "dacite",  # dict to dataclass conversion
   "lxml",  # XML parser

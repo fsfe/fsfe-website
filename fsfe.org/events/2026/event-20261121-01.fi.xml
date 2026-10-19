@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<eventset>
+  <version>1</version>
+  <event start="2026-11-21T11:11:00Z" end="2027-11-21T11:11:00Z">
+        <country>ONLINE</country>
+    <city>Berlin </city>
+    <series>-</series>
+    <title>Test summit: test event. DO NOT MERGE (online)</title>
+    <group>
+     <name>None</name> 
+     <url></url>
+    </group>
+
+    <body>
+      <p>First event</p>
+    </body>
+
+    
+    <tags>
+            <tag key="talk"/>
+<tag key="panel"/>
+<tag key="infobooth"/>
+<tag key="localgroup"/>
+      <tag key="front-page"/>
+    </tags>
+  </event>
+</eventset>

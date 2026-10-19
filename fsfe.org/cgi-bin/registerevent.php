@@ -95,8 +95,11 @@ function parse_submission()
         'location' => $location,
         'countryname' => $countryname,
         'countrycode' => $countrycode,
+        'city' => isset($_POST['city']) ? htmlspecialchars($_POST['city']): '',
         'tags' => isset($_POST['tags']) ? $_POST['tags'] : '',
         'lang' => isset($_POST['lang']) ? htmlspecialchars($_POST['lang']) : '',
+        'eventseries'  => isset($_POST['eventseries']) ? $_POST['eventseries'] : '',
+        'eventseriesyear'  => isset($_POST['eventseriesyear']) ? $_POST['eventseriesyear'] : ''
     ];
 
     $event = eval_template('registerevent/event.php', $data);
@@ -471,6 +474,7 @@ if (
     and $_POST['startdate'] > date('Y-M-d', strtotime('-1 year', time()))
     and eval_date($_POST['enddate'])
     and !stripos($_POST['email'], 'example.com')
+    and !( (strcmp($_POST['eventseries'],"oneshot")===0) && (strcmp($_POST['eventseriesyear'],"202X")===0))
 ) {
     $parsed_information = parse_submission();
     $pr_url = '';
@@ -521,7 +525,12 @@ if (
         'notice' => '', // TODO display some error code here
     ]);
 } else {
+    $error_message = "";
+    if ( (strcmp($_POST['eventseries'],"oneshot")===0) && (strcmp($_POST['eventseriesyear'],"202X")!== 0))
+    {
+        $error_message = "please,set the even series year / edition correctly";
+    }
     echo eval_xml_template('registerevent/error.en.html', [
-        'notice' => '', // TODO display the error here
+        'notice' => $error_message,
     ]);
 }

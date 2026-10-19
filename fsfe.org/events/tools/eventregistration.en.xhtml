@@ -75,6 +75,7 @@
           <option value="et">Eesti</option>
           <option value="fi">Suomi</option>
           <option value="fr">Français</option>
+          <option value="gl">Galego</option>
           <option value="hr">Hrvatski</option>
           <option value="hu">Magyar</option>
           <option value="it">Italiano</option>
@@ -131,6 +132,22 @@
         <p>
           <strong>For Group meetings</strong>: FSFE "name" local
           group/country team meeting, e.g. FSFE Zurich local group meeting
+        </p>
+      </div>
+
+      <label for="eventseries" class="required">Conference / event series<span class="star">*</span></label>
+      <input name="eventseries" value="one-shot" required="required" type="text"/>
+      <div class="help-block">
+        <p>
+          Please, if your event is part of a conference or a series of events eg SFSCON. Please, fill the event series box with the name and the year with the series year.
+          If its a one date event, leave the input box as it is.
+        </p>
+      </div>
+      <label for="eventseriesyear">Year / Edition<span class="star">*</span></label>
+      <input name="eventseriesyear" value="202X" type="text"/>
+      <div class="help-block">
+        <p>
+          If your event is a one-shot, please don't modify the field. The form won't accept submissions part of a series which don't have a year/edition.
         </p>
       </div>
 
@@ -224,8 +241,7 @@
       <div class="checkbox">
         <label>
           <input type="checkbox" name="online" value="yes"/>
-          This is an online event. If you check this, please type/select a
-          random value for "City" and "Country" as these will not be displayed.
+          This is an online event. If you check this, please write online for "City" and select online. These will not be displayed.
         </label>
       </div>
 

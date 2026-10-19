@@ -40,8 +40,8 @@
     </xsl:if>
     <xsl:text>URL:</xsl:text>
     <xsl:choose>
-      <xsl:when test="$page != ''">
-        <xsl:value-of select="$page"/>
+      <xsl:when test="$link != ''">
+        <xsl:value-of select="$link"/>
       </xsl:when>
       <xsl:otherwise>https://fsfe.org/events/events.<xsl:value-of select="/buildinfo/@language"/>.html</xsl:otherwise>
     </xsl:choose>

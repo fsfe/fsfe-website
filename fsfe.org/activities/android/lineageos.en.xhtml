@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <html>
-  <version>1</version>
+  <version>2</version>
   <head>
     <title>LineageOS review</title>
   </head>
@@ -24,12 +24,12 @@
     <p>While it does not make major app choices for you, it does come with some built-in apps to provide functionality that non-free apps would typically provide on stock Android. These include the Twelve music player, the Camelot PDF reader, and the Aperture camera app. These apps are lightweight and functional, but a detailed review is beyond the scope of this test.</p>
     <p>LineageOS also provides custom wallpapers and app icons with a clean design.</p>
     <h2 id="backups">Backups</h2>
-    <p>LineageOS ships SeedVault as the default backup solution. LineageOS for microG additionally includes org.calyxos.backup.contacts as a system app and thus provides an additional backup path for contact data. Please have a look at our <a href="/activities/android/additionalinfo.html#seedvault">general explanation of SeedVault</a> for more details.</p>
+    <p>LineageOS ships SeedVault as the default backup solution and includes org.calyxos.backup.contacts as a system app and thus provides an additional backup path for contact data. Please have a look at our <a href="/activities/android/additionalinfo.html#seedvault">general explanation of SeedVault</a> for more details.</p>
     <h2 id="battery-life">Battery life</h2>
     <p>LineageOS had similar performance here as other distributions. We have <a href="/activities/android/additionalinfo.html#battery-life">more detailed information about this</a> that is the same across all tested distributions.</p>
     <h2 id="software-support">Software support</h2>
     <p>LineageOS does not ship an app store by default. Users can choose between F-Droid Basic and other stores. LineageOS for microG ships with F-Droid as a system app with the privileged extension, which allows background installation of updates without user interaction. This is an improvement in terms of convenience, but the privileged extension bypasses the standard app install confirmation dialog, which is not ideal because it allows F-Droid to silently install and remove any package. F-Droid Basic also has unattended update support without this potential security problem, but this only works for apps that target Android 10 or later; some apps do not do this for compatibility reasons.</p>
-    <p>LineageOS for microG also ships the Aurora Store pre-installed, a front-end for the Google Play Store that lets users install the many non-free apps from there. In our tests, many apps were reported as not being available for our device, but spoofing a different device resolved that (while introducing potential compatibility problems).</p>
+    <p>The Aurora Store, a front-end for the Google Play Store that lets users install the typically non-free apps from there, reported many apps as not being available for our device in our tests. Spoofing a different device resolved that (while introducing potential compatibility problems).</p>
     <p>We looked at a number of typical Free Software apps and non-free software apps for compatibility. <a href="/activities/android/additionalinfo.html#why-we-tested-non-free-apps">Here is why</a>.</p>
     <p>As expected, all Free Software messaging apps worked, but for some background notifications did not work. Even some Free Software apps expect to use the Google channels for push notifications, so without Google Play or microG present, they do not offer background notifications. Some apps open their own persistent connection to compensate, others support UnifiedPush. Individual background connections typically come with higher battery usage. The non-free messaging apps typically rely on Google Play of course, so on base LineageOS, they had no notifications. With microG present, they usually work.</p>
     <p>Navigation apps that rely on Google Maps APIs fail on LineageOS and cannot show any maps. Sometimes this means they cannot even start. Others start fine, but cannot show a location, even though GPS works fine in other apps. microG resolved those issues in all tested cases. Since microG uses BeaconDB for network location, the GPS fix happened much more quickly (near instant compared to about 10 seconds indoors). However, this did not work for microG as a user app. Selecting the location provider was possible, but did nothing. This is due to the fact that without system-level privileges, microG cannot register itself as a location provider.</p>

@@ -95,8 +95,11 @@ function parse_submission()
         'location' => $location,
         'countryname' => $countryname,
         'countrycode' => $countrycode,
+        'city' => isset($_POST['city']) ? htmlspecialchars($_POST['city']): '',
         'tags' => isset($_POST['tags']) ? $_POST['tags'] : '',
         'lang' => isset($_POST['lang']) ? htmlspecialchars($_POST['lang']) : '',
+        'eventseries'  => isset($_POST['eventseries']) ? $_POST['eventseries'] : '',
+        'eventseriesyear'  => isset($_POST['eventseriesyear']) ? $_POST['eventseriesyear'] : ''
     ];
 
     $event = eval_template('registerevent/event.php', $data);

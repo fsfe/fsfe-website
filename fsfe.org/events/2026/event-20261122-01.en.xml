@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<eventset>
+  <version>1</version>
+  <event start="2026-11-22T11:11:00Z" end="2026-11-23T11:11:00Z">
+        <country>DE</country>
+    <city>Berlin </city>
+    <series>one-shot-202X</series>
+    <title>Test in Berlin, Germany</title>
+    <group>
+     <name>None</name> 
+     <url></url>
+    </group>
+
+    <body>
+      <p>Some text </p>
+    </body>
+
+    
+    <tags>
+            <tag key="de">
+          Germany      </tag>
+            <tag key="talk"/>
+<tag key="panel"/>
+      <tag key="front-page"/>
+    </tags>
+  </event>
+</eventset>

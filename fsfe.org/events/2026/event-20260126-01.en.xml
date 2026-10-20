@@ -1,23 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <eventset>
-  <version>1</version>
-  <event start="2026-01-26T18:00:00Z" end="2026-01-26T21:15:00Z">
+    <version>1</version>
+    <event start="2026-01-26T18:00:00Z" end="2026-01-26T21:15:00Z">
+        <series>one-shot-2026</series>
+        <city>Frankfurt am Main</city>
+        <country>DE</country>
         <title>Rhein/Main Regular Meeting in Frankfurt am Main, Germany</title>
-    <group>
-     <name>Rhein/Main</name> 
-     <url></url>
-    </group>
+        <group>
+            <name>Rhein/Main</name>
+            <url></url>
+        </group>
 
-    <body>
-      <p>We will meet on Monday the 26th January 2026 from 19:00 at the <a href="https://ccc-ffm.de/hackerspace">CCC-FFM</a>, Hohenstaufenstraße 8, 60327 Frankfurt am Main (<a href="https://www.openstreetmap.org/node/3342079613">Open Streetmap</a>). The entrance is in the courtyard via a covered staircase.</p>
-    </body>
+        <body>
+            <p>We will meet on Monday the 26th January 2026 from 19:00 at the <a href="https://ccc-ffm.de/hackerspace">
+                CCC-FFM</a>, Hohenstaufenstraße 8, 60327 Frankfurt am Main (<a
+                    href="https://www.openstreetmap.org/node/3342079613">Open Streetmap</a>). The entrance is in the
+                courtyard via a covered staircase.
+            </p>
+        </body>
 
-    <link>https://docs.fsfe.org/e/en/LocalGroups/Active/RheinMain</link>
-    <tags>
+        <link>https://docs.fsfe.org/e/en/LocalGroups/Active/RheinMain</link>
+        <tags>
             <tag key="de">
-          Germany      </tag>
+                Germany
+            </tag>
             <tag key="localgroup"/>
-      <tag key="front-page"/>
-    </tags>
-  </event>
+            <tag key="front-page"/>
+        </tags>
+    </event>
 </eventset>

@@ -1,21 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <eventset>
-  <version>1</version>
-  <event start="2026-03-12T17:00:00Z" end="2026-03-12T18:30:00Z">
+    <version>1</version>
+    <event start="2026-03-12T17:00:00Z" end="2026-03-12T18:30:00Z">
+        <series>one-shot-2026</series>
+        <city>Online</city>
+        <country>ONLINE</country>
         <title>FSFE Zurich local group meeting (online)</title>
-    <group>
-     <name>Zurich</name> 
-     <url></url>
-    </group>
+        <group>
+            <name>Zurich</name>
+            <url></url>
+        </group>
 
-    <body>
-      <p>We will discuss the topics outlined in our agenda. You&#039;re welcome to join us!</p>
-    </body>
+        <body>
+            <p>We will discuss the topics outlined in our agenda. You&#039;re welcome to join us!</p>
+        </body>
 
-    <link>https://docs.fsfe.org/en/LocalGroups/Active/Zurich/Monatstreffen/2026-03-12</link>
-    <tags>
+        <link>https://docs.fsfe.org/en/LocalGroups/Active/Zurich/Monatstreffen/2026-03-12</link>
+        <tags>
             <tag key="localgroup"/>
-      <tag key="front-page"/>
-    </tags>
-  </event>
+            <tag key="front-page"/>
+        </tags>
+    </event>
 </eventset>

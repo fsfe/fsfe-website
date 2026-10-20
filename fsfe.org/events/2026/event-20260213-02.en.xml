@@ -1,33 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 <eventset>
-  <version>1</version>
-  <event start="2026-02-13T17:00:00Z" end="2026-02-13T20:00:00Z">
+    <version>1</version>
+    <event start="2026-02-13T17:00:00Z" end="2026-02-13T20:00:00Z">
+        <series>one-shot-2026</series>
+        <city>Warsaw</city>
+        <country>PL</country>
         <title>I Love Free Software Day at Warsaw Hackerspace in Warsaw, Poland</title>
-    <group>
-     <name>Poland</name> 
-     <url></url>
-    </group>
+        <group>
+            <name>Poland</name>
+            <url></url>
+        </group>
 
-    <body>
-      <p>In Warsaw Hackerspace, we are celebrating the ‘I Love Free Software Day’ with Free Software Foundation Europe&#039;s (FSFE) and Warsaw Hackerspace.</p>
-      
-      <p><ul>
-      <li>📅 The celebrations will be on the 13th of February 2026, 18:00 (CET)</li>
-      <li>📍 Warsaw Hackerspace, Hackerspace address: Żelazna 103A, 01-017 Warsaw.</li>
-      <li> Programm: Agenda and more information coming soon.</li>
-      </ul>
-      </p>
-    </body>
+        <body>
+            <p>In Warsaw Hackerspace, we are celebrating the ‘I Love Free Software Day’ with Free Software Foundation
+                Europe&#039;s (FSFE) and Warsaw Hackerspace.
+            </p>
 
-    <link>https://hackerspace.pl/</link>
-    <tags>
+            <p>
+                <ul>
+                    <li>📅 The celebrations will be on the 13th of February 2026, 18:00 (CET)</li>
+                    <li>📍 Warsaw Hackerspace, Hackerspace address: Żelazna 103A, 01-017 Warsaw.</li>
+                    <li>Programm: Agenda and more information coming soon.</li>
+                </ul>
+            </p>
+        </body>
+
+        <link>https://hackerspace.pl/</link>
+        <tags>
             <tag key="pl">
-          Poland      </tag>
+                Poland
+            </tag>
             <tag key="talk"/>
-<tag key="localgroup"/>
-<tag key="meeting"/>
-      <tag key="ilovefs">I Love Free Software Day</tag>
-      <tag key="front-page"/>
-    </tags>
-  </event>
+            <tag key="localgroup"/>
+            <tag key="meeting"/>
+            <tag key="ilovefs">I Love Free Software Day</tag>
+            <tag key="front-page"/>
+        </tags>
+    </event>
 </eventset>

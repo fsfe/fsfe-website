@@ -1,33 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
 <eventset>
-  <version>2</version>
-  <event start="2026-02-14T22:00:00Z" end="2026-02-14T23:00:00Z">
+    <version>2</version>
+    <event start="2026-02-14T22:00:00Z" end="2026-02-14T23:00:00Z">
+        <series>one-shot-2026</series>
+        <city>Online</city>
+        <country>ONLINE</country>
         <title>I Love Free Software Day online, Portugal</title>
-    <group>
-     <name>None</name> 
-     <url></url>
-    </group>
+        <group>
+            <name>None</name>
+            <url></url>
+        </group>
 
-    <body>
-      <p>The Portuguese <a href="https://ansol.org/ansol.html">ANSOL</a> will organise an "I Love Free Software Day" <a href="https://jitsi.ansol.org/ilovefs">online meeting</a> for all Portuguese Free Software enthusiasts. On ‘I Love Free Software Day’, we reach out to all those amazing people behind Free Software and recognize their work by saying ‘Thank you ♥’.</p>
-      <p>
-      <ul>
-       <li>⏰ 14.02.2026 22:00 till 23:00 (UTC)</li>
-	   <li>📍 Celebrates the "I Love Free Software Day" online.</li>
-	   <li> See more information on their <a href= " https://ansol.org/eventos/2026-02-14-ilovefs/">webpage</a></li>
-	   </ul>
-      </p>            
-            
-     </body>
+        <body>
+            <p>The Portuguese <a href="https://ansol.org/ansol.html">ANSOL</a> will organise an "I Love Free Software
+                Day" <a href="https://jitsi.ansol.org/ilovefs">online meeting</a> for all Portuguese Free Software
+                enthusiasts. On ‘I Love Free Software Day’, we reach out to all those amazing people behind Free
+                Software and recognize their work by saying ‘Thank you ♥’.
+            </p>
+            <p>
+                <ul>
+                    <li>⏰ 14.02.2026 22:00 till 23:00 (UTC)</li>
+                    <li>📍 Celebrates the "I Love Free Software Day" online.</li>
+                    <li>See more information on their
+                        <a href=" https://ansol.org/eventos/2026-02-14-ilovefs/">webpage</a>
+                    </li>
+                </ul>
+            </p>
 
-    <link> https://ansol.org/eventos/2026-02-14-ilovefs/</link>
-    <tags>
+        </body>
+
+        <link>https://ansol.org/eventos/2026-02-14-ilovefs/</link>
+        <tags>
             <tag key="pt">Portugal</tag>
             <tag key="talk"/>
-<tag key="panel"/>
-<tag key="meeting"/>
+            <tag key="panel"/>
+            <tag key="meeting"/>
             <tag key="ilovefs">I Love Free Software Day</tag>
-      <tag key="front-page"/>
-    </tags>
-  </event>
+            <tag key="front-page"/>
+        </tags>
+    </event>
 </eventset>

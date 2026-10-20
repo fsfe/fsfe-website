@@ -1,35 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
 <eventset>
-  <version>2</version>
-  <event start="2026-02-14T15:00:00Z" end="2026-02-14T21:00:00Z">
+    <version>2</version>
+    <event start="2026-02-14T15:00:00Z" end="2026-02-14T21:00:00Z">
+        <series>one-shot-2026</series>
+        <city>Frankfurt</city>
+        <country>DE</country>
         <title>I Love Free Software Day in Frankfurt, Germany</title>
-    <group>
-     <name>Germany</name> 
-     <url></url>
-    </group>
+        <group>
+            <name>Germany</name>
+            <url></url>
+        </group>
 
-    <body>
-      <p>The local FSFE group Rhein-Main will throw an "I Love Free Software Day" party with all Free Software enthusiasts near Frankfurt am Main. On ‘I Love Free Software Day’, we reach out to all those amazing people behind Free Software and recognize their work by saying ‘Thank you ♥’.</p>
-      <p><ul>
-	   <li>⏰ 14.02.2026, 16:00 (CET)</li>
-	   <li>📍 <a href="https://ccc-ffm.de/">Chaos Computer Club Frankfurt e.V.</a>, more information about the location will be announced soon.</li>
-	   <li>The I Love Free Software Day 2026 CCC FFM event is open for everybody and we are happy to welcome all Free Software enthusiasts from Hesse. There will be more information soon.</li>
-       <li>📍 <a href="https://ccc-ffm.de/">Chaos Computer Club Frankfurt e.V.</a>, Hohenstaufenstraße 8, 60327 Frankfurt am Main</li>
-       <li> 🗓️ More information about the event <a href="https://docs.fsfe.org/de/LocalGroups/Active/RheinMain">here</a>.</li>
-	   <li>The I Love Free Software Day 2026 CCC FFM event is open for everybody and we are happy to welcome all Free Software enthusiasts from Hesse.</li>
-	  </ul>	
-      </p>            
-            
-     </body>
+        <body>
+            <p>The local FSFE group Rhein-Main will throw an "I Love Free Software Day" party with all Free Software
+                enthusiasts near Frankfurt am Main. On ‘I Love Free Software Day’, we reach out to all those amazing
+                people behind Free Software and recognize their work by saying ‘Thank you ♥’.
+            </p>
+            <p>
+                <ul>
+                    <li>⏰ 14.02.2026, 16:00 (CET)</li>
+                    <li>📍 <a href="https://ccc-ffm.de/">Chaos Computer Club Frankfurt e.V.</a>, more information about
+                        the location will be announced soon.
+                    </li>
+                    <li>The I Love Free Software Day 2026 CCC FFM event is open for everybody and we are happy to
+                        welcome all Free Software enthusiasts from Hesse. There will be more information soon.
+                    </li>
+                    <li>📍 <a href="https://ccc-ffm.de/">Chaos Computer Club Frankfurt e.V.</a>, Hohenstaufenstraße 8,
+                        60327 Frankfurt am Main
+                    </li>
+                    <li>🗓️ More information about the event <a
+                            href="https://docs.fsfe.org/de/LocalGroups/Active/RheinMain">here</a>.
+                    </li>
+                    <li>The I Love Free Software Day 2026 CCC FFM event is open for everybody and we are happy to
+                        welcome all Free Software enthusiasts from Hesse.
+                    </li>
+                </ul>
+            </p>
 
-    <link>https://docs.fsfe.org/de/LocalGroups/Active/RheinMain</link>
-    <tags>
+        </body>
+
+        <link>https://docs.fsfe.org/de/LocalGroups/Active/RheinMain</link>
+        <tags>
             <tag key="de">Germany</tag>
             <tag key="talk"/>
-<tag key="panel"/>
-<tag key="meeting"/>
+            <tag key="panel"/>
+            <tag key="meeting"/>
             <tag key="ilovefs">I Love Free Software Day</tag>
-      <tag key="front-page"/>
-    </tags>
-  </event>
+            <tag key="front-page"/>
+        </tags>
+    </event>
 </eventset>

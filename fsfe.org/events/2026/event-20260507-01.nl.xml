@@ -1,25 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <eventset>
-  <version>1</version>
-  <event start="2026-05-07T06:30:00Z" end="2026-05-07T16:00:00Z">
+    <version>1</version>
+    <event start="2026-05-07T06:30:00Z" end="2026-05-07T16:00:00Z">
+        <series>one-shot-2026</series>
+        <city>Utrecht</city>
+        <country>NL</country>
         <title>Ada &amp; Zangemann stand bij NLUUG voorjaarsconferentie in Utrecht, Netherlands</title>
-    <group>
-     <name>Netherlands</name> 
-     <url></url>
-    </group>
+        <group>
+            <name>Netherlands</name>
+            <url></url>
+        </group>
 
-    <body>
-      <p>Informatiekraam bij de NLUUG voorjaarsconferentie met een focus op de de Ada &amp;amp; Zangemann boekvertaling.</p>
-    </body>
+        <body>
+            <p>Informatiekraam bij de NLUUG voorjaarsconferentie met een focus op de de Ada &amp;amp; Zangemann
+                boekvertaling.
+            </p>
+        </body>
 
-    <link>https://nluug.nl/evenementen/nluug/voorjaarsconferentie-2026/</link>
+        <link>https://nluug.nl/evenementen/nluug/voorjaarsconferentie-2026/</link>
         <tags>
             <tag key="nl">
-          Netherlands      </tag>
+                Netherlands
+            </tag>
             <tag key="infobooth"/>
-<tag key="localgroup"/>
-      <tag key="front-page"/>
-        <tag key="ada-zangemann"/>
-    </tags>
-  </event>
+            <tag key="localgroup"/>
+            <tag key="front-page"/>
+            <tag key="ada-zangemann"/>
+        </tags>
+    </event>
 </eventset>

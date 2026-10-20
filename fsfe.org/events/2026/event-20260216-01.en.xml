@@ -1,36 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
 <eventset>
-  <version>2</version>
-  <event start="2026-02-16T17:00:00Z" end="2026-02-16T21:00:00Z">
+    <version>2</version>
+    <event start="2026-02-16T17:00:00Z" end="2026-02-16T21:00:00Z">
+        <series>one-shot-2026</series>
+        <city>Lodz</city>
+        <country>PL</country>
         <title>I Love Free Software Day - in Lodz</title>
-    <group>
-     <name>Poland</name> 
-     <url></url>
-    </group>
+        <group>
+            <name>Poland</name>
+            <url></url>
+        </group>
 
-    <body>
-      <p>
-      On the 16th of February we celebrate the I Love Free Software Day! Lets get together and celebrate the "I Love Free Software Day".</p>
-      <p>
-    <ul>
-       	<li> ⏰ 16.02.2026 18:00 (local time)</li>
-       	<li>📍<a href="https://lodz.hackerspace.pl/">Lodz Hackerspace, Zielona 30 / 3B · Łódź</a></li>
-       	<li>🗓️ Event details are <a href="/events/#event-20260216-01">here</a> and on their dedicated <a href="https://ilovefs2026.hs-ldz.pl/">webpage</a>.</li>
-	<li>The I Love Free Software Day 2026 Lodz event is open for everybody and we are happy to welcome all Free Software enthusiasts. There will be 3 planned presentations / workshops (OpenSCAD for 3D printing, OpenStreetMap releated free software and freestyle presentation of favorite free software tools for creative works and informal networking with pizza and drinks.</li>
-	</ul>
-	</p>
+        <body>
+            <p>
+                On the 16th of February we celebrate the I Love Free Software Day! Lets get together and celebrate the
+                "I Love Free Software Day".
+            </p>
+            <p>
+                <ul>
+                    <li>⏰ 16.02.2026 18:00 (local time)</li>
+                    <li>📍
+                        <a href="https://lodz.hackerspace.pl/">Lodz Hackerspace, Zielona 30 / 3B · Łódź</a>
+                    </li>
+                    <li>🗓️ Event details are <a href="/events/#event-20260216-01">here</a> and on their dedicated <a
+                            href="https://ilovefs2026.hs-ldz.pl/">webpage</a>.
+                    </li>
+                    <li>The I Love Free Software Day 2026 Lodz event is open for everybody and we are happy to welcome
+                        all Free Software enthusiasts. There will be 3 planned presentations / workshops (OpenSCAD for
+                        3D printing, OpenStreetMap releated free software and freestyle presentation of favorite free
+                        software tools for creative works and informal networking with pizza and drinks.
+                    </li>
+                </ul>
+            </p>
 
-      <p>Everybody is welcome to join the celebration in our Lodz Hackerspace!</p>
-    </body>
+            <p>Everybody is welcome to join the celebration in our Lodz Hackerspace!</p>
+        </body>
 
-    <link>https://ilovefs2026.hs-ldz.pl/</link>
-    <tags>
-      <tag key="localgroup"/>
-      <tag key="meeting"/>
-      <tag key="front-page"/>
-      <tag key="workshop"/>
-      <tag key="talk"/>
-      <tag key="ilovefs">I Love Free Software Day</tag>
-    </tags>
-  </event>
+        <link>https://ilovefs2026.hs-ldz.pl/</link>
+        <tags>
+            <tag key="localgroup"/>
+            <tag key="meeting"/>
+            <tag key="front-page"/>
+            <tag key="workshop"/>
+            <tag key="talk"/>
+            <tag key="ilovefs">I Love Free Software Day</tag>
+        </tags>
+    </event>
 </eventset>

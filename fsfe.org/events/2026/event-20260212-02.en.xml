@@ -1,32 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <eventset>
-  <version>1</version>
-  <event start="2026-02-12T16:00:00Z" end="2026-02-12T21:00:00Z">
+    <version>1</version>
+    <event start="2026-02-12T16:00:00Z" end="2026-02-12T21:00:00Z">
+        <series>one-shot-2026</series>
+        <city>Eindhoven</city>
+        <country>NL</country>
         <title>I Love Free Software Day at Hackatlot in Eindhoven, Netherlands</title>
-    <group>
-     <name>Netherlands</name> 
-     <url></url>
-    </group>
+        <group>
+            <name>Netherlands</name>
+            <url></url>
+        </group>
 
-    <body>
-      <p>"I Love Free Software Day" event at the Hackatlot in Eindhoven (Netherlands) ❤</p>
-      <p> 
-       <ul>
-       <li>📍 Where: Hackalot, Fransebaan 93, Eindhoven</li>
-       <li>📅 When: 12.02.2026, 17:00 (local time)</li>
-       <li>Program: TBA</li>
-       </ul>
-        Every year on the 14th of February we are celebrating the "I Love Free Software Day". On this day the FSFE highlights all the people behind Free Software and thanking them for their contributions to Free Software! If you would like to be part of this year's celebrations, meet new or familiar people, send a postcard to your favourite Free Software project or just eat some Pizza with us then set by and come to Hackalot!</p>
-    </body>
+        <body>
+            <p>"I Love Free Software Day" event at the Hackatlot in Eindhoven (Netherlands) ❤</p>
+            <p>
+                <ul>
+                    <li>📍 Where: Hackalot, Fransebaan 93, Eindhoven</li>
+                    <li>📅 When: 12.02.2026, 17:00 (local time)</li>
+                    <li>Program: TBA</li>
+                </ul>
+                Every year on the 14th of February we are celebrating the "I Love Free Software Day". On this day the
+                FSFE highlights all the people behind Free Software and thanking them for their contributions to Free
+                Software! If you would like to be part of this year's celebrations, meet new or familiar people, send a
+                postcard to your favourite Free Software project or just eat some Pizza with us then set by and come to
+                Hackalot!
+            </p>
+        </body>
 
-    <link>https://hackalot.nl/I_Love_Free_Software_Day</link>
-    <tags>
+        <link>https://hackalot.nl/I_Love_Free_Software_Day</link>
+        <tags>
             <tag key="nl">
-          Netherlands      </tag>
+                Netherlands
+            </tag>
             <tag key="localgroup"/>
-<tag key="meeting"/>
-      <tag key="ilovefs">I Love Free Software Day</tag>
-      <tag key="front-page"/>
-    </tags>
-  </event>
+            <tag key="meeting"/>
+            <tag key="ilovefs">I Love Free Software Day</tag>
+            <tag key="front-page"/>
+        </tags>
+    </event>
 </eventset>

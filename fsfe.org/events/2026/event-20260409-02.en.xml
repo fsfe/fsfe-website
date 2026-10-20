@@ -1,24 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <eventset>
-  <version>1</version>
-  <event start="2026-04-09T16:00:00Z" end="2026-04-09T18:00:00Z">
+    <version>1</version>
+    <event start="2026-04-09T16:00:00Z" end="2026-04-09T18:00:00Z">
+        <series>one-shot-2026</series>
+        <city>Berlin</city>
+        <country>DE</country>
         <title>Meeting of the Berlin group in Berlin, Deutschland</title>
-    <group>
-     <name>Berlin</name> 
-     <url></url>
-    </group>
+        <group>
+            <name>Berlin</name>
+            <url></url>
+        </group>
 
-    <body>
-      <p>The Berlin group of FSFE meets every 2nd Thursday of the month at Kieztreff Undine (Hagenstraße 57, a 5-minute walk from the Lichtenberg underground station) from 6 to 8 pm.</p>
-     <p>All those interested in Free Software are welcome to come to the meeting. Accessible access to the Kieztreff is possible via the courtyard.</p>
-    </body>
+        <body>
+            <p>The Berlin group of FSFE meets every 2nd Thursday of the month at Kieztreff Undine (Hagenstraße 57, a
+                5-minute walk from the Lichtenberg underground station) from 6 to 8 pm.
+            </p>
+            <p>All those interested in Free Software are welcome to come to the meeting. Accessible access to the
+                Kieztreff is possible via the courtyard.
+            </p>
+        </body>
 
-    
-    <tags>
+
+        <tags>
             <tag key="de">
-          Deutschland      </tag>
+                Deutschland
+            </tag>
             <tag key="localgroup"/>
-      <tag key="front-page"/>
-    </tags>
-  </event>
+            <tag key="front-page"/>
+        </tags>
+    </event>
 </eventset>

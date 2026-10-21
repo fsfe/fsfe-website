@@ -7,7 +7,7 @@ dependencies = ["fsfe-website-build", "fsfe-website-hooks"]
 
 [dependency-groups]
 dev = [
-  "lefthook",  # pre-commit hook
+  "lefthook>=2.2.3",  # pre-commit hook, 2.2.3 is the first release with musl wheels
   "pyright",  # python typechecker
   "pytest",  # python test runner
   "pytest-cov",  # coverage reports for python coverage
@@ -93,6 +93,8 @@ ignore = [
 
 [tool.uv]
 exclude-newer = "7 days"
+# TODO: remove after 2026-12-01, when lefthook 2.2.3 is older than 7 days
+exclude-newer-package = { lefthook = "2026-11-25T00:00:00Z" }
 
 [tool.uv.sources]
 fsfe-website-build = { workspace = true }

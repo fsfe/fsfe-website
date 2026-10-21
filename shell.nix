@@ -25,6 +25,8 @@ in
       libxml2
       # For less compilation
       lessc
+      # For minification of web file formats
+      minify
       # Needed for git clean in full rebuilds
       git
       # Needed for compiling minifiers

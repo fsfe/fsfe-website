@@ -14,7 +14,6 @@ from fsfe_website_build.lib.misc import run_command
 
 if TYPE_CHECKING:
     import multiprocessing.pool
-    import types
     from pathlib import Path
 
     from fsfe_website_build.lib.site_config import Deployment
@@ -53,30 +52,6 @@ def _cli_copy_minify_file(target: Path, source_dir: Path, source_file: Path) -> 
         shutil.copymode(source_file, target_file)
 
 
-def _module_copy_minify_file(
-    target: Path,
-    source_site: Path,
-    source_file: Path,
-    mime: str,
-    minify_module: types.ModuleType,
-) -> None:
-    target_file = target.joinpath(source_file.relative_to(source_site))
-    if (
-        not target_file.exists()
-        or source_file.stat().st_mtime > target_file.stat().st_mtime
-    ):
-        logger.debug("Copying minified %s to %s", source_file, target_file)
-        target_file.parent.mkdir(parents=True, exist_ok=True)
-        # Do not minify pre minified files
-        if ".min" not in source_file.suffixes:
-            minify_module.file(mime, str(source_file), str(target_file))
-        else:
-            # Instead just copy them into place
-            shutil.copyfile(source_file, target_file)
-        # preserve file modes
-        shutil.copymode(source_file, target_file)
-
-
 def copy_files(
     source_site: Path,
     pool: multiprocessing.pool.Pool,
@@ -87,11 +62,11 @@ def copy_files(
     logger.info("Copying over media and misc files")
     # file extensions and mimes of minificable content
     # excluding files we should not be copying, like xml and html
-    minifiable_content = {
-        ".css": "text/css",
-        ".js": "application/javascript",
-        ".svg": "image/svg+xml",
-    }
+    minifiable_content = [
+        ".css",
+        ".js",
+        ".svg",
+    ]
     # Here we copy everything we cannot minify
     pool.starmap(
         _copy_file,
@@ -118,7 +93,7 @@ def copy_files(
                         ".xsl",
                         ".yml",
                         # and the things we can minify
-                        *minifiable_content.keys(),
+                        *minifiable_content,
                     ]
                     and path.name
                     not in [
@@ -132,7 +107,7 @@ def copy_files(
             ]
         ),
     )
-    for file_suffix, mime in minifiable_content.items():
+    for file_suffix in minifiable_content:
         files = [
             path for path in source_site.glob(f"**/*{file_suffix}") if path.is_file()
         ]
@@ -141,12 +116,6 @@ def copy_files(
             pool.starmap(
                 _cli_copy_minify_file, ((target, source_site, file) for file in files)
             )
+            # Fallback to just not running minify
         else:
-            # fallback to python module
-            # This has to be single threaded as there is an upstream bug that
-            # prevents multihreading the minifier
-            # https://github.com/tdewolff/minify/issues/535
-            import minify  # noqa: PLC0415
-
-            for file in files:
-                _module_copy_minify_file(target, source_site, file, mime, minify)
+            pool.starmap(_copy_file, ((target, source_site, file) for file in files))

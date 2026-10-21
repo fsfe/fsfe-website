@@ -11,7 +11,6 @@ dependencies = [
   "platformdirs",  # Get cache dirs and similar by platform
   "python-iso639",  # For getting english language names of languages from two letter codes.
   "requests",  # For HTTP requests
-  "tdewolff-minify",  # For minification html css and js
 ]
 
 [project.scripts]

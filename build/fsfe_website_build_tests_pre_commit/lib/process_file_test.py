@@ -141,6 +141,42 @@ def missing_translation_fallback_test(sample_xsl_transformer: etree.XSLT) -> Non
         assert result is not None
 
 
+@pytest.mark.parametrize(
+    ("de_version", "state", "body"),
+    [
+        (7, "up-to-date", "Deutsch"),
+        (4, "outdated", "Deutsch"),
+        (3, "very-outdated", "English"),
+    ],
+)
+def outdated_translation_fallback_test(
+    tmp_path: Path,
+    sample_xsl_transformer: etree.XSLT,
+    de_version: int,
+    state: str,
+    body: str,
+) -> None:
+    """Fall back to the English page once a translation is 4 versions behind."""
+    source = tmp_path / "source"
+    lang_folder = source / "global" / "languages"
+    lang_folder.mkdir(parents=True)
+    (lang_folder / "en").write_text("English\n")
+    (lang_folder / "de").write_text("Deutsch\n")
+    action_dir = source / "about"
+    action_dir.mkdir()
+    (action_dir / "page.en.xhtml").write_text(
+        "<html><version>7</version><body>English</body></html>"
+    )
+    infile = action_dir / "page.de.xhtml"
+    infile.write_text(
+        f"<html><version>{de_version}</version><body>Deutsch</body></html>"
+    )
+
+    result = etree.fromstring(process_file(source, infile, sample_xsl_transformer))
+    assert result.get("translation_state") == state
+    assert result.xpath("string(/buildinfo/document/body)") == body
+
+
 def detect_invalid_xml_from_transformation_test(mocker: MockFixture) -> None:
     """Check that it detects invalid XML being returned"""
     with TemporaryDirectory() as tmp:

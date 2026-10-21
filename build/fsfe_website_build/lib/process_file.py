@@ -148,7 +148,6 @@ def _build_xmlstream(
     translation_state = ""
 
     if infile.exists():
-        action_lang = lang
         original_version = get_version(
             shortname.with_suffix(f".{original_lang}{infile.suffix}"),
         )
@@ -158,10 +157,11 @@ def _build_xmlstream(
             if (original_version <= lang_version)
             else (
                 "very-outdated"
-                if (original_version - 3 >= lang_version)
+                if (original_version - 4 >= lang_version)
                 else "outdated"
             )
         )
+        action_lang = original_lang if translation_state == "very-outdated" else lang
     else:
         action_lang = original_lang
         translation_state = "untranslated"

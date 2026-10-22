@@ -9,7 +9,7 @@ import logging
 import re
 from typing import TYPE_CHECKING
 
-from fsfe_website_hooks.lib.misc import is_utf8
+from fsfe_website_hooks.lib.misc import FixError, is_utf8
 
 if TYPE_CHECKING:
     from pathlib import Path
@@ -34,14 +34,16 @@ def fix(files: list[Path]) -> None:
         content = file.read_bytes()
         if is_utf8(content):
             continue
-        encoding = _declared_encoding(content)
-        if encoding is None:
-            message = f"{file} is not UTF-8 and declares no encoding"
-            raise ValueError(message)
+        # XML without a declaration is UTF-8.
+        encoding = _declared_encoding(content) or "utf-8"
         try:
-            converted = content.decode(encoding).encode("utf-8")
+            text = content.decode(encoding)
         except (LookupError, UnicodeDecodeError) as error:
-            message = f"{file} does not match its declared encoding {encoding}"
-            raise ValueError(message) from error
-        file.write_bytes(DECLARED_ENCODING.sub(rb"\1utf-8", converted, count=1))
+            message = (
+                f"{file} is not in its declared encoding {encoding}, save it as UTF-8"
+            )
+            raise FixError(message) from error
+        file.write_bytes(
+            DECLARED_ENCODING.sub(rb"\1utf-8", text.encode("utf-8"), count=1)
+        )
         logger.info("Converted %s from %s to utf-8", file, encoding)

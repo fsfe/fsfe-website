@@ -13,6 +13,10 @@ if TYPE_CHECKING:
     from types import ModuleType
 
 
+class FixError(Exception):
+    """A fix cannot be applied to a file."""
+
+
 def is_utf8(content: bytes) -> bool:
     """Whether the bytes decode as UTF-8."""
     try:

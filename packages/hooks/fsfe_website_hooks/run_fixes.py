@@ -6,11 +6,12 @@
 
 import argparse
 import logging
+import sys
 from pathlib import Path
 from typing import Protocol, runtime_checkable
 
 from fsfe_website_hooks import fixes
-from fsfe_website_hooks.lib.misc import load_stages, with_suffixes
+from fsfe_website_hooks.lib.misc import FixError, load_stages, with_suffixes
 
 
 @runtime_checkable
@@ -20,7 +21,7 @@ class Fix(Protocol):
     ALLOWED_EXTENSIONS: set[str]
 
     def fix(self, files: list[Path]) -> None:
-        """Fix the files in place."""
+        """Fix the files in place, raising FixError for files it cannot fix."""
 
 
 def main() -> None:
@@ -33,10 +34,13 @@ def main() -> None:
         datefmt="%Y-%m-%d %H:%M:%S",
         level=logging.INFO,
     )
-    for stage in load_stages(fixes, Fix):
-        for fix in stage:
-            if files := with_suffixes(args.files, fix.ALLOWED_EXTENSIONS):
-                fix.fix(files)
+    try:
+        for stage in load_stages(fixes, Fix):
+            for fix in stage:
+                if files := with_suffixes(args.files, fix.ALLOWED_EXTENSIONS):
+                    fix.fix(files)
+    except FixError as error:
+        sys.exit(str(error))
 
 
 if __name__ == "__main__":

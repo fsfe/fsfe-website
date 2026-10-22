@@ -41,11 +41,6 @@ pre-commit:
       stage_fixed: true
     - name: general-fixes
       tags: [fix]
-      # Must match the ALLOWED_EXTENSIONS of the modules in fsfe_website_hooks/fixes
-      glob:
-        - "*.xml"
-        - "*.xhtml"
-        - "*.xsl"
       run: run-fixes {staged_files}
       stage_fixed: true
     - name: format-xsl
@@ -74,11 +69,6 @@ pre-commit:
       glob: "*.py"
       run: ty check {staged_files}
     - name: general-checks
-      # Must match the ALLOWED_EXTENSIONS of the modules in fsfe_website_hooks/checks
-      glob:
-        - "*.xml"
-        - "*.xhtml"
-        - "*.xsl"
       run: run-checks {staged_files}
     - name: simple-syntax
       glob:

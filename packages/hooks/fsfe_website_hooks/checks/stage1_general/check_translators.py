@@ -15,6 +15,7 @@ if TYPE_CHECKING:
 
 logger = logging.getLogger(__name__)
 
+CRITICAL = True
 ALLOWED_EXTENSIONS = {".xhtml"}
 
 

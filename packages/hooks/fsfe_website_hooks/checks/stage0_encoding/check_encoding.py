@@ -8,7 +8,7 @@ import logging
 import textwrap
 from typing import TYPE_CHECKING
 
-from fsfe_website_hooks.fixes.convert_encoding import is_utf8
+from fsfe_website_hooks.lib.misc import is_utf8
 
 if TYPE_CHECKING:
     import multiprocessing.pool
@@ -16,6 +16,7 @@ if TYPE_CHECKING:
 
 logger = logging.getLogger(__name__)
 
+CRITICAL = True
 ALLOWED_EXTENSIONS = {".xhtml", ".xml", ".xsl"}
 
 

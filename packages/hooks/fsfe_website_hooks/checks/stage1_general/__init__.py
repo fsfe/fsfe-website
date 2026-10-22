@@ -2,4 +2,4 @@
 #
 # SPDX-License-Identifier: GPL-3.0-or-later
 
-"""Checks that only warn."""
+"""Checks run once the files are known to be UTF-8."""

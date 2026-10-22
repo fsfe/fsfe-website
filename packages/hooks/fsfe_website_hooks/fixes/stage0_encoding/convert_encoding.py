@@ -9,6 +9,8 @@ import logging
 import re
 from typing import TYPE_CHECKING
 
+from fsfe_website_hooks.lib.misc import is_utf8
+
 if TYPE_CHECKING:
     from pathlib import Path
 
@@ -17,15 +19,6 @@ logger = logging.getLogger(__name__)
 ALLOWED_EXTENSIONS = {".xhtml", ".xml", ".xsl"}
 
 DECLARED_ENCODING = re.compile(rb"""(<\?xml[^>]*?\sencoding\s*=\s*["'])([^"']+)""")
-
-
-def is_utf8(content: bytes) -> bool:
-    """Whether the bytes decode as UTF-8."""
-    try:
-        content.decode("utf-8")
-    except UnicodeDecodeError:
-        return False
-    return True
 
 
 def _declared_encoding(content: bytes) -> str | None:

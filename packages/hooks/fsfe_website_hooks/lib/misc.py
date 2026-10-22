@@ -6,14 +6,23 @@
 
 import importlib
 import pkgutil
+from operator import attrgetter
 from typing import TYPE_CHECKING
 
 if TYPE_CHECKING:
     from types import ModuleType
 
 
-def load_modules[T](package: ModuleType, protocol: type[T]) -> list[T]:
-    """Import every module of the package, each of which must match the protocol."""
+def is_utf8(content: bytes) -> bool:
+    """Whether the bytes decode as UTF-8."""
+    try:
+        content.decode("utf-8")
+    except UnicodeDecodeError:
+        return False
+    return True
+
+
+def _load_modules[T](package: ModuleType, protocol: type[T]) -> list[T]:
     modules: list[T] = []
     for info in pkgutil.iter_modules(package.__path__):
         module = importlib.import_module(f"{package.__name__}.{info.name}")
@@ -23,3 +32,18 @@ def load_modules[T](package: ModuleType, protocol: type[T]) -> list[T]:
             raise TypeError(message)
         modules.append(module)
     return modules
+
+
+def load_stages[T](package: ModuleType, protocol: type[T]) -> list[list[T]]:
+    """Import the modules of each stage subpackage, in name order.
+
+    Every module must match the protocol.
+    """
+    return [
+        _load_modules(
+            importlib.import_module(f"{package.__name__}.{stage.name}"), protocol
+        )
+        for stage in sorted(
+            pkgutil.iter_modules(package.__path__), key=attrgetter("name")
+        )
+    ]

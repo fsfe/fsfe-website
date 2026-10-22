@@ -10,8 +10,7 @@ from pathlib import Path
 from typing import Protocol, runtime_checkable
 
 from fsfe_website_hooks import fixes
-from fsfe_website_hooks.fixes import convert_encoding
-from fsfe_website_hooks.lib.misc import load_modules
+from fsfe_website_hooks.lib.misc import load_stages
 
 
 @runtime_checkable
@@ -34,11 +33,11 @@ def main() -> None:
         datefmt="%Y-%m-%d %H:%M:%S",
         level=logging.INFO,
     )
-    fix_modules = load_modules(fixes, Fix)
-    fix_modules.remove(convert_encoding)
-    # Encoding first, as the other fixes parse the files.
-    for fix in (convert_encoding, *fix_modules):
-        fix.fix([file for file in args.files if file.suffix in fix.ALLOWED_EXTENSIONS])
+    for stage in load_stages(fixes, Fix):
+        for fix in stage:
+            fix.fix(
+                [file for file in args.files if file.suffix in fix.ALLOWED_EXTENSIONS]
+            )
 
 
 if __name__ == "__main__":

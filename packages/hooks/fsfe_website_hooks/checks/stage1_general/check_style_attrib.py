@@ -16,6 +16,7 @@ if TYPE_CHECKING:
 
 logger = logging.getLogger(__name__)
 
+CRITICAL = False
 ALLOWED_EXTENSIONS = {".xhtml", ".xml"}
 
 
@@ -24,14 +25,18 @@ def check(files: list[Path], pool: multiprocessing.pool.Pool) -> tuple[bool, str
     failed_files: list[str] = [
         f"{file} contains a style element"
         for file in files
-        if etree.parse(file).xpath("//style")
+        if etree.parse(file).xpath("//*[@style]")
     ]
 
     return len(failed_files) == 0, (
         "\n".join(failed_files)
         + textwrap.dedent("""
-                  Please do not use <style> elements to define CSS rules for a file.
+              Please do not use style attributes to design an element. So instead of:
 
-                  More information why this is bad style, and what to do instead:
-                  https://docs.fsfe.org/en/techdocs/mainpage/editing/bestpractices#no-in-line-css""")
+                <p style="color: red;">text</p>
+
+              use CSS classes instead, or create them if necessary.
+
+              More information why this is bad style, and what to do instead:
+              https://docs.fsfe.org/en/techdocs/mainpage/editing/bestpractices#no-in-line-css""")
     )

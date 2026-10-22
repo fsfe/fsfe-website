@@ -41,7 +41,7 @@ pre-commit:
       stage_fixed: true
     - name: general-fixes
       tags: [fix]
-      # Must match the ALLOWED_EXTENSIONS of the fixes in run_fixes.py
+      # Must match the ALLOWED_EXTENSIONS of the modules in fsfe_website_hooks/fixes
       glob:
         - "*.xml"
         - "*.xhtml"
@@ -74,7 +74,7 @@ pre-commit:
       glob: "*.py"
       run: ty check {staged_files}
     - name: general-checks
-      # Must match the ALLOWED_EXTENSIONS of the checks in run_checks.py
+      # Must match the ALLOWED_EXTENSIONS of the modules in fsfe_website_hooks/checks
       glob:
         - "*.xml"
         - "*.xhtml"

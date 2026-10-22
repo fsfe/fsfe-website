@@ -7,11 +7,21 @@
 import argparse
 import logging
 from pathlib import Path
+from typing import Protocol, runtime_checkable
 
-from fsfe_website_hooks.fixes import convert_encoding, remove_empty_paragraphs
+from fsfe_website_hooks import fixes
+from fsfe_website_hooks.fixes import convert_encoding
+from fsfe_website_hooks.lib.misc import load_modules
 
-# Encoding first, as the later fixes parse the files.
-FIXES = (convert_encoding, remove_empty_paragraphs)
+
+@runtime_checkable
+class Fix(Protocol):
+    """A fix module."""
+
+    ALLOWED_EXTENSIONS: set[str]
+
+    def fix(self, files: list[Path]) -> None:
+        """Fix the files in place."""
 
 
 def main() -> None:
@@ -24,7 +34,10 @@ def main() -> None:
         datefmt="%Y-%m-%d %H:%M:%S",
         level=logging.INFO,
     )
-    for fix in FIXES:
+    fix_modules = load_modules(fixes, Fix)
+    fix_modules.remove(convert_encoding)
+    # Encoding first, as the other fixes parse the files.
+    for fix in (convert_encoding, *fix_modules):
         fix.fix([file for file in args.files if file.suffix in fix.ALLOWED_EXTENSIONS])
 
 

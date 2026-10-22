@@ -60,7 +60,7 @@ pre-commit:
     - name: pytest
       glob:
         - "*.py"
-      run: coverage run -m pytest ./packages/build/fsfe_website_build_tests_pre_commit
+      run: coverage run -m pytest ./packages/build/test_pre_commit
     - name: pytest-coverage
       glob:
         - "*.py"

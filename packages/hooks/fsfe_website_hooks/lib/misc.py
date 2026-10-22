@@ -6,7 +6,6 @@
 
 import importlib
 import pkgutil
-from operator import attrgetter
 from typing import TYPE_CHECKING
 
 if TYPE_CHECKING:
@@ -24,6 +23,7 @@ def is_utf8(content: bytes) -> bool:
 
 def _load_modules[T](package: ModuleType, protocol: type[T]) -> list[T]:
     modules: list[T] = []
+    # iter_modules yields names sorted, which orders the stages and their modules.
     for info in pkgutil.iter_modules(package.__path__):
         module = importlib.import_module(f"{package.__name__}.{info.name}")
         # isinstance only checks the protocol's names exist, not their types.
@@ -43,7 +43,5 @@ def load_stages[T](package: ModuleType, protocol: type[T]) -> list[list[T]]:
         _load_modules(
             importlib.import_module(f"{package.__name__}.{stage.name}"), protocol
         )
-        for stage in sorted(
-            pkgutil.iter_modules(package.__path__), key=attrgetter("name")
-        )
+        for stage in pkgutil.iter_modules(package.__path__)
     ]

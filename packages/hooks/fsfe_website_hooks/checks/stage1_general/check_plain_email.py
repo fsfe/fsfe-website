@@ -16,7 +16,7 @@ if TYPE_CHECKING:
 logger = logging.getLogger(__name__)
 
 CRITICAL = False
-ALLOWED_EXTENSIONS = {".xhtml", ".xml", "xsl"}
+ALLOWED_EXTENSIONS = {".xhtml", ".xml", ".xsl"}
 
 
 def check(files: list[Path], pool: multiprocessing.pool.Pool) -> tuple[bool, str]:  # noqa: ARG001

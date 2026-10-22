@@ -7,8 +7,6 @@ RUN apt-get update && apt-get install --yes --no-install-recommends \
 ca-certificates \
 expect \
 git \
-libxml2 \
-libxslt1.1 \
 node-less \
 openssh-client \
 rsync

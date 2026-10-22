@@ -8,7 +8,6 @@ composer \
 git \
 libxml2 \
 libxml2-utils \
-libxslt1.1 \
 node-less \
 npm \
 php-zip \

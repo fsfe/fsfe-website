@@ -41,6 +41,11 @@ pre-commit:
       stage_fixed: true
     - name: general-fixes
       tags: [fix]
+      # Must match the ALLOWED_EXTENSIONS of the fixes in run_fixes.py
+      glob:
+        - "*.xml"
+        - "*.xhtml"
+        - "*.xsl"
       run: run-fixes {staged_files}
       stage_fixed: true
     - name: format-xsl
@@ -69,6 +74,11 @@ pre-commit:
       glob: "*.py"
       run: ty check {staged_files}
     - name: general-checks
+      # Must match the ALLOWED_EXTENSIONS of the checks in run_checks.py
+      glob:
+        - "*.xml"
+        - "*.xhtml"
+        - "*.xsl"
       run: run-checks {staged_files}
     - name: simple-syntax
       glob:

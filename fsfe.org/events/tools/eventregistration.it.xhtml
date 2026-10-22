@@ -143,6 +143,22 @@
       </ol>
       <p class="help-block">Grazie per la registrazione del tuo evento!</p>
 
+      <label for="eventseries" class="required">Conferenza / serie di eventi<span class="star">*</span></label>
+      <input name="eventseries" value="one-shot" required="required" type="text"/>
+      <div class="help-block">
+        <p>
+          Se il tuo evento fa parte di una conferenza o di una serie di eventi, ad esempio sfscon, inserisci il nome della serie di eventi e l'anno corrispondente nella casella “Serie di eventi”.
+          Se si tratta di un evento con una sola data, lascia la casella di inserimento così com'è.
+        </p>
+      </div>
+      <label for="eventseriesyear">Anno / Edizione<span class="star">*</span></label>
+      <input name="eventseriesyear" value="2026" type="text"/>
+      <div class="help-block">
+        <p>
+          Se il tuo evento è un evento singolo, ti preghiamo di non modificare il campo. Il modulo non accetterà invii relativi a una serie che non riportino l'anno/l'edizione.
+        </p>
+      </div>
+
       <label for="description" class="required">Descrizione (solo testo, no HTML)<span class="star">*</span></label>
       <textarea name="description" required="required"/>
 

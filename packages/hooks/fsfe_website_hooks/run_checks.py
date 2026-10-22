@@ -14,7 +14,7 @@ import sys
 from pathlib import Path
 from typing import TYPE_CHECKING
 
-from fsfe_website_hooks import checks
+from fsfe_website_hooks import check_encoding, checks
 
 if TYPE_CHECKING:
     from types import ModuleType
@@ -108,6 +108,9 @@ def main() -> None:
     with multiprocessing.Pool(processes=args.jobs) as pool:
         # Run each check
         try:
+            # Encoding first, as the other checks read the files as UTF-8.
+            if not run_module_list(args.files, [check_encoding], pool):
+                sys.exit(1)
             logger.info("Beginning Informational checks!")
             logger.info(
                 "One may commit if these fail,"

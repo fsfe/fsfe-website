@@ -8,7 +8,7 @@ import logging
 import textwrap
 from typing import TYPE_CHECKING
 
-from fsfe_website_build.lib.misc import run_command
+from fsfe_website_hooks.fixes.convert_encoding import is_utf8
 
 if TYPE_CHECKING:
     import multiprocessing.pool
@@ -16,17 +16,14 @@ if TYPE_CHECKING:
 
 logger = logging.getLogger(__name__)
 
-CHECK_TYPE = "critical"
 ALLOWED_EXTENSIONS = {".xhtml", ".xml", ".xsl"}
 
 
 def check(files: list[Path], pool: multiprocessing.pool.Pool) -> tuple[bool, str]:  # noqa: ARG001
     """Check correct encoding."""
-    failed_files: list[str] = []
-    for file in files:
-        encoding_result = run_command(["file", "-b", "--mime-encoding", str(file)])
-        if encoding_result not in ["utf-8", "ascii", "us-ascii"]:
-            failed_files.append(f"{file} has invalid encoding {encoding_result}")
+    failed_files = [
+        f"{file} is not UTF-8" for file in files if not is_utf8(file.read_bytes())
+    ]
     return len(failed_files) == 0, (
         "\n".join(failed_files)
         + textwrap.dedent("""

@@ -1,10 +1,31 @@
 version = 1
-revision = 3
+revision = 5
 requires-python = "==3.14.*"
 
 [options]
 exclude-newer = "0001-01-01T00:00:00Z" # This has no effect and is included for backwards compatibility when using relative exclude-newer values.
 exclude-newer-span = "P7D"
+
+[manifest]
+members = [
+    "fsfe-website-build",
+    "fsfe-website-hooks",
+]
+
+[manifest.dependency-groups]
+dev = [
+    { name = "lefthook" },
+    { name = "pyright" },
+    { name = "pytest" },
+    { name = "pytest-cov" },
+    { name = "pytest-mock" },
+    { name = "reuse" },
+    { name = "ruff" },
+    { name = "tombi" },
+    { name = "ty" },
+    { name = "types-lxml" },
+]
+notifications = [{ name = "desktop-notifier" }]
 
 [[package]]
 name = "attrs"
@@ -253,7 +274,7 @@ wheels = [
 [[package]]
 name = "fsfe-website-build"
 version = "0.0.0"
-source = { editable = "." }
+source = { editable = "packages/build" }
 dependencies = [
     { name = "dacite" },
     { name = "lxml" },
@@ -262,24 +283,6 @@ dependencies = [
     { name = "python-iso639" },
     { name = "requests" },
     { name = "tdewolff-minify" },
-]
-
-[package.dev-dependencies]
-dev = [
-    { name = "lefthook" },
-    { name = "pillow" },
-    { name = "pyright" },
-    { name = "pytest" },
-    { name = "pytest-cov" },
-    { name = "pytest-mock" },
-    { name = "reuse" },
-    { name = "ruff" },
-    { name = "tombi" },
-    { name = "ty" },
-    { name = "types-lxml" },
-]
-notifications = [
-    { name = "desktop-notifier" },
 ]
 
 [package.metadata]
@@ -293,21 +296,24 @@ requires-dist = [
     { name = "tdewolff-minify" },
 ]
 
-[package.metadata.requires-dev]
-dev = [
-    { name = "lefthook" },
+[[package]]
+name = "fsfe-website-hooks"
+version = "0.0.0"
+source = { editable = "packages/hooks" }
+dependencies = [
+    { name = "fsfe-website-build" },
+    { name = "lxml" },
     { name = "pillow" },
-    { name = "pyright" },
-    { name = "pytest" },
-    { name = "pytest-cov" },
-    { name = "pytest-mock" },
-    { name = "reuse" },
-    { name = "ruff" },
-    { name = "tombi" },
-    { name = "ty" },
-    { name = "types-lxml" },
+    { name = "requests" },
 ]
-notifications = [{ name = "desktop-notifier" }]
+
+[package.metadata]
+requires-dist = [
+    { name = "fsfe-website-build", editable = "packages/build" },
+    { name = "lxml" },
+    { name = "pillow" },
+    { name = "requests" },
+]
 
 [[package]]
 name = "idna"

@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-
 # SPDX-FileCopyrightText: Free Software Foundation Europe e.V. <https://fsfe.org>
 #
 # SPDX-License-Identifier: GPL-3.0-or-later
@@ -7,13 +5,16 @@
 """Runs a variety of checks."""
 
 import argparse
-import importlib.util
+import importlib
 import logging
 import multiprocessing
 import multiprocessing.pool
+import pkgutil
 import sys
 from pathlib import Path
 from typing import TYPE_CHECKING
+
+from fsfe_website_hooks import checks
 
 if TYPE_CHECKING:
     from types import ModuleType
@@ -21,46 +22,27 @@ if TYPE_CHECKING:
 logger = logging.getLogger(__name__)
 
 
-def load_check_modules(check_dir: Path) -> tuple[list[ModuleType], list[ModuleType]]:
-    """Dynamically load all check modules from a directory."""
-    # Ensure the check_dir is in sys.path so it's importable
-    if str(check_dir) not in sys.path:
-        sys.path.insert(0, str(check_dir))
-
+def load_check_modules() -> tuple[list[ModuleType], list[ModuleType]]:
+    """Import every module of the checks package."""
     critical_modules: list[ModuleType] = []
     informational_modules: list[ModuleType] = []
-    if not check_dir.exists() or not check_dir.is_dir():
-        raise FileNotFoundError(f"Check directory not found: {check_dir}")
-
-    for file in sorted(check_dir.iterdir()):
-        if file.name.startswith("check_") and file.suffix == ".py":
-            module_name = f"checks.{file.stem}"
-
-            # Load module from file
-            spec = importlib.util.spec_from_file_location(module_name, file)
-            if spec is None or spec.loader is None:
-                raise RuntimeError("Failed to load %s.", file)
-
-            module = importlib.util.module_from_spec(spec)
-            # Register it to prevent pickle issues
-            sys.modules[module_name] = module
-            spec.loader.exec_module(module)
-
-            # Ensure it has the required function
-            if (
-                not hasattr(module, "check")
-                or not hasattr(module, "ALLOWED_EXTENSIONS")
-                or not hasattr(module, "CHECK_TYPE")
-                or module.CHECK_TYPE not in ["critical", "informational"]
-                or not callable(module.check)
-            ):
-                raise RuntimeError("%s. missing some required attr", file)
-            if module.CHECK_TYPE == "critical":
-                critical_modules.append(module)
-            elif module.CHECK_TYPE == "informational":
-                informational_modules.append(module)
-            else:
-                raise RuntimeError("%s CHECK_TYPE invalid", file)
+    for info in pkgutil.iter_modules(checks.__path__):
+        module = importlib.import_module(f"{checks.__name__}.{info.name}")
+        # Ensure it has the required function
+        if (
+            not hasattr(module, "check")
+            or not hasattr(module, "ALLOWED_EXTENSIONS")
+            or not hasattr(module, "CHECK_TYPE")
+            or module.CHECK_TYPE not in ["critical", "informational"]
+            or not callable(module.check)
+        ):
+            raise RuntimeError("%s. missing some required attr", module.__name__)
+        if module.CHECK_TYPE == "critical":
+            critical_modules.append(module)
+        elif module.CHECK_TYPE == "informational":
+            informational_modules.append(module)
+        else:
+            raise RuntimeError("%s CHECK_TYPE invalid", module.__name__)
 
     return critical_modules, informational_modules
 
@@ -117,9 +99,7 @@ def main() -> None:
         level=args.log_level,
     )
     try:
-        critical_modules, informational_modules = load_check_modules(
-            Path("./tools/ci-checks/checks")
-        )
+        critical_modules, informational_modules = load_check_modules()
     except Exception:
         logger.exception("Error loading check modules: %s")
         sys.exit(1)

@@ -1,0 +1,26 @@
+[project]
+name = "fsfe-website-hooks"
+version = "0.0.0"
+description = "Python tooling to check and maintain the fsfe websites"
+requires-python = "==3.14.*"
+dependencies = [
+  "fsfe-website-build",  # shared helpers and site data
+  "lxml",  # XML parser
+  "pillow",  # image processing
+  "requests",  # For HTTP requests
+]
+
+[project.scripts]
+run-checks = "fsfe_website_hooks.run_checks:main"
+run-fixes = "fsfe_website_hooks.run_fixes:main"
+
+[build-system]
+requires = ["uv_build"]
+build-backend = "uv_build"
+
+[tool.uv.build-backend]
+module-name = "fsfe_website_hooks"
+module-root = ""
+
+[tool.uv.sources]
+fsfe-website-build = { workspace = true }

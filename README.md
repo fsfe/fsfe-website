@@ -39,9 +39,9 @@ This repository also contains the source files of other websites the FSFE hosts:
 
 Notable top level directories are:
 
-- `build`: Python build tooling.
+- `packages`: Python tooling, as a [uv workspace](https://docs.astral.sh/uv/concepts/projects/workspaces/). `build` builds the websites, `hooks` holds the checks and fixes run by the githooks.
 - `global`: Globally used data files, modules, XSl, also the static translated strings. Generally contains data used in multiple sites, but not suitable to place in build process.
-- `tools`: Contains miscellaneous scripts and tools, usually not used as part of the build process. Rather for contributor use.
+- `tools`: Contains miscellaneous scripts and tools, usually not used as part of the build process. Rather for contributor use. This folder is being wound down: new Python tools should be a module in a workspace member under `packages`.
 
 And of course the different website folders.
 

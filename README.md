@@ -88,12 +88,6 @@ We can either install the required dependencies manually using our preferred pac
 
 If installing manually, you need the python package `uv` and the node package `lessc`.
 
-This also requires
-
-```
-libxml2 libxslt
-```
-
 As we are using [UV](https://docs.astral.sh/uv/) we can just run the build process directly, and let it handle deps.
 
 The pages can be built and served by running `uv run build`. Try `--help` for more information. The simple web server used lacks the features of `apache` which used on the FSFE web servers. This is why no index is automatically selected for each directory and other behaviours.
@@ -134,7 +128,7 @@ lefthook install
 The hooks have some extra dependencies, at time of writing:
 
 ```
-ruff git xmllint sed file grep bash perl mediainfo curl mktemp
+git xmllint prettier php-cs-fixer shfmt
 ```
 
 ## Testing

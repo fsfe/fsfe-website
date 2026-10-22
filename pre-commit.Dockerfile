@@ -5,7 +5,6 @@ COPY --from=ghcr.io/astral-sh/uv /uv /uvx /bin/
 # Install deps
 RUN apt-get update && apt-get install --yes --no-install-recommends \
 composer \
-file \
 git \
 libxml2 \
 libxml2-utils \
@@ -14,8 +13,7 @@ node-less \
 npm \
 php-zip \
 rsync \
-shfmt \
-xsltproc
+shfmt
 
 # Install prettier
 RUN npm install -g prettier

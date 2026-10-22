@@ -13,7 +13,7 @@ from pathlib import Path
 from typing import Protocol, runtime_checkable
 
 from fsfe_website_hooks import checks
-from fsfe_website_hooks.lib.misc import load_stages
+from fsfe_website_hooks.lib.misc import load_stages, with_suffixes
 
 logger = logging.getLogger(__name__)
 
@@ -37,9 +37,7 @@ def run_stage(
     """Run the checks of a stage, returning whether the critical ones passed."""
     critical_passed = True
     for check in stage:
-        filtered_files = [
-            file for file in files if file.suffix in check.ALLOWED_EXTENSIONS
-        ]
+        filtered_files = with_suffixes(files, check.ALLOWED_EXTENSIONS)
         if not filtered_files:
             logger.debug("%s: no relevant files, skipping", check)
             continue

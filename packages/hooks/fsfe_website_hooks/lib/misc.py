@@ -9,6 +9,7 @@ import pkgutil
 from typing import TYPE_CHECKING
 
 if TYPE_CHECKING:
+    from pathlib import Path
     from types import ModuleType
 
 
@@ -19,6 +20,11 @@ def is_utf8(content: bytes) -> bool:
     except UnicodeDecodeError:
         return False
     return True
+
+
+def with_suffixes(files: list[Path], suffixes: set[str]) -> list[Path]:
+    """Keep the files whose suffix is one of the suffixes."""
+    return [file for file in files if file.suffix in suffixes]
 
 
 def _load_modules[T](package: ModuleType, protocol: type[T]) -> list[T]:

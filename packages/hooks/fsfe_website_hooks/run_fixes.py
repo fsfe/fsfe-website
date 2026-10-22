@@ -10,7 +10,7 @@ from pathlib import Path
 from typing import Protocol, runtime_checkable
 
 from fsfe_website_hooks import fixes
-from fsfe_website_hooks.lib.misc import load_stages
+from fsfe_website_hooks.lib.misc import load_stages, with_suffixes
 
 
 @runtime_checkable
@@ -35,9 +35,8 @@ def main() -> None:
     )
     for stage in load_stages(fixes, Fix):
         for fix in stage:
-            fix.fix(
-                [file for file in args.files if file.suffix in fix.ALLOWED_EXTENSIONS]
-            )
+            if files := with_suffixes(args.files, fix.ALLOWED_EXTENSIONS):
+                fix.fix(files)
 
 
 if __name__ == "__main__":

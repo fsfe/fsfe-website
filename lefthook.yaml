@@ -60,11 +60,7 @@ pre-commit:
     - name: pytest
       glob:
         - "*.py"
-      run: coverage run -m pytest ./packages/build/test_pre_commit
-    - name: pytest-coverage
-      glob:
-        - "*.py"
-      run: coverage report --show-missing --fail-under=85
+      run: pytest --cov --cov-report=term-missing ./packages/build/test_pre_commit ./packages/hooks/test_pre_commit
     - name: ty
       glob: "*.py"
       run: ty check {staged_files}

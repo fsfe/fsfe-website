@@ -23,7 +23,12 @@ notifications = [
 ]
 
 [tool.coverage.run]
-source = ["fsfe_website_build.lib"]
+source = [
+  "fsfe_website_build.lib",
+  "fsfe_website_hooks.checks",
+  "fsfe_website_hooks.fixes",
+  "fsfe_website_hooks.lib",
+]
 
 [tool.coverage.report]
 show_missing = true

@@ -20,6 +20,3 @@ build-backend = "uv_build"
 [tool.uv.build-backend]
 module-name = "fsfe_website_hooks"
 module-root = ""
-
-[tool.uv.sources]
-fsfe-website-build = { workspace = true }

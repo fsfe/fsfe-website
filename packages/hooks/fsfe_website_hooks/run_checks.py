@@ -36,13 +36,15 @@ def load_check_modules() -> tuple[list[ModuleType], list[ModuleType]]:
             or module.CHECK_TYPE not in ["critical", "informational"]
             or not callable(module.check)
         ):
-            raise RuntimeError("%s. missing some required attr", module.__name__)
+            message = f"{module.__name__} is missing some required attr"
+            raise RuntimeError(message)
         if module.CHECK_TYPE == "critical":
             critical_modules.append(module)
         elif module.CHECK_TYPE == "informational":
             informational_modules.append(module)
         else:
-            raise RuntimeError("%s CHECK_TYPE invalid", module.__name__)
+            message = f"{module.__name__} CHECK_TYPE invalid"
+            raise RuntimeError(message)
 
     return critical_modules, informational_modules
 
@@ -101,7 +103,7 @@ def main() -> None:
     try:
         critical_modules, informational_modules = load_check_modules()
     except Exception:
-        logger.exception("Error loading check modules: %s")
+        logger.exception("Error loading check modules")
         sys.exit(1)
     with multiprocessing.Pool(processes=args.jobs) as pool:
         # Run each check
@@ -139,7 +141,7 @@ def main() -> None:
                 sys.exit(0)
 
         except Exception:
-            logger.exception("Check failed to run correctly: %s")
+            logger.exception("Check failed to run correctly")
             sys.exit(1)
 
 

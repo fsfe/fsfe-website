@@ -2,7 +2,6 @@
 name = "fsfe-website-build"
 version = "0.0.0"
 description = "Python tooling to build the fsfe websites"
-requires-python = "==3.14.*"
 dependencies = [
   "dacite",  # dict to dataclass conversion
   "lxml",  # XML parser

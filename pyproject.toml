@@ -1,3 +1,10 @@
+[project]
+name = "fsfe-website"
+version = "0.0.0"
+description = "Workspace for the fsfe websites python tooling"
+requires-python = "==3.14.*"
+dependencies = ["fsfe-website-build", "fsfe-website-hooks"]
+
 [dependency-groups]
 dev = [
   "lefthook",  # pre-commit hook
@@ -27,10 +34,6 @@ addopts = ["--import-mode=importlib"]
 python_files = ["*_test.py"]
 python_functions = ["*_test"]
 testpaths = ["packages/build/fsfe_website_build_tests*"]
-
-[tool.ruff]
-# The root has no requires-python to infer it from; keep in step with the members.
-target-version = "py314"
 
 [tool.ruff.lint]
 # See https://docs.astral.sh/ruff/rules/ for information
@@ -85,6 +88,10 @@ ignore = [
 
 [tool.uv]
 exclude-newer = "7 days"
+
+[tool.uv.sources]
+fsfe-website-build = { workspace = true }
+fsfe-website-hooks = { workspace = true }
 
 [tool.uv.workspace]
 members = ["packages/*"]

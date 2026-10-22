@@ -8,24 +8,10 @@ exclude-newer-span = "P7D"
 
 [manifest]
 members = [
+    "fsfe-website",
     "fsfe-website-build",
     "fsfe-website-hooks",
 ]
-
-[manifest.dependency-groups]
-dev = [
-    { name = "lefthook" },
-    { name = "pyright" },
-    { name = "pytest" },
-    { name = "pytest-cov" },
-    { name = "pytest-mock" },
-    { name = "reuse" },
-    { name = "ruff" },
-    { name = "tombi" },
-    { name = "ty" },
-    { name = "types-lxml" },
-]
-notifications = [{ name = "desktop-notifier" }]
 
 [[package]]
 name = "attrs"
@@ -270,6 +256,53 @@ sdist = { url = "https://files.pythonhosted.org/packages/41/df/67c6ff92d870881b5
 wheels = [
     { url = "https://files.pythonhosted.org/packages/91/36/b32a806dbb7bce308fecc977220c03ca7990831491bebc582b02619ff980/desktop_notifier-6.2.0-py3-none-any.whl", hash = "sha256:193b0885e694a99ae22f72234c91afbac633074295b44183bf9716dd4077b8f3", size = 34406, upload-time = "2025-08-08T18:14:49.497Z" },
 ]
+
+[[package]]
+name = "fsfe-website"
+version = "0.0.0"
+source = { virtual = "." }
+dependencies = [
+    { name = "fsfe-website-build" },
+    { name = "fsfe-website-hooks" },
+]
+
+[package.dev-dependencies]
+dev = [
+    { name = "lefthook" },
+    { name = "pyright" },
+    { name = "pytest" },
+    { name = "pytest-cov" },
+    { name = "pytest-mock" },
+    { name = "reuse" },
+    { name = "ruff" },
+    { name = "tombi" },
+    { name = "ty" },
+    { name = "types-lxml" },
+]
+notifications = [
+    { name = "desktop-notifier" },
+]
+
+[package.metadata]
+requires-dist = [
+    { name = "fsfe-website-build", editable = "packages/build" },
+    { name = "fsfe-website-hooks", editable = "packages/hooks" },
+]
+
+[package.metadata.requires-dev]
+dev = [
+    { name = "lefthook" },
+    { name = "pyright" },
+    { name = "pytest" },
+    { name = "pytest-cov" },
+    { name = "pytest-mock" },
+    { name = "reuse" },
+    { name = "ruff" },
+    { name = "tombi" },
+    { name = "ty" },
+    { name = "types-lxml" },
+]
+notifications = [{ name = "desktop-notifier" }]
 
 [[package]]
 name = "fsfe-website-build"

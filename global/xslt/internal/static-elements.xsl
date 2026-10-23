@@ -5,6 +5,11 @@
     <xsl:variable name="lang">
       <xsl:value-of select="/buildinfo/document/@language"/>
     </xsl:variable>
+    <xsl:variable name="formlabel">
+	  <xsl:call-template name="fsfe-gettext">
+		<xsl:with-param name="id" select="'subscribe-newsletter'"/>
+	  </xsl:call-template>
+	</xsl:variable>
     <xsl:variable name="yourname">
       <xsl:call-template name="gettext">
         <xsl:with-param name="id" select="'yourname'"/>
@@ -20,11 +25,11 @@
         <xsl:with-param name="id" select="'subscribe'"/>
       </xsl:call-template>
     </xsl:variable>
-    <form class="form-inline" id="formnl" name="formnl" method="POST" action="https://my.fsfe.org/subscribe">
+    <form class="form-inline" id="formnl" name="formnl" method="POST" action="https://my.fsfe.org/subscribe" aria-label="{$formlabel}">
       <input type="hidden" name="language" value="{$lang}"/>
       <input type="input" style="display: none !important" name="password" tabindex="-1" autocomplete="off"/>
-      <input id="yourname" name="name" type="text" required="required" placeholder="{$yourname}"/>
-      <input id="email" name="email1" type="email" required="required" placeholder="{$email}"/>
+      <input id="yourname" name="name" type="text" required="required" placeholder="{$yourname}" aria-label="{$yourname}"/>
+      <input id="email" name="email1" type="email" required="required" placeholder="{$email}" aria-label="{$email}"/>
       <fsfe-cd-referrer-input/>
       <input type="hidden" name="wants_info" value="yes"/>
       <input type="hidden" name="wants_newsletter_info" value="yes"/>

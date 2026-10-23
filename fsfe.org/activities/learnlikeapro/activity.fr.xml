@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<activityset>
+  <version>1</version>
+
+  <activity id="learnlikeapro" date="2019-10-01" status="active">
+    <title>Apprendre comme un pro</title>
+    <description>
+      Une initiative visant à introduire le Logiciel Libre dans le secteur de l’éducation
+      en augmentant la souveraineté numérique et les compétences des élèves et des professeur.
+      Créé par le groupe local de Zurich, « Lernen wie die Profis » a reçu le prix DINAcon.
+      L’activité est exclusivement en allemand.
+    </description>
+    <link href="https://lernenwiedieprofis.ch/"/>
+    <image url="/graphics/logos/learnlikeapro.png" alt=""/>
+    <order priority="2"/>
+    <tags>
+      <tag key="pmpc"/>
+    </tags>
+  </activity>
+</activityset>

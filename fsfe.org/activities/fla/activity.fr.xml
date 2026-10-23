@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<activityset>
+  <version>1</version>
+
+  <activity id="fla" date="2017-06-01" status="active">
+    <title>Programme Fiduciaire</title>
+    <description>
+      L’accord de licence fiduciaire (ALF) permet aux projets logiciels de céder
+      leurs droits d’auteur à un mandataire désigné chargé de leur gestion efficace.
+      Cela permet aux développeurs de se concentrer sur la programmation plutôt
+      que de passer du temps sur de l’administratif juridique. Bien que la FSFE
+      n’accepte plus de nouveaux projets dans son programme fiduciaire,
+      nous continuons d’offrir des versions personnalisables de l’ALF.
+    </description>
+    <link href="/activities/fla/fiduciary.html"/>
+    <image url="/graphics/logos/fla.png" alt=""/>
+    <order priority="6" highlight="no"/>
+    <tags>
+      <tag key="legal"/>
+    </tags>
+  </activity>
+</activityset>

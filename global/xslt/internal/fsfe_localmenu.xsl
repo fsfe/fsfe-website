@@ -23,7 +23,6 @@
       <xsl:for-each select="/buildinfo/document/set/localmenuitem[@set=$set]">
         <xsl:sort select="@id"/>
         <xsl:element name="li">
-          <xsl:attribute name="role">presentation</xsl:attribute>
           <xsl:if test="@id=$id">
             <xsl:attribute name="class">active</xsl:attribute>
           </xsl:if>

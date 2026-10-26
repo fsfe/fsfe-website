@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <service-status-data>
   <version>1</version>
-  <incident name="PHP Services down">
+  <incident name="PHP Services partially down">
 	  <update date="2026-10-21">
 		  Due to PHP related CVE-2026-109618 and CVE-2026-109619 we had to take down some services for the moment. We will enable them again once updates are available.
 	  </update>
+    <update date="2026-10-26">
+      With the exception of the community blogs all PHP based services are patched and running again. System Hackers are working on getting the blogs running again.
+    </update>
   </incident>
     <incident name="login to services of the FSFE">
     <update date="2026-08-08" resolved="true">

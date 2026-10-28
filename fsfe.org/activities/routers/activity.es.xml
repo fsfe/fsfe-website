@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<activityset>
+  <version>3</version>
+
+  <activity id="routers" date="2013-11-01" status="active">
+    <title>La Libertad del Router</title>
+    <description>
+	  Aunque deberíamos ser libres de elegir los dispositivos técnicos 
+	  que utilizamos en nuestra vida privada, algunos proveedores de 
+	  servicios de Internet europeos imponen a sus clientes qué 
+	  dispositivo deben emplear para conectarse a la Red, o bien 
+	  discriminan a quienes poseen dispositivos alternativos. Esto 
+	  afecta a nuestra libertad fundamental de elección.
+</description>
+    <link href="/activities/routers/routers.html"/>
+    <image url="/graphics/logos/RouterFreedom-logo.png" alt=""/>
+    <order priority="4" highlight="yes"/>
+    <tags>
+      <tag key="deviceneutrality"/>
+    </tags>
+  </activity>
+</activityset>

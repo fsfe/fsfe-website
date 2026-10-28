@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<activityset>
+  <version>1</version>
+
+  <activity id="reuse" date="2017-06-01" status="active">
+    <title>Software REUSE</title>
+    <description>
+	La FSFE lleva a cabo un proyecto para facilitar la gestión de las 
+	licencias, tanto para las personas como para las máquinas. Este 
+	proyecto resuelve un problema fundamental que las licencias de 
+	Software Libre plantean desde su origen: ¿bajo qué licencia se 
+	distribuye un archivo y quién es el titular de los derechos de 
+	autor? REUSE ofrece recomendaciones sencillas, estructuradas en 
+	tres pasos, que ayudan a usuarios, desarrolladores y profesionales 
+	del ámbito jurídico.
+    </description>
+    <link href="https://reuse.software"/>
+    <image url="/graphics/logos/reuse.png" alt=""/>
+    <order priority="6" highlight="yes"/>
+    <tags>
+      <tag key="legal"/>
+    </tags>
+  </activity>
+</activityset>

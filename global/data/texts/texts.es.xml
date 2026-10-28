@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <data>
-  <version>3</version>
+  <version>5</version>
 
 
 <!-- ALL STATIC TEXTS -->
@@ -36,6 +36,10 @@
   <text id="translator3a">También puede consultar el </text>
   <text id="translator3b">texto original</text>
   <text id="translator3c"> de esta página.</text>
+  <text id="permission">
+    Salvo que se indique lo contrario, el contenido de esta página está bajo la licencia <a href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution Share-Alike 4.0 (CC-BY-SA 4.0)</a>.
+    Para obtener más información, consulte nuestra <a href="/about/license-policy.html">política de licencias</a> de contenido del sitio web.
+  </text>
   <text id="js-licences">Licencias JavaScript</text>
 
   
@@ -52,6 +56,13 @@
     Esta página no se ha traducido todavía. Por favor, consulte <a href="/contribute/translators/translators.html">esta página
 	</a> para informarse de cómo puede ayudar con las traducciones
 	y hacer otras contribuciones.
+  </text>
+  <text id="very-outdated">
+	La traducción de esta página está muy desactualizada, por lo que se 
+	muestra la versión en inglés. <a 
+	href="/contribute/translators/translators.html">Ayúdanos a 
+	traducir</a> esta y otras páginas de fsfe.org, para que las 
+	personas puedan leer nuestro mensaje en su lengua materna.
   </text>
     <text id="under-construction">
     <strong>Aviso: </strong>Esta página está en construcción. Por favor <strong>no la difunda</strong> o intente traducirla, pues su contenido está sujeto a cambios.
@@ -80,6 +91,7 @@
 
 
   <text id="learn-more">Saber más</text>
+  <text id="read-testimonial">Leer testimonio</text>
 
   <text id="newsletter">Boletín de noticias</text>
   <text id="podcast">Podcast</text>
@@ -144,6 +156,8 @@
   <text id="related-news">Noticias relacionadas</text>
   <text id="related-events">Eventos relacionados</text>
   <text id="related-all">Todas las noticias y eventos relacionadas</text>
+  <text id="more-updates">También puedes recibir actualizaciones periódicas y análisis más detallados a través de nuestros otros canales:</text>
+  <text id="no-upcoming-events">No hay eventos previstos relacionados con Ada y Zangemann.</text>
 
   
   <!-- Sidebars -->
@@ -171,9 +185,6 @@ sociedad digital emergente.
 
   <!-- Motivational texts for fellowship, support or donations -->
 
-
-
-
   <text id="support">Apoyar a la FSFE</text>
   <text id="show-support">¡Muestre su apoyo!</text>
   <text id="show-support-paragraph">¡La FSFE necesita su apoyo para que se oiga su voz! ¡Cada apoyo cuenta!</text>
@@ -189,6 +200,14 @@ sociedad digital emergente.
     <a href="/donate/thankgnus.html">donantes</a>. Sus donaciones son fundamentales para nuestra
     fuerza y autonomía. Nos permiten seguir trabajando por el Software Libre
     donde sea necesario y ser una voz independiente.
+ </text>
+
+ <text id="followup/press-header">Mantente informado</text>
+ <text id="followup/press-paragraph">
+	La mejor forma de mantenerte al día es suscribirte a nuestros <a 
+    href="/press/press.html">comunicados de prensa</a> o a nuestras <a 
+    href="/news/index.html">últimas noticias</a>. También puedes ponerte en contacto con nuestro 
+    equipo de prensa a través de <email mailto="yes">press@fsfe.org</email>.
  </text>
  
   <!-- pdfreaders.org -->
@@ -222,4 +241,11 @@ sociedad digital emergente.
   <text id="search/placeholder">Buscar términos...</text>
   <text id="search/notfound">No hay resultados de búsqueda. Por favor reformula su consulta.</text>
   <text id="search/empty">Su consulta está vacía.</text>
+
+  <!-- Progressbar -->
+  <text id="progressbar-of">de</text>
+
+  <!-- Activity Ada &amp; Zagemann -->
+  <text id="publisher">Editorial</text>
+   
 </data>

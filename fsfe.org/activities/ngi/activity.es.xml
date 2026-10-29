@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<activityset>
+  <version>1</version>
+
+  <activity id="ngi" date="2019-01-01" status="active">
+    <title>Next Generation Internet</title>
+    <description>
+	 La FSFE es una organización asociada a NGI, una coalición de 
+	 organizaciones sin ánimo de lucro de toda Europa. Financiada por 
+	 la Comisión Europea, concede subvenciones para trabajar en nuevas 
+	 ideas y tecnologías que contribuyan al establecimiento de la 
+	 Internet de próxima generación. La FSFE proporciona apoyo jurídico 
+	 a estos proyectos.
+    </description>
+    <link href="/activities/ngi/ngi.html"/>
+    <image url="/graphics/logos/ngi.png" alt=""/>
+    <order priority="3" highlight="yes"/>
+    <tags>
+      <tag key="legal"/>
+    </tags>
+  </activity>
+</activityset>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<activityset>
+  <version>1</version>
+
+  <activity id="refund4freedom" date="2025-05-25" status="active">
+    <title>Refund4Freedom</title>
+    <description>
+	  Al comprar un nuevo ordenador portátil, a menudo te ves obligado 
+	  a aceptar un sistema operativo Microsoft Windows preinstalado. 
+	  Esto es injusto. La iniciativa Refund4Freedom orienta a los 
+	  usuarios sobre cómo recuperar su dinero en estos casos y exige 
+	  que se ponga fin a esta práctica que limita la libertad de los 
+	  usuarios.
+    </description>
+    <link href="/activities/refund4freedom/refund4freedom.html"/>
+    <image url="/graphics/logos/refund4freedom.png" alt=""/>
+    <order priority="2" highlight="yes"/>
+    <tags>
+      <tag key="deviceneutrality"/>
+    </tags>
+  </activity>
+</activityset>

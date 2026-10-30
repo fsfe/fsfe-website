@@ -1,28 +1,32 @@
 pre-commit:
-  commands:
-    # FORMATTING, changes files
-    # Some filetypes must be formatted, and not being so will fail ci
-    ruff-check:
+  piped: true
+  fail_on_changes_diff: true
+  jobs:
+    # FORMATTING, changes files, and fails ci if it does
+    - name: ruff-check
       glob: "*.py"
       run: ruff check --fix {staged_files}
       stage_fixed: true
-      fail_on_changes: "ci"
-    ruff-format:
+    - name: ruff-format
       glob: "*.py"
       run: ruff format {staged_files}
       stage_fixed: true
-      fail_on_changes: "ci"
-    php-cs-fixer:
+    - name: php-cs-fixer
       glob: "*.php"
       run: php-cs-fixer --no-interaction --config=.php-cs-fixer.dist.php fix {staged_files}
       stage_fixed: true
-      fail_on_changes: "ci"
-    shfmt:
+    - name: shfmt
       glob: "*.sh"
       run: shfmt --write {staged_files}
       stage_fixed: true
-      fail_on_changes: "ci"
-    prettier:
+    - name: tombi
+      glob: "*.toml"
+      run: tombi format {staged_files}
+      stage_fixed: true
+
+    # FIXES, changes files, excluded in ci
+    - name: prettier
+      tags: [fix]
       glob:
         - "*.css"
         - "*.html"
@@ -35,41 +39,34 @@ pre-commit:
         - "*.yml"
       run: prettier --write {staged_files}
       stage_fixed: true
-    tombi:
-      glob: "*.toml"
-      run: tombi format {staged_files}
+    - name: general-fixes
+      tags: [fix]
+      run: run-fixes {staged_files}
       stage_fixed: true
-      fail_on_changes: "ci"
-    format-xsl:
+    - name: format-xsl
+      tags: [fix]
       glob: "*.xsl"
       run: for file in {staged_files}; do xmllint --format "$file" --output "$file"; done
       stage_fixed: true
-    remove-empty-paragraphs:
-      glob:
-        - "*.xml"
-        - "*.xhtml"
-      run: for file in {staged_files}; do xsltproc --output "$file" ./tools/ci-checks/remove-empty-paragraphs.xsl "$file"; done
-      stage_fixed: true
 
     # CHECKS, does not alter any files
-    reuse:
+    - name: lefthook-validate
+      glob: "lefthook.yaml"
+      run: lefthook validate
+    - name: reuse
       glob:
         - "*.py"
       run: reuse lint-file {staged_files}
-    pytest:
+    - name: pytest
       glob:
         - "*.py"
-      run: coverage run -m pytest ./build/fsfe_website_build_tests_pre_commit
-    pytest-coverage:
-      glob:
-        - "*.py"
-      run: coverage report --show-missing --fail-under=85
-    ty:
+      run: pytest --cov --cov-report=term-missing ./packages/build/test_pre_commit ./packages/hooks/test_pre_commit
+    - name: ty
       glob: "*.py"
       run: ty check {staged_files}
-    general-checks:
-      run: tools/ci-checks/run_checks.py {staged_files}
-    simple-syntax:
+    - name: general-checks
+      run: run-checks {staged_files}
+    - name: simple-syntax
       glob:
         - "*.xml"
         - "*.xhtml"

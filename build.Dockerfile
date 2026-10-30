@@ -7,8 +7,6 @@ RUN apt-get update && apt-get install --yes --no-install-recommends \
 ca-certificates \
 expect \
 git \
-libxml2 \
-libxslt1.1 \
 node-less \
 openssh-client \
 rsync
@@ -22,7 +20,9 @@ WORKDIR /website-source-during-build
 # Copy the pyproject and build deps
 # Done in a seperate step for optimal docker caching
 COPY ./pyproject.toml ./uv.lock ./
-RUN uv sync --no-install-package fsfe_website_build
+COPY ./packages/build/pyproject.toml ./packages/build/
+COPY ./packages/hooks/pyproject.toml ./packages/hooks/
+RUN uv sync --package fsfe-website-build --no-install-workspace
 
 # Copy entrypoint
 COPY build.entrypoint.sh ./

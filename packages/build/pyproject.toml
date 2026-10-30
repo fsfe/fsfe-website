@@ -1,0 +1,24 @@
+[project]
+name = "fsfe-website-build"
+version = "0.0.0"
+description = "Python tooling to build the fsfe websites"
+dependencies = [
+  "dacite",  # dict to dataclass conversion
+  "lxml",  # XML parser
+  "nltk",  # For stopwords for the search index
+  "platformdirs",  # Get cache dirs and similar by platform
+  "python-iso639",  # For getting english language names of languages from two letter codes.
+  "requests",  # For HTTP requests
+  "tdewolff-minify",  # For minification html css and js
+]
+
+[project.scripts]
+build = "fsfe_website_build:build"
+
+[build-system]
+requires = ["uv_build"]
+build-backend = "uv_build"
+
+[tool.uv.build-backend]
+module-name = "fsfe_website_build"
+module-root = ""

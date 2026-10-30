@@ -20,8 +20,7 @@ in
       uv
       # Need to use a nix python to prevent ssl certs issues
       python
-      # needed by lxml
-      libxslt
+      # xmllint, for git hooks
       libxml2
       # For less compilation
       lessc

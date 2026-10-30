@@ -1,26 +1,13 @@
 [project]
-name = "fsfe-website-build"
+name = "fsfe-website"
 version = "0.0.0"
-description = "Python tooling to build the fsfe websites"
-readme = "README.md"
+description = "Workspace for the fsfe websites python tooling"
 requires-python = "==3.14.*"
-dependencies = [
-  "dacite",  # dict to dataclass conversion
-  "lxml",  # XML parser
-  "nltk",  # For stopwords for the search index
-  "platformdirs",  # Get cache dirs and similar by platform
-  "python-iso639",  # For getting english language names of languages from two letter codes.
-  "requests",  # For HTTP requests
-  "tdewolff-minify",  # For minification html css and js
-]
-
-[project.scripts]
-build = "fsfe_website_build:build"
+dependencies = ["fsfe-website-build", "fsfe-website-hooks"]
 
 [dependency-groups]
 dev = [
   "lefthook",  # pre-commit hook
-  "pillow",  # image processing
   "pyright",  # python typechecker
   "pytest",  # python test runner
   "pytest-cov",  # coverage reports for python coverage
@@ -35,12 +22,13 @@ notifications = [
   "desktop-notifier",  # send notification on completion optionally
 ]
 
-[build-system]
-requires = ["uv_build"]
-build-backend = "uv_build"
-
 [tool.coverage.run]
-source = ["fsfe_website_build.lib"]
+source = [
+  "fsfe_website_build.lib",
+  "fsfe_website_hooks.checks",
+  "fsfe_website_hooks.fixes",
+  "fsfe_website_hooks.lib",
+]
 
 [tool.coverage.report]
 show_missing = true
@@ -50,7 +38,7 @@ fail_under = 100
 addopts = ["--import-mode=importlib"]
 python_files = ["*_test.py"]
 python_functions = ["*_test"]
-testpaths = ["build/fsfe_website_build_tests*"]
+testpaths = ["packages/*/test_*"]
 
 [tool.ruff.lint]
 # See https://docs.astral.sh/ruff/rules/ for information
@@ -94,18 +82,21 @@ ignore = [
 ]
 
 [tool.ruff.lint.per-file-ignores]
-"build/fsfe_website_build_tests*/*" = [
+"packages/*/test_*/*" = [
   "D",  # We do not need to document the tests.
   "TRY003",  # Dont worry about big exceptions in tests
   "S101",  # Allow asserts in tests
 ]
-"tools/**" = [
+"packages/hooks/**" = [
   "TRY003",  # Allow large exception messages in code cli scripting things
 ]
 
 [tool.uv]
 exclude-newer = "7 days"
 
-[tool.uv.build-backend]
-module-name = "fsfe_website_build"
-module-root = "build"
+[tool.uv.sources]
+fsfe-website-build = { workspace = true }
+fsfe-website-hooks = { workspace = true }
+
+[tool.uv.workspace]
+members = ["packages/*"]

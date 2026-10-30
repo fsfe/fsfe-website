@@ -76,10 +76,13 @@ if ('POST' == $_SERVER['REQUEST_METHOD']) {
     if (!empty($_POST['url'])) {
         exit('The supplied data is incorrect. Please use the back button of the browser to return to the form.');
     }
+    if !($_POST['email'] == 'nospam') {
+        exit('Sorry Dave.');
+    }
     // sanity check all the needed fields are set
     if (
         empty($_POST['name'])
-        || empty($_POST['email'])
+        || empty($_POST['email2'])
         || empty($_POST['experience'])
         || empty($_POST['material'])
         || empty($_POST['eventdescription'])
@@ -98,7 +101,7 @@ if ('POST' == $_SERVER['REQUEST_METHOD']) {
             || 'test' == strtolower($_POST['eventdescription'])
             || 'test' == strtolower($_POST['address'])
         ) && (
-            !str_contains($_POST['email'], 'fsfe.org')
+            !str_contains($_POST['email2'], 'fsfe.org')
         )
     ) {
         exit('Something seems to be wrong with the data you supplied.');
@@ -107,7 +110,7 @@ if ('POST' == $_SERVER['REQUEST_METHOD']) {
     $lang = substr($_POST['language'], 0, 2);
     $email_response = send_email(
         htmlspecialchars($_POST['name']),
-        htmlspecialchars($_POST['email']),
+        htmlspecialchars($_POST['email2']),
         htmlspecialchars($_POST['experience']),
         htmlspecialchars($_POST['material']),
         htmlspecialchars($_POST['eventdescription']),

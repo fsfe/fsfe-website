@@ -23,7 +23,9 @@
       <xsl:choose>
         <xsl:when test="/buildinfo/document/followup = 'subscribe-nl'">
           <xsl:attribute name="class">subscribe-nl</xsl:attribute>
+          <xsl:attribute name="aria-labelledby">followup-heading</xsl:attribute>
           <xsl:element name="h2">
+			<xsl:attribute name="id">followup-heading</xsl:attribute>
             <xsl:call-template name="fsfe-gettext">
               <xsl:with-param name="id" select="'subscribe-newsletter'"/>
             </xsl:call-template>
@@ -40,7 +42,9 @@
         </xsl:when>
         <xsl:when test="/buildinfo/document/followup = 'support'">
           <xsl:attribute name="class">support</xsl:attribute>
+          <xsl:attribute name="aria-labelledby">followup-heading</xsl:attribute>
           <xsl:element name="h2">
+			<xsl:attribute name="id">followup-heading</xsl:attribute>
             <xsl:call-template name="fsfe-gettext">
               <xsl:with-param name="id" select="'show-support'"/>
             </xsl:call-template>
@@ -61,6 +65,11 @@
         </xsl:when>
         <xsl:when test="/buildinfo/document/followup = 'donate'">
           <xsl:attribute name="class">donate</xsl:attribute>
+          <xsl:attribute name="aria-label">
+			<xsl:call-template name="fsfe-gettext">
+				<xsl:with-param name="id" select="'donate'"/>
+			</xsl:call-template>
+	      </xsl:attribute>
           <xsl:element name="p">
             <xsl:call-template name="fsfe-gettext">
               <xsl:with-param name="id" select="'support-paragraph'"/>
@@ -81,7 +90,9 @@
         </xsl:when>
         <xsl:when test="/buildinfo/document/followup = 'join'">
           <xsl:attribute name="class">join</xsl:attribute>
+          <xsl:attribute name="aria-labelledby">followup-heading</xsl:attribute>
           <xsl:element name="h2">
+			<xsl:attribute name="id">followup-heading</xsl:attribute>
             <xsl:call-template name="fsfe-gettext">
               <xsl:with-param name="id" select="'support/become'"/>
             </xsl:call-template>
@@ -102,7 +113,9 @@
         </xsl:when>
         <xsl:when test="/buildinfo/document/followup = 'press'">
           <xsl:attribute name="class">join</xsl:attribute>
+          <xsl:attribute name="aria-labelledby">followup-heading</xsl:attribute>
           <xsl:element name="h2">
+			<xsl:attribute name="id">followup-heading</xsl:attribute>
             <xsl:call-template name="fsfe-gettext">
               <xsl:with-param name="id" select="'followup/press-header'"/>
             </xsl:call-template>
@@ -120,7 +133,9 @@
         </xsl:when>
         <xsl:otherwise>
           <xsl:attribute name="class">subscribe-nl</xsl:attribute>
+          <xsl:attribute name="aria-labelledby">followup-heading</xsl:attribute>
           <xsl:element name="h2">
+			<xsl:attribute name="id">followup-heading</xsl:attribute>
             <xsl:call-template name="fsfe-gettext">
               <xsl:with-param name="id" select="'subscribe-newsletter'"/>
             </xsl:call-template>

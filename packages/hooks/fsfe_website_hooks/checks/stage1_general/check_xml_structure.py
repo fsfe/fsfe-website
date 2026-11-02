@@ -71,7 +71,14 @@ def check(files: list[Path], pool: multiprocessing.pool.Pool) -> tuple[bool, str
     for path_data, paths in groups.items():
         basepath, suffix = path_data
         if (master := basepath.parent / f"{basepath.name}.en{suffix}").exists():
-            tasks.extend((master, path, whitelist) for path in paths if path != master)
+            translations = (
+                basepath.parent.glob(f"{basepath.name}.??{suffix}")
+                if master in paths
+                else paths
+            )
+            tasks.extend(
+                (master, path, whitelist) for path in translations if path != master
+            )
         else:
             logger.warning(
                 "No english translation of %s with suffix %s exists - skipping",

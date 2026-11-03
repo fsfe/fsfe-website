@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<activityset>
+  <version>1</version>
+
+  <activity id="bgw" date="2003-02-17" status="finished">
+    <title>Brave GNU World</title>
+    <description>
+      Le « Brave GNU World » était une colonne mensuelle publiée de 1999 à 2004,
+      destinée à la fois aux lecteurs ayant des compétences techniques qu’à ceux
+      n’en ayant pas. Son but était de fournir un aperçu des projets et
+      des évolutions s’inscrivant dans la philosophie du Logiciel Libre.
+      Cette colonne était traduite dans 9 langues, en faisant sans doute
+      la chronique la plus largement diffusée au monde.
+    </description>
+    <link href="/activities/bgw/bgw.html"/>
+    <order priority="1"/>
+    <tags>
+      <tag key="volunteer-engagement"/>
+    </tags>
+  </activity>
+</activityset>

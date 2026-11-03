@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<activityset>
+  <version>1</version>
+
+  <activity id="radiodirective" date="2016-03-01" status="finished">
+    <title>Directive du verrouillage des radios</title>
+    <description>
+      Un règlement de l’UE pourrait rendre impossible l’installation de
+      logiciels personnalisés sur la plupart des équipements radioélectriques
+      comme les routeurs Wi-Fi, les smartphones et les appareils embarqués.
+      Elle oblige les fabricants à mettre en place un dispositif empêchant
+      les utilisateurs d’installer tout logiciel n’ayant pas été certifié
+      par eux.
+    </description>
+    <link href="/activities/radiodirective/radiodirective.html"/>
+    <image url="/graphics/logos/radiodirective.png" alt=""/>
+    <order priority="3" highlight="no"/>
+    <tags>
+      <tag key="deviceneutrality"/>
+    </tags>
+  </activity>
+</activityset>

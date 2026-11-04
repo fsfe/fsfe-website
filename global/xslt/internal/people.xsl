@@ -131,24 +131,37 @@
                   </xsl:otherwise>
                 </xsl:choose>
               </xsl:element>
-              <!-- E-mail -->
+              <!-- E-mail, Fediverse verification -->
               <xsl:element name="span">
                 <xsl:attribute name="class">email</xsl:attribute>
-                <xsl:if test="email != ''">
+                <xsl:if test="email != ''">✉️ 
                   <xsl:call-template name="email">
                     <xsl:with-param name="email" select="email"/>
                     <xsl:with-param name="mailto" select="'no'"/>
                   </xsl:call-template>
                 </xsl:if>
                 <xsl:if test="fingerprint != ''">
-                  <xsl:element name="a"><xsl:attribute name="href">openpgp4fpr:<xsl:value-of select="fingerprint"/></xsl:attribute>
-                                🐾
-                            </xsl:element>
+                  <xsl:element name="a">
+                    <xsl:attribute name="href">openpgp4fpr:<xsl:value-of select="fingerprint"/></xsl:attribute>
+                    <xsl:attribute name="alt">openpgp4pr</xsl:attribute>
+                    🐾
+                  </xsl:element>
                 </xsl:if>
                 <xsl:if test="keyhref != ''">
-                  <xsl:element name="a"><xsl:attribute name="href"><xsl:value-of select="keyhref"/></xsl:attribute>
-                                🔑
-                            </xsl:element>
+                  <xsl:element name="a">
+                    <xsl:attribute name="href"><xsl:value-of select="keyhref"/></xsl:attribute>
+                    <xsl:attribute name="alt">OpenPGP Key</xsl:attribute>
+                    🔑
+                  </xsl:element>
+                </xsl:if>
+                <!-- Fediverse -->
+                <xsl:if test="fediverse/@url != ''">
+                  <xsl:element name="a">
+                    <xsl:attribute name="rel">me</xsl:attribute>
+                    <xsl:attribute name="href"><xsl:value-of select="fediverse/@url"/></xsl:attribute>
+                    <xsl:attribute name="alt">Fediverse</xsl:attribute>
+                    ⁂
+                  </xsl:element>
                 </xsl:if>
               </xsl:element>
               <!-- Functions -->

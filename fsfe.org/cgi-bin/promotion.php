@@ -42,18 +42,18 @@ $countryname = explode('|', htmlspecialchars($_POST['country']))[1];
 
 $subject = 'Promotion material order';
 $msg_to_staff = "Please send me promotional material:\n"
-  ."First Name: ".htmlspecialchars($_POST['firstname'])."\n"
-  ."Last Name:  ".htmlspecialchars($_POST['lastname'])."\n"
-  ."EMail:      ".htmlspecialchars($_POST['mail'])."\n"
+  .'First Name: '.htmlspecialchars($_POST['firstname'])."\n"
+  .'Last Name:  '.htmlspecialchars($_POST['lastname'])."\n"
+  .'EMail:      '.htmlspecialchars($_POST['mail'])."\n"
   ."\n"
   ."Address:\n"
-  . htmlspecialchars($_POST['firstname'])." ".htmlspecialchars($_POST['lastname'])."\n";
+  .htmlspecialchars($_POST['firstname']).' '.htmlspecialchars($_POST['lastname'])."\n";
 
 if (!empty($_POST['org'])) {
     $msg_to_staff .= htmlspecialchars($_POST['org'])."\n";
 }
 $msg_to_staff .= htmlspecialchars($_POST['street'])."\n"
-  . htmlspecialchars($_POST['zip'])." ".htmlspecialchars($_POST['city'])."\n"
+  .htmlspecialchars($_POST['zip']).' '.htmlspecialchars($_POST['city'])."\n"
   ."{$countryname}\n"
   ."\n"
   ."Specifics of the Order:\n";
@@ -136,6 +136,7 @@ if ('y' == $subcd or 'y' == $subnl or $donate) {
     $json_cd_res = json_decode($cd_res, true);
     if (is_null($json_cd_res) or !isset($json_cd_res['donref'])) {
         header("Location: https://fsfe.org/contribute/spreadtheword-ordererror.{$lang}.html");
+
         exit;
     }
 }
@@ -221,9 +222,9 @@ $response = curl_exec($curl);
 curl_close($curl);
 // Only process donations starting from 10 euro.
 if (isset($_POST['donate']) && ((int) $_POST['donate']) >= 10) {
-    $replace = array(':AMOUNT:', ':EMAIL:', ':REFERENCE:');
-    $with = array($_POST['donate'], $_POST['mail'], $_POST['donationID']);
-    $contents = file_get_contents($_SERVER['DOCUMENT_ROOT']."/contribute/spreadtheword-tmpl-payment." . $lang . ".html");
+    $replace = [':AMOUNT:', ':EMAIL:', ':REFERENCE:'];
+    $with = [$_POST['donate'], $_POST['mail'], $_POST['donationID']];
+    $contents = file_get_contents($_SERVER['DOCUMENT_ROOT'].'/contribute/spreadtheword-tmpl-payment.'.$lang.'.html');
     echo str_replace($replace, $with, $contents);
 } else {
     // DEBUG: Comment out next line to be able to see errors and printed info

@@ -76,7 +76,7 @@ if ('POST' == $_SERVER['REQUEST_METHOD']) {
     if (!empty($_POST['url'])) {
         exit('The supplied data is incorrect. Please use the back button of the browser to return to the form.');
     }
-    if !($_POST['email'] == 'nospam') {
+    if ('nospam' != $_POST['email']) {
         exit('Sorry Dave.');
     }
     // sanity check all the needed fields are set

@@ -17,7 +17,9 @@
 use PHPMailer\PHPMailer\PHPMailer;
 
 require 'thirdparty/PHPMailer/Exception.php';
+
 require 'thirdparty/PHPMailer/PHPMailer.php';
+
 require 'thirdparty/PHPMailer/SMTP.php';
 
 $html = ''; // create empty variable

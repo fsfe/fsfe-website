@@ -11,13 +11,15 @@
   } ?>">
     <?php if ('yes' === $online) {
         $location = " ({$location})";
-        $countrycode = "ONLINE";
+        $countrycode = 'ONLINE';
     } else {
         $location = ' in '.$location;
     } ?>
-    <country><?php echo htmlspecialchars($countrycode) ?></country>
-    <city><?php echo htmlspecialchars($city) ?> </city>
-    <series><?php echo htmlspecialchars($eventseries);echo "-";echo htmlspecialchars($eventseriesyear); ?></series>
+    <country><?php echo htmlspecialchars($countrycode); ?></country>
+    <city><?php echo htmlspecialchars($city); ?> </city>
+    <series><?php echo htmlspecialchars($eventseries);
+echo '-';
+echo htmlspecialchars($eventseriesyear); ?></series>
     <title><?php echo htmlspecialchars($title).$location; ?></title>
     <group>
      <name><?php echo htmlspecialchars($groupname); ?></name> 

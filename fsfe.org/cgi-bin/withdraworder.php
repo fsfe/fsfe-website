@@ -1,17 +1,19 @@
 <?php
-function send_email ($name, $address, $zip, $city, $country, $email, $orderid, $lang) {
+
+function send_email($name, $address, $zip, $city, $country, $email, $orderid, $lang)
+{
     $url = 'https://helpdesk.fsfe.org/api/conversations';
     $apikey = getenv('FREESCOUT_API_KEY');
-    $subject = "Withdraw from order " . $orderid;
-    $mailcustomer = "<html><body><p>Dear " . $name . ",</p>";
-    $mailcustomer .= "<p>we received your request to withdraw from the order " . $orderid . " we will process it as soon as possible.</p>";
-    $mailcustomer .= "<p>Best,<br/>The Merchendise Team of the FSFE</p></body></html>";
-    $mailbody = "<html><body><p>Hello,</p><p>" . $name . " is withdrawing the order " . $orderid . ".</p>";
-    $mailbody .= "<p>Please check that the following details of the order match:<br/>";
-    $mailbody .= "Address: " . $address . "<br/>";
-    $mailbody .= "ZIP code: " . $zip . "<br/>";
-    $mailbody .= "City: " . $city . "<br/>";
-    $mailbody .= "Country: " . $country . ".</p>";
+    $subject = 'Withdraw from order '.$orderid;
+    $mailcustomer = '<html><body><p>Dear '.$name.',</p>';
+    $mailcustomer .= '<p>we received your request to withdraw from the order '.$orderid.' we will process it as soon as possible.</p>';
+    $mailcustomer .= '<p>Best,<br/>The Merchendise Team of the FSFE</p></body></html>';
+    $mailbody = '<html><body><p>Hello,</p><p>'.$name.' is withdrawing the order '.$orderid.'.</p>';
+    $mailbody .= '<p>Please check that the following details of the order match:<br/>';
+    $mailbody .= 'Address: '.$address.'<br/>';
+    $mailbody .= 'ZIP code: '.$zip.'<br/>';
+    $mailbody .= 'City: '.$city.'<br/>';
+    $mailbody .= 'Country: '.$country.'.</p>';
     $jsondata = [
         'type' => 'email',
         'mailboxId' => 7, // This is the Merchendise Inbox
@@ -63,28 +65,27 @@ function send_email ($name, $address, $zip, $city, $country, $email, $orderid, $
 
     return $response;
 }
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  // sanity check URL is not set
-  if (!empty($_POST["url"])) {
-    die("The supplied data is incorrect. Please use the back button of the browser to return to the form.");
-  }
-  // sanity check all the needed fields are set
-  if ( empty($_POST["name"]) || empty($_POST["address"]) || empty($_POST["zip"]) || empty($_POST["city"]) || empty($_POST["country"]) || empty($_POST["email"]) || empty($_POST["orderid"]) ) {
-    die("The supplied data is incorrect. Please use the back button of the browser to return to the form.");
-  }
-  $lang = substr($_POST['language'], 0, 2);
-  $email_response = send_email(
-    htmlspecialchars($_POST["name"]),
-    htmlspecialchars($_POST["address"]),
-    htmlspecialchars($_POST["zip"]),
-    htmlspecialchars($_POST["city"]),
-    htmlspecialchars($_POST["country"]),
-    htmlspecialchars($_POST["email"]),
-    htmlspecialchars($_POST["orderid"]),
-    $lang
-  );
-  header("Location: https://fsfe.org/order/withdrawedfromorder.{$lang}.html");
-
+if ('POST' == $_SERVER['REQUEST_METHOD']) {
+    // sanity check URL is not set
+    if (!empty($_POST['url'])) {
+        exit('The supplied data is incorrect. Please use the back button of the browser to return to the form.');
+    }
+    // sanity check all the needed fields are set
+    if (empty($_POST['name']) || empty($_POST['address']) || empty($_POST['zip']) || empty($_POST['city']) || empty($_POST['country']) || empty($_POST['email']) || empty($_POST['orderid'])) {
+        exit('The supplied data is incorrect. Please use the back button of the browser to return to the form.');
+    }
+    $lang = substr($_POST['language'], 0, 2);
+    $email_response = send_email(
+        htmlspecialchars($_POST['name']),
+        htmlspecialchars($_POST['address']),
+        htmlspecialchars($_POST['zip']),
+        htmlspecialchars($_POST['city']),
+        htmlspecialchars($_POST['country']),
+        htmlspecialchars($_POST['email']),
+        htmlspecialchars($_POST['orderid']),
+        $lang
+    );
+    header("Location: https://fsfe.org/order/withdrawedfromorder.{$lang}.html");
 } else {
-    die("An error occured.");
+    exit('An error occured.');
 }

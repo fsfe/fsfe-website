@@ -2,7 +2,7 @@
 name = "fsfe-website"
 version = "0.0.0"
 description = "Workspace for the fsfe websites python tooling"
-requires-python = "==3.14.*"
+requires-python = "==3.15.*"
 dependencies = ["fsfe-website-build", "fsfe-website-hooks"]
 
 [dependency-groups]

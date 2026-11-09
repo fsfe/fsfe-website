@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<activityset>
+  <version>1</version>
+
+  <activity id="elections" date="2009-09-01" status="active">
+    <title>Activités électorale</title>
+    <description>
+      Quel meilleur moment que les périodes éléctorales pour interroger les politiciens sur leur posture
+      vis-à-vis du Logiciel Libre et des normes ouvertes ? Nous croyons que nous pouvons
+      et devons soulever ces questions lors de toutes les élections : européennes, nationales, régionales
+      et locales. En fonction du système et de la culture électorale, nous recourons
+      à différentes stratégies et outils.
+    </description>
+    <link href="/activities/elections/index.html"/>
+    <image url="/graphics/logos/elections.png" alt=""/>
+    <order priority="3"/>
+    <tags>
+      <tag key="pmpc"/>
+    </tags>
+  </activity>
+</activityset>

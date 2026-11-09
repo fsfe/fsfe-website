@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<activityset>
+  <version>1</version>
+
+  <activity id="upcyclingandroid" date="2021-10-01" status="finished">
+    <title>Upcycling Android</title>
+    <description>
+      Continuez d’utiliser votre téléphone avec le Logiciel Libre.
+      Upcycling Android explique le problème de l’obsolescence logicielle
+      dans l’univers Android et aide certains à installer sur leur téléphone
+      un système d’exploitation libre.
+    </description>
+    <link href="/activities/upcyclingandroid/upcyclingandroid.html"/>
+    <image url="/graphics/logos/ua.png" alt=""/>
+    <order priority="4" highlight="no"/>
+    <tags>
+      <tag key="deviceneutrality"/>
+    </tags>
+  </activity>
+</activityset>

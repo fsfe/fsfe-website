@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<activityset>
+  <version>1</version>
+
+  <activity id="msooxml" date="2006-01-01" status="finished">
+    <title>MS-OOXML</title>
+    <description>
+      Depuis le début du processus de standardisation pour « Office Open XML - OOXML »
+      de Microsoft (MS-OOXML), la FSFE a émis de sérieux doutes quant à la
+      considération de MS-OOXML comme un format ouvert. La FSFE a été la
+      première à aborder la question au sein de la communauté, a mené le
+      mouvement contre la normalisation du format et a suivi de près
+      ses développements au fil des années.
+    </description>
+    <link href="/activities/msooxml/msooxml.html"/>
+    <order priority="1"/>
+    <tags>
+      <tag key="pmpc"/>
+    </tags>
+  </activity>
+</activityset>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<activityset>
+  <version>1</version>
+
+  <activity id="avm-gpl-violation" date="2010-01-01" status="finished">
+    <title>Violation de la GPL par AVM</title>
+    <description>
+      Une société peut-elle modifier un logiciel sous licence GPL sur un appareil tiers ?
+      Le fabricant de routeurs AVM a accusé Cybits violation de copyright et
+      de trademark pour avoir modifié le micrologiciel d’origine du routeur,
+      qui repose grande partie  sur le noyau Linux. En collaboration avec
+      gpl-violation.org nous avons réussi à convaincre le tribunal que les
+      clauses de la licence GPL sont contraignantes : les logiciels soumis
+      à cette licence peuvent être librement modifiés et installés, même s’ils
+      sont fournis intégrés au micrologiciel d'un système embarqué.
+    </description>
+    <link href="/activities/avm-gpl-violation/avm-gpl-violation.html"/>
+    <order priority="1"/>
+    <tags>
+      <tag key="legal"/>
+    </tags>
+  </activity>
+</activityset>

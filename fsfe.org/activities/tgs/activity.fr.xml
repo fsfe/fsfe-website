@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<activityset>
+  <version>1</version>
+
+  <activity id="tgs" date="2002-12-30" status="finished">
+    <title>Chronique TUX&amp;GNU@school</title>
+    <description>
+      La chronique TUX&amp;GNU@school était une colonne mensuelle
+      à propos du Logiciel Libre dans l’éducation écrite par Mario Fux.
+      Elle informait sur les logiciels libres éducatif, les
+      sites internet consacrés à ce sujet, ainsi que sur d’autres 
+      thèmes intéressants pour les enseignants, les élèves et tous
+      les défenseurs de la liberté logicielle.
+    </description>
+    <link href="/activities/tgs/"/>
+    <order priority="1"/>
+    <tags>
+      <tag key="volunteer-engagement"/>
+    </tags>
+  </activity>
+</activityset>

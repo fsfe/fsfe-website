@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <service-status-data>
   <version>1</version>
+  <incident name="Matrix Service not available">
+    <update date="2026-11-14">
+      Since Monday mornign the Matrix service of the FSFE is not available.
+      A first analysis is pointing to a problem with the file system of the server.
+    </update>
+  </incident>
   <incident name="PHP Services partially down">
 	  <update date="2026-10-21">
 		  Due to PHP related CVE-2026-109618 and CVE-2026-109619 we had to take down some services for the moment. We will enable them again once updates are available.

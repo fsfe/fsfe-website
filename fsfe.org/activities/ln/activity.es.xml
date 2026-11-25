@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<activityset>
+  <version>2</version>
+
+  <activity id="ln" date="2007-04-01" status="active">
+    <title>Red Jurídica</title>
+    <description>
+	 La Red Jurídica es un grupo neutral y no partidista de expertos 
+	 que se ocupan de cuestiones jurídicas relacionadas con el Software 
+	 Libre. Actualmente cuenta con varios cientos de participantes 
+	 procedentes de distintos ordenamientos jurídicos, ámbitos 
+	 académicos y afiliaciones. El objetivo de la Red Jurídica es 
+	 promover el debate y fomentar un mejor conocimiento de los 
+	 fundamentos jurídicos que sustentan el Software Libre. 
+    </description>
+    <link href="/activities/ln/ln.html"/>
+    <image url="/graphics/logos/legalnetwork.png" alt=""/>
+    <order priority="1" highlight="yes"/>
+    <tags>
+      <tag key="legal"/>
+    </tags>
+  </activity>
+</activityset>

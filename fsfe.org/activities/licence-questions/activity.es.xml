@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<activityset>
+  <version>2</version>
+
+  <activity id="licence-questions" date="2015-11-25" status="active">
+    <title>Preguntas sobre licencias</title>
+    <description>
+	 La lista de correo «Licence Questions» de la FSFE está 
+	 formada por un grupo de voluntarios dedicados a ofrecer ayuda en 
+	 materia de licencias de Software Libre y cumplimiento normativo. 
+	 Si necesitas asesoramiento sobre qué licencia de Software Libre 
+	 deberías utilizar, o si quieres saber más sobre los derechos que 
+	 tienes sobre una obra de Software Libre, puedes ponerte en 
+	 contacto con nosotros.
+    </description>
+    <link href="/freesoftware/legal/faq.html"/>
+    <image url="/graphics/logos/licencequestions.png" alt=""/>
+    <order priority="3" highlight="yes"/>
+    <tags>
+      <tag key="legal"/>
+    </tags>
+  </activity>
+</activityset>

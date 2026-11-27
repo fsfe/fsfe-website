@@ -1,113 +1,229 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <data>
   <version>1</version>
-
-
-<!-- ALL STATIC TEXTS -->
+  <!-- ALL STATIC TEXTS -->
 
 
 <!-- Basic texts -->
 <text id="fsfnetwork">
     FSFE har <a href="/about/fsfnetwork.html">systerorganisationer</a> i <a href="https://www.fsf.org/">Nordamerika</a>, <a href="http://fsf.org.in/">Indien</a> och <a href="http://www.fsfla.org/">Latinamerika</a>.
   </text>
-
-
-<!-- Footer -->
+  <!-- Footer -->
 <text id="translator1a">Vi tackar </text>
-<text id="translator1b"> för den här översättningen. </text>
-<text id="translator2">Det här är en icke-officiell översättning. </text>
-<text id="translator3a">Var vänlig och se även </text>
-<text id="translator3b">den ursprungliga texten</text>
-<text id="translator3c"> för den här sidan.</text>
-
-
-<!-- Warning info boxes -->
-<text id="outdated"><strong>Varning: </strong>
+  <text id="translator1b"> för den här översättningen. </text>
+  <text id="translator2">Det här är en icke-officiell översättning. </text>
+  <text id="translator3a">Var vänlig och se även </text>
+  <text id="translator3b">den ursprungliga texten</text>
+  <text id="translator3c"> för den här sidan.</text>
+  <!-- Warning info boxes -->
+<text id="outdated">
+    <strong>Varning: </strong>
     Den här sidan kan vara inaktuell jämfört med originalet. Använd
     <a href="/contribute/contribute.html">denna</a> sida för att få information
     om hur du kan hjälpa till med översättningar och andra saker.
   </text>
-
-<text id="notranslation"><strong>Varning: </strong>
+  <text id="notranslation">
+    Den här sidan har ännu inte översatts. Hjälp oss gärna att
+	översätta den här och andra sidor på fsfe.org så att fler kan läsa
+	vårt budskap på sitt eget språk.
+  <strong>Varning: </strong>
     Den här sidan har inte blivit översatt ännu. Vad du ser nedan
     är originalversionen av sidan.
     Använd <a href="/contribute/contribute.html">denna</a> sida för att få information
     om hur du kan hjälpa till med översättningar och andra saker.
   </text>
-<text id="under-construction"><strong>Varning: </strong>Denna sida är under konstruktion. Vänligen <strong>sprid inte</strong> och försök inte att översätta eftersom dess innehåll kan ändras.
+  <text id="under-construction">
+    Varning: Den här sidan är under arbete. Sprid inte information om den och försök inte översätta den, eftersom innehållet kan komma att ändras.
+  <strong>Varning: </strong>Denna sida är under konstruktion. Vänligen <strong>sprid inte</strong> och försök inte att översätta eftersom dess innehåll kan ändras.
   </text>
-<text id="project-complete">Detta projekt har avslutats framgångsrikt. Dessa sidor finns kvar här som ett arkiv.  </text>
-
-
-<!-- Menu, Navigation, Buttons -->
+  <text id="project-complete">Detta projekt har avslutats framgångsrikt. Dessa sidor finns kvar här som ett arkiv.  </text>
+  <!-- Menu, Navigation, Buttons -->
 <text id="fsfe/about">Om oss</text>
-
-
-<text id="fsfe/help">Hjälp</text>
-<text id="fsfe/press">Press</text>
-
-<text id="news/news">Senaste Nytt</text>
-<text id="news/events">Kommande Evenemang</text>
-<text id="news/nl">Nyhetsbrev</text>
-
-<text id="learn-more">Lär mer</text>
-<text id="newsletter">Nyhetsbrev</text>
-<text id="go-to">Gå till:</text>
-<text id="search">Sök</text>
-
-<text id="subscribe">Prenumerera</text>
-<text id="news">Senaste nytt</text>
-<text id="breadcrumb-news">Nyheter</text>
-<text id="receive-newsletter">Prenumerera på FSFEs månatliga nyhetsbrev</text>
-<text id="subscribe-newsletter">Prenumerera på nyhetsbrevet</text>
-
-
-
-
-<text id="contact">Kontakt</text>
-<text id="team">Team</text>
-
-<text id="change-lang">Ändra språk</text>
-<text id="content">Innehåll</text>
-<text id="source">Källkod</text>
-<text id="contact-us">Kontakta oss</text>
-<text id="translate">Översätt den här sidan?</text>
-
-
-<!-- Article metadata -->
+  <text id="fsfe/help">Bidra</text>
+  <text id="fsfe/press">Pressrum</text>
+  <text id="news/news">Senaste nytt</text>
+  <text id="news/events">Kommande Evenemang</text>
+  <text id="news/nl">Nyhetsbrev</text>
+  <text id="learn-more">Läs mer</text>
+  <text id="newsletter">Nyhetsbrev</text>
+  <text id="go-to">Gå till:</text>
+  <text id="search">Sök</text>
+  <text id="subscribe">Prenumerera</text>
+  <text id="news">Senaste nytt</text>
+  <text id="breadcrumb-news">Nyheter</text>
+  <text id="receive-newsletter">Prenumerera på FSFE:s månatliga nyhetsbrev</text>
+  <text id="subscribe-newsletter">Prenumerera på nyhetsbrevet</text>
+  <text id="contact">Kontakt</text>
+  <text id="team">Team</text>
+  <text id="change-lang">Ändra språk</text>
+  <text id="content">Innehåll</text>
+  <text id="source">Källkod</text>
+  <text id="contact-us">Kontakta oss</text>
+  <text id="translate">Översätt den här sidan?</text>
+  <!-- Article metadata -->
 <text id="published">Publicerat</text>
-<text id="download">Ladda ner</text>
-
-
-<!-- Petitions -->
+  <text id="download">Ladda ner</text>
+  <!-- Petitions -->
 <text id="osig">Organisationer</text>
-<text id="isig">Privatpersoner</text>
-<text id="bsig">Företag</text>
-
-
-<!-- News and event feeds -->
-<text id="related-news">Relaterade Nyheter</text>
-
-
-<!-- Sidebars -->
+  <text id="isig">Privatpersoner</text>
+  <text id="bsig">Företag</text>
+  <!-- News and event feeds -->
+<text id="related-news">Relaterade nyheter</text>
+  <!-- Sidebars -->
 <text id="our-work">Vårt Arbete</text>
-<text id="our-work-intro">
+  <text id="our-work-intro">
+    Som en välgörenhetsorganisation som stärker användare så att de kan ta kontroll över tekniken ökar vi kunskapen om fri programvara, stärker användarnas rättigheter, uppmuntrar fler att använda och utveckla fri programvara och tillhandahåller resurser för att främja programvarufrihet.
   <p>Som en ideell, icke-statlig organisation, arbetar Free
   Software Foundation Europe för att skapa allmän förståelse och stöd för
   Fri Mjukvara och Öppna Standarder inom politik, företag, juridiskt och i
   samhället i stort.</p>
-</text>
-<text id="about-fsfe">Om FSFE</text>
-
-
-<!-- Motivational texts for fellowship, support or donations -->
+  </text>
+  <text id="about-fsfe">Om FSFE</text>
+  <!-- Motivational texts for fellowship, support or donations -->
 
 
 
 <text id="support">Stöd FSFE</text>
-<text id="show-support">Visa ditt stöd!</text>
-<text id="show-support-paragraph">FSFE behöver ditt stöd för att få sin röst hörd! Varje träff räknas!</text>
-<text id="support-fsfe">Jag stöder FSFE!</text>
-<text id="donate">Donera</text>
-
+  <text id="show-support">Visa ditt stöd!</text>
+  <text id="show-support-paragraph">FSFE behöver ditt stöd för att få sin röst hörd! Varje klick räknas!</text>
+  <text id="support-fsfe">Jag stöder FSFE!</text>
+  <text id="donate">Donera</text>
+  <text id="stw-type">Typ</text>
+  <text id="stw-size">Storlek</text>
+  <text id="stw-context">Kontextinformation</text>
+  <text id="stw-printed">Beställ från vårt lager i<a href="#orderpromo">Order from our stock</a> in</text>
+  <text id="stw-printed-tooltip">Du kan beställa dessa tryckta versioner från oss med hjälp av beställningsformuläret.</text>
+  <text id="stw-languages">Tillgänglig för nedladdning på</text>
+  <text id="stw-languages-tooltip">Om du vill sprida vårt informations- och kampanjmaterial på nätet kan du gärna ladda ner det på de tillgängliga språken.</text>
+  <text id="stw-license">Licens</text>
+  <text id="stw-author">Upphovsperson</text>
+  <text id="stw-year">År</text>
+  <text id="stw-source">Källfiler</text>
+  <text id="stw-source-tooltip">Du kan ladda ner källfilerna för det här kampanjmaterialet för att ändra eller översätta det. Respektera licensen.</text>
+  <text id="stw-printready">Tryckfärdiga filer</text>
+  <text id="stw-printready-tooltip">Det här är filerna som vi skickar till tryckeriet, med utfall och andra tryckerispecifika inställningar. Filerna kan vara mycket stora (cirka 5–25 MB).</text>
+  <text id="fsfe">FSFE</text>
+  <text id="fsfeurope">Free Software Foundation Europe</text>
+  <text id="permission">
+    Om inget annat anges omfattas innehållet på den här sidan av licensen Creative Commons Erkännande-DelaLika 4.0 (CC BY-SA 4.0).
+    Mer information finns i vår policy för licensiering av webbplatsens innehåll.
+  <a href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution Share-Alike 4.0 License (CC-BY-SA 4.0)</a>.
+    For more information, please refer to our website content <a href="/about/license-policy.html">licensing policy</a>.
+  </text>
+  <text id="js-licences">JavaScript-licenser</text>
+  <text id="outdated-1">
+    Den här översättningen kan vara inaktuell jämfört med
+  </text>
+  <text id="outdated-2">
+     Hjälp oss gärna att
+     översätta den här och andra sidor på fsfe.org så att människor kan läsa
+	vårt budskap på sitt eget språk.
+  <a href="/contribute/translators/translators.html">Please help us to
+     translate</a> this and other pages on fsfe.org, so people can read
+	our message in their native language.
+  </text>
+  <text id="very-outdated">
+    Översättningen av den här sidan är mycket inaktuell, därför visas den engelska versionen i stället. Hjälp oss gärna att
+	översätta den här och andra sidor på fsfe.org så att människor kan läsa
+	vårt budskap på sitt eget språk.
+  <a href="/contribute/translators/translators.html">Please help us to
+	translate</a> this and other pages on fsfe.org, so people can read
+	our message in their native language.
+  </text>
+  <text id="fsfe/activities">Aktiviteter</text>
+  <text id="support/become">Bli stödmedlem</text>
+  <text id="fellowship/login">Logga in</text>
+  <text id="news/press">Pressrum</text>
+  <text id="news/planet">Planet-bloggar</text>
+  <text id="fs/basics">Grunderna i fri programvara</text>
+  <text id="community/discuss">Diskussioner om fri programvara</text>
+  <text id="read-testimonial">Läs vittnesmål</text>
+  <text id="podcast">Poddsändning</text>
+  <text id="nav/quick-links-label">Hopplänkar</text>
+  <text id="yourname">Ditt namn</text>
+  <text id="email">E-postadress</text>
+  <text id="pages">Sidor</text>
+  <text id="subscribe-newsletter-text">Våra experter informerar dig om aktuella nyheter, evenemang, aktiviteter och hur du kan bidra.</text>
+  <text id="menu">Meny</text>
+  <text id="page-info">Sidinformation</text>
+  <text id="go-top">Gå till sidans början</text>
+  <text id="nav/back-to-top-label">Till sidans början</text>
+  <text id="jobs">Lediga jobb</text>
+  <text id="contribute-web">Bidra till webbteamet</text>
+  <text id="imprint">Impressum</text>
+  <text id="privacy-policy">Integritetspolicy</text>
+  <text id="transparency-commitment">Transparensåtagande</text>
+  <text id="tags">Taggar</text>
+  <text id="discuss-article">Diskutera artikeln</text>
+  <text id="finished">Klart</text>
+  <text id="author">Författare</text>
+  <text id="writtenby">Skriven av</text>
+  <text id="revision">uppdaterad</text>
+  <text id="and">och</text>
+  <text id="related-events">Relaterade evenemang</text>
+  <text id="related-all">Alla relaterade nyheter och evenemang</text>
+  <text id="more-updates">Du kan också få regelbundna uppdateringar och fördjupningar via våra andra kanaler:</text>
+  <text id="no-upcoming-events">Det finns inga kommande evenemang om Ada och Zangemann planerade.</text>
+  <text id="about-fsfe-intro">
+    
+      Free Software Foundation Europe är en välgörenhetsorganisation som stärker användare så att de kan
+      ta kontroll över tekniken.
+    
+    
+      Programvara är djupt invävd i alla delar av våra liv. Det är viktigt
+      att tekniken stärker oss i stället för att begränsa oss. Fri programvara
+      ger alla rätt att använda, studera, dela och förbättra programvara.
+      Dessa rättigheter bidrar till att värna andra grundläggande rättigheter, som yttrandefrihet,
+      pressfrihet och personlig integritet.
+    
+  <p>
+      Free Software Foundation Europe is a charity that empowers users to
+      control technology.
+    </p>
+    <p>
+      Software is deeply involved in all aspects of our lives. It is important
+      that this technology empowers rather than restricts us. Free Software
+      gives everybody the rights to use, study, share, and improve software.
+      These rights help support other fundamental rights like freedom of
+      speech, freedom of press, and privacy.
+    </p>
+  </text>
+  <text id="support-paragraph">Informationssamhällets frihet behöver ditt ekonomiska stöd.</text>
+  <text id="donate-paragraph">
+    Free Software Foundation Europe är en ideell, icke-statlig
+    organisation. Vårt arbete möjliggörs av en gemenskap av
+    volontärer och
+    givare. Dina bidrag är avgörande för vår
+    styrka och vårt oberoende. De gör det möjligt för oss att fortsätta arbeta för fri
+    programvara där det behövs och att vara en oberoende röst.
+  <a href="/about/ourwork.html">Our work</a> is made
+    possible by a community of
+    <a href="/contribute/contribute.html">volunteers</a> and
+    <a href="/donate/thankgnus.html">donors</a>. Your donations are critical to our
+    strength and autonomy. They enable us to continue working for Free
+    Software wherever necessary, and to be an independent voice.
+  </text>
+  <text id="followup/press-header">Håll dig informerad</text>
+  <text id="followup/press-paragraph">Det bästa sättet att hålla sig uppdaterad är att prenumerera på våra pressmeddelanden eller nyhetsuppdateringar. Du kan också kontakta vårt pressteam på press@fsfe.org.<a href="/press/press.html">press releases</a> or <a href="/news/index.html">news updates</a>. You can also contact our press team at <email mailto="yes">press@fsfe.org</email>.</text>
+  <text id="pdfreaders-head-readers">Läsarna</text>
+  <text id="pdfreaders-head-standards">Öppna standarder</text>
+  <text id="pdfreaders-head-graphics">Grafik</text>
+  <text id="pdfreaders-head-about">Om</text>
+  <text id="pdfreaders-body-platforms">Plattformar:</text>
+  <text id="share-head">Dela och stöd oss</text>
+  <text id="share-page">Dela den här sidan på</text>
+  <text id="share-microdonation">Ge ett mikrobidrag via</text>
+  <text id="share-warning">Vissa tjänster är oförenliga med fri programvara och kan skada din integritet.</text>
+  <text id="donation-buttons">Knappar</text>
+  <text id="size/huge">enorm</text>
+  <text id="size/large">stor</text>
+  <text id="size/medium">medelstor</text>
+  <text id="size/small">liten</text>
+  <text id="background/white">Vit bakgrund</text>
+  <text id="background/transparent">Genomskinlig bakgrund</text>
+  <text id="search/placeholder">Sökord …</text>
+  <text id="search/notfound">Inga sökresultat hittades. Formulera om sökningen.</text>
+  <text id="search/empty">Sökfrågan är tom.</text>
+  <text id="progressbar-of">av</text>
+  <text id="publisher">Utgivare</text>
 </data>

@@ -471,7 +471,7 @@ if (
     isset($_POST['register_event'])
     and empty($_POST['spam'])
     and eval_date($_POST['startdate'])
-    and $_POST['startdate'] > date('Y-M-d', strtotime('-1 year', time()))
+    and $_POST['startdate'] > date('Y-M-d', strtotime('-2 year', time()))
     and eval_date($_POST['enddate'])
     and !stripos($_POST['email'], 'example.com')
     and !((0 === strcmp($_POST['eventseries'], 'oneshot')) && (0 === strcmp($_POST['eventseriesyear'], '202X')))

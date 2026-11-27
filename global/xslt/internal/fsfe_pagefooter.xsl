@@ -64,7 +64,21 @@
                 <xsl:attribute name="alt">RSS Feed</xsl:attribute>
                 <xsl:attribute name="title">RSS Feed</xsl:attribute>
               </xsl:element>
-            </xsl:element>          
+            </xsl:element>
+            <xsl:element name="a">
+              <!-- PlusOne  -->
+              <xsl:attribute name="href">
+                <xsl:text>https://www.pluseins.social/home-en</xsl:text>
+              </xsl:attribute>
+              <xsl:element name="img">
+                <xsl:attribute name="src">
+                  <xsl:value-of select="$urlprefix"/>
+                  <xsl:text>/graphics/services/pluseins.png</xsl:text>
+                </xsl:attribute>
+                <xsl:attribute name="alt">Pluseins</xsl:attribute>
+                <xsl:attribute name="title">Pluseins</xsl:attribute>
+              </xsl:element>
+            </xsl:element>        
           </xsl:element>
         </xsl:element>
       </xsl:element>

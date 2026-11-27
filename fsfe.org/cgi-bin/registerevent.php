@@ -204,13 +204,15 @@ function calculate_information($data)
             CURLOPT_USERAGENT => 'FSFE registerevent.php',
         ]);
         $response = curl_exec($curl);
-        $http_info = curl_getinfo($curl);
+        $http_code = curl_getinfo($curl, CURLINFO_RESPONSE_CODE);
         curl_close($curl);
-        $decoded_response = json_decode($response, true);
-        foreach ($decoded_response as &$value) {
-            $value = json_decode(json_encode($value), true);
+        $existing_filenames = [];
+        if (200 === $http_code) {
+            $existing_filenames = array_column(json_decode($response, true), 'name');
+        } elseif (404 !== $http_code) {
+            // 404 is expected: a new year has no folder yet, and creating the file creates it.
+            $success = false;
         }
-        unset($value);
         for ($count = 1; $count <= 30; ++$count) {
             $digit = str_pad($count, 2, '0', STR_PAD_LEFT);
             $filename
@@ -221,14 +223,7 @@ function calculate_information($data)
                 .'.'
                 .$data['lang']
                 .'.xml';
-            if (
-                empty(
-                    array_filter(
-                        $decoded_response,
-                        fn ($file) => $file['name'] === $filename
-                    )
-                )
-            ) {
+            if (!in_array($filename, $existing_filenames, true)) {
                 $file_url = "https://git.fsfe.org/api/v1/repos/FSFE/fsfe-website/contents/fsfe.org/events/{$year}/{$filename}";
 
                 break;
